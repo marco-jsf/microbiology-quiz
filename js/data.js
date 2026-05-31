@@ -4,7 +4,7 @@ export const CHAPTER_FILES = [
   'bacteriology-general.json',
   'bacteriology-specific.json',
   'virology.json',
-  // 'mycology.json',      // phase 3
+  'mycology.json',
   // 'parasitology.json',  // phase 3
 ];
 

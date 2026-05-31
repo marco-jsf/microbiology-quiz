@@ -23,6 +23,7 @@ function genOne(e, distract, chap) {
   if (a.genomeClass === 'DNA' || a.genomeClass === 'RNA') types.push('genomeClass');
   if (a.envelope === 'Enveloped' || a.envelope === 'Naked') types.push('envelope');
   if (a.replication === 'Nucleus' || a.replication === 'Cytoplasm') types.push('repl');
+  if (a.morphology === 'Yeast' || a.morphology === 'Mold' || a.morphology === 'Dimorphic') types.push('morph');
   if (has(a.disease)) types.push('whichOrg');
   if (has(a.keyVF)) types.push('keyvf');
   if (has(a.treatment)) types.push('treat');
@@ -57,6 +58,10 @@ function genOne(e, distract, chap) {
       return base(e, chap, type, { stem: `Where does <b>${e.name}</b> replicate its genome?`, multi: false,
         options: shuffle([opt('In the nucleus', a.replication === 'Nucleus'), opt('In the cytoplasm', a.replication === 'Cytoplasm')]),
         explanation: `${e.name} replicates in the ${a.replication.toLowerCase()}.${a.special ? ' ' + a.special : ''}` });
+    case 'morph':
+      return base(e, chap, type, { stem: `What is the morphology of <b>${e.name}</b>?`, multi: false,
+        options: shuffle([opt('Yeast', a.morphology === 'Yeast'), opt('Mold', a.morphology === 'Mold'), opt('Dimorphic', a.morphology === 'Dimorphic')]),
+        explanation: `${e.name}: ${a.morphology.toLowerCase()}.${a.special ? ' ' + a.special : ''}` });
     case 'whichOrg':
       return base(e, chap, type, { stem: `Which of the following causes:<br><i>"${a.disease}"</i>`, multi: false,
         options: optsFrom(e.name, others.map(x => x.name)),
@@ -110,6 +115,11 @@ function genMulti(entities, chap) {
   make('nucl', 'replicating in the nucleus', e => e.attrs.replication === 'Nucleus', entities.filter(e => e.attrs.replication));
   make('seg', 'having a segmented genome', e => /segment/i.test(e.attrs.genome || ''), entities.filter(e => e.attrs.genome));
   make('onco', 'oncogenic (associated with human tumours)', e => e.attrs.oncogenic === 'yes', entities.filter(e => e.attrs.oncogenic));
+  // mycology traits (gated on morphology presence → fungi only)
+  const fungi = entities.filter(e => e.attrs.morphology);
+  make('dimorphic', 'dimorphic fungi', e => e.attrs.morphology === 'Dimorphic', fungi);
+  make('fsys', 'systemic (deep) fungi', e => /systemic/i.test(e.group), fungi);
+  make('fopp', 'opportunistic fungi', e => /opportunistic/i.test(e.group), fungi);
   return items;
 }
 

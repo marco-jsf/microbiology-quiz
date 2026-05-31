@@ -1,0 +1,959 @@
+{
+  "id": "mycology",
+  "title": "Mycology",
+  "short": "Mycology",
+  "color": "#9a5ad0",
+  "entities": [
+    {
+      "id": "dermato",
+      "name": "Dermatophytes (Trichophyton, Microsporum, Epidermophyton)",
+      "group": "Superficial / cutaneous",
+      "color": "#d0a82a",
+      "gram": "",
+      "attrs": {
+        "morphology": "Mold",
+        "transmission": "Contact with humans, animals, soil; infected skin scales/hair",
+        "pathogenesis": "Penetrate stratum corneum → proliferate in keratinized layers; secreted proteases; can invade hair shaft (endothrix/ectothrix) and nail",
+        "disease": "Tinea / ringworm (capitis, pedis, corporis, cruris, unguium)",
+        "keyVF": "Keratinases / proteases",
+        "virulence": "Massive secreted-protease production digesting keratin",
+        "diagnosis": "KOH + calcofluor white; culture (Sabouraud) if unresponsive",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Topical terbinafine/azoles; extensive → griseofulvin, itraconazole, terbinafine",
+        "special": "Least invasive — colonize only keratinized tissue; course depends on site, immune response, growth/peeling dynamics"
+      }
+    },
+    {
+      "id": "malassezia",
+      "name": "Malassezia furfur",
+      "group": "Superficial / cutaneous",
+      "color": "#d0a82a",
+      "gram": "",
+      "attrs": {
+        "morphology": "Yeast",
+        "transmission": "Endogenous (normal skin microbiome)",
+        "pathogenesis": "Lipophilic yeast overgrows on sebum-rich skin",
+        "disease": "Pityriasis (tinea) versicolor — hypo/hyperpigmented scaling patches on trunk",
+        "keyVF": "Lipid dependence",
+        "virulence": "Lipophilic; budding yeast cells mixed with short hyphae (\"spaghetti and meatballs\")",
+        "diagnosis": "KOH (yeast + hyphae); grows only on lipid-enriched media",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Topical azoles / selenium sulfide",
+        "special": "Part of normal skin flora"
+      }
+    },
+    {
+      "id": "hortaea",
+      "name": "Hortaea werneckii",
+      "group": "Superficial / cutaneous",
+      "color": "#d0a82a",
+      "gram": "",
+      "attrs": {
+        "morphology": "Mold",
+        "transmission": "Soil contact",
+        "pathogenesis": "Melanized fungus, limited skin peeling, unaltered skin architecture",
+        "disease": "Tinea nigra — macular pigmented lesions on palms/soles",
+        "keyVF": "Melanin",
+        "virulence": "Pigmented (melanized) septate hyphae",
+        "diagnosis": "Direct microscopy — pigmented septate hyphae",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Topical keratolytics / azoles",
+        "special": "Distinguished from melanoma by limited inflammation"
+      }
+    },
+    {
+      "id": "sporothrix",
+      "name": "Sporothrix schenckii",
+      "group": "Subcutaneous",
+      "color": "#b06a3a",
+      "gram": "",
+      "attrs": {
+        "morphology": "Dimorphic",
+        "transmission": "Traumatic inoculation (plant spine/splinter — \"rose-gardener disease\")",
+        "pathogenesis": "Conidia inoculated into wound → slow progressive spread along lymphatics",
+        "disease": "Sporotrichosis — ulcerating nodules with lymphatic (lymphocutaneous) spread",
+        "keyVF": "Thermal dimorphism",
+        "virulence": "37 °C yeast / 25 °C mold (mold = infectious form in nature)",
+        "diagnosis": "Histology (asteroid bodies); culture (KOH not useful)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Oral potassium iodide; itraconazole/terbinafine; amphotericin B if systemic",
+        "special": "Spreads via the LYMPHATIC route"
+      }
+    },
+    {
+      "id": "chromo",
+      "name": "Chromoblastomycosis agents (Fonsecaea, Phialophora, Cladophialophora)",
+      "group": "Subcutaneous",
+      "color": "#b06a3a",
+      "gram": "",
+      "attrs": {
+        "morphology": "Mold",
+        "transmission": "Traumatic inoculation (foot/leg)",
+        "pathogenesis": "Pigmented saprophytes; chronic skin infection",
+        "disease": "Chromoblastomycosis — warty, cauliflower-like lesions",
+        "keyVF": "Muriform (sclerotic) bodies",
+        "virulence": "Pigmented (melanized) molds; muriform bodies in tissue",
+        "diagnosis": "Histology — brown muriform bodies, septate hyphae; pigmented mold culture",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Surgery + flucytosine / itraconazole",
+        "special": "Muriform bodies are diagnostic"
+      }
+    },
+    {
+      "id": "mycetoma",
+      "name": "Mycetoma agents (eumycetoma)",
+      "group": "Subcutaneous",
+      "color": "#b06a3a",
+      "gram": "",
+      "attrs": {
+        "morphology": "Mold",
+        "transmission": "Traumatic inoculation of the foot",
+        "pathogenesis": "Chronic granules of mycelium embedded in cementing substance",
+        "disease": "Mycetoma (Madura foot) — chronic, disfiguring; can involve bone",
+        "keyVF": "Grain/granule formation",
+        "virulence": "Mycelium embedded in CaCO₃ cementing granules",
+        "diagnosis": "Serology complex (many agents); grains in discharge",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Surgery (± amputation); antifungals poorly effective",
+        "special": "Hallmark: fistulous tracts draining pus + solid grains/granules"
+      }
+    },
+    {
+      "id": "candida",
+      "name": "Candida albicans",
+      "group": "Opportunistic",
+      "color": "#2aa9b8",
+      "gram": "",
+      "attrs": {
+        "morphology": "Dimorphic",
+        "transmission": "Endogenous (oral, GIT, female genital flora); rarely direct contact",
+        "pathogenesis": "Mannoprotein adhesion to fibronectin; hyphal transition → tissue invasion, biofilm, secreted aspartic proteases (SAP)",
+        "disease": "Thrush (oral), vulvovaginal candidiasis; invasive candidiasis (catheters, immunocompromised)",
+        "keyVF": "Mannoprotein adhesins; SAP proteases; biofilm; yeast↔hyphal dimorphism",
+        "virulence": "SAP digest collagen → deep invasion; biofilms on catheters resist drugs/immunity",
+        "diagnosis": "KOH (yeast + pseudohyphae); blood/tissue culture for invasive",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Nystatin / topical azoles (superficial); fluconazole, echinocandins, amphotericin B (invasive)",
+        "special": "Predisposing: antibiotics, immunosuppression, diabetes (↑ mannoproteins), catheters"
+      }
+    },
+    {
+      "id": "aspergillus",
+      "name": "Aspergillus fumigatus",
+      "group": "Opportunistic",
+      "color": "#2aa9b8",
+      "gram": "",
+      "attrs": {
+        "morphology": "Mold",
+        "transmission": "Inhalation of conidia (ubiquitous environment)",
+        "pathogenesis": "Branching SEPTATE hyphae (acute-angle); invades lung tissue in immunocompromised",
+        "disease": "Invasive pulmonary aspergillosis; aspergilloma (fungus ball); allergic bronchopulmonary aspergillosis",
+        "keyVF": "Angioinvasion",
+        "virulence": "Septate hyphae with acute-angle branching; invades vessels → necrosis/dissemination",
+        "diagnosis": "Pulmonary aspirate/BAL/biopsy; galactomannan antigen; molecular markers",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Voriconazole / amphotericin B; surgical removal of localized lesions",
+        "special": "Invasive disease mainly in severe immunosuppression; aspergilloma colonizes pre-existing cavities"
+      }
+    },
+    {
+      "id": "zygo",
+      "name": "Zygomycetes (Mucor, Rhizopus, Absidia)",
+      "group": "Opportunistic",
+      "color": "#2aa9b8",
+      "gram": "",
+      "attrs": {
+        "morphology": "Mold",
+        "transmission": "Inhalation (ubiquitous in soil/food)",
+        "pathogenesis": "Broad ASEPTATE hyphae; highly angioinvasive",
+        "disease": "Mucormycosis — rhino-cerebral (diabetics/ketoacidosis) & pulmonary forms",
+        "keyVF": "Angioinvasion (aseptate hyphae)",
+        "virulence": "Invades blood vessels → thrombosis, tissue necrosis, cranial nerve palsy",
+        "diagnosis": "Histology — broad aseptate ribbon-like hyphae",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "High-dose amphotericin B; control underlying disease; surgical debridement",
+        "special": "Rhino-cerebral form can be rapidly fatal; classic in diabetic ketoacidosis"
+      }
+    },
+    {
+      "id": "pneumocystis",
+      "name": "Pneumocystis jirovecii",
+      "group": "Opportunistic",
+      "color": "#2aa9b8",
+      "gram": "",
+      "attrs": {
+        "transmission": "Ubiquitous in respiratory tract (reactivation/exposure)",
+        "pathogenesis": "Low-virulence; proliferates in alveoli of immunocompromised",
+        "disease": "Pneumocystis pneumonia (PCP) — dyspnea, dry non-productive cough, alveolar infiltrates (esp. AIDS)",
+        "keyVF": "Opportunism in T-cell deficiency",
+        "virulence": "Alveolar proliferation; disease tied to immune status (low CD4)",
+        "diagnosis": "BAL with special stains; antigen detection; molecular markers",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Trimethoprim-sulfamethoxazole; corticosteroids if hypoxic",
+        "special": "Atypical fungus, NON-cultivable; classic AIDS-defining pneumonia"
+      }
+    },
+    {
+      "id": "crypto",
+      "name": "Cryptococcus neoformans",
+      "group": "Opportunistic",
+      "color": "#2aa9b8",
+      "gram": "",
+      "attrs": {
+        "morphology": "Yeast",
+        "transmission": "Inhalation; soil contaminated with bird (pigeon) droppings",
+        "pathogenesis": "Polysaccharide capsule; survives in macrophages (melanin/laccase); high CNS affinity",
+        "disease": "Cryptococcal meningitis (esp. AIDS); pulmonary; skin/bone if disseminated",
+        "keyVF": "Polysaccharide capsule (glucuronoxylomannan); laccase/melanin",
+        "virulence": "Capsule is antiphagocytic & immunosuppressive; laccase makes melanin → resists oxidative killing; crosses BBB in macrophages",
+        "diagnosis": "India-ink (capsule); capsular antigen test (quantitative); CSF culture (large volume)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Amphotericin B + flucytosine → consolidation with fluconazole",
+        "special": "Most common systemic fungal infection in AIDS; encapsulated yeast (not dimorphic)"
+      }
+    },
+    {
+      "id": "histo",
+      "name": "Histoplasma capsulatum",
+      "group": "Systemic (dimorphic)",
+      "color": "#9a5ad0",
+      "gram": "",
+      "attrs": {
+        "morphology": "Dimorphic",
+        "transmission": "Inhalation of conidia; soil/caves with bird or BAT droppings (no person-to-person)",
+        "pathogenesis": "Conidia → yeast in lungs; intracellular growth in macrophages; spread to RES",
+        "disease": "Histoplasmosis — usually mild/calcified nodules; TB-like pulmonary; disseminated (RES, skin, GIT) in immunocompromised",
+        "keyVF": "Intracellular survival in macrophages",
+        "virulence": "Temperature-dependent dimorphism; replicates inside macrophages",
+        "diagnosis": "Antigen (polysaccharide) in blood/urine; culture (slow); serology cross-reacts",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Itraconazole (mild); amphotericin B → azoles (disseminated)",
+        "special": "Associated with bird/bat droppings; can be localized OR disseminated"
+      }
+    },
+    {
+      "id": "blasto",
+      "name": "Blastomyces dermatitidis",
+      "group": "Systemic (dimorphic)",
+      "color": "#9a5ad0",
+      "gram": "",
+      "attrs": {
+        "morphology": "Dimorphic",
+        "transmission": "Inhalation of conidia (overlaps Histoplasma areas; not bird/bat-linked)",
+        "pathogenesis": "Pulmonary primary → dissemination",
+        "disease": "Blastomycosis — pulmonary; skin lesions (most common dissemination), bone, GU/prostate",
+        "keyVF": "Thermal dimorphism",
+        "virulence": "Broad-BASED budding yeast in tissue",
+        "diagnosis": "KOH — large yeasts with broad-based buds; H&E; molecular/serology",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Itraconazole/azoles; amphotericin B if disseminated",
+        "special": "Broad-based budding yeast"
+      }
+    },
+    {
+      "id": "cocci",
+      "name": "Coccidioides immitis",
+      "group": "Systemic (dimorphic)",
+      "color": "#9a5ad0",
+      "gram": "",
+      "attrs": {
+        "morphology": "Dimorphic",
+        "transmission": "Inhalation of arthroconidia; alkaline soil of semi-arid climates (no person-to-person)",
+        "pathogenesis": "Arthroconidia → SPHERULE (with endospores) in tissue",
+        "disease": "Coccidioidomycosis (\"Valley fever\") — mostly self-limiting; chronic pulmonary; dissemination (bone, skin, CNS meningitis) rare",
+        "keyVF": "Spherule tissue form",
+        "virulence": "Highly infectious arthroconidia; unique spherule containing endospores",
+        "diagnosis": "KOH/calcofluor — large spherules; serology (IgM early, IgG later)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Self-limiting often; itraconazole/fluconazole; amphotericin B (disseminated); fluconazole for meningitis",
+        "special": "Tissue form = spherule; ~90% asymptomatic; semi-arid soil"
+      }
+    },
+    {
+      "id": "paracocci",
+      "name": "Paracoccidioides brasiliensis",
+      "group": "Systemic (dimorphic)",
+      "color": "#9a5ad0",
+      "gram": "",
+      "attrs": {
+        "morphology": "Dimorphic",
+        "transmission": "Inhalation; tropical/subtropical South America",
+        "pathogenesis": "Dimorphic; yeast at 37 °C",
+        "disease": "Paracoccidioidomycosis (South American blastomycosis) — chronic mucocutaneous ulcers, RES & lung involvement",
+        "keyVF": "Multiple budding (\"pilot/captain’s wheel\")",
+        "virulence": "Yeast cells with multiple peripheral budding blastoconidia",
+        "diagnosis": "Direct — \"captain’s wheel\" budding yeast; culture; serology",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Itraconazole; amphotericin B (severe)",
+        "special": "Far more frequent in males — estrogens inhibit mold→yeast conversion"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "myc-81",
+      "stem": "The metabolism of fungi is of which type?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Chemoheterotrophic",
+          "correct": true
+        },
+        {
+          "t": "Chemoautotrophic",
+          "correct": false
+        },
+        {
+          "t": "Photoautotrophic",
+          "correct": false
+        },
+        {
+          "t": "Photoheterotrophic",
+          "correct": false
+        }
+      ],
+      "explanation": "Fungi are chemoheterotrophs — they use organic molecules as both carbon and energy source.",
+      "topic": "biology",
+      "source": "exam"
+    },
+    {
+      "id": "myc-82",
+      "stem": "What distinguishes fungi from other eukaryotes?",
+      "multi": true,
+      "options": [
+        {
+          "t": "A cell wall containing chitin",
+          "correct": true
+        },
+        {
+          "t": "Ergosterol in the plasma membrane",
+          "correct": true
+        },
+        {
+          "t": "They are typically haploid",
+          "correct": true
+        },
+        {
+          "t": "They lack a true nucleus",
+          "correct": false
+        }
+      ],
+      "explanation": "Fungi have a chitin cell wall, ergosterol (not cholesterol) in the membrane, and are haploid (except transient diploid in sexual reproduction). They ARE true eukaryotes (have a nucleus).",
+      "topic": "biology",
+      "source": "exam"
+    },
+    {
+      "id": "myc-83",
+      "stem": "Which molecules in the fungal cell wall induce an immune response in the human host?",
+      "multi": false,
+      "options": [
+        {
+          "t": "All of the above (mannans/mannoproteins, glucans, chitin)",
+          "correct": true
+        },
+        {
+          "t": "Mannans and mannoproteins only",
+          "correct": false
+        },
+        {
+          "t": "Glucans only",
+          "correct": false
+        },
+        {
+          "t": "Chitin only",
+          "correct": false
+        }
+      ],
+      "explanation": "Mannans/mannoproteins, glucans and chitin can all trigger host immune responses.",
+      "topic": "cell wall",
+      "source": "exam"
+    },
+    {
+      "id": "myc-84",
+      "stem": "Dimorphism of fungi:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Can be induced artificially in the laboratory",
+          "correct": true
+        },
+        {
+          "t": "Is important for pathogenesis",
+          "correct": true
+        },
+        {
+          "t": "Has no role in pathogenesis",
+          "correct": false
+        },
+        {
+          "t": "Is irreversible",
+          "correct": false
+        }
+      ],
+      "explanation": "Dimorphism (temperature-dependent yeast↔mold switch) is inducible in vitro and is important for invasiveness/pathogenesis.",
+      "topic": "dimorphism",
+      "source": "exam"
+    },
+    {
+      "id": "myc-85",
+      "stem": "Which terms are associated with the SEXUAL reproduction of fungi?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Teleomorph form",
+          "correct": true
+        },
+        {
+          "t": "Spores (formed by meiosis)",
+          "correct": true
+        },
+        {
+          "t": "Conidia",
+          "correct": false
+        },
+        {
+          "t": "Anamorph form",
+          "correct": false
+        }
+      ],
+      "explanation": "Sexual = teleomorph, producing spores via meiosis. Conidia and the anamorph form are asexual.",
+      "topic": "reproduction",
+      "source": "exam"
+    },
+    {
+      "id": "myc-86",
+      "stem": "Which terms are associated with the ASEXUAL reproduction of fungi?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Conidia",
+          "correct": true
+        },
+        {
+          "t": "Bud formation",
+          "correct": true
+        },
+        {
+          "t": "Anamorph form",
+          "correct": true
+        },
+        {
+          "t": "Teleomorph form",
+          "correct": false
+        }
+      ],
+      "explanation": "Asexual = anamorph, producing conidia / budding. Teleomorph is the sexual form.",
+      "topic": "reproduction",
+      "source": "exam"
+    },
+    {
+      "id": "myc-87",
+      "stem": "What types of conidia arise directly from fragmented hyphae?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Arthroconidia",
+          "correct": true
+        },
+        {
+          "t": "Chlamydoconidia",
+          "correct": false
+        },
+        {
+          "t": "Sporangioconidia",
+          "correct": false
+        },
+        {
+          "t": "Conidioconidia",
+          "correct": false
+        }
+      ],
+      "explanation": "Arthroconidia form by fragmentation of hyphae (e.g. Coccidioides).",
+      "topic": "reproduction",
+      "source": "exam"
+    },
+    {
+      "id": "myc-88",
+      "stem": "Polyene antifungal agents have which mechanism of action?",
+      "multi": false,
+      "options": [
+        {
+          "t": "They form pores in the plasma membrane",
+          "correct": true
+        },
+        {
+          "t": "They inhibit ergosterol synthesis",
+          "correct": false
+        },
+        {
+          "t": "They inhibit cell-wall synthesis",
+          "correct": false
+        },
+        {
+          "t": "They inhibit transcription",
+          "correct": false
+        }
+      ],
+      "explanation": "Polyenes (amphotericin B, nystatin) bind ergosterol and form membrane pores → loss of membrane integrity.",
+      "topic": "antifungals",
+      "source": "exam"
+    },
+    {
+      "id": "myc-89",
+      "stem": "Which classes of antifungal agents target the biosynthetic pathway of ergosterol?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Azoles",
+          "correct": true
+        },
+        {
+          "t": "Allylamines (e.g. terbinafine)",
+          "correct": true
+        },
+        {
+          "t": "Polyenes",
+          "correct": false
+        },
+        {
+          "t": "Echinocandins",
+          "correct": false
+        }
+      ],
+      "explanation": "Azoles (inhibit 14-α-demethylase) and allylamines (inhibit squalene epoxidase) block ergosterol SYNTHESIS. Polyenes BIND ergosterol; echinocandins target the cell wall.",
+      "topic": "antifungals",
+      "source": "exam"
+    },
+    {
+      "id": "myc-90",
+      "stem": "Which antifungal class targets the fungal cell wall (β-1,3-glucan synthesis)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Echinocandins",
+          "correct": true
+        },
+        {
+          "t": "Polyenes",
+          "correct": false
+        },
+        {
+          "t": "Azoles",
+          "correct": false
+        },
+        {
+          "t": "Allylamines",
+          "correct": false
+        }
+      ],
+      "explanation": "Echinocandins inhibit β-1,3-D-glucan synthase → cell-wall instability.",
+      "topic": "antifungals",
+      "source": "exam"
+    },
+    {
+      "id": "myc-91",
+      "stem": "Compared with bacteria, the resistance mechanisms of fungi:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Do NOT include the production of drug-degrading hydrolytic enzymes",
+          "correct": true
+        },
+        {
+          "t": "Are identical to those of bacteria",
+          "correct": false
+        },
+        {
+          "t": "Rely mainly on β-lactamase production",
+          "correct": false
+        },
+        {
+          "t": "Cannot involve efflux pumps",
+          "correct": false
+        }
+      ],
+      "explanation": "Unlike bacteria (e.g. β-lactamases), fungi do not resist by secreting drug-degrading hydrolytic enzymes; they use target alteration, efflux, bypass.",
+      "topic": "antifungals",
+      "source": "exam"
+    },
+    {
+      "id": "myc-92",
+      "stem": "What is the treatment of a clinical sample with KOH intended to do?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Degrade the host tissue present in the sample (leaving the fungal wall)",
+          "correct": true
+        },
+        {
+          "t": "Make the fungus luminescent",
+          "correct": false
+        },
+        {
+          "t": "Cause swelling of the fungal cells",
+          "correct": false
+        },
+        {
+          "t": "Kill contaminating bacteria only",
+          "correct": false
+        }
+      ],
+      "explanation": "KOH digests host tissue/keratin but not the chitin-rich fungal wall, revealing fungal elements.",
+      "topic": "diagnosis",
+      "source": "exam"
+    },
+    {
+      "id": "myc-93",
+      "stem": "Which type of fungi spread via the lymphatic route?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Subcutaneous fungi",
+          "correct": true
+        },
+        {
+          "t": "Superficial fungi",
+          "correct": false
+        },
+        {
+          "t": "Opportunistic fungi",
+          "correct": false
+        },
+        {
+          "t": "Systemic fungi",
+          "correct": false
+        }
+      ],
+      "explanation": "Subcutaneous fungi (e.g. Sporothrix) spread via subcutaneous/lymphatic routes from the inoculation site.",
+      "topic": "classification",
+      "source": "exam"
+    },
+    {
+      "id": "myc-94",
+      "stem": "Infections caused by subcutaneous fungi are acquired through:",
+      "multi": false,
+      "options": [
+        {
+          "t": "A wound (traumatic inoculation)",
+          "correct": true
+        },
+        {
+          "t": "Inhalation",
+          "correct": false
+        },
+        {
+          "t": "Ingestion",
+          "correct": false
+        },
+        {
+          "t": "Sexual contact",
+          "correct": false
+        }
+      ],
+      "explanation": "Subcutaneous mycoses are acquired by traumatic inoculation through the skin.",
+      "topic": "classification",
+      "source": "exam"
+    },
+    {
+      "id": "myc-95",
+      "stem": "What is the most characteristic feature of mycetoma?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Formation of fistulous tracts that drain pus and solid grains/granules",
+          "correct": true
+        },
+        {
+          "t": "Bone deformity in the initial stages",
+          "correct": false
+        },
+        {
+          "t": "Spontaneous healing without therapy",
+          "correct": false
+        },
+        {
+          "t": "Treatment is exclusively surgical and always curative",
+          "correct": false
+        }
+      ],
+      "explanation": "Mycetoma is characterized by draining fistulous tracts discharging grains (granules of mycelium in cementing substance).",
+      "topic": "subcutaneous",
+      "source": "exam"
+    },
+    {
+      "id": "myc-96",
+      "stem": "Which statement represents a typical characteristic of systemic pathogenic fungi?",
+      "multi": false,
+      "options": [
+        {
+          "t": "They are caused mainly by dimorphic fungi",
+          "correct": true
+        },
+        {
+          "t": "They are transmitted from person to person",
+          "correct": false
+        },
+        {
+          "t": "They are present in the microbiota of a healthy host",
+          "correct": false
+        },
+        {
+          "t": "They cause infection exclusively in immunocompromised individuals",
+          "correct": false
+        }
+      ],
+      "explanation": "Systemic mycoses are typically caused by dimorphic fungi (mold in environment, yeast in host); they are NOT commensals, are not person-to-person, and can infect healthy hosts.",
+      "topic": "systemic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-97",
+      "stem": "Dermatophytes:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Cause exclusively superficial infections (keratinized tissue)",
+          "correct": true
+        },
+        {
+          "t": "Cause systemic dissemination",
+          "correct": false
+        },
+        {
+          "t": "Are dimorphic fungi",
+          "correct": false
+        },
+        {
+          "t": "Are part of the gut microbiota",
+          "correct": false
+        }
+      ],
+      "explanation": "Dermatophytes are the least invasive fungi — confined to keratinized tissue (skin, hair, nails).",
+      "topic": "superficial",
+      "source": "exam"
+    },
+    {
+      "id": "myc-98",
+      "stem": "Which infectious agent is commonly associated with pneumonia in immunocompromised individuals (fungal)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Pneumocystis jirovecii",
+          "correct": true
+        },
+        {
+          "t": "Escherichia coli",
+          "correct": false
+        },
+        {
+          "t": "Staphylococcus aureus",
+          "correct": false
+        },
+        {
+          "t": "Trichophyton rubrum",
+          "correct": false
+        }
+      ],
+      "explanation": "Pneumocystis jirovecii causes PCP, a classic AIDS-defining pneumonia.",
+      "topic": "opportunistic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-99",
+      "stem": "Which fungus is the most common cause of the oral infection known as \"thrush\"?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Candida albicans",
+          "correct": true
+        },
+        {
+          "t": "Aspergillus fumigatus",
+          "correct": false
+        },
+        {
+          "t": "Cryptococcus neoformans",
+          "correct": false
+        },
+        {
+          "t": "Trichophyton rubrum",
+          "correct": false
+        }
+      ],
+      "explanation": "Oral thrush is caused by Candida albicans.",
+      "topic": "opportunistic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-100",
+      "stem": "Which fungus is the most common cause of vaginal (yeast) infections?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Candida albicans",
+          "correct": true
+        },
+        {
+          "t": "Aspergillus fumigatus",
+          "correct": false
+        },
+        {
+          "t": "Cryptococcus neoformans",
+          "correct": false
+        },
+        {
+          "t": "Malassezia furfur",
+          "correct": false
+        }
+      ],
+      "explanation": "Vulvovaginal candidiasis is caused by Candida albicans.",
+      "topic": "opportunistic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-101",
+      "stem": "Infections caused by Histoplasma capsulatum:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Are associated with environments contaminated by bird droppings",
+          "correct": true
+        },
+        {
+          "t": "Can appear in a localized or a disseminated form",
+          "correct": true
+        },
+        {
+          "t": "Are widespread throughout Europe",
+          "correct": false
+        },
+        {
+          "t": "Are reliably diagnosed by a trial KOH treatment",
+          "correct": false
+        }
+      ],
+      "explanation": "Histoplasma is linked to bird/bat-dropping-contaminated soil and causes localized or disseminated disease; KOH is of low yield.",
+      "topic": "systemic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-102",
+      "stem": "Which statement about infections caused by Coccidioides sp. is NOT correct?",
+      "multi": false,
+      "options": [
+        {
+          "t": "They cause symptoms in the entire infected population",
+          "correct": true
+        },
+        {
+          "t": "They have a unique tissue form called a spherule",
+          "correct": false
+        },
+        {
+          "t": "They are found mainly in semi-arid climates",
+          "correct": false
+        },
+        {
+          "t": "Primary disease is often self-limiting",
+          "correct": false
+        }
+      ],
+      "explanation": "~90% of Coccidioides infections are asymptomatic — so \"symptoms in the entire population\" is the incorrect statement. The others are true (spherule, semi-arid soil, self-limiting primary disease).",
+      "topic": "systemic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-103",
+      "stem": "The pathogenic species of the genus Candida:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Adhere to the fibronectin of epithelial cells (via mannoproteins)",
+          "correct": true
+        },
+        {
+          "t": "Are obligate intracellular parasites",
+          "correct": false
+        },
+        {
+          "t": "Are transmitted mainly by mosquito vectors",
+          "correct": false
+        },
+        {
+          "t": "Have a segmented genome",
+          "correct": false
+        }
+      ],
+      "explanation": "Candida adheres to host fibronectin through mannoproteins, then invades using secreted proteases.",
+      "topic": "opportunistic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-104",
+      "stem": "Aspergillosis can present with which clinical manifestations?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Pneumonia / invasive pulmonary aspergillosis",
+          "correct": true
+        },
+        {
+          "t": "Aspergilloma (fungus ball)",
+          "correct": true
+        },
+        {
+          "t": "Allergic respiratory disease (ABPA)",
+          "correct": true
+        },
+        {
+          "t": "Lymphocutaneous nodules with lymphatic spread",
+          "correct": false
+        }
+      ],
+      "explanation": "Aspergillus → invasive pneumonia, aspergilloma, and allergic bronchopulmonary aspergillosis. Lymphocutaneous spread is sporotrichosis.",
+      "topic": "opportunistic",
+      "source": "exam"
+    },
+    {
+      "id": "myc-105",
+      "stem": "Which of the following are dimorphic fungi?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Histoplasma capsulatum",
+          "correct": true
+        },
+        {
+          "t": "Coccidioides immitis",
+          "correct": true
+        },
+        {
+          "t": "Sporothrix schenckii",
+          "correct": true
+        },
+        {
+          "t": "Aspergillus fumigatus",
+          "correct": false
+        }
+      ],
+      "explanation": "Histoplasma, Coccidioides, Blastomyces, Paracoccidioides, Sporothrix (and Candida) are dimorphic; Aspergillus is a mold.",
+      "topic": "dimorphism",
+      "source": "exam"
+    }
+  ]
+}
