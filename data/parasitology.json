@@ -1,0 +1,1409 @@
+{
+  "id": "parasitology",
+  "title": "Parasitology",
+  "short": "Parasitology",
+  "color": "#2aa95a",
+  "entities": [
+    {
+      "id": "leishdono",
+      "name": "Leishmania donovani / infantum",
+      "group": "Protozoa – flagellates & kinetoplastids",
+      "color": "#d07a3a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Promastigote (metacyclic)",
+        "transmission": "Bite of sandfly (Phlebotomus / Lutzomyia); zoonosis — DOG is main reservoir for L. infantum",
+        "pathogenesis": "Amastigotes survive & multiply inside macrophages → spread to reticuloendothelial organs",
+        "disease": "Visceral leishmaniasis (kala-azar) — hepatosplenomegaly, fever, cachexia, anemia, ↑IgG; ~80% fatal untreated",
+        "keyVF": "Intracellular survival in macrophages (amastigote)",
+        "virulence": "Leishmanolysin; cysteine protease B; inhibits Th1 (favors Th2)",
+        "diagnosis": "Histology (amastigotes in macrophages); NAAT; serology",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Liposomal amphotericin B; pentavalent antimonials; miltefosine",
+        "special": "Kinetoplast = circular mitochondrial DNA; promastigote in sandfly, amastigote in humans"
+      }
+    },
+    {
+      "id": "leishtropica",
+      "name": "Leishmania tropica / major",
+      "group": "Protozoa – flagellates & kinetoplastids",
+      "color": "#d07a3a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Promastigote (metacyclic)",
+        "transmission": "Sandfly bite",
+        "pathogenesis": "Localized macrophage infection in the skin; Th1-controlled",
+        "disease": "Cutaneous leishmaniasis (oriental sore) — ulcer with raised edges, heals leaving a scar",
+        "keyVF": "Macrophage intracellular survival",
+        "virulence": "Cysteine proteases; immune modulation",
+        "diagnosis": "Skin biopsy (amastigotes); NAAT",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Topical/physical methods; antimonials; miltefosine",
+        "special": "Cutaneous form; L. braziliensis → mucocutaneous (espundia)"
+      }
+    },
+    {
+      "id": "tbrucei",
+      "name": "Trypanosoma brucei (gambiense / rhodesiense)",
+      "group": "Protozoa – flagellates & kinetoplastids",
+      "color": "#d07a3a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Metacyclic trypomastigote",
+        "transmission": "Bite of the tsetse fly (Glossina)",
+        "pathogenesis": "Extracellular in blood/lymph → crosses into CNS; antigenic variation evades immunity",
+        "disease": "African trypanosomiasis (sleeping sickness): Stage 1 fever/lymphadenopathy → Stage 2 CNS (somnolence, coma, death)",
+        "keyVF": "Antigenic variation (VSG coat)",
+        "virulence": "Variant surface glycoprotein switching → immune evasion",
+        "diagnosis": "Blood/lymph/CSF smear; PCR; clinical & geographic context",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Stage 1: pentamidine (gambiense)/suramin (rhodesiense); Stage 2: NECT / melarsoprol",
+        "special": "Rhodesiense (East Africa) more acute/virulent than gambiense (West Africa)"
+      }
+    },
+    {
+      "id": "tcruzi",
+      "name": "Trypanosoma cruzi",
+      "group": "Protozoa – flagellates & kinetoplastids",
+      "color": "#d07a3a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Metacyclic trypomastigote (in bug feces)",
+        "transmission": "Reduviid (\"kissing\") bug — defecates while feeding; rubbed into bite/mucosa; also transfusion/transplacental",
+        "pathogenesis": "Intracellular amastigotes in cardiac/GI tissue",
+        "disease": "Chagas disease — acute (often asymptomatic, Romaña sign) → chronic cardiomyopathy, megaesophagus/megacolon",
+        "keyVF": "Intracellular amastigote replication",
+        "virulence": "Tissue tropism (heart, myenteric plexus)",
+        "diagnosis": "Acute: blood trypomastigotes/PCR; chronic: serology",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Nifurtimox; benznidazole",
+        "special": "American trypanosomiasis; congenital & transfusion transmission possible"
+      }
+    },
+    {
+      "id": "giardia",
+      "name": "Giardia duodenalis (lamblia)",
+      "group": "Protozoa – flagellates & kinetoplastids",
+      "color": "#d07a3a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Cyst",
+        "transmission": "Fecal-oral (contaminated water/food); cysts are environmentally resistant",
+        "pathogenesis": "Trophozoites attach to duodenal/jejunal villi → villous flattening, malabsorption (non-invasive)",
+        "disease": "Giardiasis — foul-smelling fatty (steatorrhea) diarrhea, cramps, bloating; chronic carrier common",
+        "keyVF": "Ventral adhesive disc",
+        "virulence": "Attachment & malabsorption; no extraintestinal spread",
+        "diagnosis": "Stool ova & parasites (cysts/trophozoites); stool antigen ELISA; duodenal aspirate",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Metronidazole / tinidazole; nitazoxanide",
+        "special": "Flagellate; cyst is the infective form"
+      }
+    },
+    {
+      "id": "trichomonas",
+      "name": "Trichomonas vaginalis",
+      "group": "Protozoa – flagellates & kinetoplastids",
+      "color": "#d07a3a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Trophozoite (NO cyst stage)",
+        "transmission": "Sexual (humans are the only host/reservoir)",
+        "pathogenesis": "Adheres to genitourinary epithelium; anaerobic; proteases + ROS cause local damage",
+        "disease": "Trichomoniasis — yellow-green frothy malodorous discharge, \"strawberry cervix\" (women); often asymptomatic in men",
+        "keyVF": "Adhesins; cytotoxic proteases",
+        "virulence": "Anaerobic flagellate; direct epithelial damage",
+        "diagnosis": "Wet mount (motile trophozoites); NAAT/PCR; culture",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Metronidazole / tinidazole — treat partners simultaneously",
+        "special": "Most common non-viral STI; exists ONLY as trophozoite (no cyst); increases HIV transmission"
+      }
+    },
+    {
+      "id": "plasmodium",
+      "name": "Plasmodium (falciparum, vivax, ovale, malariae)",
+      "group": "Protozoa – Apicomplexa",
+      "color": "#d0466a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Sporozoite",
+        "transmission": "Bite of female Anopheles mosquito; also transfusion/transplacental",
+        "pathogenesis": "Exo-erythrocytic phase in hepatocytes → erythrocytic cycle (merogony) → cyclic RBC lysis",
+        "disease": "Malaria — cyclic fever/chills, hemolytic anemia, splenomegaly; P. falciparum = severe (cerebral malaria, ARDS)",
+        "keyVF": "RBC sequestration (P. falciparum); hypnozoites (P. vivax/ovale)",
+        "virulence": "P. falciparum cytoadherence/sequestration → severe disease",
+        "diagnosis": "Thick & thin blood smear (Giemsa); rapid antigen tests; PCR",
+        "vaccine": "Partial — RTS,S / R21 (limited efficacy)",
+        "vYN": "partial",
+        "treatment": "Chloroquine (sensitive); ACT; primaquine kills hypnozoites of vivax/ovale",
+        "special": "Infective stage = SPOROZOITE; \"hypnozoite\" = dormant liver form of P. vivax/ovale → relapses; falciparum most severe"
+      }
+    },
+    {
+      "id": "babesia",
+      "name": "Babesia microti / divergens",
+      "group": "Protozoa – Apicomplexa",
+      "color": "#d0466a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Sporozoite",
+        "transmission": "Ixodes tick (same vector as Lyme disease); also transfusion",
+        "pathogenesis": "Intraerythrocytic replication → hemolysis",
+        "disease": "Babesiosis — often asymptomatic; fever, hemolytic anemia; severe/fatal in asplenic/immunocompromised",
+        "keyVF": "Intraerythrocytic replication",
+        "virulence": "RBC infection → hemolysis",
+        "diagnosis": "Blood smear (Giemsa) — \"Maltese cross\" tetrad; serology/PCR",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Atovaquone + azithromycin; clindamycin + quinine (severe)",
+        "special": "Maltese-cross tetrad in RBCs"
+      }
+    },
+    {
+      "id": "toxo",
+      "name": "Toxoplasma gondii",
+      "group": "Protozoa – Apicomplexa",
+      "color": "#d0466a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Oocyst (cat feces / soil) or tissue cyst (raw meat); tachyzoite",
+        "transmission": "Ingestion of oocysts (raw vegetables, cat litter) or tissue cysts (raw/undercooked meat); transplacental; transfusion/transplant",
+        "pathogenesis": "Tachyzoite invades cells, forms parasitophorous vacuole, inhibits lysosomal fusion → tissue cysts (bradyzoites) = lifelong latency",
+        "disease": "Usually asymptomatic / mononucleosis-like; congenital toxoplasmosis (chorioretinitis, hydrocephalus, intracranial calcification); reactivation encephalitis in HIV",
+        "keyVF": "Rhoptries & micronemes (cell invasion); apicoplast",
+        "virulence": "Intracellular survival; converts to bradyzoite cysts (immune-driven)",
+        "diagnosis": "Serology IgM/IgG (avidity in pregnancy); PCR (ocular/amniotic/CSF); brain imaging in immunocompromised",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Often none (immunocompetent); pyrimethamine + sulfadiazine + folinic acid",
+        "special": "CAT = definitive host (sexual cycle); tachyzoite = active form, bradyzoite = cyst; pyrimethamine inhibits DHFR (folate synthesis)"
+      }
+    },
+    {
+      "id": "crypto_p",
+      "name": "Cryptosporidium (parvum, hominis)",
+      "group": "Protozoa – Apicomplexa",
+      "color": "#d0466a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Sporulated oocyst",
+        "transmission": "Oro-fecal; contaminated water (resistant to chlorination); farm animals",
+        "pathogenesis": "Attaches to small-intestinal epithelium; auto-infection",
+        "disease": "Cryptosporidiosis — self-limiting watery diarrhea (immunocompetent); profuse chronic diarrhea in HIV/immunocompromised",
+        "keyVF": "Auto-infective thin-walled oocysts",
+        "virulence": "Intestinal epithelial attachment; severity depends on immune status",
+        "diagnosis": "Modified acid-fast (Ziehl-Neelsen) stain of stool; antigen ELISA; PCR",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Nitazoxanide; supportive rehydration; restore immunity (ART in HIV)",
+        "special": "Chlorine-resistant; major waterborne outbreak agent"
+      }
+    },
+    {
+      "id": "entamoeba",
+      "name": "Entamoeba histolytica",
+      "group": "Protozoa – amoebae & ciliates",
+      "color": "#8a5ad0",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Cyst (4-nucleate)",
+        "transmission": "Fecal-oral (contaminated water/food)",
+        "pathogenesis": "Trophozoites invade colonic mucosa (flask-shaped ulcers); can disseminate via portal vein to liver",
+        "disease": "Amebiasis — amebic (bloody) dysentery; extraintestinal liver abscess (RUQ pain)",
+        "keyVF": "Gal/GalNAc lectin; amoebapores; cysteine proteases",
+        "virulence": "Tissue-invasive trophozoite; contact-dependent cytolysis",
+        "diagnosis": "Stool antigen ELISA (distinguishes from E. dispar); PCR/NAAT; serology; ultrasound/CT for abscess",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Metronidazole / tinidazole + a luminal agent (paromomycin)",
+        "special": "Primary localization = COLON; produces cysts; only E. histolytica (not E. dispar) is invasive"
+      }
+    },
+    {
+      "id": "naegleria",
+      "name": "Naegleria fowleri",
+      "group": "Protozoa – amoebae & ciliates",
+      "color": "#8a5ad0",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Trophozoite (free-living amoeba)",
+        "transmission": "INHALATION of warm fresh water through nasal mucosa (swimming/diving); NOT person-to-person",
+        "pathogenesis": "Crosses cribriform plate directly to the brain (olfactory)",
+        "disease": "Primary amoebic meningoencephalitis (PAM) — rapid, fulminant; >97% mortality",
+        "keyVF": "Direct olfactory CNS invasion",
+        "virulence": "Rapid neuronal destruction",
+        "diagnosis": "CSF wet mount — motile amoebae; PCR; biopsy (often post-mortem)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Amphotericin B (± miltefosine) — rarely successful",
+        "special": "Primary localization = BRAIN; warm freshwater; \"brain-eating amoeba\""
+      }
+    },
+    {
+      "id": "acanthamoeba",
+      "name": "Acanthamoeba",
+      "group": "Protozoa – amoebae & ciliates",
+      "color": "#8a5ad0",
+      "gram": "",
+      "attrs": {
+        "ptype": "Protozoan",
+        "infectiveStage": "Trophozoite / cyst",
+        "transmission": "Direct contact — contaminated contact-lens solution, soil, water (skin/corneal entry)",
+        "pathogenesis": "Corneal or, via skin/sinus, hematogenous CNS spread",
+        "disease": "Acanthamoeba keratitis (contact-lens wearers); granulomatous amoebic encephalitis (GAE) in immunocompromised",
+        "keyVF": "Cyst resistance",
+        "virulence": "Resistant cysts; chronic granulomatous infection",
+        "diagnosis": "Corneal scraping/culture; confocal microscopy; PCR; brain biopsy (GAE)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Keratitis: topical PHMB + chlorhexidine ± voriconazole; GAE: multi-drug, poor prognosis",
+        "special": "Classic in contact-lens wearers; both trophozoite & cyst forms"
+      }
+    },
+    {
+      "id": "enterobius",
+      "name": "Enterobius vermicularis (pinworm)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "Embryonated egg",
+        "transmission": "Fecal-oral (autoinfection); eggs become infective within hours; survive weeks in environment",
+        "pathogenesis": "Females migrate to perianal skin at night to lay eggs",
+        "disease": "Enterobiasis — perianal nocturnal itching (hallmark); often mild/asymptomatic",
+        "keyVF": "Perianal egg deposition",
+        "virulence": "Mechanical irritation; rare ectopic migration",
+        "diagnosis": "Scotch-tape test (perianal, morning); eggs flattened on one side",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Albendazole / mebendazole (repeat in 2–3 weeks); treat household",
+        "special": "Most common helminth in temperate regions; diagnosed by tape test"
+      }
+    },
+    {
+      "id": "ascaris",
+      "name": "Ascaris lumbricoides (giant roundworm)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "Fertilized (embryonated) egg",
+        "transmission": "Fecal-oral (ingestion of embryonated eggs from soil)",
+        "pathogenesis": "Larvae migrate liver→heart→lungs→trachea→swallowed; adults in small intestine",
+        "disease": "Ascariasis — often mild; heavy load → intestinal obstruction; Loeffler pneumonia (pulmonary migration)",
+        "keyVF": "Massive egg output (~200,000/day)",
+        "virulence": "Mechanical obstruction; larval lung migration",
+        "diagnosis": "Stool — round fertilized eggs with thick shell",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Albendazole / mebendazole; surgery for obstruction",
+        "special": "Infective form = fertilized egg"
+      }
+    },
+    {
+      "id": "hookworm",
+      "name": "Hookworms (Ancylostoma duodenale / Necator americanus)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "Filariform (L3) larva",
+        "transmission": "Filariform larvae penetrate skin (walking barefoot on contaminated soil)",
+        "pathogenesis": "Skin → blood → lungs → swallowed → attach to small-intestinal mucosa and suck blood",
+        "disease": "Hookworm disease (ancylostomiasis) — iron-deficiency anemia, malnutrition; pruritic dermatitis at entry; pulmonary phase",
+        "keyVF": "Anticoagulant secretion; mucosal attachment",
+        "virulence": "Chronic intestinal blood loss → anemia",
+        "diagnosis": "Stool — oval thin-shelled eggs; CBC (microcytic anemia, eosinophilia)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Albendazole / mebendazole; iron supplementation",
+        "special": "Symptoms = ANEMIA and malnutrition; larvae penetrate skin"
+      }
+    },
+    {
+      "id": "strongyloides",
+      "name": "Strongyloides stercoralis (threadworm)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "Filariform (L3) larva",
+        "transmission": "Filariform larvae penetrate skin; UNIQUE autoinfection cycle (persists for decades)",
+        "pathogenesis": "Skin→lung→intestine; rhabditiform larvae can transform inside host and reinfect",
+        "disease": "Strongyloidiasis — often asymptomatic; HYPERINFECTION/disseminated (sepsis, meningitis, pneumonia) in immunocompromised (high mortality)",
+        "keyVF": "Autoinfection",
+        "virulence": "Autoinfection → hyperinfection when immunosuppressed",
+        "diagnosis": "Larvae in stool (not eggs); stool PCR; serology; eosinophilia (absent in hyperinfection)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Ivermectin (first choice); albendazole",
+        "special": "Autoinfection → hyperinfection syndrome; screen before immunosuppression"
+      }
+    },
+    {
+      "id": "trichinella",
+      "name": "Trichinella spiralis (pork roundworm)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "Encysted larva (in muscle of meat)",
+        "transmission": "Ingestion of raw/undercooked meat containing encysted larvae",
+        "pathogenesis": "Larvae mature in gut → females release larvae → enter blood → encyst in skeletal muscle (and can affect CNS/heart)",
+        "disease": "Trichinosis — intestinal phase (diarrhea) → muscle phase (myalgia, periorbital edema, marked eosinophilia); myocarditis/CNS in severe",
+        "keyVF": "Muscle encystment (nurse cell)",
+        "virulence": "Larval migration → muscle/CNS/cardiac damage",
+        "diagnosis": "Clinical + dietary history; serology; muscle biopsy",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Mebendazole/albendazole for adult worms; corticosteroids; NO effective drug for encysted larvae",
+        "special": "From raw meat; can damage the CNS; encysted larvae untreatable"
+      }
+    },
+    {
+      "id": "wuchereria",
+      "name": "Wuchereria bancrofti (Brugia malayi)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "L3 larva (via mosquito)",
+        "transmission": "Mosquito bite (Culex/Anopheles/Aedes); larvae enter near the bite site",
+        "pathogenesis": "Adults lodge in lymphatics → microfilariae in blood (nocturnal); lymphatic blockage",
+        "disease": "Lymphatic filariasis → ELEPHANTIASIS (chronic lymphedema); acute lymphangitis; tropical pulmonary eosinophilia",
+        "keyVF": "Lymphatic obstruction; Wolbachia endosymbiont",
+        "virulence": "Adult worms block lymphatics → fibrosis/elephantiasis",
+        "diagnosis": "Microfilariae in blood (nocturnal sample); serology (IgG4); PCR",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Diethylcarbamazine (DEC); doxycycline (kills Wolbachia)",
+        "special": "Causes elephantiasis; infection via MOSQUITO bite (not hair follicles); harbors Wolbachia"
+      }
+    },
+    {
+      "id": "onchocerca",
+      "name": "Onchocerca volvulus",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "L3 larva (via blackfly)",
+        "transmission": "Bite of Simulium blackfly (breeds in fast-flowing rivers)",
+        "pathogenesis": "Adults in subcutaneous nodules; microfilariae migrate through skin & to the eye; dying microfilariae (releasing Wolbachia) cause inflammation",
+        "disease": "Onchocerciasis (river blindness) — subcutaneous nodules, dermatitis, ocular damage → blindness",
+        "keyVF": "Microfilarial migration to eye; Wolbachia-driven inflammation",
+        "virulence": "Inflammatory response to dying microfilariae",
+        "diagnosis": "Skin snip (microfilariae); nodule biopsy; slit-lamp eye exam",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Ivermectin (kills microfilariae); doxycycline (Wolbachia); nodulectomy",
+        "special": "Blindness risk determined by the ANATOMICAL LOCATION of the blackfly bite (near the eyes)"
+      }
+    },
+    {
+      "id": "loaloa",
+      "name": "Loa loa (African eye worm)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "L3 larva (via Chrysops fly)",
+        "transmission": "Bite of Chrysops (deer/mango) fly — bites by day",
+        "pathogenesis": "Adults migrate in subcutaneous tissue & across the eye; microfilariae in blood (diurnal)",
+        "disease": "Loiasis — transient Calabar swellings; visible worm migrating across the conjunctiva",
+        "keyVF": "Subcutaneous/ocular migration",
+        "virulence": "Local inflammatory (Calabar) swellings",
+        "diagnosis": "Microfilariae in daytime blood; visible adult worm; eosinophilia",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Diethylcarbamazine (DEC) ± steroids; surgical removal of ocular worm",
+        "special": "Worm visible crossing the eye"
+      }
+    },
+    {
+      "id": "dracunculus",
+      "name": "Dracunculus medinensis (guinea worm)",
+      "group": "Nematodes (roundworms)",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Nematode (roundworm)",
+        "infectiveStage": "L3 larva (in copepods)",
+        "transmission": "Drinking water containing infected copepods (cyclops)",
+        "pathogenesis": "Larvae mature; adult female migrates to skin (usually lower limb) → painful blister that bursts to release larvae into water",
+        "disease": "Dracunculiasis — painful cutaneous ulcer/blister on lower limbs; secondary infection/tetanus risk",
+        "keyVF": "Skin emergence of gravid female",
+        "virulence": "Local ulceration; secondary bacterial infection",
+        "diagnosis": "Clinical (worm visible at ulcer)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "No drug — mechanical extraction (slow winding around a stick over days)",
+        "special": "Near global eradication; subcutaneous ulcer of the lower limb"
+      }
+    },
+    {
+      "id": "taeniasolium",
+      "name": "Taenia solium (pork tapeworm)",
+      "group": "Cestodes (tapeworms)",
+      "color": "#2a8ab0",
+      "gram": "",
+      "attrs": {
+        "ptype": "Cestode (tapeworm)",
+        "infectiveStage": "Cysticercus (taeniasis) / egg (cysticercosis)",
+        "transmission": "Eating raw/undercooked pork with cysticerci → taeniasis; ingesting EGGS (food contaminated with human feces / autoinfection) → cysticercosis",
+        "pathogenesis": "Adult tapeworm in small intestine (taeniasis); eggs → larvae encyst in tissues (cysticercosis)",
+        "disease": "Taeniasis (often mild); cysticercosis — cysts in brain (neurocysticercosis → seizures), eyes, muscle",
+        "keyVF": "Tissue cysticerci",
+        "virulence": "Larval cysts in CNS/eye → mass effect, seizures",
+        "diagnosis": "Stool — eggs/proglottids, antigen (taeniasis); CT/MRI of calcified cysts + serology (cysticercosis)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Taeniasis: niclosamide/praziquantel; cysticercosis: albendazole/praziquantel + steroids",
+        "special": "Cysticercosis is acquired by ingesting eggs in human-feces-contaminated FOOD (not by eating pork)"
+      }
+    },
+    {
+      "id": "taeniasaginata",
+      "name": "Taenia saginata (beef tapeworm)",
+      "group": "Cestodes (tapeworms)",
+      "color": "#2a8ab0",
+      "gram": "",
+      "attrs": {
+        "ptype": "Cestode (tapeworm)",
+        "infectiveStage": "Cysticercus (in beef)",
+        "transmission": "Eating raw/undercooked beef containing cysticerci",
+        "pathogenesis": "Adult tapeworm attaches in small intestine",
+        "disease": "Taeniasis — usually mild GI symptoms; proglottids may migrate out of the anus",
+        "keyVF": "—",
+        "virulence": "Generally low; no human cysticercosis",
+        "diagnosis": "Stool — proglottids/eggs; ELISA",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Niclosamide / praziquantel",
+        "special": "Does NOT cause cysticercosis in humans (unlike T. solium)"
+      }
+    },
+    {
+      "id": "echinococcus",
+      "name": "Echinococcus granulosus",
+      "group": "Cestodes (tapeworms)",
+      "color": "#2a8ab0",
+      "gram": "",
+      "attrs": {
+        "ptype": "Cestode (tapeworm)",
+        "infectiveStage": "Egg (from dog feces)",
+        "transmission": "Ingestion of eggs from DOG (definitive host) feces; sheep = intermediate host; humans = accidental intermediate host",
+        "pathogenesis": "Oncospheres penetrate intestine → blood → form slow-growing unilocular hydatid cysts (mainly liver, also lung)",
+        "disease": "Cystic echinococcosis (hydatid disease) — expanding cysts; rupture → anaphylaxis & dissemination",
+        "keyVF": "Hydatid cyst (protoscolices)",
+        "virulence": "Mass effect; anaphylaxis on rupture",
+        "diagnosis": "Imaging (CT/MRI/US) + serology; avoid aspiration (or PAIR with care)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Surgery / PAIR + albendazole",
+        "special": "HYDATID CYSTS mainly in the LIVER; dog-sheep cycle"
+      }
+    },
+    {
+      "id": "schistosoma",
+      "name": "Schistosoma (haematobium, mansoni, japonicum)",
+      "group": "Trematodes (flukes)",
+      "color": "#b0902a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Trematode (fluke)",
+        "infectiveStage": "Cercaria",
+        "transmission": "Freshwater snails (intermediate host) release cercariae → penetrate human skin directly (swimming/wading)",
+        "pathogenesis": "Adults in venous plexuses; eggs lodge in tissue → granulomas/fibrosis",
+        "disease": "Schistosomiasis — S. haematobium → hematuria, bladder fibrosis/cancer (eggs in URINE); S. mansoni/japonicum → hepatosplenic, portal hypertension (eggs in feces); cercarial dermatitis; Katayama fever",
+        "keyVF": "Egg-induced granuloma; immune-evasion (host antigen coating)",
+        "virulence": "Egg-driven granulomatous fibrosis",
+        "diagnosis": "Eggs in urine (haematobium) or stool (mansoni/japonicum); antigen; serology",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Praziquantel",
+        "special": "S. HAEMATOBIUM eggs are shed in URINE (→ bladder), not feces — bladder cancer risk"
+      }
+    },
+    {
+      "id": "fasciola",
+      "name": "Fasciola hepatica (liver fluke)",
+      "group": "Trematodes (flukes)",
+      "color": "#b0902a",
+      "gram": "",
+      "attrs": {
+        "ptype": "Trematode (fluke)",
+        "infectiveStage": "Metacercaria (on aquatic plants)",
+        "transmission": "Ingestion of contaminated aquatic plants (e.g. watercress); snails are intermediate host; sheep reservoir",
+        "pathogenesis": "Larvae penetrate intestinal wall → liver parenchyma → mature in bile ducts",
+        "disease": "Fascioliasis — acute (larval liver migration: fever, RUQ pain, eosinophilia) → chronic biliary obstruction/cholangitis",
+        "keyVF": "Biliary migration",
+        "virulence": "Hepatic & biliary tissue damage",
+        "diagnosis": "Eggs in stool; ELISA (excretory/secretory antigen); imaging",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Triclabendazole",
+        "special": "Acquired by eating contaminated aquatic plants (watercress)"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "par-1",
+      "stem": "Kinetoplasts are:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Special (modified) mitochondria",
+          "correct": true
+        },
+        {
+          "t": "A type of flagellum",
+          "correct": false
+        },
+        {
+          "t": "An organ of locomotion",
+          "correct": false
+        },
+        {
+          "t": "A form of protozoan cyst",
+          "correct": false
+        }
+      ],
+      "explanation": "The kinetoplast is a specialized mitochondrion containing a network of circular DNA (kinetoplastid protozoa).",
+      "topic": "biology",
+      "source": "exam"
+    },
+    {
+      "id": "par-2",
+      "stem": "The Leishmania of the donovani family are responsible for:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Visceral leishmaniasis (kala-azar)",
+          "correct": true
+        },
+        {
+          "t": "Old World cutaneous leishmaniasis",
+          "correct": false
+        },
+        {
+          "t": "New World cutaneous leishmaniasis",
+          "correct": false
+        },
+        {
+          "t": "Mucocutaneous leishmaniasis",
+          "correct": false
+        }
+      ],
+      "explanation": "L. donovani/infantum cause visceral leishmaniasis (kala-azar).",
+      "topic": "leishmania",
+      "source": "exam"
+    },
+    {
+      "id": "par-3",
+      "stem": "What is the main animal reservoir of Leishmania infantum (visceral leishmaniasis in the Mediterranean basin)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The dog",
+          "correct": true
+        },
+        {
+          "t": "The rat",
+          "correct": false
+        },
+        {
+          "t": "The cat",
+          "correct": false
+        },
+        {
+          "t": "The horse",
+          "correct": false
+        }
+      ],
+      "explanation": "The dog is the main reservoir of L. infantum in the Mediterranean.",
+      "topic": "leishmania",
+      "source": "exam"
+    },
+    {
+      "id": "par-4",
+      "stem": "Trypanosoma brucei:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Is transmitted by the tsetse fly",
+          "correct": true
+        },
+        {
+          "t": "Shows antigenic variability",
+          "correct": true
+        },
+        {
+          "t": "The rhodesiense form is more virulent than the gambiense form",
+          "correct": true
+        },
+        {
+          "t": "Is transmitted by the bite of a mosquito",
+          "correct": false
+        }
+      ],
+      "explanation": "T. brucei is tsetse-fly-borne, evades immunity by antigenic (VSG) variation, and rhodesiense is the more acute/virulent form.",
+      "topic": "trypanosoma",
+      "source": "exam"
+    },
+    {
+      "id": "par-5",
+      "stem": "How is Trypanosoma brucei transmitted to humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Through the bite of a fly (tsetse fly)",
+          "correct": true
+        },
+        {
+          "t": "Through contaminated water",
+          "correct": false
+        },
+        {
+          "t": "Through the bite of a mosquito",
+          "correct": false
+        },
+        {
+          "t": "Through direct contact",
+          "correct": false
+        }
+      ],
+      "explanation": "The tsetse fly (Glossina) transmits T. brucei.",
+      "topic": "trypanosoma",
+      "source": "exam"
+    },
+    {
+      "id": "par-6",
+      "stem": "Which of the following protozoa causes the most severe form of malaria?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Plasmodium falciparum",
+          "correct": true
+        },
+        {
+          "t": "Plasmodium vivax",
+          "correct": false
+        },
+        {
+          "t": "Plasmodium ovale",
+          "correct": false
+        },
+        {
+          "t": "Plasmodium malariae",
+          "correct": false
+        }
+      ],
+      "explanation": "P. falciparum causes severe malaria (cerebral malaria, high parasitemia).",
+      "topic": "plasmodium",
+      "source": "exam"
+    },
+    {
+      "id": "par-7",
+      "stem": "Which is the infective stage of Plasmodium in humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Sporozoite",
+          "correct": true
+        },
+        {
+          "t": "Trophozoite",
+          "correct": false
+        },
+        {
+          "t": "Merozoite",
+          "correct": false
+        },
+        {
+          "t": "Gametocyte",
+          "correct": false
+        }
+      ],
+      "explanation": "The mosquito injects sporozoites, which infect hepatocytes.",
+      "topic": "plasmodium",
+      "source": "exam"
+    },
+    {
+      "id": "par-8",
+      "stem": "To which protozoan does the term \"hypnozoite\" refer?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Plasmodium vivax (and ovale)",
+          "correct": true
+        },
+        {
+          "t": "Toxoplasma gondii",
+          "correct": false
+        },
+        {
+          "t": "Entamoeba histolytica",
+          "correct": false
+        },
+        {
+          "t": "Leishmania donovani",
+          "correct": false
+        }
+      ],
+      "explanation": "Hypnozoites are dormant liver stages of P. vivax/ovale → relapses.",
+      "topic": "plasmodium",
+      "source": "exam"
+    },
+    {
+      "id": "par-9",
+      "stem": "Where does the primary localization of Naegleria fowleri occur in the body?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The brain",
+          "correct": true
+        },
+        {
+          "t": "The colon",
+          "correct": false
+        },
+        {
+          "t": "The liver",
+          "correct": false
+        },
+        {
+          "t": "The lungs",
+          "correct": false
+        }
+      ],
+      "explanation": "N. fowleri travels via the olfactory route to the brain → primary amoebic meningoencephalitis.",
+      "topic": "amoebae",
+      "source": "exam"
+    },
+    {
+      "id": "par-10",
+      "stem": "How is Naegleria fowleri transmitted to humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Through (nasal) contact with contaminated warm fresh water",
+          "correct": true
+        },
+        {
+          "t": "Through the bite of an infected mosquito",
+          "correct": false
+        },
+        {
+          "t": "Through the bodily fluids of an infected person",
+          "correct": false
+        },
+        {
+          "t": "By ingesting contaminated food",
+          "correct": false
+        }
+      ],
+      "explanation": "Acquired by warm freshwater entering the nose (swimming/diving).",
+      "topic": "amoebae",
+      "source": "exam"
+    },
+    {
+      "id": "par-11",
+      "stem": "Eating raw vegetables can lead to the risk of infection with which parasite?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Toxoplasma gondii",
+          "correct": true
+        },
+        {
+          "t": "Trichinella spiralis",
+          "correct": false
+        },
+        {
+          "t": "Taenia solium (from pork)",
+          "correct": false
+        },
+        {
+          "t": "Trypanosoma cruzi",
+          "correct": false
+        }
+      ],
+      "explanation": "Oocysts on raw vegetables (and cat litter) transmit Toxoplasma gondii.",
+      "topic": "toxoplasma",
+      "source": "exam"
+    },
+    {
+      "id": "par-12",
+      "stem": "In which host does sexual reproduction of Toxoplasma gondii take place?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The cat (felids) — definitive host",
+          "correct": true
+        },
+        {
+          "t": "Humans",
+          "correct": false
+        },
+        {
+          "t": "Cattle",
+          "correct": false
+        },
+        {
+          "t": "Rodents",
+          "correct": false
+        }
+      ],
+      "explanation": "The cat is the definitive host; sexual reproduction occurs in the feline intestine.",
+      "topic": "toxoplasma",
+      "source": "exam"
+    },
+    {
+      "id": "par-13",
+      "stem": "Which statements regarding infection with Toxoplasma gondii are correct?",
+      "multi": true,
+      "options": [
+        {
+          "t": "The infection is usually asymptomatic",
+          "correct": true
+        },
+        {
+          "t": "It elicits a Th1-type response",
+          "correct": true
+        },
+        {
+          "t": "Fetal infection is more likely (but milder) early, and more severe later in gestation",
+          "correct": true
+        },
+        {
+          "t": "Humans are the definitive host",
+          "correct": false
+        }
+      ],
+      "explanation": "Toxoplasma infection is usually asymptomatic, drives a protective Th1 response; the cat (not humans) is the definitive host.",
+      "topic": "toxoplasma",
+      "source": "exam"
+    },
+    {
+      "id": "par-14",
+      "stem": "What is the main mechanism of action of pyrimethamine in treating Toxoplasma gondii?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Inhibits folic-acid synthesis (dihydrofolate reductase)",
+          "correct": true
+        },
+        {
+          "t": "Inhibits protein synthesis",
+          "correct": false
+        },
+        {
+          "t": "Inhibits DNA replication",
+          "correct": false
+        },
+        {
+          "t": "Activates the immune response",
+          "correct": false
+        }
+      ],
+      "explanation": "Pyrimethamine inhibits dihydrofolate reductase → blocks folate synthesis (with sulfadiazine + folinic acid).",
+      "topic": "toxoplasma",
+      "source": "exam"
+    },
+    {
+      "id": "par-15",
+      "stem": "Where does the primary localization of Entamoeba histolytica occur in the body?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The colon",
+          "correct": true
+        },
+        {
+          "t": "The brain",
+          "correct": false
+        },
+        {
+          "t": "The lungs",
+          "correct": false
+        },
+        {
+          "t": "The bladder",
+          "correct": false
+        }
+      ],
+      "explanation": "E. histolytica primarily infects the colon (then can spread to the liver).",
+      "topic": "amoebae",
+      "source": "exam"
+    },
+    {
+      "id": "par-16",
+      "stem": "Which of the following protozoa produces cysts?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Ameba (Entamoeba)",
+          "correct": true
+        },
+        {
+          "t": "Trichomonas",
+          "correct": false
+        },
+        {
+          "t": "Leishmania",
+          "correct": false
+        },
+        {
+          "t": "Plasmodium",
+          "correct": false
+        }
+      ],
+      "explanation": "Entamoeba forms cysts; Trichomonas has no cyst stage; Leishmania/Plasmodium use different stages.",
+      "topic": "biology",
+      "source": "exam"
+    },
+    {
+      "id": "par-17",
+      "stem": "The term \"tachyzoite\" refers to which parasite?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Toxoplasma gondii",
+          "correct": true
+        },
+        {
+          "t": "Plasmodium vivax",
+          "correct": false
+        },
+        {
+          "t": "Entamoeba histolytica",
+          "correct": false
+        },
+        {
+          "t": "Leishmania donovani",
+          "correct": false
+        }
+      ],
+      "explanation": "Tachyzoite = the rapidly dividing active form of Toxoplasma gondii.",
+      "topic": "toxoplasma",
+      "source": "exam"
+    },
+    {
+      "id": "par-18",
+      "stem": "Which statement about Wolbachia is correct?",
+      "multi": false,
+      "options": [
+        {
+          "t": "It is a bacterial endosymbiont of filarial worms",
+          "correct": true
+        },
+        {
+          "t": "It is a protozoan that causes malaria",
+          "correct": false
+        },
+        {
+          "t": "It is the infective larval stage of hookworm",
+          "correct": false
+        },
+        {
+          "t": "It is a fungal pathogen of the skin",
+          "correct": false
+        }
+      ],
+      "explanation": "Wolbachia is an intracellular bacterial endosymbiont of filariae (target of doxycycline).",
+      "topic": "filariae",
+      "source": "exam"
+    },
+    {
+      "id": "par-19",
+      "stem": "What determines the ability of Onchocerca volvulus to cause blindness?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The anatomical location of the blackfly bite (proximity to the eyes)",
+          "correct": true
+        },
+        {
+          "t": "The age of the patient",
+          "correct": false
+        },
+        {
+          "t": "The season of transmission",
+          "correct": false
+        },
+        {
+          "t": "The blood group of the host",
+          "correct": false
+        }
+      ],
+      "explanation": "Microfilariae migrate locally; bites nearer the head/eyes increase ocular involvement → blindness.",
+      "topic": "filariae",
+      "source": "exam"
+    },
+    {
+      "id": "par-20",
+      "stem": "What is cysticercosis caused by?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Ingestion of food contaminated with human feces (Taenia solium eggs)",
+          "correct": true
+        },
+        {
+          "t": "Eating undercooked pork containing cysticerci",
+          "correct": false
+        },
+        {
+          "t": "The bite of the Chrysops fly",
+          "correct": false
+        },
+        {
+          "t": "Penetration of larvae through the skin",
+          "correct": false
+        }
+      ],
+      "explanation": "Cysticercosis results from ingesting T. solium EGGS (fecally contaminated food/autoinfection); eating pork cysticerci causes intestinal taeniasis instead.",
+      "topic": "cestodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-21",
+      "stem": "Which parasite is most likely to cause a hyperinfection cycle through autoinfection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Strongyloides stercoralis",
+          "correct": true
+        },
+        {
+          "t": "Ascaris lumbricoides",
+          "correct": false
+        },
+        {
+          "t": "Enterobius vermicularis",
+          "correct": false
+        },
+        {
+          "t": "Taenia saginata",
+          "correct": false
+        }
+      ],
+      "explanation": "Strongyloides has an autoinfection cycle → hyperinfection/dissemination in immunocompromised hosts.",
+      "topic": "nematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-22",
+      "stem": "Which parasite causes the formation of hydatid cysts mainly in the liver?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Echinococcus granulosus",
+          "correct": true
+        },
+        {
+          "t": "Fasciola hepatica",
+          "correct": false
+        },
+        {
+          "t": "Taenia solium",
+          "correct": false
+        },
+        {
+          "t": "Onchocerca volvulus",
+          "correct": false
+        }
+      ],
+      "explanation": "E. granulosus forms unilocular hydatid cysts, predominantly hepatic.",
+      "topic": "cestodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-23",
+      "stem": "Which symptoms may occur with infection by Ancylostoma duodenale (hookworm)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Anemia and malnutrition",
+          "correct": true
+        },
+        {
+          "t": "Diarrhea and vomiting",
+          "correct": false
+        },
+        {
+          "t": "High fever and skin rash",
+          "correct": false
+        },
+        {
+          "t": "Jaundice and abdominal pain",
+          "correct": false
+        }
+      ],
+      "explanation": "Chronic intestinal blood loss → iron-deficiency anemia and malnutrition.",
+      "topic": "nematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-24",
+      "stem": "What is the infective form of Ascaris lumbricoides for humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The fertilized (embryonated) egg",
+          "correct": true
+        },
+        {
+          "t": "The larva",
+          "correct": false
+        },
+        {
+          "t": "The adult worm",
+          "correct": false
+        },
+        {
+          "t": "The cyst",
+          "correct": false
+        }
+      ],
+      "explanation": "Humans are infected by ingesting the embryonated (fertilized) egg.",
+      "topic": "nematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-25",
+      "stem": "Which parasite can cause elephantiasis?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Wuchereria bancrofti",
+          "correct": true
+        },
+        {
+          "t": "Onchocerca volvulus",
+          "correct": false
+        },
+        {
+          "t": "Dracunculus medinensis",
+          "correct": false
+        },
+        {
+          "t": "Loa loa",
+          "correct": false
+        }
+      ],
+      "explanation": "W. bancrofti (lymphatic filariasis) causes elephantiasis.",
+      "topic": "filariae",
+      "source": "exam"
+    },
+    {
+      "id": "par-26",
+      "stem": "Which statement about Wuchereria bancrofti is NOT correct?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Human infection occurs through penetration of larvae at the hair follicles",
+          "correct": true
+        },
+        {
+          "t": "Adult parasites colonize the afferent lymphatic vessels of lymph nodes",
+          "correct": false
+        },
+        {
+          "t": "The larvae do not enter the alveolar space of the lungs",
+          "correct": false
+        },
+        {
+          "t": "Human infection occurs through an arthropod (mosquito) vector",
+          "correct": false
+        }
+      ],
+      "explanation": "W. bancrofti is transmitted by a MOSQUITO bite — not via hair follicles; that statement is incorrect.",
+      "topic": "filariae",
+      "source": "exam"
+    },
+    {
+      "id": "par-27",
+      "stem": "How is the nematode Trichinella spiralis transmitted?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Ingestion of raw/undercooked meat (encysted larvae)",
+          "correct": true
+        },
+        {
+          "t": "The bite of a mosquito",
+          "correct": false
+        },
+        {
+          "t": "Skin penetration by larvae from soil",
+          "correct": false
+        },
+        {
+          "t": "The fecal-oral route",
+          "correct": false
+        }
+      ],
+      "explanation": "Trichinella is acquired by eating raw/undercooked meat containing encysted larvae.",
+      "topic": "nematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-28",
+      "stem": "Which statements about Trichinella are correct?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It can cause severe damage to the central nervous system",
+          "correct": true
+        },
+        {
+          "t": "There is no effective antiparasitic drug for the encysted larvae",
+          "correct": true
+        },
+        {
+          "t": "It is transmitted via the fecal-oral route",
+          "correct": false
+        },
+        {
+          "t": "It causes blindness",
+          "correct": false
+        }
+      ],
+      "explanation": "Trichinella larvae can reach the CNS/heart and there is no effective drug for encysted larvae; it is meat-borne (not fecal-oral) and does not cause blindness.",
+      "topic": "nematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-29",
+      "stem": "Which statement regarding Schistosoma haematobium is FALSE?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The parasite’s eggs are released into the environment with the feces",
+          "correct": true
+        },
+        {
+          "t": "Intermediate hosts are freshwater snails",
+          "correct": false
+        },
+        {
+          "t": "Transmission occurs through direct skin penetration by cercariae",
+          "correct": false
+        },
+        {
+          "t": "Chronic schistosomiasis is caused by the inflammatory reaction to eggs retained in tissues",
+          "correct": false
+        }
+      ],
+      "explanation": "S. haematobium eggs are shed in URINE (→ bladder pathology), not feces — so that statement is false.",
+      "topic": "trematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-30",
+      "stem": "How is Fasciola hepatica transmitted to humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "By ingesting contaminated (aquatic) vegetables",
+          "correct": true
+        },
+        {
+          "t": "By the fecal-oral route directly",
+          "correct": false
+        },
+        {
+          "t": "By ingesting contaminated meat",
+          "correct": false
+        },
+        {
+          "t": "By skin penetration",
+          "correct": false
+        }
+      ],
+      "explanation": "Humans ingest metacercariae encysted on aquatic plants (e.g. watercress).",
+      "topic": "trematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-31",
+      "stem": "Which statement about Enterobius vermicularis is NOT correct?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Diagnosis is best made by examining a stool ova-and-parasite sample",
+          "correct": true
+        },
+        {
+          "t": "The hallmark symptom is perianal nocturnal itching",
+          "correct": false
+        },
+        {
+          "t": "Transmission is fecal-oral with frequent autoinfection",
+          "correct": false
+        },
+        {
+          "t": "Eggs are typically flattened on one side",
+          "correct": false
+        }
+      ],
+      "explanation": "Pinworm is diagnosed by the perianal scotch-TAPE test (eggs are rarely found in stool) — so the stool-sample statement is incorrect.",
+      "topic": "nematodes",
+      "source": "exam"
+    },
+    {
+      "id": "par-32",
+      "stem": "Which of the following is the causative agent of American trypanosomiasis (Chagas disease)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Trypanosoma cruzi",
+          "correct": true
+        },
+        {
+          "t": "Trypanosoma brucei gambiense",
+          "correct": false
+        },
+        {
+          "t": "Leishmania donovani",
+          "correct": false
+        },
+        {
+          "t": "Plasmodium falciparum",
+          "correct": false
+        }
+      ],
+      "explanation": "T. cruzi (reduviid \"kissing\" bug) causes Chagas disease.",
+      "topic": "trypanosoma",
+      "source": "exam"
+    }
+  ]
+}

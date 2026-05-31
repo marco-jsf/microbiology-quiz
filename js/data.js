@@ -5,7 +5,7 @@ export const CHAPTER_FILES = [
   'bacteriology-specific.json',
   'virology.json',
   'mycology.json',
-  // 'parasitology.json',  // phase 3
+  'parasitology.json',
 ];
 
 export async function loadChapters() {

@@ -24,6 +24,7 @@ function genOne(e, distract, chap) {
   if (a.envelope === 'Enveloped' || a.envelope === 'Naked') types.push('envelope');
   if (a.replication === 'Nucleus' || a.replication === 'Cytoplasm') types.push('repl');
   if (a.morphology === 'Yeast' || a.morphology === 'Mold' || a.morphology === 'Dimorphic') types.push('morph');
+  if (a.ptype) types.push('ptype');
   if (has(a.disease)) types.push('whichOrg');
   if (has(a.keyVF)) types.push('keyvf');
   if (has(a.treatment)) types.push('treat');
@@ -62,6 +63,10 @@ function genOne(e, distract, chap) {
       return base(e, chap, type, { stem: `What is the morphology of <b>${e.name}</b>?`, multi: false,
         options: shuffle([opt('Yeast', a.morphology === 'Yeast'), opt('Mold', a.morphology === 'Mold'), opt('Dimorphic', a.morphology === 'Dimorphic')]),
         explanation: `${e.name}: ${a.morphology.toLowerCase()}.${a.special ? ' ' + a.special : ''}` });
+    case 'ptype':
+      return base(e, chap, type, { stem: `What type of parasite is <b>${e.name}</b>?`, multi: false,
+        options: shuffle([opt('Protozoan', a.ptype === 'Protozoan'), opt('Nematode (roundworm)', a.ptype === 'Nematode (roundworm)'), opt('Cestode (tapeworm)', a.ptype === 'Cestode (tapeworm)'), opt('Trematode (fluke)', a.ptype === 'Trematode (fluke)')]),
+        explanation: `${e.name}: ${a.ptype}.` });
     case 'whichOrg':
       return base(e, chap, type, { stem: `Which of the following causes:<br><i>"${a.disease}"</i>`, multi: false,
         options: optsFrom(e.name, others.map(x => x.name)),
@@ -120,6 +125,11 @@ function genMulti(entities, chap) {
   make('dimorphic', 'dimorphic fungi', e => e.attrs.morphology === 'Dimorphic', fungi);
   make('fsys', 'systemic (deep) fungi', e => /systemic/i.test(e.group), fungi);
   make('fopp', 'opportunistic fungi', e => /opportunistic/i.test(e.group), fungi);
+  // parasitology traits (gated on ptype presence → parasites only)
+  const para = entities.filter(e => e.attrs.ptype);
+  make('proto', 'protozoa', e => e.attrs.ptype === 'Protozoan', para);
+  make('helm', 'helminths (worms)', e => /Nematode|Cestode|Trematode/.test(e.attrs.ptype || ''), para);
+  make('nema', 'nematodes (roundworms)', e => /Nematode/.test(e.attrs.ptype || ''), para);
   return items;
 }
 
