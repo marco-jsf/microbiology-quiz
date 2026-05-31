@@ -124,11 +124,31 @@ view.addEventListener('click', e => {
   if (e.target.id === 'againBtn') { buildSession(); render(); return; }
   if (e.target.id === 'weakBtn') { state.scope = 'weak'; syncPills(); buildSession(); render(); return; }
   if (e.target.id === 'resetBtn') { if (confirm('Reset ALL progress (including coins)? This cannot be undone.')) { engine.resetProgress(); updateCoinDisplay(); render(); } return; }
+  if (e.target.id === 'toggleAllBtn') {
+    const cards = [...document.querySelectorAll('.chap-card')];
+    const collapse = cards.some(c => c.classList.contains('open'));
+    cards.forEach(c => c.classList.toggle('open', !collapse));
+    e.target.textContent = collapse ? 'Expand all' : 'Collapse all';
+    return;
+  }
+  const head = e.target.closest('.chap-head');
+  if (head) { head.parentElement.classList.toggle('open'); return; }
   const chip = e.target.closest('.gchip');
   if (chip) {
     const ent = state.chapters.flatMap(c => c.entities).find(x => x.id === chip.dataset.eid);
-    if (ent) { $('#peek').innerHTML = entityProfileHTML(ent); $('#peek').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+    if (ent) openEntityDialog(ent);
   }
+});
+
+/* ---------- entity profile dialog ---------- */
+function openEntityDialog(ent) {
+  const dlg = $('#entityDialog');
+  dlg.innerHTML = entityProfileHTML(ent, engine.entityProgress(ent.id));
+  dlg.showModal();
+}
+$('#entityDialog').addEventListener('click', e => {
+  // close on backdrop click (target is the dialog itself) or the ✕ button
+  if (e.target.id === 'entityDialog' || e.target.closest('[data-close]')) $('#entityDialog').close();
 });
 function next() { state.idx++; render(); }
 

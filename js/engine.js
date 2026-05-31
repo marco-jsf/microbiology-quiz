@@ -97,15 +97,32 @@ export function gradeScore(id, score) {
 }
 
 // Aggregate mastery for an entity = combine all of its generated items (`entityId:*`).
+export const MASTER_LEVEL = 4, MAX_LEVEL = 5;
 export function entityMastery(entityId) {
   const keys = Object.keys(srs).filter(k => k === entityId || k.startsWith(entityId + ':'));
   if (!keys.length) return 'new';
   let seen = 0, scoreSum = 0, lvl = 0;
   for (const k of keys) { const s = srs[k]; seen += s.seen; scoreSum += s.scoreSum; lvl = Math.max(lvl, s.level); }
   if (!seen) return 'new';
-  if (lvl >= 4) return 'mastered';
+  if (lvl >= MASTER_LEVEL) return 'mastered';
   if (lvl >= 2) return 'learning';
   return 'weak';
+}
+
+// Detailed level / mastery progress for one entity — for the profile dialog.
+// `level` is the highest Leitner level reached by any of the entity's items
+// (consistent with entityMastery's Math.max); mastery is hit at MASTER_LEVEL.
+export function entityProgress(entityId) {
+  const keys = Object.keys(srs).filter(k => k === entityId || k.startsWith(entityId + ':'));
+  let seen = 0, scoreSum = 0, level = 0;
+  for (const k of keys) { const s = srs[k]; seen += s.seen; scoreSum += s.scoreSum; level = Math.max(level, s.level); }
+  return {
+    level, seen,
+    mastery: entityMastery(entityId),
+    avg: seen ? scoreSum / seen : 0,
+    toMaster: Math.max(0, MASTER_LEVEL - level),
+    pct: Math.min(1, level / MASTER_LEVEL)
+  };
 }
 
 export function shuffle(a) {
