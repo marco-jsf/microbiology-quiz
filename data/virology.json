@@ -1,0 +1,2008 @@
+{
+  "id": "virology",
+  "title": "Virology",
+  "short": "Virology",
+  "color": "#d0662a",
+  "entities": [
+    {
+      "id": "hsv",
+      "name": "Herpes simplex virus (HSV-1/2)",
+      "group": "Herpesviridae",
+      "color": "#b25ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "Sensory (trigeminal/sacral) ganglia neurons",
+        "transmission": "HSV-1 oral/contact; HSV-2 sexual; vertical (neonatal)",
+        "disease": "Cold sores (orolabial) & genital herpes; keratitis; HSV-1 encephalitis (temporal lobe); neonatal disseminated disease",
+        "keyVF": "Glycoproteins (cell-to-cell spread, syncytia); LAT (latency)",
+        "virulence": "Glycoproteins for entry/fusion; immune evasion via cell-to-cell spread; LAT maintains latency",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Acyclovir / valacyclovir (nucleoside analogues activated by viral thymidine kinase)",
+        "special": "CD8 T-cells + IFN-γ maintain latency; reactivation by stress/UV/immunosuppression"
+      }
+    },
+    {
+      "id": "vzv",
+      "name": "Varicella-zoster virus (VZV / HHV-3)",
+      "group": "Herpesviridae",
+      "color": "#b25ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA (smallest herpesvirus genome)",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "Dorsal root / cranial ganglia neurons",
+        "transmission": "Respiratory (inhalation) & close contact",
+        "disease": "Chickenpox (varicella) primary; shingles (herpes zoster) on reactivation",
+        "keyVF": "Glycoprotein E; cell-to-cell spread",
+        "virulence": "Spreads cell-to-cell; carried by infected T-lymphocytes to skin",
+        "vaccine": "Yes — live attenuated (varicella) + recombinant subunit (gE) zoster vaccine",
+        "vYN": "yes",
+        "treatment": "Acyclovir/valacyclovir/famciclovir; VZIg for immunocompromised",
+        "special": "Reactivates as zoster (single dermatome) when immunity declines"
+      }
+    },
+    {
+      "id": "ebv",
+      "name": "Epstein-Barr virus (EBV / HHV-4)",
+      "group": "Herpesviridae",
+      "color": "#b25ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "yes",
+        "latency": "Memory B-lymphocytes",
+        "transmission": "Saliva (\"kissing disease\")",
+        "disease": "Infectious mononucleosis; Burkitt lymphoma; nasopharyngeal carcinoma; Hodgkin lymphoma; oral hairy leukoplakia (HIV)",
+        "keyVF": "EBNA / LMP1 — immortalize B-cells (bind CD21/C3d)",
+        "virulence": "Stimulates B-cell growth & immortalization; EBNA-1 maintains genome",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "No effective specific antiviral; supportive",
+        "special": "Mono = overreactive T-cell response; Burkitt = t(8;14) c-myc translocation; Downey cells"
+      }
+    },
+    {
+      "id": "cmv",
+      "name": "Cytomegalovirus (CMV / HHV-5)",
+      "group": "Herpesviridae",
+      "color": "#b25ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA (largest herpesvirus genome)",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "Myeloid / hematopoietic cells",
+        "transmission": "Transplacental, breast milk, saliva, sexual, transfusion, transplant",
+        "disease": "Mostly asymptomatic; mononucleosis-like (heterophile-negative); congenital (deafness, vision, IQ deficits); retinitis/colitis/pneumonia in immunocompromised",
+        "keyVF": "Immune evasion (inhibits MHC, NK)",
+        "virulence": "Inhibits MHC expression and NK cells; immunosuppressive cytokines",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Ganciclovir (blocks viral protein kinase) / cidofovir",
+        "special": "\"Owl’s eye\" intranuclear inclusions; worst congenital outcomes with primary maternal infection"
+      }
+    },
+    {
+      "id": "hhv8",
+      "name": "HHV-8 (Kaposi sarcoma herpesvirus)",
+      "group": "Herpesviridae",
+      "color": "#b25ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "yes",
+        "latency": "B-lymphocytes / endothelial cells",
+        "transmission": "Saliva, sexual",
+        "disease": "Kaposi sarcoma (AIDS-associated); B-cell lymphoma",
+        "keyVF": "Viral homologs of IL-6, Bcl-2, chemokines",
+        "virulence": "Encodes human-like proteins (IL-6 homolog, Bcl-2 analog) driving proliferation",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Antiretrovirals (restore immunity) + supportive",
+        "special": "Opportunistic; associated with AIDS"
+      }
+    },
+    {
+      "id": "adeno",
+      "name": "Adenovirus",
+      "group": "Adenoviridae",
+      "color": "#5a9ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA",
+        "genomeClass": "DNA",
+        "envelope": "Naked",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "Lymphoid tissue (adenoids, tonsils, Peyer’s patches)",
+        "transmission": "Droplet, oro-fecal, contaminated surfaces/water (swimming pools)",
+        "disease": "Pharyngo-conjunctivitis; epidemic keratoconjunctivitis; acute respiratory disease; hemorrhagic cystitis (children); gastroenteritis",
+        "keyVF": "E1A/E1B (bind Rb / p53)",
+        "virulence": "E1A binds p105RB, E1B binds p53 → drive cell growth; E3 prevents MHC-I presentation",
+        "vaccine": "Yes — oral vaccine (military recruits)",
+        "vYN": "yes",
+        "treatment": "No specific therapy; ribavirin/cidofovir in immunocompromised",
+        "special": "E1A/E1B transform animal cells (not oncogenic in humans); naked → environmentally stable; used as gene-therapy vector"
+      }
+    },
+    {
+      "id": "parvo",
+      "name": "Parvovirus B19",
+      "group": "Parvoviridae",
+      "color": "#d07a9a",
+      "gram": "",
+      "attrs": {
+        "genome": "ssDNA (smallest DNA virus)",
+        "genomeClass": "DNA",
+        "envelope": "Naked",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Respiratory / oral secretions; transplacental",
+        "disease": "Erythema infectiosum (fifth disease, \"slapped cheek\"); aplastic crisis (in hemolytic anemia); hydrops fetalis",
+        "keyVF": "Tropism for erythroid precursors",
+        "virulence": "Infects erythroid precursors in bone marrow → suppresses erythropoiesis",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive; IV immunoglobulin / transfusion in severe cases",
+        "special": "Needs mitotically active cells; 2-phase disease; greatest fetal risk in 2nd trimester"
+      }
+    },
+    {
+      "id": "hpv",
+      "name": "Human papillomavirus (HPV)",
+      "group": "Papillomaviridae",
+      "color": "#d05a5a",
+      "gram": "",
+      "attrs": {
+        "genome": "circular dsDNA",
+        "genomeClass": "DNA",
+        "envelope": "Naked",
+        "replication": "Nucleus",
+        "oncogenic": "yes",
+        "latency": "Basal keratinocytes",
+        "transmission": "Direct skin/mucosal contact; sexual; birth canal",
+        "disease": "Warts & condylomas (6,11); cervical, oropharyngeal, anal, penile cancer (16,18)",
+        "keyVF": "E6 (degrades p53) & E7 (inactivates Rb/p105)",
+        "virulence": "E6→p53 degradation, E7→Rb inactivation, E5→enhances EGFR; oncogenesis when genome integrates (disrupts E2)",
+        "vaccine": "Yes — Gardasil 9 (L1 capsid protein)",
+        "vYN": "yes",
+        "treatment": "No specific antiviral; cidofovir for recurrent lesions",
+        "special": "Life cycle tied to keratinocyte differentiation; no viral polymerase; Pap smear / koilocytes"
+      }
+    },
+    {
+      "id": "polyoma",
+      "name": "Polyomavirus (JC, BK)",
+      "group": "Polyomaviridae",
+      "color": "#9a5ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "circular dsDNA",
+        "genomeClass": "DNA",
+        "envelope": "Naked",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "Kidney (BK), CNS/lymphoid (JC)",
+        "transmission": "Urine, feces, possibly aerosols",
+        "disease": "JC → progressive multifocal leukoencephalopathy (PML); BK → nephropathy & hemorrhagic cystitis (transplant)",
+        "keyVF": "Large T-antigen (binds p53 & Rb/p105)",
+        "virulence": "T-Ag inactivates p53 and pRb",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Restore immunity; cidofovir",
+        "special": "Reactivate in immunocompromised; SV40 T-Ag causes tumors in animals but not humans"
+      }
+    },
+    {
+      "id": "pox",
+      "name": "Smallpox / Poxvirus (variola, vaccinia, MCV)",
+      "group": "Poxviridae",
+      "color": "#8a6a4a",
+      "gram": "",
+      "attrs": {
+        "genome": "dsDNA (large)",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped (complex)",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Respiratory / direct contact (variola); zoonotic (monkeypox, cowpox)",
+        "disease": "Smallpox (eradicated); molluscum contagiosum; monkeypox; orf/cowpox",
+        "keyVF": "Carries own DNA-dependent RNA polymerase; immune-evasion genes (~30% of genome)",
+        "virulence": "Encodes chemokine/cytokine homologs to evade immunity; spreads cell-to-cell",
+        "vaccine": "Yes — live vaccinia (from cowpox)",
+        "vYN": "yes",
+        "treatment": "Supportive; tecovirimat (severe); cidofovir",
+        "special": "UNIQUE: the only DNA virus that replicates in the CYTOPLASM (brings its own RNA polymerase)"
+      }
+    },
+    {
+      "id": "hiv",
+      "name": "HIV (Human Immunodeficiency Virus)",
+      "group": "Retroviridae",
+      "color": "#d0902a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA (diploid); replicates via DNA intermediate (reverse transcription)",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "CD4+ memory T-lymphocytes",
+        "transmission": "Blood (needles/transfusion), sexual, perinatal (breast milk)",
+        "disease": "AIDS — progressive CD4 depletion → opportunistic infections, dementia, tumors",
+        "keyVF": "Reverse transcriptase; gp120 (CD4/CCR5 binding); Nef (downregulates MHC-I)",
+        "virulence": "gp120 binds CD4 + CCR5/CXCR4; Nef diverts MHC-I to lysosome; high antigenic variation; integrates into genome",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "HAART: NRTI/NNRTI (RT), integrase inhibitors, protease inhibitors, entry (maraviroc)/fusion (T20) inhibitors",
+        "special": "Protease inhibitors block virion MATURATION; PrEP (TDF/FTC); huge mutation rate hinders vaccine"
+      }
+    },
+    {
+      "id": "htlv",
+      "name": "HTLV-1 (Human T-cell leukemia virus)",
+      "group": "Retroviridae",
+      "color": "#d0902a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA; reverse transcription",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "yes",
+        "latency": "CD4+ T-lymphocytes",
+        "transmission": "Blood, sexual, mother-to-child (breast milk)",
+        "disease": "Adult T-cell leukemia/lymphoma (ATL); HTLV-associated myelopathy / tropical spastic paraparesis (HAM/TSP)",
+        "keyVF": "TAX oncoprotein (promotes T-cell proliferation)",
+        "virulence": "TAX drives proliferation & DNA damage; HBZ promotes survival; spreads via virological synapse",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Chemotherapy (ATL); corticosteroids (HAM/TSP)",
+        "special": "Most carriers asymptomatic; long latency, onset in adulthood"
+      }
+    },
+    {
+      "id": "flu",
+      "name": "Influenza virus",
+      "group": "Orthomyxoviridae",
+      "color": "#2aa9b8",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA, SEGMENTED (8 segments)",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Respiratory droplets / aerosols",
+        "disease": "Influenza (fever, myalgia, cough); primary viral / secondary bacterial pneumonia; myocarditis",
+        "keyVF": "Hemagglutinin (HA) & Neuraminidase (NA); antigenic shift & drift",
+        "virulence": "HA binds sialic acid (entry); NA releases virions; M2 ion channel for uncoating; cap-snatching",
+        "vaccine": "Yes — multivalent (inactivated, recombinant, live attenuated)",
+        "vYN": "yes",
+        "treatment": "NA inhibitors (oseltamivir, zanamivir); baloxavir (cap-snatching); M2 blockers (amantadine, often resistant)",
+        "special": "Antigenic SHIFT (reassortment of segments → pandemics) vs DRIFT (point mutations → seasonal); A & B cause recurrent outbreaks"
+      }
+    },
+    {
+      "id": "measles",
+      "name": "Measles virus (Morbillivirus)",
+      "group": "Paramyxoviridae",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Respiratory (highly contagious)",
+        "disease": "Measles (maculopapular rash, cough, conjunctivitis, Koplik spots); subacute sclerosing panencephalitis (SSPE) — late/rare",
+        "keyVF": "Causes immunosuppression; receptors CD46/nectin-4/CD150",
+        "virulence": "Infects lymphocytes/epithelium; suppresses immunity (kills monocytes, T/B cells); rash is T-cell mediated",
+        "vaccine": "Yes — live attenuated (MMR)",
+        "vYN": "yes",
+        "treatment": "Vitamin A; supportive; IgG for immunocompromised",
+        "special": "Replication begins in the RESPIRATORY tract; SSPE = defective virus persisting in CNS"
+      }
+    },
+    {
+      "id": "mumps",
+      "name": "Mumps virus",
+      "group": "Paramyxoviridae",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Inhalation of aerosols/droplets",
+        "disease": "Parotitis (parotid swelling); orchitis; aseptic meningitis; pancreatitis",
+        "keyVF": "Single serotype",
+        "virulence": "Spreads systemically via viremia; cell-to-cell spread",
+        "vaccine": "Yes — live attenuated (MMR)",
+        "vYN": "yes",
+        "treatment": "Supportive",
+        "special": "Only one serotype; lifelong immunity; host range limited to humans"
+      }
+    },
+    {
+      "id": "piv",
+      "name": "Parainfluenza virus (1-4)",
+      "group": "Paramyxoviridae",
+      "color": "#2aa95a",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Respiratory droplets/contact",
+        "disease": "Croup (laryngotracheobronchitis) in children; common-cold-like illness",
+        "keyVF": "",
+        "virulence": "Local respiratory infection; short-lived immunity → reinfection",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive",
+        "special": "Spread remains local (no viremia)"
+      }
+    },
+    {
+      "id": "rsv",
+      "name": "Respiratory syncytial virus (RSV)",
+      "group": "Pneumoviridae",
+      "color": "#3aae6a",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Air / fomites (highly contagious)",
+        "disease": "Bronchiolitis & pneumonia in infants (leading cause of fatal pediatric ARI); cold in adults",
+        "keyVF": "Syncytia formation",
+        "virulence": "Localized respiratory infection; bronchiolitis largely immune-mediated; no viremia",
+        "vaccine": "Partial — maternal/older-adult vaccines & monoclonal Ab prophylaxis",
+        "vYN": "partial",
+        "treatment": "Nebulized ribavirin; passive immunization",
+        "special": "Main risk group: pediatric; maternal Ab insufficient to protect newborns"
+      }
+    },
+    {
+      "id": "rabies",
+      "name": "Rabies virus (Lyssavirus)",
+      "group": "Rhabdoviridae",
+      "color": "#6a6ad0",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA (bullet-shaped, only 5 genes)",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Bite of infected animal (zoonosis: bats, dogs, foxes)",
+        "disease": "Rabies — prodrome → encephalitis with hydrophobia, hyperactivity → coma → death",
+        "keyVF": "Retrograde axonal transport to CNS; binds AChR/NCAM",
+        "virulence": "Replicates slowly at bite site, travels retrograde along nerves to CNS, then to salivary glands",
+        "vaccine": "Yes — inactivated (pre- & post-exposure)",
+        "vYN": "yes",
+        "treatment": "Post-exposure prophylaxis: HRIG near wound + 4 doses inactivated vaccine (effective only before CNS involvement)",
+        "special": "Negri bodies in neurons; once symptomatic, almost invariably fatal"
+      }
+    },
+    {
+      "id": "cov2",
+      "name": "SARS-CoV-2",
+      "group": "Coronaviridae",
+      "color": "#d0662a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA (largest RNA genome)",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Respiratory droplets/aerosols",
+        "disease": "COVID-19 (respiratory; multisystem in severe disease)",
+        "keyVF": "Spike protein (binds ACE2); needs proteases to activate spike",
+        "virulence": "Spike–ACE2 entry; direct + immune-mediated injury; cytokine release",
+        "vaccine": "Yes — mRNA / adenoviral-vectored (spike)",
+        "vYN": "yes",
+        "treatment": "Protease inhibitors (nirmatrelvir/ritonavir, molnupiravir); polymerase (remdesivir); monoclonal Ab; corticosteroids/IL-6 inhibitors",
+        "special": "SARS-CoV (2003) caused MORE symptomatic infections → easier to contain → did not become pandemic"
+      }
+    },
+    {
+      "id": "polio",
+      "name": "Poliovirus (Enterovirus, Picornaviridae)",
+      "group": "Picornaviridae",
+      "color": "#c79a2a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Naked",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Fecal-oral",
+        "disease": "Poliomyelitis: mostly asymptomatic; aseptic meningitis; flaccid paralysis (motor neuron infection); post-polio syndrome",
+        "keyVF": "Tropism for motor neurons",
+        "virulence": "Translated as polyprotein; replicates in gut then CNS motor neurons",
+        "vaccine": "Yes — OPV (live, mucosal IgA) & IPV (inactivated)",
+        "vYN": "yes",
+        "treatment": "No specific therapy",
+        "special": "Post-polio syndrome = late muscle dysfunction years after infection"
+      }
+    },
+    {
+      "id": "coxsackie",
+      "name": "Coxsackievirus / Echovirus (Enterovirus)",
+      "group": "Picornaviridae",
+      "color": "#c79a2a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Naked",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Fecal-oral",
+        "disease": "Hand-foot-and-mouth disease; herpangina; meningitis/encephalitis; myocarditis; pericarditis",
+        "keyVF": "",
+        "virulence": "Do not affect motor neurons; main cause of viral CNS infection in children",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive",
+        "special": "Most infections subclinical"
+      }
+    },
+    {
+      "id": "rhino",
+      "name": "Rhinovirus",
+      "group": "Picornaviridae",
+      "color": "#c79a2a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Naked",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Direct contact / fomites; inhaled droplets",
+        "disease": "Common cold (upper respiratory tract)",
+        "keyVF": "ICAM-1 receptor; replicates best at 33 °C",
+        "virulence": "Limited to upper airway; symptoms via local inflammation (TNF-α, interleukins)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive",
+        "special": ">100 serotypes (hard to vaccinate); temperature-dependent (does not grow >33 °C) → limited to upper airway; labile to acid pH"
+      }
+    },
+    {
+      "id": "hav",
+      "name": "Hepatitis A virus (Hepatovirus)",
+      "group": "Picornaviridae",
+      "color": "#c79a2a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Naked",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Oral-fecal (contaminated food/water)",
+        "disease": "Acute viral hepatitis (self-limiting; NO chronic infection)",
+        "keyVF": "Acid/environment resistance",
+        "virulence": "Replicates in intestine → liver; immune-mediated hepatocyte damage; non-lytic release in exosomes",
+        "vaccine": "Yes — inactivated",
+        "vYN": "yes",
+        "treatment": "Supportive",
+        "special": "Highly resistant (acid pH, drying, 4 °C); does not cause chronic infection"
+      }
+    },
+    {
+      "id": "rota",
+      "name": "Rotavirus",
+      "group": "Reoviridae",
+      "color": "#5ab0a0",
+      "gram": "",
+      "attrs": {
+        "genome": "dsRNA, SEGMENTED",
+        "genomeClass": "RNA",
+        "envelope": "Naked",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Fecal-oral",
+        "disease": "Gastroenteritis in young children (leading cause of severe pediatric diarrhea)",
+        "keyVF": "NSP4 (viroporin / enterotoxin)",
+        "virulence": "NSP4 raises Ca²⁺ → disrupts tight junctions & villi → secretory diarrhea & malabsorption",
+        "vaccine": "Yes — oral live attenuated",
+        "vYN": "yes",
+        "treatment": "Rehydration therapy",
+        "special": "Segmented genome → reassortment; double/triple capsid; environmentally stable"
+      }
+    },
+    {
+      "id": "noro",
+      "name": "Norovirus (Calicivirus)",
+      "group": "Caliciviridae",
+      "color": "#b0a02a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Naked",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Fecal-oral; contaminated food/water; surfaces",
+        "disease": "Acute gastroenteritis outbreaks (watery diarrhea, vomiting)",
+        "keyVF": "Binds ABO histo-blood-group antigens",
+        "virulence": "Extremely contagious; infects small-intestine epithelium (little inflammation)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive / rehydration",
+        "special": "Short-lived immunity + many strains → recurrent infections"
+      }
+    },
+    {
+      "id": "dengue",
+      "name": "Dengue virus",
+      "group": "Flaviviridae",
+      "color": "#d04a64",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Aedes mosquito bite (arbovirus)",
+        "disease": "Dengue fever; dengue hemorrhagic fever (DHF) / dengue shock syndrome (DSS)",
+        "keyVF": "Antibody-dependent enhancement (ADE)",
+        "virulence": "Replicates in monocytes/macrophages; ADE on second infection with a DIFFERENT serotype worsens disease",
+        "vaccine": "Partial — limited (serostatus-dependent)",
+        "vYN": "partial",
+        "treatment": "Supportive",
+        "special": "Prior infection with a DIFFERENT serotype increases risk of severe disease (ADE)"
+      }
+    },
+    {
+      "id": "yellowfever",
+      "name": "Yellow fever virus",
+      "group": "Flaviviridae",
+      "color": "#d04a64",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Aedes mosquito (urban) / forest mosquitoes (sylvatic)",
+        "disease": "Yellow fever — high viremia, hepatotropism (jaundice), hemorrhage, multi-organ failure",
+        "keyVF": "Hepatocyte tropism",
+        "virulence": "Strong tropism for hepatocytes → apoptosis; dysregulated cytokine release → shock",
+        "vaccine": "Yes — highly effective, long-lasting",
+        "vYN": "yes",
+        "treatment": "Supportive",
+        "special": "Sylvatic (monkey↔mosquito) and urban (human↔Aedes aegypti) cycles"
+      }
+    },
+    {
+      "id": "zika",
+      "name": "Zika virus",
+      "group": "Flaviviridae",
+      "color": "#d04a64",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Aedes mosquito; sexual; transplacental",
+        "disease": "Usually mild (flu-like, rash, conjunctivitis); congenital microcephaly",
+        "keyVF": "Neurotropism (fetal)",
+        "virulence": "Broad tropism (CNS, gonads, placenta); surface glycoprotein binds neuronal receptors → fetal neuronal apoptosis",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive",
+        "special": "Cross-reacts serologically with dengue; prior Zika may worsen later dengue (and vice versa)"
+      }
+    },
+    {
+      "id": "wnv",
+      "name": "West Nile virus",
+      "group": "Flaviviridae",
+      "color": "#d04a64",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Mosquito (birds = reservoir); human-human rare",
+        "disease": "Mostly flu-like; encephalitis (crosses BBB)",
+        "keyVF": "",
+        "virulence": "Infects dermal DCs/macrophages → lymph nodes → viremia; can cross BBB → neurons",
+        "vaccine": "None (human)",
+        "vYN": "no",
+        "treatment": "Supportive",
+        "special": "IgM may persist up to a year"
+      }
+    },
+    {
+      "id": "tbev",
+      "name": "Tick-borne encephalitis virus",
+      "group": "Flaviviridae",
+      "color": "#d04a64",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Tick bite; unpasteurized milk (rodents = reservoir)",
+        "disease": "Biphasic: flu-like phase → meningoencephalitis / cranial nerve paralysis",
+        "keyVF": "",
+        "virulence": "Replicates in myeloid cells → viremia → crosses BBB",
+        "vaccine": "Yes — inactivated",
+        "vYN": "yes",
+        "treatment": "Supportive; avoid unpasteurized milk",
+        "special": "Biphasic course with asymptomatic interval"
+      }
+    },
+    {
+      "id": "hcv",
+      "name": "Hepatitis C virus",
+      "group": "Flaviviridae",
+      "color": "#d04a64",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "yes",
+        "latency": "",
+        "transmission": "Blood (needles, transfusion), IV drugs, sexual",
+        "disease": "Often chronic hepatitis → cirrhosis → hepatocellular carcinoma (HCC)",
+        "keyVF": "NS3 protease, NS5A, NS5B polymerase",
+        "virulence": "~70% become chronic; carcinogenesis by persistent inflammation (no viral oncogene)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Direct-acting antivirals targeting NS3/4A protease, NS5A, NS5B polymerase (curative combinations)",
+        "special": "Not an arbovirus (despite Flaviviridae); enters via LDL receptors; anti-HCV Ab not protective"
+      }
+    },
+    {
+      "id": "chik",
+      "name": "Chikungunya virus (Alphavirus)",
+      "group": "Togaviridae",
+      "color": "#c75a8a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Mosquito bite (arbovirus)",
+        "disease": "Fever, severe polyarthralgia / polyarthritis, myalgia",
+        "keyVF": "",
+        "virulence": "Reaches bloodstream → macrophages → fibroblasts; immune response adds tissue damage",
+        "vaccine": "None (limited)",
+        "vYN": "no",
+        "treatment": "Supportive",
+        "special": "Highly cytolytic in human cells; persistent/non-cytolytic in insect cells"
+      }
+    },
+    {
+      "id": "rubella",
+      "name": "Rubella virus (Rubivirus)",
+      "group": "Togaviridae",
+      "color": "#c75a8a",
+      "gram": "",
+      "attrs": {
+        "genome": "+ssRNA",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Airborne (NOT an arbovirus; exclusively human)",
+        "disease": "Rubella (German measles): mild rash/lymphadenopathy; congenital rubella syndrome (severe malformations)",
+        "keyVF": "Crosses placenta",
+        "virulence": "Not cytolytic; disrupts growth/mitosis of fetal cells; crosses placenta → fetal malformations",
+        "vaccine": "Yes — live attenuated (MMR)",
+        "vYN": "yes",
+        "treatment": "Supportive",
+        "special": "Transplacental transmission → most dangerous to fetus (malformations, premature birth)"
+      }
+    },
+    {
+      "id": "ebola",
+      "name": "Ebola virus (Filovirus)",
+      "group": "Filoviridae",
+      "color": "#9a6a3a",
+      "gram": "",
+      "attrs": {
+        "genome": "−ssRNA (long filament)",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped",
+        "replication": "Cytoplasm",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Direct contact with body fluids (bats = likely reservoir)",
+        "disease": "Ebola hemorrhagic fever — diffuse hemorrhage, hypovolemic shock, high mortality",
+        "keyVF": "Secreted decoy glycoprotein",
+        "virulence": "Replicates in myeloid/endothelial cells & DCs; triggers out-of-control inflammation; decoy GP neutralizes antibodies",
+        "vaccine": "Yes — VSV-vectored / adenoviral",
+        "vYN": "yes",
+        "treatment": "Monoclonal antibody therapies; supportive",
+        "special": "Decoy glycoprotein distracts the immune system (similar to HBV)"
+      }
+    },
+    {
+      "id": "hbv",
+      "name": "Hepatitis B virus",
+      "group": "Hepadnaviridae",
+      "color": "#2a8a6a",
+      "gram": "",
+      "attrs": {
+        "genome": "circular, partially dsDNA (gapped)",
+        "genomeClass": "DNA",
+        "envelope": "Enveloped",
+        "replication": "Nucleus",
+        "oncogenic": "yes",
+        "latency": "",
+        "transmission": "Blood, sexual, perinatal, saliva",
+        "disease": "Hepatitis B — 90% resolve; chronic → cirrhosis → hepatocellular carcinoma",
+        "keyVF": "HBsAg subviral decoy particles; reverse transcriptase",
+        "virulence": "Produces excess HBsAg subviral particles (immune decoy); chronic immune injury (CD8 exhaustion, immune complexes)",
+        "vaccine": "Yes — recombinant HBsAg",
+        "vYN": "yes",
+        "treatment": "Reverse-transcriptase inhibitors (tenofovir/entecavir); anti-HBV Ig for newborns of HBsAg+ mothers",
+        "special": "A DNA virus that uses REVERSE TRANSCRIPTION (atypical retrovirus, Baltimore group VII) → treatable with RT inhibitors"
+      }
+    },
+    {
+      "id": "hdv",
+      "name": "Hepatitis D virus (Delta, defective)",
+      "group": "Deltavirus",
+      "color": "#8a8a3a",
+      "gram": "",
+      "attrs": {
+        "genome": "circular ssRNA (with ribozyme)",
+        "genomeClass": "RNA",
+        "envelope": "Enveloped (borrows HBsAg)",
+        "replication": "Nucleus",
+        "oncogenic": "no",
+        "latency": "",
+        "transmission": "Blood/sexual (requires HBV)",
+        "disease": "Worsens hepatitis B; ~40% of fulminant hepatitis",
+        "keyVF": "Requires HBV HBsAg to assemble",
+        "virulence": "Defective — needs HBV surface antigen (HBsAg) to complete its cycle",
+        "vaccine": "Partial — HBV vaccine prevents (no HBV → no HDV)",
+        "vYN": "partial",
+        "treatment": "Follows HBV therapy",
+        "special": "Superinfection (on chronic HBV) → high chronicity; co-infection → usually self-limited"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "vir-59",
+      "stem": "Which of the following viruses has a segmented RNA genome?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Influenza virus",
+          "correct": true
+        },
+        {
+          "t": "Picornavirus",
+          "correct": false
+        },
+        {
+          "t": "HIV",
+          "correct": false
+        },
+        {
+          "t": "SARS-CoV-2",
+          "correct": false
+        }
+      ],
+      "explanation": "Influenza (Orthomyxoviridae) has a segmented (8-piece) −ssRNA genome → antigenic shift by reassortment.",
+      "topic": "genome",
+      "source": "exam"
+    },
+    {
+      "id": "vir-60",
+      "stem": "Baltimore’s virus classification system is based on:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Phylogeny",
+          "correct": false
+        },
+        {
+          "t": "Morphology",
+          "correct": false
+        },
+        {
+          "t": "The strategy of replication (genome type & mRNA production)",
+          "correct": true
+        },
+        {
+          "t": "The type of pathology caused",
+          "correct": false
+        }
+      ],
+      "explanation": "Baltimore groups viruses by nucleic acid type and how they make mRNA (replication strategy).",
+      "topic": "classification",
+      "source": "exam"
+    },
+    {
+      "id": "vir-61",
+      "stem": "Which of these viruses can be treated with a reverse transcriptase inhibitor?",
+      "multi": true,
+      "options": [
+        {
+          "t": "HIV",
+          "correct": true
+        },
+        {
+          "t": "HBV",
+          "correct": true
+        },
+        {
+          "t": "HSV-1",
+          "correct": false
+        },
+        {
+          "t": "HCV",
+          "correct": false
+        }
+      ],
+      "explanation": "HIV (retrovirus) and HBV (uses reverse transcription, Baltimore VII) are targeted by RT inhibitors.",
+      "topic": "antivirals",
+      "source": "exam"
+    },
+    {
+      "id": "vir-62",
+      "stem": "Which of the following is a naked virus (without a lipid envelope)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Poliovirus",
+          "correct": true
+        },
+        {
+          "t": "HIV-1",
+          "correct": false
+        },
+        {
+          "t": "Poxvirus",
+          "correct": false
+        },
+        {
+          "t": "Ebola virus",
+          "correct": false
+        }
+      ],
+      "explanation": "Poliovirus (Picornaviridae) is naked; the others are enveloped.",
+      "topic": "structure",
+      "source": "exam"
+    },
+    {
+      "id": "vir-63",
+      "stem": "Which of the following viruses is transmitted primarily via the transplacental route?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Rubella virus",
+          "correct": true
+        },
+        {
+          "t": "Adenovirus",
+          "correct": false
+        },
+        {
+          "t": "Hepatitis C virus",
+          "correct": false
+        },
+        {
+          "t": "Norovirus",
+          "correct": false
+        }
+      ],
+      "explanation": "Rubella crosses the placenta → congenital rubella syndrome.",
+      "topic": "transmission",
+      "source": "exam"
+    },
+    {
+      "id": "vir-63b",
+      "stem": "Which of the following viruses is NOT transmitted to the fetus during pregnancy?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Papillomavirus",
+          "correct": true
+        },
+        {
+          "t": "Parvovirus B19",
+          "correct": false
+        },
+        {
+          "t": "CMV",
+          "correct": false
+        },
+        {
+          "t": "HIV",
+          "correct": false
+        }
+      ],
+      "explanation": "HPV is generally acquired in the birth canal, not transplacentally; Parvovirus, CMV and HIV can cross the placenta.",
+      "topic": "transmission",
+      "source": "exam"
+    },
+    {
+      "id": "vir-64",
+      "stem": "Which of the following viruses can establish latency in B lymphocytes?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Epstein-Barr virus",
+          "correct": true
+        },
+        {
+          "t": "Varicella-zoster virus",
+          "correct": false
+        },
+        {
+          "t": "CMV",
+          "correct": false
+        },
+        {
+          "t": "HTLV-1",
+          "correct": false
+        }
+      ],
+      "explanation": "EBV establishes latency in memory B-cells (VZV → neurons, CMV → myeloid cells).",
+      "topic": "latency",
+      "source": "exam"
+    },
+    {
+      "id": "vir-65",
+      "stem": "Which of the following viruses has NOT been associated with cancer in humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Varicella-zoster virus",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis C virus",
+          "correct": false
+        },
+        {
+          "t": "Hepatitis B virus",
+          "correct": false
+        },
+        {
+          "t": "HTLV-1",
+          "correct": false
+        }
+      ],
+      "explanation": "VZV is not oncogenic; HCV/HBV → hepatocellular carcinoma, HTLV-1 → adult T-cell leukemia.",
+      "topic": "oncogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-66",
+      "stem": "Which of the following viruses most commonly causes gastroenteritis in pediatric age?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Rotavirus",
+          "correct": true
+        },
+        {
+          "t": "Calicivirus (Norovirus)",
+          "correct": false
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "Dengue virus",
+          "correct": false
+        }
+      ],
+      "explanation": "Rotavirus is the leading cause of severe diarrhea in young children.",
+      "topic": "disease",
+      "source": "exam"
+    },
+    {
+      "id": "vir-67",
+      "stem": "For which of the following viruses is a prophylactic vaccine available?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Rotavirus",
+          "correct": true
+        },
+        {
+          "t": "HIV-1",
+          "correct": false
+        },
+        {
+          "t": "CMV",
+          "correct": false
+        },
+        {
+          "t": "HCV",
+          "correct": false
+        }
+      ],
+      "explanation": "A live oral rotavirus vaccine exists; there is no licensed HIV, CMV or HCV vaccine.",
+      "topic": "vaccine",
+      "source": "exam"
+    },
+    {
+      "id": "vir-68",
+      "stem": "Which viruses cause recurrent influenza outbreaks?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Influenza A and B",
+          "correct": true
+        },
+        {
+          "t": "Only influenza A",
+          "correct": false
+        },
+        {
+          "t": "Only influenza B",
+          "correct": false
+        },
+        {
+          "t": "Influenza C",
+          "correct": false
+        }
+      ],
+      "explanation": "Influenza A and B drive recurrent seasonal epidemics.",
+      "topic": "influenza",
+      "source": "exam"
+    },
+    {
+      "id": "vir-69",
+      "stem": "Which statement explains the low ability of avian influenza H5N1 to infect humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The sialic-acid receptor it uses is expressed only in the deeper human airways",
+          "correct": true
+        },
+        {
+          "t": "Humans develop very effective antibodies against H5N1",
+          "correct": false
+        },
+        {
+          "t": "The human innate immune system is very effective against H5N1",
+          "correct": false
+        },
+        {
+          "t": "The receptor is not expressed in humans at all",
+          "correct": false
+        }
+      ],
+      "explanation": "H5N1 prefers an α-2,3 sialic acid found mainly in the lower/deeper human airways, limiting efficient infection/transmission.",
+      "topic": "influenza",
+      "source": "exam"
+    },
+    {
+      "id": "vir-70",
+      "stem": "Which virus is associated with hand-foot-and-mouth disease?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Coxsackievirus",
+          "correct": true
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "Norovirus",
+          "correct": false
+        },
+        {
+          "t": "Adenovirus",
+          "correct": false
+        }
+      ],
+      "explanation": "Coxsackievirus (Enterovirus) causes hand-foot-and-mouth disease.",
+      "topic": "disease",
+      "source": "exam"
+    },
+    {
+      "id": "vir-71",
+      "stem": "Which late but rare complication is associated with measles virus infection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Subacute sclerosing panencephalitis (SSPE)",
+          "correct": true
+        },
+        {
+          "t": "Chronic hepatitis",
+          "correct": false
+        },
+        {
+          "t": "Pancreatitis",
+          "correct": false
+        },
+        {
+          "t": "Chronic neutropenia",
+          "correct": false
+        }
+      ],
+      "explanation": "SSPE is a rare, late CNS complication caused by a defective measles virus persisting in the brain.",
+      "topic": "disease",
+      "source": "exam"
+    },
+    {
+      "id": "vir-72",
+      "stem": "What is a target of the new antiviral drugs against HCV?",
+      "multi": false,
+      "options": [
+        {
+          "t": "NS5A",
+          "correct": true
+        },
+        {
+          "t": "E1 protein",
+          "correct": false
+        },
+        {
+          "t": "gp120",
+          "correct": false
+        },
+        {
+          "t": "VP40",
+          "correct": false
+        }
+      ],
+      "explanation": "Direct-acting antivirals target NS5A (and NS3/4A protease, NS5B polymerase).",
+      "topic": "antivirals",
+      "source": "exam"
+    },
+    {
+      "id": "vir-73",
+      "stem": "Where does replication of the picornavirus genome occur?",
+      "multi": false,
+      "options": [
+        {
+          "t": "In the cytoplasm of the host cell",
+          "correct": true
+        },
+        {
+          "t": "In the nucleus of the host cell",
+          "correct": false
+        },
+        {
+          "t": "In the endoplasmic reticulum",
+          "correct": false
+        },
+        {
+          "t": "In the mitochondria",
+          "correct": false
+        }
+      ],
+      "explanation": "Picornaviruses (+ssRNA) replicate in the cytoplasm.",
+      "topic": "replication",
+      "source": "exam"
+    },
+    {
+      "id": "vir-74",
+      "stem": "What types of infections are caused by adenoviruses?",
+      "multi": false,
+      "options": [
+        {
+          "t": "All of these types of infection",
+          "correct": true
+        },
+        {
+          "t": "Only respiratory infections",
+          "correct": false
+        },
+        {
+          "t": "Only genitourinary infections",
+          "correct": false
+        },
+        {
+          "t": "Only enteric infections",
+          "correct": false
+        }
+      ],
+      "explanation": "Adenoviruses cause respiratory, genitourinary (hemorrhagic cystitis) and enteric (gastroenteritis) infections.",
+      "topic": "disease",
+      "source": "exam"
+    },
+    {
+      "id": "vir-75",
+      "stem": "Which stage of the HIV replicative cycle is inhibited by protease inhibitors?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Maturation of the virion",
+          "correct": true
+        },
+        {
+          "t": "Entry of the virus into the cell",
+          "correct": false
+        },
+        {
+          "t": "Viral fusion with the cell membrane",
+          "correct": false
+        },
+        {
+          "t": "Integration of the viral DNA",
+          "correct": false
+        }
+      ],
+      "explanation": "Protease inhibitors block cleavage of the Gag-Pol polyprotein → block virion maturation (non-infectious particles).",
+      "topic": "antivirals",
+      "source": "exam"
+    },
+    {
+      "id": "vir-76",
+      "stem": "Which statement correctly describes the latent form of the varicella-zoster virus?",
+      "multi": false,
+      "options": [
+        {
+          "t": "It remains latent in the neurons of the sensory ganglia",
+          "correct": true
+        },
+        {
+          "t": "It remains latent in T lymphocytes",
+          "correct": false
+        },
+        {
+          "t": "It remains latent in skin epithelial cells",
+          "correct": false
+        },
+        {
+          "t": "It remains latent in B lymphocytes",
+          "correct": false
+        }
+      ],
+      "explanation": "VZV becomes latent in sensory (dorsal root / cranial) ganglion neurons; reactivation = zoster.",
+      "topic": "latency",
+      "source": "exam"
+    },
+    {
+      "id": "vir-77",
+      "stem": "Thirty years after a viral infection, a patient is diagnosed with hepatocellular carcinoma. Which virus most likely caused the infection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Hepatitis C virus",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis A virus",
+          "correct": false
+        },
+        {
+          "t": "Hepatitis delta virus",
+          "correct": false
+        },
+        {
+          "t": "Hepatitis E virus",
+          "correct": false
+        }
+      ],
+      "explanation": "Chronic HCV (and HBV) → cirrhosis → hepatocellular carcinoma over decades; HAV/HEV do not cause chronic infection.",
+      "topic": "oncogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-78",
+      "stem": "Why did the 2003 SARS-CoV virus not become pandemic like SARS-CoV-2?",
+      "multi": false,
+      "options": [
+        {
+          "t": "SARS-CoV caused more symptomatic infections than SARS-CoV-2",
+          "correct": true
+        },
+        {
+          "t": "SARS-CoV was less resistant in the environment",
+          "correct": false
+        },
+        {
+          "t": "SARS-CoV used a different receptor than SARS-CoV-2",
+          "correct": false
+        },
+        {
+          "t": "SARS-CoV elicited a weaker immune response",
+          "correct": false
+        }
+      ],
+      "explanation": "SARS-CoV caused symptoms before/with transmissibility, so cases were easier to identify and isolate → contained; SARS-CoV-2 has many asymptomatic spreaders.",
+      "topic": "epidemiology",
+      "source": "exam"
+    },
+    {
+      "id": "vir-79",
+      "stem": "Which of the following human viruses belongs to the Flaviviridae family?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Zika virus",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis A virus",
+          "correct": false
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "Ebola virus",
+          "correct": false
+        }
+      ],
+      "explanation": "Zika is a Flaviviridae (also Dengue, Yellow fever, West Nile, TBEV, HCV).",
+      "topic": "classification",
+      "source": "exam"
+    },
+    {
+      "id": "vir-80",
+      "stem": "Which of the following conditions can be associated with an HTLV-1 infection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Adult T-cell lymphoma",
+          "correct": true
+        },
+        {
+          "t": "Burkitt lymphoma",
+          "correct": false
+        },
+        {
+          "t": "Hodgkin’s lymphoma",
+          "correct": false
+        },
+        {
+          "t": "Fetal hydrops",
+          "correct": false
+        }
+      ],
+      "explanation": "HTLV-1 → adult T-cell leukemia/lymphoma (and HAM/TSP). Burkitt → EBV; fetal hydrops → Parvovirus B19.",
+      "topic": "oncogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a1",
+      "stem": "Which of the following viruses must incorporate (carry) an RNA polymerase within the viral particle?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Rabies virus",
+          "correct": true
+        },
+        {
+          "t": "Influenza virus",
+          "correct": true
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "HIV",
+          "correct": false
+        }
+      ],
+      "explanation": "Negative-sense RNA viruses (rabies, influenza) package an RdRp because their genome cannot be translated directly. +ssRNA (polio) is translated directly; HIV carries reverse transcriptase, not an RdRp.",
+      "topic": "replication",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a2",
+      "stem": "Which of the following viruses replicate in the cell nucleus?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Influenza (Orthomyxoviridae)",
+          "correct": true
+        },
+        {
+          "t": "Herpesviruses",
+          "correct": true
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "Poxvirus",
+          "correct": false
+        }
+      ],
+      "explanation": "Influenza and herpesviruses replicate in the nucleus. Picornaviruses replicate in the cytoplasm — and poxvirus is the one DNA virus that replicates in the cytoplasm.",
+      "topic": "replication",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a3",
+      "stem": "For which of the following viruses can genomic reassortment occur?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Influenza A",
+          "correct": true
+        },
+        {
+          "t": "Rotavirus",
+          "correct": true
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "HIV",
+          "correct": false
+        }
+      ],
+      "explanation": "Reassortment requires a segmented genome: influenza (−ssRNA, 8 segments) and rotavirus (dsRNA, segmented).",
+      "topic": "genetics",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a4",
+      "stem": "By what mechanism does HPV cause cancer?",
+      "multi": true,
+      "options": [
+        {
+          "t": "E6 protein → degradation/inhibition of p53",
+          "correct": true
+        },
+        {
+          "t": "E7 protein → inhibition of Rb",
+          "correct": true
+        },
+        {
+          "t": "Reverse transcription of its genome",
+          "correct": false
+        },
+        {
+          "t": "Integrase-mediated provirus formation",
+          "correct": false
+        }
+      ],
+      "explanation": "HPV E6 targets p53 and E7 inactivates Rb, driving the cell into S phase → transformation.",
+      "topic": "oncogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a5",
+      "stem": "Which diseases are associated with the EBV virus?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Burkitt lymphoma",
+          "correct": true
+        },
+        {
+          "t": "Infectious mononucleosis",
+          "correct": true
+        },
+        {
+          "t": "Nasopharyngeal carcinoma",
+          "correct": true
+        },
+        {
+          "t": "Adult T-cell leukemia",
+          "correct": false
+        }
+      ],
+      "explanation": "EBV → mononucleosis, Burkitt lymphoma, nasopharyngeal carcinoma, Hodgkin lymphoma. Adult T-cell leukemia is HTLV-1.",
+      "topic": "disease",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a6",
+      "stem": "Which component of a viral particle makes it most susceptible to the virucidal action of detergents?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The lipid envelope",
+          "correct": true
+        },
+        {
+          "t": "The genome",
+          "correct": false
+        },
+        {
+          "t": "Surface proteins exposed on the particle",
+          "correct": false
+        },
+        {
+          "t": "Enzymes contained within the capsid",
+          "correct": false
+        }
+      ],
+      "explanation": "Detergents/solvents dissolve the lipid envelope → enveloped viruses are labile; naked viruses are resistant.",
+      "topic": "structure",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a7",
+      "stem": "Which of the following is a double-stranded RNA (dsRNA) virus?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Reovirus (e.g. Rotavirus)",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis A virus",
+          "correct": false
+        },
+        {
+          "t": "Papillomavirus",
+          "correct": false
+        },
+        {
+          "t": "HIV",
+          "correct": false
+        }
+      ],
+      "explanation": "Reoviridae (incl. rotavirus) are dsRNA; HAV is +ssRNA; HPV is dsDNA; HIV is +ssRNA (RT).",
+      "topic": "genome",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a8",
+      "stem": "What assay measures, in serum, the immunoglobulins capable of inhibiting infection by a virus?",
+      "multi": false,
+      "options": [
+        {
+          "t": "A viral neutralization assay",
+          "correct": true
+        },
+        {
+          "t": "A western blot",
+          "correct": false
+        },
+        {
+          "t": "An immunofluorescence assay",
+          "correct": false
+        },
+        {
+          "t": "A viral agglutination assay",
+          "correct": false
+        }
+      ],
+      "explanation": "The neutralization assay detects antibodies that block viral entry (functional/neutralizing antibodies).",
+      "topic": "diagnostics",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a9",
+      "stem": "What is the cause of systemic symptoms during infection with an influenza virus?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The consequence of cytokine secretion",
+          "correct": true
+        },
+        {
+          "t": "Direct tissue damage caused by viral replication",
+          "correct": false
+        },
+        {
+          "t": "Secondary bacterial or viral infections",
+          "correct": false
+        },
+        {
+          "t": "The adaptive immune response only",
+          "correct": false
+        }
+      ],
+      "explanation": "Systemic flu symptoms (fever, malaise, myalgia) are driven by interferon/cytokine release.",
+      "topic": "pathogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a10",
+      "stem": "Which of the following viruses CANNOT cause the formation of syncytia following infection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Adenovirus",
+          "correct": true
+        },
+        {
+          "t": "HIV-1",
+          "correct": false
+        },
+        {
+          "t": "Measles virus",
+          "correct": false
+        },
+        {
+          "t": "Parainfluenza viruses",
+          "correct": false
+        }
+      ],
+      "explanation": "Syncytia formation requires fusion (envelope) glycoproteins; naked adenovirus cannot form syncytia.",
+      "topic": "pathogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a11",
+      "stem": "Which of the following viruses could be inhibited by agents that prevent the lowering of vesicular (endosomal) pH?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Influenza virus",
+          "correct": true
+        },
+        {
+          "t": "Measles virus",
+          "correct": false
+        },
+        {
+          "t": "HIV-1",
+          "correct": false
+        },
+        {
+          "t": "HTLV-1",
+          "correct": false
+        }
+      ],
+      "explanation": "Influenza uses pH-dependent (endosomal) entry; agents blocking endosomal acidification inhibit uncoating.",
+      "topic": "replication",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a12",
+      "stem": "Which condition can lead to an increased risk of severe disease following infection with the Dengue virus?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Previous infection with a different Dengue serotype",
+          "correct": true
+        },
+        {
+          "t": "Primary infection in the absence of prior immunity",
+          "correct": false
+        },
+        {
+          "t": "Previous infection with the same Dengue serotype",
+          "correct": false
+        },
+        {
+          "t": "Simultaneous co-infection with two serotypes",
+          "correct": false
+        }
+      ],
+      "explanation": "Antibody-dependent enhancement (ADE): prior infection with a different serotype enhances viral entry → DHF/DSS.",
+      "topic": "pathogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a13",
+      "stem": "Which statement regarding the HSV-1 and HSV-2 viruses is NOT correct?",
+      "multi": false,
+      "options": [
+        {
+          "t": "The humoral immune response is essential for maintaining latency",
+          "correct": true
+        },
+        {
+          "t": "Immunosuppression can lead to viral reactivation",
+          "correct": false
+        },
+        {
+          "t": "Both viruses can cause genital lesions",
+          "correct": false
+        },
+        {
+          "t": "An infected individual can spread the virus even if asymptomatic",
+          "correct": false
+        }
+      ],
+      "explanation": "Latency is controlled by CELL-MEDIATED immunity (CD8 T-cells + IFN-γ), not antibodies — so that statement is incorrect.",
+      "topic": "immunity",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a14",
+      "stem": "Where does viral replication begin in measles virus infection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Respiratory tract",
+          "correct": true
+        },
+        {
+          "t": "Gastrointestinal tract",
+          "correct": false
+        },
+        {
+          "t": "Skin",
+          "correct": false
+        },
+        {
+          "t": "Liver",
+          "correct": false
+        }
+      ],
+      "explanation": "Measles begins replicating in the respiratory tract, then disseminates via lymphatics and viremia.",
+      "topic": "pathogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a15",
+      "stem": "Which of the following characteristics can influence the tropism of a virus?",
+      "multi": true,
+      "options": [
+        {
+          "t": "The presence of a specific receptor on the cell",
+          "correct": true
+        },
+        {
+          "t": "The presence of specific proteases",
+          "correct": true
+        },
+        {
+          "t": "The Gram stain of the host cell",
+          "correct": false
+        },
+        {
+          "t": "The catalase activity of the host cell",
+          "correct": false
+        }
+      ],
+      "explanation": "Tropism depends on cellular receptors and on proteases needed to activate viral glycoproteins.",
+      "topic": "tropism",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a16",
+      "stem": "Which of the following drugs are effective against HIV?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Reverse transcriptase inhibitors",
+          "correct": true
+        },
+        {
+          "t": "Integrase inhibitors",
+          "correct": true
+        },
+        {
+          "t": "Protease inhibitors",
+          "correct": true
+        },
+        {
+          "t": "Neuraminidase inhibitors",
+          "correct": false
+        }
+      ],
+      "explanation": "HIV therapy uses RT, integrase, protease and entry/fusion inhibitors. Neuraminidase inhibitors are for influenza.",
+      "topic": "antivirals",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a17",
+      "stem": "Which of the following tests can be used to detect HIV infection?",
+      "multi": true,
+      "options": [
+        {
+          "t": "ELISA (p24 antigen / antibody)",
+          "correct": true
+        },
+        {
+          "t": "Western blot",
+          "correct": true
+        },
+        {
+          "t": "PCR / NAT (nucleic acid testing)",
+          "correct": true
+        },
+        {
+          "t": "Gram stain",
+          "correct": false
+        }
+      ],
+      "explanation": "HIV diagnosis: ELISA screen → Western blot confirmation → NAT/PCR for early detection / neonatal cases.",
+      "topic": "diagnostics",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a18",
+      "stem": "Which of the following viruses can cause chronic infections?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Hepatitis B virus",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis C virus",
+          "correct": true
+        },
+        {
+          "t": "HIV",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis A virus",
+          "correct": false
+        }
+      ],
+      "explanation": "HBV, HCV and HIV establish chronic/persistent infection; HAV is acute and self-limiting.",
+      "topic": "pathogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a19",
+      "stem": "Which of the following viruses is a DNA virus?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Papillomavirus",
+          "correct": true
+        },
+        {
+          "t": "Hepatitis C virus",
+          "correct": false
+        },
+        {
+          "t": "HIV",
+          "correct": false
+        },
+        {
+          "t": "Rotavirus",
+          "correct": false
+        }
+      ],
+      "explanation": "HPV (Papillomaviridae) is a dsDNA virus; the others are RNA viruses.",
+      "topic": "genome",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a20",
+      "stem": "What is post-polio syndrome?",
+      "multi": false,
+      "options": [
+        {
+          "t": "A late deterioration of muscle function years after the original infection",
+          "correct": true
+        },
+        {
+          "t": "A chronic active poliovirus infection of the gut",
+          "correct": false
+        },
+        {
+          "t": "A bacterial superinfection of paralyzed muscles",
+          "correct": false
+        },
+        {
+          "t": "An allergic reaction to the polio vaccine",
+          "correct": false
+        }
+      ],
+      "explanation": "Post-polio syndrome = progressive muscle weakness decades later, as compensatory neurons undergo age-related decline.",
+      "topic": "disease",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a21",
+      "stem": "Which of the following viruses are associated with tumors in humans?",
+      "multi": true,
+      "options": [
+        {
+          "t": "HPV",
+          "correct": true
+        },
+        {
+          "t": "EBV",
+          "correct": true
+        },
+        {
+          "t": "HBV / HCV",
+          "correct": true
+        },
+        {
+          "t": "Rhinovirus",
+          "correct": false
+        }
+      ],
+      "explanation": "Oncogenic human viruses: HPV (cervical), EBV (Burkitt/NPC), HBV & HCV (HCC), HTLV-1 (ATL), HHV-8 (Kaposi). Rhinovirus is not oncogenic.",
+      "topic": "oncogenesis",
+      "source": "exam"
+    },
+    {
+      "id": "vir-a22",
+      "stem": "Which of the following viruses can be transmitted from an animal to a human (zoonosis)?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Rabies virus",
+          "correct": true
+        },
+        {
+          "t": "Measles virus",
+          "correct": false
+        },
+        {
+          "t": "Poliovirus",
+          "correct": false
+        },
+        {
+          "t": "Rubella virus",
+          "correct": false
+        }
+      ],
+      "explanation": "Rabies is a classic zoonosis (animal bite). Measles, polio and rubella are exclusively human.",
+      "topic": "transmission",
+      "source": "exam"
+    }
+  ]
+}

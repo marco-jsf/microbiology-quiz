@@ -20,6 +20,9 @@ function genOne(e, distract, chap) {
   const types = ['family', 'vaccine'];
   if (a.cat === '+' || a.cat === '−') types.push('cat');
   if (a.ox === '+' || a.ox === '−') types.push('ox');
+  if (a.genomeClass === 'DNA' || a.genomeClass === 'RNA') types.push('genomeClass');
+  if (a.envelope === 'Enveloped' || a.envelope === 'Naked') types.push('envelope');
+  if (a.replication === 'Nucleus' || a.replication === 'Cytoplasm') types.push('repl');
   if (has(a.disease)) types.push('whichOrg');
   if (has(a.keyVF)) types.push('keyvf');
   if (has(a.treatment)) types.push('treat');
@@ -42,8 +45,20 @@ function genOne(e, distract, chap) {
         options: shuffle([opt('Oxidase positive', a.ox === '+'), opt('Oxidase negative', a.ox === '−'), opt('Variable', false)]),
         explanation: `${e.name}: oxidase ${a.ox}.` });
     }
+    case 'genomeClass':
+      return base(e, chap, type, { stem: `Is <b>${e.name}</b> a DNA or an RNA virus?`, multi: false,
+        options: shuffle([opt('DNA virus', a.genomeClass === 'DNA'), opt('RNA virus', a.genomeClass === 'RNA')]),
+        explanation: `${e.name}: ${a.genome || a.genomeClass + ' virus'}.` });
+    case 'envelope':
+      return base(e, chap, type, { stem: `Is <b>${e.name}</b> enveloped or naked (non-enveloped)?`, multi: false,
+        options: shuffle([opt('Enveloped', a.envelope === 'Enveloped'), opt('Naked (non-enveloped)', a.envelope === 'Naked')]),
+        explanation: `${e.name} is ${a.envelope.toLowerCase()}.` });
+    case 'repl':
+      return base(e, chap, type, { stem: `Where does <b>${e.name}</b> replicate its genome?`, multi: false,
+        options: shuffle([opt('In the nucleus', a.replication === 'Nucleus'), opt('In the cytoplasm', a.replication === 'Cytoplasm')]),
+        explanation: `${e.name} replicates in the ${a.replication.toLowerCase()}.${a.special ? ' ' + a.special : ''}` });
     case 'whichOrg':
-      return base(e, chap, type, { stem: `Which organism causes:<br><i>"${a.disease}"</i>`, multi: false,
+      return base(e, chap, type, { stem: `Which of the following causes:<br><i>"${a.disease}"</i>`, multi: false,
         options: optsFrom(e.name, others.map(x => x.name)),
         explanation: `${e.name}. Key clue: ${a.special || a.disease}` });
     case 'keyvf':
@@ -88,6 +103,13 @@ function genMulti(entities, chap) {
   make('ox', 'oxidase-positive', e => e.attrs.ox === '+', entities.filter(e => e.attrs.ox === '+' || e.attrs.ox === '−'));
   make('mot', 'motile', e => /^Motile/i.test(e.attrs.mot || ''), entities.filter(e => /motile/i.test(e.attrs.mot || '')));
   make('gram', 'Gram-positive', e => e.gram === 'pos', entities.filter(e => e.gram === 'pos' || e.gram === 'neg'));
+  // virology traits (gated on presence)
+  make('dna', 'DNA viruses', e => e.attrs.genomeClass === 'DNA', entities.filter(e => e.attrs.genomeClass));
+  make('env', 'enveloped', e => e.attrs.envelope === 'Enveloped', entities.filter(e => e.attrs.envelope));
+  make('naked', 'naked (non-enveloped)', e => e.attrs.envelope === 'Naked', entities.filter(e => e.attrs.envelope));
+  make('nucl', 'replicating in the nucleus', e => e.attrs.replication === 'Nucleus', entities.filter(e => e.attrs.replication));
+  make('seg', 'having a segmented genome', e => /segment/i.test(e.attrs.genome || ''), entities.filter(e => e.attrs.genome));
+  make('onco', 'oncogenic (associated with human tumours)', e => e.attrs.oncogenic === 'yes', entities.filter(e => e.attrs.oncogenic));
   return items;
 }
 

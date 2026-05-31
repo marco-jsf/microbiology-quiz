@@ -96,23 +96,24 @@ export function dashboardHTML(chapters) {
   return html;
 }
 
+// Schema-agnostic: renders whichever discrete "trait" chips and prose fields exist.
+const TRAIT_KEYS = [
+  ['cat', 'Cat'], ['ox', 'Ox'], ['ure', 'Ure'], ['mot', 'Mot'], ['bio', 'Biofilm'], ['micro', 'Microbiota'],
+  ['genome', 'Genome'], ['envelope', 'Envelope'], ['replication', 'Replication'], ['oncogenic', 'Oncogenic'], ['latency', 'Latency']
+];
+const PROSE_KEYS = [
+  ['transmission', 'Transmission'], ['pathogenesis', 'Pathogenesis'], ['disease', 'Disease(s)'],
+  ['virulence', 'Virulence / key factors'], ['vaccine', 'Vaccine'], ['treatment', 'Treatment'], ['special', 'Special']
+];
 export function entityProfileHTML(e) {
   const a = e.attrs;
   const pm = v => (v || '').replace('+', '<span class="plus">+</span>').replace('−', '<span class="minus">−</span>');
-  const chips = [
-    a.cat && `<span class="chip"><b>Cat</b> ${pm(a.cat)}</span>`,
-    a.ox && `<span class="chip"><b>Ox</b> ${pm(a.ox)}</span>`,
-    a.ure && `<span class="chip"><b>Ure</b> ${pm(a.ure)}</span>`,
-    a.mot && `<span class="chip"><b>Mot</b> ${a.mot}</span>`,
-    a.bio && `<span class="chip"><b>Biofilm</b> ${a.bio}</span>`,
-    a.micro && `<span class="chip"><b>Microbiota</b> ${a.micro}</span>`,
-  ].filter(Boolean).join('');
-  const F = (k, v) => `<div class="field"><div class="k">${k}</div><div>${bullets(v)}</div></div>`;
+  const chips = TRAIT_KEYS.filter(([k]) => a[k]).map(([k, lbl]) => `<span class="chip"><b>${lbl}</b> ${pm(a[k])}</span>`).join('');
+  const fields = PROSE_KEYS.filter(([k]) => a[k]).map(([k, lbl]) => `<div class="field"><div class="k">${lbl}</div><div>${bullets(a[k])}</div></div>`).join('');
+  const gram = e.gram === 'pos' ? ' · GRAM +' : e.gram === 'neg' ? ' · GRAM −' : '';
   return `<div class="card"><div class="card-top" style="background:${e.color}">
-      <span>${e.name}${e.gram ? ' · ' + (e.gram === 'pos' ? 'GRAM +' : 'GRAM −') : ''}</span><span class="badge">${e.group}</span></div>
+      <span>${e.name}${gram}</span><span class="badge">${e.group}</span></div>
     <div class="card-body" style="padding:16px 20px">
-      <div class="chips">${chips}</div>
-      ${F('Transmission', a.transmission)}${F('Pathogenesis', a.pathogenesis)}${F('Disease(s)', a.disease)}
-      ${F('Virulence', a.virulence)}${F('Vaccine', a.vaccine)}${F('Treatment', a.treatment)}${F('Special', a.special)}
+      ${chips ? `<div class="chips">${chips}</div>` : ''}${fields}
     </div></div>`;
 }
