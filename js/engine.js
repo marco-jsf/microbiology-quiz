@@ -35,16 +35,16 @@ export function spendCoins(n) {
 }
 
 // Reward for one graded answer. Returns a breakdown so the UI can explain it.
-//   base       = round(score × 10)          → {0,3,5,8,10} for the usual scores
-//   streakBonus= +1 per consecutive ace, capped at +5 (resets on any non-ace)
-//   milestone  = +5 the first time a card is ever fully aced
+//   base       = round(score × 5)           → {0,1,3,4,5} for the usual scores
+//   streakBonus= +1 per consecutive ace, capped at +3 (resets on any non-ace)
+//   milestone  = +3 the first time a card is ever fully aced
 export function awardCoins(score, { firstFullCorrect = false } = {}) {
-  const base = Math.round(score * 10);
+  const base = Math.round(score * 5);
   let streakBonus = 0;
-  if (score >= 0.999) { wallet.streak++; streakBonus = Math.min(wallet.streak - 1, 5); }
+  if (score >= 0.999) { wallet.streak++; streakBonus = Math.min(wallet.streak - 1, 3); }
   else { wallet.streak = 0; }
   wallet.bestStreak = Math.max(wallet.bestStreak, wallet.streak);
-  const milestone = firstFullCorrect ? 5 : 0;
+  const milestone = firstFullCorrect ? 3 : 0;
   const total = base + streakBonus + milestone;
   wallet.coins += total; wallet.earnedTotal += total;
   saveWallet();

@@ -25,7 +25,7 @@ export const BIRDS = [
     tags: { idle: 'idle', walk: 'walk', jump: 'Jump', eat: 'eat', fly: 'Fly' } },
   { id: 'dove', name: 'Collared Dove', size: 0.7, rarity: 'normal', cost: 35, sheet: 'assets/birds/collared_dove/Collared Dove.json',
     tags: { idle: 'Idle', walk: 'walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
-  { id: 'peacock', name: 'Peacock', size: 1.5, rarity: 'epic', cost: 350, sheet: 'assets/birds/peacock/Peacock.json',
+  { id: 'peacock', name: 'Peacock', size: 1.5, rarity: 'epic', cost: 600, sheet: 'assets/birds/peacock/Peacock.json',
     tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
 
   // ---- multi-file (one frame-array JSON per animation) ----
@@ -37,7 +37,7 @@ export const BIRDS = [
     files: { idle: 'Idle', walk: 'Walk', eat: 'Eat' } },                // stays grounded
   { id: 'toucan', name: 'Toucan', size: 0.8, rarity: 'rare', cost: 140, dir: 'assets/birds/toucan', prefix: 'Toucan',
     files: { idle: 'Idle', walk: 'Walk/Bounce', jump: 'Jump', eat: 'Peck', fly: 'Fly' } },
-  { id: 'macaw', name: 'Blue Macaw', size: 0.8, rarity: 'epic', cost: 400, dir: 'assets/birds/blue_macaw', prefix: 'Blue Macaw',
+  { id: 'macaw', name: 'Blue Macaw', size: 0.8, rarity: 'epic', cost: 500, dir: 'assets/birds/blue_macaw', prefix: 'Blue Macaw',
     files: { idle: 'Idle', walk: 'Walk1', jump: 'Jump', eat: 'Peck', fly: 'Fly' } },
 ];
 
