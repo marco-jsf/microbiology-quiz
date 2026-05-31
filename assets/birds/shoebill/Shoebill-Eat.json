@@ -1,0 +1,65 @@
+{ "frames": [
+   {
+    "filename": "Shoebill #Eat 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Eat 1.ase",
+    "frame": { "x": 30, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Eat 2.ase",
+    "frame": { "x": 60, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Eat 3.ase",
+    "frame": { "x": 90, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Eat 4.ase",
+    "frame": { "x": 120, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Eat 5.ase",
+    "frame": { "x": 150, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Shoebill-Eat.png",
+  "format": "RGBA8888",
+  "size": { "w": 180, "h": 36 },
+  "scale": "1"
+ }
+}

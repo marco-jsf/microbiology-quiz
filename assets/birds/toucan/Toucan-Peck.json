@@ -1,0 +1,47 @@
+{ "frames": [
+   {
+    "filename": "Toucan #Peck 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Peck 1.ase",
+    "frame": { "x": 32, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Peck 2.ase",
+    "frame": { "x": 64, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Peck 3.ase",
+    "frame": { "x": 96, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Toucan-Peck.png",
+  "format": "RGBA8888",
+  "size": { "w": 128, "h": 18 },
+  "scale": "1"
+ }
+}

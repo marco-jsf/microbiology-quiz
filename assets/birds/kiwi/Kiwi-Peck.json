@@ -1,0 +1,38 @@
+{ "frames": [
+   {
+    "filename": "Kiwi #Peck 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Peck 1.ase",
+    "frame": { "x": 27, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Peck 2.ase",
+    "frame": { "x": 54, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Kiwi-Peck.png",
+  "format": "RGBA8888",
+  "size": { "w": 81, "h": 17 },
+  "scale": "1"
+ }
+}

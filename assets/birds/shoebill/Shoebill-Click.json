@@ -1,0 +1,101 @@
+{ "frames": [
+   {
+    "filename": "Shoebill #Click 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 1.ase",
+    "frame": { "x": 30, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 2.ase",
+    "frame": { "x": 60, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 3.ase",
+    "frame": { "x": 90, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 4.ase",
+    "frame": { "x": 120, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 5.ase",
+    "frame": { "x": 150, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 6.ase",
+    "frame": { "x": 180, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 7.ase",
+    "frame": { "x": 210, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 8.ase",
+    "frame": { "x": 240, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Click 9.ase",
+    "frame": { "x": 270, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Shoebill-Click.png",
+  "format": "RGBA8888",
+  "size": { "w": 300, "h": 36 },
+  "scale": "1"
+ }
+}

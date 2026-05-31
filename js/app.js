@@ -2,6 +2,7 @@ import { loadChapters } from './data.js';
 import * as engine from './engine.js';
 import { generateItems } from './quizgen.js';
 import { quizCardHTML, feedback, dashboardHTML, entityProfileHTML } from './render.js';
+import { mountGarden, unmountGarden } from './garden.js';
 
 const $ = s => document.querySelector(s);
 const view = $('#view');
@@ -46,6 +47,7 @@ function renderStatbar() {
 
 /* ---------- render ---------- */
 function render() {
+  if (state.mode === 'garden') return;   // garden owns #view; don't clobber it
   if (state.mode === 'dash') { view.innerHTML = dashboardHTML(state.chapters); renderStatbar(); return; }
   if (state.idx >= state.queue.length) return renderDone();
   const item = state.queue[state.idx];
@@ -77,7 +79,8 @@ function updateOptionsUI() {
 function submit() {
   const item = state.current;
   const score = engine.scoreItem(item, state.selected);
-  engine.gradeScore(item.id, score);
+  const grade = engine.gradeScore(item.id, score);
+  const reward = engine.awardCoins(score, grade);
   state.session.seen++; state.session.scoreSum += score; state.answered = true;
   document.querySelectorAll('.opt').forEach((el, i) => {
     el.classList.add('disabled');
@@ -86,10 +89,25 @@ function submit() {
     else if (correct && !sel) el.classList.add('missed');
     else if (!correct && sel) el.classList.add('wrongpick');
   });
-  const fb = $('#fb'); const r = feedback(item, score);
+  const fb = $('#fb'); const r = feedback(item, score, reward);
   fb.className = 'fb show ' + r.cls; fb.innerHTML = r.html;
   $('#actionBtn').textContent = state.idx + 1 >= state.queue.length ? 'Finish' : 'Next';
+  updateCoinDisplay(reward.total);
   renderStatbar();
+}
+
+/* ---------- coin display ---------- */
+function updateCoinDisplay(justEarned = 0) {
+  const el = $('#coinCount'); if (!el) return;
+  el.textContent = engine.getCoins();
+  if (justEarned > 0) {
+    const badge = $('#coinDisplay');
+    badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
+    const toast = document.createElement('span');
+    toast.className = 'coin-toast'; toast.textContent = '+' + justEarned;
+    badge.appendChild(toast);
+    setTimeout(() => toast.remove(), 1400);
+  }
 }
 
 /* ---------- events ---------- */
@@ -105,7 +123,7 @@ view.addEventListener('click', e => {
   if (e.target.id === 'actionBtn') { state.answered ? next() : submit(); return; }
   if (e.target.id === 'againBtn') { buildSession(); render(); return; }
   if (e.target.id === 'weakBtn') { state.scope = 'weak'; syncPills(); buildSession(); render(); return; }
-  if (e.target.id === 'resetBtn') { if (confirm('Reset ALL progress? This cannot be undone.')) { engine.resetProgress(); render(); } return; }
+  if (e.target.id === 'resetBtn') { if (confirm('Reset ALL progress (including coins)? This cannot be undone.')) { engine.resetProgress(); updateCoinDisplay(); render(); } return; }
   const chip = e.target.closest('.gchip');
   if (chip) {
     const ent = state.chapters.flatMap(c => c.entities).find(x => x.id === chip.dataset.eid);
@@ -144,10 +162,14 @@ function wireControls() {
   $('#scopePill').onclick = e => { if (e.target.dataset.s) { state.scope = e.target.dataset.s; syncPills(); restart(); } };
   $('#restartBtn').onclick = restart;
   document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+    const prev = state.mode;
     document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
     t.classList.add('active'); state.mode = t.dataset.mode;
+    if (prev === 'garden' && state.mode !== 'garden') unmountGarden();
+    const sidebars = state.mode === 'dash' || state.mode === 'garden';
+    $('#controls').style.display = sidebars ? 'none' : 'flex';
+    if (state.mode === 'garden') { $('#statbar').innerHTML = ''; mountGarden(view); return; }
     if (state.mode === 'quiz' && state.idx >= state.queue.length) buildSession();
-    $('#controls').style.display = state.mode === 'dash' ? 'none' : 'flex';
     render();
   });
 }
@@ -160,5 +182,5 @@ function wireControls() {
     view.innerHTML = `<div class="empty">⚠ ${err.message}<br><br>This app loads JSON, so it must be served over HTTP.<br>Run <kbd>npx serve</kbd> or <kbd>python3 -m http.server</kbd> in the project folder and open the localhost URL.</div>`;
     return;
   }
-  wireControls(); syncPills(); buildSession(); render();
+  wireControls(); syncPills(); updateCoinDisplay(); buildSession(); render();
 })();

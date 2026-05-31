@@ -8,7 +8,48 @@ function load() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; }
 function save() { localStorage.setItem(LS_KEY, JSON.stringify(srs)); }
 
 export function getSRS() { return srs; }
-export function resetProgress() { srs = {}; save(); }
+export function resetProgress() { srs = {}; save(); resetWallet(); }
+
+/* ---------- Gold-coin wallet (gamification currency) ----------
+ * Stored separately from the SRS map so it survives independently and is
+ * trivial for the future garden minigame to read/spend against. */
+const COIN_KEY = 'microbioCoinsV1';
+let wallet = loadWallet();
+function loadWallet() {
+  try {
+    return Object.assign({ coins: 0, streak: 0, bestStreak: 0, earnedTotal: 0, spentTotal: 0 },
+      JSON.parse(localStorage.getItem(COIN_KEY)) || {});
+  } catch (e) { return { coins: 0, streak: 0, bestStreak: 0, earnedTotal: 0, spentTotal: 0 }; }
+}
+function saveWallet() { localStorage.setItem(COIN_KEY, JSON.stringify(wallet)); }
+
+export function getWallet() { return { ...wallet }; }
+export function getCoins() { return wallet.coins; }
+export function resetWallet() { wallet = { coins: 0, streak: 0, bestStreak: 0, earnedTotal: 0, spentTotal: 0 }; saveWallet(); }
+
+// Spend coins (returns false if the player can't afford it) — for the minigame.
+export function spendCoins(n) {
+  n = Math.max(0, Math.round(n));
+  if (n > wallet.coins) return false;
+  wallet.coins -= n; wallet.spentTotal += n; saveWallet(); return true;
+}
+
+// Reward for one graded answer. Returns a breakdown so the UI can explain it.
+//   base       = round(score × 10)          → {0,3,5,8,10} for the usual scores
+//   streakBonus= +1 per consecutive ace, capped at +5 (resets on any non-ace)
+//   milestone  = +5 the first time a card is ever fully aced
+export function awardCoins(score, { firstFullCorrect = false } = {}) {
+  const base = Math.round(score * 10);
+  let streakBonus = 0;
+  if (score >= 0.999) { wallet.streak++; streakBonus = Math.min(wallet.streak - 1, 5); }
+  else { wallet.streak = 0; }
+  wallet.bestStreak = Math.max(wallet.bestStreak, wallet.streak);
+  const milestone = firstFullCorrect ? 5 : 0;
+  const total = base + streakBonus + milestone;
+  wallet.coins += total; wallet.earnedTotal += total;
+  saveWallet();
+  return { base, streakBonus, milestone, total, streak: wallet.streak };
+}
 export function cardState(id) {
   return srs[id] || (srs[id] = { level: 0, due: 0, seen: 0, correct: 0, wrong: 0, scoreSum: 0 });
 }
@@ -44,13 +85,15 @@ export function scoreItem(item, selectedSet) {
 
 export function gradeScore(id, score) {
   const s = cardState(id);
+  const wasAced = !!s.aced;
   s.seen++;
   s.scoreSum += score;
-  if (score >= 0.999) { s.correct++; s.level = Math.min(s.level + 1, 5); }
+  if (score >= 0.999) { s.correct++; s.level = Math.min(s.level + 1, 5); s.aced = true; }
   else if (score >= 0.5) { s.correct++; /* partial — hold level */ }
   else { s.wrong++; s.level = Math.max(s.level - 1, 0); }
   s.due = Date.now() + INTERVALS[s.level] * DAY;
   save();
+  return { firstFullCorrect: score >= 0.999 && !wasAced };
 }
 
 // Aggregate mastery for an entity = combine all of its generated items (`entityId:*`).

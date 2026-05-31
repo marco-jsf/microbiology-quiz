@@ -29,13 +29,23 @@ export function quizCardHTML(item, idx, total) {
     <div class="hint"><kbd>1</kbd>–<kbd>4</kbd> toggle · <kbd>Enter</kbd> submit / next</div>`;
 }
 
-export function feedback(item, score) {
+export function feedback(item, score, reward) {
   const cls = score >= 0.999 ? 'ok' : score > 0 ? 'part' : 'no';
   const label = score >= 0.999 ? '✓ Correct' : score > 0 ? '◐ Partial' : '✗ Incorrect';
-  const html = `<div class="score">${label} — ${score.toFixed(2)} / 1.00</div>
+  const html = `<div class="score">${label} — ${score.toFixed(2)} / 1.00${coinLine(reward)}</div>
     <div class="more">${item.explanation || ''}</div>
     <span class="topic">${item.chapterTitle}${item.topic ? ' · ' + item.topic : ''}${item.source === 'exam' ? ' · past exam' : ''}</span>`;
   return { cls, html };
+}
+
+// Inline "+N 🪙" with a breakdown of any bonuses earned.
+function coinLine(reward) {
+  if (!reward || reward.total <= 0) return '';
+  const extras = [];
+  if (reward.streakBonus > 0) extras.push(`🔥×${reward.streak} +${reward.streakBonus}`);
+  if (reward.milestone > 0) extras.push(`★ first ace +${reward.milestone}`);
+  const note = extras.length ? ` <span class="coin-extra">(${extras.join(' · ')})</span>` : '';
+  return ` <span class="coin-earn">+${reward.total} <i class="coin-ico"></i></span>${note}`;
 }
 
 const MCOLOR = { new: '#566', weak: 'var(--bad)', learning: 'var(--warn)', mastered: 'var(--good)' };
@@ -99,11 +109,12 @@ export function dashboardHTML(chapters) {
 // Schema-agnostic: renders whichever discrete "trait" chips and prose fields exist.
 const TRAIT_KEYS = [
   ['cat', 'Cat'], ['ox', 'Ox'], ['ure', 'Ure'], ['mot', 'Mot'], ['bio', 'Biofilm'], ['micro', 'Microbiota'],
-  ['genome', 'Genome'], ['envelope', 'Envelope'], ['replication', 'Replication'], ['oncogenic', 'Oncogenic'], ['latency', 'Latency']
+  ['genome', 'Genome'], ['envelope', 'Envelope'], ['replication', 'Replication'], ['oncogenic', 'Oncogenic'], ['latency', 'Latency'],
+  ['morphology', 'Morphology'], ['ptype', 'Type'], ['infectiveStage', 'Infective stage']
 ];
 const PROSE_KEYS = [
   ['transmission', 'Transmission'], ['pathogenesis', 'Pathogenesis'], ['disease', 'Disease(s)'],
-  ['virulence', 'Virulence / key factors'], ['vaccine', 'Vaccine'], ['treatment', 'Treatment'], ['special', 'Special']
+  ['virulence', 'Virulence / key factors'], ['diagnosis', 'Diagnosis'], ['vaccine', 'Vaccine'], ['treatment', 'Treatment'], ['special', 'Special']
 ];
 export function entityProfileHTML(e) {
   const a = e.attrs;

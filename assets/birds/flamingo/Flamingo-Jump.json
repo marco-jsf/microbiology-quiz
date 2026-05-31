@@ -1,0 +1,74 @@
+{ "frames": [
+   {
+    "filename": "Flamingo2 #Jump 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Jump 1.ase",
+    "frame": { "x": 35, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Jump 2.ase",
+    "frame": { "x": 70, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Jump 3.ase",
+    "frame": { "x": 105, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Jump 4.ase",
+    "frame": { "x": 140, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Jump 5.ase",
+    "frame": { "x": 175, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Jump 6.ase",
+    "frame": { "x": 210, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Flamingo2-Jump.png",
+  "format": "RGBA8888",
+  "size": { "w": 245, "h": 33 },
+  "scale": "1"
+ }
+}

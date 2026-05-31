@@ -1,0 +1,47 @@
+{ "frames": [
+   {
+    "filename": "Shoebill #Idle 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Idle 1.ase",
+    "frame": { "x": 30, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Idle 2.ase",
+    "frame": { "x": 60, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   },
+   {
+    "filename": "Shoebill #Idle 3.ase",
+    "frame": { "x": 90, "y": 0, "w": 30, "h": 36 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 36 },
+    "sourceSize": { "w": 30, "h": 36 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Shoebill-Idle.png",
+  "format": "RGBA8888",
+  "size": { "w": 120, "h": 36 },
+  "scale": "1"
+ }
+}

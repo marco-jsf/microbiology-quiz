@@ -5,17 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Microbiology Quiz</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/garden.css">
 </head>
 <body>
 <div class="wrap">
   <header>
     <h1>🧫 Microbiology Quiz</h1>
     <span class="sub">Exam-accurate practice · multi-select with partial credit · real past-exam + auto-generated questions</span>
+    <span class="coins" id="coinDisplay" title="Gold coins — earn them by answering correctly. Spend them in the garden (coming soon).">
+      <i class="coin-ico"></i> <b id="coinCount">0</b>
+    </span>
   </header>
 
   <div class="tabs">
     <button class="tab active" data-mode="quiz">✍️ Quiz</button>
     <button class="tab" data-mode="dash">📊 Dashboard</button>
+    <button class="tab" data-mode="garden">🐦 Garden</button>
   </div>
 
   <div class="controls" id="controls">

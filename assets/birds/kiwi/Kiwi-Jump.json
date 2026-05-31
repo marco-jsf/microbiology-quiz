@@ -1,0 +1,101 @@
+{ "frames": [
+   {
+    "filename": "Kiwi #Jump 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 1.ase",
+    "frame": { "x": 27, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 2.ase",
+    "frame": { "x": 54, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 3.ase",
+    "frame": { "x": 81, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 4.ase",
+    "frame": { "x": 108, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 5.ase",
+    "frame": { "x": 135, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 6.ase",
+    "frame": { "x": 162, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 7.ase",
+    "frame": { "x": 189, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 8.ase",
+    "frame": { "x": 216, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Jump 9.ase",
+    "frame": { "x": 243, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Kiwi-Jump.png",
+  "format": "RGBA8888",
+  "size": { "w": 270, "h": 17 },
+  "scale": "1"
+ }
+}

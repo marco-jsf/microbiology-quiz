@@ -1,0 +1,56 @@
+{ "frames": [
+   {
+    "filename": "Toucan #Idle 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Idle 1.ase",
+    "frame": { "x": 32, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Idle 2.ase",
+    "frame": { "x": 64, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Idle 3.ase",
+    "frame": { "x": 96, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   },
+   {
+    "filename": "Toucan #Idle 4.ase",
+    "frame": { "x": 128, "y": 0, "w": 32, "h": 18 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 18 },
+    "sourceSize": { "w": 32, "h": 18 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Toucan-Idle.png",
+  "format": "RGBA8888",
+  "size": { "w": 160, "h": 18 },
+  "scale": "1"
+ }
+}

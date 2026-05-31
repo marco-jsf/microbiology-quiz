@@ -10,6 +10,20 @@ header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8
 h1{font-size:20px;margin:0;font-weight:700}
 .sub{color:var(--mut);font-size:12px}
 
+/* gold-coin wallet */
+.coin-ico{display:inline-block;width:1em;height:1em;border-radius:50%;vertical-align:-0.15em;
+  background:radial-gradient(circle at 36% 30%,#fff6cf 0%,#ffd84a 42%,#e9a91d 78%,#b87b12 100%);
+  border:1px solid #9a6a0e;box-shadow:inset 0 0 0 1.5px rgba(255,246,200,.5),inset 0 -1px 2px rgba(120,80,10,.5)}
+.coins .coin-ico{width:18px;height:18px}
+.coins{margin-left:auto;position:relative;display:inline-flex;align-items:center;gap:6px;background:linear-gradient(180deg,#2a2415,#1d1a10);border:1px solid #5a4a1e;border-radius:20px;padding:6px 14px;font-size:15px;font-weight:700;color:#ffd76b;box-shadow:inset 0 0 0 1px rgba(255,215,107,.08)}
+.coins b{color:#ffe08a;font-variant-numeric:tabular-nums;min-width:14px;text-align:right}
+.coins.bump{animation:coinBump .42s ease}
+@keyframes coinBump{0%,100%{transform:scale(1)}40%{transform:scale(1.16)}}
+.coin-toast{position:absolute;right:12px;top:-2px;color:#ffe08a;font-size:14px;font-weight:800;pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,.6);animation:coinFloat 1.4s ease forwards}
+@keyframes coinFloat{0%{opacity:0;transform:translateY(8px) scale(.7)}18%{opacity:1;transform:translateY(0) scale(1.15)}32%{transform:translateY(-2px) scale(1)}100%{opacity:0;transform:translateY(-30px)}}
+.coin-earn{color:#ffd76b;font-weight:800;margin-left:6px}
+.coin-extra{color:var(--mut);font-weight:600;font-size:12px}
+
 .tabs{display:flex;gap:6px;margin:14px 0;flex-wrap:wrap}
 .tab{background:var(--panel);border:1px solid var(--line);color:var(--mut);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;transition:.15s}
 .tab:hover{background:var(--panel2);color:var(--txt)}

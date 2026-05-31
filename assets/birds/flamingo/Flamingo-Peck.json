@@ -1,0 +1,47 @@
+{ "frames": [
+   {
+    "filename": "Flamingo2 #Peck 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Peck 1.ase",
+    "frame": { "x": 35, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Peck 2.ase",
+    "frame": { "x": 70, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "Flamingo2 #Peck 3.ase",
+    "frame": { "x": 105, "y": 0, "w": 35, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 33 },
+    "sourceSize": { "w": 35, "h": 33 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Flamingo2-Peck.png",
+  "format": "RGBA8888",
+  "size": { "w": 140, "h": 33 },
+  "scale": "1"
+ }
+}

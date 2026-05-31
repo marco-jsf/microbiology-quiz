@@ -1,0 +1,65 @@
+{ "frames": [
+   {
+    "filename": "Kiwi #Run 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Run 1.ase",
+    "frame": { "x": 27, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Run 2.ase",
+    "frame": { "x": 54, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Run 3.ase",
+    "frame": { "x": 81, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Run 4.ase",
+    "frame": { "x": 108, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   },
+   {
+    "filename": "Kiwi #Run 5.ase",
+    "frame": { "x": 135, "y": 0, "w": 27, "h": 17 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 27, "h": 17 },
+    "sourceSize": { "w": 27, "h": 17 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.x-dev",
+  "image": "Kiwi-Run.png",
+  "format": "RGBA8888",
+  "size": { "w": 162, "h": 17 },
+  "scale": "1"
+ }
+}
