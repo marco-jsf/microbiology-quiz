@@ -1,0 +1,620 @@
+{
+  "id": "bacteriology-general",
+  "title": "Bacteriology – General",
+  "short": "Bact. (general)",
+  "color": "#3da9fc",
+  "entities": [],
+  "questions": [
+    { "id": "bg-1", "stem": "Which of the following statements about bacteria is correct?", "multi": false,
+      "options": [
+        { "t": "They are cellular organisms", "correct": false },
+        { "t": "Generally, they can replicate independently outside host cells", "correct": false },
+        { "t": "They contain both DNA and RNA", "correct": false },
+        { "t": "All of the above", "correct": true }
+      ],
+      "explanation": "Bacteria are cellular, replicate independently (unlike viruses), and contain both DNA and RNA — all true.", "topic": "general", "source": "exam" },
+
+    { "id": "bg-2", "stem": "In what size range can all known bacteria be placed?", "multi": false,
+      "options": [
+        { "t": "From 1 nm to 100 nm", "correct": false },
+        { "t": "From 25 nm to 2000 nm", "correct": false },
+        { "t": "From 0.2 µm to 1000 µm", "correct": true },
+        { "t": "From 2 µm to 2000 µm", "correct": false }
+      ],
+      "explanation": "Bacteria span roughly 0.2 µm to ~1000 µm.", "topic": "general", "source": "exam" },
+
+    { "id": "bg-3", "stem": "Bacteria can be identified:", "multi": false,
+      "options": [
+        { "t": "Based on morphological and staining characteristics", "correct": false },
+        { "t": "Based on biochemical characteristics", "correct": false },
+        { "t": "Based on phylogenetic characteristics", "correct": false },
+        { "t": "All of the above", "correct": true }
+      ],
+      "explanation": "Identification uses morphology/staining, biochemistry and phylogenetics.", "topic": "classification", "source": "exam" },
+
+    { "id": "bg-4", "stem": "The 5-Kingdom classification system was developed by:", "multi": false,
+      "options": [
+        { "t": "Robert Whittaker", "correct": true },
+        { "t": "Carl Woese", "correct": false },
+        { "t": "Louis Pasteur", "correct": false },
+        { "t": "Robert Koch", "correct": false }
+      ],
+      "explanation": "Robert Whittaker proposed the 5-Kingdom system.", "topic": "classification", "source": "exam" },
+
+    { "id": "bg-5", "stem": "Which sequence best represents the hierarchy in biological classification?", "multi": false,
+      "options": [
+        { "t": "Kingdom, phylum, class, order, family, genus, species", "correct": true },
+        { "t": "Kingdom, class, phylum, family, order, genus, species", "correct": false },
+        { "t": "Phylum, kingdom, order, class, family, species, genus", "correct": false },
+        { "t": "Kingdom, order, phylum, class, family, genus, species", "correct": false }
+      ],
+      "explanation": "Kingdom → phylum → class → order → family → genus → species.", "topic": "classification", "source": "exam" },
+
+    { "id": "bg-6", "stem": "Gram staining is used for the identification of:", "multi": false,
+      "options": [
+        { "t": "All bacteria, without exception", "correct": false },
+        { "t": "All bacteria, with a few exceptions", "correct": true },
+        { "t": "The mycobacteria", "correct": false },
+        { "t": "The mycoplasmas", "correct": false }
+      ],
+      "explanation": "Gram stain works for most bacteria, with exceptions (mycobacteria, mycoplasmas, spirochetes, chlamydiae).", "topic": "staining", "source": "exam" },
+
+    { "id": "bg-7", "stem": "Ziehl-Neelsen staining is used for the identification of:", "multi": false,
+      "options": [
+        { "t": "All bacteria, with a few exceptions", "correct": false },
+        { "t": "Chlamydiae", "correct": false },
+        { "t": "Mycobacteria", "correct": true },
+        { "t": "Mycoplasmas", "correct": false }
+      ],
+      "explanation": "Ziehl-Neelsen (acid-fast) staining identifies mycobacteria.", "topic": "staining", "source": "exam" },
+
+    { "id": "bg-8", "stem": "The absence of a cell wall is a characteristic of:", "multi": false,
+      "options": [
+        { "t": "Mycoplasmas", "correct": true },
+        { "t": "Mycobacteria", "correct": false },
+        { "t": "Spirochetes", "correct": false },
+        { "t": "Enterobacteria", "correct": false }
+      ],
+      "explanation": "Mycoplasmas lack a cell wall (no peptidoglycan).", "topic": "cell wall", "source": "exam" },
+
+    { "id": "bg-9", "stem": "In Gram-negative bacteria, peptidoglycan represents about ___ of the dry weight of the cell wall.", "multi": false,
+      "options": [
+        { "t": "50% or more", "correct": false },
+        { "t": "About 10%", "correct": true },
+        { "t": "11% ± 0.22%", "correct": false },
+        { "t": "About 20%", "correct": false }
+      ],
+      "explanation": "Peptidoglycan is ~10% of the GN cell-wall dry weight (vs ~50% in Gram-positives).", "topic": "cell wall", "source": "exam" },
+
+    { "id": "bg-10", "stem": "Peptidoglycan may contain:", "multi": true,
+      "options": [
+        { "t": "N-acetylglucosamine (NAG)", "correct": true },
+        { "t": "N-acetylmuramic acid (NAM)", "correct": true },
+        { "t": "D-alanine", "correct": true },
+        { "t": "Dipicolinic acid", "correct": false }
+      ],
+      "explanation": "Peptidoglycan = NAG-NAM backbone cross-linked by peptides containing D-amino acids (e.g. D-alanine). Dipicolinic acid is a spore component.", "topic": "peptidoglycan", "source": "exam" },
+
+    { "id": "bg-11", "stem": "In the cytoplasmic stage of peptidoglycan biosynthesis:", "multi": false,
+      "options": [
+        { "t": "The NAM-pentapeptide subunit is synthesized", "correct": true },
+        { "t": "The NAM-pentapeptide subunit is linked to bactoprenol", "correct": false },
+        { "t": "The NAG-NAM-pentapeptide subunit is incorporated into existing peptidoglycan", "correct": false },
+        { "t": "Cross-links are formed between the lateral peptide chains", "correct": false }
+      ],
+      "explanation": "Cytoplasmic stage: synthesis of the NAM-pentapeptide (Park nucleotide). Bactoprenol linkage = membrane stage; incorporation/cross-linking = outside.", "topic": "peptidoglycan", "source": "exam" },
+
+    { "id": "bg-12", "stem": "In the membrane stage of peptidoglycan biosynthesis:", "multi": false,
+      "options": [
+        { "t": "The NAM-pentapeptide subunit is synthesized", "correct": false },
+        { "t": "The NAM-pentapeptide subunit is linked to bactoprenol", "correct": true },
+        { "t": "The NAG-NAM-pentapeptide subunit is incorporated into existing peptidoglycan", "correct": false },
+        { "t": "Cross-links are formed between the lateral peptide chains", "correct": false }
+      ],
+      "explanation": "Membrane stage: the NAM-pentapeptide is linked to the lipid carrier bactoprenol (lipid I/II).", "topic": "peptidoglycan", "source": "exam" },
+
+    { "id": "bg-13", "stem": "Which of the following molecules is exposed on the outer surface of a Gram-positive bacterium?", "multi": false,
+      "options": [
+        { "t": "The O antigen of LPS/LOS", "correct": false },
+        { "t": "Lipoteichoic acid (LTA)", "correct": true },
+        { "t": "Braun's lipoprotein", "correct": false },
+        { "t": "The components of the electron transport system", "correct": false }
+      ],
+      "explanation": "Teichoic/lipoteichoic acids are exposed on Gram-positive surfaces; LPS and Braun's lipoprotein belong to Gram-negatives.", "topic": "cell wall", "source": "exam" },
+
+    { "id": "bg-14", "stem": "Which statement about the outer membrane of Gram-negative bacteria is correct?", "multi": false,
+      "options": [
+        { "t": "It contains teichoic acids (TA) and lipoteichoic acid (LTA)", "correct": false },
+        { "t": "It contains lipopolysaccharide/lipooligosaccharide (LPS/LOS)", "correct": true },
+        { "t": "It is impermeable to all molecules", "correct": false },
+        { "t": "It is permeable to all molecules thanks to porins", "correct": false }
+      ],
+      "explanation": "The GN outer membrane contains LPS/LOS; porins allow selective (not unrestricted) permeability.", "topic": "cell wall", "source": "exam" },
+
+    { "id": "bg-15", "stem": "Where are the porins of Gram-negative bacteria located?", "multi": false,
+      "options": [
+        { "t": "In the capsule", "correct": false },
+        { "t": "In the outer membrane", "correct": true },
+        { "t": "In the periplasm", "correct": false },
+        { "t": "In the cytoplasmic membrane", "correct": false }
+      ],
+      "explanation": "Porins are channel proteins of the outer membrane.", "topic": "cell wall", "source": "exam" },
+
+    { "id": "bg-16", "stem": "If FtsZ is inactivated in Escherichia coli:", "multi": false,
+      "options": [
+        { "t": "The bacteria become filamentous because they cannot divide", "correct": true },
+        { "t": "The bacteria become round because they cannot elongate", "correct": false },
+        { "t": "The bacteria lose any shape", "correct": false },
+        { "t": "None of the above", "correct": false }
+      ],
+      "explanation": "FtsZ forms the division (Z) ring; without it cells elongate but cannot divide → filaments.", "topic": "cytoskeleton", "source": "exam" },
+
+    { "id": "bg-17", "stem": "If MreB is inactivated in Escherichia coli:", "multi": false,
+      "options": [
+        { "t": "The bacteria become round because they cannot elongate", "correct": true },
+        { "t": "The bacteria become filamentous because they cannot divide", "correct": false },
+        { "t": "The bacteria lose any shape", "correct": false },
+        { "t": "None of the above", "correct": false }
+      ],
+      "explanation": "MreB directs lateral (rod) elongation; losing it makes rod-shaped cells round.", "topic": "cytoskeleton", "source": "exam" },
+
+    { "id": "bg-18", "stem": "Which of the following is directly involved in energy production in bacterial cells?", "multi": false,
+      "options": [
+        { "t": "The lysosome", "correct": false },
+        { "t": "The mitochondrion", "correct": false },
+        { "t": "The cytoplasmic membrane", "correct": true },
+        { "t": "The ribosome", "correct": false }
+      ],
+      "explanation": "Bacteria lack mitochondria; the cytoplasmic membrane hosts the electron transport chain / oxidative phosphorylation.", "topic": "metabolism", "source": "exam" },
+
+    { "id": "bg-19", "stem": "Which statements about the replication of bacterial DNA are correct?", "multi": false,
+      "options": [
+        { "t": "It occurs in the cytoplasm", "correct": true },
+        { "t": "It involves the synthesis of a complementary RNA strand", "correct": false },
+        { "t": "It requires the RNA polymerase enzyme", "correct": false },
+        { "t": "It happens only during cell division", "correct": false }
+      ],
+      "explanation": "Bacterial DNA replication occurs in the cytoplasm (no nucleus) and uses DNA polymerase, not RNA polymerase.", "topic": "genetics", "source": "exam" },
+
+    { "id": "bg-20", "stem": "How many ORFs does a bacterial genome of 2.5 megabases (Mb) approximately encode?", "multi": false,
+      "options": [
+        { "t": "About 1000", "correct": false },
+        { "t": "About 2000", "correct": true },
+        { "t": "About 4000", "correct": false },
+        { "t": "It is not possible to estimate the number of ORFs", "correct": false }
+      ],
+      "explanation": "Roughly ~1 gene per kb → a 2.5 Mb genome encodes ~2000 ORFs.", "topic": "genetics", "source": "exam" },
+
+    { "id": "bg-21", "stem": "In genetic exchange between bacteria, what is conjugation?", "multi": false,
+      "options": [
+        { "t": "A mechanism of cellular differentiation", "correct": false },
+        { "t": "A mechanism through which different cells transfer genetic material by means of physical contact", "correct": true },
+        { "t": "A mechanism by which cells take up DNA present in soluble form in the environment", "correct": false },
+        { "t": "A mechanism that allows multiplication of the bacterial cell", "correct": false }
+      ],
+      "explanation": "Conjugation = transfer of genetic material via direct cell-to-cell contact (sex pilus).", "topic": "genetics", "source": "exam" },
+
+    { "id": "bg-22", "stem": "In genetic exchange between bacteria, what is transformation?", "multi": false,
+      "options": [
+        { "t": "A mechanism of cellular differentiation", "correct": false },
+        { "t": "Transfer of genetic material via physical contact between cells", "correct": false },
+        { "t": "Uptake of DNA present in soluble form in the environment", "correct": true },
+        { "t": "A mechanism that allows multiplication of the bacterial cell", "correct": false }
+      ],
+      "explanation": "Transformation = uptake of free (soluble) DNA from the environment.", "topic": "genetics", "source": "exam" },
+
+    { "id": "bg-23", "stem": "Plasmid DNA:", "multi": true,
+      "options": [
+        { "t": "Is found outside the chromosome", "correct": true },
+        { "t": "Can be transmitted to other bacteria", "correct": true },
+        { "t": "Is essential for survival under all conditions", "correct": false },
+        { "t": "Replicates only during sporulation", "correct": false }
+      ],
+      "explanation": "Plasmids are extrachromosomal, self-replicating, and transmissible (e.g. by conjugation); they are usually dispensable.", "topic": "genetics", "source": "exam" },
+
+    { "id": "bg-24", "stem": "What could be the phenotypic consequence of a point mutation in a bacterial gene encoding a protein?", "multi": true,
+      "options": [
+        { "t": "The protein is produced in a truncated form if the mutation creates an early stop codon", "correct": true },
+        { "t": "The protein is produced with altered functionality if there is a missense mutation", "correct": true },
+        { "t": "The protein is produced normally if the mutation does not change any amino acid", "correct": true },
+        { "t": "The mutation is always lethal", "correct": false }
+      ],
+      "explanation": "Nonsense → truncation; missense → altered function; silent → no change. Point mutations are not always lethal.", "topic": "genetics", "source": "exam" },
+
+    { "id": "bg-25", "stem": "A selective medium is used to:", "multi": false,
+      "options": [
+        { "t": "Select the most effective antibiotics on the microorganisms under study", "correct": false },
+        { "t": "Selectively allow the growth of certain microbial species over others", "correct": true },
+        { "t": "Achieve faster bacterial growth", "correct": false },
+        { "t": "Highlight particular metabolic characteristics", "correct": false }
+      ],
+      "explanation": "Selective media favour growth of target species while inhibiting others.", "topic": "diagnostics", "source": "exam" },
+
+    { "id": "bg-26", "stem": "Which statement does NOT correctly describe a selective medium for bacterial growth?", "multi": false,
+      "options": [
+        { "t": "It contains agents that promote growth of certain bacteria by inhibiting others", "correct": false },
+        { "t": "It may contain antibiotics, other substances or dyes to limit unwanted microorganisms", "correct": false },
+        { "t": "It is used to isolate specific bacterial species from a mixed sample", "correct": false },
+        { "t": "It promotes the indiscriminate growth of all types of bacteria present in a sample", "correct": true }
+      ],
+      "explanation": "A selective medium does the opposite of promoting indiscriminate growth — that statement is the incorrect one.", "topic": "diagnostics", "source": "exam" },
+
+    { "id": "bg-27", "stem": "The transport medium is:", "multi": false,
+      "options": [
+        { "t": "A medium that keeps the organisms alive, prevents their deterioration, and inhibits replication", "correct": true },
+        { "t": "A medium that promotes rapid bacterial growth", "correct": false },
+        { "t": "A medium used to select effective antibiotics", "correct": false },
+        { "t": "A medium that kills contaminating organisms", "correct": false }
+      ],
+      "explanation": "Transport media maintain viability without allowing multiplication during sample transport.", "topic": "diagnostics", "source": "exam" },
+
+    { "id": "bg-28", "stem": "The resident microbial flora interferes with colonization of body surfaces by pathogens through which mechanisms?", "multi": true,
+      "options": [
+        { "t": "Competition for nutrients and production of bacteriocins", "correct": true },
+        { "t": "Production of toxic metabolites", "correct": true },
+        { "t": "Production of lysozyme", "correct": false },
+        { "t": "Production of specific antibodies", "correct": false }
+      ],
+      "explanation": "Normal flora competes for nutrients/receptors, produces bacteriocins and toxic metabolites; it does not itself make lysozyme or antibodies.", "topic": "microbiota", "source": "exam" },
+
+    { "id": "bg-29", "stem": "In which of the following body sites/organs is resident microbial flora present?", "multi": true,
+      "options": [
+        { "t": "The oral cavity", "correct": true },
+        { "t": "The large intestine", "correct": true },
+        { "t": "The lung", "correct": false },
+        { "t": "The bladder", "correct": false }
+      ],
+      "explanation": "Oral cavity and large intestine are heavily colonized; the lung and bladder are normally (near-)sterile.", "topic": "microbiota", "source": "exam" },
+
+    { "id": "bg-30", "stem": "Which of the following regions/organs does NOT have resident microbial flora?", "multi": false,
+      "options": [
+        { "t": "The oral cavity", "correct": false },
+        { "t": "The lung", "correct": true },
+        { "t": "The intestine", "correct": false },
+        { "t": "The skin", "correct": false }
+      ],
+      "explanation": "The lung is normally free of a resident flora; oral cavity, intestine and skin are colonized.", "topic": "microbiota", "source": "exam" },
+
+    { "id": "bg-31", "stem": "Opportunistic bacteria are defined as such if:", "multi": false,
+      "options": [
+        { "t": "They always and in every case cause disease", "correct": false },
+        { "t": "They are never pathogens", "correct": false },
+        { "t": "They increase the ability of other microbes to cause disease", "correct": false },
+        { "t": "They cause disease only under particular conditions", "correct": true }
+      ],
+      "explanation": "Opportunistic (conditional) pathogens cause disease only under predisposing conditions.", "topic": "pathogenesis", "source": "exam" },
+
+    { "id": "bg-32", "stem": "Bacterial virulence:", "multi": true,
+      "options": [
+        { "t": "Is the relative ability of a given bacterial species to cause harm", "correct": true },
+        { "t": "Reflects the amount of harm caused by a given bacterial species", "correct": true },
+        { "t": "Can be measured (e.g. ID50, LD50)", "correct": true },
+        { "t": "Is an intrinsic, unmodifiable characteristic of all pathogenic species", "correct": false }
+      ],
+      "explanation": "Virulence is the degree of pathogenicity, can be quantified (ID50/LD50), and varies/can be modified — it is not a fixed intrinsic trait.", "topic": "pathogenesis", "source": "exam" },
+
+    { "id": "bg-33", "stem": "Which of the following extracellular enzymes of bacterial origin have a role in the spread and invasive capacity of pathogens?", "multi": true,
+      "options": [
+        { "t": "Collagenase", "correct": true },
+        { "t": "Hyaluronidase", "correct": true },
+        { "t": "Muramidase", "correct": false },
+        { "t": "Catalase", "correct": false }
+      ],
+      "explanation": "Collagenase and hyaluronidase degrade extracellular matrix → spread. Muramidase/catalase are not spreading factors.", "topic": "pathogenesis", "source": "exam" },
+
+    { "id": "bg-34", "stem": "Which bacterial structure plays a direct role in motility and spread?", "multi": false,
+      "options": [
+        { "t": "Fimbriae", "correct": false },
+        { "t": "The capsule", "correct": false },
+        { "t": "Cytoplasmic inclusions", "correct": false },
+        { "t": "The flagellum", "correct": true }
+      ],
+      "explanation": "The flagellum provides motility; fimbriae mediate adhesion, not motility.", "topic": "structure", "source": "exam" },
+
+    { "id": "bg-35", "stem": "Bacterial fimbriae:", "multi": false,
+      "options": [
+        { "t": "Serve for the adhesion of bacteria to different surfaces", "correct": true },
+        { "t": "Are the main organelle of locomotion", "correct": false },
+        { "t": "Are made of peptidoglycan", "correct": false },
+        { "t": "Store energy reserves", "correct": false }
+      ],
+      "explanation": "Fimbriae/pili are proteinaceous adhesion structures.", "topic": "structure", "source": "exam" },
+
+    { "id": "bg-36", "stem": "The bacterial capsule:", "multi": true,
+      "options": [
+        { "t": "Is mainly made of polysaccharides (with the exception of protein capsules)", "correct": true },
+        { "t": "Protects the bacterium from phagocytosis", "correct": true },
+        { "t": "Is made of peptidoglycan", "correct": false },
+        { "t": "Is required for cell replication", "correct": false }
+      ],
+      "explanation": "The capsule is usually polysaccharide (some are polypeptide) and is antiphagocytic; it is not peptidoglycan and is dispensable for growth.", "topic": "structure", "source": "exam" },
+
+    { "id": "bg-37", "stem": "Which of the following best represents the sequence of bacterial biofilm formation?", "multi": false,
+      "options": [
+        { "t": "Reversible attachment → irreversible attachment → matrix formation and growth → dispersion", "correct": true },
+        { "t": "Matrix formation and growth → irreversible attachment → reversible attachment → dispersion", "correct": false },
+        { "t": "Irreversible attachment → dispersion → reversible attachment → matrix formation", "correct": false },
+        { "t": "Dispersion → matrix formation → reversible attachment → irreversible attachment", "correct": false }
+      ],
+      "explanation": "Biofilm: reversible attachment → irreversible attachment → maturation (matrix + growth) → dispersion.", "topic": "biofilm", "source": "exam" },
+
+    { "id": "bg-38", "stem": "Biofilms:", "multi": false,
+      "options": [
+        { "t": "Can develop on materials such as plastic, metal, and rubber", "correct": true },
+        { "t": "Can be composed of only a single type of bacteria", "correct": false },
+        { "t": "Are easily detached structures", "correct": false },
+        { "t": "Are exclusively formed by Gram-positive bacteria", "correct": false }
+      ],
+      "explanation": "Biofilms form on abiotic surfaces (plastic, metal, rubber), are often polymicrobial and are difficult to remove.", "topic": "biofilm", "source": "exam" },
+
+    { "id": "bg-39", "stem": "Obligately anaerobic bacteria are:", "multi": false,
+      "options": [
+        { "t": "Able to respire in the presence of O₂", "correct": false },
+        { "t": "Unable to respire in the presence of O₂ and are killed by exposure to O₂", "correct": true },
+        { "t": "Dependent on O₂ for growth", "correct": false },
+        { "t": "None of the above", "correct": false }
+      ],
+      "explanation": "Obligate anaerobes cannot use O₂ and are typically killed by it (lack catalase/SOD).", "topic": "oxygen", "source": "exam" },
+
+    { "id": "bg-40", "stem": "Which statement about anaerobic bacteria is correct?", "multi": false,
+      "options": [
+        { "t": "They require oxygen for growth", "correct": false },
+        { "t": "They are able to survive and grow in environments without oxygen", "correct": true },
+        { "t": "They must always be treated with anaerobe-specific antibiotics", "correct": false },
+        { "t": "They never cause disease", "correct": false }
+      ],
+      "explanation": "Anaerobes grow in the absence of oxygen.", "topic": "oxygen", "source": "exam" },
+
+    { "id": "bg-41", "stem": "The lack of enzymes such as catalase and superoxide dismutase can explain why some bacteria:", "multi": true,
+      "options": [
+        { "t": "Are killed by exposure to O₂", "correct": true },
+        { "t": "Cannot detoxify reactive oxygen species", "correct": true },
+        { "t": "Cannot perform glycolysis", "correct": false },
+        { "t": "Cannot form spores", "correct": false }
+      ],
+      "explanation": "Without catalase/SOD, toxic reactive oxygen species accumulate → cells are killed by O₂.", "topic": "oxygen", "source": "exam" },
+
+    { "id": "bg-42", "stem": "Which statement about bacterial growth is correct?", "multi": false,
+      "options": [
+        { "t": "The stationary phase is characterized by a balance between cell growth and cell death", "correct": true },
+        { "t": "The lag phase is the one in which bacteria divide most rapidly", "correct": false },
+        { "t": "During the exponential phase, bacteria adapt to the new environment", "correct": false },
+        { "t": "The decline phase is the one in which cell division is at its maximum", "correct": false }
+      ],
+      "explanation": "In stationary phase growth and death roughly balance; rapid division occurs in the exponential phase.", "topic": "growth", "source": "exam" },
+
+    { "id": "bg-43", "stem": "A bacterium that divides every 30 minutes starts at 200 CFU/mL. Assuming it stays in the logarithmic phase, what is the population after 3 hours?", "multi": false,
+      "options": [
+        { "t": "1600 CFU/mL", "correct": false },
+        { "t": "3200 CFU/mL", "correct": false },
+        { "t": "12800 CFU/mL", "correct": true },
+        { "t": "51200 CFU/mL", "correct": false }
+      ],
+      "explanation": "3 h / 30 min = 6 doublings → 200 × 2⁶ = 200 × 64 = 12 800 CFU/mL.", "topic": "growth kinetics", "source": "exam" },
+
+    { "id": "bg-44", "stem": "A bacterium capable of growing at 45 °C, with an optimal growth temperature of 37 °C, that cannot grow below 25 °C is:", "multi": false,
+      "options": [
+        { "t": "Psychrophilic", "correct": false },
+        { "t": "Mesophilic", "correct": true },
+        { "t": "Thermophilic", "correct": false },
+        { "t": "Halophilic", "correct": false }
+      ],
+      "explanation": "Optimum ~37 °C with range ~25–45 °C is a mesophile (typical of warm-blooded-host bacteria).", "topic": "growth", "source": "exam" },
+
+    { "id": "bg-45", "stem": "Which statement about bacterial fermentation is correct?", "multi": false,
+      "options": [
+        { "t": "It produces ATP only at the substrate level, in the absence of an external electron acceptor", "correct": true },
+        { "t": "It requires oxygen as the final electron acceptor", "correct": false },
+        { "t": "It produces a high amount of ATP", "correct": false },
+        { "t": "It is an exclusive process of Gram-positive bacteria", "correct": false }
+      ],
+      "explanation": "Fermentation is substrate-level phosphorylation only, with no external electron acceptor, giving little ATP.", "topic": "metabolism", "source": "exam" },
+
+    { "id": "bg-46", "stem": "Which of the following procedures are able to kill spores?", "multi": true,
+      "options": [
+        { "t": "Autoclave at 121 °C", "correct": true },
+        { "t": "Incineration at 500 °C", "correct": true },
+        { "t": "Pasteurization", "correct": false },
+        { "t": "Refrigeration", "correct": false }
+      ],
+      "explanation": "Autoclaving (moist heat under pressure) and incineration are sporicidal; pasteurization and cold are not.", "topic": "sterilization", "source": "exam" },
+
+    { "id": "bg-47", "stem": "Which of the following methods can be used to sterilize a heat-sensitive liquid?", "multi": false,
+      "options": [
+        { "t": "Moist heat", "correct": false },
+        { "t": "UV radiation", "correct": false },
+        { "t": "Filtration", "correct": true },
+        { "t": "Chemical disinfectant", "correct": false }
+      ],
+      "explanation": "Heat-sensitive liquids are sterilized by filtration (e.g. 0.22 µm membrane).", "topic": "sterilization", "source": "exam" },
+
+    { "id": "bg-48", "stem": "Compared with the vegetative bacterial cell, the spore has:", "multi": true,
+      "options": [
+        { "t": "High resistance to heat and drying", "correct": true },
+        { "t": "No (or minimal) metabolic activity", "correct": true },
+        { "t": "A thin, fragile cell wall", "correct": false },
+        { "t": "A high rate of replication", "correct": false }
+      ],
+      "explanation": "Endospores are metabolically dormant and highly resistant to heat, desiccation and chemicals.", "topic": "spores", "source": "exam" },
+
+    { "id": "bg-49", "stem": "Which of the following microorganisms are spore-forming?", "multi": true,
+      "options": [
+        { "t": "Clostridioides difficile", "correct": true },
+        { "t": "Bacillus", "correct": true },
+        { "t": "Staphylococcus", "correct": false },
+        { "t": "Mycoplasma", "correct": false }
+      ],
+      "explanation": "Endospore-formers are mainly Bacillus and Clostridium/Clostridioides.", "topic": "spores", "source": "exam" },
+
+    { "id": "bg-50", "stem": "Which of the following microorganisms cannot be cultured in vitro?", "multi": true,
+      "options": [
+        { "t": "Treponema pallidum", "correct": true },
+        { "t": "Mycobacterium leprae", "correct": true },
+        { "t": "Escherichia coli", "correct": false },
+        { "t": "Staphylococcus aureus", "correct": false }
+      ],
+      "explanation": "T. pallidum and M. leprae cannot be grown on artificial media.", "topic": "diagnostics", "source": "exam" },
+
+    { "id": "bg-51", "stem": "An antimicrobial agent that could be used as an antibiotic should:", "multi": false,
+      "options": [
+        { "t": "Have a limited spectrum of activity", "correct": false },
+        { "t": "Be able to be administered in high doses", "correct": false },
+        { "t": "Be administered only via the parenteral route", "correct": false },
+        { "t": "Have selective toxicity", "correct": true }
+      ],
+      "explanation": "Selective toxicity (harming the microbe but not the host) is the key requirement.", "topic": "antibiotics", "source": "exam" },
+
+    { "id": "bg-52", "stem": "Which statement about antibiotics is correct?", "multi": false,
+      "options": [
+        { "t": "They are substances produced by microorganisms that act against bacteria", "correct": true },
+        { "t": "They can be used to treat viral infections", "correct": false },
+        { "t": "They are also effective against viruses", "correct": false },
+        { "t": "They do not cause resistance", "correct": false }
+      ],
+      "explanation": "Antibiotics are (originally) microbial products active against bacteria; they do not work on viruses and can select resistance.", "topic": "antibiotics", "source": "exam" },
+
+    { "id": "bg-53", "stem": "Which genera of microorganisms are known as major producers of antibiotics?", "multi": true,
+      "options": [
+        { "t": "Penicillium", "correct": true },
+        { "t": "Streptomyces", "correct": true },
+        { "t": "Staphylococcus", "correct": false },
+        { "t": "Escherichia", "correct": false }
+      ],
+      "explanation": "Penicillium (fungus) and Streptomyces (actinomycete) are the classic antibiotic producers.", "topic": "antibiotics", "source": "exam" },
+
+    { "id": "bg-54", "stem": "Which of these antibacterial drugs inhibit the synthesis of the cell wall?", "multi": true,
+      "options": [
+        { "t": "Amoxicillin", "correct": true },
+        { "t": "Vancomycin", "correct": true },
+        { "t": "Levofloxacin", "correct": false },
+        { "t": "Ciprofloxacin", "correct": false }
+      ],
+      "explanation": "β-lactams (amoxicillin) and glycopeptides (vancomycin) target cell-wall synthesis; fluoroquinolones target DNA gyrase.", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-55", "stem": "Which of these antibacterial drugs inhibits DNA synthesis/replication?", "multi": false,
+      "options": [
+        { "t": "Ciprofloxacin", "correct": true },
+        { "t": "Rifampicin", "correct": false },
+        { "t": "Ampicillin", "correct": false },
+        { "t": "Vancomycin", "correct": false }
+      ],
+      "explanation": "Ciprofloxacin (a fluoroquinolone) inhibits DNA gyrase/topoisomerase IV → DNA replication. Rifampicin targets RNA polymerase.", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-56", "stem": "What is the target of levofloxacin / fluoroquinolones?", "multi": false,
+      "options": [
+        { "t": "DNA gyrase and topoisomerase IV (DNA replication)", "correct": true },
+        { "t": "Cell wall synthesis", "correct": false },
+        { "t": "The 30S ribosomal subunit", "correct": false },
+        { "t": "Folate synthesis", "correct": false }
+      ],
+      "explanation": "Fluoroquinolones inhibit DNA gyrase and topoisomerase IV.", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-57", "stem": "What is the target of teicoplanin?", "multi": false,
+      "options": [
+        { "t": "The synthesis of the cell wall", "correct": true },
+        { "t": "The cell membrane", "correct": false },
+        { "t": "The synthesis of DNA", "correct": false },
+        { "t": "Protein synthesis", "correct": false }
+      ],
+      "explanation": "Teicoplanin is a glycopeptide → inhibits cell-wall synthesis (binds D-Ala-D-Ala).", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-58", "stem": "Which of these antibiotics acts against the cell membrane?", "multi": false,
+      "options": [
+        { "t": "Daptomycin", "correct": true },
+        { "t": "Fosfomycin", "correct": false },
+        { "t": "Sulfamethoxazole", "correct": false },
+        { "t": "Cefotaxime", "correct": false }
+      ],
+      "explanation": "Daptomycin (a lipopeptide) disrupts the bacterial cell membrane.", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-59", "stem": "Which antibiotic blocks protein synthesis?", "multi": false,
+      "options": [
+        { "t": "Streptomycin", "correct": true },
+        { "t": "Ampicillin", "correct": false },
+        { "t": "Ciprofloxacin", "correct": false },
+        { "t": "Vancomycin", "correct": false }
+      ],
+      "explanation": "Streptomycin (aminoglycoside) binds the 30S subunit → blocks protein synthesis.", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-60", "stem": "Which of these antibiotics blocks the synthesis of folic acid?", "multi": false,
+      "options": [
+        { "t": "Sulfonamides", "correct": true },
+        { "t": "Fosfomycin", "correct": false },
+        { "t": "Daptomycin", "correct": false },
+        { "t": "Polymyxin", "correct": false }
+      ],
+      "explanation": "Sulfonamides (with trimethoprim) inhibit folate synthesis.", "topic": "antibiotic targets", "source": "exam" },
+
+    { "id": "bg-61", "stem": "Characteristics of fluoroquinolone antibiotics include:", "multi": true,
+      "options": [
+        { "t": "A broad spectrum of activity", "correct": true },
+        { "t": "Concentration-dependent bactericidal activity", "correct": true },
+        { "t": "Inhibition of the bacterial cell wall", "correct": false },
+        { "t": "A bacteriostatic mechanism", "correct": false }
+      ],
+      "explanation": "Fluoroquinolones are broad-spectrum, concentration-dependent bactericidal DNA-gyrase inhibitors.", "topic": "antibiotics", "source": "exam" },
+
+    { "id": "bg-62", "stem": "Which microorganisms are naturally resistant to the action of β-lactams?", "multi": true,
+      "options": [
+        { "t": "Ureaplasma", "correct": true },
+        { "t": "Mycoplasma", "correct": true },
+        { "t": "Escherichia coli", "correct": false },
+        { "t": "Staphylococcus aureus", "correct": false }
+      ],
+      "explanation": "Mycoplasma/Ureaplasma lack a cell wall (no peptidoglycan target) → intrinsic β-lactam resistance.", "topic": "resistance", "source": "exam" },
+
+    { "id": "bg-63", "stem": "Enterobacteriaceae are naturally resistant to the action of vancomycin. Why?", "multi": false,
+      "options": [
+        { "t": "They do not have the biochemical target", "correct": false },
+        { "t": "They produce β-lactamases", "correct": false },
+        { "t": "They produce only low-affinity PBPs for β-lactams", "correct": false },
+        { "t": "None of the above", "correct": true }
+      ],
+      "explanation": "Vancomycin is simply too large to cross the Gram-negative outer membrane to reach its (present) target — so 'none of the above'.", "topic": "resistance", "source": "exam" },
+
+    { "id": "bg-64", "stem": "Which statement about bacterial resistance to antibiotics is correct?", "multi": false,
+      "options": [
+        { "t": "It can be acquired only through gene mutation", "correct": false },
+        { "t": "It can be acquired both through mutation and through genetic exchange", "correct": true },
+        { "t": "It cannot be present naturally", "correct": false },
+        { "t": "It concerns only pathogenic bacteria in humans", "correct": false }
+      ],
+      "explanation": "Resistance arises by mutation AND horizontal gene transfer, and can also be intrinsic (natural).", "topic": "resistance", "source": "exam" },
+
+    { "id": "bg-65", "stem": "Which statement about the MIC (minimum inhibitory concentration) or MBC (minimum bactericidal concentration) is correct?", "multi": false,
+      "options": [
+        { "t": "The MIC inhibits the growth of the bacterium, whereas the MBC kills 99.9% of the bacteria", "correct": true },
+        { "t": "The MIC eliminates bacteria, whereas the MBC inhibits growth", "correct": false },
+        { "t": "The MIC and the MBC are always the same for a given antibiotic", "correct": false },
+        { "t": "MIC and MBC have no correlation with therapeutic efficacy", "correct": false }
+      ],
+      "explanation": "MIC = lowest conc. that inhibits growth; MBC = lowest conc. that kills ≥99.9%.", "topic": "antibiotics", "source": "exam" },
+
+    { "id": "bg-66", "stem": "What does the parameter 'ECOFF' represent in EUCAST antibiotic susceptibility testing?", "multi": false,
+      "options": [
+        { "t": "The breakpoint between 'wild-type' and 'non-wild-type' for a species, based on the MIC", "correct": true },
+        { "t": "The minimum effective dose of an antibiotic", "correct": false },
+        { "t": "The maximum tolerable concentration of an antibiotic in the blood", "correct": false },
+        { "t": "The probability of developing side effects during treatment", "correct": false }
+      ],
+      "explanation": "The ECOFF (epidemiological cut-off) separates wild-type from non-wild-type (acquired-resistance) populations by MIC.", "topic": "antibiotics", "source": "exam" },
+
+    { "id": "bg-67", "stem": "Which part of the endotoxin is linked to its toxic activity?", "multi": false,
+      "options": [
+        { "t": "Lipid A", "correct": true },
+        { "t": "The O-polysaccharide", "correct": false },
+        { "t": "The core polysaccharide", "correct": false },
+        { "t": "The associated protein component", "correct": false }
+      ],
+      "explanation": "Lipid A is the toxic moiety of LPS/LOS endotoxin.", "topic": "toxins", "source": "exam" },
+
+    { "id": "bg-68", "stem": "Koch's postulates require that:", "multi": true,
+      "options": [
+        { "t": "The suspected pathogen is present in all cases of the disease", "correct": true },
+        { "t": "The organism can be grown in pure culture", "correct": true },
+        { "t": "The cultured organism reproduces the disease when inoculated into a healthy host", "correct": true },
+        { "t": "The organism must be visible by Gram stain", "correct": false }
+      ],
+      "explanation": "Koch's postulates: presence in disease, pure culture, reproduction of disease, re-isolation. Gram-stainability is not a postulate.", "topic": "pathogenesis", "source": "exam" }
+  ]
+}

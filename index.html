@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microbiology Quiz</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🧫 Microbiology Quiz</h1>
+    <span class="sub">Exam-accurate practice · multi-select with partial credit · real past-exam + auto-generated questions</span>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-mode="quiz">✍️ Quiz</button>
+    <button class="tab" data-mode="dash">📊 Dashboard</button>
+  </div>
+
+  <div class="controls" id="controls">
+    <div class="ctl">
+      <label>Chapter</label>
+      <select id="chapSel"></select>
+    </div>
+    <div class="ctl">
+      <label>Scope</label>
+      <div class="pill" id="scopePill">
+        <button data-s="all" class="on">All</button>
+        <button data-s="weak">Weak</button>
+        <button data-s="due">Due</button>
+      </div>
+    </div>
+    <div class="ctl" style="margin-left:auto">
+      <label>&nbsp;</label>
+      <button class="muted-btn" id="restartBtn">↻ New round</button>
+    </div>
+  </div>
+
+  <div class="statbar" id="statbar"></div>
+  <div id="view"></div>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

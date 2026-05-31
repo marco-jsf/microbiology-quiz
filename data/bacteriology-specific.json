@@ -1,0 +1,2556 @@
+{
+  "id": "bacteriology-specific",
+  "title": "Bacteriology – Specific",
+  "short": "Bact. (specific)",
+  "color": "#5a7ad8",
+  "entities": [
+    {
+      "id": "saureus",
+      "name": "Staphylococcus aureus",
+      "gram": "pos",
+      "group": "Staphylococcaceae",
+      "color": "#e0567a",
+      "attrs": {
+        "cat": "+",
+        "ox": "−",
+        "ure": "+",
+        "mot": "Non-motile",
+        "bio": "Yes",
+        "micro": "Yes (skin, anterior nares)",
+        "transmission": "Skin/mucosa carriage; contact; hospital & community; foodborne (enterotoxins)",
+        "pathogenesis": "Adhere → cross epithelium → evade defence → exoenzymes/toxins → local + distant injury",
+        "disease": "Skin/soft-tissue (furuncles, abscess, impetigo, cellulitis, necrotizing fasciitis); bacteremia, endocarditis, osteomyelitis, pneumonia; toxic: food poisoning, TSS, SSSS",
+        "keyVF": "Protein A (binds Fc of IgG)",
+        "virulence": "Coagulase; clumping factor; Protein A; MSCRAMM; hemolysins α/β/γ/δ; PVL leucocidin; TSST-1; enterotoxins; exfoliatins",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Anti-staph penicillins (PSSA); MRSA → glycopeptides (vancomycin), linezolid, daptomycin, ceftaroline, tigecycline",
+        "special": "Coagulase +; MRSA = mecA→PBP2a (horizontal transfer); VISA/VRSA via vanA from enterococci"
+      }
+    },
+    {
+      "id": "cons",
+      "name": "Coagulase-negative staph (S. epidermidis, S. saprophyticus)",
+      "gram": "pos",
+      "group": "Staphylococcaceae",
+      "color": "#e0567a",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "Yes (slime)",
+        "micro": "Yes (skin)",
+        "transmission": "Skin flora; healthcare-associated (catheters, implants)",
+        "pathogenesis": "Opportunistic; biofilm on indwelling devices",
+        "disease": "Prosthetic/device infections, healthcare-associated infections; S. saprophyticus → UTI in young women",
+        "keyVF": "Biofilm (slime layer)",
+        "virulence": "Biofilm (slime layer)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Per resistance; often methicillin-resistant",
+        "special": "Coagulase −; opportunistic / conditional pathogens"
+      }
+    },
+    {
+      "id": "spyog",
+      "name": "Streptococcus pyogenes (GAS, group A)",
+      "gram": "pos",
+      "group": "Streptococcaceae",
+      "color": "#4a86d8",
+      "attrs": {
+        "cat": "−",
+        "ox": "−",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "Human is only host (throat/skin)",
+        "transmission": "Human-only; respiratory droplets, direct contact",
+        "pathogenesis": "Adhesion → M-protein–fibrinogen complex → PMN integrins → endothelial damage; suppurative + immune (non-suppurative) sequelae",
+        "disease": "Pharyngitis/angina, tonsillitis; impetigo, erysipelas, cellulitis; scarlet fever; invasive (necrotizing fasciitis, TSS); rheumatic fever; acute glomerulonephritis",
+        "keyVF": "M protein (emm)",
+        "virulence": "M protein (emm) – greatest VF (anti-phagocytic, anti-complement, binds fibronectin); capsule (hyaluronic acid); streptolysin S & O; streptokinase; C5a peptidase; pyrogenic exotoxins Spe-A/B/C (superantigens)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Penicillin G + all β-lactams (still susceptible); macrolides decreased",
+        "special": "β-hemolytic; rheumatic fever via molecular mimicry (M-protein ≈ cardiac myosin)"
+      }
+    },
+    {
+      "id": "sagal",
+      "name": "Streptococcus agalactiae (GBS, group B)",
+      "gram": "pos",
+      "group": "Streptococcaceae",
+      "color": "#4a86d8",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "Yes (vagina/GI)",
+        "transmission": "Vertical (mother → neonate); bovine mastitis",
+        "pathogenesis": "Capsule + hemolysin mediated; crosses basal lamina, anti-phagocytic",
+        "disease": "Neonatal sepsis/meningitis/pneumonia (early & late onset); infections in pregnant women, diabetics, elderly, immunocompromised",
+        "keyVF": "Capsule (10 serotypes)",
+        "virulence": "Capsule (10 serotypes, immunogenic); β-hemolysin; CAMP factor; C5a peptidase; α/β-C protein; hyaluronidase",
+        "vaccine": "None (intrapartum penicillin-G prophylaxis)",
+        "vYN": "no",
+        "treatment": "Penicillin G + β-lactams; macrolide decreased",
+        "special": "β-hemolytic; CAMP test +; intrapartum prophylaxis prevents neonatal disease"
+      }
+    },
+    {
+      "id": "spneu",
+      "name": "Streptococcus pneumoniae (pneumococcus)",
+      "gram": "pos",
+      "group": "Streptococcaceae",
+      "color": "#4a86d8",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "Yes (transient nasopharynx)",
+        "transmission": "Respiratory droplets; colonizes nasopharynx",
+        "pathogenesis": "Spread nasopharynx → middle ear/sinuses/lower airway; toxin/enzyme → inflammation; invasion → systemic",
+        "disease": "Non-invasive: otitis media, sinusitis, bronchitis. Invasive: pneumonia (CAP), bacteremia, meningitis",
+        "keyVF": "Polysaccharide capsule",
+        "virulence": "Polysaccharide capsule (main, anti-phagocytic, immunogenic); pneumolysin; PspA/PspC; IgA protease; autolysin (LytA); H₂O₂",
+        "vaccine": "Yes — PCV13 (conjugate), PPSV23 (polysaccharide)",
+        "vYN": "yes",
+        "treatment": "Penicillin G / cephalosporins (resistance via PBP, murM*N); macrolides (erm/mef)",
+        "special": "α-hemolytic; optochin-sensitive, bile-soluble; risk age <5/>65, asplenia, complement defect"
+      }
+    },
+    {
+      "id": "sother",
+      "name": "Other Strep (viridans, S. bovis, S. suis, S. mutans)",
+      "gram": "pos",
+      "group": "Streptococcaceae",
+      "color": "#4a86d8",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "Yes (dental)",
+        "micro": "Yes (oral)",
+        "transmission": "Oral flora; opportunistic",
+        "pathogenesis": "Variable",
+        "disease": "Viridans / S. bovis → endocarditis; S. suis → meningitis; S. mutans → dental caries",
+        "keyVF": "",
+        "virulence": "Adhesins; biofilm (dental)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "β-lactams",
+        "special": "Part of oral microbiota"
+      }
+    },
+    {
+      "id": "entero",
+      "name": "Enterococcus faecalis & E. faecium",
+      "gram": "pos",
+      "group": "Enterococcaceae",
+      "color": "#2aa98a",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "Yes (Esp, Ebp, Epa)",
+        "micro": "Yes (gut); water-pollution marker",
+        "transmission": "Endogenous gut flora; nosocomial; catheters, long hospital stay, prior antibiotics",
+        "pathogenesis": "Opportunistic; biofilm + adhesion → device/tissue colonization",
+        "disease": "UTI; nosocomial bacteremia/septicemia, endocarditis, abdominal & biliary infections, hepatic abscess",
+        "keyVF": "Biofilm (Esp / Ebp / Epa)",
+        "virulence": "Aggregation substance (Ace, Acm); biofilm (Esp, Ebp, Epa); capsule; gelatinase; cytolysin (Cyl); hyaluronidase",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "β-lactams (penicillins); naturally resistant to cephalosporins; VRE/GRE problem; fosfomycin, nitrofurantoin, linezolid/daptomycin",
+        "special": "Lancefield group D; VRE = van A–L target change (D-Ala-D-Lac); intrinsic cephalosporin resistance"
+      }
+    },
+    {
+      "id": "ctet",
+      "name": "Clostridium tetani",
+      "gram": "pos",
+      "group": "Clostridiaceae",
+      "color": "#e08a3c",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile (flagella)",
+        "bio": "",
+        "micro": "No (soil)",
+        "transmission": "Soil, animal/human feces; wounds, lacerations, punctures (spores)",
+        "pathogenesis": "Spore germination in anaerobic wound → tetanospasmin blocks glycine/GABA in inhibitory CNS neurons (cleaves synaptobrevin)",
+        "disease": "Tetanus — spastic paralysis (generalized, localized, cephalic, neonatal)",
+        "keyVF": "Tetanospasmin",
+        "virulence": "Tetanospasmin (neurotoxin); tetanolysin",
+        "vaccine": "Yes — active toxoid; passive (tetanus hIg)",
+        "vYN": "yes",
+        "treatment": "Muscle relaxants (benzodiazepines); mechanical ventilation; hIg",
+        "special": "Spore-forming, obligate anaerobe; SPASTIC paralysis"
+      }
+    },
+    {
+      "id": "cbot",
+      "name": "Clostridium botulinum",
+      "gram": "pos",
+      "group": "Clostridiaceae",
+      "color": "#e08a3c",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Spore-contaminated / intoxicated food (toxin killed 80°C/10 min)",
+        "pathogenesis": "AB neurotoxin acts on peripheral cholinergic terminals → blocks ACh release → flaccid paralysis",
+        "disease": "Botulism — foodborne (descending flaccid paralysis, ptosis, dysphagia, dyspnea), neonatal, wound",
+        "keyVF": "Botulinum neurotoxin (BoNT)",
+        "virulence": "Botulinum neurotoxin (BoNT) — blocks ACh release",
+        "vaccine": "None (antitoxin used)",
+        "vYN": "no",
+        "treatment": "Antitoxin; ventilation; gut clearance of bacteria",
+        "special": "FLACCID paralysis; Category A bioterrorism agent; large spores"
+      }
+    },
+    {
+      "id": "cperf",
+      "name": "Clostridium perfringens",
+      "gram": "pos",
+      "group": "Clostridiaceae",
+      "color": "#e08a3c",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "",
+        "transmission": "Contaminated food (meat); traumatic wounds (soil)",
+        "pathogenesis": "Food poisoning by enterotoxin strains (self-limiting); gas gangrene: trauma → entry → multiply → toxin",
+        "disease": "Food poisoning; necrotizing enteritis (pigbel); gas gangrene / myonecrosis",
+        "keyVF": "α-toxin (lecithinase / phospholipase C)",
+        "virulence": "12 toxins (4 lethal): α (lecithinase/PLC), β, ε, ι; enterotoxin",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Surgical debridement; penicillin",
+        "special": "β-hemolysis, capsulated, rapid growth; gas pockets, muscle necrosis"
+      }
+    },
+    {
+      "id": "cdiff",
+      "name": "Clostridioides difficile",
+      "gram": "pos",
+      "group": "Clostridiaceae",
+      "color": "#e08a3c",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "Often normal flora",
+        "transmission": "Spores; antibiotics (clindamycin, ampicillin, cephalosporins, fluoroquinolones)",
+        "pathogenesis": "Dysbiosis → ToxA/ToxB → cytoskeletal disruption, junction loss, inflammation",
+        "disease": "Antibiotic-associated diarrhea; pseudomembranous colitis; toxic megacolon",
+        "keyVF": "TcdB (Cytotoxin B)",
+        "virulence": "TcdA (Enterotoxin A); TcdB (Cytotoxin B)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Vancomycin, metronidazole; fidaxomicin (spares flora); fecal transplant",
+        "special": "Spore-forming; risk age ≥65 & prolonged antibiotics"
+      }
+    },
+    {
+      "id": "banth",
+      "name": "Bacillus anthracis",
+      "gram": "pos",
+      "group": "Bacillaceae",
+      "color": "#6fae3a",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Zoonosis: animal → human (spores)",
+        "pathogenesis": "Spore entry → anthrax toxin (PA + EF + LF); manifestation depends on infection site",
+        "disease": "Anthrax — cutaneous, intestinal, pulmonary",
+        "keyVF": "Anthrax toxin (PA + edema factor + lethal factor)",
+        "virulence": "Polypeptide capsule; anthrax toxin AB: protective antigen, edema factor (adenylate cyclase ↑cAMP), lethal factor (Zn-metalloprotease, MAPKK)",
+        "vaccine": "Yes (farmed animals / at-risk)",
+        "vYN": "yes",
+        "treatment": "Cutaneous: Pen G/amoxicillin; pulmonary: ciprofloxacin, doxycycline; sulfamethoxazole/trimethoprim",
+        "special": "Category A bioterrorism agent; very resistant spores, capsulated, non-hemolytic"
+      }
+    },
+    {
+      "id": "bcer",
+      "name": "Bacillus cereus",
+      "gram": "pos",
+      "group": "Bacillaceae",
+      "color": "#6fae3a",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Contaminated food (rice, meat, veg, milk, fish)",
+        "pathogenesis": "Emetic: heat-stable toxin (rice); enteric: thermolabile toxin → adenylate cyclase → ↑cAMP",
+        "disease": "Emetic form → vomiting; enteric form → diarrhea (both self-limiting)",
+        "keyVF": "Heat-stable emetic toxin",
+        "virulence": "Emetic heat-stable toxin; enterotoxin (↑cAMP)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Self-limiting / supportive",
+        "special": "Spore-forming, β-hemolysis; classic 'reheated rice' food poisoning"
+      }
+    },
+    {
+      "id": "lmono",
+      "name": "Listeria monocytogenes",
+      "gram": "pos",
+      "group": "Listeriaceae",
+      "color": "#c9a82a",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile",
+        "bio": "",
+        "micro": "No (ubiquitous)",
+        "transmission": "Contaminated food (cold-stored); transplacental",
+        "pathogenesis": "PrfA-regulated; Listeriolysin O → phagosome escape → intracellular growth + cell-to-cell spread",
+        "disease": "Listeriosis: gastroenteritis, abortion/fetal infection, bacteremia, meningitis, neonatal meningoencephalitis, flu-like",
+        "keyVF": "Listeriolysin O",
+        "virulence": "Listeriolysin O; internalins/invasins; ActA",
+        "vaccine": "None (food hygiene; bacteriophage control)",
+        "vYN": "no",
+        "treatment": "Ampicillin; ampicillin-gentamicin; sulfamethoxazole-trimethoprim",
+        "special": "Grows at fridge temp (1–45°C); mortality 20–30%; risk pregnancy, neonates, elderly, immunocompromised"
+      }
+    },
+    {
+      "id": "erys",
+      "name": "Erysipelothrix rhusiopathiae",
+      "gram": "pos",
+      "group": "Listeriaceae",
+      "color": "#c9a82a",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Animal contact (occupational)",
+        "pathogenesis": "Local skin invasion",
+        "disease": "Erysipelas in animals; erysipeloid in humans",
+        "keyVF": "",
+        "virulence": "—",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Penicillins",
+        "special": "Facultative, asporogenous, non-capsulated"
+      }
+    },
+    {
+      "id": "mtb",
+      "name": "Mycobacterium tuberculosis",
+      "gram": "pos",
+      "group": "Mycobacteriaceae",
+      "color": "#9a7ad8",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "−",
+        "micro": "No",
+        "transmission": "Aerosols (airborne)",
+        "pathogenesis": "Alveolar entry → macrophage phagocytosis → survives (blocks phagosome-lysosome fusion); Th cells, IFN-γ, TNF-α → granuloma (caseous necrosis); reactivation → secondary TB",
+        "disease": "Tuberculosis (pulmonary); scrofula (lymph), intestinal, lupus vulgaris (skin), Pott's (bone), miliary/disseminated",
+        "keyVF": "Cord factor / mycolic-acid cell wall (intracellular survival)",
+        "virulence": "Cell-wall mycolic acids; cord factor; intracellular survival (anti-phagosome maturation)",
+        "vaccine": "Yes — BCG",
+        "vYN": "yes",
+        "treatment": "4 first-line: isoniazid, rifampicin, ethambutol, pyrazinamide; new: bedaquiline (ATP synthase); MDR/XDR/XXDR-TB",
+        "special": "Acid-fast; latent vs active TB; granuloma; Dx TST/Mantoux & IGRA"
+      }
+    },
+    {
+      "id": "mlep",
+      "name": "Mycobacterium leprae",
+      "gram": "pos",
+      "group": "Mycobacteriaceae",
+      "color": "#9a7ad8",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Armadillo reservoir; route unsure",
+        "pathogenesis": "Th1 → tuberculoid pole (high CMI); Th2 → lepromatous pole (high humoral)",
+        "disease": "Leprosy — granulomatous; skin, PNS, cooler body regions (eyes, testes, upper RT)",
+        "keyVF": "",
+        "virulence": "Intracellular persistence",
+        "vaccine": "Yes — BCG",
+        "vYN": "yes",
+        "treatment": "Paucibacillary: dapsone + rifampicin; multibacillary: + clofazimine; reactions: prednisone",
+        "special": "Acid-fast; cannot be cultured in vitro"
+      }
+    },
+    {
+      "id": "motherm",
+      "name": "M. ulcerans & other MOTT (MAC, M. marinum)",
+      "gram": "pos",
+      "group": "Mycobacteriaceae",
+      "color": "#9a7ad8",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Aquatic environment; water/soil/dust",
+        "pathogenesis": "Mycolactone (PKS gene)",
+        "disease": "M. ulcerans → Buruli ulcer; MAC → disseminated (COPD/immunocompromised)",
+        "keyVF": "Mycolactone",
+        "virulence": "Mycolactone",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Per species",
+        "special": "Acid-fast, environmental / opportunistic"
+      }
+    },
+    {
+      "id": "cdiph",
+      "name": "Corynebacterium diphtheriae",
+      "gram": "pos",
+      "group": "Corynebacteriaceae",
+      "color": "#c79a4a",
+      "attrs": {
+        "cat": "+",
+        "ox": "",
+        "ure": "",
+        "mot": "Variable",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Human-to-human; airborne, direct/indirect",
+        "pathogenesis": "Local inflammation (cell-wall Ag + toxin); bloodstream diffusion of toxin → heart, nerves, kidney",
+        "disease": "Diphtheria — pharyngeal pseudomembrane, cutaneous",
+        "keyVF": "Diphtheria toxin",
+        "virulence": "Diphtheria toxin (phage-encoded; ADP-ribosylates EF-2)",
+        "vaccine": "Yes — diphtheria toxoid",
+        "vYN": "yes",
+        "treatment": "Erythromycin / penicillin G + diphtheria antitoxin serum",
+        "special": "Club-shaped rod; mycolic acids (not acid-fast); pseudomembrane formation"
+      }
+    },
+    {
+      "id": "arcano",
+      "name": "Arcanobacterium haemolyticum",
+      "gram": "pos",
+      "group": "Actinomycetaceae / Nocardia",
+      "color": "#8aa83a",
+      "attrs": {
+        "cat": "−",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "",
+        "transmission": "Person-to-person (respiratory)",
+        "pathogenesis": "Local pharyngeal/soft-tissue invasion",
+        "disease": "Pharyngitis/pharyngotonsillitis (young adults); head/neck infections, peritonsillar abscess; skin/soft tissue",
+        "keyVF": "",
+        "virulence": "Hemolysins",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Macrolides",
+        "special": "β-hemolytic; mimics strep pharyngitis"
+      }
+    },
+    {
+      "id": "actino",
+      "name": "Actinomyces israelii",
+      "gram": "pos",
+      "group": "Actinomycetaceae / Nocardia",
+      "color": "#8aa83a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "Yes (oral)",
+        "transmission": "Endogenous (oral); tissue damage",
+        "pathogenesis": "Synergy: tissue damage + opportunistic infection",
+        "disease": "Actinomycosis; osteonecrosis",
+        "keyVF": "",
+        "virulence": "—",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Penicillin (prolonged)",
+        "special": "Branched rod, anaerobic; 'sulfur granules'; part of oral microbiota"
+      }
+    },
+    {
+      "id": "nocard",
+      "name": "Nocardia (N. asteroides complex)",
+      "gram": "pos",
+      "group": "Actinomycetaceae / Nocardia",
+      "color": "#8aa83a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Environmental (inhalation / inoculation)",
+        "pathogenesis": "Wide carbon utilization; difficult to treat",
+        "disease": "N. asteroides → pulmonary/disseminated; N. brasiliensis → cutaneous",
+        "keyVF": "",
+        "virulence": "Catalase, SOD (intracellular survival)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Sulfonamides (difficult to treat)",
+        "special": "Filamentous/branched rod, obligate aerobe; partially acid-fast"
+      }
+    },
+    {
+      "id": "troph",
+      "name": "Tropheryma whipplei",
+      "gram": "pos",
+      "group": "Actinomycetaceae / Nocardia",
+      "color": "#8aa83a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Environmental (route unclear)",
+        "pathogenesis": "Chronic systemic; develops over years/decades",
+        "disease": "Whipple disease: arthralgia, diarrhea, abdominal pain, weight loss, fever, lymphadenopathy, anemia, CNS",
+        "keyVF": "",
+        "virulence": "—",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Prolonged antibiotics",
+        "special": "Non-cultivable; very slow disease"
+      }
+    },
+    {
+      "id": "myco",
+      "name": "Mycoplasma / Ureaplasma",
+      "gram": "pos",
+      "group": "Mycoplasmataceae (Mollicutes)",
+      "color": "#a87ad0",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "+ (Ureaplasma)",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "M. pneumoniae: respiratory droplets; M. genitalium / M. hominis / Ureaplasma: sexual",
+        "pathogenesis": "Extracellular on mucosal surface; toxic metabolites; M. pneumoniae P1 adhesin → ciliary stasis; superantigen; auto-IgM vs RBCs (cold agglutinins)",
+        "disease": "M. pneumoniae → atypical pneumonia/URT; M. genitalium → urethritis; M. hominis → pyelonephritis/PID; U. urealyticum → urethritis",
+        "keyVF": "P1 adhesin",
+        "virulence": "P1 adhesin; toxic metabolites",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Macrolides, fluoroquinolones, tetracyclines; intrinsically resistant to ALL β-lactams (no cell wall); M. hominis resistant to macrolides",
+        "special": "NO cell wall (no peptidoglycan) → no Gram stain, β-lactam resistant; cold agglutinins (M. pneumoniae)"
+      }
+    },
+    {
+      "id": "nmen",
+      "name": "Neisseria meningitidis (meningococcus)",
+      "gram": "neg",
+      "group": "Neisseriaceae",
+      "color": "#e07a4a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "Yes (nasopharynx of healthy)",
+        "transmission": "Airborne (respiratory droplets)",
+        "pathogenesis": "Adhere nasopharynx (pili/Opa) → cross BBB → blood multiplication → meningitis/meningococcemia; LPS molecular mimicry prevents C3 deposition",
+        "disease": "Meningitis (+ DIC, multi-organ failure, septic shock); meningococcemia",
+        "keyVF": "Polysaccharide capsule",
+        "virulence": "Type IV pili; capsule (anti-phagocytic); IgA protease; Opa/Opc/Por; LOS (endotoxin); Tbp1/2, Lbp",
+        "vaccine": "Yes — conjugate (A, C, Y, W135); B poorly immunogenic",
+        "vYN": "yes",
+        "treatment": "Penicillin G / ampicillin; cephalosporins; chloramphenicol",
+        "special": "Diplococci; capsule B mimics host (immune tolerance); risk terminal complement deficiency (C5–C9), asplenia"
+      }
+    },
+    {
+      "id": "ngon",
+      "name": "Neisseria gonorrhoeae (gonococcus)",
+      "gram": "neg",
+      "group": "Neisseriaceae",
+      "color": "#e07a4a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "No (STI)",
+        "transmission": "Sexual; vertical → newborn ophthalmia neonatorum",
+        "pathogenesis": "Adhesion to non-ciliated epithelium → invasion → PMN recruitment → epithelial damage, exudate; high phase variation",
+        "disease": "Gonorrhea: men urethritis (epididymitis, prostatitis); women cervicitis (PID, salpingitis); ocular, anorectal, pharyngeal, disseminated",
+        "keyVF": "Type IV pili / Opa (antigenic & phase variation)",
+        "virulence": "Type IV pili; Opa; Por; Rmp; LOS; Tbp1/2, Lbp",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Resistant to Pen G, tetracyclines, macrolides, fluoroquinolones; 3rd-gen cephalosporin resistance rising",
+        "special": "Diplococci, non-capsulated; high antigenic/phase variation; no vaccine"
+      }
+    },
+    {
+      "id": "bpert",
+      "name": "Bordetella pertussis",
+      "gram": "neg",
+      "group": "Alcaligenaceae (Bordetella)",
+      "color": "#e0954a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Some motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Airborne; very high contagiousness",
+        "pathogenesis": "Colonizes ciliated respiratory epithelium → toxins → local damage + systemic inflammation; phases catarrhal → paroxysmal → convalescent",
+        "disease": "Pertussis (whooping cough): severe cough, seizures, encephalopathy, hypoxemia",
+        "keyVF": "Pertussis toxin",
+        "virulence": "Filamentous hemagglutinin, pertactin, fimbriae; TTSS; pertussis toxin (↑cAMP); adenylate cyclase/hemolysin; tracheal cytotoxin; dermonecrotic toxin; LOS",
+        "vaccine": "Yes — whole-cell (DPT) & acellular (DaPT/dTpa)",
+        "vYN": "yes",
+        "treatment": "Erythromycin/macrolides; trimethoprim-sulfamethoxazole",
+        "special": "Obligate aerobe, capsulated; isolation always indicates disease"
+      }
+    },
+    {
+      "id": "burk",
+      "name": "Burkholderia cepacia complex & B. pseudomallei",
+      "gram": "neg",
+      "group": "Burkholderiaceae",
+      "color": "#c79a4a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "Yes",
+        "micro": "No",
+        "transmission": "Bcc: nosocomial, contaminated disinfectants/devices; B. pseudomallei: zoonosis (soil/water)",
+        "pathogenesis": "Biofilm, intracellular survival, modified LPS",
+        "disease": "Bcc → bacteremia, pneumonia (cepacian syndrome) in CF/immunocompromised; B. pseudomallei → melioidosis (abscesses, pneumonia, septic shock)",
+        "keyVF": "Biofilm",
+        "virulence": "Pili, 22kDa adhesin, biofilm; flagella, SOD, catalase, TSSS, hemolysin, modified LPS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "MDR — resistant to most β-lactams, aminoglycosides, polymyxins",
+        "special": "Major CF pathogen (B. cenocepacia); highly versatile"
+      }
+    },
+    {
+      "id": "mcat",
+      "name": "Moraxella catarrhalis",
+      "gram": "neg",
+      "group": "Moraxellaceae",
+      "color": "#2aa9b8",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Motile (gliding)",
+        "bio": "",
+        "micro": "Yes (pharynx)",
+        "transmission": "Endogenous flora; respiratory; risk age ≥50, smokers, lung disease",
+        "pathogenesis": "Adhesion to respiratory epithelium → local then invasive disease",
+        "disease": "Localized: otitis, sinusitis, conjunctivitis. Invasive: bacteremia, meningitis, endocarditis, peritonitis, pneumonia",
+        "keyVF": "UspA1 adhesin",
+        "virulence": "UspA1, OMP CD, hemagglutinin; McmM, MchA1/2, OlpA/OmpJ, MacP; type IV pili; LOS endotoxin",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Resistant to Pen G (β-lactamase); susceptible Pen+inhibitor, cephalosporins, macrolides; naturally resistant to vanco & clindamycin",
+        "special": "Strict aerobe, no capsule; tolerates low temp (28°C); β-lactamase producer"
+      }
+    },
+    {
+      "id": "hflu",
+      "name": "Haemophilus influenzae",
+      "gram": "neg",
+      "group": "Pasteurellaceae",
+      "color": "#c7b04a",
+      "attrs": {
+        "cat": "±",
+        "ox": "±",
+        "ure": "",
+        "mot": "Immobile",
+        "bio": "",
+        "micro": "Yes (obligate symbiont)",
+        "transmission": "Airborne",
+        "pathogenesis": "Adhesion to non-ciliated nasopharynx → IgA protease → replication; capsule → overcome barrier → invasive disease",
+        "disease": "Non-capsulated: otitis media, sinusitis, bronchitis (low invasive). Encapsulated (type b): meningitis, epiglottitis, cellulitis (high invasive)",
+        "keyVF": "Polysaccharide capsule (type b)",
+        "virulence": "HMW1/2 adhesins, fimbriae, Hap; polysaccharide capsule (type b); IgA protease; Hb-/transferrin-binding proteins; LOS",
+        "vaccine": "Yes — conjugate anti-Hib",
+        "vYN": "yes",
+        "treatment": "Resistance via β-lactamases / PBP mods; chloramphenicol, rifampicin; generally susceptible",
+        "special": "Needs Factor X (hemin) + V (NAD) → chocolate agar"
+      }
+    },
+    {
+      "id": "past",
+      "name": "Pasteurella multocida & HACEK group",
+      "gram": "neg",
+      "group": "Pasteurellaceae",
+      "color": "#c7b04a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "Yes (oral commensal)",
+        "transmission": "P. multocida: animal bites; HACEK: endogenous oral flora",
+        "pathogenesis": "Local then systemic spread; HACEK colonize damaged valves",
+        "disease": "P. multocida → bite-wound infections, lung & systemic infections; HACEK → subacute endocarditis",
+        "keyVF": "Capsule",
+        "virulence": "Capsule, LPS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "β-lactams",
+        "special": "HACEK = Haemophilus aphrophilus, Aggregatibacter, Cardiobacterium, Eikenella, Kingella; risk cardiac pathology, IV drug use, piercing"
+      }
+    },
+    {
+      "id": "legio",
+      "name": "Legionella pneumophila",
+      "gram": "neg",
+      "group": "Legionellaceae / Coxiella",
+      "color": "#2aa95a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Some motile",
+        "bio": "",
+        "micro": "No (water/amoebae)",
+        "transmission": "Inhalation of aerosols (water systems); risk ≥50 yrs, smokers, immunocompromised",
+        "pathogenesis": "Infects macrophages (MOMP–C3b) → coiling endocytosis → type II/IV secretion, Legiobactin → inhibits phagosome-lysosome fusion → intracellular multiplication → lysis",
+        "disease": "Legionellosis (Legionnaires': necrotizing multifocal pneumonia, multiorgan failure, high mortality); Pontiac fever (benign, flu-like)",
+        "keyVF": "Type II/IV secretion system",
+        "virulence": "MOMP; type II/IV secretion system; Legiobactin (iron)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Susceptible: macrolides, fluoroquinolones, tetracyclines; resistant: β-lactams, aminoglycosides",
+        "special": "Obligate aerobe, demanding (L-cysteine + iron); replicates inside free-living amoebae"
+      }
+    },
+    {
+      "id": "coxi",
+      "name": "Coxiella burnetii",
+      "gram": "neg",
+      "group": "Legionellaceae / Coxiella",
+      "color": "#2aa95a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Zoonosis; aerosolized dust (soil/animal products)",
+        "pathogenesis": "Replicates in acidified Coxiella-containing vacuole; type IV secretion",
+        "disease": "Q-fever: acute (high fever, headache, myalgia, pneumonia); chronic (endocarditis, hepatitis, fatigue)",
+        "keyVF": "Type IV secretion effectors",
+        "virulence": "Type IV secretion effectors; intracellular survival",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Tetracyclines / cephalosporins",
+        "special": "Obligate intracellular; Dx immunofluorescence/ELISA"
+      }
+    },
+    {
+      "id": "ecoli",
+      "name": "Escherichia coli (EPEC/ETEC/EIEC/EHEC/EAEC; UPEC, MNEC)",
+      "gram": "neg",
+      "group": "Enterobacteriaceae",
+      "color": "#5a7ad8",
+      "attrs": {
+        "cat": "+",
+        "ox": "−",
+        "ure": "",
+        "mot": "Motile",
+        "bio": "",
+        "micro": "Yes (gut); fecal index",
+        "transmission": "Fecal-oral (food/water); ExPEC: ascending UTI; vertical (neonatal)",
+        "pathogenesis": "EPEC intimin/Tir → villi destruction; ETEC LT/ST → ↑cAMP/cGMP; EIEC invasion (Shigella-like); EHEC Shiga-like toxin (SLT1/2, GB3 receptor); UPEC P fimbriae → urosepsis",
+        "disease": "EPEC/ETEC/EAEC/DAEC → watery diarrhea; EIEC → dysentery; EHEC → hemorrhagic colitis, HUS, CNS; UPEC → UTI; MNEC → neonatal meningitis; nosocomial sepsis",
+        "keyVF": "Shiga-like toxin (EHEC) / LT & ST (ETEC)",
+        "virulence": "LPS; fimbriae (type I, Pap, P); intimin/Tir; LT & ST; Shiga-like toxin; hemolysin; K1 capsule; secretion systems",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Per antibiogram",
+        "special": "Multiple pathotypes; EHEC O157:H7 → HUS (avoid antibiotics)"
+      }
+    },
+    {
+      "id": "shig",
+      "name": "Shigella (dysenteriae, flexneri, boydii, sonnei)",
+      "gram": "neg",
+      "group": "Enterobacteriaceae",
+      "color": "#5a7ad8",
+      "attrs": {
+        "cat": "+",
+        "ox": "−",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "",
+        "micro": "No (strictly human)",
+        "transmission": "Fecal-oral; food/water, hands, fomites, person-to-person",
+        "pathogenesis": "M-cell entry → invade enterocytes → IcsA actin polymerization → cell-to-cell spread → intense inflammation",
+        "disease": "Shigellosis / bacillary dysentery (blood & mucus, tenesmus, fever); sequelae HUS, Reiter syndrome",
+        "keyVF": "Shiga toxin (verotoxin)",
+        "virulence": "Ipa (invasion plasmid antigens); IcsA/IcsB; Shiga toxin/verotoxin (S. dysenteriae 1A; blocks 28S rRNA); ShET1/2; LPS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Rehydration; avoid antidiarrheals; severe → ampicillin, aminoglycosides, tetracyclines, chloramphenicol, fluoroquinolones",
+        "special": "Lac −, strictly human, non-motile; very low infectious dose"
+      }
+    },
+    {
+      "id": "salm",
+      "name": "Salmonella enterica (typhoidal & non-typhoidal)",
+      "gram": "neg",
+      "group": "Enterobacteriaceae",
+      "color": "#5a7ad8",
+      "attrs": {
+        "cat": "+",
+        "ox": "−",
+        "ure": "",
+        "mot": "Motile",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Zoonosis; fecal-oral, foodborne; S. typhi: anthroponosis (person-to-person)",
+        "pathogenesis": "M-cell/enterocyte invasion → bacteria-mediated endocytosis (SPI-1 T3SS); typhoidal survives in macrophages (SPI-2) → systemic",
+        "disease": "Gastroenteritis (non-typhoidal; no lamina propria crossing); enteric fevers — typhoid/paratyphoid (crosses lamina propria, systemic)",
+        "keyVF": "SPI-1 / SPI-2 type III secretion systems",
+        "virulence": "SPI-1 / SPI-2 T3SS; LPS; flagella; fimbriae; Vi capsule (S. typhi)",
+        "vaccine": "Partial — Ty21a / Vi polysaccharide (typhoid)",
+        "vYN": "partial",
+        "treatment": "Gastroenteritis: no antibiotics; enteric fever: chloramphenicol, ampicillin, ceftriaxone, fluoroquinolones, cotrimoxazole",
+        "special": "Typhoidal vs non-typhoidal; rising resistance"
+      }
+    },
+    {
+      "id": "kleb",
+      "name": "Klebsiella pneumoniae",
+      "gram": "neg",
+      "group": "Enterobacteriaceae",
+      "color": "#5a7ad8",
+      "attrs": {
+        "cat": "+",
+        "ox": "−",
+        "ure": "",
+        "mot": "Non-motile",
+        "bio": "Yes",
+        "micro": "No",
+        "transmission": "Nosocomial & community",
+        "pathogenesis": "Capsule/biofilm-driven; hypervirulent hypermucoviscous clones",
+        "disease": "RT infections, pneumonia, UTI, bacteremia/sepsis, meningitis, liver abscesses",
+        "keyVF": "Polysaccharide capsule (K1/K2)",
+        "virulence": "Polysaccharide capsule (K1/K2); fimbriae; siderophores (aerobactin, yersiniabactin, salmochelin); OMP, LPS, biofilm; mpgA/rmpA/rcsA (hypermucoviscosity)",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "MDR rising (declining sensitivity)",
+        "special": "Non-motile, encapsulated; hypervirulent/hypermucoviscous clones"
+      }
+    },
+    {
+      "id": "yers",
+      "name": "Yersinia pestis (& Y. enterocolitica)",
+      "gram": "neg",
+      "group": "Enterobacteriaceae",
+      "color": "#5a7ad8",
+      "attrs": {
+        "cat": "+",
+        "ox": "−",
+        "ure": "",
+        "mot": "Non-motile (Y. pestis)",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Y. pestis: rodent-flea bites, animal tissue, respiratory secretions; Y. enterocolitica: undercooked pork, milk, transfusion",
+        "pathogenesis": "Plasminogen activator, T3SS/Yop → multiply & disseminate",
+        "disease": "Y. pestis: bubonic / septicemic / pneumonic plague; Y. enterocolitica: enteritis, mesenteric adenitis, terminal ileitis, septicemia",
+        "keyVF": "F1 capsule antigen + T3SS/Yop",
+        "virulence": "F1 capsule antigen; plasminogen activator; T3SS/Yop; yersiniabactin; LPS (pMT1/pFra plasmid)",
+        "vaccine": "Yes — formalin-killed (Y. pestis); chemoprophylaxis",
+        "vYN": "yes",
+        "treatment": "Streptomycin (1st-line); gentamicin, doxycycline; drainage",
+        "special": "Y. pestis: Category A bioterrorism agent; sylvatic/urban cycle"
+      }
+    },
+    {
+      "id": "vibc",
+      "name": "Vibrio cholerae (& V. vulnificus, V. parahaemolyticus)",
+      "gram": "neg",
+      "group": "Vibrionaceae / Aeromonas",
+      "color": "#2ab8a0",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Motile (polar flagellum)",
+        "bio": "Yes",
+        "micro": "No (environmental + human)",
+        "transmission": "Oro-fecal; environmental + human reservoir; V. vulnificus: contaminated water / raw shellfish",
+        "pathogenesis": "Toxigenic O1/O139 → cholera toxin (CTX, phage-encoded) → massive Cl⁻/water secretion",
+        "disease": "Cholera: acute profuse 'rice-water' diarrhea, dehydration, acidosis; V. vulnificus → wound/sepsis; V. parahaemolyticus → GI",
+        "keyVF": "Cholera toxin (CTX)",
+        "virulence": "Cholera toxin CTX (CTX phage); toxin-coregulated pilus (type IV); mucinases, neuraminidase, hemolysin; LPS",
+        "vaccine": "Yes — oral (WC/subB, CVD 103) & injectable killed",
+        "vYN": "yes",
+        "treatment": "Rapid rehydration (oral/parenteral); antibiotics in severe forms",
+        "special": "Requires NaCl; rice-water stool; VNC state; epidemic/pandemic potential"
+      }
+    },
+    {
+      "id": "aero",
+      "name": "Aeromonas hydrophila & Plesiomonas shigelloides",
+      "gram": "neg",
+      "group": "Vibrionaceae / Aeromonas",
+      "color": "#2ab8a0",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Motile (polar flagella)",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Contaminated water/seafood; amphibians/reptiles (Plesiomonas)",
+        "pathogenesis": "Enterotoxin/hemolysin-mediated",
+        "disease": "Aeromonas → GI (acute diarrhea children, chronic adults), wound, systemic (immunocompromised); Plesiomonas → self-limited diarrhea",
+        "keyVF": "Hemolysin",
+        "virulence": "Fimbriae, flagellum, hemolysin",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Supportive; antibiotics if systemic",
+        "special": "Fresh/brackish water; water-associated"
+      }
+    },
+    {
+      "id": "franc",
+      "name": "Francisella tularensis",
+      "gram": "neg",
+      "group": "Francisellaceae",
+      "color": "#8aa84a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Vectors (fleas, ticks, flies, horseflies); contaminated water/food; inhalation",
+        "pathogenesis": "Depends on route; systemic spread; intracellular survival",
+        "disease": "Tularemia (high mortality, public-health impact)",
+        "keyVF": "Intracellular survival / capsule",
+        "virulence": "Intracellular survival; capsule",
+        "vaccine": "None (routine)",
+        "vYN": "no",
+        "treatment": "Aminoglycosides (streptomycin/gentamicin)",
+        "special": "Pleomorphic; easily transmitted; potential bioterror agent"
+      }
+    },
+    {
+      "id": "pseud",
+      "name": "Pseudomonas aeruginosa",
+      "gram": "neg",
+      "group": "Pseudomonadaceae",
+      "color": "#a8a83a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Motile (polar flagellum)",
+        "bio": "Yes (mucoid/alginate)",
+        "micro": "No (ubiquitous, opportunistic)",
+        "transmission": "Humid environment; nosocomial; contaminated soaps/disinfectants/ventilators",
+        "pathogenesis": "Multifactorial, toxin-producing & invasive; adhesion/colonization → localized/hematogenous → systemic disease",
+        "disease": "Nosocomial: UTI, pneumonia, bacteremia. Community: chronic lung (CF), burns, otitis externa, keratitis, endophthalmitis, SSTIs, endocarditis",
+        "keyVF": "Exotoxin A",
+        "virulence": "Pili/flagellum; alginate (biofilm); exotoxin A, phospholipase C (T2SS); ExoS/T/U/Y (T3SS); LasA/LasB elastase; pyoverdine/pyochelin (iron); LPS; QS (LasR/LasI); pyocyanin",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Intrinsic + acquired + adaptive resistance; MDR",
+        "special": "Obligate aerobe, doesn't ferment sugars; pyocyanin/pyoverdine pigments; CF airway adaptation (mucoid/biofilm)"
+      }
+    },
+    {
+      "id": "acin",
+      "name": "Acinetobacter baumannii",
+      "gram": "neg",
+      "group": "Acinetobacter / Stenotrophomonas",
+      "color": "#7aa84a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "",
+        "mot": "Immobile",
+        "bio": "Yes",
+        "micro": "Skin flora (↑ in hospital)",
+        "transmission": "Nosocomial; respiratory tract, skin, wounds",
+        "pathogenesis": "Colonization → invasive disease in compromised hosts",
+        "disease": "Ventilator pneumonia; bacteremia → septic shock; post-neurosurgical meningitis; wound & urinary infections",
+        "keyVF": "Resistance island (biofilm)",
+        "virulence": "Resistance island (45 resistances/6 classes); biofilm; OMP",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "MDR/pan-drug-resistant; carbapenem resistance (AmpC, OXA, metallo-β-lactamases); colistin resistance (lipid A); tigecycline (efflux)",
+        "special": "Obligate aerobe, versatile, 80% indigenous plasmids; extreme environmental resistance"
+      }
+    },
+    {
+      "id": "sten",
+      "name": "Stenotrophomonas maltophilia",
+      "gram": "neg",
+      "group": "Acinetobacter / Stenotrophomonas",
+      "color": "#7aa84a",
+      "attrs": {
+        "cat": "",
+        "ox": "+",
+        "ure": "",
+        "mot": "Motile",
+        "bio": "",
+        "micro": "No (free-living)",
+        "transmission": "Environmental sources",
+        "pathogenesis": "Opportunistic colonization in compromised hosts",
+        "disease": "Bacteremia (CF, immunocompromised); pneumonia (cancer/hospitalized)",
+        "keyVF": "Intrinsic resistance mechanisms",
+        "virulence": "Intrinsic resistance mechanisms",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "MDR to most antibiotics (incl. carbapenems); co-trimoxazole often used",
+        "special": "Non-fermenting; intrinsic MDR"
+      }
+    },
+    {
+      "id": "campy",
+      "name": "Campylobacter jejuni",
+      "gram": "neg",
+      "group": "Campylobacter / Helicobacter",
+      "color": "#e0567a",
+      "attrs": {
+        "cat": "±",
+        "ox": "±",
+        "ure": "",
+        "mot": "Motile (corkscrew)",
+        "bio": "",
+        "micro": "Warm-blooded animals",
+        "transmission": "Poorly cooked poultry, farm animals, contaminated water/dairy, sexual",
+        "pathogenesis": "Corkscrew motility (flagella/TLR5) → adhesion → invasion → CDT (DNase) → cell-cycle arrest, ulceration; enterotoxins (↑cAMP); LOS",
+        "disease": "Watery/hemorrhagic diarrhea, enteric fever; post-infectious Guillain-Barré syndrome",
+        "keyVF": "CDT (cytolethal distending toxin)",
+        "virulence": "Flagella (motility); CDT; LT-like enterotoxins; LOS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Usually none needed; erythromycin (enteric), gentamicin (systemic)",
+        "special": "Microaerophile, non-fermenter; Guillain-Barré sequel; corkscrew motility"
+      }
+    },
+    {
+      "id": "hpyl",
+      "name": "Helicobacter pylori",
+      "gram": "neg",
+      "group": "Campylobacter / Helicobacter",
+      "color": "#e0567a",
+      "attrs": {
+        "cat": "+",
+        "ox": "+",
+        "ure": "+",
+        "mot": "Motile (flagella)",
+        "bio": "",
+        "micro": "Colonizes gastric mucosa",
+        "transmission": "Fecal-oral, gastro-oral, oral-oral",
+        "pathogenesis": "Urease neutralizes acid → infects antrum → inflammation → ulcer; VacA & CagA injected via T4SS",
+        "disease": "Gastritis → peptic/duodenal/gastric ulcer; gastric adenocarcinoma, MALT lymphoma",
+        "keyVF": "Urease",
+        "virulence": "Urease; polar flagella (motility); adhesin (Lewis Ag B); VacA (vacuolating toxin); CagA (cag-PAI, T4SS); LOS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Triple/quadruple therapy: amoxicillin, clarithromycin, tetracycline, metronidazole (combinations)",
+        "special": "Urease + → urea breath test; only bacterium causally linked to gastric cancer"
+      }
+    },
+    {
+      "id": "ricket",
+      "name": "Rickettsia (typhus & spotted-fever groups)",
+      "gram": "neg",
+      "group": "Rickettsia / Bartonella",
+      "color": "#e04a64",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Bite/sting of arthropods (ticks, fleas, lice, mites)",
+        "pathogenesis": "Invade endothelium → multiply in cytoplasm → spread → microthrombi/microhemorrhage; immune-mediated damage (LPS)",
+        "disease": "Typhus group (R. typhi, R. prowazekii); spotted fever (R. rickettsii, R. conorii, R. sibirica)",
+        "keyVF": "rickA (actin-tail) / phospholipases",
+        "virulence": "pat1 (phospholipase A), tlyC, pld (phospholipase D); rickA (actin-tail); LPS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Tetracyclines (1st-line); chloramphenicol, macrolides, rifampicin, fluoroquinolones",
+        "special": "Coccoid-rod; obligate intracellular, non-cultivable; causes vasculitis"
+      }
+    },
+    {
+      "id": "bart",
+      "name": "Bartonella henselae, Ehrlichia, Anaplasma",
+      "gram": "neg",
+      "group": "Rickettsia / Bartonella",
+      "color": "#e04a64",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "B. henselae: cat scratch/bite, cat fleas; Ehrlichia/Anaplasma: tick bite (deer reservoir)",
+        "pathogenesis": "Ehrlichia → monocytes/macrophages; Anaplasma → neutrophils (morulae)",
+        "disease": "B. henselae → cat-scratch disease, bacillary angiomatosis (HIV/AIDS); E. chaffeensis → HME; A. phagocytophilum → HGA",
+        "keyVF": "Intracellular survival",
+        "virulence": "Intracellular survival; morula formation",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Tetracyclines (doxycycline)",
+        "special": "Morulae visible in cells; tick/cat exposure"
+      }
+    },
+    {
+      "id": "trep",
+      "name": "Treponema pallidum",
+      "gram": "neg",
+      "group": "Spirochaetes",
+      "color": "#c79a5a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile (endoflagella)",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Sexual; transplacental",
+        "pathogenesis": "Penetrates mucosa → rapid dissemination → systemic; damage largely immune-mediated",
+        "disease": "Syphilis: primary chancre → secondary rash/condyloma lata → tertiary gumma/cardiovascular/neurosyphilis",
+        "keyVF": "Immune evasion (fibronectin coat, TprK)",
+        "virulence": "Tissue adhesion; immune evasion (fibronectin coat, TprK antigenic variation); absence of LPS",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Penicillin",
+        "special": "Spiral, >3 endoflagella, anaerobe; non-cultivable; hides from immune system; Dx dark-field, VDRL, TPHA, PCR"
+      }
+    },
+    {
+      "id": "borr",
+      "name": "Borrelia burgdorferi (& B. recurrentis)",
+      "gram": "neg",
+      "group": "Spirochaetes",
+      "color": "#c79a5a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile (endoflagella)",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Ixodes (deer) ticks; B. recurrentis: lice/ticks",
+        "pathogenesis": "Cutaneous penetration → hematogenous dissemination; immune evasion (antigenic variation)",
+        "disease": "Lyme disease (erythema migrans → joints, nervous system, heart); B. recurrentis → relapsing fever",
+        "keyVF": "Surface antigen variation (OspA/C)",
+        "virulence": "Surface antigen variation; OspA/C",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Doxycycline / β-lactams",
+        "special": "Spiral, 15–20 endoflagella, microaerophile; antigenic variation → relapses; Dx clinical + serology/PCR"
+      }
+    },
+    {
+      "id": "lepto",
+      "name": "Leptospira interrogans",
+      "gram": "neg",
+      "group": "Spirochaetes",
+      "color": "#c79a5a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "Motile (endoflagella)",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Water/soil contaminated with animal urine (rodents, dogs, livestock)",
+        "pathogenesis": "Rapid hematogenous spread → endothelial injury → hemorrhage, jaundice, renal failure",
+        "disease": "Leptospirosis (hemorrhages, jaundice, renal failure, aseptic meningitis)",
+        "keyVF": "Endothelial invasion / motility",
+        "virulence": "Motility, endothelial invasion",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "β-lactams / doxycycline",
+        "special": "Spiral, 2 endoflagella, aerobe; zoonosis; Dx serology, PCR urine/blood"
+      }
+    },
+    {
+      "id": "chtra",
+      "name": "Chlamydia trachomatis",
+      "gram": "neg",
+      "group": "Chlamydiaceae",
+      "color": "#3aae6a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "Direct/indirect contact, sexual, birth canal (neonatal)",
+        "pathogenesis": "Elementary body → parasite-induced phagocytosis → intracellular multiplication (cytotoxic/cytolytic); early inflammatory, late fibrotic reaction",
+        "disease": "Ocular: trachoma, inclusion conjunctivitis. Genital: urethritis, cervicitis, salpingitis, PID, lymphogranuloma venereum. Neonatal: conjunctivitis, interstitial pneumonia",
+        "keyVF": "Intracellular survival",
+        "virulence": "Intracellular survival; glycogen accumulation in inclusions",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Tetracyclines (1st choice); macrolides, fluoroquinolones",
+        "special": "Obligate intracellular; dimorphic EB/RB life cycle; lack FtsZ/FtsA; chlamydia screening"
+      }
+    },
+    {
+      "id": "chpn",
+      "name": "Chlamydophila pneumoniae & psittaci",
+      "gram": "neg",
+      "group": "Chlamydiaceae",
+      "color": "#3aae6a",
+      "attrs": {
+        "cat": "",
+        "ox": "",
+        "ure": "",
+        "mot": "",
+        "bio": "",
+        "micro": "No",
+        "transmission": "C. pneumoniae: aerosols (human); C. psittaci: inhalation of dried bird feces",
+        "pathogenesis": "Intracellular replication; insidious pneumonia",
+        "disease": "C. pneumoniae → upper & lower respiratory infections; C. psittaci → atypical pneumonia (psittacosis)",
+        "keyVF": "Intracellular survival",
+        "virulence": "Intracellular survival",
+        "vaccine": "None",
+        "vYN": "no",
+        "treatment": "Tetracyclines, macrolides, fluoroquinolones",
+        "special": "Obligate intracellular; dimorphic life cycle; C. psittaci = zoonosis (birds)"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "bsp-1",
+      "stem": "Which of these Gram-positive genera have a LOW GC content?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Bacillus",
+          "correct": true
+        },
+        {
+          "t": "Staphylococcus",
+          "correct": true
+        },
+        {
+          "t": "Micrococcus",
+          "correct": false
+        },
+        {
+          "t": "Mycobacterium",
+          "correct": false
+        }
+      ],
+      "explanation": "Low-GC Firmicutes include Staphylococcus, Streptococcus, Bacillus, Clostridium, Listeria. Micrococcus and Mycobacterium are high-GC Actinobacteria.",
+      "topic": "classification",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-2",
+      "stem": "Which of the following is an example of a Gram-positive bacterium?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Bacteroides fragilis",
+          "correct": false
+        },
+        {
+          "t": "Escherichia coli",
+          "correct": false
+        },
+        {
+          "t": "Salmonella enterica",
+          "correct": false
+        },
+        {
+          "t": "Listeria monocytogenes",
+          "correct": true
+        }
+      ],
+      "explanation": "Listeria monocytogenes is Gram-positive; the others are Gram-negative.",
+      "topic": "classification",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-3",
+      "stem": "Which of these pathogenic bacteria is transmitted via the fecal–oral route?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Corynebacterium diphtheriae",
+          "correct": false
+        },
+        {
+          "t": "Treponema pallidum",
+          "correct": false
+        },
+        {
+          "t": "Vibrio cholerae",
+          "correct": true
+        },
+        {
+          "t": "Listeria monocytogenes",
+          "correct": false
+        }
+      ],
+      "explanation": "Vibrio cholerae is transmitted oro-fecally (contaminated water/food).",
+      "topic": "transmission",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-4",
+      "stem": "Which of these pathogenic bacteria is transmitted via the airborne route?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Corynebacterium diphtheriae",
+          "correct": true
+        },
+        {
+          "t": "Treponema pallidum",
+          "correct": false
+        },
+        {
+          "t": "Vibrio cholerae",
+          "correct": false
+        },
+        {
+          "t": "Listeria monocytogenes",
+          "correct": false
+        }
+      ],
+      "explanation": "C. diphtheriae spreads human-to-human by the airborne route.",
+      "topic": "transmission",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-5",
+      "stem": "The toxin responsible for toxic shock from Staphylococcus aureus is:",
+      "multi": false,
+      "options": [
+        {
+          "t": "A neurotoxin",
+          "correct": false
+        },
+        {
+          "t": "A superantigen",
+          "correct": true
+        },
+        {
+          "t": "An enterotoxin",
+          "correct": false
+        },
+        {
+          "t": "An endotoxin",
+          "correct": false
+        }
+      ],
+      "explanation": "TSST-1 is a superantigen → massive non-specific T-cell activation → cytokine storm.",
+      "topic": "toxins",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-6",
+      "stem": "The toxin of toxic shock of Streptococcus pyogenes is:",
+      "multi": false,
+      "options": [
+        {
+          "t": "A neurotoxin",
+          "correct": false
+        },
+        {
+          "t": "An enterotoxin",
+          "correct": false
+        },
+        {
+          "t": "An endotoxin",
+          "correct": false
+        },
+        {
+          "t": "A superantigen",
+          "correct": true
+        }
+      ],
+      "explanation": "Streptococcal pyrogenic exotoxins (Spe) act as superantigens.",
+      "topic": "toxins",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-7",
+      "stem": "Which of the following bacteria can cause food poisoning?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Staphylococcus aureus",
+          "correct": true
+        },
+        {
+          "t": "Streptococcus pyogenes",
+          "correct": false
+        },
+        {
+          "t": "Streptococcus agalactiae",
+          "correct": false
+        },
+        {
+          "t": "Bacillus cereus",
+          "correct": true
+        }
+      ],
+      "explanation": "S. aureus (heat-stable enterotoxins) and B. cereus (emetic/diarrheal toxins) cause food poisoning.",
+      "topic": "toxins / food poisoning",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-8",
+      "stem": "The Staphylococcus aureus PBP2a producer (MRSA):",
+      "multi": true,
+      "options": [
+        {
+          "t": "Is resistant only to methicillin",
+          "correct": false
+        },
+        {
+          "t": "Is resistant to all β-lactams, except the new anti-staphylococcal cephalosporins",
+          "correct": true
+        },
+        {
+          "t": "Can also produce a penicillinase",
+          "correct": true
+        },
+        {
+          "t": "None of the above",
+          "correct": false
+        }
+      ],
+      "explanation": "mecA→PBP2a confers resistance to virtually all β-lactams except 5th-gen anti-MRSA cephalosporins (e.g. ceftaroline); strains may also carry a penicillinase.",
+      "topic": "resistance",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-9",
+      "stem": "The mechanism of glycopeptide resistance in staphylococci is caused by:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Production of efflux pumps",
+          "correct": false
+        },
+        {
+          "t": "Production of inactivating enzymes",
+          "correct": false
+        },
+        {
+          "t": "Target modification",
+          "correct": true
+        },
+        {
+          "t": "Staphylococci have not developed resistance to vancomycin",
+          "correct": false
+        }
+      ],
+      "explanation": "Glycopeptide resistance is due to target modification (D-Ala-D-Ala → D-Ala-D-Lac).",
+      "topic": "resistance",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-10",
+      "stem": "Which coagulase-negative staphylococcus is commonly associated with lower urinary tract infections?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Staphylococcus hominis",
+          "correct": false
+        },
+        {
+          "t": "Staphylococcus warneri",
+          "correct": false
+        },
+        {
+          "t": "Staphylococcus saprophyticus",
+          "correct": true
+        },
+        {
+          "t": "Staphylococcus epidermidis",
+          "correct": false
+        }
+      ],
+      "explanation": "S. saprophyticus is a classic cause of UTI in young women.",
+      "topic": "CoNS",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-11",
+      "stem": "Staphylococci:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Are Gram-positive cocci",
+          "correct": true
+        },
+        {
+          "t": "Are catalase-negative",
+          "correct": false
+        },
+        {
+          "t": "Are catalase-positive",
+          "correct": true
+        },
+        {
+          "t": "The catalase test distinguishes them from each other",
+          "correct": false
+        }
+      ],
+      "explanation": "Staphylococci are Gram-positive, catalase-positive cocci. Catalase distinguishes them from streptococci; coagulase distinguishes them from each other.",
+      "topic": "identification",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-12",
+      "stem": "Enterococci:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Are naturally resistant to cephalosporins",
+          "correct": true
+        },
+        {
+          "t": "Have the ability to form biofilms",
+          "correct": true
+        },
+        {
+          "t": "E. faecium is usually more resistant than E. faecalis",
+          "correct": true
+        },
+        {
+          "t": "Are naturally resistant to aminoglycosides",
+          "correct": false
+        }
+      ],
+      "explanation": "Enterococci are intrinsically cephalosporin-resistant, form biofilms, and E. faecium is generally more resistant. They are only poorly susceptible (low-level) to aminoglycosides, not fully resistant.",
+      "topic": "enterococci",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-13",
+      "stem": "Streptococci:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Are Gram-positive",
+          "correct": true
+        },
+        {
+          "t": "Are catalase-negative",
+          "correct": true
+        },
+        {
+          "t": "Are classified based on their hemolytic characteristics",
+          "correct": true
+        },
+        {
+          "t": "Are oxidase-positive",
+          "correct": false
+        }
+      ],
+      "explanation": "Streptococci are Gram-positive, catalase-negative, and classified by hemolysis (α/β/γ) and Lancefield group.",
+      "topic": "streptococci",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-14",
+      "stem": "Which of the following are α-hemolytic streptococci?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Streptococcus pneumoniae",
+          "correct": true
+        },
+        {
+          "t": "Streptococcus viridans",
+          "correct": true
+        },
+        {
+          "t": "Streptococcus pyogenes",
+          "correct": false
+        },
+        {
+          "t": "Streptococcus agalactiae",
+          "correct": false
+        }
+      ],
+      "explanation": "S. pneumoniae and viridans group are α-hemolytic; S. pyogenes and S. agalactiae are β-hemolytic.",
+      "topic": "streptococci",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-15",
+      "stem": "Which of the following are β-hemolytic streptococci?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Streptococcus pyogenes",
+          "correct": true
+        },
+        {
+          "t": "Streptococcus agalactiae",
+          "correct": true
+        },
+        {
+          "t": "Streptococcus pneumoniae",
+          "correct": false
+        },
+        {
+          "t": "Streptococcus viridans",
+          "correct": false
+        }
+      ],
+      "explanation": "S. pyogenes (group A) and S. agalactiae (group B) are β-hemolytic.",
+      "topic": "streptococci",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-16",
+      "stem": "Which Streptococcus is responsible for glomerulonephritis?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Streptococcus pyogenes",
+          "correct": true
+        },
+        {
+          "t": "Streptococcus pneumoniae",
+          "correct": false
+        },
+        {
+          "t": "Streptococcus agalactiae",
+          "correct": false
+        },
+        {
+          "t": "Streptococcus mutans",
+          "correct": false
+        }
+      ],
+      "explanation": "Post-streptococcal acute glomerulonephritis follows S. pyogenes (GAS) infection.",
+      "topic": "streptococci",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-17",
+      "stem": "The disease known as \"pigbel\" (severe necrotizing enteritis) is caused by:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Clostridium perfringens",
+          "correct": true
+        },
+        {
+          "t": "Bacillus anthracis",
+          "correct": false
+        },
+        {
+          "t": "Clostridium difficile",
+          "correct": false
+        },
+        {
+          "t": "Bacillus cereus",
+          "correct": false
+        }
+      ],
+      "explanation": "Pigbel is necrotizing enteritis caused by C. perfringens (β-toxin).",
+      "topic": "clostridia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-18",
+      "stem": "Pseudomembranous colitis is supported by:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Clostridium perfringens",
+          "correct": false
+        },
+        {
+          "t": "Bacillus anthracis",
+          "correct": false
+        },
+        {
+          "t": "Clostridioides difficile",
+          "correct": true
+        },
+        {
+          "t": "Bacillus cereus",
+          "correct": false
+        }
+      ],
+      "explanation": "C. difficile (ToxA/ToxB) causes pseudomembranous colitis.",
+      "topic": "clostridia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-19",
+      "stem": "The disease caused by Clostridium tetani is associated with:",
+      "multi": false,
+      "options": [
+        {
+          "t": "A pattern of spastic paralysis",
+          "correct": true
+        },
+        {
+          "t": "A pattern of atypical pneumonia",
+          "correct": false
+        },
+        {
+          "t": "A pattern of hemorrhagic diarrhea",
+          "correct": false
+        },
+        {
+          "t": "A pattern of flaccid paralysis",
+          "correct": false
+        }
+      ],
+      "explanation": "Tetanospasmin blocks inhibitory neurotransmitters → spastic paralysis.",
+      "topic": "clostridia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-20",
+      "stem": "Which of the following statements about botulinum toxin are true?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It is a neurotoxin",
+          "correct": true
+        },
+        {
+          "t": "It is an enterotoxin",
+          "correct": false
+        },
+        {
+          "t": "It causes flaccid paralysis",
+          "correct": true
+        },
+        {
+          "t": "It causes spastic paralysis",
+          "correct": false
+        }
+      ],
+      "explanation": "BoNT is a neurotoxin that blocks ACh release → flaccid paralysis.",
+      "topic": "clostridia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-21",
+      "stem": "Which of the following statements about tetanus toxin are true?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It is a neurotoxin",
+          "correct": true
+        },
+        {
+          "t": "It causes spastic paralysis",
+          "correct": true
+        },
+        {
+          "t": "It causes flaccid paralysis",
+          "correct": false
+        },
+        {
+          "t": "It is an enterotoxin",
+          "correct": false
+        }
+      ],
+      "explanation": "Tetanospasmin is a neurotoxin causing spastic paralysis.",
+      "topic": "clostridia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-22",
+      "stem": "The anthrax toxin produced by Bacillus anthracis is:",
+      "multi": false,
+      "options": [
+        {
+          "t": "A neurotoxin",
+          "correct": false
+        },
+        {
+          "t": "A superantigen",
+          "correct": false
+        },
+        {
+          "t": "An AB toxin with 2 components",
+          "correct": false
+        },
+        {
+          "t": "An AB toxin with 3 components",
+          "correct": true
+        }
+      ],
+      "explanation": "Anthrax toxin = protective antigen + edema factor + lethal factor (3 components).",
+      "topic": "bacillus",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-23",
+      "stem": "Which is the most common form of anthrax in humans?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Pulmonary",
+          "correct": false
+        },
+        {
+          "t": "Gastroenteric",
+          "correct": false
+        },
+        {
+          "t": "Cutaneous",
+          "correct": true
+        },
+        {
+          "t": "All three forms are equally common",
+          "correct": false
+        }
+      ],
+      "explanation": "Cutaneous anthrax is by far the most common form.",
+      "topic": "bacillus",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-24",
+      "stem": "The diphtheria vaccine consists of:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Heat-killed bacteria",
+          "correct": false
+        },
+        {
+          "t": "Attenuated live bacteria",
+          "correct": false
+        },
+        {
+          "t": "Anatoxin (toxoid)",
+          "correct": true
+        },
+        {
+          "t": "There is no diphtheria vaccine",
+          "correct": false
+        }
+      ],
+      "explanation": "The diphtheria vaccine is a toxoid (anatoxin = inactivated toxin).",
+      "topic": "corynebacterium",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-25",
+      "stem": "Which statements about Corynebacterium diphtheriae are correct?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It forms pseudomembranes",
+          "correct": true
+        },
+        {
+          "t": "It is a Gram-positive bacterium",
+          "correct": true
+        },
+        {
+          "t": "It produces an endotoxin",
+          "correct": false
+        },
+        {
+          "t": "It is an invasive bacterium",
+          "correct": false
+        }
+      ],
+      "explanation": "C. diphtheriae is Gram-positive, forms a pharyngeal pseudomembrane, produces an AB EXOtoxin, and is non-invasive (disease is toxin-mediated).",
+      "topic": "corynebacterium",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-26",
+      "stem": "Mycobacteria:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Have a lipid-rich cell wall",
+          "correct": true
+        },
+        {
+          "t": "Do not grow on ordinary culture media",
+          "correct": true
+        },
+        {
+          "t": "Are acid-fast (alcohol-acid resistant)",
+          "correct": true
+        },
+        {
+          "t": "Are usually pathogens for humans",
+          "correct": false
+        }
+      ],
+      "explanation": "Mycobacteria have a mycolic-acid (lipid-rich) wall, are acid-fast, and do not grow on ordinary media; most environmental mycobacteria are not human pathogens.",
+      "topic": "mycobacteria",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-27",
+      "stem": "A positive PPD/tuberculin (Mantoux) skin test is an expression of:",
+      "multi": false,
+      "options": [
+        {
+          "t": "A cell-mediated response against M. tuberculosis",
+          "correct": true
+        },
+        {
+          "t": "A humoral response against M. tuberculosis",
+          "correct": false
+        },
+        {
+          "t": "A humoral and cell-mediated response against M. tuberculosis",
+          "correct": false
+        },
+        {
+          "t": "A response against atypical mycobacteria",
+          "correct": false
+        }
+      ],
+      "explanation": "The Mantoux test reflects a cell-mediated (delayed-type) immune response.",
+      "topic": "mycobacteria",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-28",
+      "stem": "Which statement about Mycobacterium tuberculosis is correct?",
+      "multi": false,
+      "options": [
+        {
+          "t": "In most cases, primary infection does not progress to disease",
+          "correct": true
+        },
+        {
+          "t": "Specific antibodies play a protective role",
+          "correct": false
+        },
+        {
+          "t": "A positive Mantoux test always indicates active disease",
+          "correct": false
+        },
+        {
+          "t": "The BCG vaccine is prepared from a virulent strain of M. tuberculosis",
+          "correct": false
+        }
+      ],
+      "explanation": "Most primary infections are contained (latent TB); antibodies are not protective; BCG uses an attenuated M. bovis strain.",
+      "topic": "mycobacteria",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-29",
+      "stem": "The Nocardia:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Are aerobic actinomycetes",
+          "correct": false
+        },
+        {
+          "t": "Have a branching filamentous form",
+          "correct": false
+        },
+        {
+          "t": "Can cause pulmonary, skin and disseminated infections, particularly in the immunocompromised",
+          "correct": false
+        },
+        {
+          "t": "All of the previous answers",
+          "correct": true
+        }
+      ],
+      "explanation": "All statements are true → Nocardia are aerobic, filamentous actinomycetes causing disease in immunocompromised hosts.",
+      "topic": "actinomycetes",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-30",
+      "stem": "Which statements regarding Neisseria meningitidis are correct?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It is a Gram-negative, oxidase-positive diplococcus",
+          "correct": true
+        },
+        {
+          "t": "It has endotoxin (LOS) in the cell wall responsible for damage",
+          "correct": true
+        },
+        {
+          "t": "It produces an exotoxin that stimulates adenylate cyclase",
+          "correct": false
+        },
+        {
+          "t": "It has an antiphagocytic polysaccharide capsule",
+          "correct": true
+        }
+      ],
+      "explanation": "N. meningitidis is a Gram-negative oxidase-positive diplococcus with LOS endotoxin and an antiphagocytic capsule; it does not produce an adenylate-cyclase exotoxin.",
+      "topic": "neisseria",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-31",
+      "stem": "Which statements regarding Neisseria gonorrhoeae are correct?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It has type IV pili necessary for adhesion",
+          "correct": true
+        },
+        {
+          "t": "It does not have a polysaccharide capsule",
+          "correct": true
+        },
+        {
+          "t": "It is transmitted sexually",
+          "correct": true
+        },
+        {
+          "t": "It is always pathogenic",
+          "correct": false
+        }
+      ],
+      "explanation": "N. gonorrhoeae has type IV pili, lacks a polysaccharide capsule, and is sexually transmitted; it is essentially always pathogenic but may be asymptomatic — and unlike N. meningitidis it is not part of the normal flora.",
+      "topic": "neisseria",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-32",
+      "stem": "Which bacterial genus requires hemin (factor X) and/or NAD (factor V) for growth in vitro?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Legionella",
+          "correct": false
+        },
+        {
+          "t": "Haemophilus",
+          "correct": true
+        },
+        {
+          "t": "Brucella",
+          "correct": false
+        },
+        {
+          "t": "Shigella",
+          "correct": false
+        }
+      ],
+      "explanation": "Haemophilus requires factor X (hemin) and factor V (NAD) → grows on chocolate agar.",
+      "topic": "haemophilus",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-33",
+      "stem": "Enterohemorrhagic Escherichia coli (EHEC):",
+      "multi": false,
+      "options": [
+        {
+          "t": "Causes dysentery similar to bacillary dysentery",
+          "correct": false
+        },
+        {
+          "t": "Causes secretory diarrhea",
+          "correct": false
+        },
+        {
+          "t": "Produces an LT or an ST",
+          "correct": false
+        },
+        {
+          "t": "Produces a Shiga-like toxin and can cause hemolytic-uremic syndrome (HUS)",
+          "correct": true
+        }
+      ],
+      "explanation": "EHEC (e.g. O157:H7) produces Shiga-like toxin → hemorrhagic colitis and HUS.",
+      "topic": "E. coli",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-34",
+      "stem": "Enterotoxigenic Escherichia coli (ETEC):",
+      "multi": true,
+      "options": [
+        {
+          "t": "Causes dysentery similar to bacillary dysentery",
+          "correct": false
+        },
+        {
+          "t": "Causes a secretory diarrhea similar to cholera but milder",
+          "correct": true
+        },
+        {
+          "t": "Produces an LT, an ST, or both",
+          "correct": true
+        },
+        {
+          "t": "Is an obligate intracellular bacterium",
+          "correct": false
+        }
+      ],
+      "explanation": "ETEC produces heat-labile (LT) and/or heat-stable (ST) toxins → watery (cholera-like, milder) diarrhea.",
+      "topic": "E. coli",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-35",
+      "stem": "Which statements about Vibrio cholerae are correct?",
+      "multi": true,
+      "options": [
+        {
+          "t": "It produces an AB enterotoxin responsible for the clinical manifestations",
+          "correct": true
+        },
+        {
+          "t": "It can enter the VNC (viable-but-non-culturable) phase",
+          "correct": true
+        },
+        {
+          "t": "It has only one chromosome",
+          "correct": false
+        },
+        {
+          "t": "It is transmitted via the fecal–oral route",
+          "correct": true
+        }
+      ],
+      "explanation": "V. cholerae has TWO chromosomes, can enter the VNC state, is transmitted oro-fecally, and produces the AB cholera toxin (CTX).",
+      "topic": "vibrio",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-36",
+      "stem": "Which of the following virulence factors are produced by Helicobacter pylori?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Urease",
+          "correct": true
+        },
+        {
+          "t": "Polar flagellum",
+          "correct": true
+        },
+        {
+          "t": "Vacuolating cytotoxin (VacA)",
+          "correct": true
+        },
+        {
+          "t": "Leukocidin",
+          "correct": false
+        }
+      ],
+      "explanation": "H. pylori produces urease, polar flagella, VacA and CagA; leukocidin is not an H. pylori factor.",
+      "topic": "helicobacter",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-37",
+      "stem": "Legionella pneumophila:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Is transmitted through the aerosol generated by water pipes",
+          "correct": true
+        },
+        {
+          "t": "Causes \"atypical\" pneumonia",
+          "correct": true
+        },
+        {
+          "t": "Is transmitted through ingestion of contaminated food or beverages",
+          "correct": false
+        },
+        {
+          "t": "Grows rapidly on culture media",
+          "correct": false
+        }
+      ],
+      "explanation": "Legionella is inhaled from aerosolized water and causes atypical pneumonia; it is fastidious (needs L-cysteine + iron) and slow-growing.",
+      "topic": "legionella",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-38",
+      "stem": "The first stage of infection with Bordetella pertussis is:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Colonization of the intestinal epithelium",
+          "correct": false
+        },
+        {
+          "t": "Colonization of skin cells",
+          "correct": false
+        },
+        {
+          "t": "Colonization of the ciliated respiratory epithelium",
+          "correct": true
+        },
+        {
+          "t": "Colonization of the non-ciliated respiratory epithelium",
+          "correct": false
+        }
+      ],
+      "explanation": "B. pertussis first colonizes the ciliated respiratory epithelium.",
+      "topic": "bordetella",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-39",
+      "stem": "The etiologic agent most often responsible for non-gonococcal / post-gonococcal urethritis is:",
+      "multi": false,
+      "options": [
+        {
+          "t": "Enterococcus faecalis",
+          "correct": false
+        },
+        {
+          "t": "Chlamydia trachomatis",
+          "correct": true
+        },
+        {
+          "t": "Candida albicans",
+          "correct": false
+        },
+        {
+          "t": "Treponema pallidum",
+          "correct": false
+        }
+      ],
+      "explanation": "Chlamydia trachomatis is the leading cause of non-gonococcal urethritis.",
+      "topic": "chlamydia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-40",
+      "stem": "What is the main route of transmission of Chlamydia trachomatis?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Contact with infected animals",
+          "correct": false
+        },
+        {
+          "t": "Consumption of contaminated food",
+          "correct": false
+        },
+        {
+          "t": "Sexual contact",
+          "correct": true
+        },
+        {
+          "t": "Contact with infected objects",
+          "correct": false
+        }
+      ],
+      "explanation": "C. trachomatis genital infection is mainly sexually transmitted.",
+      "topic": "chlamydia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-41",
+      "stem": "Treponema pallidum:",
+      "multi": true,
+      "options": [
+        {
+          "t": "Is an environmental microorganism",
+          "correct": false
+        },
+        {
+          "t": "Grows on ordinary culture media",
+          "correct": false
+        },
+        {
+          "t": "Can be transmitted sexually and transplacentally",
+          "correct": true
+        },
+        {
+          "t": "Is sensitive to penicillin",
+          "correct": true
+        }
+      ],
+      "explanation": "T. pallidum cannot be cultured in vitro, is transmitted sexually/transplacentally, and remains penicillin-sensitive.",
+      "topic": "spirochetes",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-42",
+      "stem": "Which disease is caused by Borrelia burgdorferi?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Lyme disease",
+          "correct": true
+        },
+        {
+          "t": "Boutonneuse fever",
+          "correct": false
+        },
+        {
+          "t": "Syphilis",
+          "correct": false
+        },
+        {
+          "t": "Leptospirosis",
+          "correct": false
+        }
+      ],
+      "explanation": "B. burgdorferi causes Lyme disease (Ixodes tick).",
+      "topic": "spirochetes",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-43",
+      "stem": "Which of the following human pathogens is anaerobic?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Bacteroides fragilis",
+          "correct": true
+        },
+        {
+          "t": "Klebsiella pneumoniae",
+          "correct": false
+        },
+        {
+          "t": "Chlamydophila pneumoniae",
+          "correct": false
+        },
+        {
+          "t": "Enterococcus faecalis",
+          "correct": false
+        }
+      ],
+      "explanation": "Bacteroides fragilis is an obligate anaerobe.",
+      "topic": "anaerobes",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-44",
+      "stem": "Which is the main reservoir of Leptospira infection?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Rodents",
+          "correct": true
+        },
+        {
+          "t": "Humans",
+          "correct": false
+        },
+        {
+          "t": "Sheep",
+          "correct": false
+        },
+        {
+          "t": "Mosquitoes",
+          "correct": false
+        }
+      ],
+      "explanation": "Rodents are the main reservoir; humans acquire it via water/soil contaminated with animal urine.",
+      "topic": "spirochetes",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-45",
+      "stem": "Which of the following bacteria is NOT a nosocomial pathogen?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Acinetobacter baumannii",
+          "correct": false
+        },
+        {
+          "t": "Enterobacter aerogenes",
+          "correct": false
+        },
+        {
+          "t": "Shigella dysenteriae",
+          "correct": true
+        },
+        {
+          "t": "Klebsiella pneumoniae",
+          "correct": false
+        }
+      ],
+      "explanation": "Shigella is a community fecal-oral pathogen, not a typical nosocomial one; the others are classic nosocomial agents.",
+      "topic": "nosocomial",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-46",
+      "stem": "The infectious form of Chlamydia is:",
+      "multi": false,
+      "options": [
+        {
+          "t": "The elementary body",
+          "correct": true
+        },
+        {
+          "t": "The reticulate body",
+          "correct": false
+        },
+        {
+          "t": "The cyst",
+          "correct": false
+        },
+        {
+          "t": "The spore",
+          "correct": false
+        }
+      ],
+      "explanation": "The elementary body (EB) is the infectious, extracellular form; the reticulate body replicates intracellularly.",
+      "topic": "chlamydia",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-47",
+      "stem": "In which of the following bacterial diseases can a chronic carrier state develop?",
+      "multi": true,
+      "options": [
+        {
+          "t": "Diphtheria (C. diphtheriae)",
+          "correct": true
+        },
+        {
+          "t": "Meningococcal carriage (N. meningitidis)",
+          "correct": true
+        },
+        {
+          "t": "Enteric fever (Salmonella typhi)",
+          "correct": true
+        },
+        {
+          "t": "Shigella enterocolitis",
+          "correct": false
+        }
+      ],
+      "explanation": "Chronic carriage is described for C. diphtheriae, N. meningitidis and typhoidal Salmonella; Shigella does not establish a chronic carrier state.",
+      "topic": "carrier state",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-48",
+      "stem": "Clinical clues — Gram-negative rod, oxidase-negative, frequently associated with urinary tract infections, both community-acquired and nosocomial. Which pathogen?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Escherichia coli",
+          "correct": true
+        },
+        {
+          "t": "Pseudomonas aeruginosa",
+          "correct": false
+        },
+        {
+          "t": "Staphylococcus saprophyticus",
+          "correct": false
+        },
+        {
+          "t": "Neisseria gonorrhoeae",
+          "correct": false
+        }
+      ],
+      "explanation": "Gram-negative, oxidase-negative, leading UTI agent (community + nosocomial) = E. coli (Pseudomonas is oxidase-positive).",
+      "topic": "clinical clue",
+      "source": "exam"
+    },
+    {
+      "id": "bsp-49",
+      "stem": "Clinical clues — Gram-negative helical bacterium, associated with poultry and travel, self-limiting gastroenteritis (occasionally persistent), possible development of Guillain-Barré syndrome. Most likely pathogen?",
+      "multi": false,
+      "options": [
+        {
+          "t": "Campylobacter spp.",
+          "correct": true
+        },
+        {
+          "t": "Shigella spp.",
+          "correct": false
+        },
+        {
+          "t": "Salmonella spp.",
+          "correct": false
+        },
+        {
+          "t": "Vibrio spp.",
+          "correct": false
+        }
+      ],
+      "explanation": "Helical Gram-negative, poultry/travel, Guillain-Barré sequel → Campylobacter jejuni.",
+      "topic": "clinical clue",
+      "source": "exam"
+    }
+  ]
+}
