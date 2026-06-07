@@ -1,5 +1,6 @@
 // View builders for the quiz and dashboard.
 import { getSRS, masteryLevel, entityMastery } from './engine.js';
+import { entityItemIds, TYPE_LABEL } from './quizgen.js';
 
 export function bullets(text) {
   if (!text || text === '—') return '<span style="color:var(--mut)">—</span>';
@@ -54,7 +55,7 @@ function chapterStats(chap) {
   const srs = getSRS();
   const dist = { new: 0, weak: 0, learning: 0, mastered: 0 };
   for (const q of chap.questions) dist[masteryLevel(q.id)]++;
-  for (const e of chap.entities) dist[entityMastery(e.id)]++;
+  for (const e of chap.entities) dist[entityMastery(e.id, entityItemIds(e))]++;
   const total = dist.new + dist.weak + dist.learning + dist.mastered;
   const seen = total - dist.new;
   // accuracy across all srs keys belonging to this chapter
@@ -127,7 +128,7 @@ export function dashboardHTML(chapters) {
       const orgs = chap.entities.filter(e => e.group === g);
       body += `<div class="gtl" style="color:${orgs[0].color}">${g}</div><div class="grid">`;
       for (const e of orgs) {
-        const m = entityMastery(e.id);
+        const m = entityMastery(e.id, entityItemIds(e));
         body += `<div class="gchip" data-eid="${e.id}" title="${e.name} — ${m}"><span class="dot" style="background:${MCOLOR[m]}"></span>${e.name.split('(')[0].trim()}</div>`;
       }
       body += `</div>`;
@@ -178,6 +179,18 @@ function entityProgressHTML(p) {
     </div>`;
 }
 
+// Per-attribute mastery — one row per quiz question the entity generates,
+// so it's clear at a glance which individual facts still need work.
+function attrMasteryHTML(e) {
+  const rows = entityItemIds(e).map(id => {
+    const m = masteryLevel(id);
+    const label = TYPE_LABEL[id.slice(id.indexOf(':') + 1)] || id;
+    return `<span class="attr-pill" title="${label} — ${MLABEL[m]}"><span class="dot" style="background:${MCOLOR[m]}"></span>${label}</span>`;
+  }).join('');
+  if (!rows) return '';
+  return `<div class="attr-mastery"><div class="k">Question mastery</div><div class="attr-pills">${rows}</div></div>`;
+}
+
 export function entityProfileHTML(e, prog) {
   const a = e.attrs;
   const pm = v => (v || '').replace('+', '<span class="plus">+</span>').replace('−', '<span class="minus">−</span>');
@@ -189,6 +202,7 @@ export function entityProfileHTML(e, prog) {
       <span class="ct-right"><span class="badge">${e.group}</span>${prog ? '<button class="dlg-x" data-close aria-label="Close profile">✕</button>' : ''}</span></div>
     <div class="card-body" style="padding:16px 20px">
       ${prog ? entityProgressHTML(prog) : ''}
+      ${prog ? attrMasteryHTML(e) : ''}
       ${chips ? `<div class="chips">${chips}</div>` : ''}${fields}
     </div></div>`;
 }

@@ -1,8 +1,12 @@
 import { loadChapters } from './data.js';
 import * as engine from './engine.js';
-import { generateItems } from './quizgen.js';
+import { generateItems, entityItemIds } from './quizgen.js';
 import { quizCardHTML, feedback, dashboardHTML, entityProfileHTML } from './render.js';
 import { mountGarden, unmountGarden } from './garden.js';
+import { useSound } from "@/hooks/use-sound";
+import { successChimeSound } from "@/sounds/success-chime";
+
+const [play] = useSound(successChimeSound);
 
 const $ = s => document.querySelector(s);
 const view = $('#view');
@@ -48,7 +52,7 @@ function renderStatbar() {
 /* ---------- render ---------- */
 function render() {
   if (state.mode === 'garden') return;   // garden owns #view; don't clobber it
-  if (state.mode === 'dash') { view.innerHTML = dashboardHTML(state.chapters); renderStatbar(); return; }
+  if (state.mode === 'dash') { view.innerHTML = dashboardHTML(state.chapters); $('#statbar').innerHTML = ''; return; }
   if (state.idx >= state.queue.length) return renderDone();
   const item = state.queue[state.idx];
   state.current = item; state.answered = false; state.selected = new Set();
@@ -81,6 +85,7 @@ function submit() {
   const score = engine.scoreItem(item, state.selected);
   const grade = engine.gradeScore(item.id, score);
   const reward = engine.awardCoins(score, grade);
+  if (score >= 0.999) play();
   state.session.seen++; state.session.scoreSum += score; state.answered = true;
   document.querySelectorAll('.opt').forEach((el, i) => {
     el.classList.add('disabled');
@@ -143,7 +148,7 @@ view.addEventListener('click', e => {
 /* ---------- entity profile dialog ---------- */
 function openEntityDialog(ent) {
   const dlg = $('#entityDialog');
-  dlg.innerHTML = entityProfileHTML(ent, engine.entityProgress(ent.id));
+  dlg.innerHTML = entityProfileHTML(ent, engine.entityProgress(ent.id, entityItemIds(ent)));
   dlg.showModal();
 }
 $('#entityDialog').addEventListener('click', e => {

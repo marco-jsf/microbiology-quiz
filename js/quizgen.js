@@ -13,11 +13,21 @@ function base(entity, chap, type, extra) {
   }, extra);
 }
 
-// One single-answer question per entity, of a randomly chosen eligible type.
-function genOne(e, distract, chap) {
-  const a = e.attrs;
-  const others = distract.filter(x => x.id !== e.id);
-  const types = ['family', 'vaccine'];
+// Human-readable label per single-answer question type (for the per-attribute
+// mastery breakdown in the entity profile dialog).
+export const TYPE_LABEL = {
+  family: 'Family / group', vaccine: 'Vaccine', cat: 'Catalase', ox: 'Oxidase',
+  genomeClass: 'DNA / RNA', envelope: 'Envelope', repl: 'Replication site',
+  morph: 'Morphology', ptype: 'Parasite type', whichOrg: 'Disease → organism',
+  keyvf: 'Key virulence factor', treat: 'Treatment'
+};
+
+// Every single-answer question type an entity supports, given its attributes.
+// `family` is always askable; the rest are gated on the relevant attribute so
+// we never emit a question that has no correct option.
+export function eligibleTypes(a) {
+  const types = ['family'];
+  if (a.vYN === 'yes' || a.vYN === 'no' || a.vYN === 'partial') types.push('vaccine');
   if (a.cat === '+' || a.cat === '−') types.push('cat');
   if (a.ox === '+' || a.ox === '−') types.push('ox');
   if (a.genomeClass === 'DNA' || a.genomeClass === 'RNA') types.push('genomeClass');
@@ -28,7 +38,20 @@ function genOne(e, distract, chap) {
   if (has(a.disease)) types.push('whichOrg');
   if (has(a.keyVF)) types.push('keyvf');
   if (has(a.treatment)) types.push('treat');
-  const type = types[Math.floor(Math.random() * types.length)];
+  return types;
+}
+
+// Stable SRS ids for every single-answer question an entity generates.
+// Mastery/SRS is keyed on these (`<entityId>:<type>`) — the same scheme used
+// since v1, so existing progress maps onto the expanded question set unchanged.
+export function entityItemIds(e) {
+  return eligibleTypes(e.attrs).map(t => `${e.id}:${t}`);
+}
+
+// Build the single-answer question of a given type for one entity.
+function buildQ(e, type, distract, chap) {
+  const a = e.attrs;
+  const others = distract.filter(x => x.id !== e.id);
 
   const optsFrom = (correct, distractors) => {
     const set = [opt(correct, true), ...pick([...new Set(distractors.filter(d => d && d !== correct))], 3).map(d => opt(d, false))];
@@ -94,6 +117,12 @@ function genOne(e, distract, chap) {
   }
 }
 
+// All single-answer questions for one entity — one per eligible attribute, so
+// every fact gets its own card and its own mastery track.
+function genAll(e, distract, chap) {
+  return eligibleTypes(e.attrs).map(type => buildQ(e, type, distract, chap)).filter(Boolean);
+}
+
 // Pooled multi-select trait questions ("Which of these are ...?").
 function genMulti(entities, chap) {
   const items = [];
@@ -135,7 +164,7 @@ function genMulti(entities, chap) {
 
 // entities: of one chapter; distract: candidate entities for distractors (selected chapters).
 export function generateItems(entities, distract, chap) {
-  const items = entities.map(e => genOne(e, distract, chap)).filter(Boolean);
+  const items = entities.flatMap(e => genAll(e, distract, chap));
   items.push(...genMulti(entities, chap));
   return items;
 }
