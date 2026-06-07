@@ -3,10 +3,6 @@ import * as engine from './engine.js';
 import { generateItems, entityItemIds } from './quizgen.js';
 import { quizCardHTML, feedback, dashboardHTML, entityProfileHTML } from './render.js';
 import { mountGarden, unmountGarden } from './garden.js';
-import { useSound } from "@/hooks/use-sound";
-import { successChimeSound } from "@/sounds/success-chime";
-
-const [play] = useSound(successChimeSound);
 
 const $ = s => document.querySelector(s);
 const view = $('#view');
@@ -85,7 +81,6 @@ function submit() {
   const score = engine.scoreItem(item, state.selected);
   const grade = engine.gradeScore(item.id, score);
   const reward = engine.awardCoins(score, grade);
-  if (score >= 0.999) play();
   state.session.seen++; state.session.scoreSum += score; state.answered = true;
   document.querySelectorAll('.opt').forEach((el, i) => {
     el.classList.add('disabled');
