@@ -206,7 +206,7 @@
     {
       "id": "crypto",
       "name": "Cryptococcus neoformans",
-      "group": "Opportunistic",
+      "group": "Systemic (dimorphic)",
       "color": "#2aa9b8",
       "gram": "",
       "attrs": {
