@@ -1,6 +1,6 @@
 // View builders for the quiz and dashboard.
 import { getSRS, masteryLevel, entityMastery } from './engine.js';
-import { entityItemIds, TYPE_LABEL } from './quizgen.js';
+import { entityItemIds, generatedItemIds, TYPE_LABEL } from './quizgen.js';
 
 export function bullets(text) {
   if (!text || text === '—') return '<span style="color:var(--mut)">—</span>';
@@ -54,8 +54,10 @@ const MCOLOR = { new: '#566', weak: 'var(--bad)', learning: 'var(--warn)', maste
 function chapterStats(chap) {
   const srs = getSRS();
   const dist = { new: 0, weak: 0, learning: 0, mastered: 0 };
+  // Count every individual question — authored items plus each auto-generated
+  // attribute/multi question — so the bar reflects the full ~1079-question pool.
   for (const q of chap.questions) dist[masteryLevel(q.id)]++;
-  for (const e of chap.entities) dist[entityMastery(e.id, entityItemIds(e))]++;
+  for (const id of generatedItemIds(chap)) dist[masteryLevel(id)]++;
   const total = dist.new + dist.weak + dist.learning + dist.mastered;
   const seen = total - dist.new;
   // accuracy across all srs keys belonging to this chapter
@@ -97,7 +99,7 @@ export function dashboardHTML(chapters) {
       <div class="hero-head">
         <div>
           <div class="hero-ttl">Your progress</div>
-          <div class="hero-sub">${tot.seen} of ${tot.total} items practised · ${pct}% covered</div>
+          <div class="hero-sub">${tot.seen} of ${tot.total} questions practised · ${pct}% covered</div>
         </div>
         <div class="hero-actions">
           <button class="muted-btn" id="toggleAllBtn">Collapse all</button>

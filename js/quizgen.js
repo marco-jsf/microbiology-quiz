@@ -168,3 +168,11 @@ export function generateItems(entities, distract, chap) {
   items.push(...genMulti(entities, chap));
   return items;
 }
+
+// Every SRS id a chapter's auto-generated questions use (per-attribute singles
+// + pooled multis). The id set is deterministic — only option order/distractors
+// are randomised — so the dashboard can count each individual question instead
+// of collapsing an organism's attributes into one entity-level tally.
+export function generatedItemIds(chap) {
+  return generateItems(chap.entities, chap.entities, chap).map(it => it.id);
+}
