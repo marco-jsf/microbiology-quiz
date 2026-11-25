@@ -1,0 +1,2465 @@
+{
+ "id": "vl01",
+ "title": "VL01 · Neuroglia",
+ "short": "Glia",
+ "color": "#3fa7a0",
+ "topics": [
+  "Zellzahlen & Glia-Typen",
+  "Oligodendrozyten: Herkunft & Entwicklung",
+  "Myelin: Aufbau & Zusammensetzung",
+  "Oligodendrozyten: Funktionen & Pathologie",
+  "Astrozyten: Herkunft & Zytoarchitektur",
+  "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+  "Astrozyten: Synapsen, Netzwerk & Pathologie",
+  "Mikroglia"
+ ],
+ "questions": [
+  {
+   "id": "vl01-neokortex-haeufigste-zellen",
+   "type": "combo",
+   "topic": "Zellzahlen & Glia-Typen",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL01 · Folien 12–14, 58",
+   "stem": "Beurteilen Sie die folgenden Aussagen zum menschlichen Neokortex:",
+   "statements": [
+    {
+     "t": "Die häufigsten Zellen im Neokortex sind Oligodendrozyten.",
+     "correct": true
+    },
+    {
+     "t": "Die häufigsten Zellen im Neokortex sind Astrozyten.",
+     "correct": false
+    },
+    {
+     "t": "Die häufigsten Zellen im Neokortex sind Neuronen.",
+     "correct": false
+    },
+    {
+     "t": "Das Verhältnis von Gliazellen zu Neuronen ist bei Frauen und Männern sehr unterschiedlich.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "B",
+    "C",
+    "CD"
+   ],
+   "explanation": "Laut Folie (Pelvig et al. 2008) sind ~42 % aller neokortikalen Zellen Oligodendrozyten (75 % der nicht-neuronalen Zellen), Astrozyten nur ~9 %. Gliazellen (27,9 Mrd. ♀ / 38,9 Mrd. ♂) sind zahlreicher als Neurone; Männer haben absolut mehr Zellen, das Glia-Neuron-Verhältnis ist aber ähnlich (≈ 1,3 vs. 1,5).",
+   "note": "Lösung im Protokoll nicht überliefert. Die Folie hebt Oligodendrozyten als häufigste Zellen hervor (42 %); rein rechnerisch liegen Neurone (♀ ≈ 21,4 Mrd.) und Oligodendrozyten (♀ 21,0 Mrd.) bei Frauen fast gleichauf."
+  },
+  {
+   "id": "vl01-astrozyten-anteil",
+   "type": "single",
+   "topic": "Zellzahlen & Glia-Typen",
+   "source": "slides",
+   "ref": "VL01 · Folien 14, 58",
+   "stem": "Welchen Anteil an allen neokortikalen Zellen (Neurone + Glia) machen Astrozyten laut Vorlesung aus?",
+   "options": [
+    {
+     "t": "ca. 9 %",
+     "correct": true
+    },
+    {
+     "t": "ca. 20 %",
+     "correct": false
+    },
+    {
+     "t": "ca. 42 %",
+     "correct": false
+    },
+    {
+     "t": "ca. 75 %",
+     "correct": false
+    }
+   ],
+   "explanation": "Astrozyten: 9 % aller Zellen bzw. 20 % der nicht-neuronalen Zellen (4,8 Mrd. ♀ / 7,8 Mrd. ♂). Die Werte 42 % bzw. 75 % gelten für Oligodendrozyten."
+  },
+  {
+   "id": "vl01-glia-zelltypen-label",
+   "type": "label",
+   "topic": "Zellzahlen & Glia-Typen",
+   "source": "slides",
+   "ref": "VL01 · Folie 13",
+   "stem": "Beschriften Sie die Zelltypen im Schema des Nervengewebes.",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 13,
+    "crop": [
+     566,
+     243,
+     960,
+     540
+    ],
+    "hide": [
+     [
+      560,
+      424,
+      575,
+      472
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      668,
+      244,
+      758,
+      257
+     ],
+     "answer": "Multipolares Neuron (multipolar neuron)",
+     "accept": [
+      "multipolar neuron",
+      "multipolares Neuron",
+      "Neuron",
+      "Nervenzelle"
+     ],
+     "x": 25.25,
+     "y": -0.51,
+     "w": 24.11,
+     "h": 6.06
+    },
+    {
+     "box": [
+      573,
+      286,
+      624,
+      312
+     ],
+     "answer": "Mikroglia (microglial cell)",
+     "accept": [
+      "Mikroglia",
+      "Mikrogliazelle",
+      "microglia",
+      "microglial cell"
+     ],
+     "x": 1.14,
+     "y": 13.64,
+     "w": 14.21,
+     "h": 10.44
+    },
+    {
+     "box": [
+      573,
+      347,
+      624,
+      361
+     ],
+     "answer": "Astrozyt (astrocyte)",
+     "accept": [
+      "Astrozyt",
+      "astrocyte",
+      "Astrocyt",
+      "Astroglia"
+     ],
+     "x": 1.14,
+     "y": 34.18,
+     "w": 14.21,
+     "h": 6.4
+    },
+    {
+     "box": [
+      688,
+      513,
+      747,
+      539
+     ],
+     "answer": "Ependymzelle (ependymal cell)",
+     "accept": [
+      "Ependymzelle",
+      "ependymal cell",
+      "Ependym",
+      "Ependymzellen"
+     ],
+     "x": 30.33,
+     "y": 90.07,
+     "w": 16.24,
+     "h": 10.44
+    },
+    {
+     "box": [
+      840,
+      524,
+      925,
+      539
+     ],
+     "answer": "Oligodendrozyt (oligodendrocyte)",
+     "accept": [
+      "Oligodendrozyt",
+      "oligodendrocyte",
+      "Oligodendrocyt",
+      "Oligodendroglia"
+     ],
+     "x": 68.91,
+     "y": 93.77,
+     "w": 22.84,
+     "h": 6.73
+    }
+   ],
+   "bank": [
+    "Schwann-Zelle",
+    "Perizyt"
+   ],
+   "explanation": "Gliazellen des ZNS: Astrozyten (Endfüße an Gefäßen, Synapsen), Oligodendrozyten (Myelin), Mikroglia (residente Immunzellen) und Ependymzellen (Auskleidung der Ventrikel).",
+   "image": "assets/figures/vl01-glia-zelltypen-label.webp",
+   "iw": 788,
+   "ih": 594
+  },
+  {
+   "id": "vl01-oligo-glia-aussagen-ws2526",
+   "type": "multi",
+   "topic": "Zellzahlen & Glia-Typen",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL01 · Folien 14, 16, 22, 28, 59–60; VL04 · Folie 18",
+   "stem": "Welche Aussagen zu Oligodendrozyten und Gliazellen treffen zu?",
+   "options": [
+    {
+     "t": "Myelin besteht hauptsächlich aus Proteinen.",
+     "correct": false
+    },
+    {
+     "t": "Ein Oligodendrozyt bildet ca. 40 Myelinscheiden.",
+     "correct": true
+    },
+    {
+     "t": "Oligodendrozyten sind der häufigste Gliazelltyp im Neokortex.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten sind der häufigste Gliazelltyp im Neokortex.",
+     "correct": false
+    },
+    {
+     "t": "Der häufigste Zelltyp im Kortex sind Neurone.",
+     "correct": false
+    },
+    {
+     "t": "Das Verhältnis Glia : Neuron ist bei Frauen und Männern sehr unterschiedlich.",
+     "correct": false
+    },
+    {
+     "t": "Radialgliazellen (RGC) stammen aus dem Endoderm.",
+     "correct": false
+    },
+    {
+     "t": "Radialgliazellen können zu Oligodendrozyten differenzieren.",
+     "correct": true
+    }
+   ],
+   "explanation": "Myelin = 80 % Lipide / 20 % Proteine. Ein kortikaler Oligodendrozyt bildet 30–50 Scheiden. 75 % der nicht-neuronalen Zellen sind Oligodendrozyten (Astrozyten 20 %), sie stellen ~42 % aller Zellen. Radialglia geht aus dem Neuroepithel (Neuroektoderm) hervor und ist die Stammzelle für Neurone, Astrozyten und Oligodendrozyten.",
+   "note": "Im Protokoll nur als Stichwortliste ohne Lösung überliefert; als Mehrfachauswahl ausformuliert. „40 Myelinscheiden“ als richtig gewertet (Folie: 30–50). Glia-Neuron-Verhältnis im Protokoll nur „unterschiedlich“ – hier wie WS24/25 als „sehr unterschiedlich“ (falsch) formuliert."
+  },
+  {
+   "id": "vl01-oligo-linie-order",
+   "type": "order",
+   "topic": "Oligodendrozyten: Herkunft & Entwicklung",
+   "source": "slides",
+   "ref": "VL01 · Folie 16",
+   "stem": "Bringen Sie die Stadien der Oligodendrozyten-Entwicklung in die richtige Reihenfolge.",
+   "items": [
+    "Neurale Stammzelle",
+    "Oligodendrozyten-Vorläuferzelle (OPC)",
+    "Prä-Oligodendrozyt",
+    "Prämyelinisierender Oligodendrozyt",
+    "Reifer myelinisierender Oligodendrozyt"
+   ],
+   "explanation": "Neurale Stammzelle → OPC (proliferiert, wandert) → Prä-Oligodendrozyt → prämyelinisierender Oligodendrozyt (stark verzweigte Fortsätze) → reifer, myelinisierender Oligodendrozyt mit Myelinscheiden."
+  },
+  {
+   "id": "vl01-oligo-ursprung-wellen",
+   "type": "single",
+   "topic": "Oligodendrozyten: Herkunft & Entwicklung",
+   "source": "slides",
+   "ref": "VL01 · Folie 15",
+   "stem": "Aus welcher Region stammt die erste, ventrale Welle von Oligodendrozyten-Vorläufern im Vorderhirn (Maus, E12.5)?",
+   "options": [
+    {
+     "t": "Mediale Ganglienhügel / anteriore entopedunkuläre Area (Nkx2.1⁺)",
+     "correct": true
+    },
+    {
+     "t": "Laterale und kaudale Ganglienhügel (Gsh2⁺)",
+     "correct": false
+    },
+    {
+     "t": "Dorsale Ventrikulärzone (Emx1⁺)",
+     "correct": false
+    },
+    {
+     "t": "Subgranuläre Zone des Gyrus dentatus",
+     "correct": false
+    }
+   ],
+   "explanation": "Drei Wellen: E12.5 Nkx2.1 (MGE/AEP, SHH-abhängig, bis P10 eliminiert) → E15.5 Gsh2 (LGE/CGE, persistieren postnatal) → P0 Emx1 (dorsale Ventrikulärzone, SHH-unabhängig, besiedeln Corpus callosum und Kortex)."
+  },
+  {
+   "id": "vl01-oligo-ursprung-aussagen",
+   "type": "multi",
+   "topic": "Oligodendrozyten: Herkunft & Entwicklung",
+   "source": "slides",
+   "ref": "VL01 · Folie 15",
+   "stem": "Welche Aussagen zu den Ursprüngen der Oligodendrozyten im Vorderhirn treffen zu?",
+   "options": [
+    {
+     "t": "Die OPCs der ersten ventralen Welle (Nkx2.1) werden bis P10 eliminiert.",
+     "correct": true
+    },
+    {
+     "t": "Die Spezifizierung der dorsalen OPCs (Emx1) ist SHH-unabhängig.",
+     "correct": true
+    },
+    {
+     "t": "Dorsale Oligodendrozyten verdrängen ventrale aus dem dorsalen Territorium.",
+     "correct": true
+    },
+    {
+     "t": "Dorsale OPCs werden bei Remyelinisierung verstärkt rekrutiert.",
+     "correct": true
+    },
+    {
+     "t": "Alle Oligodendrozyten entstehen erst nach der Geburt aus dorsalen Zonen.",
+     "correct": false
+    },
+    {
+     "t": "Die Spezifizierung der ventralen OPCs (Nkx2.1) ist SHH-unabhängig.",
+     "correct": false
+    }
+   ],
+   "explanation": "Ventrale Wellen (Nkx2.1, Gsh2) sind SHH-abhängig und embryonal; die dorsale Emx1-Welle (P0) ist SHH-unabhängig, wandert in Corpus callosum und Kortex, verdrängt ventrale OLs und differenziert bei Remyelinisierung besonders gut."
+  },
+  {
+   "id": "vl01-radialglia-combo",
+   "type": "combo",
+   "topic": "Oligodendrozyten: Herkunft & Entwicklung",
+   "source": "slides",
+   "ref": "VL01 · Folien 16, 59–60; VL04 · Folie 18",
+   "stem": "Welche Aussagen zu Radialgliazellen (RGC) treffen zu?",
+   "statements": [
+    {
+     "t": "Sie stammen aus dem Endoderm.",
+     "correct": false
+    },
+    {
+     "t": "Sie gehen aus Neuroepithelzellen hervor.",
+     "correct": true
+    },
+    {
+     "t": "Sie können Oligodendrozyten und Astrozyten hervorbringen.",
+     "correct": true
+    },
+    {
+     "t": "Sie bilden zuerst Astrozyten und erst danach Neurone.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "BC",
+    "ABC",
+    "BCD",
+    "CD",
+    "AB"
+   ],
+   "explanation": "Neuroepithelzellen (Neuroektoderm) → Radialglia. RGC sind die neuralen Stammzellen für Neurone, Astrozyten, Oligodendrozyten und Ependym – zeitlich erst neurogen, dann gliogen (Gliogenic Switch)."
+  },
+  {
+   "id": "vl01-myelin-querschnitt-label",
+   "type": "label",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "slides",
+   "ref": "VL01 · Folien 19–21",
+   "stem": "Beschriften Sie das Schema eines myelinisierten Axons mit den elektronenmikroskopischen Ausschnitten.",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 20,
+    "crop": [
+     55,
+     104,
+     905,
+     540
+    ]
+   },
+   "labels": [
+    {
+     "find": "inner tongue",
+     "answer": "innere Zunge (inner tongue)",
+     "accept": [
+      "inner tongue",
+      "innere Zunge",
+      "inner loop",
+      "adaxonale Zunge"
+     ],
+     "x": 11.43,
+     "y": 13.08,
+     "w": 9.2,
+     "h": 4.37
+    },
+    {
+     "find": "outer tongue",
+     "answer": "äußere Zunge (outer tongue)",
+     "accept": [
+      "outer tongue",
+      "äußere Zunge",
+      "aeussere Zunge",
+      "outer loop",
+      "abaxonale Zunge"
+     ],
+     "x": 11.35,
+     "y": 16.89,
+     "w": 9.36,
+     "h": 4.37
+    },
+    {
+     "find": "axon",
+     "answer": "Axon",
+     "accept": [
+      "axon"
+     ],
+     "x": 16.06,
+     "y": 20.51,
+     "w": 3.78,
+     "h": 4.37
+    },
+    {
+     "find": "compacted myelin",
+     "answer": "kompaktes Myelin (compacted myelin)",
+     "accept": [
+      "compacted myelin",
+      "compact myelin",
+      "kompaktes Myelin",
+      "kompaktiertes Myelin"
+     ],
+     "x": 8.31,
+     "y": 23.59,
+     "w": 12.86,
+     "h": 4.37
+    },
+    {
+     "find": "Juxtaparanodal loops",
+     "answer": "paranodale Schleifen (Folie: juxtaparanodal loops)",
+     "accept": [
+      "juxtaparanodal loops",
+      "paranodal loops",
+      "paranodale Schleifen",
+      "Paranodalschleifen",
+      "juxtaparanodale Schleifen"
+     ],
+     "x": 51.84,
+     "y": 6.79,
+     "w": 10.78,
+     "h": 8.22
+    },
+    {
+     "box": [
+      570,
+      307,
+      671,
+      324
+     ],
+     "answer": "Ranvier-Schnürring (node of Ranvier)",
+     "accept": [
+      "node of Ranvier",
+      "Ranvier",
+      "Schnürring",
+      "Ranvierscher Schnürring",
+      "Ranvier-Schnürring"
+     ],
+     "x": 60.29,
+     "y": 45.99,
+     "w": 12.47,
+     "h": 5.05
+    },
+    {
+     "box": [
+      447,
+      408,
+      511,
+      424
+     ],
+     "answer": "Internodium (internode)",
+     "accept": [
+      "internode",
+      "Internodium",
+      "Internodien"
+     ],
+     "x": 45.82,
+     "y": 69.15,
+     "w": 8.12,
+     "h": 4.82
+    }
+   ],
+   "bank": [
+    "Schmidt-Lanterman-Einkerbung",
+    "Axoninitialsegment"
+   ],
+   "explanation": "Innere und äußere Zunge sind nicht-kompaktierte Zytoplasmaränder derselben Myelinscheide, dazwischen liegt das kompakte Myelin. Am Ranvier-Schnürring setzen die Lamellen als zytoplasmagefüllte paranodale Schleifen am Axon an (Paranodium; die Folie nennt sie „juxtaparanodal loops“). Das Juxtaparanodium ist der angrenzende Abschnitt unter dem kompakten Myelin (Kv1-Kanäle) – dort gibt es keine Schleifen; der myelinisierte Abschnitt zwischen zwei Schnürringen ist das Internodium.",
+   "image": "assets/figures/vl01-myelin-querschnitt-label.webp",
+   "iw": 1400,
+   "ih": 718
+  },
+  {
+   "id": "vl01-myelin-aussagen-ws2425",
+   "type": "combo",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL01 · Folien 20–23, 28, 41",
+   "stem": "Beurteilen Sie die folgenden Aussagen zu Myelin und Oligodendrozyten:",
+   "statements": [
+    {
+     "t": "Myelin im ZNS dient der schnelleren Konduktion (Erregungsleitung).",
+     "correct": true
+    },
+    {
+     "t": "Die äußere und die innere „tongue“ werden von unterschiedlichen Oligodendrozyten gebildet.",
+     "correct": false
+    },
+    {
+     "t": "Myelin besteht zu 90 % aus Proteinen.",
+     "correct": false
+    },
+    {
+     "t": "Oligodendrozyten myelinisieren ca. 40 Axone.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AD",
+    "AB",
+    "BC",
+    "CD"
+   ],
+   "explanation": "Myelin beschleunigt die Leitung (saltatorisch) und spart Platz und Energie. Innere und äußere Zunge sind die nicht-kompaktierten Ränder derselben Scheide – also desselben Oligodendrozyten. Myelin = 80 % Lipide / 20 % Proteine. Ein kortikaler Oligodendrozyt bildet 30–50 Scheiden um verschiedene Axone.",
+   "note": "Im Protokoll ist „B und C“ doppelt aufgeführt; die vierte Kombination wurde durch „C und D“ ersetzt. Lösung nicht überliefert; „40 Axone“ liegt im Folienbereich 30–50 und gilt daher als richtig."
+  },
+  {
+   "id": "vl01-myelin-zusammensetzung-label",
+   "type": "label",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "slides",
+   "ref": "VL01 · Folien 22–23",
+   "stem": "Beschriften Sie das Schema zur Zusammensetzung des Myelins (Proteine, Anteile, Schichten).",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 22,
+    "crop": [
+     100,
+     108,
+     960,
+     540
+    ]
+   },
+   "labels": [
+    {
+     "find": "PLP",
+     "answer": "PLP (Proteolipid-Protein 1)",
+     "accept": [
+      "PLP",
+      "PLP1",
+      "Proteolipidprotein",
+      "Proteolipid-Protein",
+      "proteolipid protein"
+     ],
+     "x": 42.36,
+     "y": 13.86,
+     "w": 3.62,
+     "h": 5.32
+    },
+    {
+     "find": "MAG",
+     "answer": "MAG (Myelin-assoziiertes Glykoprotein)",
+     "accept": [
+      "MAG",
+      "myelin-associated glycoprotein",
+      "Myelin-assoziiertes Glykoprotein"
+     ],
+     "x": 47.31,
+     "y": 13.86,
+     "w": 4.89,
+     "h": 5.32
+    },
+    {
+     "find": "MBP",
+     "answer": "MBP (Myelin-basisches Protein)",
+     "accept": [
+      "MBP",
+      "myelin basic protein",
+      "basisches Myelinprotein",
+      "Myelin-basisches Protein"
+     ],
+     "x": 54.96,
+     "y": 13.86,
+     "w": 4.59,
+     "h": 5.32
+    },
+    {
+     "find": "CNPase",
+     "answer": "CNPase",
+     "accept": [
+      "CNPase",
+      "CNP",
+      "2',3'-cyclic nucleotide 3'-phosphodiesterase",
+      "Nukleotid-Phosphodiesterase"
+     ],
+     "x": 61.37,
+     "y": 13.86,
+     "w": 6.95,
+     "h": 5.32
+    },
+    {
+     "find": "80%",
+     "answer": "80 %",
+     "accept": [
+      "80",
+      "80%",
+      "80 Prozent"
+     ],
+     "x": 20.86,
+     "y": 20.87,
+     "w": 5.4,
+     "h": 6.71
+    },
+    {
+     "find": "20%",
+     "answer": "20 %",
+     "accept": [
+      "20",
+      "20%",
+      "20 Prozent"
+     ],
+     "x": 23.71,
+     "y": 27.53,
+     "w": 5.4,
+     "h": 6.71
+    },
+    {
+     "find": "Compacted myelin",
+     "answer": "kompaktes Myelin (compacted myelin)",
+     "accept": [
+      "compacted myelin",
+      "compact myelin",
+      "kompaktes Myelin",
+      "kompaktiertes Myelin"
+     ],
+     "x": 49.71,
+     "y": 57.84,
+     "w": 14.64,
+     "h": 4.85
+    },
+    {
+     "find": "Non-compacted myelin",
+     "answer": "nicht-kompaktes Myelin (non-compacted myelin)",
+     "accept": [
+      "non-compacted myelin",
+      "non-compact myelin",
+      "nicht-kompaktes Myelin",
+      "nicht kompaktiertes Myelin"
+     ],
+     "x": 68.72,
+     "y": 49.53,
+     "w": 12.7,
+     "h": 9.3
+    },
+    {
+     "find": "Intraperiod line",
+     "answer": "Intraperiod-Linie (intraperiod line)",
+     "accept": [
+      "intraperiod line",
+      "Intraperiodlinie",
+      "Intraperiod-Linie"
+     ],
+     "x": 33.95,
+     "y": 78.57,
+     "w": 10.82,
+     "h": 4.41
+    },
+    {
+     "find": "Major dense line",
+     "answer": "Major dense line (Hauptlinie)",
+     "accept": [
+      "major dense line",
+      "Hauptlinie",
+      "dichte Hauptlinie",
+      "MDL"
+     ],
+     "x": 33.95,
+     "y": 90.29,
+     "w": 11.71,
+     "h": 4.41
+    }
+   ],
+   "bank": [
+    "GFAP",
+    "90 %"
+   ],
+   "explanation": "Myelin = 80 % Lipide / 20 % Proteine. Im kompakten Myelin liegt PLP transmembranär (Intraperiod-Linie = aneinanderliegende extrazelluläre Membranseiten), MBP zytoplasmatisch (Major dense line = aneinanderliegende zytoplasmatische Seiten). MAG und CNPase sitzen im nicht-kompakten Myelin.",
+   "image": "assets/figures/vl01-myelin-zusammensetzung-label.webp",
+   "iw": 1400,
+   "ih": 703
+  },
+  {
+   "id": "vl01-mbp-major-dense-line",
+   "type": "single",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "slides",
+   "ref": "VL01 · Folien 22–23",
+   "stem": "Welches Protein verbindet im kompakten Myelin die zytoplasmatischen Membranseiten und bildet damit die „major dense line“?",
+   "options": [
+    {
+     "t": "MBP (Myelin-basisches Protein)",
+     "correct": true
+    },
+    {
+     "t": "PLP (Proteolipid-Protein 1)",
+     "correct": false
+    },
+    {
+     "t": "MAG (Myelin-assoziiertes Glykoprotein)",
+     "correct": false
+    },
+    {
+     "t": "CNPase (Nukleotid-Phosphodiesterase)",
+     "correct": false
+    }
+   ],
+   "explanation": "MBP sitzt an der zytoplasmatischen Seite und „verklebt“ die inneren Membranblätter (major dense line). PLP ist ein Transmembranprotein (Intraperiod-Linie); MAG und CNPase gehören zum nicht-kompakten Myelin."
+  },
+  {
+   "id": "vl01-myelinproteine-multi",
+   "type": "multi",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "slides",
+   "ref": "VL01 · Folien 22–23",
+   "stem": "Welche Aussagen zu den Myelinproteinen treffen zu?",
+   "options": [
+    {
+     "t": "PLP steht für Proteolipid-Protein 1.",
+     "correct": true
+    },
+    {
+     "t": "MAG steht für Myelin-assoziiertes Glykoprotein.",
+     "correct": true
+    },
+    {
+     "t": "CNPase steht für 2′,3′-zyklische-Nukleotid-3′-Phosphodiesterase.",
+     "correct": true
+    },
+    {
+     "t": "MAG und CNPase finden sich vor allem im kompakten Myelin.",
+     "correct": false
+    },
+    {
+     "t": "Proteine machen etwa 80 % des Myelins aus.",
+     "correct": false
+    },
+    {
+     "t": "GFAP ist ein typisches Strukturprotein des Myelins.",
+     "correct": false
+    }
+   ],
+   "explanation": "PLP, MAG, MBP und CNPase sind die Myelinproteine der Folie. MAG und CNPase liegen im nicht-kompakten Myelin. Myelin besteht zu 80 % aus Lipiden und nur zu 20 % aus Proteinen. GFAP ist der Zytoskelett-Marker der Astrozyten."
+  },
+  {
+   "id": "vl01-myelinscheiden-pro-oligo",
+   "type": "single",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "slides",
+   "ref": "VL01 · Folien 27–28, 55",
+   "stem": "Wie viele Myelinscheiden kann ein kortikaler Oligodendrozyt im Durchschnitt gleichzeitig bilden?",
+   "options": [
+    {
+     "t": "60–100",
+     "correct": false
+    },
+    {
+     "t": "30–50",
+     "correct": true
+    },
+    {
+     "t": "20–30",
+     "correct": false
+    },
+    {
+     "t": "5–20",
+     "correct": false
+    },
+    {
+     "t": "1–5",
+     "correct": false
+    }
+   ],
+   "explanation": "30–50 Scheiden um verschiedene Axone – und zwar innerhalb weniger Stunden (Czopka et al. 2013). Eine Schwann-Zelle im PNS myelinisiert dagegen nur ein einziges Internodium."
+  },
+  {
+   "id": "vl01-oligo-morphologie-offen",
+   "type": "open",
+   "topic": "Myelin: Aufbau & Zusammensetzung",
+   "source": "slides",
+   "ref": "VL01 · Folien 17–24, 55",
+   "stem": "Beschreiben Sie in Stichworten die Morphologie eines Oligodendrozyten und seiner Myelinscheiden.",
+   "points": [
+    "Zellkörper mit Verbindungsfortsätzen (connecting processes) zu den Scheiden",
+    "30–50 Myelinscheiden um verschiedene Axone",
+    "Kompaktes Myelin (80 % Lipide, 20 % Proteine; MBP, PLP)",
+    "Nicht-kompakte Bereiche: innere/äußere Zunge, paranodale Schleifen (MAG, CNPase)",
+    "Gliederung entlang des Axons: Ranvier-Schnürring – Paranodium – Juxtaparanodium – Internodium"
+   ],
+   "need": 4,
+   "explanation": "Zusammenfassung „Morphology“: 30–50 Scheiden um verschiedene Axone, komplexe Kompaktierungsproteine, Schnürringe/Paranodien/Internodien sowie kompakte und nicht-kompakte Bereiche."
+  },
+  {
+   "id": "vl01-myelin-axondicke",
+   "type": "single",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 30–39",
+   "stem": "Ein unmyelinisiertes Axon braucht für eine Leitungsgeschwindigkeit von 25 m/s einen Durchmesser von ca. 1000 µm. Wie dick muss ein myelinisiertes Axon für dieselbe Geschwindigkeit sein?",
+   "options": [
+    {
+     "t": "ca. 500 µm",
+     "correct": false
+    },
+    {
+     "t": "ca. 100 µm",
+     "correct": false
+    },
+    {
+     "t": "ca. 50 µm",
+     "correct": false
+    },
+    {
+     "t": "ca. 10 µm",
+     "correct": false
+    },
+    {
+     "t": "ca. 5 µm",
+     "correct": true
+    },
+    {
+     "t": "ca. 1 µm",
+     "correct": false
+    }
+   ],
+   "explanation": "~5 µm. Ohne Myelin steigt die Geschwindigkeit nur langsam mit dem Durchmesser (Folie: 1 mm ≙ 25 m/s; nach Kabeltheorie v ~ √d), mit Myelin etwa linear (v ~ d). Laut Folie braucht das unmyelinisierte Tintenfisch-Riesenaxon ~5000× mehr Energie und ~1500× mehr Platz als ein gleich schnelles myelinisiertes Froschaxon."
+  },
+  {
+   "id": "vl01-myelin-mechanismus",
+   "type": "single",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 33–36, 40",
+   "stem": "Wodurch beschleunigt Myelin die Erregungsleitung?",
+   "options": [
+    {
+     "t": "Senkung der Membrankapazität → saltatorische Leitung zwischen den Schnürringen",
+     "correct": true
+    },
+    {
+     "t": "Erhöhung der Na⁺-Kanaldichte entlang des gesamten Internodiums",
+     "correct": false
+    },
+    {
+     "t": "Aktive Weiterleitung des Aktionspotenzials innerhalb der Myelinlamellen",
+     "correct": false
+    },
+    {
+     "t": "Erhöhung der Membrankapazität → mehr gespeicherte Ladung pro Fläche",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie: „myelinated axons speed up conduction by reducing membrane capacitance“. Na⁺-Kanäle sitzen konzentriert an den Ranvier-Schnürringen; das isolierte Internodium wird passiv überbrückt, das AP nur an den Schnürringen regeneriert."
+  },
+  {
+   "id": "vl01-oligo-funktionen-offen",
+   "type": "open",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 41, 47, 52, 55–56",
+   "stem": "Nennen Sie 3 Funktionen von Oligodendrozyten.",
+   "points": [
+    "Isolation der Axone (insulation)",
+    "Schnelle, saltatorische AP-Weiterleitung",
+    "Platz- und Energieersparnis",
+    "Trophische/metabolische Unterstützung des Axons (Laktat/Pyruvat via MCT1 → MCT2)",
+    "Plastizität neuronaler Netzwerke (adaptive Myelinisierung)"
+   ],
+   "need": 3,
+   "explanation": "Die fünf Funktionen der Zusammenfassung: Insulation, schnelle AP-Weiterleitung, Platz- und Energieersparnis, trophische Unterstützung und neuronale Netzwerkplastizität."
+  },
+  {
+   "id": "vl01-oligo-metabolik-label",
+   "type": "label",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 46–47",
+   "stem": "Beschriften Sie das Schema zur metabolischen Kopplung zwischen Gliazellen und Axon.",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 46,
+    "crop": [
+     20,
+     145,
+     348,
+     505
+    ],
+    "hide": [
+     [
+      278,
+      270,
+      350,
+      301
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      204,
+      168,
+      334,
+      186
+     ],
+     "answer": "Oligodendrozyt",
+     "accept": [
+      "Oligodendrocyte",
+      "Oligodendrocytes",
+      "Oligodendrozyten",
+      "OL"
+     ],
+     "x": 55.34,
+     "y": 5.69,
+     "w": 41.16,
+     "h": 6.39
+    },
+    {
+     "box": [
+      32,
+      229,
+      113,
+      246
+     ],
+     "answer": "Astrozyt",
+     "accept": [
+      "Astrocyte",
+      "Astrocytes",
+      "Astrozyten"
+     ],
+     "x": 2.9,
+     "y": 22.64,
+     "w": 26.22,
+     "h": 6.11
+    },
+    {
+     "box": [
+      204,
+      331,
+      236,
+      344
+     ],
+     "answer": "MCT1",
+     "accept": [
+      "MCT 1",
+      "Monocarboxylattransporter 1",
+      "monocarboxylate transporter 1"
+     ],
+     "x": 55.34,
+     "y": 50.97,
+     "w": 11.28,
+     "h": 5.0
+    },
+    {
+     "box": [
+      204,
+      349,
+      236,
+      363
+     ],
+     "answer": "MCT2",
+     "accept": [
+      "MCT 2",
+      "Monocarboxylattransporter 2",
+      "monocarboxylate transporter 2"
+     ],
+     "x": 55.34,
+     "y": 55.97,
+     "w": 11.28,
+     "h": 5.28
+    },
+    {
+     "box": [
+      229,
+      312,
+      322,
+      326
+     ],
+     "answer": "zytoplasmatische Kanäle (cytosolic channels)",
+     "accept": [
+      "cytosolic channels",
+      "cytoplasmic channels",
+      "zytosolische Kanäle",
+      "zytoplasmatische Kanäle",
+      "Myelinkanäle"
+     ],
+     "x": 62.96,
+     "y": 45.69,
+     "w": 29.88,
+     "h": 5.28
+    },
+    {
+     "box": [
+      216,
+      412,
+      298,
+      426
+     ],
+     "answer": "periaxonaler Raum (periaxonal space)",
+     "accept": [
+      "periaxonal space",
+      "periaxonaler Raum",
+      "periaxonaler Spalt"
+     ],
+     "x": 58.99,
+     "y": 73.47,
+     "w": 26.52,
+     "h": 5.28
+    },
+    {
+     "box": [
+      219,
+      440,
+      298,
+      454
+     ],
+     "answer": "kompaktes Myelin (compact myelin)",
+     "accept": [
+      "compact myelin",
+      "compacted myelin",
+      "kompaktes Myelin"
+     ],
+     "x": 59.91,
+     "y": 81.25,
+     "w": 25.61,
+     "h": 5.28
+    }
+   ],
+   "bank": [
+    "GLUT3",
+    "Gap Junction"
+   ],
+   "explanation": "Oligodendrozyten nehmen Glukose auf, bilden Pyruvat/Laktat und geben es über MCT1 in den periaxonalen Raum ab; das Axon nimmt es über MCT2 auf. Zytoplasmatische Kanäle im Myelin verbinden den Zellkörper mit der inneren Zunge – ihr Verlust reduziert die trophische Unterstützung und führt zu axonaler Degeneration.",
+   "image": "assets/figures/vl01-oligo-metabolik-label.webp",
+   "iw": 656,
+   "ih": 720
+  },
+  {
+   "id": "vl01-oligo-metabolik-multi",
+   "type": "multi",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 42–47",
+   "stem": "Welche Aussagen zur metabolischen Unterstützung des Axons durch Oligodendrozyten treffen zu?",
+   "options": [
+    {
+     "t": "Oligodendrozyten nehmen Glukose auf und geben Laktat/Pyruvat über MCT1 ab.",
+     "correct": true
+    },
+    {
+     "t": "Das Axon nimmt Laktat/Pyruvat über MCT2 auf.",
+     "correct": true
+    },
+    {
+     "t": "Offene zytoplasmatische Kanäle im Myelin sind für die trophische Unterstützung nötig.",
+     "correct": true
+    },
+    {
+     "t": "Veränderte (verschlossene) zytoplasmatische Kanäle führen zu axonaler Degeneration.",
+     "correct": true
+    },
+    {
+     "t": "Oligodendrozyten liefern dem Axon direkt ATP über Gap Junctions.",
+     "correct": false
+    },
+    {
+     "t": "Die Versorgung erfolgt ausschließlich über den Ranvier-Schnürring.",
+     "correct": false
+    }
+   ],
+   "explanation": "„Metabolic support for long term axonal integrity“: Glukose → Pyruvat/Laktat → MCT1 (Oligodendrozyt) → periaxonaler Raum → MCT2 (Axon). Geliefert werden Monocarboxylate, kein ATP – und zwar entlang des Internodiums über die innere Zunge, nicht nur am Schnürring."
+  },
+  {
+   "id": "vl01-netzwerkplastizitaet",
+   "type": "single",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 50–52",
+   "stem": "Was versteht die Vorlesung unter „neuronal network plasticity“ durch Oligodendrozyten?",
+   "options": [
+    {
+     "t": "Lernabhängige Anpassung der Myelinisierung, die Leitungszeiten abstimmt (Koinzidenz)",
+     "correct": true
+    },
+    {
+     "t": "Bildung neuer Synapsen direkt zwischen Oligodendrozyten und Dendriten",
+     "correct": false
+    },
+    {
+     "t": "Rückdifferenzierung reifer Oligodendrozyten zu Neuronen nach Lernen",
+     "correct": false
+    },
+    {
+     "t": "Phagozytose überzähliger Synapsen durch Oligodendrozyten",
+     "correct": false
+    }
+   ],
+   "explanation": "Bonetto et al. 2022: Internodienlänge, Myelindicke (g-Ratio) und Myelinisierungsgrad sind variabel. Nach Lernen/Umweltänderung wird die Myelinisierung so angepasst, dass Signale aus A und B gleichzeitig in C ankommen und ein AP auslösen. Synapsen-Phagozytose ist eine Mikroglia-Funktion."
+  },
+  {
+   "id": "vl01-g-ratio",
+   "type": "single",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folie 51",
+   "stem": "Wie ist die g-Ratio einer myelinisierten Nervenfaser definiert?",
+   "options": [
+    {
+     "t": "Axondurchmesser / Durchmesser der myelinisierten Faser (d/D)",
+     "correct": true
+    },
+    {
+     "t": "Durchmesser der myelinisierten Faser / Axondurchmesser (D/d)",
+     "correct": false
+    },
+    {
+     "t": "Internodienlänge / Axondurchmesser",
+     "correct": false
+    },
+    {
+     "t": "Myelindicke / Internodienlänge",
+     "correct": false
+    }
+   ],
+   "explanation": "g = d/D (Axondurchmesser durch Gesamtfaserdurchmesser) – je kleiner die g-Ratio, desto dicker das Myelin. Sie ist neben Internodienlänge und Myelinisierungsgrad ein Stellglied der adaptiven Myelinisierung."
+  },
+  {
+   "id": "vl01-oligo-pathologie",
+   "type": "multi",
+   "topic": "Oligodendrozyten: Funktionen & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 53–54",
+   "stem": "Mit welchen Erkrankungen bringt die Vorlesung Oligodendrozyten- bzw. Myelinpathologie in Verbindung?",
+   "options": [
+    {
+     "t": "Multiple Sklerose",
+     "correct": true
+    },
+    {
+     "t": "Epilepsie",
+     "correct": true
+    },
+    {
+     "t": "Alzheimer-Krankheit",
+     "correct": true
+    },
+    {
+     "t": "Parkinson-Krankheit",
+     "correct": true
+    },
+    {
+     "t": "Brugada-Syndrom",
+     "correct": false
+    },
+    {
+     "t": "Duchenne-Muskeldystrophie",
+     "correct": false
+    }
+   ],
+   "explanation": "Pathologie-Folien: MS (De-/Remyelinisierung, kortikale Läsionen), Epilepsie, Alzheimer (Myelin-Debris, Neuroinflammation, Aβ/Tau) und Parkinson (Energieversagen kaum myelinisierter nigrostriataler DA-Neurone). Brugada ist eine kardiale Na⁺-Kanalopathie, Duchenne eine Muskelerkrankung."
+  },
+  {
+   "id": "vl01-astro-ursprung-label",
+   "type": "label",
+   "topic": "Astrozyten: Herkunft & Zytoarchitektur",
+   "source": "slides",
+   "ref": "VL01 · Folien 59–60",
+   "stem": "Beschriften Sie das Entwicklungsschema (Vorläuferzellen und ihre Nachkommen).",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 60,
+    "crop": [
+     125,
+     125,
+     850,
+     482
+    ],
+    "hide": [
+     [
+      399,
+      252,
+      461,
+      284
+     ],
+     [
+      600,
+      269,
+      662,
+      300
+     ],
+     [
+      630,
+      150,
+      800,
+      238
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      140,
+      449,
+      233,
+      479
+     ],
+     "answer": "Neuroepithelzelle (neuroepithelial cell)",
+     "accept": [
+      "neuroepithelial cell",
+      "Neuroepithelzelle",
+      "Neuroepithel"
+     ],
+     "x": 1.72,
+     "y": 90.06,
+     "w": 13.52,
+     "h": 9.8
+    },
+    {
+     "box": [
+      214,
+      332,
+      282,
+      348
+     ],
+     "answer": "Neuroblast",
+     "accept": [
+      "Neuroblasten"
+     ],
+     "x": 11.93,
+     "y": 57.28,
+     "w": 10.07,
+     "h": 5.88
+    },
+    {
+     "box": [
+      311,
+      449,
+      382,
+      479
+     ],
+     "answer": "neurogene Radialglia (neurogenic radial glia)",
+     "accept": [
+      "neurogenic radial glia",
+      "neurogene Radialglia",
+      "neurogene RGC"
+     ],
+     "x": 25.31,
+     "y": 90.06,
+     "w": 10.48,
+     "h": 9.8
+    },
+    {
+     "box": [
+      502,
+      449,
+      563,
+      479
+     ],
+     "answer": "gliogene Radialglia (gliogenic radial glia)",
+     "accept": [
+      "gliogenic radial glia",
+      "gliogene Radialglia",
+      "gliogene RGC"
+     ],
+     "x": 51.66,
+     "y": 90.06,
+     "w": 9.1,
+     "h": 9.8
+    },
+    {
+     "box": [
+      711,
+      449,
+      770,
+      479
+     ],
+     "answer": "V-SVZ-Astrozyt (adulte Stammzelle)",
+     "accept": [
+      "V-SVZ astrocyte",
+      "V-SVZ Astrozyt",
+      "SVZ-Astrozyt",
+      "SVZ astrocyte",
+      "B-Zelle"
+     ],
+     "x": 80.48,
+     "y": 90.06,
+     "w": 8.83,
+     "h": 9.8
+    },
+    {
+     "box": [
+      718,
+      346,
+      813,
+      360
+     ],
+     "answer": "Interneuron des Bulbus olfactorius (OB interneuron)",
+     "accept": [
+      "OB interneuron",
+      "olfaktorisches Interneuron",
+      "Bulbus-olfactorius-Interneuron",
+      "Riechkolben-Interneuron"
+     ],
+     "x": 81.45,
+     "y": 61.2,
+     "w": 13.79,
+     "h": 5.32
+    },
+    {
+     "box": [
+      317,
+      289,
+      380,
+      321
+     ],
+     "answer": "Neuron (Subtyp 1)",
+     "accept": [
+      "Neuron",
+      "neuron subtype 1",
+      "Neuron Subtyp 1",
+      "Nervenzelle"
+     ],
+     "x": 26.14,
+     "y": 45.24,
+     "w": 9.38,
+     "h": 10.36
+    },
+    {
+     "box": [
+      507,
+      269,
+      569,
+      300
+     ],
+     "answer": "Astrozyt (Subtyp 1)",
+     "accept": [
+      "Astrozyt",
+      "astrocyte",
+      "astrocyte subtype 1",
+      "Astrozyt Subtyp 1"
+     ],
+     "x": 52.34,
+     "y": 39.64,
+     "w": 9.24,
+     "h": 10.08
+    }
+   ],
+   "bank": [
+    "Oligodendrozyten-Vorläuferzelle (OPC)",
+    "Mikroglia"
+   ],
+   "explanation": "Neuroepithelzellen teilen sich symmetrisch und werden zu Radialglia. Neurogene Radialglia bildet (direkt oder über Neuroblasten) Neurone; nach dem Wechsel zur gliogenen Radialglia entstehen Astrozyten. V-SVZ-Astrozyten bleiben als adulte Stammzellen und bilden z. B. Interneurone des Bulbus olfactorius.",
+   "image": "assets/figures/vl01-astro-ursprung-label.webp",
+   "iw": 1400,
+   "ih": 689
+  },
+  {
+   "id": "vl01-astro-ursprung-order",
+   "type": "order",
+   "topic": "Astrozyten: Herkunft & Zytoarchitektur",
+   "source": "slides",
+   "ref": "VL01 · Folie 60",
+   "stem": "Bringen Sie die Stadien der Radialglia-Linie in die zeitlich richtige Reihenfolge.",
+   "items": [
+    "Neuroepithelzelle",
+    "Neurogene Radialglia (bildet Neurone)",
+    "Gliogene Radialglia (bildet Astrozyten)",
+    "V-SVZ-Astrozyt (adulte neurale Stammzelle)",
+    "Interneuron des Bulbus olfactorius"
+   ],
+   "explanation": "Neuroepithel → Radialglia (erst neurogen, dann gliogen) → V-SVZ-Astrozyt, der im Erwachsenen noch Interneurone des Bulbus olfactorius hervorbringt."
+  },
+  {
+   "id": "vl01-astro-entstehung-single",
+   "type": "single",
+   "topic": "Astrozyten: Herkunft & Zytoarchitektur",
+   "source": "slides",
+   "ref": "VL01 · Folien 59–60",
+   "stem": "Welche Aussage zur Entstehung von Astrozyten trifft zu?",
+   "options": [
+    {
+     "t": "Radialglia bildet zuerst Neurone und erst danach Astrozyten.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten entstehen vor den Neuronen direkt aus Neuroepithelzellen.",
+     "correct": false
+    },
+    {
+     "t": "Astrozyten wandern als Vorläufer aus dem Dottersack ins ZNS ein.",
+     "correct": false
+    },
+    {
+     "t": "Astrozyten stammen von Neuralleistenzellen ab.",
+     "correct": false
+    }
+   ],
+   "explanation": "Astrozyten sind neuroektodermal: Neuroepithel → Radialglia → nach der neurogenen Phase gliogene Radialglia → Astrozyten. Aus dem Dottersack stammen die Mikroglia, aus der Neuralleiste die Glia des PNS (Schwann-Zellen)."
+  },
+  {
+   "id": "vl01-astro-zytoarchitektur-multi",
+   "type": "multi",
+   "topic": "Astrozyten: Herkunft & Zytoarchitektur",
+   "source": "slides",
+   "ref": "VL01 · Folien 61–65",
+   "stem": "Welche Aussagen zur Zytoarchitektur von Astrozyten treffen zu?",
+   "options": [
+    {
+     "t": "GFAP (saures Gliafaserprotein) ist ein astrozytenspezifisches Zytoskelettprotein.",
+     "correct": true
+    },
+    {
+     "t": "GFAP färbt nur die Hauptfortsätze, nicht das feine Membrannetz (sichtbar mit LCK-GFP).",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten kontaktieren mit ihren Endfüßen Blutgefäße.",
+     "correct": true
+    },
+    {
+     "t": "Bergmann-Glia (Kleinhirn) und Müller-Zellen (Retina) sind spezialisierte astrozytäre Gliaformen.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten besitzen nur wenige, kaum verzweigte Fortsätze.",
+     "correct": false
+    },
+    {
+     "t": "Astrozyten bilden die Myelinscheiden im ZNS.",
+     "correct": false
+    }
+   ],
+   "explanation": "Astrozyten: spezifisches Zytoskelett (GFAP) plus ausgedehntes „schwammartiges“ Membrannetz, das erst LCK-GFP vollständig zeigt. Zellkörper → Fortsätze → Endfüße an Blutgefäßen. Myelin bilden Oligodendrozyten."
+  },
+  {
+   "id": "vl01-astro-aufbau-label",
+   "type": "label",
+   "topic": "Astrozyten: Herkunft & Zytoarchitektur",
+   "source": "slides",
+   "ref": "VL01 · Folie 61",
+   "stem": "Beschriften Sie den Aufbau eines Astrozyten.",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 61,
+    "crop": [
+     10,
+     112,
+     960,
+     540
+    ]
+   },
+   "labels": [
+    {
+     "find": "Cell Body",
+     "answer": "Zellkörper (Soma)",
+     "accept": [
+      "cell body",
+      "Soma",
+      "Zellkörper",
+      "Zellleib"
+     ],
+     "x": 0.69,
+     "y": 25.12,
+     "w": 7.67,
+     "h": 5.37
+    },
+    {
+     "find": "Processes",
+     "answer": "Fortsätze (processes)",
+     "accept": [
+      "processes",
+      "Fortsätze",
+      "Fortsatz"
+     ],
+     "x": 0.72,
+     "y": 37.36,
+     "w": 8.04,
+     "h": 5.37
+    },
+    {
+     "find": "End feet",
+     "answer": "Endfüße (end feet)",
+     "accept": [
+      "end feet",
+      "endfeet",
+      "Endfüße",
+      "Endfuß"
+     ],
+     "x": 1.27,
+     "y": 84.81,
+     "w": 6.94,
+     "h": 5.37
+    },
+    {
+     "find": "Blood vessel",
+     "answer": "Blutgefäß (blood vessel)",
+     "accept": [
+      "blood vessel",
+      "Blutgefäß",
+      "Gefäß",
+      "Kapillare"
+     ],
+     "x": 1.27,
+     "y": 92.93,
+     "w": 10.08,
+     "h": 5.37
+    }
+   ],
+   "bank": [
+    "Axon",
+    "Synapse"
+   ],
+   "explanation": "Astrozyt: Soma mit vielen verzweigten Fortsätzen, deren Endfüße die Blutgefäße umhüllen (Teil der Blut-Hirn-Schranke).",
+   "image": "assets/figures/vl01-astro-aufbau-label.webp",
+   "iw": 1400,
+   "ih": 631
+  },
+  {
+   "id": "vl01-bhs-label",
+   "type": "label",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folien 66–67",
+   "stem": "Beschriften Sie das Schema der Blut-Hirn-Schranke.",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 66,
+    "crop": [
+     135,
+     106,
+     735,
+     540
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      159,
+      254,
+      224,
+      271
+     ],
+     "answer": "Astrozyt",
+     "accept": [
+      "astrocyte",
+      "Astrozyten-Endfuß"
+     ],
+     "x": 3.58,
+     "y": 33.53,
+     "w": 11.67,
+     "h": 5.07
+    },
+    {
+     "box": [
+      270,
+      276,
+      326,
+      292
+     ],
+     "answer": "Perizyt",
+     "accept": [
+      "pericyte",
+      "Perizyten"
+     ],
+     "x": 22.08,
+     "y": 38.59,
+     "w": 10.17,
+     "h": 4.84
+    },
+    {
+     "box": [
+      239,
+      297,
+      316,
+      326
+     ],
+     "answer": "Endothelzelle",
+     "accept": [
+      "endothelial cell",
+      "Endothel"
+     ],
+     "x": 16.92,
+     "y": 43.43,
+     "w": 13.67,
+     "h": 7.83
+    },
+    {
+     "box": [
+      332,
+      362,
+      388,
+      391
+     ],
+     "answer": "Tight Junction",
+     "accept": [
+      "tight junction",
+      "Tight Junctions",
+      "Zonula occludens",
+      "Schlussleiste"
+     ],
+     "x": 32.42,
+     "y": 58.41,
+     "w": 10.17,
+     "h": 7.83
+    },
+    {
+     "box": [
+      329,
+      428,
+      399,
+      444
+     ],
+     "answer": "Leukozyt",
+     "accept": [
+      "leukocyte",
+      "Leukozyten",
+      "weiße Blutzelle"
+     ],
+     "x": 31.92,
+     "y": 73.62,
+     "w": 12.5,
+     "h": 4.84
+    },
+    {
+     "box": [
+      182,
+      488,
+      244,
+      504
+     ],
+     "answer": "Mikroglia",
+     "accept": [
+      "microglia",
+      "Mikrogliazelle"
+     ],
+     "x": 7.42,
+     "y": 87.44,
+     "w": 11.17,
+     "h": 4.84
+    },
+    {
+     "box": [
+      254,
+      476,
+      328,
+      504
+     ],
+     "answer": "Basalmembran",
+     "accept": [
+      "basement membrane",
+      "Basallamina"
+     ],
+     "x": 19.42,
+     "y": 84.68,
+     "w": 13.17,
+     "h": 7.6
+    },
+    {
+     "box": [
+      442,
+      494,
+      516,
+      523
+     ],
+     "answer": "Peg-socket-Kontakt (peg-socket junction)",
+     "accept": [
+      "peg-socket junction",
+      "peg socket",
+      "peg-and-socket",
+      "Zapfen-Pfannen-Kontakt"
+     ],
+     "x": 50.75,
+     "y": 88.82,
+     "w": 13.17,
+     "h": 7.83
+    },
+    {
+     "box": [
+      656,
+      300,
+      706,
+      315
+     ],
+     "answer": "Neuron",
+     "accept": [
+      "Nervenzelle"
+     ],
+     "x": 86.42,
+     "y": 44.12,
+     "w": 9.17,
+     "h": 4.61
+    }
+   ],
+   "bank": [
+    "Ependymzelle",
+    "Oligodendrozyt"
+   ],
+   "explanation": "Die Barriere bilden Endothelzellen mit Tight Junctions, umgeben von Basalmembran und Perizyten (Peg-socket-Kontakte zum Endothel); Astrozyten-Endfüße umhüllen das Gefäß. Mikroglia und Neurone liegen im Parenchym.",
+   "image": "assets/figures/vl01-bhs-label.webp",
+   "iw": 1200,
+   "ih": 868
+  },
+  {
+   "id": "vl01-bhs-funktionen",
+   "type": "multi",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folien 66–67",
+   "stem": "Welche Aufgaben übernehmen Astrozyten als Hauptkomponente der Blut-Hirn-Schranke?",
+   "options": [
+    {
+     "t": "Kontrolle des Blutflusses",
+     "correct": true
+    },
+    {
+     "t": "Management der Nährstoffversorgung",
+     "correct": true
+    },
+    {
+     "t": "Abtransport von Abfallstoffen",
+     "correct": true
+    },
+    {
+     "t": "Bildung der Tight Junctions zwischen benachbarten Astrozyten",
+     "correct": false
+    },
+    {
+     "t": "Produktion des Liquor cerebrospinalis",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie: „Major component of the Blood Brain Barrier – control blood flow, managing nutrient, waste transport“. Die Tight Junctions liegen zwischen Endothelzellen; Liquor bildet das Epithel des Plexus choroideus."
+  },
+  {
+   "id": "vl01-bhs-tight-junctions",
+   "type": "single",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folie 66",
+   "stem": "Zwischen welchen Zellen liegen die Tight Junctions, die die Blut-Hirn-Schranke abdichten?",
+   "options": [
+    {
+     "t": "Zwischen den Endothelzellen der Kapillare",
+     "correct": true
+    },
+    {
+     "t": "Zwischen benachbarten Astrozyten-Endfüßen",
+     "correct": false
+    },
+    {
+     "t": "Zwischen Perizyten und Basalmembran",
+     "correct": false
+    },
+    {
+     "t": "Zwischen Mikroglia und Neuronen",
+     "correct": false
+    }
+   ],
+   "explanation": "Die eigentliche Barriere sind Endothelzellen mit Tight Junctions; Basalmembran, Perizyten und Astrozyten-Endfüße umgeben und regulieren sie."
+  },
+  {
+   "id": "vl01-gefaesskontakte-pro-astrozyt",
+   "type": "single",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folien 69–70",
+   "stem": "Mit wie vielen Blutgefäßen hat ein einzelner Astrozyt laut Vorlesung typischerweise Kontakt?",
+   "options": [
+    {
+     "t": "meist 0 (nur wenige Astrozyten mit Gefäßkontakt)",
+     "correct": false
+    },
+    {
+     "t": "immer genau 1",
+     "correct": false
+    },
+    {
+     "t": "meist ca. 3 (Spanne 1–9)",
+     "correct": true
+    },
+    {
+     "t": "meist ca. 20 (Spanne 10–30)",
+     "correct": false
+    },
+    {
+     "t": "meist über 100",
+     "correct": false
+    }
+   ],
+   "explanation": "Hösli et al. 2022 (n = 697): Alle Astrozyten haben Gefäßkontakt, die meisten zu ~2–5 Gefäßen (Gipfel bei 3). So nehmen sie Glukose aus dem Blut auf und geben sie weiter."
+  },
+  {
+   "id": "vl01-gehirn-glukoseverbrauch",
+   "type": "single",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folie 68",
+   "stem": "Das menschliche Gehirn macht ca. 2 % des Körpergewichts aus. Welchen Anteil der Glukose verbraucht es?",
+   "options": [
+    {
+     "t": "ca. 2 %",
+     "correct": false
+    },
+    {
+     "t": "ca. 5 %",
+     "correct": false
+    },
+    {
+     "t": "ca. 20 %",
+     "correct": true
+    },
+    {
+     "t": "ca. 50 %",
+     "correct": false
+    }
+   ],
+   "explanation": "~20 % der Glukose bei ~2 % des Körpergewichts – daher die Schlüsselrolle der Astrozyten bei Import, Verarbeitung, Speicherung und Weitergabe der Glukose."
+  },
+  {
+   "id": "vl01-glukose-astrozyt-offen",
+   "type": "open",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folien 72–75",
+   "stem": "„Glucose in the brain“: Nennen und erläutern Sie kurz die 4 Aufgaben der Astrozyten im Glukosestoffwechsel des Gehirns.",
+   "points": [
+    "Import: Aufnahme von Glukose aus dem Blut über GLUT1 (Endfüße an der BHS)",
+    "Refine: Glykolyse zu Pyruvat/Laktat; Pentosephosphatweg (NADPH → Schutz vor ROS)",
+    "Storage: Speicherung als Glykogen",
+    "Relay: Weitergabe von Laktat über MCTs an Neurone (Astrozyten-Neuron-Laktat-Shuttle)"
+   ],
+   "need": 4,
+   "explanation": "Import – refine – storage – relay: Astrozyten sind die Energiebrücke vom Blut zu den Neuronen. Im Neuron wird Laktat (LDH) zu Pyruvat → Acetyl-CoA → Citratzyklus → ATP. Folie 75: „Major trophic support of the neurons and other glia cells“."
+  },
+  {
+   "id": "vl01-laktat-shuttle-combo",
+   "type": "combo",
+   "topic": "Astrozyten: Blut-Hirn-Schranke & Metabolismus",
+   "source": "slides",
+   "ref": "VL01 · Folien 72–75",
+   "stem": "Welche Aussagen zum Astrozyten-Neuron-Laktat-Shuttle treffen zu?",
+   "statements": [
+    {
+     "t": "Astrozyten nehmen Glukose über GLUT1 aus dem Blut auf.",
+     "correct": true
+    },
+    {
+     "t": "Laktat gelangt über MCTs vom Astrozyten ins Neuron und wird dort zu Pyruvat umgesetzt.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten liefern den Neuronen direkt ATP.",
+     "correct": false
+    },
+    {
+     "t": "Glykogen wird vor allem in Neuronen gespeichert.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "A",
+    "BD",
+    "ABD"
+   ],
+   "explanation": "Astrozyten: GLUT1-Import, Glykolyse, Glykogenspeicher, Laktat-Export über MCTs. Neurone (GLUT3) setzen Laktat via LDH zu Pyruvat um und gewinnen ATP mitochondrial – ATP selbst wird nicht übertragen."
+  },
+  {
+   "id": "vl01-tripartite-synapse-label",
+   "type": "label",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 78–79",
+   "stem": "Beschriften Sie das Schema einer glutamatergen Synapse mit der umgebenden Gliazelle.",
+   "src": {
+    "pdf": "VL01Neuroglia 2026.pdf",
+    "page": 78,
+    "crop": [
+     634,
+     168,
+     957,
+     502
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      679,
+      322,
+      701,
+      336
+     ],
+     "answer": "Präsynapse (Pre)",
+     "accept": [
+      "Pre",
+      "Präsynapse",
+      "präsynaptisches Terminal",
+      "präsynaptische Endigung"
+     ],
+     "x": 13.16,
+     "y": 45.36,
+     "w": 8.36,
+     "h": 5.69
+    },
+    {
+     "box": [
+      820,
+      334,
+      849,
+      349
+     ],
+     "answer": "Postsynapse (Post)",
+     "accept": [
+      "Post",
+      "Postsynapse",
+      "postsynaptische Struktur",
+      "Dornfortsatz"
+     ],
+     "x": 56.81,
+     "y": 48.95,
+     "w": 10.53,
+     "h": 5.99
+    },
+    {
+     "box": [
+      864,
+      404,
+      918,
+      419
+     ],
+     "answer": "Astrozyt",
+     "accept": [
+      "astrocyte",
+      "perisynaptischer Astrozytenfortsatz"
+     ],
+     "x": 70.43,
+     "y": 69.91,
+     "w": 18.27,
+     "h": 5.99
+    },
+    {
+     "box": [
+      729,
+      187,
+      801,
+      202
+     ],
+     "answer": "K⁺-Kanäle (K⁺ channels)",
+     "accept": [
+      "K+ channels",
+      "K+-Kanäle",
+      "K+ Kanäle",
+      "Kaliumkanäle",
+      "Kir4.1"
+     ],
+     "x": 28.64,
+     "y": 4.94,
+     "w": 23.84,
+     "h": 5.99
+    },
+    {
+     "box": [
+      808,
+      204,
+      876,
+      220
+     ],
+     "answer": "K⁺-Pufferung (K⁺ buffering)",
+     "accept": [
+      "K+ buffering",
+      "K+-Pufferung",
+      "Kaliumpufferung",
+      "spatial buffering"
+     ],
+     "x": 53.1,
+     "y": 10.03,
+     "w": 22.6,
+     "h": 6.29
+    },
+    {
+     "box": [
+      834,
+      234,
+      941,
+      266
+     ],
+     "answer": "Glutamat-Aufnahme und -Recycling",
+     "accept": [
+      "glutamate uptake and recycling",
+      "Glutamataufnahme",
+      "Glutamat-Recycling",
+      "Glutamat-Glutamin-Zyklus"
+     ],
+     "x": 61.15,
+     "y": 19.01,
+     "w": 34.67,
+     "h": 11.08
+    },
+    {
+     "box": [
+      882,
+      299,
+      954,
+      330
+     ],
+     "answer": "Glutamattransporter",
+     "accept": [
+      "glutamate transporters",
+      "Glutamat-Transporter",
+      "EAAT",
+      "EAAT1/2",
+      "GLT-1",
+      "GLAST"
+     ],
+     "x": 76.01,
+     "y": 38.47,
+     "w": 23.84,
+     "h": 10.78
+    },
+    {
+     "box": [
+      674,
+      416,
+      746,
+      461
+     ],
+     "answer": "metabotrope Glutamatrezeptoren (mGluR)",
+     "accept": [
+      "metabotropic glutamate receptors",
+      "mGluR",
+      "mGluRs",
+      "metabotrope Glutamatrezeptoren"
+     ],
+     "x": 11.61,
+     "y": 73.5,
+     "w": 23.84,
+     "h": 14.97
+    },
+    {
+     "box": [
+      771,
+      432,
+      856,
+      461
+     ],
+     "answer": "Gliotransmitter-Freisetzung",
+     "accept": [
+      "gliotransmitter release",
+      "Gliotransmitter",
+      "Gliotransmitterfreisetzung",
+      "Freisetzung von Gliotransmittern"
+     ],
+     "x": 41.64,
+     "y": 78.29,
+     "w": 27.86,
+     "h": 10.18
+    }
+   ],
+   "bank": [
+    "Gap Junction",
+    "NMDA-Rezeptor"
+   ],
+   "explanation": "Tripartite Synapse („third component of synapses“): Der Astrozytenfortsatz umhüllt Prä- und Postsynapse, puffert K⁺ über K⁺-Kanäle, nimmt Glutamat über Transporter auf (Recycling) und registriert Glutamat über mGluR → [Ca²⁺]i ↑ → Gliotransmitter-Freisetzung.",
+   "image": "assets/figures/vl01-tripartite-synapse-label.webp",
+   "iw": 646,
+   "ih": 668
+  },
+  {
+   "id": "vl01-synapsen-pro-astrozyt",
+   "type": "single",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 80–82",
+   "stem": "Wie viele Synapsen werden von einem einzelnen Astrozyten kontaktiert?",
+   "options": [
+    {
+     "t": "Maus ca. 100, Mensch ca. 1 000",
+     "correct": false
+    },
+    {
+     "t": "Maus ca. 1 000, Mensch ca. 10 000",
+     "correct": false
+    },
+    {
+     "t": "Maus ca. 10 000, Mensch ca. 100 000",
+     "correct": false
+    },
+    {
+     "t": "Maus ca. 100 000, Mensch ca. 2 000 000",
+     "correct": true
+    },
+    {
+     "t": "Maus ca. 2 000 000, Mensch ca. 100 000",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie: 100 000 (Maus) bzw. 2 000 000 (Mensch) – deshalb braucht ein Astrozyt so viele feine Fortsätze."
+  },
+  {
+   "id": "vl01-feine-fortsaetze-offen",
+   "type": "open",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 76–84",
+   "stem": "„Why does it need so many tiny processes?“ – Erklären Sie, wozu ein Astrozyt so viele feine Fortsätze benötigt (3 Aspekte).",
+   "points": [
+    "Kontakt zu sehr vielen Synapsen (Maus ~100 000, Mensch ~2 Mio.) – dritte Komponente der Synapse",
+    "K⁺-Pufferung über K⁺-Kanäle",
+    "Aufnahme und Recycling von Glutamat über Glutamattransporter",
+    "Registrierung synaptischer Aktivität (mGluR → Ca²⁺ ↑) und Gliotransmitter-Freisetzung",
+    "Umhüllung der Ranvier-Schnürringe (perinodale Astrozyten) – strukturelle/schützende Rolle"
+   ],
+   "need": 3,
+   "explanation": "Das „schwammartige“ Membrannetz erlaubt Kontakt zu enormen Synapsenzahlen und zu Schnürringen: Ionen- und Neurotransmitter-Aufnahme sowie strukturelle und schützende Funktion (Folie 84)."
+  },
+  {
+   "id": "vl01-astro-funktionen-ws2324",
+   "type": "open",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL01 · Folien 67, 72–75, 84–87",
+   "stem": "Nennen Sie 3 der vielen Funktionen von Astrozyten.",
+   "points": [
+    "Bestandteil der Blut-Hirn-Schranke (Endfüße: Blutfluss, Nährstoffe, Abfalltransport)",
+    "Energiebrücke Blut → Neuron: Glukoseimport, Glykogenspeicher, Laktat-Shuttle",
+    "Trophische Unterstützung von Neuronen und anderen Gliazellen",
+    "K⁺-Pufferung",
+    "Neurotransmitter-Aufnahme und -Recycling (Glutamattransporter)",
+    "Synapsenbildung, -reifung und -funktion (tripartite Synapse, Gliotransmitter)",
+    "Regulation von Blut- und glymphatischem Fluss",
+    "Interaktion mit Immunzellen / Rolle bei Entzündung"
+   ],
+   "need": 3,
+   "explanation": "Zusammenfassung „Astrocytes“: Schutz des ZNS über die BHS, synaptische Funktion durch Neurotransmitter-Aufnahme, trophische Unterstützung/Energiebrücke vom Blut ins ZNS und Schlüsselrolle bei der Immunität.",
+   "note": "Freie Frage 29 (WS23/24), hier in drei Teilfragen aufgeteilt (Funktionen, Kontaktstrukturen, Kommunikation)."
+  },
+  {
+   "id": "vl01-astro-kontakte-ws2324",
+   "type": "open",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL01 · Folien 61, 69–70, 78–83",
+   "stem": "Mit welchen Strukturen (3) haben Astrozyten hauptsächlich Kontakt?",
+   "points": [
+    "Blutgefäße (Endfüße, Blut-Hirn-Schranke)",
+    "Synapsen (tripartite Synapse)",
+    "Ranvier-Schnürringe (perinodale Astrozyten)"
+   ],
+   "explanation": "Jeder Astrozyt hat Gefäßkontakt (meist ~3 Gefäße), umhüllt ~100 000 (Maus) bis 2 Mio. (Mensch) Synapsen und umgibt Ranvier-Schnürringe. Untereinander sind Astrozyten zusätzlich zu einem Netzwerk gekoppelt.",
+   "note": "Teil 2 der freien Frage 29 (WS23/24)."
+  },
+  {
+   "id": "vl01-astro-kommunikation-ws2324",
+   "type": "open",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL01 · Folien 71, 78–79",
+   "stem": "Können Astrozyten untereinander und/oder mit Neuronen kommunizieren? Wenn ja, wie?",
+   "points": [
+    "Ja – sowohl untereinander als auch mit Neuronen",
+    "Untereinander: Kopplung über Gap Junctions (Connexine) zu einem Astrozyten-Netzwerk",
+    "Neuron → Astrozyt: synaptisches Glutamat aktiviert metabotrope Glutamatrezeptoren → [Ca²⁺]i ↑",
+    "Astrozyt → Neuron: Ca²⁺-abhängige Freisetzung von Gliotransmittern",
+    "Indirekt: K⁺-Pufferung, Glutamat-Aufnahme und Laktat-Shuttle beeinflussen die neuronale Aktivität"
+   ],
+   "need": 4,
+   "explanation": "Astrozyten bilden ein gekoppeltes Netzwerk (Folie „Astrocyte network“). An der tripartiten Synapse registrieren sie Glutamat über mGluR, reagieren mit Ca²⁺-Anstieg und setzen Gliotransmitter frei, die die Synapse modulieren.",
+   "note": "Teil 3 der freien Frage 29 (WS23/24). Gap Junctions/Connexine sind auf Folie 71 nur als Symbole im Netzwerk-Schema dargestellt – Begriff aus Lehrbuchwissen ergänzt."
+  },
+  {
+   "id": "vl01-astro-aussagen-ws2526",
+   "type": "multi",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL01 · Folien 66–83",
+   "stem": "Welche Aussagen zu Astrozyten treffen zu?",
+   "options": [
+    {
+     "t": "Sie haben nur Kontakt zum Soma der Neurone.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind an Synapsen lokalisiert (tripartite Synapse).",
+     "correct": true
+    },
+    {
+     "t": "Sie sind Bestandteil der Blut-Hirn-Schranke.",
+     "correct": true
+    },
+    {
+     "t": "Sie sind am Metabolismus der Neurone beteiligt.",
+     "correct": true
+    }
+   ],
+   "explanation": "Astrozyten kontaktieren Blutgefäße, Synapsen und Ranvier-Schnürringe – nicht nur das Soma. Sie sind Hauptkomponente der BHS und versorgen Neurone metabolisch (Glukoseimport, Glykogen, Laktat-Shuttle).",
+   "note": "Im Protokoll nur Stichworte („nur am Soma“, „Bei Synapse“, „Blut-Hirnschranke“, „An Metabolismus von Neuron beteiligt“) ohne Lösung; als Aussagen ausformuliert."
+  },
+  {
+   "id": "vl01-reaktive-astrozyten",
+   "type": "multi",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folien 85–86",
+   "stem": "Welche Aussagen zu reaktiven Astrozyten (Pathologie) treffen zu?",
+   "options": [
+    {
+     "t": "Sie können trophische Unterstützung verlieren oder aktiv neurotoxisch wirken.",
+     "correct": true
+    },
+    {
+     "t": "Sie nehmen weniger Neurotransmitter auf bzw. recyceln weniger.",
+     "correct": true
+    },
+    {
+     "t": "Sie können proliferieren und Narben bzw. Grenzen bilden.",
+     "correct": true
+    },
+    {
+     "t": "Sie können periphere Immunzellen eingrenzen oder Entzündungen verstärken.",
+     "correct": true
+    },
+    {
+     "t": "Sie fördern grundsätzlich die Synapsenbildung.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind wie physiologische Astrozyten strikt postmitotisch.",
+     "correct": false
+    }
+   ],
+   "explanation": "Physiologische Astrozyten sind postmitotisch und unterstützen Neurone, Transmitter-Recycling und Synapsen. Reaktive Astrozyten verlieren diese Funktionen (weniger Synapsenbildung, veränderte neuronale Aktivität), proliferieren, bilden Narben und modulieren Immunreaktionen."
+  },
+  {
+   "id": "vl01-astro-zusammenfassung-combo",
+   "type": "combo",
+   "topic": "Astrozyten: Synapsen, Netzwerk & Pathologie",
+   "source": "slides",
+   "ref": "VL01 · Folie 87",
+   "stem": "Welche Aussagen fassen die Rolle von Astrozyten korrekt zusammen?",
+   "statements": [
+    {
+     "t": "Sie schützen das ZNS als Teil der Blut-Hirn-Schranke.",
+     "correct": true
+    },
+    {
+     "t": "Sie unterstützen die synaptische Funktion durch Neurotransmitter-Aufnahme.",
+     "correct": true
+    },
+    {
+     "t": "Sie sind trophische Stütze und Energiebrücke vom Blut ins ZNS.",
+     "correct": true
+    },
+    {
+     "t": "Sie bilden die Myelinscheiden der Axone im ZNS.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "ABCD",
+    "AB",
+    "CD",
+    "BCD"
+   ],
+   "explanation": "Die vier Kernrollen laut Folie: BHS-Schutz, synaptische Funktion (Transmitter-Aufnahme), trophische Unterstützung/Energiebrücke und Rolle bei der Immunität. Myelin bilden Oligodendrozyten (ZNS) bzw. Schwann-Zellen (PNS)."
+  },
+  {
+   "id": "vl01-mikroglia-vorlaeufer",
+   "type": "single",
+   "topic": "Mikroglia",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folien 38–40; VL01 · Folie 13",
+   "stem": "Aus welchen Zellen entstehen Mikroglia?",
+   "options": [
+    {
+     "t": "Hämatopoetische Vorläuferzellen",
+     "correct": true
+    },
+    {
+     "t": "Monozyten",
+     "correct": false
+    },
+    {
+     "t": "Makrophagen",
+     "correct": false
+    },
+    {
+     "t": "Radialgliazellen",
+     "correct": false
+    }
+   ],
+   "explanation": "Mikroglia gehen aus hämatopoetischen (erythromyeloischen) Vorläufern des Dottersacks hervor, die über eine primitive Makrophagen-Vorstufe früh in die Hirnanlage einwandern. Sie stammen nicht von Knochenmark-Monozyten und – anders als Neurone, Astrozyten und Oligodendrozyten – nicht von Radialglia ab.",
+   "note": "Mikroglia werden in VL01 nur im Zelltyp-Schema gezeigt; Ursprung: VL04 (Folien 38–40) und Lehrbuchwissen. Protokoll-Lösung (A) übernommen – „Makrophagen“ ist nur die Zwischenstufe, nicht die Ursprungszelle."
+  },
+  {
+   "id": "vl01-mikroglia-dottersack",
+   "type": "single",
+   "topic": "Mikroglia",
+   "source": "exam",
+   "exam": "WS24/25, WS25/26",
+   "ref": "VL04 · Folien 38–40",
+   "stem": "Woher stammen die meisten Mikroglia ab?",
+   "options": [
+    {
+     "t": "Definitive Hämatopoese im Dottersack",
+     "correct": false
+    },
+    {
+     "t": "Definitive Hämatopoese in der fetalen Leber",
+     "correct": false
+    },
+    {
+     "t": "Primitive Hämatopoese im Dottersack",
+     "correct": true
+    },
+    {
+     "t": "Primitive Hämatopoese in der fetalen Leber",
+     "correct": false
+    }
+   ],
+   "explanation": "Mikroglia entstehen aus primitiven Makrophagen-Vorläufern der frühen Dottersack-Hämatopoese (Blutinseln, erythromyeloische Vorläufer) und erhalten sich danach lokal selbst. Die definitive Hämatopoese (AGM → fetale Leber → Knochenmark) liefert dagegen u. a. die Monozyten.",
+   "note": "WS25/26 nur als Stichwort „Entstehung Mikroglia: primitive Makrophagen aus Dottersack“ überliefert. Thema wird in VL04 behandelt (primitive/EMP-Hämatopoese, iPSC-Mikroglia)."
+  },
+  {
+   "id": "vl01-mikroglia-nicht-zutreffend",
+   "type": "single",
+   "topic": "Mikroglia",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folien 37–40",
+   "stem": "Was trifft auf Mikroglia <b>nicht</b> zu?",
+   "options": [
+    {
+     "t": "Sie gehen aus Vorläuferzellen des Dottersacks hervor.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind plastisch und reagieren schnell auf Schäden im Nervensystem.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind die einzigen Makrophagen im Gehirn.",
+     "correct": true
+    },
+    {
+     "t": "Sie können Synapsen phagozytieren (synaptic pruning).",
+     "correct": false
+    }
+   ],
+   "explanation": "Mikroglia sind die Makrophagen des Parenchyms – daneben gibt es grenzständige Makrophagen (perivaskulär, meningeal, Plexus choroideus) und bei Entzündung eingewanderte Monozyten/Makrophagen.",
+   "note": "Optionen A und D im Protokoll nicht überliefert („…“) – sinnvoll ergänzt. Protokoll-Lösung C bestätigt."
+  },
+  {
+   "id": "vl01-mikroglia-funktion-combo",
+   "type": "combo",
+   "topic": "Mikroglia",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folie 37; VL01 · Folie 66",
+   "stem": "Was trifft auf die Funktion von Mikroglia zu?",
+   "statements": [
+    {
+     "t": "Homöostase der Myelinisierung",
+     "correct": true
+    },
+    {
+     "t": "Sie phagozytieren Synapsen.",
+     "correct": true
+    },
+    {
+     "t": "Sie bilden mit ihren Endfüßen die Blut-Hirn-Schranke.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "B",
+    "AB",
+    "ABC"
+   ],
+   "explanation": "Mikroglia räumen Myelin-Debris ab und regulieren Myelinwachstum, -integrität und Remyelinisierung; sie phagozytieren Synapsen (synaptic pruning, „synapse engulfment“). Endfüße an der BHS bilden Astrozyten.",
+   "note": "Aussage C im Protokoll nicht überliefert – ergänzt, ebenso die Kombination „A, B und C“. Protokoll-Lösung „A und B“ bestätigt; die Myelin-Homöostase ist Lehrbuchwissen (nicht auf den Folien)."
+  },
+  {
+   "id": "vl01-mikroglia-beteiligung",
+   "type": "multi",
+   "topic": "Mikroglia",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL04 · Folie 37; VL01 · Folien 53–54",
+   "stem": "Woran sind Mikroglia beteiligt?",
+   "options": [
+    {
+     "t": "Neurogenese",
+     "correct": true
+    },
+    {
+     "t": "Liquorproduktion",
+     "correct": false
+    },
+    {
+     "t": "Modulation der Neuronenaktivität",
+     "correct": true
+    },
+    {
+     "t": "MS-Pathologie",
+     "correct": true
+    }
+   ],
+   "explanation": "Mikroglia beeinflussen neurale Stammzellen/Radialglia (Phagozytose, weniger Stress- und Interferon-Antwort), fördern synchronisierte neuronale Aktivität und tragen bei MS zu Neuroinflammation und Demyelinisierung bei. Liquor bildet das Epithel des Plexus choroideus.",
+   "note": "Lösung nicht überliefert; begründet mit VL04 Folie 37 (Mikroglia in Organoiden) und Lehrbuchwissen (MS)."
+  },
+  {
+   "id": "vl01-mikroglia-knochenmark",
+   "type": "single",
+   "topic": "Mikroglia",
+   "source": "slides",
+   "ref": "VL04 · Folie 40",
+   "stem": "Nach klassischer Knochenmarktransplantation (Ganzkörperbestrahlung + Spender-Knochenmark) werden nur ~2 % der Mikroglia durch Spenderzellen ersetzt. Warum?",
+   "options": [
+    {
+     "t": "Mikroglia sind eine embryonal angelegte, sich lokal selbst erneuernde Population.",
+     "correct": true
+    },
+    {
+     "t": "Mikroglia werden lebenslang aus Radialgliazellen nachgebildet.",
+     "correct": false
+    },
+    {
+     "t": "Spenderzellen werden im Gehirn sofort von Astrozyten phagozytiert.",
+     "correct": false
+    },
+    {
+     "t": "Mikroglia sind postmitotisch und grundsätzlich nicht ersetzbar.",
+     "correct": false
+    }
+   ],
+   "explanation": "Mikroglia stammen aus der Dottersack-Hämatopoese und erhalten sich selbst; Knochenmark-Monozyten tragen normalerweise kaum bei. Erst wenn die Nische geleert wird (z. B. CSF1R-Hemmung), gelingt ein Ersatz von > 80–90 %."
+  }
+ ]
+}

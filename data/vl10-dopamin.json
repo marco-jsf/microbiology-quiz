@@ -1,0 +1,2186 @@
+{
+ "id": "vl10",
+ "title": "VL10 · Dopamin-Neurotransmission",
+ "short": "Dopamin",
+ "color": "#4cb0ff",
+ "topics": [
+  "Katecholamin-Synthese & Abbau",
+  "Modulatorische Systeme & dopaminerge Bahnen",
+  "Freisetzung & Volumentransmission",
+  "Feuermuster & Ko-Freisetzung",
+  "Dopaminrezeptoren: Typen & Lokalisation",
+  "Signaltransduktion (Gs/Gi, DARPP-32)",
+  "Biased Signaling & Rezeptor-Heteromere",
+  "Dopamintransporter & Sucht"
+ ],
+ "questions": [
+  {
+   "id": "vl10-dbh-defekt",
+   "type": "single",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL07 · Folien 23–27; VL10 · Folie 3",
+   "stem": "Bei einer Patientin wird im Blut sehr viel Dopamin festgestellt, Noradrenalin und Adrenalin liegen nicht vor. Welches Enzym ist wohl defekt?",
+   "options": [
+    {
+     "t": "β-Glutamat-Hydroxylase",
+     "correct": false
+    },
+    {
+     "t": "Tyrosinhydroxylase",
+     "correct": false
+    },
+    {
+     "t": "Dopamin-β-Hydroxylase",
+     "correct": true
+    },
+    {
+     "t": "Serin-Hydroxymethyltransferase",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Dopamin-β-Hydroxylase (DBH) hydroxyliert Dopamin zu Noradrenalin, aus dem die PNMT Adrenalin bildet. Fällt die DBH aus, staut sich Dopamin an und beide nachgeschalteten Katecholamine fehlen. Ein TH-Defekt würde auch Dopamin senken; die Serin-Hydroxymethyltransferase gehört zur Glycin-Synthese.",
+   "note": "Protokoll: „Beta-Dopamin-Hydroxylase“ = Dopamin-β-Hydroxylase (DBH). Lösung C laut Klausureinsicht, durch die Folien bestätigt."
+  },
+  {
+   "id": "vl10-th-geschwindigkeitsbestimmend",
+   "type": "single",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL07 · Folien 23–25",
+   "stem": "Was ist der geschwindigkeitsbestimmende Schritt der Katecholaminsynthese?",
+   "options": [
+    {
+     "t": "Die Hydroxylierung von Tyrosin zu L-DOPA durch die Tyrosinhydroxylase",
+     "correct": true
+    },
+    {
+     "t": "Die Umwandlung von Dopamin zu Noradrenalin durch die Dopamin-β-Hydroxylase",
+     "correct": false
+    },
+    {
+     "t": "Die Decarboxylierung von L-DOPA zu Dopamin durch die DOPA-Decarboxylase",
+     "correct": false
+    },
+    {
+     "t": "Die Methylierung von Noradrenalin zu Adrenalin durch die PNMT",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Tyrosinhydroxylase (TH; Cofaktoren Tetrahydrobiopterin und O₂) ist das geschwindigkeitsbestimmende (rate-limiting) Enzym. Die DOPA-Decarboxylase ist dagegen wenig spezifisch – sie decarboxyliert auch 5-HTP zu Serotonin.",
+   "note": "Protokoll-Optionen unvollständig bzw. verschrieben („Umwandlung von Sopranen zu Noradrenalin“ als Dopamin → Noradrenalin gedeutet); vierte Option ergänzt."
+  },
+  {
+   "id": "vl10-abbauprodukte",
+   "type": "multi",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL07 · Folien 28, 30, 36",
+   "stem": "Welche Abbauprodukte haben die Katecholamine (am Beispiel Dopamin)? (3 richtig)",
+   "options": [
+    {
+     "t": "Homovanillinsäure (HVA)",
+     "correct": true
+    },
+    {
+     "t": "DOPAC (3,4-Dihydroxyphenylessigsäure)",
+     "correct": true
+    },
+    {
+     "t": "3-Methoxytyramin (3-MT)",
+     "correct": true
+    },
+    {
+     "t": "DMT (Dimethyltryptamin)",
+     "correct": false
+    },
+    {
+     "t": "EAAT (exzitatorischer Aminosäure-Transporter)",
+     "correct": false
+    },
+    {
+     "t": "5-Hydroxyindolessigsäure (5-HIAA)",
+     "correct": false
+    }
+   ],
+   "explanation": "Dopamin wird durch MAO (+ Aldehyd-Dehydrogenase) zu DOPAC und durch COMT zu 3-Methoxytyramin abgebaut; beide Wege enden in Homovanillinsäure (HVA). 5-HIAA ist das Abbauprodukt von Serotonin, DMT ein Tryptamin-Derivat, EAAT ein Glutamat-Transporter.",
+   "note": "Protokoll-Optionen: HVA, „EAT“, DOPAC, DMT. „EAT“ als EAAT gedeutet; 3-MT und 5-HIAA ergänzt."
+  },
+  {
+   "id": "vl10-synthese-reihenfolge",
+   "type": "order",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folien 23–27",
+   "stem": "Bringen Sie die Zwischenprodukte der Katecholamin-Biosynthese in die richtige Reihenfolge.",
+   "items": [
+    "L-Tyrosin",
+    "L-DOPA",
+    "Dopamin",
+    "Noradrenalin",
+    "Adrenalin"
+   ],
+   "explanation": "Tyrosin →(Tyrosinhydroxylase) L-DOPA →(DOPA-Decarboxylase) Dopamin →(Dopamin-β-Hydroxylase) Noradrenalin →(PNMT) Adrenalin."
+  },
+  {
+   "id": "vl10-synthese-schema",
+   "type": "label",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folien 23–27",
+   "stem": "Beschriften Sie das Schema der Katecholamin-Biosynthese (Zwischenprodukte und Enzyme).",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 23,
+    "crop": [
+     482,
+     75,
+     675,
+     565
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      520,
+      123,
+      575,
+      137
+     ],
+     "answer": "L-Tyrosin",
+     "accept": [
+      "Tyrosin",
+      "L-Tyrosine",
+      "Tyrosine",
+      "Tyr"
+     ],
+     "x": 18.39,
+     "y": 9.29,
+     "w": 31.09,
+     "h": 3.88
+    },
+    {
+     "box": [
+      551,
+      144,
+      659,
+      169
+     ],
+     "answer": "Tyrosinhydroxylase (TH)",
+     "accept": [
+      "Tyrosinhydroxylase",
+      "Tyrosin-Hydroxylase",
+      "tyrosine hydroxylase",
+      "TH"
+     ],
+     "x": 34.46,
+     "y": 13.57,
+     "w": 58.55,
+     "h": 6.12
+    },
+    {
+     "box": [
+      527,
+      227,
+      569,
+      242
+     ],
+     "answer": "L-DOPA",
+     "accept": [
+      "DOPA",
+      "Levodopa",
+      "Dihydroxyphenylalanin",
+      "L-Dihydroxyphenylalanin"
+     ],
+     "x": 22.02,
+     "y": 30.51,
+     "w": 24.35,
+     "h": 4.08
+    },
+    {
+     "box": [
+      550,
+      249,
+      643,
+      274
+     ],
+     "answer": "DOPA-Decarboxylase (AADC)",
+     "accept": [
+      "DOPA-Decarboxylase",
+      "DOPA decarboxylase",
+      "DDC",
+      "AADC",
+      "aromatische L-Aminosäure-Decarboxylase"
+     ],
+     "x": 33.94,
+     "y": 35.0,
+     "w": 50.78,
+     "h": 6.12
+    },
+    {
+     "box": [
+      521,
+      331,
+      574,
+      345
+     ],
+     "answer": "Dopamin",
+     "accept": [
+      "Dopamine",
+      "DA"
+     ],
+     "x": 18.91,
+     "y": 51.73,
+     "w": 30.05,
+     "h": 3.88
+    },
+    {
+     "box": [
+      550,
+      353,
+      655,
+      377
+     ],
+     "answer": "Dopamin-β-Hydroxylase (DBH)",
+     "accept": [
+      "Dopamin-beta-Hydroxylase",
+      "Dopamine beta-hydroxylase",
+      "DBH",
+      "Dopamin-b-Hydroxylase"
+     ],
+     "x": 33.94,
+     "y": 56.22,
+     "w": 56.99,
+     "h": 5.92
+    },
+    {
+     "box": [
+      509,
+      434,
+      587,
+      449
+     ],
+     "answer": "Noradrenalin",
+     "accept": [
+      "Norepinephrin",
+      "Norepinephrine",
+      "NA",
+      "NE"
+     ],
+     "x": 12.69,
+     "y": 72.76,
+     "w": 43.01,
+     "h": 4.08
+    },
+    {
+     "box": [
+      551,
+      455,
+      653,
+      490
+     ],
+     "answer": "Phenylethanolamin-N-Methyltransferase (PNMT)",
+     "accept": [
+      "PNMT",
+      "Phenylethanolamine N-methyltransferase",
+      "Phenylethanolamin-N-Methyltransferase"
+     ],
+     "x": 34.46,
+     "y": 77.04,
+     "w": 55.44,
+     "h": 8.16
+    },
+    {
+     "box": [
+      517,
+      546,
+      579,
+      561
+     ],
+     "answer": "Adrenalin",
+     "accept": [
+      "Epinephrin",
+      "Epinephrine"
+     ],
+     "x": 16.84,
+     "y": 95.61,
+     "w": 34.72,
+     "h": 4.08
+    }
+   ],
+   "bank": [
+    "Tryptophanhydroxylase",
+    "5-Hydroxytryptophan",
+    "Monoaminoxidase (MAO)"
+   ],
+   "explanation": "Alle Katecholamine stammen von der proteinogenen Aminosäure Tyrosin. Die TH (BH₄, O₂) ist geschwindigkeitsbestimmend; die DOPA-Decarboxylase braucht Pyridoxalphosphat, die DBH Ascorbat + O₂, die PNMT S-Adenosylmethionin als Methyldonor.",
+   "image": "assets/figures/vl10-synthese-schema.webp",
+   "iw": 386,
+   "ih": 980
+  },
+  {
+   "id": "vl10-cofaktoren",
+   "type": "multi",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folien 23–27",
+   "stem": "Welche Zuordnungen von Enzym und Cofaktor/Cosubstrat der Katecholamin-Synthese sind korrekt? (4 richtig)",
+   "options": [
+    {
+     "t": "Tyrosinhydroxylase – Tetrahydrobiopterin (BH₄) und O₂",
+     "correct": true
+    },
+    {
+     "t": "DOPA-Decarboxylase – Pyridoxalphosphat (Vitamin B6)",
+     "correct": true
+    },
+    {
+     "t": "Dopamin-β-Hydroxylase – Ascorbat und O₂",
+     "correct": true
+    },
+    {
+     "t": "PNMT – S-Adenosylmethionin als Methyldonor",
+     "correct": true
+    },
+    {
+     "t": "Tyrosinhydroxylase – Pyridoxalphosphat",
+     "correct": false
+    },
+    {
+     "t": "Dopamin-β-Hydroxylase – S-Adenosylmethionin",
+     "correct": false
+    }
+   ],
+   "explanation": "Hydroxylasen (TH, DBH) brauchen O₂ – die TH zusätzlich BH₄, die DBH Ascorbat. Decarboxylasen arbeiten mit Pyridoxalphosphat, Methyltransferasen mit SAM."
+  },
+  {
+   "id": "vl10-ldopa-parkinson",
+   "type": "single",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folien 25, 29",
+   "stem": "Warum wird bei Morbus Parkinson L-DOPA und nicht Dopamin selbst als Medikament gegeben?",
+   "options": [
+    {
+     "t": "L-DOPA überwindet die Blut-Hirn-Schranke, Dopamin nicht",
+     "correct": true
+    },
+    {
+     "t": "L-DOPA wirkt selbst direkt agonistisch an D2-Rezeptoren im Striatum",
+     "correct": false
+    },
+    {
+     "t": "L-DOPA hemmt die Monoaminoxidase und verlängert so die Dopaminwirkung",
+     "correct": false
+    },
+    {
+     "t": "L-DOPA ist das Substrat der geschwindigkeitsbestimmenden Tyrosinhydroxylase",
+     "correct": false
+    }
+   ],
+   "explanation": "Dopamin ist BHS-impermeabel; L-DOPA gelangt ins Gehirn und wird dort von der DOPA-Decarboxylase zu Dopamin umgesetzt – es ist das Produkt (nicht das Substrat) der TH und umgeht deren limitierenden Schritt. Peripher hemmen Benserazid/Carbidopa die Decarboxylierung."
+  },
+  {
+   "id": "vl10-dbh-vesikel",
+   "type": "single",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folie 31",
+   "stem": "Wo wird in noradrenergen Neuronen Noradrenalin aus Dopamin gebildet?",
+   "options": [
+    {
+     "t": "Im Zytosol der Präsynapse, bevor es von VMAT in die Vesikel gepumpt wird",
+     "correct": false
+    },
+    {
+     "t": "In den sekretorischen Vesikeln, da die Dopamin-β-Hydroxylase vesikulär liegt",
+     "correct": true
+    },
+    {
+     "t": "An der äußeren Mitochondrienmembran, wo auch die MAO lokalisiert ist",
+     "correct": false
+    },
+    {
+     "t": "Im synaptischen Spalt, nachdem Dopamin exozytotisch freigesetzt wurde",
+     "correct": false
+    }
+   ],
+   "explanation": "Dopamin wird über den vesikulären Monoamintransporter (VMAT) in Vesikel gepumpt; die DBH sitzt in den Vesikeln, sodass Noradrenalin direkt in den sekretorischen Vesikeln entsteht."
+  },
+  {
+   "id": "vl10-abbau-schema",
+   "type": "label",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folie 28",
+   "stem": "Beschriften Sie das Schema des Dopamin-Abbaus (Substanzen und Enzyme).",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 28,
+    "crop": [
+     270,
+     80,
+     800,
+     580
+    ],
+    "hide": [
+     [
+      303,
+      410,
+      413,
+      441
+     ],
+     [
+      643,
+      410,
+      792,
+      441
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      476,
+      162,
+      584,
+      181
+     ],
+     "answer": "Dopamin (DA)",
+     "accept": [
+      "Dopamin",
+      "Dopamine",
+      "DA"
+     ],
+     "x": 38.4,
+     "y": 15.9,
+     "w": 21.32,
+     "h": 4.8
+    },
+    {
+     "box": [
+      281,
+      194,
+      437,
+      224
+     ],
+     "answer": "Monoaminoxidase (MAO) + Aldehyd-Dehydrogenase",
+     "accept": [
+      "MAO",
+      "Monoaminoxidase",
+      "Monoamine oxidase",
+      "MAO und ALDH",
+      "MAO + ALDH",
+      "MAO/ALDH"
+     ],
+     "x": 1.6,
+     "y": 22.3,
+     "w": 30.38,
+     "h": 7.0
+    },
+    {
+     "box": [
+      630,
+      194,
+      747,
+      224
+     ],
+     "answer": "Catechol-O-Methyltransferase (COMT)",
+     "accept": [
+      "COMT",
+      "Catechol-O-Methyltransferase",
+      "Catechol-O-methyltransferase"
+     ],
+     "x": 67.45,
+     "y": 22.3,
+     "w": 23.02,
+     "h": 7.0
+    },
+    {
+     "box": [
+      305,
+      347,
+      459,
+      381
+     ],
+     "answer": "DOPAC (3,4-Dihydroxyphenylessigsäure)",
+     "accept": [
+      "DOPAC",
+      "3,4-Dihydroxyphenylessigsäure",
+      "Dihydroxyphenylessigsäure",
+      "3,4-Dihydroxyphenylacetic acid"
+     ],
+     "x": 6.13,
+     "y": 52.9,
+     "w": 30.0,
+     "h": 7.8
+    },
+    {
+     "box": [
+      580,
+      347,
+      767,
+      366
+     ],
+     "answer": "3-Methoxytyramin (3-MT)",
+     "accept": [
+      "3-MT",
+      "3-Methoxytyramin",
+      "Methoxytyramin",
+      "3-Methoxytyramine"
+     ],
+     "x": 58.02,
+     "y": 52.9,
+     "w": 36.23,
+     "h": 4.8
+    },
+    {
+     "box": [
+      440,
+      552,
+      611,
+      572
+     ],
+     "answer": "Homovanillinsäure (HVA)",
+     "accept": [
+      "HVA",
+      "Homovanillinsäure",
+      "Homovanillic acid",
+      "Homovanillinsaeure"
+     ],
+     "x": 31.6,
+     "y": 93.9,
+     "w": 33.21,
+     "h": 5.0
+    }
+   ],
+   "bank": [
+    "Dopamin-β-Hydroxylase (DBH)",
+    "5-Hydroxyindolessigsäure (5-HIAA)",
+    "Tyrosinhydroxylase (TH)"
+   ],
+   "explanation": "Zwei Schlüsselenzyme: MAO (mit Aldehyd-Dehydrogenase) bildet DOPAC, COMT bildet 3-Methoxytyramin. Das jeweils andere Enzym setzt beide Zwischenprodukte zur Homovanillinsäure (HVA) um, dem gemeinsamen Endprodukt.",
+   "image": "assets/figures/vl10-abbau-schema.webp",
+   "iw": 1060,
+   "ih": 1000
+  },
+  {
+   "id": "vl10-dopal-komplex1",
+   "type": "single",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folie 30",
+   "stem": "Warum sind dopaminerge Neurone laut Vorlesung selektiv empfindlich gegenüber einer Hemmung von Komplex I der Atmungskette?",
+   "options": [
+    {
+     "t": "Die Aldehyd-Dehydrogenase, die das toxische DOPAL zu DOPAC abbaut, benötigt NAD⁺ aus Komplex I",
+     "correct": true
+    },
+    {
+     "t": "Komplex I regeneriert das Tetrahydrobiopterin für die Tyrosinhydroxylase",
+     "correct": false
+    },
+    {
+     "t": "Die Monoaminoxidase ist eine Untereinheit von Komplex I",
+     "correct": false
+    },
+    {
+     "t": "VMAT nutzt direkt den mitochondrialen Protonengradienten zur Vesikelbeladung",
+     "correct": false
+    }
+   ],
+   "explanation": "Die MAO bildet aus zytosolischem Dopamin das reaktive Aldehyd DOPAL (fördert u. a. α-Synuclein-Oligomere). Die ALDH entgiftet DOPAL zu DOPAC und braucht dafür NAD⁺, das von der NADH-Dehydrogenase (Komplex I) regeneriert wird."
+  },
+  {
+   "id": "vl10-synapse-pharmakologie",
+   "type": "label",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folie 29",
+   "stem": "Beschriften Sie das Schema der nigrostriatalen dopaminergen Synapse (Dopamin-Pharmakologie).",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 29,
+    "crop": [
+     55,
+     105,
+     800,
+     555
+    ],
+    "hide": [
+     [
+      142,
+      295,
+      177,
+      305
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      301,
+      239,
+      322,
+      253
+     ],
+     "answer": "Tyrosinhydroxylase (TH)",
+     "accept": [
+      "TH",
+      "Tyrosinhydroxylase",
+      "tyrosine hydroxylase"
+     ],
+     "x": 32.68,
+     "y": 29.22,
+     "w": 3.49,
+     "h": 4.22
+    },
+    {
+     "box": [
+      398,
+      239,
+      427,
+      253
+     ],
+     "answer": "DOPA-Decarboxylase (DDC)",
+     "accept": [
+      "DDC",
+      "AADC",
+      "DOPA-Decarboxylase",
+      "DOPA decarboxylase"
+     ],
+     "x": 45.7,
+     "y": 29.22,
+     "w": 4.56,
+     "h": 4.22
+    },
+    {
+     "box": [
+      411,
+      166,
+      462,
+      195
+     ],
+     "answer": "Synaptisches Vesikel",
+     "accept": [
+      "Vesikel",
+      "synaptic vesicle",
+      "synaptische Vesikel"
+     ],
+     "x": 47.45,
+     "y": 13.0,
+     "w": 7.52,
+     "h": 7.56
+    },
+    {
+     "box": [
+      548,
+      125,
+      610,
+      153
+     ],
+     "answer": "Dopamintransporter (DAT)",
+     "accept": [
+      "DAT",
+      "Dopamintransporter",
+      "dopamine transporter"
+     ],
+     "x": 65.84,
+     "y": 3.89,
+     "w": 8.99,
+     "h": 7.33
+    },
+    {
+     "box": [
+      635,
+      172,
+      655,
+      187
+     ],
+     "answer": "D2-Rezeptor",
+     "accept": [
+      "D2",
+      "D2R",
+      "D2 receptor"
+     ],
+     "x": 77.52,
+     "y": 14.33,
+     "w": 3.36,
+     "h": 4.44
+    },
+    {
+     "box": [
+      635,
+      317,
+      655,
+      333
+     ],
+     "answer": "D1-Rezeptor",
+     "accept": [
+      "D1",
+      "D1R",
+      "D1 receptor"
+     ],
+     "x": 77.52,
+     "y": 46.56,
+     "w": 3.36,
+     "h": 4.67
+    },
+    {
+     "box": [
+      125,
+      463,
+      195,
+      492
+     ],
+     "answer": "Blut-Hirn-Schranke",
+     "accept": [
+      "BHS",
+      "blood-brain barrier",
+      "BBB",
+      "Blut-Hirn-Schranke"
+     ],
+     "x": 9.06,
+     "y": 79.0,
+     "w": 10.07,
+     "h": 7.56
+    },
+    {
+     "box": [
+      138,
+      191,
+      179,
+      205
+     ],
+     "answer": "COMT (peripher)",
+     "accept": [
+      "COMT",
+      "Catechol-O-Methyltransferase"
+     ],
+     "x": 10.81,
+     "y": 18.56,
+     "w": 6.17,
+     "h": 4.22
+    }
+   ],
+   "bank": [
+    "Dopamin-β-Hydroxylase (DBH)",
+    "VMAT"
+   ],
+   "explanation": "Im Terminal: Tyrosin →TH→ L-DOPA →DDC→ Dopamin → Vesikel; Freisetzung auf D1-/D2-Rezeptoren im Striatum, Wiederaufnahme über DAT, Abbau durch MAO und COMT (Neuron, Glia). Peripher hemmen Benserazid/Carbidopa die DDC und Entacapon die COMT, damit mehr L-DOPA die Blut-Hirn-Schranke erreicht.",
+   "image": "assets/figures/vl10-synapse-pharmakologie.webp",
+   "iw": 1400,
+   "ih": 846
+  },
+  {
+   "id": "vl10-struktur-noradrenalin",
+   "type": "open",
+   "topic": "Katecholamin-Synthese & Abbau",
+   "source": "slides",
+   "ref": "VL07 · Folien 21, 23–26",
+   "stem": "Wie heißt die dargestellte Struktur? Aus welcher proteinogenen Aminosäure entsteht sie, und welche Enzyme katalysieren die Umwandlung zur dargestellten Substanz?",
+   "stemSrc": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 21,
+    "crop": [
+     112,
+     236,
+     380,
+     346
+    ]
+   },
+   "points": [
+    "Noradrenalin (Norepinephrin)",
+    "Katecholamin: Catechol-Ring + Ethylamin-Seitenkette mit β-OH-Gruppe",
+    "Vorläufer: L-Tyrosin",
+    "Tyrosinhydroxylase: Tyrosin → L-DOPA (geschwindigkeitsbestimmend)",
+    "DOPA-Decarboxylase (AADC): L-DOPA → Dopamin",
+    "Dopamin-β-Hydroxylase: Dopamin → Noradrenalin (in den Vesikeln)"
+   ],
+   "explanation": "Die β-Hydroxygruppe an der Seitenkette unterscheidet Noradrenalin von Dopamin; eine zusätzliche N-Methylgruppe (durch PNMT) kennzeichnet Adrenalin.",
+   "note": "Variante zu WS24/25 Frage 16 („Wie heißt die dargestellte Struktur …“); die dort gezeigte Struktur ist im Protokoll nicht überliefert.",
+   "stemImage": "assets/figures/vl10-struktur-noradrenalin-stem.webp"
+  },
+  {
+   "id": "vl10-modulatorische-prinzipien",
+   "type": "combo",
+   "topic": "Modulatorische Systeme & dopaminerge Bahnen",
+   "source": "slides",
+   "ref": "VL10 · Folie 2",
+   "stem": "Welche Aussagen zu modulatorischen Neurotransmittersystemen (z. B. dem dopaminergen System) treffen zu?",
+   "statements": [
+    {
+     "t": "Sie bestehen aus kleinen Gruppen lokal begrenzter Neurone, meist in tieferen Hirnregionen (Mittelhirn, Hirnstamm).",
+     "correct": true
+    },
+    {
+     "t": "Wenige Neurone modulieren über weit verzweigte Axone sehr große Neuronenverbände (z. B. Cortex, Striatum).",
+     "correct": true
+    },
+    {
+     "t": "Katecholaminerge Neurone machen etwa 5 % aller Neurone aus.",
+     "correct": false
+    },
+    {
+     "t": "Die Freisetzung erfolgt überwiegend als Volumentransmission aus Boutons entlang der Axone in den Extrazellulärraum.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BCD",
+    "AD"
+   ],
+   "explanation": "Katecholaminerge Neurone sind nur ca. 0,5 ‰ aller Neurone – trotzdem verändern sie über weit verzweigte Axonbäume und hormonähnliche Volumentransmission allgemeine Eigenschaften wie die Erregbarkeit großer Zellpopulationen."
+  },
+  {
+   "id": "vl10-zellgruppen",
+   "type": "single",
+   "topic": "Modulatorische Systeme & dopaminerge Bahnen",
+   "source": "slides",
+   "ref": "VL10 · Folie 3",
+   "stem": "Wie werden die dopaminergen Zellgruppen nach ihrem Transmitter-Phänotyp bezeichnet?",
+   "options": [
+    {
+     "t": "A8–A16",
+     "correct": true
+    },
+    {
+     "t": "A1–A7",
+     "correct": false
+    },
+    {
+     "t": "C1–C3",
+     "correct": false
+    },
+    {
+     "t": "B1–B9",
+     "correct": false
+    }
+   ],
+   "explanation": "A1–A7 = noradrenerg (z. B. A6 = Locus coeruleus), C1–C3 = adrenerg, B1–B9 = serotonerg; dopaminerg sind A8–A16 (ca. 300.000–500.000 DA-Neurone beim Menschen). Charakterisiert werden die Gruppen über ihre Schlüsselenzyme TH, DBH und PNMT."
+  },
+  {
+   "id": "vl10-bahnen-schema",
+   "type": "label",
+   "topic": "Modulatorische Systeme & dopaminerge Bahnen",
+   "source": "slides",
+   "ref": "VL10 · Folien 5–6",
+   "stem": "Beschriften Sie die dopaminergen Zellgruppen und ihre Zielgebiete im Sagittalschnitt.",
+   "src": {
+    "pdf": "VL10Dopamine Neurotransmission_11Nov26.pdf",
+    "page": 5,
+    "crop": [
+     12,
+     78,
+     440,
+     346
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      18,
+      135,
+      73,
+      150
+     ],
+     "answer": "Frontaler Cortex",
+     "accept": [
+      "frontal cortex",
+      "Frontalcortex",
+      "präfrontaler Cortex",
+      "PFC",
+      "Frontallappen",
+      "Frontalhirn"
+     ],
+     "x": 0.82,
+     "y": 20.34,
+     "w": 14.02,
+     "h": 7.46
+    },
+    {
+     "box": [
+      284,
+      105,
+      318,
+      116
+     ],
+     "answer": "Striatum",
+     "accept": [
+      "Corpus striatum",
+      "Neostriatum"
+     ],
+     "x": 62.97,
+     "y": 9.14,
+     "w": 9.11,
+     "h": 5.97
+    },
+    {
+     "box": [
+      34,
+      223,
+      81,
+      245
+     ],
+     "answer": "Nucleus accumbens",
+     "accept": [
+      "Ncl. accumbens",
+      "accumbens",
+      "NAc",
+      "Nucleus accumbens"
+     ],
+     "x": 4.56,
+     "y": 53.17,
+     "w": 12.15,
+     "h": 10.07
+    },
+    {
+     "box": [
+      354,
+      186,
+      413,
+      196
+     ],
+     "answer": "Substantia nigra",
+     "accept": [
+      "SN",
+      "Substantia nigra pars compacta",
+      "SNc"
+     ],
+     "x": 79.32,
+     "y": 39.37,
+     "w": 14.95,
+     "h": 5.6
+    },
+    {
+     "box": [
+      371,
+      199,
+      389,
+      212
+     ],
+     "answer": "A9",
+     "accept": [
+      "A 9"
+     ],
+     "x": 83.29,
+     "y": 44.22,
+     "w": 5.37,
+     "h": 6.72
+    },
+    {
+     "box": [
+      352,
+      247,
+      433,
+      258
+     ],
+     "answer": "Ventrales tegmentales Areal (VTA)",
+     "accept": [
+      "VTA",
+      "ventral tegmental area",
+      "ventrales Tegmentum",
+      "ventrales tegmentales Areal"
+     ],
+     "x": 78.86,
+     "y": 62.13,
+     "w": 20.09,
+     "h": 5.97
+    },
+    {
+     "box": [
+      377,
+      261,
+      402,
+      275
+     ],
+     "answer": "A10",
+     "accept": [
+      "A 10"
+     ],
+     "x": 84.7,
+     "y": 67.35,
+     "w": 7.01,
+     "h": 7.09
+    },
+    {
+     "box": [
+      84,
+      279,
+      116,
+      298
+     ],
+     "answer": "Nucleus arcuatus",
+     "accept": [
+      "Arcuate nucleus",
+      "Ncl. arcuatus",
+      "arcuatus",
+      "Nucleus arcuatus"
+     ],
+     "x": 16.24,
+     "y": 74.07,
+     "w": 8.64,
+     "h": 8.96
+    },
+    {
+     "box": [
+      57,
+      281,
+      82,
+      295
+     ],
+     "answer": "A12",
+     "accept": [
+      "A 12"
+     ],
+     "x": 9.93,
+     "y": 74.81,
+     "w": 7.01,
+     "h": 7.09
+    }
+   ],
+   "bank": [
+    "A6",
+    "Locus coeruleus",
+    "Raphe-Kerne"
+   ],
+   "explanation": "A9 (Substantia nigra) → Striatum = nigrostriatale Bahn (Motorik); A10 (VTA) → Ncl. accumbens/limbisches System = mesolimbisch (Belohnung) und → frontaler Cortex = mesokortikal (exekutive Funktionen); A12 (Ncl. arcuatus) → Hypophysenstiel = tuberoinfundibulär (Hemmung der Prolaktinfreisetzung).",
+   "image": "assets/figures/vl10-bahnen-schema.webp",
+   "iw": 856,
+   "ih": 536
+  },
+  {
+   "id": "vl10-bahnen-funktion",
+   "type": "multi",
+   "topic": "Modulatorische Systeme & dopaminerge Bahnen",
+   "source": "slides",
+   "ref": "VL10 · Folien 5–6",
+   "stem": "Welche Zuordnungen von dopaminerger Bahn und Funktion sind korrekt? (4 richtig)",
+   "options": [
+    {
+     "t": "Nigrostriatale Bahn (A9) – Motorik, Initiation willkürlicher Bewegungen",
+     "correct": true
+    },
+    {
+     "t": "Mesolimbische Bahn (A10) – Belohnungssystem (Ncl. accumbens)",
+     "correct": true
+    },
+    {
+     "t": "Mesokortikale Bahn (A10) – exekutive Funktionen (Aufmerksamkeit, Entscheidungen)",
+     "correct": true
+    },
+    {
+     "t": "Tuberoinfundibuläre Bahn (A12) – Hemmung der Prolaktinfreisetzung",
+     "correct": true
+    },
+    {
+     "t": "Mesolimbische Bahn (A12) – Freisetzung von Dopamin ins Pfortaderblut der Hypophyse",
+     "correct": false
+    },
+    {
+     "t": "Nigrostriatale Bahn (A10) – Belohnung und Suchtentstehung",
+     "correct": false
+    }
+   ],
+   "explanation": "A9 = Substantia nigra (→ Striatum, Motorik; Parkinson), A10 = VTA (→ limbisches System und frontaler Cortex), A12 = Ncl. arcuatus (→ Hypophysenstiel; DA gelangt ins hypophysäre Pfortaderblut – „hormonähnliche Kommunikation“ – und hemmt die Prolaktinfreisetzung)."
+  },
+  {
+   "id": "vl10-erkrankungen",
+   "type": "multi",
+   "topic": "Modulatorische Systeme & dopaminerge Bahnen",
+   "source": "slides",
+   "ref": "VL10 · Folie 7",
+   "stem": "Welche Aussagen zur Beteiligung des dopaminergen Systems an Erkrankungen treffen zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Parkinson: Untergang dopaminerger Neurone der Substantia nigra, verminderte D1-/D2-Stimulation im Striatum",
+     "correct": true
+    },
+    {
+     "t": "Schizophrenie: dopaminerge Überaktivität mit Überstimulation von D2-Rezeptoren; Therapie durch Blockade von D2-Rezeptoren",
+     "correct": true
+    },
+    {
+     "t": "Sucht: drogeninduzierte Blockade der DA-Wiederaufnahme im mesolimbischen Belohnungssystem",
+     "correct": true
+    },
+    {
+     "t": "ADHS: Dysregulation im präfrontalen Cortex, u. a. überaktiver DA-Transporter",
+     "correct": true
+    },
+    {
+     "t": "Parkinson: Überaktivität der VTA mit gesteigerter D2-Stimulation im Ncl. accumbens",
+     "correct": false
+    },
+    {
+     "t": "Schizophrenie: Therapie mit D2-Agonisten",
+     "correct": false
+    }
+   ],
+   "explanation": "Parkinson = Verlust nigrostriataler DA-Neurone (Motorik), Schizophrenie = D2-Überstimulation (Antipsychotika blockieren D2; die Folie verortet die Überaktivität mesokortikal, lehrbuchüblich ist mesolimbische Über- und mesokortikale Unteraktivität), Sucht = mesolimbisches System, ADHS = präfrontaler Cortex (DAT, D4-Rezeptor)."
+  },
+  {
+   "id": "vl10-volumentransmission-anteil",
+   "type": "single",
+   "topic": "Freisetzung & Volumentransmission",
+   "source": "slides",
+   "ref": "VL10 · Folie 9",
+   "stem": "Welcher Anteil der Dopamin-Freisetzung erfolgt laut Vorlesung als Volumentransmission (gegenüber schneller „synaptischer“ Transmission)?",
+   "options": [
+    {
+     "t": "ca. 80 % Volumentransmission, ca. 20 % synaptisch",
+     "correct": true
+    },
+    {
+     "t": "ca. 20 % Volumentransmission, ca. 80 % synaptisch",
+     "correct": false
+    },
+    {
+     "t": "jeweils etwa 50 %",
+     "correct": false
+    },
+    {
+     "t": "praktisch 100 % synaptisch, Volumentransmission nur bei Burst-Feuern",
+     "correct": false
+    }
+   ],
+   "explanation": "Dopamin wird überwiegend (≈ 80 %) aus Varikositäten (boutons en passant) in das umgebende Volumen freigesetzt und diffundiert zu meist extrasynaptisch gelegenen Rezeptoren; nur ≈ 20 % entsprechen schneller synaptischer Transmission."
+  },
+  {
+   "id": "vl10-varikositaeten",
+   "type": "combo",
+   "topic": "Freisetzung & Volumentransmission",
+   "source": "slides",
+   "ref": "VL10 · Folien 9–12",
+   "stem": "Welche Aussagen zur dopaminergen Volumentransmission treffen zu?",
+   "statements": [
+    {
+     "t": "Nur etwa 30 % der DA-Varikositäten besitzen aktivzonen-ähnliche Freisetzungsstellen.",
+     "correct": true
+    },
+    {
+     "t": "Varikositäten ohne Freisetzungsstellen dienen vermutlich als lokale Vesikelspeicher, die Spitzenbedarf puffern.",
+     "correct": true
+    },
+    {
+     "t": "Die meisten DA-Rezeptoren liegen in postsynaptischen Spezialisierungen direkt gegenüber den Varikositäten.",
+     "correct": false
+    },
+    {
+     "t": "Auch die Volumentransmission ist AP-getriggert und Ca²⁺-abhängig; RIM ist für die Freisetzung kritisch.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "AD",
+    "BCD"
+   ],
+   "explanation": "Nur ca. 20 % der Varikositäten sind mit postsynaptischen Spezialisierungen assoziiert; die meisten DA-Rezeptoren liegen extrasynaptisch. Lokale Vesikelspeicher sind nötig, weil das weit entfernte Soma die extrem langen, verzweigten Axone (> 1 Mio. Boutons pro Neuron) nicht rechtzeitig versorgen kann."
+  },
+  {
+   "id": "vl10-divergenz-konvergenz",
+   "type": "single",
+   "topic": "Freisetzung & Volumentransmission",
+   "source": "slides",
+   "ref": "VL10 · Folien 5, 12",
+   "stem": "Was beschreibt das Prinzip „divergent – convergent“ der dopaminergen Projektionen?",
+   "options": [
+    {
+     "t": "Ein DA-Neuron versorgt mehrere tausend Zielneurone, und jedes Zielneuron wird von hunderten DA-Neuronen beeinflusst",
+     "correct": true
+    },
+    {
+     "t": "Ein DA-Neuron innerviert genau ein Zielneuron, das aber Input von tausenden DA-Neuronen erhält",
+     "correct": false
+    },
+    {
+     "t": "DA-Neurone projizieren divergent in den Cortex und erhalten konvergenten Input ausschließlich aus dem Striatum",
+     "correct": false
+    },
+    {
+     "t": "Ein DA-Neuron bildet nur wenige Synapsen, diese aber mit sehr hoher Freisetzungswahrscheinlichkeit",
+     "correct": false
+    }
+   ],
+   "explanation": "Ein einzelnes DA-Neuron bildet über stark verzweigte Axonkollateralen mehr als 1 Million Boutons/Freisetzungsstellen – daraus folgen Divergenz (tausende Zielzellen) und Konvergenz (hunderte DA-Neurone pro Zielzelle)."
+  },
+  {
+   "id": "vl10-tonisch",
+   "type": "multi",
+   "topic": "Feuermuster & Ko-Freisetzung",
+   "source": "slides",
+   "ref": "VL10 · Folien 14–15",
+   "stem": "Welche Aussagen treffen auf die <b>tonische</b> Dopamin-Freisetzung zu? (3 richtig)",
+   "options": [
+    {
+     "t": "Sie beruht auf nicht-synchronem, spontanem AP-Feuern einzelner DA-Neurone",
+     "correct": true
+    },
+    {
+     "t": "DA-Neurone sind dabei intrinsische Schrittmacher mit langsamer 2–4-Hz-Rhythmik",
+     "correct": true
+    },
+    {
+     "t": "Sie führt zu einem moderaten, weiträumigen Anstieg der extrazellulären DA-Konzentration",
+     "correct": true
+    },
+    {
+     "t": "Sie ist über große Populationen von DA-Neuronen synchronisiert",
+     "correct": false
+    },
+    {
+     "t": "Sie begünstigt die gleichzeitige Freisetzung ko-lokalisierter Neuropeptide",
+     "correct": false
+    },
+    {
+     "t": "Sie erzeugt als Antwort auf saliente Reize einen schnellen, transienten DA-Anstieg in hoher Konzentration",
+     "correct": false
+    }
+   ],
+   "explanation": "Die drei falschen Aussagen beschreiben die phasische Freisetzung (synchronisiertes Burst-Feuern auf relevante Reize, hohe transiente [DA], Ko-Freisetzung von Neuropeptiden, rasche Beendigung über DAT)."
+  },
+  {
+   "id": "vl10-schrittmacher",
+   "type": "single",
+   "topic": "Feuermuster & Ko-Freisetzung",
+   "source": "slides",
+   "ref": "VL10 · Folie 14",
+   "stem": "Wodurch entsteht die langsame Schrittmacher-Depolarisation dopaminerger Neurone der Substantia nigra pars compacta?",
+   "options": [
+    {
+     "t": "Durch einen Na⁺-Leck-Einwärtsstrom über TRPC3-Kanäle, der das Membranpotenzial bis zur Schwelle (ca. −45 mV) bringt",
+     "correct": true
+    },
+    {
+     "t": "Durch eine Ca²⁺-aktivierte K⁺-Leitfähigkeit (I<sub>KCa</sub>), die das Membranpotenzial langsam bis zur Schwelle anhebt",
+     "correct": false
+    },
+    {
+     "t": "Durch tonische Aktivierung von NMDA-Rezeptoren durch Umgebungsglutamat aus benachbarten Astrozyten",
+     "correct": false
+    },
+    {
+     "t": "Durch Cl⁻-Einstrom über extrasynaptische GABA<sub>A</sub>-Rezeptoren, die durch Umgebungs-GABA tonisch aktiv sind",
+     "correct": false
+    }
+   ],
+   "explanation": "TRP-Kanäle (transient receptor potential, TRPC3) tragen den langsamen Na⁺-Leckstrom; die Ca²⁺-aktivierte K⁺-Leitfähigkeit I(KCa) vermittelt dagegen die Repolarisation – der typische Ablenker."
+  },
+  {
+   "id": "vl10-tonisch-phasisch-offen",
+   "type": "open",
+   "topic": "Feuermuster & Ko-Freisetzung",
+   "source": "slides",
+   "ref": "VL10 · Folien 14–15",
+   "stem": "Vergleichen Sie tonische und phasische Dopamin-Freisetzung in Stichworten (Auslöser/Feuermuster, DA-Konzentration, Beendigung).",
+   "points": [
+    "Tonisch: spontanes, nicht-synchrones Schrittmacher-Feuern einzelner DA-Neurone (2–4 Hz)",
+    "Tonisch: moderater, weiträumiger extrazellulärer DA-Anstieg; DA diffundiert zu extrasynaptischen Rezeptoren",
+    "Tonisch: kaum durch DAT-Wiederaufnahme begrenzt – DA entweicht aus dem Spalt und hält einen niedrigen, anhaltenden extrasynaptischen Grundpegel (keine rasche Beendigung)",
+    "Phasisch: synchronisiertes Burst-Feuern größerer DA-Neuronen-Populationen auf saliente (relevante) Reize",
+    "Phasisch: schneller, transienter DA-Anstieg in hoher Konzentration",
+    "Phasisch: begünstigt die Ko-Freisetzung von DA + Neuropeptiden",
+    "Phasisch: rasche Beendigung durch Wiederaufnahme über DAT (Kinetik wie an klassischer Synapse)"
+   ],
+   "explanation": "Schnelle, zeitlich präzise DA-Signale (phasisch) sind Voraussetzung für „synaptische“ Transmission; die tonische Freisetzung stellt den extrazellulären Grundpegel ein."
+  },
+  {
+   "id": "vl10-ko-freisetzung",
+   "type": "multi",
+   "topic": "Feuermuster & Ko-Freisetzung",
+   "source": "slides",
+   "ref": "VL10 · Folien 15–16",
+   "stem": "Welche Aussagen zur Modulation der Freisetzung und zur Ko-Freisetzung an dopaminergen Neuronen treffen zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Die DA-Freisetzung wird über präsynaptische mGluRs, GABA-Rezeptoren und CB1-Endocannabinoid-Rezeptoren moduliert",
+     "correct": true
+    },
+    {
+     "t": "DA-Neurone setzen zusätzlich GABA frei, das an postsynaptische Rezeptoren bindet",
+     "correct": true
+    },
+    {
+     "t": "DA und Glutamat werden ko-freigesetzt (beobachtet im Ncl. accumbens)",
+     "correct": true
+    },
+    {
+     "t": "Die gleichzeitige Freisetzung von DA und ko-lokalisierten Neuropeptiden erfordert Burst-Feuern",
+     "correct": true
+    },
+    {
+     "t": "Ko-freigesetzte Transmitter liegen stets im selben Vesikeltyp wie Dopamin",
+     "correct": false
+    },
+    {
+     "t": "Die Ko-Freisetzung von Neuropeptiden findet vor allem beim tonischen Feuern statt",
+     "correct": false
+    }
+   ],
+   "explanation": "Neuropeptide liegen in Large Dense-Core Vesicles, getrennt von den kleinen DA-Vesikeln – deshalb braucht ihre Ko-Freisetzung mit DA hochfrequentes Burst-Feuern. Ko-freigesetzte Transmitter liegen also nicht stets im selben Vesikeltyp wie DA. Umgekehrt gilt aber auch nicht „immer getrennt“: GABA wird in DA-Neuronen über VMAT2 sogar in die DA-Vesikel verpackt."
+  },
+  {
+   "id": "vl10-d1-familie",
+   "type": "single",
+   "topic": "Dopaminrezeptoren: Typen & Lokalisation",
+   "source": "slides",
+   "ref": "VL10 · Folien 18–19",
+   "stem": "Welche Dopaminrezeptor-Subtypen bilden die D1-ähnliche (D1-like) Familie?",
+   "options": [
+    {
+     "t": "D1 und D5",
+     "correct": true
+    },
+    {
+     "t": "D1 und D2",
+     "correct": false
+    },
+    {
+     "t": "D1, D3 und D4",
+     "correct": false
+    },
+    {
+     "t": "D2, D3 und D4",
+     "correct": false
+    }
+   ],
+   "explanation": "Fünf Gene, alle metabotrop: D1-like = D1, D5 (Gs, AC ↑); D2-like = D2, D3, D4 (Gi, AC ↓). D1-like teilen untereinander 80 % Aminosäure-Homologie, mit D2-like nur 35 %."
+  },
+  {
+   "id": "vl10-rezeptor-eigenschaften",
+   "type": "combo",
+   "topic": "Dopaminrezeptoren: Typen & Lokalisation",
+   "source": "slides",
+   "ref": "VL10 · Folien 19–20",
+   "stem": "Welche Aussagen zu Dopaminrezeptoren treffen zu?",
+   "statements": [
+    {
+     "t": "D1- und D2-Rezeptoren werden 10- bis 100-mal stärker exprimiert als D3, D4 und D5.",
+     "correct": true
+    },
+    {
+     "t": "D1-ähnliche Rezeptoren haben eine 10- bis 100-fach höhere Affinität für Dopamin als D2-ähnliche.",
+     "correct": false
+    },
+    {
+     "t": "Der D2-Rezeptor existiert als D2S und D2L; D2L hat 29 zusätzliche Aminosäuren in der 3. intrazellulären Schleife (G-Protein-Bindung).",
+     "correct": true
+    },
+    {
+     "t": "Die Expression verschiedener DA-Rezeptoren in derselben Hirnregion ist im Allgemeinen nicht überlappend.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ACD",
+    "AC",
+    "ABCD",
+    "CD",
+    "ABD"
+   ],
+   "explanation": "Es ist umgekehrt: D2-ähnliche Rezeptoren haben die 10- bis 100-fach höhere DA-Affinität. Merksatz der Folie: „D2-like receptors: highest expression levels – highest DA affinities“."
+  },
+  {
+   "id": "vl10-niedrige-da-konzentration",
+   "type": "single",
+   "topic": "Dopaminrezeptoren: Typen & Lokalisation",
+   "source": "slides",
+   "ref": "VL10 · Folie 19",
+   "stem": "Welche Rezeptoren werden bei <b>niedriger</b> extrazellulärer Dopamin-Konzentration bevorzugt aktiviert?",
+   "options": [
+    {
+     "t": "D2-ähnliche Rezeptoren, wegen ihrer 10- bis 100-fach höheren DA-Affinität",
+     "correct": true
+    },
+    {
+     "t": "D1-ähnliche Rezeptoren, wegen ihrer höheren Sequenzhomologie",
+     "correct": false
+    },
+    {
+     "t": "D1- und D2-ähnliche Rezeptoren gleichermaßen",
+     "correct": false
+    },
+    {
+     "t": "Ausschließlich D5-Rezeptoren",
+     "correct": false
+    }
+   ],
+   "explanation": "Bei niedriger [DA] binden bevorzugt D2-like; erst bei hoher [DA] werden D1-like und D2-like stimuliert. Das Gleichgewicht von D1- und D2-Signalen hängt also von der extrazellulären DA-Konzentration ab."
+  },
+  {
+   "id": "vl10-autorezeptoren",
+   "type": "multi",
+   "topic": "Dopaminrezeptoren: Typen & Lokalisation",
+   "source": "slides",
+   "ref": "VL10 · Folien 21–22",
+   "stem": "Welche Wirkungen hat die Stimulation dopaminerger <b>Autorezeptoren</b> (typischerweise D2S)? (4 richtig)",
+   "options": [
+    {
+     "t": "Somatodendritisch: Hemmung der Feuerrate der DA-Zelle",
+     "correct": true
+    },
+    {
+     "t": "Aktivierung der DA-Wiederaufnahme über den DAT",
+     "correct": true
+    },
+    {
+     "t": "Hemmung der DA-Synthese",
+     "correct": true
+    },
+    {
+     "t": "Präsynaptisch: Hemmung der DA-Freisetzung (negatives Feedback)",
+     "correct": true
+    },
+    {
+     "t": "Hemmung der ACh-Freisetzung striataler cholinerger Neurone",
+     "correct": false
+    },
+    {
+     "t": "Hemmung der Prolaktinfreisetzung in der Hypophyse",
+     "correct": false
+    }
+   ],
+   "explanation": "Autorezeptoren sitzen auf den DA-Neuronen selbst und vermitteln negatives Feedback. Die Hemmung der ACh- bzw. Prolaktin-Freisetzung sind Heterorezeptor-Funktionen (D2L auf Nicht-DA-Zellen)."
+  },
+  {
+   "id": "vl10-auto-hetero-offen",
+   "type": "open",
+   "topic": "Dopaminrezeptoren: Typen & Lokalisation",
+   "source": "slides",
+   "ref": "VL10 · Folien 21–22",
+   "stem": "Erklären Sie den Unterschied zwischen dopaminergen Auto- und Heterorezeptoren (Lokalisation, typischer Subtyp, Funktion, Beispiel).",
+   "points": [
+    "Autorezeptor: auf DA-Neuronen selbst (Soma, Dendriten, Varikositäten), empfindlich für den eigenen Transmitter",
+    "Autorezeptor: typischerweise D2S",
+    "Autorezeptor-Funktion: hemmt Feuern, DA-Synthese und -Freisetzung, aktiviert den DAT (negatives Feedback)",
+    "Heterorezeptor: auf Nicht-DA-Neuronen („postsynaptisch“ zu den DA-Zellen); moduliert die Erregbarkeit dieses Zielneurons",
+    "Heterorezeptor: typischerweise D2L",
+    "Beispiele: D2L auf cholinergen Striatum-Neuronen (hemmt ACh-Freisetzung), D2L in der Hypophyse (hemmt Prolaktin/α-MSH)"
+   ],
+   "explanation": "Achtung Begriff: In der Klausurfrage zu „dopaminergen Heterorezeptoren“ und Heteromerisierung sind Rezeptor-Heteromere gemeint (siehe eigene Fragen); auf Folie 22 bezeichnet „Heterorezeptor“ dagegen DA-Rezeptoren auf Nicht-DA-Zellen."
+  },
+  {
+   "id": "vl10-gpcr-interaktionspartner",
+   "type": "single",
+   "topic": "Signaltransduktion (Gs/Gi, DARPP-32)",
+   "source": "slides",
+   "ref": "VL10 · Folie 24",
+   "stem": "Nur drei Proteinfamilien interagieren direkt mit metabotropen Rezeptoren (GPCRs). Welche?",
+   "options": [
+    {
+     "t": "Trimere G-Proteine, G-Protein-gekoppelte Rezeptorkinasen (GRKs) und Arrestine",
+     "correct": true
+    },
+    {
+     "t": "Trimere G-Proteine, Adenylylcyclasen und Proteinkinase A",
+     "correct": false
+    },
+    {
+     "t": "G-Proteine, Phospholipase C und Arrestine",
+     "correct": false
+    },
+    {
+     "t": "GRKs, Proteinphosphatase-1 und DARPP-32",
+     "correct": false
+    }
+   ],
+   "explanation": "GRK-/Arrestin-Aktivitäten: Silencing (Desensitisierung), Trafficking (Internalisierung) und Signaling (Aktivierung eigener intrazellulärer Wege als Transducer). AC, PLC und PKA sind nachgeschaltete Effektoren."
+  },
+  {
+   "id": "vl10-d1-d2-signal",
+   "type": "combo",
+   "topic": "Signaltransduktion (Gs/Gi, DARPP-32)",
+   "source": "slides",
+   "ref": "VL10 · Folien 26–29",
+   "stem": "Welche Aussagen zur Signaltransduktion der Dopaminrezeptoren treffen zu?",
+   "statements": [
+    {
+     "t": "D1-ähnliche Rezeptoren koppeln an Gs, stimulieren die Adenylylcyclase und erhöhen die Ca²⁺-Leitfähigkeit.",
+     "correct": true
+    },
+    {
+     "t": "D2-ähnliche Rezeptoren koppeln an Gi, hemmen die Adenylylcyclase und erhöhen die K⁺-Leitfähigkeit.",
+     "correct": true
+    },
+    {
+     "t": "D2-Stimulation führt zur Phosphorylierung von DARPP-32 und damit zur Hemmung der Proteinphosphatase-1.",
+     "correct": false
+    },
+    {
+     "t": "Der D2R aktiviert über die βγ-Untereinheit von Gi GIRK-Kanäle (I<sub>K</sub>).",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "ACD"
+   ],
+   "explanation": "Nur der D1-Weg (Gs → cAMP ↑ → PKA) phosphoryliert DARPP-32, das dann PP-1 hemmt. D2 senkt cAMP/PKA → DARPP-32 bleibt unphosphoryliert → PP-1 ist aktiv. Gz-α vermittelt beim D2R zusätzlich die AC-Hemmung."
+  },
+  {
+   "id": "vl10-d1-kaskade",
+   "type": "order",
+   "topic": "Signaltransduktion (Gs/Gi, DARPP-32)",
+   "source": "slides",
+   "ref": "VL10 · Folien 26–27",
+   "stem": "Bringen Sie die Schritte der D1-Rezeptor-Signalkaskade in die richtige Reihenfolge.",
+   "items": [
+    "Dopamin bindet an den D1-Rezeptor",
+    "Aktivierung von Gs",
+    "Stimulation der Adenylylcyclase",
+    "Anstieg von cAMP",
+    "Aktivierung der Proteinkinase A (PKA)",
+    "Phosphorylierung von DARPP-32",
+    "Hemmung der Proteinphosphatase-1 (PP-1)"
+   ],
+   "explanation": "Ergebnis: Zuvor phosphorylierte Zielproteine (z. B. NMDA-Rezeptoren, Pumpen, Transkriptionsfaktoren) bleiben aktiv → die Erregbarkeit des Neurons steigt."
+  },
+  {
+   "id": "vl10-darpp32",
+   "type": "single",
+   "topic": "Signaltransduktion (Gs/Gi, DARPP-32)",
+   "source": "slides",
+   "ref": "VL10 · Folie 27",
+   "stem": "Welche Folge hat die D1-vermittelte Phosphorylierung von DARPP-32 im dopaminozeptiven Neuron?",
+   "options": [
+    {
+     "t": "DARPP-32 hemmt PP-1; phosphorylierte Zielproteine (z. B. NMDA-Rezeptoren) bleiben aktiv → Erregbarkeit steigt",
+     "correct": true
+    },
+    {
+     "t": "DARPP-32 aktiviert PP-1; Zielproteine werden dephosphoryliert → das Neuron wird gedämpft",
+     "correct": false
+    },
+    {
+     "t": "DARPP-32 hemmt die Adenylylcyclase → negatives Feedback auf die cAMP-Bildung",
+     "correct": false
+    },
+    {
+     "t": "DARPP-32 öffnet GIRK-Kanäle → Hyperpolarisation",
+     "correct": false
+    }
+   ],
+   "explanation": "DARPP-32 (dopamine- and cAMP-regulated phosphoprotein-32) ist phosphoryliert ein potenter Hemmer von PP-1 – „Hemmung des Hemmers“. Die zweite Option beschreibt den D2-Weg (DARPP-32 inaktiv → Disinhibition von PP-1 → Dämpfung)."
+  },
+  {
+   "id": "vl10-signalwege-tabelle",
+   "type": "label",
+   "topic": "Signaltransduktion (Gs/Gi, DARPP-32)",
+   "source": "slides",
+   "ref": "VL10 · Folien 28–29",
+   "stem": "Ergänzen Sie in der Übersicht die signalgebenden Moleküle (Signaling Molecule) der Dopaminrezeptoren.",
+   "src": {
+    "pdf": "VL10Dopamine Neurotransmission_11Nov26.pdf",
+    "page": 29,
+    "crop": [
+     65,
+     90,
+     680,
+     392
+    ],
+    "hide": [
+     [
+      233,
+      366,
+      298,
+      385
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      255,
+      152,
+      276,
+      176
+     ],
+     "answer": "Gs",
+     "accept": [
+      "G s",
+      "Gαs",
+      "G alpha s",
+      "Gs-Protein",
+      "stimulierendes G-Protein",
+      "Gs/olf",
+      "Gαs/olf",
+      "Gs/Golf",
+      "Golf",
+      "Gαolf"
+     ],
+     "x": 30.49,
+     "y": 19.7,
+     "w": 4.23,
+     "h": 9.6
+    },
+    {
+     "box": [
+      256,
+      185,
+      275,
+      209
+     ],
+     "answer": "Gi",
+     "accept": [
+      "G i",
+      "Gαi",
+      "Gi/o",
+      "Gi-Protein",
+      "inhibitorisches G-Protein"
+     ],
+     "x": 30.65,
+     "y": 30.63,
+     "w": 3.9,
+     "h": 9.6
+    },
+    {
+     "box": [
+      250,
+      216,
+      282,
+      239
+     ],
+     "answer": "Gz-α",
+     "accept": [
+      "Gz",
+      "Gzα",
+      "Gz alpha",
+      "Gz-alpha",
+      "Gαz"
+     ],
+     "x": 29.67,
+     "y": 40.89,
+     "w": 6.02,
+     "h": 9.27
+    },
+    {
+     "box": [
+      249,
+      241,
+      283,
+      262
+     ],
+     "answer": "Gi-βγ",
+     "accept": [
+      "Gβγ",
+      "Gi beta gamma",
+      "βγ",
+      "Gi-betagamma",
+      "beta-gamma"
+     ],
+     "x": 29.51,
+     "y": 49.17,
+     "w": 6.34,
+     "h": 8.61
+    },
+    {
+     "box": [
+      255,
+      286,
+      276,
+      309
+     ],
+     "answer": "Gq",
+     "accept": [
+      "G q",
+      "Gαq",
+      "Gq/11",
+      "Gq-Protein"
+     ],
+     "x": 30.49,
+     "y": 64.07,
+     "w": 4.23,
+     "h": 9.27
+    },
+    {
+     "box": [
+      233,
+      334,
+      298,
+      353
+     ],
+     "answer": "β-Arrestin",
+     "accept": [
+      "beta-Arrestin",
+      "Arrestin",
+      "β-arrestin",
+      "b-Arrestin"
+     ],
+     "x": 26.91,
+     "y": 79.97,
+     "w": 11.38,
+     "h": 7.95
+    }
+   ],
+   "bank": [
+    "G12/13",
+    "Gt"
+   ],
+   "explanation": "Kanonisch: D1-like → Gs/olf (im Striatum v. a. Gαolf; AC ↑, cAMP ↑, I<sub>Ca</sub>); D2-like → Gi (AC ↓, I<sub>K</sub> ↑, I<sub>Ca</sub> ↓); D2R zusätzlich über Gz-α (AC ↓) und Gi-βγ (GIRK, K⁺ ↑); D1R/D2R- und D2R/D5R-Heteromere → Gq (PLC, IP₃ + DAG, Ca²⁺ ↑). Nicht-kanonisch: β-Arrestin → ERK (D1R) bzw. Akt/GSK (D2R). Hinweis: Auf der Folie steht bei D2-like „D2,3,5“ – gemeint sind D2, D3, D4.",
+   "image": "assets/figures/vl10-signalwege-tabelle.webp",
+   "iw": 1230,
+   "ih": 604
+  },
+  {
+   "id": "vl10-nichtkanonisch",
+   "type": "single",
+   "topic": "Signaltransduktion (Gs/Gi, DARPP-32)",
+   "source": "slides",
+   "ref": "VL10 · Folien 29, 31",
+   "stem": "Welche nachgeschalteten Effektoren nutzt die nicht-kanonische (β-Arrestin-abhängige) Signalgebung der Dopaminrezeptoren laut Übersicht?",
+   "options": [
+    {
+     "t": "D1R: β-Arrestin → ERK; D2R: β-Arrestin → Akt/GSK",
+     "correct": true
+    },
+    {
+     "t": "D1R: β-Arrestin → PKA; D2R: β-Arrestin → PP-1",
+     "correct": false
+    },
+    {
+     "t": "D1R und D2R: β-Arrestin → Gq → PLC",
+     "correct": false
+    },
+    {
+     "t": "D1R: β-Arrestin → Adenylylcyclase; D2R: β-Arrestin → GIRK",
+     "correct": false
+    }
+   ],
+   "explanation": "Kanonisch = G-Protein-Signalgebung (Gs, Gi, Gz, Gq); nicht-kanonisch = β-Arrestin-Signalgebung (Folie 29): D1R → β-Arrestin → ERK-Aktivierung; D2R → β-Arrestin → Akt/GSK. Beim D2R bildet β-Arrestin 2 mit PP2A einen Komplex, der Akt hemmt – dadurch wird GSK-3β enthemmt. Laut Folie 31 vermitteln GRK5/6 (anders als GRK2/3) die β-Arrestin-Signalgebung."
+  },
+  {
+   "id": "vl10-biased-unbiased",
+   "type": "open",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL10 · Folien 24, 30–31",
+   "stem": "Was sind unbiased ligands und was sind biased ligands?",
+   "points": [
+    "Unbiased ligand: Bindung bewirkt eine Konformationsänderung, die Bindungsstellen für beide Transducer (A + B) schafft",
+    "Unbiased ligand aktiviert daher beide Signalwege (G-Protein und β-Arrestin) – Beispiel: Morphin am µ-Opioidrezeptor",
+    "Biased ligand: bindet an dieselbe bzw. nahezu dieselbe Stelle, induziert aber eine andere Konformation",
+    "Biased ligand aktiviert bevorzugt nur einen Signalweg (Transducer A oder B) = ligand-directed signaling",
+    "Unterscheidung: G-Protein-biased vs. Arrestin-biased Agonist",
+    "Folge: unterschiedliche funktionelle Effekte am selben Rezeptor (z. B. Analgesie vs. Atemdepression)"
+   ],
+   "need": 4,
+   "explanation": "Definition (Folie 30): Biased signaling ist die Fähigkeit von Pharmaka, an identische oder nahezu identische Stellen eines Rezeptors zu binden und unterschiedliche Sets nachgeschalteter Signalkaskaden mit unterschiedlichen funktionellen Ergebnissen zu aktivieren.",
+   "note": "Offene Frage in WS23/24 (Nr. 34) und WS25/26 („Definitionen: biased/unbiased ligand“); Lösung nicht überliefert – Musterlösung nach Folie 30."
+  },
+  {
+   "id": "vl10-morphin-unbiased",
+   "type": "single",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "slides",
+   "ref": "VL10 · Folie 30",
+   "stem": "Morphin am µ-Opioidrezeptor dient in der Vorlesung als Beispiel für einen …",
+   "options": [
+    {
+     "t": "unbiased ligand – aktiviert beide Signalwege (G-Protein und Arrestin)",
+     "correct": true
+    },
+    {
+     "t": "G-Protein-biased Agonisten – aktiviert nur den G-Protein-Weg",
+     "correct": false
+    },
+    {
+     "t": "Arrestin-biased Agonisten – aktiviert nur den Arrestin-Weg",
+     "correct": false
+    },
+    {
+     "t": "negativen allosterischen Modulator – blockiert beide Signalwege",
+     "correct": false
+    }
+   ],
+   "explanation": "Morphin aktiviert postsynaptisch beide Wege (laut Schema: Atemdepression und Analgesie); biased Agonisten aktivieren gezielt nur einen Weg und könnten so erwünschte und unerwünschte Wirkungen trennen."
+  },
+  {
+   "id": "vl10-grk-arrestin",
+   "type": "multi",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "slides",
+   "ref": "VL10 · Folien 24, 31",
+   "stem": "Welche Aussagen zu GRKs und β-Arrestinen treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "GRK2/3 phosphorylieren den Rezeptor → β-Arrestin-Rekrutierung → Desensitisierung → Internalisierung",
+     "correct": true
+    },
+    {
+     "t": "GRK5/6 vermitteln β-Arrestin-abhängige Signalgebung und ERK-Aktivierung",
+     "correct": true
+    },
+    {
+     "t": "β-Arrestine können selbst als Transducer eigene intrazelluläre Signalwege aktivieren",
+     "correct": true
+    },
+    {
+     "t": "Arrestine sind Second-Messenger-generierende Enzyme wie die Adenylylcyclase",
+     "correct": false
+    },
+    {
+     "t": "GRKs phosphorylieren ausschließlich ionotrope Rezeptoren",
+     "correct": false
+    }
+   ],
+   "explanation": "GRK/Arrestin: Silencing (Desensitisierung), Trafficking (Internalisierung, Clathrin/AP2) und Signaling (β-Arrestin-Gerüst mit Raf–MEK–ERK). Second-Messenger-generierende Enzyme (E) sind z. B. AC oder PLC."
+  },
+  {
+   "id": "vl10-heteromere-beispiele",
+   "type": "open",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL10 · Folien 33–36",
+   "stem": "Nennen Sie 3 Beispiele für dopaminerge Rezeptor-Heteromere („dopaminerge Heterorezeptoren“).",
+   "points": [
+    "D1/D2 (Iso-Rezeptor-Heteromer, im Striatum nachgewiesen)",
+    "D1/D3",
+    "D1/H3 (mit Histaminrezeptor)",
+    "D2-D2/A2A-A2A (mit Adenosinrezeptor → Hetero-Tetramer)",
+    "D4/β1 (mit adrenergem Rezeptor)",
+    "D2/5-HT1A (mit Serotoninrezeptor)",
+    "D2/mGluR5 (mit metabotropem Glutamatrezeptor)",
+    "D1/NMDA bzw. D2/NR2B (mit ionotropem Glutamatrezeptor)"
+   ],
+   "need": 3,
+   "explanation": "Iso-Rezeptoren = DA-Rezeptor + DA-Rezeptor; Nicht-Iso-Rezeptoren = DA-Rezeptor + Rezeptor eines anderen Transmitters (metabotrop, ionotrop oder Tyrosinkinase-Rezeptor). Die Dimerisierung erfolgt über die TM-Domänen 5 und 6 und wird durch Agonisten stabilisiert.",
+   "note": "Teil 1 der Klausurfrage WS23/24 Nr. 39 (in WS25/26 zweimal gestellt); Teil 2 siehe „Veränderungen durch Heteromerisierung“. Mit „Heterorezeptoren“ sind hier Heteromere gemeint."
+  },
+  {
+   "id": "vl10-heteromere-veraenderungen",
+   "type": "open",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL10 · Folien 32–36, 42",
+   "stem": "Zu welchen Veränderungen (mind. 3) führt die Heteromerisierung von Dopaminrezeptoren? Wie funktionieren die Heteromere im Gegensatz zu den Einzelrezeptoren (z. B. D1/D2-Heterodimer)?",
+   "points": [
+    "Veränderte Ligandenbindungsaffinität (gegenseitige allosterische Modulation der Partner)",
+    "Dadurch veränderte Wirksamkeit (efficacy) der nachgeschalteten Signalkaskaden",
+    "Wechsel der G-Protein-Präferenz: D1/D2 koppelt an Gq (statt Gs bzw. Gi) → PLC → IP₃ → Ca²⁺-Freisetzung",
+    "Signalgebung über G-Protein-unabhängige Wege (β-Arrestin)",
+    "Antwort auf neue Liganden; teilweiser Verlust der ursprünglichen Eigenschaften → funktionell neue Rezeptorkomplexe",
+    "Beispiel D2R/A2AR: A2A-Agonisten senken Affinität/Wirksamkeit von D2-Liganden; D2-Agonisten hemmen die A2A-vermittelte AC-Aktivierung; Wechsel vom cAMP- zum PLC-Weg",
+    "Beispiel D1/NMDA: D1 verstärkt NMDA-Antworten und LTP; D2/NR2B hemmt NMDA-Ströme"
+   ],
+   "need": 3,
+   "explanation": "Kernaussage (Folie 35): Die neuen Rezeptorkomplexe haben physiologische Eigenschaften, die sich von denen der Einzelrezeptoren unterscheiden – die klassische Einteilung nach cAMP-Stimulation oder -Hemmung reicht daher nicht mehr aus.",
+   "note": "Teil 2 der Klausurfrage WS23/24 Nr. 39 / WS25/26 („3 Auswirkungen“, „Wie sind sie anders als die Einzelrezeptoren?“). Lösung nicht überliefert – Musterlösung nach Folien 33–35."
+  },
+  {
+   "id": "vl10-d1d2-gq",
+   "type": "single",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "slides",
+   "ref": "VL10 · Folien 29, 35",
+   "stem": "An welches G-Protein koppelt das D1R/D2R-Heteromer, und mit welcher Folge?",
+   "options": [
+    {
+     "t": "An Gq → PLC-Aktivierung → IP₃ → intrazelluläre Ca²⁺-Freisetzung",
+     "correct": true
+    },
+    {
+     "t": "An Gs → Adenylylcyclase ↑ → cAMP ↑",
+     "correct": false
+    },
+    {
+     "t": "An Gi/o → Adenylylcyclase ↓ → cAMP ↓",
+     "correct": false
+    },
+    {
+     "t": "An Gs und Gi gleichzeitig → keine Nettoänderung von cAMP",
+     "correct": false
+    }
+   ],
+   "explanation": "D1R/D2R-Heteromere binden atypisch weder Gs noch Gi/o, sondern rekrutieren über allosterische Interaktionen Gq. Die meisten Befunde zu Rezeptor-Oligomeren stammen allerdings aus heterologen Expressionssystemen."
+  },
+  {
+   "id": "vl10-a2a-d2-tetramer",
+   "type": "combo",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "slides",
+   "ref": "VL10 · Folien 34–35, 42",
+   "stem": "Welche Aussagen zum D2R–A2AR-Hetero-Tetramer im Striatum treffen zu?",
+   "statements": [
+    {
+     "t": "A2A-Agonisten (Adenosin) senken über eine allosterische Interaktion Affinität und Wirksamkeit von D2R-Liganden.",
+     "correct": true
+    },
+    {
+     "t": "D2R-Agonisten hemmen die A2AR-vermittelte Aktivierung der Adenylylcyclase (antagonistische Gs-Gi-Interaktion).",
+     "correct": true
+    },
+    {
+     "t": "Die antagonistische Interaktion bewirkt einen Wechsel vom cAMP- zum PLC-abhängigen Signalweg.",
+     "correct": true
+    },
+    {
+     "t": "Der Komplex besteht aus je zwei D1- und zwei A1-Rezeptoren.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BC"
+   ],
+   "explanation": "Das Tetramer besteht aus D2R-D2R und A2AR-A2AR (Nicht-Iso-Rezeptor-Heteromer mit Adenosinrezeptor). Es steuert die Erregbarkeit striataler MSNs und ist ein Ziel der Parkinson-Pharmakotherapie."
+  },
+  {
+   "id": "vl10-d-nmda",
+   "type": "multi",
+   "topic": "Biased Signaling & Rezeptor-Heteromere",
+   "source": "slides",
+   "ref": "VL10 · Folie 36",
+   "stem": "Welche Aussagen zur direkten Interaktion von Dopamin- und NMDA-Rezeptoren treffen zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Der C-Terminus des D1-Rezeptors bindet selektiv an die NMDA-Untereinheiten NR1 und NR2A",
+     "correct": true
+    },
+    {
+     "t": "D1 verstärkt NMDA-Antworten und NMDA-vermittelte LTP; D1-Blockade verhindert LTP",
+     "correct": true
+    },
+    {
+     "t": "Die i3-Schleife des D2-Rezeptors bindet an NR2B und hemmt NMDA-Ströme",
+     "correct": true
+    },
+    {
+     "t": "D1 erhöht die Expression von NR2A und beeinflusst die subzelluläre Lokalisation von NMDA-Rezeptoren",
+     "correct": true
+    },
+    {
+     "t": "D2-Stimulation verstärkt den NMDA-vermittelten Ca²⁺-Strom",
+     "correct": false
+    },
+    {
+     "t": "Der D2-Rezeptor bindet über seinen C-Terminus an NR1",
+     "correct": false
+    }
+   ],
+   "explanation": "D1/NMDA: Verstärkung der Erregung (Ca²⁺ → PKC, PKA, DARPP-32; LTP). D2/NR2B: Hemmung der NMDA-Ströme und -Phosphorylierung („depression of excitation“)."
+  },
+  {
+   "id": "vl10-kokain-amphetamin",
+   "type": "single",
+   "topic": "Dopamintransporter & Sucht",
+   "source": "slides",
+   "ref": "VL10 · Folie 39",
+   "stem": "Wie unterscheiden sich Kokain und Amphetamin in ihrer Wirkung am Dopamintransporter (DAT)?",
+   "options": [
+    {
+     "t": "Kokain blockiert kompetitiv die DA-Bindungsstelle (Wiederaufnahme gehemmt); Amphetamin kehrt den DAT-Transport um (DA-Freisetzung)",
+     "correct": true
+    },
+    {
+     "t": "Kokain kehrt den DAT-Transport um; Amphetamin blockiert die Wiederaufnahme allosterisch",
+     "correct": false
+    },
+    {
+     "t": "Beide hemmen die Tyrosinhydroxylase und senken so die DA-Synthese",
+     "correct": false
+    },
+    {
+     "t": "Kokain bindet allosterisch, sodass seine Wirkung gezielt durch Blockade dieser Bindungsstelle antagonisiert werden kann",
+     "correct": false
+    }
+   ],
+   "explanation": "Beide erhöhen die DA-Konzentration an Synapsen des Belohnungssystems (Ncl. accumbens, PFC). Die Kokain-Bindungsstelle überlappt mit der Substrat-Bindungsstelle (nicht allosterisch) – Kokain lässt sich daher nicht einfach selektiv antagonisieren. Amphetamin steigert zusätzlich die DA-Synthese und senkt den Abbau."
+  },
+  {
+   "id": "vl10-sucht-belohnung",
+   "type": "combo",
+   "topic": "Dopamintransporter & Sucht",
+   "source": "slides",
+   "ref": "VL10 · Folien 38–39",
+   "stem": "Welche Aussagen zu Suchtmitteln und dem Belohnungssystem treffen zu?",
+   "statements": [
+    {
+     "t": "Laut Folie ist der gemeinsame Effekt aller Suchtmittel eine gesteigerte Aktivität des dopaminergen VTA-Systems (A10).",
+     "correct": true
+    },
+    {
+     "t": "Gemeinsame Folge ist eine erhöhte DA-Konzentration im Ncl. accumbens und im präfrontalen Cortex.",
+     "correct": true
+    },
+    {
+     "t": "Opioide, Benzodiazepine und Cannabinoide wirken laut Schema über eine Hemmung GABAerger Neurone in der VTA.",
+     "correct": true
+    },
+    {
+     "t": "Kokain senkt die extrazelluläre DA-Konzentration, weil es die vesikuläre Freisetzung blockiert.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BCD"
+   ],
+   "explanation": "Opioide/Benzodiazepine/Cannabinoide hemmen GABAerge Neurone in der VTA (Disinhibition der DA-Neurone), Nikotin aktiviert die DA-Neurone direkt, Kokain/Amphetamin/MDMA wirken an den DA-Terminalen (sie erhöhen DA dort, ohne die Feuerrate der VTA-Neurone zu steigern). Kokain blockiert die Wiederaufnahme und erhöht so extrazelluläres DA."
+  },
+  {
+   "id": "vl10-belohnungssystem-schema",
+   "type": "label",
+   "topic": "Dopamintransporter & Sucht",
+   "source": "slides",
+   "ref": "VL10 · Folie 38",
+   "stem": "Beschriften Sie das Schema des Belohnungssystems und ordnen Sie die Angriffsorte der Suchtmittel zu (blau = Dopamin, rot = GABA, grün = Glutamat).",
+   "src": {
+    "pdf": "VL10Dopamine Neurotransmission_11Nov26.pdf",
+    "page": 38,
+    "crop": [
+     20,
+     115,
+     700,
+     505
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      157,
+      150,
+      285,
+      170
+     ],
+     "answer": "Präfrontaler Cortex",
+     "accept": [
+      "prefrontal cortex",
+      "PFC",
+      "präfrontaler Kortex",
+      "Präfrontalcortex"
+     ],
+     "x": 19.78,
+     "y": 8.33,
+     "w": 19.56,
+     "h": 6.41
+    },
+    {
+     "box": [
+      78,
+      388,
+      169,
+      429
+     ],
+     "answer": "Nucleus accumbens",
+     "accept": [
+      "Ncl. accumbens",
+      "accumbens",
+      "NAc"
+     ],
+     "x": 8.16,
+     "y": 69.36,
+     "w": 14.12,
+     "h": 11.79
+    },
+    {
+     "box": [
+      560,
+      381,
+      695,
+      422
+     ],
+     "answer": "Ventrales tegmentales Areal (VTA)",
+     "accept": [
+      "VTA",
+      "ventral tegmental area",
+      "ventrales Tegmentum"
+     ],
+     "x": 79.04,
+     "y": 67.56,
+     "w": 20.59,
+     "h": 11.79
+    },
+    {
+     "box": [
+      370,
+      129,
+      487,
+      189
+     ],
+     "answer": "Kokain, Amphetamin, MDMA (Ecstasy)",
+     "accept": [
+      "Kokain",
+      "Amphetamin",
+      "MDMA",
+      "Ecstasy",
+      "cocaine",
+      "amphetamine",
+      "Kokain/Amphetamin/MDMA"
+     ],
+     "x": 51.1,
+     "y": 2.95,
+     "w": 17.94,
+     "h": 16.67
+    },
+    {
+     "box": [
+      492,
+      169,
+      559,
+      187
+     ],
+     "answer": "Nikotin",
+     "accept": [
+      "nicotine",
+      "Nicotin"
+     ],
+     "x": 69.04,
+     "y": 13.21,
+     "w": 10.59,
+     "h": 5.9
+    },
+    {
+     "box": [
+      566,
+      191,
+      695,
+      249
+     ],
+     "answer": "Opioide, Benzodiazepine, Cannabinoide",
+     "accept": [
+      "Opioide",
+      "Benzodiazepine",
+      "Cannabinoide",
+      "opioids",
+      "Opiate",
+      "Opioide/Benzodiazepine/Cannabinoide"
+     ],
+     "x": 79.93,
+     "y": 18.85,
+     "w": 19.71,
+     "h": 16.15
+    }
+   ],
+   "bank": [
+    "Locus coeruleus",
+    "Alkohol",
+    "Substantia nigra"
+   ],
+   "explanation": "Alle Suchtmittel steigern die Aktivität der VTA-DA-Neurone (A10) und erhöhen DA im Ncl. accumbens (Belohnung) und präfrontalen Cortex (Entscheidungen): Kokain/Amphetamin/MDMA an den DA-Terminalen, Nikotin direkt an den DA-Neuronen (+), Opioide/Benzodiazepine/Cannabinoide über Hemmung (−) GABAerger VTA-Neurone.",
+   "image": "assets/figures/vl10-belohnungssystem-schema.webp",
+   "iw": 1360,
+   "ih": 780
+  }
+ ]
+}

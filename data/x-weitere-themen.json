@@ -1,0 +1,817 @@
+{
+ "id": "weitere",
+ "title": "Weitere Klausurthemen (ohne Folien in VL01–11)",
+ "short": "Weitere",
+ "color": "#9fb0c0",
+ "topics": [
+  "Sehsystem: Netzhaut & Phototransduktion",
+  "Sehsystem: Sehbahn & visueller Cortex",
+  "Farbensehen",
+  "Kanalopathien & Genetik",
+  "Modellorganismen",
+  "Hirnstimulation (TMS)",
+  "Schlaganfall",
+  "Sprache & Aphasien"
+ ],
+ "questions": [
+  {
+   "id": "weitere-cng-kanaele",
+   "type": "multi",
+   "topic": "Sehsystem: Netzhaut & Phototransduktion",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was trifft auf die cGMP-gesteuerten Kanäle der Photorezeptoren (Phototransduktionskaskade) zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Sie lassen Na<sup>+</sup> durch.",
+     "correct": true
+    },
+    {
+     "t": "Sie lassen Ca<sup>2+</sup> durch.",
+     "correct": true
+    },
+    {
+     "t": "Sie sind primär spannungsgesteuert.",
+     "correct": false
+    },
+    {
+     "t": "Sie werden durch direkte Bindung von cGMP geöffnet.",
+     "correct": true
+    },
+    {
+     "t": "Im geöffneten (aktivierten) Zustand führen sie zur Hyperpolarisation.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind im Dunkeln geöffnet und tragen den Dunkelstrom.",
+     "correct": true
+    }
+   ],
+   "explanation": "Im Dunkeln ist cGMP hoch → CNG-Kanäle offen → Einstrom von Na⁺ und Ca²⁺ (Dunkelstrom), Photorezeptor depolarisiert. Licht → Transducin → PDE6 baut cGMP ab → Kanäle schließen → Hyperpolarisation.",
+   "note": "Im Protokoll waren zwei Optionen unvollständig bzw. unsicher erinnert („nach außen gleichrichtend“) – durch eindeutige Aussagen ersetzt."
+  },
+  {
+   "id": "weitere-laterale-inhibition",
+   "type": "single",
+   "topic": "Sehsystem: Netzhaut & Phototransduktion",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Wofür ist die laterale Inhibition in der Netzhaut vor allem wichtig?",
+   "options": [
+    {
+     "t": "Für das Farbensehen",
+     "correct": false
+    },
+    {
+     "t": "Für das Kontrastsehen (Kantenbetonung)",
+     "correct": true
+    },
+    {
+     "t": "Für die Dunkeladaptation der Stäbchen",
+     "correct": false
+    },
+    {
+     "t": "Für das räumliche Tiefensehen",
+     "correct": false
+    }
+   ],
+   "explanation": "Horizontalzellen hemmen benachbarte Bahnen (Zentrum-Umfeld-Organisation). Dadurch werden Helligkeitsunterschiede an Kanten verstärkt – laterale Inhibition dient der Kontrastverstärkung.",
+   "note": "Optionen teilweise ergänzt."
+  },
+  {
+   "id": "weitere-rezeptive-felder",
+   "type": "multi",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was trifft auf rezeptive Felder im visuellen System zu?",
+   "options": [
+    {
+     "t": "Sie sind umso größer, je weiter sie von der Fovea entfernt sind.",
+     "correct": true
+    },
+    {
+     "t": "Sie werden mit zunehmender Verarbeitungsebene (Netzhaut → CGL → V1 → …) größer.",
+     "correct": true
+    },
+    {
+     "t": "In V3–V5 gibt es keine rezeptiven Felder mehr.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind immer rund.",
+     "correct": false
+    }
+   ],
+   "explanation": "In der Peripherie konvergieren viele Photorezeptoren auf eine Ganglienzelle → große Felder (geringe Auflösung). Höhere Areale integrieren über viele Eingänge → größere, komplexere Felder; in V1 z. B. länglich (orientierungsselektiv)."
+  },
+  {
+   "id": "weitere-visuelle-verarbeitung",
+   "type": "combo",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was trifft auf die visuelle Verarbeitung zu?",
+   "statements": [
+    {
+     "t": "Es sind nur etwa 10 Cortexareale beteiligt.",
+     "correct": false
+    },
+    {
+     "t": "Die Verarbeitung geht nur bis V3.",
+     "correct": false
+    },
+    {
+     "t": "Ein großer Teil des Cortex (laut Klausurlösung WS23/24 ca. 60 %) ist an der visuellen Verarbeitung beteiligt.",
+     "correct": true
+    },
+    {
+     "t": "Die Verarbeitung der verschiedenen Eigenschaften (Form, Farbe, Bewegung …) dauert gleich lang.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "C",
+    "AB",
+    "CD",
+    "ABD"
+   ],
+   "explanation": "Lösung laut Klausureinsicht: nur C. Es sind weit mehr als 10 Areale (über 30) beteiligt, die Verarbeitung reicht weit über V3 hinaus (z. B. V4 Farbe, V5/MT Bewegung, IT-Cortex Objekte), und Attribute werden unterschiedlich schnell verarbeitet. Die 60 % stammen aus der Klausurlösung (ohne Gewähr); Literatur: Makake ca. 50 %, Mensch eher 20–30 % des Cortex.",
+   "note": "Die 60 % stammen aus der Klausureinsicht („ohne Gewähr“) – mit den Folien abgleichen, sobald sie da sind."
+  },
+  {
+   "id": "weitere-farbensehen",
+   "type": "multi",
+   "topic": "Farbensehen",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was trifft auf das Farbensehen zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Primaten (Menschen) haben 3 verschiedene Zapfentypen.",
+     "correct": true
+    },
+    {
+     "t": "Die meisten Säugetiere haben 2 verschiedene Zapfentypen.",
+     "correct": true
+    },
+    {
+     "t": "Stäbchen dienen dem Farbensehen.",
+     "correct": false
+    },
+    {
+     "t": "Blau ist besonders gut geeignet, um kleine Strukturen (z. B. Schrift) zu erkennen.",
+     "correct": false
+    },
+    {
+     "t": "Mit dichromatischem (divariantem) Sehen unterscheidet man mehr Farben als mit trichromatischem.",
+     "correct": false
+    },
+    {
+     "t": "Rotes, langwelliges Licht aktiviert die Stäbchen (praktisch) nicht.",
+     "correct": true
+    },
+    {
+     "t": "Zapfen dienen dem Farbensehen.",
+     "correct": true
+    },
+    {
+     "t": "Das Verhältnis der Zapfentypen in der Fovea ist bei allen Menschen gleich.",
+     "correct": false
+    }
+   ],
+   "explanation": "Zapfen = Farbe (Mensch: S, M, L), Stäbchen = Dämmerung, unempfindlich für langwelliges Rot. Die Fovea centralis hat kaum S-Zapfen → Blau ist schlecht für feine Details. Das L:M-Verhältnis schwankt stark zwischen Menschen. Mehr Zapfentypen → mehr unterscheidbare Farben."
+  },
+  {
+   "id": "weitere-cgl-zelltypen",
+   "type": "open",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Nennen Sie die 3 Zelltypen im Corpus geniculatum laterale (CGL).",
+   "points": [
+    "Parvozelluläre Zellen (P)",
+    "Magnozelluläre Zellen (M)",
+    "Koniozelluläre Zellen (K)"
+   ],
+   "need": 3,
+   "answer": "Magnozellulär: Schichten 1–2, Bewegung/Kontrast, große rezeptive Felder, phasisch. Parvozellulär: Schichten 3–6, Form/Detail/Rot-Grün, kleine Felder, tonisch. Koniozellulär: zwischen den Schichten, Blau-Gelb.",
+   "explanation": "Lösung laut Klausureinsicht: parvo-, magno- und koniozellulär."
+  },
+  {
+   "id": "weitere-parvozellulaer",
+   "type": "multi",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was trifft auf das parvozelluläre System zu?",
+   "options": [
+    {
+     "t": "Es dient vor allem dem Erkennen von Objekten (Form, Detail, Farbe).",
+     "correct": true
+    },
+    {
+     "t": "Etwa 80 % der retinalen Ganglienzellen gehören dazu.",
+     "correct": true
+    },
+    {
+     "t": "Die Zellen antworten tonisch (anhaltend).",
+     "correct": true
+    },
+    {
+     "t": "Die Zellen haben große rezeptive Felder und sind auf schnelle Bewegung spezialisiert.",
+     "correct": false
+    },
+    {
+     "t": "Es projiziert in die Schichten 1 und 2 des CGL.",
+     "correct": false
+    }
+   ],
+   "explanation": "P-Zellen (Midget-Ganglienzellen, ~80 %): kleine Felder, tonisch, farbsensitiv, „Was“-Information → CGL-Schichten 3–6. Große Felder, phasische Antwort, Bewegung und Schichten 1–2 sind magnozellulär.",
+   "note": "Protokoll nannte nur die drei richtigen Aussagen – zwei Ablenker ergänzt."
+  },
+  {
+   "id": "weitere-complex-cells",
+   "type": "multi",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was trifft auf komplexe Zellen (complex cells) im primären visuellen Cortex zu?",
+   "options": [
+    {
+     "t": "Sie integrieren (fassen) die Information mehrerer einfacher Zellen (simple cells) zusammen.",
+     "correct": true
+    },
+    {
+     "t": "Sie reagieren hauptsächlich auf statische Reize an einer genau definierten Position.",
+     "correct": false
+    },
+    {
+     "t": "Sie reagieren bevorzugt auf bewegte, orientierte Reize – weitgehend unabhängig vom genauen Ort im rezeptiven Feld (ortsinvariant).",
+     "correct": true
+    },
+    {
+     "t": "Ihr rezeptives Feld hat klar getrennte ON- und OFF-Subregionen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Simple cells: orientierungsselektiv mit getrennten ON/OFF-Zonen, positionsabhängig. Complex cells: erhalten Eingang von mehreren simple cells → orientierungsselektiv, aber ortsinvariant, oft bewegungs(richtungs)selektiv."
+  },
+  {
+   "id": "weitere-hyperkolumne",
+   "type": "open",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Nennen Sie 3 Bestandteile einer Hyperkolumne im primären visuellen Cortex.",
+   "points": [
+    "Orientierungssäulen (alle Orientierungen über 180°)",
+    "Okuläre Dominanzsäulen (je eine für linkes und rechtes Auge)",
+    "Blobs (Cytochromoxidase-reich; Farbverarbeitung)"
+   ],
+   "need": 3,
+   "explanation": "Eine Hyperkolumne (~1 mm²) enthält alle Verarbeitungsmodule für einen Ort im Gesichtsfeld: Orientierungssäulen, Augendominanzsäulen beider Augen und Blobs (Farbe)."
+  },
+  {
+   "id": "weitere-sehbahn",
+   "type": "multi",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Was ist Teil der Sehbahn? (4 richtig)",
+   "options": [
+    {
+     "t": "Sehstrahlung (Radiatio optica)",
+     "correct": true
+    },
+    {
+     "t": "Müller-Gliazellen",
+     "correct": false
+    },
+    {
+     "t": "Photorezeptoren",
+     "correct": true
+    },
+    {
+     "t": "Corpus geniculatum laterale (LGN)",
+     "correct": true
+    },
+    {
+     "t": "Sehnerv (N. opticus)",
+     "correct": true
+    }
+   ],
+   "explanation": "Sehbahn: Photorezeptoren → Bipolarzellen → Ganglienzellen → N. opticus → Chiasma → Tractus opticus → CGL/LGN → Sehstrahlung → V1. Müller-Zellen sind retinale Gliazellen, kein Teil der signalleitenden Bahn."
+  },
+  {
+   "id": "weitere-sehbahn-reihenfolge",
+   "type": "order",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "book",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Bringen Sie die Stationen der Sehbahn in die richtige Reihenfolge.",
+   "items": [
+    "Photorezeptoren",
+    "Bipolarzellen",
+    "Retinale Ganglienzellen",
+    "N. opticus / Chiasma opticum",
+    "Corpus geniculatum laterale",
+    "Sehstrahlung",
+    "Primärer visueller Cortex (V1)"
+   ],
+   "explanation": "Netzhaut (3-Neuronen-Kette) → Sehnerv und Chiasma (nasale Fasern kreuzen) → Tractus opticus → CGL im Thalamus → Sehstrahlung → V1 im Okzipitallappen."
+  },
+  {
+   "id": "weitere-visuelle-mechanismen",
+   "type": "open",
+   "topic": "Sehsystem: Sehbahn & visueller Cortex",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "Altklausur · Sehsystem (Folien folgen)",
+   "stem": "Nennen Sie 3 der verschiedenen visuellen Verarbeitungsmechanismen.",
+   "points": [
+    "Laterale Inhibition / Zentrum-Umfeld-Organisation (Kontrastverstärkung)",
+    "ON- und OFF-Bahnen",
+    "Parallele Verarbeitung (magno-, parvo-, koniozelluläre Bahn)",
+    "Hierarchische Verarbeitung (simple → complex cells, wachsende rezeptive Felder)",
+    "Orientierungs- und Richtungsselektivität (Säulen/Hyperkolumnen)",
+    "Farbopponenz (Rot-Grün, Blau-Gelb)",
+    "Dorsaler („Wo/Wie“) und ventraler („Was“) Verarbeitungspfad"
+   ],
+   "need": 3,
+   "explanation": "Die Frage ist offen formuliert – jeder klar benannte Mechanismus zählt. Ohne Folien ist unklar, welche drei die Vorlesung betont; bei Folien-Update abgleichen.",
+   "note": "Musterlösung aus Lehrbuchwissen ergänzt."
+  },
+  {
+   "id": "weitere-dominant-negativ",
+   "type": "single",
+   "topic": "Kanalopathien & Genetik",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Kanalopathien (Folien folgen)",
+   "stem": "Was bedeutet eine dominant-negative Mutation?",
+   "options": [
+    {
+     "t": "Sie zeigt nur bei rezessiven Erkrankungen einen Phänotyp.",
+     "correct": false
+    },
+    {
+     "t": "Sie ist nur bei homozygoten Erbanlagen relevant.",
+     "correct": false
+    },
+    {
+     "t": "Das mutierte Allel hemmt die Funktion des gesunden Allels.",
+     "correct": true
+    },
+    {
+     "t": "Das mutierte Allel führt nur zu halbierter Proteinmenge (Haploinsuffizienz).",
+     "correct": false
+    }
+   ],
+   "explanation": "Typisch bei multimeren Proteinen wie Ionenkanälen: Eine defekte Untereinheit wird in den Komplex eingebaut und legt den ganzen Kanal lahm → Funktionsverlust stärker als 50 %. Haploinsuffizienz ist dagegen der reine Mengeneffekt.",
+   "note": "Vierte Option ergänzt."
+  },
+  {
+   "id": "weitere-brugada",
+   "type": "single",
+   "topic": "Kanalopathien & Genetik",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "Altklausur · Kanalopathien (Folien folgen)",
+   "stem": "Welcher Kanal ist beim Brugada-Syndrom betroffen?",
+   "options": [
+    {
+     "t": "Kalium-Kanal",
+     "correct": false
+    },
+    {
+     "t": "Natrium-Kanal",
+     "correct": true
+    },
+    {
+     "t": "Chlorid-Kanal",
+     "correct": false
+    },
+    {
+     "t": "Calcium-Kanal",
+     "correct": false
+    }
+   ],
+   "explanation": "Brugada-Syndrom: meist Loss-of-function-Mutationen in SCN5A (kardialer Na⁺-Kanal Nav1.5) → Herzrhythmusstörungen, plötzlicher Herztod."
+  },
+  {
+   "id": "weitere-kanalopathie",
+   "type": "single",
+   "topic": "Kanalopathien & Genetik",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Kanalopathien (Folien folgen)",
+   "stem": "Was ist eine Kanalopathie?",
+   "options": [
+    {
+     "t": "Eine Erkrankung durch eine Mutation in einem Ionenkanal(gen)",
+     "correct": true
+    },
+    {
+     "t": "Eine Erkrankung durch Mutationen in einem G-Protein-gekoppelten Rezeptor",
+     "correct": false
+    },
+    {
+     "t": "Eine Erkrankung durch Verstopfung von Liquorkanälen",
+     "correct": false
+    },
+    {
+     "t": "Eine Erkrankung durch Autoantikörper gegen Transporter",
+     "correct": false
+    }
+   ],
+   "explanation": "Kanalopathien = Erkrankungen durch gestörte Ionenkanalfunktion, klassisch genetisch (z. B. SCN1A → Dravet-Syndrom, SCN5A → Brugada). GPCR-Mutationen sind keine Kanalopathien.",
+   "note": "Zwei Ablenker ergänzt."
+  },
+  {
+   "id": "weitere-scn1a-mauslinien",
+   "type": "single",
+   "topic": "Kanalopathien & Genetik",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Kanalopathien (Folien folgen)",
+   "stem": "Warum zeigt dieselbe <i>Scn1a</i>-Mutation in verschiedenen Mauslinien unterschiedliche Phänotypen?",
+   "options": [
+    {
+     "t": "Genetischer Hintergrund: Eine Linie trägt zusätzlich eine Variante in einem GABA-Rezeptor-Gen (Modifier).",
+     "correct": true
+    },
+    {
+     "t": "Die Unterschiede sind Artefakte unterschiedlicher Versuchsbedingungen in den Laboren.",
+     "correct": false
+    },
+    {
+     "t": "Eine der Linien exprimiert den mutierten Kanal überhaupt nicht im Gehirn.",
+     "correct": false
+    },
+    {
+     "t": "Nur in einer der Linien besitzen Interneurone überhaupt Na<sub>v</sub>1.1-Kanäle.",
+     "correct": false
+    }
+   ],
+   "explanation": "Der genetische Hintergrund moduliert den Phänotyp: Scn1a⁺/⁻-Mäuse (Dravet-Modell) sind auf C57BL/6J schwer betroffen, auf 129 mild. Ein bekannter Modifier ist eine Gabra2-Variante (GABA-A-α2) in C57BL/6J.",
+   "note": "Lösung nicht im Protokoll – aus der Literatur (genetische Modifier bei Dravet-Mäusen) ergänzt; mit Folien abgleichen."
+  },
+  {
+   "id": "weitere-kompensation",
+   "type": "single",
+   "topic": "Kanalopathien & Genetik",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "Altklausur · Kanalopathien (Folien folgen)",
+   "stem": "Welcher kompensatorische Mechanismus des Organismus auf eine Mutation in einem Ionenkanal ist am plausibelsten?",
+   "options": [
+    {
+     "t": "Überexpression des mutierten Gens, um mehr Kanalprotein bereitzustellen",
+     "correct": false
+    },
+    {
+     "t": "Hochregulation anderer Ionenkanäle, die die Funktion teilweise übernehmen",
+     "correct": true
+    },
+    {
+     "t": "Reduktion aller Ionenkanäle, um das Gleichgewicht der Ströme zu wahren",
+     "correct": false
+    },
+    {
+     "t": "Verringerte Expression aller Kanaluntereinheiten im betroffenen Neuron",
+     "correct": false
+    }
+   ],
+   "explanation": "Neurone regulieren homöostatisch: Fällt ein Kanal aus, werden oft verwandte Kanäle (z. B. andere Nav-Isoformen) hochreguliert. Mehr mutiertes Protein oder weniger Kanäle insgesamt kompensieren nicht.",
+   "note": "Protokoll unvollständig – vierte Option sinngemäß ergänzt, Lösung nicht überliefert."
+  },
+  {
+   "id": "weitere-modellorganismen-entwicklung",
+   "type": "combo",
+   "topic": "Modellorganismen",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Modellorganismen (Folien folgen)",
+   "stem": "Welche der folgenden Aussagen bezüglich der Nervensysteme und der Entwicklung einfacher Modellorganismen sind richtig?",
+   "statements": [
+    {
+     "t": "Der entwicklungsbiologische Zellstammbaum ist bei <i>C. elegans</i> variabel und hängt unter anderem von den Ernährungsbedingungen ab.",
+     "correct": false
+    },
+    {
+     "t": "Die Generationszeit von <i>Drosophila</i> beträgt etwa 12 Tage bei 25 °C.",
+     "correct": true
+    },
+    {
+     "t": "Bei <i>Drosophila</i> ist die Anatomie von Neuropil und Somata sehr raumeffizient organisiert; Dendriten und Axone teilen sich häufig den gleichen Neuriten.",
+     "correct": true
+    },
+    {
+     "t": "Es gibt keine Großhirnrinde im Telencephalon des Zebrabärblings.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "BCD",
+    "ACD",
+    "AC",
+    "CD",
+    "BC"
+   ],
+   "explanation": "Lösung laut Klausureinsicht: nur B, C und D. Der Zellstammbaum von C. elegans ist invariant (jede Zelle hat ein festes Schicksal). Insektenneurone sind meist unipolar – ein Neurit trägt dendritische und axonale Abschnitte. Fische haben ein Pallium, aber keinen geschichteten Cortex."
+  },
+  {
+   "id": "weitere-modellorganismen-transmitter",
+   "type": "combo",
+   "topic": "Modellorganismen",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Modellorganismen (Folien folgen)",
+   "stem": "Welche der folgenden Aussagen bezüglich der Neurotransmitter bei einfachen Modellorganismen sind richtig?",
+   "statements": [
+    {
+     "t": "<i>Drosophila</i> nutzt Glutamat anstelle von Acetylcholin an der neuromuskulären Endplatte.",
+     "correct": true
+    },
+    {
+     "t": "In <i>C. elegans</i> wird Inhibition durch Glycin vermittelt.",
+     "correct": false
+    },
+    {
+     "t": "Dem Zebrabärbling fehlt der Neurotransmitter Glycin, ansonsten sind alle wesentlichen Transmitter der Säugetiere vorhanden.",
+     "correct": false
+    },
+    {
+     "t": "Tyramin und Octopamin sind die Äquivalente für Noradrenalin und Adrenalin in Invertebraten.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "A",
+    "BC",
+    "AD",
+    "ACD"
+   ],
+   "explanation": "Lösung laut Klausureinsicht: nur A und D. In C. elegans vermittelt GABA die Inhibition (Glycin spielt keine Rolle); Zebrafische besitzen Glycin (u. a. im Rückenmark)."
+  },
+  {
+   "id": "weitere-modellorganismen-fakten",
+   "type": "multi",
+   "topic": "Modellorganismen",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Modellorganismen (Folien folgen)",
+   "stem": "Welche Aussagen zu Modellorganismen treffen zu?",
+   "options": [
+    {
+     "t": "Zebrafische entwickeln sich in 3 Wochen zum geschlechtsreifen Tier.",
+     "correct": false
+    },
+    {
+     "t": "Das <i>Drosophila</i>-Gehirn besitzt u. a. Pilzkörper (mushroom body), Zentralkomplex, Antennallobus und optischen Lobus.",
+     "correct": true
+    },
+    {
+     "t": "Zebrafische haben ein im Verhältnis gleich großes Telencephalon wie der Mensch.",
+     "correct": false
+    },
+    {
+     "t": "Der Hermaphrodit von <i>C. elegans</i> besitzt genau 302 Neurone.",
+     "correct": true
+    }
+   ],
+   "explanation": "Zebrafische: Embryonalentwicklung in wenigen Tagen, geschlechtsreif nach ca. 3 Monaten; das Telencephalon ist relativ viel kleiner als beim Menschen. C. elegans-Hermaphrodit: 302 Neurone mit vollständig kartiertem Konnektom.",
+   "note": "Aussage zu C. elegans ergänzt; Bewertung der Zebrafisch-Aussagen aus Lehrbuchwissen."
+  },
+  {
+   "id": "weitere-modellorganismen-eignung",
+   "type": "multi",
+   "topic": "Modellorganismen",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Modellorganismen (Folien folgen)",
+   "stem": "Welche Modellorganismen sind für die genannte Fragestellung geeignet?",
+   "options": [
+    {
+     "t": "<i>Drosophila</i>, um bei Epilepsie Auswirkungen auf den Hirnstamm im Vergleich zu anderen Arealen zu untersuchen",
+     "correct": false
+    },
+    {
+     "t": "<i>Drosophila</i>, um zelluläre Auswirkungen von Amyloid-β (Alzheimer) zu untersuchen",
+     "correct": true
+    },
+    {
+     "t": "<i>C. elegans</i>, um das SMN1-Ortholog (spinale Muskelatrophie) zu untersuchen",
+     "correct": true
+    },
+    {
+     "t": "Zebrafisch, um bei Parkinson das Mittelhirn / die Substantia nigra pars compacta zu untersuchen",
+     "correct": false
+    }
+   ],
+   "explanation": "Fliegen haben keinen Hirnstamm, eignen sich aber für zelluläre Toxizität von Aβ. C. elegans besitzt ein smn-1-Ortholog. Zebrafische haben keine Substantia nigra im Mittelhirn – ihre dopaminergen Neurone liegen im ventralen Diencephalon.",
+   "note": "Lösung nicht im Protokoll – aus Lehrbuchwissen; mit Folien abgleichen."
+  },
+  {
+   "id": "weitere-tms-therapie",
+   "type": "multi",
+   "topic": "Hirnstimulation (TMS)",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Hirnstimulation (Folien folgen)",
+   "stem": "Was trifft auf die TMS-Therapie zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "rTMS wird heutzutage noch nicht in der Behandlung psychiatrischer oder neurologischer Erkrankungen angewendet.",
+     "correct": false
+    },
+    {
+     "t": "Depression kann durch Stimulation mit exzitatorischer Wirkung über dem linken DLPFC behandelt werden.",
+     "correct": true
+    },
+    {
+     "t": "Nach dem interhemisphärischen Inhibitionsmodell wird die kontraläsionelle Seite erregend stimuliert.",
+     "correct": false
+    },
+    {
+     "t": "Nach dem „bimodal balance recovery“-Modell wird immer die ipsiläsionelle Seite mit exzitatorischem Protokoll behandelt.",
+     "correct": false
+    },
+    {
+     "t": "Das „bimodal balance recovery“-Modell geht bei Schlaganfallpatienten immer von einer unterstützenden Rolle der kontraläsionellen Hemisphäre aus.",
+     "correct": false
+    },
+    {
+     "t": "Es wird eine Vielzahl von Neuronen (exzitatorisch und inhibitorisch) in verschiedenen kortikalen Schichten erregt.",
+     "correct": true
+    },
+    {
+     "t": "In überschwellig depolarisierten Neuronen führt die Öffnung spannungsgesteuerter Na<sup>+</sup>-Kanäle zum Aktionspotenzial.",
+     "correct": true
+    }
+   ],
+   "explanation": "Lösung laut Klausureinsicht: B, F, G. Interhemisphärisches Modell: die kontraläsionelle Seite wird gehemmt (z. B. 1-Hz-rTMS), nicht erregt. Das bimodale Modell sagt gerade, dass die Rolle der kontraläsionellen Seite vom Schweregrad abhängt („immer“ ist falsch)."
+  },
+  {
+   "id": "weitere-tms-falsch",
+   "type": "single",
+   "topic": "Hirnstimulation (TMS)",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Hirnstimulation (Folien folgen)",
+   "stem": "Welche Aussage zur TMS ist <b>falsch</b>?",
+   "options": [
+    {
+     "t": "Ein TMS-Puls aktiviert eine Vielzahl verschiedener Neurone.",
+     "correct": false
+    },
+    {
+     "t": "Eine TMS-Rundspule hat eine höhere Fokalität als eine Doppelspule (figure of 8).",
+     "correct": true
+    },
+    {
+     "t": "Ein TMS-Puls kann Aktionspotenziale in kortikalen Neuronen auslösen.",
+     "correct": false
+    },
+    {
+     "t": "Das 1-Hz-rTMS-Protokoll wirkt in der Regel inhibitorisch.",
+     "correct": false
+    },
+    {
+     "t": "Phosphene sind eine Möglichkeit, TMS-Effekte zu messen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Lösung laut Klausureinsicht: B. Die Achter-/Doppelspule (figure of 8) ist fokaler – unter dem Kreuzungspunkt addieren sich die Felder. Die Rundspule stimuliert großflächiger."
+  },
+  {
+   "id": "weitere-hirnstimulation",
+   "type": "multi",
+   "topic": "Hirnstimulation (TMS)",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Hirnstimulation (Folien folgen)",
+   "stem": "Welche Aussagen zur Hirnstimulation treffen zu?",
+   "options": [
+    {
+     "t": "tACS (transkranielle Wechselstromstimulation) ist ein invasives Verfahren.",
+     "correct": false
+    },
+    {
+     "t": "TMS löst Aktionspotenziale in vielen Neuronen gleichzeitig aus.",
+     "correct": true
+    },
+    {
+     "t": "Die Doppelspule (figure of 8) hat eine höhere Fokalität als die Rundspule.",
+     "correct": true
+    },
+    {
+     "t": "Hochfrequente rTMS (z. B. 10–20 Hz) wirkt in der Regel inhibitorisch.",
+     "correct": false
+    }
+   ],
+   "explanation": "tACS/tDCS/TMS sind nicht-invasiv (Elektroden bzw. Spule auf der Kopfhaut). Faustregel rTMS: niederfrequent (1 Hz) hemmend, hochfrequent (≥ 5 Hz) erregend.",
+   "note": "Protokoll unvollständig – vierte Aussage ergänzt."
+  },
+  {
+   "id": "weitere-schlaganfall-aetiologie",
+   "type": "single",
+   "topic": "Schlaganfall",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Altklausur · Schlaganfall (Folien folgen)",
+   "stem": "Was ist eine der 3 Hauptätiologien des (ischämischen) Schlaganfalls?",
+   "options": [
+    {
+     "t": "Makroangiopathie",
+     "correct": true
+    },
+    {
+     "t": "Mikroembolie",
+     "correct": false
+    },
+    {
+     "t": "Ischämangiopathie",
+     "correct": false
+    },
+    {
+     "t": "Paradoxylyse",
+     "correct": false
+    },
+    {
+     "t": "Paradoxe Embolie",
+     "correct": false
+    },
+    {
+     "t": "Thrombolyse",
+     "correct": false
+    }
+   ],
+   "explanation": "Lösung laut Klausureinsicht: A. Die drei Hauptätiologien: Makroangiopathie (Arteriosklerose großer Arterien), Mikroangiopathie (kleine Gefäße, lakunäre Infarkte) und Kardioembolie (v. a. Vorhofflimmern). Die paradoxe Embolie ist eine seltenere Sonderform; Thrombolyse ist eine Therapie."
+  },
+  {
+   "id": "weitere-schlaganfall-ursache",
+   "type": "single",
+   "topic": "Schlaganfall",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Altklausur · Schlaganfall (Folien folgen)",
+   "stem": "Was ist eine der häufigsten Ursachen für einen Schlaganfall?",
+   "options": [
+    {
+     "t": "Kardioembolie durch Vorhofflimmern",
+     "correct": true
+    },
+    {
+     "t": "Mikroangiopathie, die sich vor allem auf große Hirngefäße auswirkt",
+     "correct": false
+    },
+    {
+     "t": "Makroangiopathie, die vor allem kleine (lakunäre) Infarkte hervorruft",
+     "correct": false
+    }
+   ],
+   "explanation": "Vorsicht Falle: Mikroangiopathie betrifft kleine Gefäße (lakunäre Infarkte), Makroangiopathie große Arterien (Territorialinfarkte). Vorhofflimmern → Thromben im linken Vorhof → Kardioembolie."
+  },
+  {
+   "id": "weitere-aphasie",
+   "type": "single",
+   "topic": "Sprache & Aphasien",
+   "source": "exam",
+   "exam": "WS24/25, WS25/26",
+   "ref": "Altklausur · Sprache (Folien folgen)",
+   "stem": "Eine eingeschränkte Sprachproduktion bei relativ gut erhaltenem Sprachverständnis deutet auf welche Aphasie bzw. welches geschädigte Areal hin?",
+   "options": [
+    {
+     "t": "Wernicke-Aphasie (Wernicke-Areal)",
+     "correct": false
+    },
+    {
+     "t": "Broca-Aphasie (Broca-Areal)",
+     "correct": true
+    },
+    {
+     "t": "Globale Aphasie",
+     "correct": false
+    },
+    {
+     "t": "Leitungsaphasie (Fasciculus arcuatus)",
+     "correct": false
+    }
+   ],
+   "explanation": "Broca-Areal (Gyrus frontalis inferior, BA 44/45): motorische Sprachproduktion → stockende, agrammatische Sprache bei gutem Verständnis. Wernicke (temporal): flüssige, inhaltsleere Sprache bei gestörtem Verständnis."
+  }
+ ]
+}

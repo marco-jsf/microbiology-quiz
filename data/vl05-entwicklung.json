@@ -1,0 +1,2461 @@
+{
+ "id": "vl05",
+ "title": "VL05 · Entwicklungsneurobiologie",
+ "short": "Entwicklung",
+ "color": "#d0629a",
+ "topics": [
+  "Gliederung des Nervensystems",
+  "Keimblätter & Neurulation",
+  "Hirnbläschen & Rückenmark",
+  "Neurale Induktion & Spemann-Organisator",
+  "Rostro-kaudale Achse",
+  "Dorso-ventrale Achse & afferente Signale",
+  "Radiale Glia & Migration",
+  "Neuralleiste & PNS"
+ ],
+ "questions": [
+  {
+   "id": "vl05-zns-pns",
+   "type": "single",
+   "topic": "Gliederung des Nervensystems",
+   "source": "slides",
+   "ref": "VL05 · Folie 5",
+   "stem": "Welche Aussage zur topographischen Einteilung des Nervensystems trifft zu?",
+   "options": [
+    {
+     "t": "Das ZNS umfasst Gehirn und Rückenmark; das PNS alle Nervenstrukturen außerhalb davon, v. a. Spinal- und Hirnnerven.",
+     "correct": true
+    },
+    {
+     "t": "Das ZNS umfasst nur das Gehirn; Rückenmark und Spinalnerven gehören zum PNS.",
+     "correct": false
+    },
+    {
+     "t": "Das ZNS umfasst Gehirn, Rückenmark und Spinalganglien; das PNS nur das vegetative Nervensystem.",
+     "correct": false
+    },
+    {
+     "t": "Das PNS umfasst nur die Hirnnerven; Spinalnerven sind Teil des Rückenmarks und damit des ZNS.",
+     "correct": false
+    }
+   ],
+   "explanation": "ZNS = Gehirn + Rückenmark. PNS = alle Nervenstrukturen außerhalb des ZNS, v. a. Spinal- und Hirnnerven sowie Spinal-, Hirnnerven- und vegetative Ganglien."
+  },
+  {
+   "id": "vl05-pns-bestandteile",
+   "type": "multi",
+   "topic": "Gliederung des Nervensystems",
+   "source": "slides",
+   "ref": "VL05 · Folien 5, 7",
+   "stem": "Welche Strukturen gehören zum peripheren Nervensystem? (4 richtig)",
+   "options": [
+    {
+     "t": "Spinalganglien",
+     "correct": true
+    },
+    {
+     "t": "Spinalnerven mit vorderer und hinterer Wurzel",
+     "correct": true
+    },
+    {
+     "t": "Hirnnerven (z. B. N. vagus)",
+     "correct": true
+    },
+    {
+     "t": "Vegetative Ganglien",
+     "correct": true
+    },
+    {
+     "t": "Vorderhorn des Rückenmarks",
+     "correct": false
+    },
+    {
+     "t": "Medulla oblongata",
+     "correct": false
+    }
+   ],
+   "explanation": "Graue Substanz des PNS = Ganglien (Spinal-, Hirnnerven-, vegetative Ganglien), weiße Substanz = Nerven (Spinal-, Hirn-, vegetative Nerven). Vorderhorn und Medulla oblongata gehören zum ZNS."
+  },
+  {
+   "id": "vl05-neuralrohr-ektoderm",
+   "type": "single",
+   "topic": "Keimblätter & Neurulation",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL05 · Folien 12–13, 18",
+   "stem": "Woraus entsteht das Neuralrohr?",
+   "options": [
+    {
+     "t": "Endoderm",
+     "correct": false
+    },
+    {
+     "t": "Mesoderm",
+     "correct": false
+    },
+    {
+     "t": "Ektoderm",
+     "correct": true
+    },
+    {
+     "t": "Dottersack",
+     "correct": false
+    }
+   ],
+   "explanation": "Das Neuralrohr bildet sich durch Auffaltung und Einsenkung der Neuralplatte, eines spezialisierten Teils des (Oberflächen-)Ektoderms (Neurulation). Die Chorda dorsalis darunter ist mesodermal."
+  },
+  {
+   "id": "vl05-epiblast",
+   "type": "single",
+   "topic": "Keimblätter & Neurulation",
+   "source": "slides",
+   "ref": "VL05 · Folie 10",
+   "stem": "Aus welcher Zellschicht gehen in der Gastrulation alle drei Keimblätter (Ektoderm, intraembryonales Mesoderm, Entoderm) hervor?",
+   "options": [
+    {
+     "t": "Epiblast",
+     "correct": true
+    },
+    {
+     "t": "Hypoblast",
+     "correct": false
+    },
+    {
+     "t": "Trophoblast",
+     "correct": false
+    },
+    {
+     "t": "Chorda dorsalis",
+     "correct": false
+    }
+   ],
+   "explanation": "Der Embryoblast teilt sich in Epiblast und Hypoblast (zweiblättrige Keimscheibe). Aus dem Epiblasten entstehen über den Primitivstreifen Ektoderm, intraembryonales Mesoderm und Entoderm (dreiblättrige Keimscheibe, Beginn 3. Woche)."
+  },
+  {
+   "id": "vl05-embryo-order",
+   "type": "order",
+   "topic": "Keimblätter & Neurulation",
+   "source": "slides",
+   "ref": "VL05 · Folien 10, 12",
+   "stem": "Bringen Sie die Stadien der frühen menschlichen Embryonalentwicklung in die richtige Reihenfolge.",
+   "items": [
+    "Zygote",
+    "Morula",
+    "Blastozyste",
+    "Zweiblättrige Keimscheibe",
+    "Dreiblättrige Keimscheibe",
+    "Neuralrohr"
+   ],
+   "explanation": "Befruchtung (Tag 1) → Morula → Blastozyste (Implantation ab Tag 6) → zweiblättrige Keimscheibe (Ende 2. Woche) → dreiblättrige Keimscheibe (Beginn 3. Woche) → Neurulation mit Neuralplatte (Tag 19) bis zum Neuralrohr (Tag 25)."
+  },
+  {
+   "id": "vl05-neurulation-schema",
+   "type": "label",
+   "topic": "Keimblätter & Neurulation",
+   "source": "slides",
+   "ref": "VL05 · Folie 12",
+   "stem": "Beschriften Sie das Schema der Neurulation (Tag 19, 21, 25).",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 12,
+    "crop": [
+     5,
+     68,
+     715,
+     236
+    ],
+    "hide": [
+     [
+      95,
+      50,
+      530,
+      79
+     ],
+     [
+      573,
+      50,
+      626,
+      70
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      73,
+      107,
+      169,
+      123
+     ],
+     "answer": "Oberflächenektoderm",
+     "accept": [
+      "Ektoderm",
+      "surface ectoderm",
+      "Oberflächenektoderm"
+     ],
+     "x": 9.23,
+     "y": 21.73,
+     "w": 14.23,
+     "h": 12.5
+    },
+    {
+     "box": [
+      46,
+      189,
+      114,
+      203
+     ],
+     "answer": "Chorda dorsalis",
+     "accept": [
+      "Chorda",
+      "Notochord",
+      "Chorda dorsalis"
+     ],
+     "x": 5.42,
+     "y": 70.54,
+     "w": 10.28,
+     "h": 11.31
+    },
+    {
+     "box": [
+      232,
+      107,
+      287,
+      123
+     ],
+     "answer": "Neuralplatte",
+     "accept": [
+      "neural plate",
+      "Neuralplatte"
+     ],
+     "x": 31.62,
+     "y": 21.73,
+     "w": 8.45,
+     "h": 12.5
+    },
+    {
+     "box": [
+      271,
+      189,
+      323,
+      203
+     ],
+     "answer": "Neuralleiste",
+     "accept": [
+      "neural crest",
+      "Neuralleiste"
+     ],
+     "x": 37.11,
+     "y": 70.54,
+     "w": 8.03,
+     "h": 11.31
+    },
+    {
+     "box": [
+      397,
+      101,
+      455,
+      112
+     ],
+     "answer": "Neuralwülste",
+     "accept": [
+      "Neuralwulst",
+      "Neuralwülste",
+      "Neuralfalten",
+      "neural folds"
+     ],
+     "x": 54.86,
+     "y": 18.15,
+     "w": 8.87,
+     "h": 9.52
+    },
+    {
+     "box": [
+      369,
+      222,
+      420,
+      236
+     ],
+     "answer": "Neuralrinne",
+     "accept": [
+      "neural groove",
+      "Neuralrinne",
+      "Neuralfurche"
+     ],
+     "x": 50.92,
+     "y": 90.18,
+     "w": 7.89,
+     "h": 11.31
+    },
+    {
+     "box": [
+      577,
+      72,
+      623,
+      85
+     ],
+     "answer": "Epidermis",
+     "accept": [
+      "Epidermis",
+      "Oberflächenektoderm",
+      "Haut"
+     ],
+     "x": 80.21,
+     "y": 0.89,
+     "w": 7.18,
+     "h": 10.71
+    },
+    {
+     "box": [
+      487,
+      197,
+      533,
+      210
+     ],
+     "answer": "Neuralrohr",
+     "accept": [
+      "neural tube",
+      "Neuralrohr"
+     ],
+     "x": 67.54,
+     "y": 75.3,
+     "w": 7.18,
+     "h": 10.71
+    },
+    {
+     "box": [
+      661,
+      173,
+      692,
+      209
+     ],
+     "answer": "Neuralleistenzellen",
+     "accept": [
+      "neural crest cells",
+      "Neuralleistenzellen",
+      "Neuralleiste"
+     ],
+     "x": 92.04,
+     "y": 61.01,
+     "w": 5.07,
+     "h": 24.4
+    }
+   ],
+   "explanation": "Tag 19: Neuralplatte über der Chorda dorsalis, seitlich die Neuralleiste. Tag 21: Neuralwülste heben sich, dazwischen die Neuralrinne. Tag 25: geschlossenes Neuralrohr unter der Epidermis; die Neuralleistenzellen wandern aus.",
+   "image": "assets/figures/vl05-neurulation-schema.webp",
+   "iw": 1400,
+   "ih": 331
+  },
+  {
+   "id": "vl05-neurulation-open",
+   "type": "open",
+   "topic": "Keimblätter & Neurulation",
+   "source": "slides",
+   "ref": "VL05 · Folien 12–13",
+   "stem": "Beschreiben Sie in Stichworten den Ablauf der Neurulation.",
+   "points": [
+    "Chorda dorsalis (Mesoderm) induziert im darüberliegenden Ektoderm die Neuralplatte (Tag 19)",
+    "Ränder der Neuralplatte heben sich zu Neuralwülsten, dazwischen Neuralrinne (Tag 21)",
+    "Neuralwülste verschmelzen → Neuralrohr senkt sich unter das Oberflächenektoderm/die Epidermis ein (Tag 25)",
+    "Neuralleistenzellen lösen sich an der Verschlussstelle und wandern aus",
+    "Neuralrohr → ZNS; Neuralleiste → große Teile des PNS"
+   ],
+   "explanation": "Neurulation = Auffaltung und Einsenkung eines spezialisierten Ektodermteils zum Neuralrohr; seitlich bleiben die Neuralleistenzellen als eigene, wandernde Population."
+  },
+  {
+   "id": "vl05-neuralrohr-derivate",
+   "type": "multi",
+   "topic": "Keimblätter & Neurulation",
+   "source": "slides",
+   "ref": "VL05 · Folie 13",
+   "stem": "Was geht aus dem Neuralrohr hervor? (4 richtig)",
+   "options": [
+    {
+     "t": "Gehirn mit seinen Abschnitten",
+     "correct": true
+    },
+    {
+     "t": "Rückenmark",
+     "correct": true
+    },
+    {
+     "t": "Zellen der zentralen Glia",
+     "correct": true
+    },
+    {
+     "t": "Motorischer Anteil des Spinalnervs",
+     "correct": true
+    },
+    {
+     "t": "Sensibler Anteil des Spinalnervs",
+     "correct": false
+    },
+    {
+     "t": "Periphere Glia (z. B. Schwann-Zellen)",
+     "correct": false
+    }
+   ],
+   "explanation": "Die motorischen Axone des Spinalnervs stammen von Vorderhornneuronen (Neuralrohr). Sensibler Anteil des Spinalnervs, viszerales PNS und periphere Glia stammen aus der Neuralleiste."
+  },
+  {
+   "id": "vl05-hirnblaeschen-schema",
+   "type": "label",
+   "topic": "Hirnbläschen & Rückenmark",
+   "source": "slides",
+   "ref": "VL05 · Folie 14",
+   "stem": "Ergänzen Sie die primären (links) und sekundären (rechts) Hirnbläschen.",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 14,
+    "crop": [
+     105,
+     92,
+     440,
+     352
+    ]
+   },
+   "labels": [
+    {
+     "find": "Prosencephalon (Vorderhirn)",
+     "answer": "Prosencephalon (Vorderhirn)",
+     "accept": [
+      "Prosencephalon",
+      "Vorderhirn",
+      "Proencephalon",
+      "forebrain"
+     ],
+     "x": 3.85,
+     "y": 23.13,
+     "w": 36.0,
+     "h": 15.96
+    },
+    {
+     "find": "Mesencephalon (Mittelhirn)",
+     "answer": "Mesencephalon (Mittelhirn)",
+     "accept": [
+      "Mesencephalon",
+      "Mittelhirn",
+      "midbrain"
+     ],
+     "x": 3.85,
+     "y": 45.35,
+     "w": 35.14,
+     "h": 15.95
+    },
+    {
+     "find": "Rhombencephalon (Rautenhirn)",
+     "answer": "Rhombencephalon (Rautenhirn)",
+     "accept": [
+      "Rhombencephalon",
+      "Rautenhirn",
+      "hindbrain"
+     ],
+     "x": 3.85,
+     "y": 67.55,
+     "w": 41.6,
+     "h": 15.96
+    },
+    {
+     "find": "Telencephalon (Endhirn)",
+     "answer": "Telencephalon (Endhirn)",
+     "accept": [
+      "Telencephalon",
+      "Endhirn",
+      "Großhirn",
+      "Telencephalon (Großhirn)"
+     ],
+     "x": 55.66,
+     "y": 9.59,
+     "w": 36.05,
+     "h": 17.99
+    },
+    {
+     "find": "Diencephalon (Zwischenhirn)",
+     "answer": "Diencephalon (Zwischenhirn)",
+     "accept": [
+      "Diencephalon",
+      "Zwischenhirn"
+     ],
+     "x": 55.66,
+     "y": 27.09,
+     "w": 36.77,
+     "h": 17.98
+    },
+    {
+     "find": "Mesencephalon (Mittelhirn)",
+     "nth": 1,
+     "answer": "Mesencephalon (bleibt Mittelhirn)",
+     "accept": [
+      "Mesencephalon",
+      "Mittelhirn",
+      "midbrain",
+      "Mesencephalon (Mittelhirn)"
+     ],
+     "x": 55.66,
+     "y": 45.99,
+     "w": 39.49,
+     "h": 17.99
+    },
+    {
+     "find": "Metencephalon (Nachhirn)",
+     "answer": "Metencephalon (Hinterhirn)",
+     "accept": [
+      "Metencephalon",
+      "Hinterhirn",
+      "Nachhirn"
+     ],
+     "x": 55.66,
+     "y": 63.2,
+     "w": 38.2,
+     "h": 17.99
+    },
+    {
+     "find": "Myelencephalon (verlängertes Mark)",
+     "answer": "Myelencephalon (verlängertes Mark)",
+     "accept": [
+      "Myelencephalon",
+      "verlängertes Mark",
+      "Medulla oblongata",
+      "Nachhirn"
+     ],
+     "x": 55.66,
+     "y": 80.96,
+     "w": 48.11,
+     "h": 18.0
+    }
+   ],
+   "explanation": "Prosencephalon → Tel- + Diencephalon; Mesencephalon bleibt Mesencephalon; Rhombencephalon → Met- + Myelencephalon. Hinweis: Die Folie nennt das Metencephalon „Nachhirn“; lehrbuchüblich heißt es Hinterhirn (Pons + Cerebellum), „Nachhirn“ ist das Myelencephalon (Medulla oblongata).",
+   "image": "assets/figures/vl05-hirnblaeschen-schema.webp",
+   "iw": 670,
+   "ih": 520
+  },
+  {
+   "id": "vl05-hirnblaeschen-order",
+   "type": "order",
+   "topic": "Hirnbläschen & Rückenmark",
+   "source": "slides",
+   "ref": "VL05 · Folie 14",
+   "stem": "Ordnen Sie die fünf sekundären Hirnbläschen von rostral nach kaudal.",
+   "items": [
+    "Telencephalon",
+    "Diencephalon",
+    "Mesencephalon",
+    "Metencephalon",
+    "Myelencephalon"
+   ],
+   "explanation": "Fünf-Bläschen-Stadium: Tel- und Diencephalon (aus dem Prosencephalon), Mesencephalon, Met- und Myelencephalon (aus dem Rhombencephalon); kaudal schließt das Rückenmark an."
+  },
+  {
+   "id": "vl05-metencephalon",
+   "type": "single",
+   "topic": "Hirnbläschen & Rückenmark",
+   "source": "slides",
+   "ref": "VL05 · Folien 14–16",
+   "stem": "Welche Hirnabschnitte gehen aus dem Rhombencephalon hervor?",
+   "options": [
+    {
+     "t": "Pons, Cerebellum und Medulla oblongata",
+     "correct": true
+    },
+    {
+     "t": "Thalamus, Hypothalamus und Retina",
+     "correct": false
+    },
+    {
+     "t": "Tectum und Tegmentum",
+     "correct": false
+    },
+    {
+     "t": "Großhirnrinde und Basalganglien",
+     "correct": false
+    }
+   ],
+   "explanation": "Rhombencephalon → Metencephalon (Pons, Cerebellum) + Myelencephalon (Medulla oblongata). Thalamus/Hypothalamus/Retina = Diencephalon, Tectum/Tegmentum = Mesencephalon, Cortex/Basalganglien = Telencephalon."
+  },
+  {
+   "id": "vl05-rueckenmark-schema",
+   "type": "label",
+   "topic": "Hirnbläschen & Rückenmark",
+   "source": "slides",
+   "ref": "VL05 · Folie 17",
+   "stem": "Beschriften Sie die Gliederung des frühen Neuralrohrs (links) und das adulte Rückenmark (rechts).",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 17,
+    "crop": [
+     10,
+     248,
+     712,
+     350
+    ],
+    "hide": [
+     [
+      243,
+      264,
+      278,
+      285
+     ],
+     [
+      397,
+      254,
+      441,
+      284
+     ],
+     [
+      234,
+      294,
+      278,
+      321
+     ],
+     [
+      397,
+      307,
+      441,
+      338
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      155,
+      267,
+      198,
+      278
+     ],
+     "answer": "Deckplatte",
+     "accept": [
+      "roof plate",
+      "Deckplatte"
+     ],
+     "x": 20.3,
+     "y": 16.18,
+     "w": 6.84,
+     "h": 15.69
+    },
+    {
+     "box": [
+      155,
+      285,
+      198,
+      296
+     ],
+     "answer": "Flügelplatte",
+     "accept": [
+      "alar plate",
+      "Flügelplatte"
+     ],
+     "x": 20.3,
+     "y": 33.82,
+     "w": 6.84,
+     "h": 15.69
+    },
+    {
+     "box": [
+      155,
+      313,
+      199,
+      324
+     ],
+     "answer": "Grundplatte",
+     "accept": [
+      "basal plate",
+      "Grundplatte",
+      "Basalplatte"
+     ],
+     "x": 20.3,
+     "y": 61.27,
+     "w": 6.98,
+     "h": 15.69
+    },
+    {
+     "box": [
+      155,
+      331,
+      198,
+      342
+     ],
+     "answer": "Bodenplatte",
+     "accept": [
+      "floor plate",
+      "Bodenplatte"
+     ],
+     "x": 20.3,
+     "y": 78.92,
+     "w": 6.84,
+     "h": 15.69
+    },
+    {
+     "box": [
+      18,
+      300,
+      60,
+      328
+     ],
+     "answer": "Zone der vegetativen Neurone",
+     "accept": [
+      "vegetative Neurone",
+      "Zone der vegetativen Neurone",
+      "intermediäre Zone",
+      "viszeromotorische Zone"
+     ],
+     "x": 0.78,
+     "y": 48.53,
+     "w": 6.7,
+     "h": 32.35
+    },
+    {
+     "box": [
+      663,
+      273,
+      704,
+      283
+     ],
+     "answer": "Hinterhorn",
+     "accept": [
+      "Hinterhorn",
+      "Cornu posterius",
+      "dorsal horn"
+     ],
+     "x": 92.66,
+     "y": 22.06,
+     "w": 6.55,
+     "h": 14.71
+    },
+    {
+     "box": [
+      663,
+      313,
+      705,
+      323
+     ],
+     "answer": "Vorderhorn",
+     "accept": [
+      "Vorderhorn",
+      "Cornu anterius",
+      "ventral horn"
+     ],
+     "x": 92.66,
+     "y": 61.27,
+     "w": 6.7,
+     "h": 14.71
+    },
+    {
+     "box": [
+      471,
+      292,
+      497,
+      312
+     ],
+     "answer": "Seitenhorn",
+     "accept": [
+      "Seitenhorn",
+      "Cornu laterale",
+      "lateral horn"
+     ],
+     "x": 65.31,
+     "y": 40.69,
+     "w": 4.42,
+     "h": 24.51
+    },
+    {
+     "box": [
+      663,
+      292,
+      708,
+      303
+     ],
+     "answer": "Zentralkanal",
+     "accept": [
+      "Zentralkanal",
+      "Canalis centralis",
+      "central canal"
+     ],
+     "x": 92.66,
+     "y": 40.69,
+     "w": 7.12,
+     "h": 15.69
+    }
+   ],
+   "explanation": "Flügelplatte (dorsal, sensorisch) → Hinterhorn; Grundplatte (ventral, motorisch) → Vorderhorn; Zone der vegetativen Neurone → Seitenhorn. Deck- und Bodenplatte sind die dorsale bzw. ventrale Mittellinie (Signalzentren).",
+   "image": "assets/figures/vl05-rueckenmark-schema.webp",
+   "iw": 1400,
+   "ih": 203
+  },
+  {
+   "id": "vl05-frage-entwicklung",
+   "type": "combo",
+   "topic": "Hirnbläschen & Rückenmark",
+   "source": "slides",
+   "ref": "VL05 · Folie 18 (Frage-Folie)",
+   "stem": "Welche Aussagen zur Entwicklung des Nervensystems treffen zu?",
+   "statements": [
+    {
+     "t": "Das Neuralrohr bildet sich durch Auffaltung und Einsenkung eines spezialisierten Teils des Ektoderms.",
+     "correct": true
+    },
+    {
+     "t": "Aus der Chorda dorsalis entwickelt sich das periphere Nervensystem.",
+     "correct": false
+    },
+    {
+     "t": "Das Gehirn bildet sich aus den vorderen (rostralen) Auswölbungen des Neuralrohrs.",
+     "correct": true
+    },
+    {
+     "t": "Aus dem kaudalen Neuralrohr entsteht das Rückenmark.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AC",
+    "ACD",
+    "ABD",
+    "CD",
+    "ABCD"
+   ],
+   "explanation": "Die Chorda dorsalis ist mesodermal und wirkt als Signalgeber (z. B. Shh); das PNS stammt v. a. aus der Neuralleiste (motorische Fasern aus dem Neuralrohr). Rostrale Hirnbläschen → Gehirn, kaudales Neuralrohr → Rückenmark."
+  },
+  {
+   "id": "vl05-spemann-experiment",
+   "type": "single",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folie 21",
+   "stem": "Was ergab das Transplantationsexperiment von Spemann und Mangold (1924)?",
+   "options": [
+    {
+     "t": "Die dorsale Urmundlippe (Organisator), auf die Ventralseite eines Wirtsembryos verpflanzt, induziert eine zweite Körperachse mit zweitem Neuralrohr.",
+     "correct": true
+    },
+    {
+     "t": "Ventrales Mesoderm, auf die Dorsalseite eines Wirtsembryos verpflanzt, unterdrückt dort die Bildung von Neuralrohr und Chorda vollständig.",
+     "correct": false
+    },
+    {
+     "t": "Transplantiertes Ektoderm bildet unabhängig von seiner neuen Lage immer Epidermis – seine Differenzierung ist zellautonom festgelegt.",
+     "correct": false
+    },
+    {
+     "t": "Die Chorda der zweiten Achse entsteht ausschließlich aus Wirtsgewebe, während das Transplantat selbst zugrunde geht.",
+     "correct": false
+    }
+   ],
+   "explanation": "Der Spemann-Organisator (dorsale Urmundlippe) induziert im Wirtsgewebe eine sekundäre Achse (Zwillingsembryo). Molekular beruht das v. a. auf sezernierten BMP-Antagonisten (Chordin, Noggin, Follistatin)."
+  },
+  {
+   "id": "vl05-default-model",
+   "type": "combo",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folien 22, 24",
+   "stem": "Welche Aussagen zur ektodermalen Differenzierung („Default-Modell“) treffen zu?",
+   "statements": [
+    {
+     "t": "Vereinzelte (dissoziierte) Ektodermzellen differenzieren ohne weitere Signale zu Nervengewebe.",
+     "correct": true
+    },
+    {
+     "t": "Intaktes Ektoderm im Zellverband wird zu Epidermis; mit BMP-Inhibitoren wird es zu Nervengewebe.",
+     "correct": true
+    },
+    {
+     "t": "Vereinzelte Ektodermzellen werden durch Zugabe von BMPs zu Nervengewebe.",
+     "correct": false
+    },
+    {
+     "t": "BMP-Signale im Ektoderm fördern die epidermale und hemmen die neuroektodermale Differenzierung.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ACD",
+    "BD",
+    "ABCD"
+   ],
+   "explanation": "Die neurale Differenzierung des Ektoderms ist „vorgegeben“ (Default). BMPs (im Zellverband wirksam) lenken in Richtung Epidermis; BMP-Inhibitoren aus dem Organisator lassen Nervengewebe entstehen."
+  },
+  {
+   "id": "vl05-bmp-schema",
+   "type": "label",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folie 24",
+   "stem": "Beschriften Sie das Schema zur neuralen Induktion in der Gastrula.",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 24,
+    "crop": [
+     0,
+     150,
+     720,
+     335
+    ],
+    "hide": [
+     [
+      243,
+      169,
+      287,
+      192
+     ],
+     [
+      360,
+      169,
+      391,
+      192
+     ],
+     [
+      368,
+      208,
+      435,
+      241
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      1,
+      208,
+      46,
+      226
+     ],
+     "answer": "Ventrales Mesoderm",
+     "accept": [
+      "ventral mesoderm",
+      "ventrales Mesoderm",
+      "Mesoderm"
+     ],
+     "x": -0.21,
+     "y": 30.0,
+     "w": 6.94,
+     "h": 12.43
+    },
+    {
+     "box": [
+      163,
+      247,
+      201,
+      266
+     ],
+     "answer": "Organisator (Spemann-Organisator)",
+     "accept": [
+      "organizer",
+      "organizer region",
+      "Organisator",
+      "Spemann-Organisator",
+      "dorsale Urmundlippe",
+      "Organisatorregion"
+     ],
+     "x": 22.29,
+     "y": 51.08,
+     "w": 5.97,
+     "h": 12.97
+    },
+    {
+     "box": [
+      590,
+      201,
+      639,
+      237
+     ],
+     "answer": "BMP-Inhibitoren: Chordin, Noggin, Follistatin",
+     "accept": [
+      "Chordin",
+      "Noggin",
+      "Follistatin",
+      "BMP-Inhibitoren",
+      "BMP-Antagonisten",
+      "Chordin, Noggin, Follistatin"
+     ],
+     "x": 81.6,
+     "y": 26.22,
+     "w": 7.5,
+     "h": 22.16
+    },
+    {
+     "box": [
+      469,
+      313,
+      518,
+      329
+     ],
+     "answer": "Epidermis (epidermal)",
+     "accept": [
+      "epidermal",
+      "Epidermis",
+      "Epidermiszellen",
+      "epidermale Zellen"
+     ],
+     "x": 64.79,
+     "y": 86.76,
+     "w": 7.5,
+     "h": 11.35
+    },
+    {
+     "box": [
+      610,
+      313,
+      643,
+      329
+     ],
+     "answer": "Neuralgewebe (neural)",
+     "accept": [
+      "neural",
+      "Neuralgewebe",
+      "Neuroektoderm",
+      "neurale Zellen",
+      "Nervengewebe"
+     ],
+     "x": 84.38,
+     "y": 86.76,
+     "w": 5.28,
+     "h": 11.35
+    }
+   ],
+   "explanation": "BMP-Signale im Ektoderm → Epidermis. Der Organisator sezerniert BMP-Inhibitoren (Chordin, Noggin, Follistatin), die sich ausbreiten; wo BMP gehemmt ist, entsteht Neuroektoderm.",
+   "image": "assets/figures/vl05-bmp-schema.webp",
+   "iw": 1400,
+   "ih": 360
+  },
+  {
+   "id": "vl05-bmp-inhibitoren",
+   "type": "multi",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folien 24–26",
+   "stem": "Welche Faktoren des Spemann-Organisators wirken als BMP-Inhibitoren? (3 richtig)",
+   "options": [
+    {
+     "t": "Chordin",
+     "correct": true
+    },
+    {
+     "t": "Noggin",
+     "correct": true
+    },
+    {
+     "t": "Follistatin",
+     "correct": true
+    },
+    {
+     "t": "Sonic hedgehog (Shh)",
+     "correct": false
+    },
+    {
+     "t": "FGF",
+     "correct": false
+    },
+    {
+     "t": "Retinsäure",
+     "correct": false
+    }
+   ],
+   "explanation": "Chordin, Noggin und Follistatin binden BMPs extrazellulär. BMPs gehören zur TGF-β-Familie und signalisieren über Smad1/5/8 + Smad4. Shh, FGF und Retinsäure sind weitere Morphogene, aber keine BMP-Antagonisten."
+  },
+  {
+   "id": "vl05-noggin-injektion",
+   "type": "single",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL05 · Folien 24, 28–29",
+   "stem": "Noggin (ein BMP-Inhibitor) wird in die ventrale Seite einer Gastrula injiziert. Welches Ergebnis erwarten Sie?",
+   "options": [
+    {
+     "t": "Es entsteht ein zweites Neuroektoderm.",
+     "correct": true
+    },
+    {
+     "t": "Es entsteht kein Neuroektoderm.",
+     "correct": false
+    },
+    {
+     "t": "Es entsteht ein zweites Mesoderm.",
+     "correct": false
+    },
+    {
+     "t": "Die Gastrula entwickelt sich gewöhnlich.",
+     "correct": false
+    }
+   ],
+   "explanation": "Noggin hemmt ventral die BMP-Signale – dort wird das Ektoderm dann nicht zu Epidermis, sondern zu Neuroektoderm. Es entsteht eine sekundäre Achse: laut Folie 29 ein induzierter Zweitrumpf (Chordin/Noggin). Einen Zweitkopf induzieren dagegen β-Catenin bzw. die Wnt-Inhibitoren Dickkopf/Cerberus; einen ganzen Zweitembryo nur der transplantierte Spemann-Organisator.",
+   "note": "Optionen im Protokoll stichwortartig („2. Neuroektoderm entsteht / kein Neuroektoderm / 2. Mesoderm“), 4. Option nach Folie 28 ergänzt. Keine Lösung im Protokoll; Lösung aus Folien 24 und 28–29 abgeleitet."
+  },
+  {
+   "id": "vl05-frage-chordin",
+   "type": "single",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folie 28 (Frage-Folie)",
+   "stem": "Welches Ergebnis erwarten Sie, wenn Sie die mRNA für Chordin (BMP-Inhibitor) in das ventrale Mesoderm der Gastrula injizieren?",
+   "options": [
+    {
+     "t": "Die Gastrula kann kein Neuroektoderm mehr ausbilden.",
+     "correct": false
+    },
+    {
+     "t": "Der wachsende Embryo bildet ein zweites Neuroektoderm.",
+     "correct": true
+    },
+    {
+     "t": "Die Gastrula bildet ein zweites Endoderm aus.",
+     "correct": false
+    },
+    {
+     "t": "Die Gastrula entwickelt sich gewöhnlich.",
+     "correct": false
+    }
+   ],
+   "explanation": "Chordin wirkt wie der Organisator: Ventral werden BMPs gehemmt, darüberliegendes Ektoderm wird neural → zweites Neuroektoderm bzw. sekundäre Achse (Folie 29: Chordin/Noggin → induzierter Zweitrumpf; einen Zweitkopf induzieren dort nur β-Catenin bzw. die Wnt-Inhibitoren Dickkopf/Cerberus, einen ganzen Zweitembryo nur der Spemann-Organisator selbst)."
+  },
+  {
+   "id": "vl05-differenzierung-induktion",
+   "type": "single",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL05 · Folie 27",
+   "stem": "Was führt zur Differenzierung der Zellen?",
+   "options": [
+    {
+     "t": "Induktion",
+     "correct": true
+    },
+    {
+     "t": "Kompetenz",
+     "correct": false
+    },
+    {
+     "t": "Apoptose",
+     "correct": false
+    }
+   ],
+   "explanation": "Induktion = ein Signal (z. B. Morphogen) einer Zelle bzw. eines Gewebes löst in einer anderen Zelle eine Differenzierung aus. Kompetenz ist nur die Voraussetzung (die Empfängerzelle besitzt z. B. den passenden Rezeptor), Apoptose ist programmierter Zelltod.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): A. Folie 27 zeigt Induktion und Kompetenz als zusammengehöriges Prinzip – auslösend ist die Induktion."
+  },
+  {
+   "id": "vl05-induktion-kompetenz-open",
+   "type": "open",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folie 27",
+   "stem": "Erklären Sie die Begriffe Induktion und Kompetenz sowie das „French-Flag-Modell“.",
+   "points": [
+    "Induktion: Signal (Morphogen) einer Zelle bzw. eines Gewebes verändert das Entwicklungsschicksal einer anderen Zelle",
+    "Kompetenz: Fähigkeit der Zielzelle, auf das Signal zu reagieren (z. B. passender Rezeptor)",
+    "French-Flag-Modell (Wolpert): Morphogen-Konzentrationsgradient von einer Quelle aus",
+    "Schwellenwerte (t1, t2) teilen das Feld in Zonen → positionsabhängig unterschiedliche Differenzierung (blau/weiß/rot)"
+   ],
+   "explanation": "Zellen differenzieren positionsbedingt unterschiedlich: Sie lesen die lokale Morphogenkonzentration aus – vorausgesetzt, sie sind kompetent."
+  },
+  {
+   "id": "vl05-spemann-open",
+   "type": "open",
+   "topic": "Neurale Induktion & Spemann-Organisator",
+   "source": "slides",
+   "ref": "VL05 · Folien 21–24, 29",
+   "stem": "Beschreiben Sie das Spemann-Mangold-Experiment und erklären Sie sein Ergebnis auf molekularer Ebene.",
+   "points": [
+    "Dorsale Urmundlippe (Spemann-Organisator) eines Spenderembryos auf die Ventralseite eines Wirtsembryos transplantiert",
+    "Ergebnis: sekundäre Körperachse mit zweitem Neuralrohr (Zwillingsembryo)",
+    "Organisator induziert umliegendes Wirtsgewebe (nicht nur das Transplantat bildet die Achse)",
+    "Organisator sezerniert BMP-Inhibitoren (Chordin, Noggin, Follistatin)",
+    "Ohne BMP-Signal wird Ektoderm zu Neuroektoderm statt Epidermis (Default-Modell)",
+    "Für die Kopfinduktion zusätzlich Wnt-Inhibitoren des Organisators (Dickkopf, Cerberus)"
+   ],
+   "need": 4,
+   "explanation": "Ventral injiziertes Chordin oder Noggin (BMP-Inhibitoren) induziert eine sekundäre Rumpfachse mit zweitem Neuroektoderm, aber ohne Kopf (Zweitrumpf, Folie 29). Einen Zweitkopf induzieren β-Catenin oder die Wnt-Inhibitoren Dickkopf/Cerberus. Nur der vollständige Spemann-Organisator erzeugt einen ganzen Zweitembryo."
+  },
+  {
+   "id": "vl05-rk-schema",
+   "type": "label",
+   "topic": "Rostro-kaudale Achse",
+   "source": "slides",
+   "ref": "VL05 · Folie 31",
+   "stem": "Beschriften Sie das Schema zur Ausbildung der rostro-kaudalen Achse.",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 31,
+    "crop": [
+     180,
+     92,
+     455,
+     362
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      197,
+      177,
+      248,
+      186
+     ],
+     "answer": "Wnt-Inhibitoren",
+     "accept": [
+      "Wnt inhibitors",
+      "Wnt-Inhibitoren",
+      "Wnt-Antagonisten"
+     ],
+     "x": 5.27,
+     "y": 30.56,
+     "w": 20.36,
+     "h": 5.19
+    },
+    {
+     "box": [
+      377,
+      177,
+      422,
+      186
+     ],
+     "answer": "Wnt-Signale",
+     "accept": [
+      "Wnt signals",
+      "Wnt",
+      "Wnt-Signale",
+      "Wnt-Signalgebung"
+     ],
+     "x": 70.73,
+     "y": 30.56,
+     "w": 18.18,
+     "h": 5.19
+    },
+    {
+     "box": [
+      234,
+      215,
+      251,
+      221
+     ],
+     "answer": "Otx2",
+     "accept": [
+      "Otx-2",
+      "Otx2"
+     ],
+     "x": 18.73,
+     "y": 44.63,
+     "w": 8.0,
+     "h": 4.07
+    },
+    {
+     "box": [
+      356,
+      215,
+      377,
+      221
+     ],
+     "answer": "Gbx2",
+     "accept": [
+      "Gbx-2",
+      "Gbx2"
+     ],
+     "x": 63.09,
+     "y": 44.63,
+     "w": 9.45,
+     "h": 4.07
+    },
+    {
+     "box": [
+      292,
+      233,
+      310,
+      242
+     ],
+     "answer": "Mittelhirn-Hinterhirn-Grenze (MHB)",
+     "accept": [
+      "MHB",
+      "midbrain-hindbrain boundary",
+      "Mittelhirn-Hinterhirn-Grenze",
+      "Isthmus",
+      "Isthmusorganisator"
+     ],
+     "x": 39.82,
+     "y": 51.3,
+     "w": 8.36,
+     "h": 5.19
+    },
+    {
+     "answer": "Chorda dorsalis",
+     "accept": [
+      "Chorda",
+      "Notochord"
+     ],
+     "x": 49.64,
+     "y": 79.44,
+     "w": 37.09,
+     "h": 6.3,
+     "box": [
+      319,
+      309,
+      416,
+      321
+     ]
+    },
+    {
+     "find": "Prächordalplatte",
+     "answer": "Prächordalplatte",
+     "accept": [
+      "prechordal plate",
+      "Prächordalplatte",
+      "prächordales Mesoderm"
+     ],
+     "x": 17.65,
+     "y": 91.48,
+     "w": 38.58,
+     "h": 7.51
+    }
+   ],
+   "explanation": "Rostral wirken Wnt-Inhibitoren, kaudal Wnt-Signale → rostral Otx2 (Vorder-/Mittelhirn), kaudal Gbx2 (Hinterhirn); an der Grenze liegt die MHB (Engrailed). Darunter liegen Prächordalplatte und Chorda dorsalis als Signalgeber.",
+   "image": "assets/figures/vl05-rk-schema.webp",
+   "iw": 550,
+   "ih": 540
+  },
+  {
+   "id": "vl05-otx2-gbx2",
+   "type": "single",
+   "topic": "Rostro-kaudale Achse",
+   "source": "slides",
+   "ref": "VL05 · Folien 31–32",
+   "stem": "Welche Aussage zur rostro-kaudalen Strukturierung der Neuralplatte trifft zu?",
+   "options": [
+    {
+     "t": "Ein Wnt-Gradient (rostral Wnt-Inhibitoren, kaudal Wnt) führt rostral zur Expression von Otx2 und kaudal zur Expression von Gbx2.",
+     "correct": true
+    },
+    {
+     "t": "Rostral herrschen hohe Wnt-Signale; sie induzieren Otx2 im späteren Hinterhirn, während Gbx2 im Vorderhirn exprimiert wird.",
+     "correct": false
+    },
+    {
+     "t": "Otx2 und Gbx2 werden in der gesamten Neuralplatte gleichmäßig exprimiert; die Achse entsteht erst später durch Hox-Gene.",
+     "correct": false
+    },
+    {
+     "t": "Gbx2 legt Vorderhirn und Mittelhirn fest, Otx2 dagegen Hinterhirn und Rückenmark; die Grenze bildet die Chorda.",
+     "correct": false
+    }
+   ],
+   "explanation": "Otx2 markiert Vorder- und Mittelhirn, Gbx2 das Hinterhirn; ihre Grenze bildet die Mittelhirn-Hinterhirn-Grenze (MHB), ein lokales Signalzentrum."
+  },
+  {
+   "id": "vl05-signalzentren",
+   "type": "multi",
+   "topic": "Rostro-kaudale Achse",
+   "source": "slides",
+   "ref": "VL05 · Folie 32",
+   "stem": "Welche Aussagen zu den lokalen Signalzentren des Neuralrohrs treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "Die Mittelhirn-Hinterhirn-Grenze (MHB) sendet FGF-Signale.",
+     "correct": true
+    },
+    {
+     "t": "Die Zona limitans intrathalamica (ZLI) ist eine Shh-Quelle im Diencephalon.",
+     "correct": true
+    },
+    {
+     "t": "Shh trägt im Mittelhirn zur Bildung dopaminerger und im Hinterhirn zur Bildung serotonerger Neurone bei.",
+     "correct": true
+    },
+    {
+     "t": "Die ZLI liegt an der Grenze zwischen Mittel- und Hinterhirn.",
+     "correct": false
+    },
+    {
+     "t": "Die MHB trennt das Telencephalon vom Diencephalon.",
+     "correct": false
+    }
+   ],
+   "explanation": "MHB = Midbrain-Hindbrain Boundary (FGF, Grenze Otx2/Gbx2); ZLI = Zona limitans intrathalamica (Shh) zwischen Prä- und Thalamus. Dasselbe Signal (Shh) erzeugt je nach Region verschiedene Neurone."
+  },
+  {
+   "id": "vl05-hox",
+   "type": "single",
+   "topic": "Rostro-kaudale Achse",
+   "source": "slides",
+   "ref": "VL05 · Folie 33",
+   "stem": "Was bestimmen die Expressionsmuster der Hox-Gene im Rhombencephalon und Rückenmark?",
+   "options": [
+    {
+     "t": "Den Subtyp der Motoneurone entlang der rostro-kaudalen Achse",
+     "correct": true
+    },
+    {
+     "t": "Die dorso-ventrale Abfolge der Progenitordomänen p0–p3",
+     "correct": false
+    },
+    {
+     "t": "Die Schichtung des Neocortex",
+     "correct": false
+    },
+    {
+     "t": "Das Schicksal der Neuralleistenzellen als Melanozyten",
+     "correct": false
+    }
+   ],
+   "explanation": "Hox-Gene (z. B. HOXB1 in Rhombomer r4) werden segmentweise exprimiert und legen u. a. die Identität der Motoneurone (z. B. der Hirnnervenkerne) fest. Die dorso-ventrale Gliederung steuern Shh und BMP/Wnt."
+  },
+  {
+   "id": "vl05-dv-schema",
+   "type": "label",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folie 35",
+   "stem": "Beschriften Sie das Schema zur dorso-ventralen Strukturierung des Neuralrohrs.",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 35,
+    "crop": [
+     50,
+     125,
+     670,
+     298
+    ],
+    "hide": [
+     [
+      169,
+      166,
+      212,
+      177
+     ],
+     [
+      153,
+      281,
+      171,
+      292
+     ],
+     [
+      616,
+      195,
+      662,
+      206
+     ],
+     [
+      620,
+      258,
+      640,
+      268
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      58,
+      162,
+      101,
+      182
+     ],
+     "answer": "Nicht-neurales Ektoderm (non-neural ectoderm)",
+     "accept": [
+      "non-neural ectoderm",
+      "nicht-neurales Ektoderm",
+      "Oberflächenektoderm",
+      "Ektoderm"
+     ],
+     "x": 0.89,
+     "y": 19.94,
+     "w": 7.74,
+     "h": 14.45
+    },
+    {
+     "box": [
+      111,
+      148,
+      163,
+      158
+     ],
+     "answer": "Neuralplatte (neural plate)",
+     "accept": [
+      "neural plate",
+      "Neuralplatte"
+     ],
+     "x": 9.44,
+     "y": 11.85,
+     "w": 9.19,
+     "h": 8.67
+    },
+    {
+     "box": [
+      71,
+      270,
+      113,
+      281
+     ],
+     "answer": "Chorda dorsalis (notochord)",
+     "accept": [
+      "notochord",
+      "Chorda",
+      "Chorda dorsalis"
+     ],
+     "x": 2.98,
+     "y": 82.37,
+     "w": 7.58,
+     "h": 9.25
+    },
+    {
+     "box": [
+      216,
+      148,
+      260,
+      158
+     ],
+     "answer": "Epidermis",
+     "accept": [
+      "Epidermis",
+      "epidermis"
+     ],
+     "x": 26.37,
+     "y": 11.85,
+     "w": 7.9,
+     "h": 8.67
+    },
+    {
+     "box": [
+      223,
+      181,
+      268,
+      192
+     ],
+     "answer": "Deckplatte (roof plate)",
+     "accept": [
+      "roof plate",
+      "Deckplatte"
+     ],
+     "x": 27.5,
+     "y": 30.92,
+     "w": 8.06,
+     "h": 9.25
+    },
+    {
+     "box": [
+      225,
+      269,
+      270,
+      280
+     ],
+     "answer": "Bodenplatte (floor plate)",
+     "accept": [
+      "floor plate",
+      "floorplate",
+      "Bodenplatte"
+     ],
+     "x": 27.82,
+     "y": 81.79,
+     "w": 8.06,
+     "h": 9.25
+    },
+    {
+     "box": [
+      343,
+      188,
+      387,
+      198
+     ],
+     "answer": "BMP, Wnt",
+     "accept": [
+      "BMP",
+      "Wnt",
+      "BMP und Wnt",
+      "Bmp, Wnt"
+     ],
+     "x": 46.85,
+     "y": 34.97,
+     "w": 7.9,
+     "h": 8.67
+    },
+    {
+     "box": [
+      339,
+      270,
+      358,
+      281
+     ],
+     "answer": "Shh (Sonic hedgehog)",
+     "accept": [
+      "Shh",
+      "Sonic hedgehog"
+     ],
+     "x": 46.21,
+     "y": 82.37,
+     "w": 3.87,
+     "h": 9.25
+    }
+   ],
+   "explanation": "Dorsal: Epidermis und Deckplatte senden BMP/Wnt. Ventral: Chorda dorsalis und (später) Bodenplatte senden Shh. Die gegenläufigen Gradienten legen die dorso-ventralen Progenitordomänen fest.",
+   "image": "assets/figures/vl05-dv-schema.webp",
+   "iw": 1240,
+   "ih": 346
+  },
+  {
+   "id": "vl05-shh-quelle",
+   "type": "single",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folien 34–35",
+   "stem": "Welche Aussage zur dorso-ventralen Strukturierung des Neuralrohrs trifft zu?",
+   "options": [
+    {
+     "t": "Shh stammt ventral aus Chorda dorsalis und Bodenplatte; BMP/Wnt stammen dorsal aus Epidermis und Deckplatte.",
+     "correct": true
+    },
+    {
+     "t": "Shh stammt dorsal aus der Deckplatte; BMP/Wnt stammen ventral aus der Chorda dorsalis.",
+     "correct": false
+    },
+    {
+     "t": "Shh und BMP werden beide von der Bodenplatte gebildet und wirken synergistisch.",
+     "correct": false
+    },
+    {
+     "t": "Das umliegende Gewebe hat keinen Einfluss; das Neuralrohr strukturiert sich zellautonom.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 34: Das umliegende Gewebe beeinflusst die ventral-dorsale Strukturierung. Die Chorda induziert die Bodenplatte, die dann selbst Shh bildet; die Epidermis induziert die Deckplatte (BMP, Wnt)."
+  },
+  {
+   "id": "vl05-shh-klassen",
+   "type": "multi",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folie 36",
+   "stem": "Welche Aussagen zur Shh-abhängigen Festlegung der ventralen Progenitordomänen treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "Klasse-I-Transkriptionsfaktoren (z. B. Pax6, Dbx2) werden durch Shh unterdrückt.",
+     "correct": true
+    },
+    {
+     "t": "Klasse-II-Transkriptionsfaktoren (z. B. Nkx2.2, Nkx6.1) werden durch Shh induziert.",
+     "correct": true
+    },
+    {
+     "t": "Klasse-I- und Klasse-II-Faktoren hemmen sich gegenseitig (Kreuzrepression) und schärfen so die Domänengrenzen.",
+     "correct": true
+    },
+    {
+     "t": "Die Domäne mit der höchsten Shh-Konzentration (p3) liegt am weitesten dorsal.",
+     "correct": false
+    },
+    {
+     "t": "Alle Progenitordomänen bilden denselben Neuronentyp.",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Kombination der Klasse-I/II-Faktoren definiert die Domänen p0, p1, p2, pMN und p3 (ventralste, höchste Shh-Konzentration, Nkx2.2), aus denen V0–V3-Interneurone bzw. Motoneurone (MN) hervorgehen."
+  },
+  {
+   "id": "vl05-domaenen-order",
+   "type": "order",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folie 36",
+   "stem": "Ordnen Sie die ventralen Progenitordomänen des Neuralrohrs von dorsal nach ventral (zunehmende Shh-Konzentration).",
+   "items": [
+    "p0",
+    "p1",
+    "p2",
+    "pMN",
+    "p3"
+   ],
+   "explanation": "Dorsal → ventral: p0 (→ V0), p1 (→ V1), p2 (→ V2), pMN (→ Motoneurone), p3 (→ V3, höchste Shh-Konzentration, Nkx2.2)."
+  },
+  {
+   "id": "vl05-dv-open",
+   "type": "open",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folien 34–36",
+   "stem": "Beschreiben Sie in Stichworten, wie die dorso-ventrale Achse des Neuralrohrs festgelegt wird.",
+   "points": [
+    "Ventral: Chorda dorsalis sezerniert Shh und induziert die Bodenplatte (die dann selbst Shh bildet)",
+    "Dorsal: Epidermis bzw. Deckplatte sezernieren BMP und Wnt",
+    "Gegenläufige Konzentrationsgradienten (Morphogene) entlang der D-V-Achse",
+    "Shh-Konzentration reguliert Klasse-I- (reprimiert) und Klasse-II-Transkriptionsfaktoren (induziert)",
+    "Kreuzrepression → scharf begrenzte Progenitordomänen (p0–p3, pMN) → V0–V3-Interneurone, Motoneurone"
+   ],
+   "need": 4,
+   "explanation": "Positionsinformation (French-Flag-Prinzip) in der dorso-ventralen Achse: ventral Motoneurone, dorsal sensorische Verarbeitung."
+  },
+  {
+   "id": "vl05-barrel-cortex",
+   "type": "single",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folie 37",
+   "stem": "Was zeigt das Experiment zum Tönnchencortex (Barrel Cortex) der Maus nach früher Entfernung der Schnurrhaare?",
+   "options": [
+    {
+     "t": "Die Tönnchenstruktur bildet sich nicht normal aus – die Strukturierung des Cortex hängt von afferenten Signalen ab.",
+     "correct": true
+    },
+    {
+     "t": "Die Tönnchen bilden sich unverändert aus – die Strukturierung des Cortex ist rein genetisch festgelegt und von Afferenzen unabhängig.",
+     "correct": false
+    },
+    {
+     "t": "Für jedes entfernte Schnurrhaar bildet sich im kontralateralen Cortex ein zusätzliches Tönnchen aus.",
+     "correct": false
+    },
+    {
+     "t": "Nur die Gliazellen des Barrel Cortex gehen zugrunde, die neuronale Tönnchenstruktur bleibt vollständig erhalten.",
+     "correct": false
+    }
+   ],
+   "explanation": "Jedes Schnurrhaar wird über Trigeminus und Thalamus auf ein „Barrel“ (Tönnchen) im somatosensorischen Cortex abgebildet. Werden die Schnurrhaar-Follikel sehr früh zerstört (P1 oder P3), bildet sich das Tönnchenmuster der betroffenen Reihe nicht normal aus (VGLUT2-Färbung der Thalamusafferenzen). Bei Zerstörung an P6 bleibt das Muster normal – die kritische Periode ist dann vorbei. Die Strukturierung des Cortex hängt also von afferenten Signalen ab."
+  },
+  {
+   "id": "vl05-frage-strukturierung",
+   "type": "combo",
+   "topic": "Dorso-ventrale Achse & afferente Signale",
+   "source": "slides",
+   "ref": "VL05 · Folie 38 (Frage-Folie); Folien 31–37",
+   "stem": "Welche Aussagen zur Strukturierung des Nervensystems treffen zu?",
+   "statements": [
+    {
+     "t": "Die gleiche Shh-Konzentration kann zur Bildung unterschiedlicher Neurone führen.",
+     "correct": true
+    },
+    {
+     "t": "Mutationen in Hoxb1 (v. a. in Rhombomer r4 exprimiert) führen zu einer Fehlentwicklung von Motoneuronen in Rhombomer r4.",
+     "correct": true
+    },
+    {
+     "t": "Die Wnt-Signalkaskade beeinflusst die Expression von Transkriptionsfaktoren zur Etablierung der rostro-kaudalen Achse.",
+     "correct": true
+    },
+    {
+     "t": "Die Strukturierung des Kortex ist unabhängig von afferenten Signalen.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "BC",
+    "ABC",
+    "ABCD",
+    "ACD"
+   ],
+   "explanation": "A: Shh induziert im Mittelhirn dopaminerge, im Hinterhirn serotonerge Neurone – der Kontext (Kompetenz, z. B. Otx2/Gbx2) entscheidet (Folie 32). B: Hox-Gene legen den Motoneuronsubtyp fest (Folie 33). C: Wnt-Gradient → Otx2/Gbx2 (Folie 31). D falsch: Barrel Cortex (Folie 37).",
+   "note": "Lösung nicht auf den Folien angegeben – aus den Folien 31–37 abgeleitet."
+  },
+  {
+   "id": "vl05-gliogenic-switch",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL05 · Folie 44 (vgl. VL04 · Folie 22)",
+   "stem": "Was ist der Gliogenic Switch?",
+   "options": [
+    {
+     "t": "Zeitpunkt, an dem neurale Stammzellen nach der Produktion von Neuronen auf die Produktion von Gliazellen umschwenken und z. B. Astrozyten und Oligodendrozyten bilden",
+     "correct": true
+    },
+    {
+     "t": "Switch von primitiver zu definitiver Hämatopoese",
+     "correct": false
+    },
+    {
+     "t": "Entscheidung einer Gliavorläuferzelle zwischen Astrozyten- und Oligodendrozytenschicksal",
+     "correct": false
+    },
+    {
+     "t": "Wechsel radialer Gliazellen von symmetrischer zu asymmetrischer Teilung zu Beginn der Neurogenese",
+     "correct": false
+    }
+   ],
+   "explanation": "Radiale Gliazellen bilden embryonal zuerst Neurone (direkt oder über nIPCs), um die Geburt herum dann Astrozyten und Oligodendrozyten (über oIPCs), postnatal Ependymzellen und adulte B-Zellen (Folie 44). Der Wechsel von symmetrischer zu asymmetrischer Teilung markiert dagegen den Beginn der Neurogenese.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): A – durch Folie 44 gedeckt. Option D im Protokoll fehlend, sinnvoll ergänzt; Option C leicht umformuliert."
+  },
+  {
+   "id": "vl05-rg-schema",
+   "type": "label",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folie 44",
+   "stem": "Beschriften Sie das Schema der Entwicklung radialer Gliazellen und ihrer Nachkommen (vom Neuroepithel bis zum Adulten).",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 44,
+    "crop": [
+     85,
+     100,
+     700,
+     363
+    ],
+    "hide": [
+     [
+      531,
+      186,
+      595,
+      198
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      100,
+      320,
+      157,
+      337
+     ],
+     "answer": "Neuroepitheliale Zellen",
+     "accept": [
+      "neuroepithelial cells",
+      "Neuroepithelzellen",
+      "Neuroepithel",
+      "neuroepitheliale Vorläuferzellen"
+     ],
+     "x": 2.03,
+     "y": 82.7,
+     "w": 10.08,
+     "h": 8.37
+    },
+    {
+     "box": [
+      257,
+      320,
+      315,
+      330
+     ],
+     "answer": "Radiale Gliazellen",
+     "accept": [
+      "radial glial cells",
+      "radiale Glia",
+      "RGC",
+      "RGCs",
+      "Radialglia"
+     ],
+     "x": 27.56,
+     "y": 82.7,
+     "w": 10.24,
+     "h": 5.7
+    },
+    {
+     "box": [
+      331,
+      183,
+      368,
+      191
+     ],
+     "answer": "Astrozyten",
+     "accept": [
+      "astrocytes",
+      "Astrozyten",
+      "Astrocyten"
+     ],
+     "x": 39.59,
+     "y": 30.61,
+     "w": 6.83,
+     "h": 4.94
+    },
+    {
+     "box": [
+      414,
+      170,
+      477,
+      180
+     ],
+     "answer": "Oligodendrozyten",
+     "accept": [
+      "oligodendrocytes",
+      "Oligodendrozyten",
+      "Oligos"
+     ],
+     "x": 53.09,
+     "y": 25.67,
+     "w": 11.06,
+     "h": 5.7
+    },
+    {
+     "box": [
+      424,
+      328,
+      466,
+      343
+     ],
+     "answer": "Ependymzellen",
+     "accept": [
+      "ependymal cells",
+      "Ependymzellen",
+      "Ependym"
+     ],
+     "x": 54.72,
+     "y": 85.74,
+     "w": 7.64,
+     "h": 7.6
+    },
+    {
+     "box": [
+      478,
+      314,
+      502,
+      322
+     ],
+     "answer": "B-Zellen (adulte NSCs)",
+     "accept": [
+      "B cells",
+      "B-Zellen",
+      "adulte Stammzellen",
+      "adulte NSCs",
+      "Typ-B-Zellen"
+     ],
+     "x": 63.5,
+     "y": 80.42,
+     "w": 4.72,
+     "h": 4.94
+    }
+   ],
+   "explanation": "Neuroepitheliale Zellen → radiale Gliazellen → embryonal zuerst Neurone (direkt oder über nIPC), später Astrozyten und Oligodendrozyten (über oIPC; Gliogenic Switch), neonatal Ependymzellen und als adulte NSCs die B-Zellen der SVZ.",
+   "image": "assets/figures/vl05-rg-schema.webp",
+   "iw": 1230,
+   "ih": 526
+  },
+  {
+   "id": "vl05-rg-nachkommen",
+   "type": "multi",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folie 44 (vgl. VL04 · Folie 18)",
+   "stem": "Welche Zellen gehen aus radialen Gliazellen hervor? (5 richtig)",
+   "options": [
+    {
+     "t": "Neurone",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten",
+     "correct": true
+    },
+    {
+     "t": "Oligodendrozyten",
+     "correct": true
+    },
+    {
+     "t": "Ependymzellen",
+     "correct": true
+    },
+    {
+     "t": "Adulte neurale Stammzellen (B-Zellen der SVZ)",
+     "correct": true
+    },
+    {
+     "t": "Mikroglia",
+     "correct": false
+    },
+    {
+     "t": "Schwann-Zellen",
+     "correct": false
+    }
+   ],
+   "explanation": "Radiale Glia sind die primären NSCs des ZNS. Mikroglia stammen aus der primitiven Hämatopoese im Dottersack, Schwann-Zellen aus der Neuralleiste."
+  },
+  {
+   "id": "vl05-radial-unit",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folien 41–43",
+   "stem": "Was besagt die Radial-Unit-Theorie?",
+   "options": [
+    {
+     "t": "Der Cortex des Endhirns ist in radiale Glia-Einheiten unterteilt, an deren Fortsätzen sich die neu gebildeten Neurone bei der Migration orientieren.",
+     "correct": true
+    },
+    {
+     "t": "Alle kortikalen Neurone entstehen in der medialen Ganglienhügel-Eminenz und wandern tangential entlang von Axonen in den Cortex ein.",
+     "correct": false
+    },
+    {
+     "t": "Radiale Gliazellen sind ausdifferenzierte Astrozyten ohne Teilungsfähigkeit, die nur als Stützgerüst unter der Pia dienen.",
+     "correct": false
+    },
+    {
+     "t": "Neurone wandern ungerichtet in den Cortex ein und ordnen sich erst nachträglich durch Apoptose zu radialen Säulen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Radiale Gliazellen spannen sich von der Ventrikulärzone bis zur Pia; Neurone wandern entlang dieser Fasern radial nach außen. Radiale Gliazellen sind zugleich Vorläuferzellen: Sie teilen sich (meist asymmetrisch) und bilden Neurone direkt oder indirekt über intermediäre Vorläufer (nIPC), die sich in der SVZ teilen (Folien 43–44)."
+  },
+  {
+   "id": "vl05-zonen",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folien 42–43",
+   "stem": "Welche Abfolge der Zonen in der embryonalen Großhirnwand ist korrekt (vom Ventrikel nach außen)?",
+   "options": [
+    {
+     "t": "Ventrikulärzone – Subventrikulärzone – Intermediärzone – Kortikalplatte – Marginalzone",
+     "correct": true
+    },
+    {
+     "t": "Marginalzone – Kortikalplatte – Intermediärzone – Subventrikulärzone – Ventrikulärzone",
+     "correct": false
+    },
+    {
+     "t": "Subventrikulärzone – Ventrikulärzone – Kortikalplatte – Intermediärzone – Marginalzone",
+     "correct": false
+    },
+    {
+     "t": "Ventrikulärzone – Intermediärzone – Subventrikulärzone – Marginalzone – Kortikalplatte",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Zellkörper radialer Glia liegen in der Ventrikulärzone (VZ); ihre Nachkommen teilen sich in der SVZ, wandern durch die Intermediärzone (IZ) in die Kortikalplatte (CP) unter der Marginalzone (MZ)."
+  },
+  {
+   "id": "vl05-inside-out",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL05 · Folien 42–44",
+   "stem": "Wie entsteht die Cortexschichtung?",
+   "options": [
+    {
+     "t": "Outside-in-Migration",
+     "correct": false
+    },
+    {
+     "t": "Inside-out-Migration",
+     "correct": true
+    },
+    {
+     "t": "Inside-out-Migration und danach Outside-in-Migration",
+     "correct": false
+    }
+   ],
+   "explanation": "Neurone wandern radial entlang der radialen Glia in die Kortikalplatte. Früh gebildete Neurone besetzen die tiefen Schichten (VI/V), später gebildete wandern an ihnen vorbei nach außen (II/III) – die Schichten entstehen also von innen nach außen.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): B. Der Begriff „inside-out“ steht nicht explizit auf den Folien (radiale Migration Folien 42–44); Lehrbuchwissen."
+  },
+  {
+   "id": "vl05-embryonaler-cortex",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL05 · Folie 45",
+   "stem": "Im embryonalen Cortex können nur …",
+   "options": [
+    {
+     "t": "GABAerge Neurone gebildet werden.",
+     "correct": false
+    },
+    {
+     "t": "glutamaterge Neurone gebildet werden.",
+     "correct": true
+    },
+    {
+     "t": "GABA- und glutamaterge Neurone gebildet werden.",
+     "correct": false
+    }
+   ],
+   "explanation": "Kortikale GABAerge Interneurone entstehen nicht im Cortex (Pallium) selbst, sondern im ventralen Telencephalon: überwiegend in der medialen Ganglienhügel-Eminenz (MGE, Folie 45), daneben in der kaudalen (CGE) und der präoptischen Region. Von dort wandern sie tangential in den Neocortex ein. Die kortikalen Vorläufer bilden die glutamatergen Projektionsneurone. Das strikte „nur“ ist im Nagermodell belegt; beim Menschen wird ein kleiner kortikaler Beitrag zu Interneuronen diskutiert.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): B – mit Folie 45 vereinbar (Interneurone aus der MGE). Im Protokoll „Glutaminerge“ = glutamaterge Neurone. Dass Interneurone GABAerg sind, ist Lehrbuchwissen."
+  },
+  {
+   "id": "vl05-tangential",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folie 45",
+   "stem": "Wo werden kortikale Interneurone gebildet und wie gelangen sie in den Neocortex?",
+   "options": [
+    {
+     "t": "In der medialen Ganglienhügel-Eminenz (MGE); tangentiale Migration entlang von Axonen, gelenkt durch chemische Botenstoffe",
+     "correct": true
+    },
+    {
+     "t": "In der Ventrikulärzone des Neocortex; radiale Migration entlang der Fortsätze radialer Gliazellen",
+     "correct": false
+    },
+    {
+     "t": "In der Neuralleiste; freie Migration durch das Mesenchym, gelenkt durch die Somiten",
+     "correct": false
+    },
+    {
+     "t": "Im Gyrus dentatus; Migration über den rostralen migratorischen Strom bis in den Cortex",
+     "correct": false
+    }
+   ],
+   "explanation": "Tangentiale Migration verläuft parallel zur Oberfläche entlang von Axonen; Leitmoleküle (z. B. Ephrine, Semaphorine, Slit/Robo, Nrg1/ErbB4, Cxcl12) lenken sie. Projektionsneurone wandern dagegen radial entlang radialer Glia."
+  },
+  {
+   "id": "vl05-frage-differenzierung",
+   "type": "combo",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folie 49 (Frage-Folie); Folien 44–46",
+   "stem": "Welche Aussagen zur neuronalen Differenzierung treffen zu?",
+   "statements": [
+    {
+     "t": "Radiale Gliazellen entwickeln sich aus neuroepithelialen Vorläuferzellen.",
+     "correct": true
+    },
+    {
+     "t": "Radiale Gliazellen dienen als Leitstrukturen für die Migration peripherer Neuralleistenzellen.",
+     "correct": false
+    },
+    {
+     "t": "Neurone können entlang von Axonen tangential zum Kortex migrieren.",
+     "correct": true
+    },
+    {
+     "t": "Radiale Gliazellen können sich über neuronale Progenitoren zu Neuronen weiter differenzieren.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AC",
+    "ACD",
+    "ABD",
+    "CD",
+    "ABCD"
+   ],
+   "explanation": "A und D: Folie 44 (Neuroepithel → radiale Glia → nIPC → Neurone). C: tangentiale Migration der Interneurone (Folie 45). B falsch: Die Migration im PNS erfolgt frei, nicht entlang radialer Glia (Folie 46).",
+   "note": "Lösung nicht auf den Folien angegeben – aus den Folien 44–46 abgeleitet."
+  },
+  {
+   "id": "vl05-rg-funktionen-open",
+   "type": "open",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folien 41–45",
+   "stem": "Nennen Sie 3 Funktionen radialer Gliazellen in der Entwicklung des Cortex.",
+   "points": [
+    "Neurale Stamm-/Vorläuferzellen: bilden (direkt oder über intermediäre Progenitoren) Neurone",
+    "Leitstruktur für die radiale Migration der Neurone (Radial-Unit-Theorie)",
+    "Gliogenese: später Astrozyten und Oligodendrozyten (Gliogenic Switch)",
+    "Bilden Ependymzellen und adulte NSCs (B-Zellen der SVZ)",
+    "Gliedern den Cortex in radiale Einheiten (Säulen)"
+   ],
+   "need": 3,
+   "explanation": "Radiale Glia sind zugleich Stammzellen und Gerüst: Ihre Fortsätze reichen vom Ventrikel bis zur Pia."
+  },
+  {
+   "id": "vl05-npc-gewinnung",
+   "type": "single",
+   "topic": "Radiale Glia & Migration",
+   "source": "slides",
+   "ref": "VL05 · Folie 48",
+   "stem": "Welche Aussage zur Gewinnung neuraler Vorläuferzellen (NPCs) aus Fibroblasten trifft zu?",
+   "options": [
+    {
+     "t": "NPCs lassen sich über iPSCs (Oct4, Sox2, Klf4, c-Myc) und gerichtete Differenzierung oder direkt mit Faktoren wie Brn2, Sox2, FoxG1 gewinnen.",
+     "correct": true
+    },
+    {
+     "t": "NPCs lassen sich ausschließlich über den Umweg der iPSCs gewinnen; eine direkte Umwandlung von Fibroblasten ist nicht möglich.",
+     "correct": false
+    },
+    {
+     "t": "Für die direkte Umwandlung von Fibroblasten in NPCs genügt die Zugabe von Shh allein, ganz ohne Transkriptionsfaktoren.",
+     "correct": false
+    },
+    {
+     "t": "Aus Fibroblasten gewonnene NPCs können sich nicht selbst erneuern und differenzieren ausschließlich zu Astrozyten.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 48: Fibroblast → iPSC (Oct4⁺, Nanog⁺) → gerichtete Differenzierung zur NPC, oder direkte Konversion (z. B. Brn4/Sox2/Klf4/c-Myc bzw. Brn2/Sox2/FoxG1). NPCs erneuern sich selbst und bilden Neurone, Astrozyten und Oligodendrozyten."
+  },
+  {
+   "id": "vl05-pns-neuralleiste",
+   "type": "single",
+   "topic": "Neuralleiste & PNS",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL05 · Folien 13, 46–47",
+   "stem": "Woraus stammen die Zellen des PNS ab?",
+   "options": [
+    {
+     "t": "Neuralleistenzellen",
+     "correct": true
+    },
+    {
+     "t": "Telencephalon",
+     "correct": false
+    },
+    {
+     "t": "Endometrium",
+     "correct": false
+    },
+    {
+     "t": "Schwann-Zellen",
+     "correct": false
+    }
+   ],
+   "explanation": "Sensibler Anteil des Spinalnervs, viszerales (vegetatives) PNS und periphere Glia (Schwann-, Satelliten-, enterische Gliazellen) stammen aus der Neuralleiste. Schwann-Zellen sind selbst Neuralleisten-Abkömmlinge. Ausnahme: die motorischen Axone stammen von Vorderhornneuronen (Neuralrohr)."
+  },
+  {
+   "id": "vl05-nc-schema",
+   "type": "label",
+   "topic": "Neuralleiste & PNS",
+   "source": "slides",
+   "ref": "VL05 · Folie 47",
+   "stem": "Beschriften Sie das Schema zur Differenzierung von Neuralleistenzellen.",
+   "src": {
+    "pdf": "VL05Entwicklungsneurobiologie.pdf",
+    "page": 47,
+    "crop": [
+     60,
+     100,
+     640,
+     360
+    ],
+    "hide": [
+     [
+      64,
+      216,
+      122,
+      233
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      300,
+      113,
+      439,
+      130
+     ],
+     "answer": "Neuralleisten-Stammzellen (neural crest stem cells)",
+     "accept": [
+      "neural crest stem cells",
+      "Neuralleistenzellen",
+      "Neuralleisten-Stammzellen",
+      "Neuralleiste"
+     ],
+     "x": 40.95,
+     "y": 4.04,
+     "w": 24.83,
+     "h": 8.46
+    },
+    {
+     "box": [
+      64,
+      199,
+      152,
+      214
+     ],
+     "answer": "Periphere Glia (peripheral glia subtypes)",
+     "accept": [
+      "peripheral glia",
+      "periphere Glia",
+      "periphere Gliazellen",
+      "peripheral glia subtypes"
+     ],
+     "x": 0.26,
+     "y": 37.12,
+     "w": 16.03,
+     "h": 7.69
+    },
+    {
+     "box": [
+      104,
+      238,
+      181,
+      250
+     ],
+     "answer": "Schwann-Zellen",
+     "accept": [
+      "Schwann cells",
+      "Schwann-Zellen",
+      "Schwannzellen"
+     ],
+     "x": 7.16,
+     "y": 52.12,
+     "w": 14.14,
+     "h": 6.54
+    },
+    {
+     "box": [
+      320,
+      300,
+      389,
+      334
+     ],
+     "answer": "Autonome (vegetative) Neurone",
+     "accept": [
+      "autonomic neurons",
+      "autonome Neurone",
+      "vegetative Neurone",
+      "sympathische Neurone"
+     ],
+     "x": 44.4,
+     "y": 75.96,
+     "w": 12.76,
+     "h": 15.0
+    },
+    {
+     "box": [
+      433,
+      281,
+      532,
+      299
+     ],
+     "answer": "Enterische Neurone",
+     "accept": [
+      "enteric neurons",
+      "enterische Neurone",
+      "Darmnervensystem"
+     ],
+     "x": 63.88,
+     "y": 68.65,
+     "w": 17.93,
+     "h": 8.85
+    },
+    {
+     "box": [
+      555,
+      199,
+      635,
+      217
+     ],
+     "answer": "Melanozyten",
+     "accept": [
+      "melanocytes",
+      "Melanozyten",
+      "Melanocyten",
+      "Pigmentzellen"
+     ],
+     "x": 84.91,
+     "y": 37.12,
+     "w": 14.66,
+     "h": 8.85
+    }
+   ],
+   "explanation": "Sox10 ist in Neuralleisten-Stammzellen und allen gezeigten Linien beteiligt; zusätzlich ErbB3/NRG1 → periphere Glia, PHOX2B → autonome Neurone, MASH1/EDN3–EDNRB → enterische Neurone, MITF → Melanozyten.",
+   "image": "assets/figures/vl05-nc-schema.webp",
+   "iw": 1160,
+   "ih": 520
+  },
+  {
+   "id": "vl05-sox10",
+   "type": "single",
+   "topic": "Neuralleiste & PNS",
+   "source": "slides",
+   "ref": "VL05 · Folie 47",
+   "stem": "Welcher Transkriptionsfaktor ist an der Differenzierung von Neuralleisten-Stammzellen zu peripherer Glia, autonomen und enterischen Neuronen sowie Melanozyten beteiligt?",
+   "options": [
+    {
+     "t": "Sox10",
+     "correct": true
+    },
+    {
+     "t": "Otx2",
+     "correct": false
+    },
+    {
+     "t": "Pax6",
+     "correct": false
+    },
+    {
+     "t": "Nkx2.2",
+     "correct": false
+    }
+   ],
+   "explanation": "Sox10 erscheint auf Folie 47 in allen vier Linien; linienspezifisch kommen z. B. MITF (Melanozyten), PHOX2B (autonome Neurone) oder ErbB3 (periphere Glia) hinzu. Otx2 = rostrales Neuralrohr, Pax6/Nkx2.2 = D-V-Muster im Neuralrohr."
+  },
+  {
+   "id": "vl05-neuralleiste-derivate",
+   "type": "multi",
+   "topic": "Neuralleiste & PNS",
+   "source": "slides",
+   "ref": "VL05 · Folien 13, 47",
+   "stem": "Welche Zellen sind Abkömmlinge der Neuralleiste? (5 richtig)",
+   "options": [
+    {
+     "t": "Schwann-Zellen",
+     "correct": true
+    },
+    {
+     "t": "Satellitenzellen der Ganglien",
+     "correct": true
+    },
+    {
+     "t": "Enterische Neurone und Gliazellen",
+     "correct": true
+    },
+    {
+     "t": "Autonome (vegetative) Neurone",
+     "correct": true
+    },
+    {
+     "t": "Melanozyten",
+     "correct": true
+    },
+    {
+     "t": "Oligodendrozyten",
+     "correct": false
+    },
+    {
+     "t": "Motoneurone des Vorderhorns",
+     "correct": false
+    }
+   ],
+   "explanation": "Neuralleiste → sensibler Anteil des Spinalnervs, viszerales PNS, periphere Glia und Melanozyten. Oligodendrozyten (zentrale Glia) und Motoneurone stammen aus dem Neuralrohr."
+  },
+  {
+   "id": "vl05-neuralrohr-vs-leiste",
+   "type": "open",
+   "topic": "Neuralleiste & PNS",
+   "source": "slides",
+   "ref": "VL05 · Folien 13, 47",
+   "stem": "Nennen Sie je 3 Abkömmlinge des Neuralrohrs und der Neuralleiste.",
+   "points": [
+    "Neuralrohr: Gehirn",
+    "Neuralrohr: Rückenmark",
+    "Neuralrohr: zentrale Glia (Astrozyten, Oligodendrozyten, Ependym)",
+    "Neuralrohr: motorischer Anteil des Spinalnervs",
+    "Neuralleiste: sensibler Anteil des Spinalnervs (Spinalganglien)",
+    "Neuralleiste: viszerales/vegetatives PNS (autonome und enterische Neurone)",
+    "Neuralleiste: periphere Glia (Schwann-, Satelliten-, enterische Gliazellen)",
+    "Neuralleiste: Melanozyten",
+    "Neuralleiste (Lehrbuch): Nebennierenmark (chromaffine Zellen)",
+    "Neuralleiste (Lehrbuch): Kopf-Ektomesenchym – Knorpel/Knochen des Gesichtsschädels, Odontoblasten; Septum des Herzausflusstrakts"
+   ],
+   "need": 6,
+   "explanation": "Merksatz: Neuralrohr → ZNS (+ motorische Fasern). Neuralleiste → laut Folie sensibles und viszerales PNS, periphere Glia und Melanozyten; lehrbuchmäßig zusätzlich Nebennierenmark, kraniales Ektomesenchym (Gesichtsschädel, Odontoblasten) und das Septum des Herzausflusstrakts."
+  },
+  {
+   "id": "vl05-pns-migration",
+   "type": "combo",
+   "topic": "Neuralleiste & PNS",
+   "source": "slides",
+   "ref": "VL05 · Folie 46",
+   "stem": "Welche Aussagen zur Migration der Neuralleistenzellen treffen zu?",
+   "statements": [
+    {
+     "t": "Die Migration im peripheren Nervensystem erfolgt frei – nicht entlang radialer Gliazellen.",
+     "correct": true
+    },
+    {
+     "t": "Neuralleistenzellen wandern auf einem dorsalen Weg (unter dem Oberflächenektoderm) und einem ventralen Weg (durch bzw. entlang der Somiten).",
+     "correct": true
+    },
+    {
+     "t": "Somiten stammen aus dem Neuralrohr und bilden die Spinalganglien.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "B",
+    "AB",
+    "ABC",
+    "AC"
+   ],
+   "explanation": "Somiten entstehen aus dem paraxialen Mesoderm und bilden Skelett, Hautgewebe (Dermis) und Skelettmuskulatur. Neuralleistenzellen wandern frei durch das umgebende Gewebe."
+  }
+ ]
+}

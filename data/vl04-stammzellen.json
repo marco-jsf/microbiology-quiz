@@ -1,0 +1,1678 @@
+{
+ "id": "vl04",
+ "title": "VL04 · Neurale Stammzellen",
+ "short": "Stammzellen",
+ "color": "#8a62d0",
+ "topics": [
+  "Stammzelltypen & Reprogrammierung",
+  "Stammzellpotenz",
+  "Symmetrische & asymmetrische Teilung",
+  "Stammzellnischen & Alterung",
+  "Adulte neurale Stammzellen (SVZ/SGZ)",
+  "Zellersatztherapie",
+  "Modellsysteme (Organoide & Co.)",
+  "Glia & Mikroglia-Ersatz"
+ ],
+ "questions": [
+  {
+   "id": "vl04-es-herkunft",
+   "type": "single",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folien 5–6",
+   "stem": "Woraus werden embryonale Stammzellen (ES-Zellen) gewonnen?",
+   "options": [
+    {
+     "t": "Aus der inneren Zellmasse (Embryoblast) der Blastozyste",
+     "correct": true
+    },
+    {
+     "t": "Aus dem Trophoblasten der Blastozyste",
+     "correct": false
+    },
+    {
+     "t": "Aus den Blastomeren der Morula",
+     "correct": false
+    },
+    {
+     "t": "Aus den Blutinseln des Dottersacks",
+     "correct": false
+    }
+   ],
+   "explanation": "Die innere Zellmasse wird vom Trophoblasten getrennt und kann im pluripotenten Zustand kultiviert werden. ES-Zellen können Zellen aller drei Keimblätter bilden (z. B. Kardiomyozyten, Neurone, Leberzellen)."
+  },
+  {
+   "id": "vl04-es-schema",
+   "type": "label",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folie 6",
+   "stem": "Beschriften Sie das Schema zur Gewinnung embryonaler Stammzellen (ES-Zellen).",
+   "src": {
+    "pdf": "VL04_Neural stem cells.pdf",
+    "page": 6,
+    "crop": [
+     262,
+     85,
+     745,
+     500
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      276,
+      92,
+      377,
+      107
+     ],
+     "answer": "In vitro befruchtete Eizelle (Zygote)",
+     "accept": [
+      "befruchtete Eizelle",
+      "Zygote",
+      "in vitro fertilized egg",
+      "fertilized egg",
+      "Eizelle"
+     ],
+     "x": 2.38,
+     "y": 1.08,
+     "w": 21.95,
+     "h": 4.82
+    },
+    {
+     "box": [
+      424,
+      92,
+      501,
+      107
+     ],
+     "answer": "Morula",
+     "accept": [
+      "Morula",
+      "Morula (8 cells)"
+     ],
+     "x": 33.02,
+     "y": 1.08,
+     "w": 16.98,
+     "h": 4.82
+    },
+    {
+     "box": [
+      597,
+      94,
+      652,
+      109
+     ],
+     "answer": "Blastozyste",
+     "accept": [
+      "Blastocyst",
+      "Blastozyste",
+      "Blastocyste"
+     ],
+     "x": 68.84,
+     "y": 1.57,
+     "w": 12.42,
+     "h": 4.82
+    },
+    {
+     "box": [
+      672,
+      107,
+      735,
+      122
+     ],
+     "answer": "Trophoblast",
+     "accept": [
+      "Trophoblast",
+      "Trophoblasten",
+      "Trophoektoderm"
+     ],
+     "x": 84.37,
+     "y": 4.7,
+     "w": 14.08,
+     "h": 4.82
+    },
+    {
+     "box": [
+      650,
+      238,
+      726,
+      254
+     ],
+     "answer": "Innere Zellmasse (Embryoblast)",
+     "accept": [
+      "inner cell mass",
+      "ICM",
+      "innere Zellmasse",
+      "Embryoblast"
+     ],
+     "x": 79.81,
+     "y": 36.27,
+     "w": 16.77,
+     "h": 5.06
+    },
+    {
+     "box": [
+      408,
+      353,
+      588,
+      367
+     ],
+     "answer": "Kultur undifferenzierter (pluripotenter) Stammzellen",
+     "accept": [
+      "culture of undifferentiated stem cells",
+      "Stammzellkultur",
+      "ES-Zellkultur",
+      "Kultur undifferenzierter Stammzellen",
+      "ES-Zellen"
+     ],
+     "x": 29.71,
+     "y": 63.98,
+     "w": 38.3,
+     "h": 4.58
+    }
+   ],
+   "explanation": "Befruchtete Eizelle → Morula → Blastozyste (die Folie beschriftet die Morula mit „8 cells“; lehrbuchmäßig spricht man erst ab ca. 16 Zellen nach der Kompaktion von einer Morula); die innere Zellmasse wird vom Trophoblasten getrennt und als pluripotente ES-Zellen kultiviert, die sich z. B. zu Kardiomyozyten, Neuronen oder Leberzellen differenzieren lassen.",
+   "image": "assets/figures/vl04-es-schema.webp",
+   "iw": 966,
+   "ih": 830
+  },
+  {
+   "id": "vl04-yamanaka",
+   "type": "open",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folie 9",
+   "stem": "Nennen Sie die vier „Yamanaka-Faktoren“, mit denen somatische Zellen zu induzierten pluripotenten Stammzellen (iPSCs) reprogrammiert werden.",
+   "points": [
+    "SOX2",
+    "OCT3/4",
+    "KLF4",
+    "c-MYC"
+   ],
+   "explanation": "Durch Zugabe dieser vier Transkriptionsfaktoren werden somatische Zellen (z. B. Fibroblasten) in einen pluripotenten Zustand zurückversetzt. Nicht verwechseln mit PAX6 oder NANOG (Marker, keine Yamanaka-Faktoren)."
+  },
+  {
+   "id": "vl04-ipsc-aussagen",
+   "type": "combo",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folien 9–11",
+   "stem": "Welche Aussagen zu induzierten pluripotenten Stammzellen (iPSCs) treffen zu?",
+   "statements": [
+    {
+     "t": "iPSC-Linien zeigen eine ähnliche Morphologie und ähnliche Wachstumseigenschaften wie ES-Zellen.",
+     "correct": true
+    },
+    {
+     "t": "iPSCs umgehen weitgehend das ethische Problem embryonaler Stammzellen.",
+     "correct": true
+    },
+    {
+     "t": "Die Effizienz der Reprogrammierung ist für alle somatischen Ausgangszellen gleich.",
+     "correct": false
+    },
+    {
+     "t": "iPSCs sind wie mesenchymale Stammzellen (MSCs) nur multipotent.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "AB",
+    "ABC",
+    "ABD",
+    "BD"
+   ],
+   "explanation": "iPSCs ähneln ES-Zellen und lösen weitgehend das ethische Problem (Folie 9). Die Reprogrammierungseffizienz unterscheidet sich je nach Ausgangszelle (Folie 10); MSCs sind multipotent, iPSCs dagegen pluripotent (Folie 11)."
+  },
+  {
+   "id": "vl04-scnt",
+   "type": "single",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folie 8",
+   "stem": "Was zeigte der somatische Zellkerntransfer (SCNT; Klonschaf „Dolly“)?",
+   "options": [
+    {
+     "t": "Der Kern einer Körperzelle wird in einer entkernten Eizelle reprogrammiert: Die Spezialisierung wird gelöscht, die Zelle wird pluripotent.",
+     "correct": true
+    },
+    {
+     "t": "Körperzellen lassen sich allein durch vier Transkriptionsfaktoren ohne Eizelle in pluripotente Zellen umwandeln.",
+     "correct": false
+    },
+    {
+     "t": "Eine Körperzelle lässt sich ohne pluripotentes Zwischenstadium direkt in eine andere Körperzelle umwandeln.",
+     "correct": false
+    },
+    {
+     "t": "Der Eizellkern bestimmt allein das Schicksal des Klons; der somatische Kern wird nicht genutzt.",
+     "correct": false
+    }
+   ],
+   "explanation": "Beim Kerntransfer wird die DNA einer Körperzelle durch das Zytoplasma der entkernten Eizelle reprogrammiert. Option 2 beschreibt iPSCs (Yamanaka), Option 3 die direkte Reprogrammierung."
+  },
+  {
+   "id": "vl04-msc",
+   "type": "single",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folie 11",
+   "stem": "Welche Aussage zu mesenchymalen Stammzellen (MSCs) trifft zu?",
+   "options": [
+    {
+     "t": "Sie stammen aus adultem Gewebe und sind multipotent, nicht pluripotent.",
+     "correct": true
+    },
+    {
+     "t": "Sie stammen aus der inneren Zellmasse und sind pluripotent.",
+     "correct": false
+    },
+    {
+     "t": "Sie entstehen durch Reprogrammierung mit Yamanaka-Faktoren und sind pluripotent.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind totipotent und können extraembryonales Gewebe bilden.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 11 („iPSC vs MSCs“): MSCs sind adulte, gewebeständige Stammzellen (z. B. Knochenmark, Fettgewebe) mit eingeschränktem, multipotentem Potenzial."
+  },
+  {
+   "id": "vl04-direct-reprogramming",
+   "type": "single",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folie 12",
+   "stem": "Was ist direct reprogramming?",
+   "options": [
+    {
+     "t": "Umwandlung einer somatischen Zelle in eine andere somatische Zelle",
+     "correct": true
+    },
+    {
+     "t": "Umwandlung einer pluripotenten Zelle in eine somatische Zelle",
+     "correct": false
+    },
+    {
+     "t": "Umwandlung einer somatischen Zelle in eine pluripotente Zelle",
+     "correct": false
+    },
+    {
+     "t": "Umwandlung einer pluripotenten Zelle in eine iPSC",
+     "correct": false
+    }
+   ],
+   "explanation": "Direkte Reprogrammierung (Transdifferenzierung): Über Transkriptionsfaktoren wird eine differenzierte Zelle in einen anderen differenzierten Zelltyp überführt – ohne Umweg über die Pluripotenz. Somatisch → pluripotent ist die iPSC-Reprogrammierung, pluripotent → somatisch ist normale Entwicklung/Differenzierung.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): A – durch Folie 12 bestätigt."
+  },
+  {
+   "id": "vl04-waddington",
+   "type": "label",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folie 12",
+   "stem": "Beschriften Sie Waddingtons epigenetische Landschaft: Ausgangszustand oben und die drei Wege des Zellschicksals.",
+   "src": {
+    "pdf": "VL04_Neural stem cells.pdf",
+    "page": 12,
+    "crop": [
+     50,
+     100,
+     560,
+     455
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      241,
+      111,
+      344,
+      133
+     ],
+     "answer": "Pluripotenz (pluripotency)",
+     "accept": [
+      "pluripotency",
+      "Pluripotenz",
+      "pluripotent"
+     ],
+     "x": 36.96,
+     "y": 2.39,
+     "w": 21.18,
+     "h": 7.61
+    },
+    {
+     "box": [
+      77,
+      165,
+      168,
+      265
+     ],
+     "answer": "Entwicklung / Reifung (development, maturation)",
+     "accept": [
+      "development",
+      "maturation",
+      "Entwicklung",
+      "Reifung",
+      "Differenzierung",
+      "development (maturation)"
+     ],
+     "x": 4.8,
+     "y": 17.61,
+     "w": 18.82,
+     "h": 29.58
+    },
+    {
+     "box": [
+      426,
+      163,
+      529,
+      282
+     ],
+     "answer": "Reprogrammierung (reprogramming, rejuvenation)",
+     "accept": [
+      "reprogramming",
+      "rejuvenation",
+      "Reprogrammierung",
+      "Verjüngung",
+      "iPSC-Reprogrammierung"
+     ],
+     "x": 73.24,
+     "y": 17.04,
+     "w": 21.18,
+     "h": 34.93
+    },
+    {
+     "box": [
+      90,
+      408,
+      270,
+      452
+     ],
+     "answer": "Direkte Reprogrammierung (Transdifferenzierung)",
+     "accept": [
+      "direct reprogramming",
+      "trans-differentiation",
+      "transdifferentiation",
+      "Transdifferenzierung",
+      "direkte Reprogrammierung"
+     ],
+     "x": 7.35,
+     "y": 86.06,
+     "w": 36.27,
+     "h": 13.8
+    }
+   ],
+   "explanation": "Pluripotente Zellen (gelb) differenzieren über Zwischenstufen (hellblau) zu somatischen Zellen (grün). Reprogrammierung führt zurück zur Pluripotenz (iPSC); direkte Reprogrammierung wandelt eine differenzierte Zelle über Transkriptionsfaktoren in eine andere (pink) um, ohne die Pluripotenz zu durchlaufen.",
+   "image": "assets/figures/vl04-waddington.webp",
+   "iw": 1020,
+   "ih": 710
+  },
+  {
+   "id": "vl04-reprogrammierung-wege",
+   "type": "open",
+   "topic": "Stammzelltypen & Reprogrammierung",
+   "source": "slides",
+   "ref": "VL04 · Folien 8, 9, 12",
+   "stem": "Beschreiben Sie in Stichworten drei Wege, das Schicksal einer differenzierten Körperzelle experimentell umzuprogrammieren.",
+   "points": [
+    "Somatischer Zellkerntransfer (SCNT): Kern in entkernte Eizelle → Spezialisierung gelöscht, pluripotent (Dolly)",
+    "iPSC-Reprogrammierung: Yamanaka-Faktoren (SOX2, OCT3/4, KLF4, c-MYC) → pluripotent",
+    "Direkte Reprogrammierung (Transdifferenzierung): Transkriptionsfaktoren → anderer somatischer Zelltyp ohne Pluripotenz"
+   ],
+   "explanation": "Zwei Wege führen über die Pluripotenz (SCNT, iPSC), die direkte Reprogrammierung umgeht sie (Waddington-Landschaft, Folie 12)."
+  },
+  {
+   "id": "vl04-potenz-myeloid",
+   "type": "single",
+   "topic": "Stammzellpotenz",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folie 13",
+   "stem": "Wenn eine myeloide Zelle nur noch zu roten Blutzellen werden kann und nicht mehr zu weißen Blutzellen, dann ist die myeloide Zelle …",
+   "options": [
+    {
+     "t": "multipotent",
+     "correct": false
+    },
+    {
+     "t": "oligopotent",
+     "correct": true
+    },
+    {
+     "t": "omnipotent",
+     "correct": false
+    },
+    {
+     "t": "totipotent",
+     "correct": false
+    }
+   ],
+   "explanation": "Oligopotente Zellen können nur noch in wenige Zelltypen differenzieren – ihr Potenzial ist stärker eingeschränkt als das einer multipotenten (z. B. hämatopoetischen) Stammzelle. Totipotent (Embryo + extraembryonales Gewebe; „omnipotent“ ist ein Synonym) scheidet aus.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): B. Streng genommen wäre eine Zelle mit nur einem Zielzelltyp „unipotent“ – diese Option gab es nicht; unter den Optionen passt oligopotent am besten."
+  },
+  {
+   "id": "vl04-potenz-zuordnung",
+   "type": "multi",
+   "topic": "Stammzellpotenz",
+   "source": "slides",
+   "ref": "VL04 · Folien 5, 11, 13",
+   "stem": "Welche Zuordnungen von Zelltyp und Potenz treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "Zygote – totipotent",
+     "correct": true
+    },
+    {
+     "t": "ES-Zellen aus der inneren Zellmasse – pluripotent",
+     "correct": true
+    },
+    {
+     "t": "Mesenchymale Stammzellen (MSCs) – multipotent",
+     "correct": true
+    },
+    {
+     "t": "iPSCs – totipotent",
+     "correct": false
+    },
+    {
+     "t": "Hämatopoetische Stammzellen – pluripotent",
+     "correct": false
+    }
+   ],
+   "explanation": "Totipotent = Embryo inkl. extraembryonaler Strukturen (Zygote); pluripotent = alle drei Keimblätter, aber kein extraembryonales Gewebe (ES-Zellen, iPSCs); multipotent = adulte Gewebestammzellen wie MSCs oder HSCs."
+  },
+  {
+   "id": "vl04-potenz-order",
+   "type": "order",
+   "topic": "Stammzellpotenz",
+   "source": "slides",
+   "ref": "VL04 · Folie 13",
+   "stem": "Ordnen Sie die Stammzellpotenzen nach abnehmendem Differenzierungspotenzial.",
+   "items": [
+    "Totipotent",
+    "Pluripotent",
+    "Multipotent",
+    "Oligopotent"
+   ],
+   "explanation": "Totipotent (Embryo + extraembryonales Gewebe) > pluripotent (alle drei Keimblätter) > multipotent (schmales Spektrum, mehrere Zelltypen eines Gewebes) > oligopotent (nur noch wenige Zelltypen)."
+  },
+  {
+   "id": "vl04-potenz-definitionen",
+   "type": "open",
+   "topic": "Stammzellpotenz",
+   "source": "slides",
+   "ref": "VL04 · Folie 13",
+   "stem": "Definieren Sie die Begriffe totipotent, pluripotent, multipotent und oligopotent.",
+   "points": [
+    "Totipotent: kann jede Zelle des Organismus bilden und einen ganzen Embryo inkl. extraembryonaler Strukturen hervorbringen",
+    "Pluripotent: kann Zellen aller drei Keimblätter (Ekto-, Meso-, Endoderm) bilden, aber kein extraembryonales Gewebe",
+    "Multipotent: schmales Differenzierungsspektrum (mehrere Zelltypen, meist eines Gewebes)",
+    "Oligopotent: kann nur noch in wenige Zelltypen differenzieren"
+   ],
+   "explanation": "Beispiele: Zygote (totipotent), ES-Zellen/iPSCs (pluripotent), HSCs/MSCs (multipotent), myeloide Vorläufer (oligopotent)."
+  },
+  {
+   "id": "vl04-teilung-schema",
+   "type": "label",
+   "topic": "Symmetrische & asymmetrische Teilung",
+   "source": "slides",
+   "ref": "VL04 · Folie 14",
+   "stem": "Beschriften Sie die beiden Teilungsmodi von Stammzellen und die Produkte der unteren Teilung.",
+   "src": {
+    "pdf": "VL04_Neural stem cells.pdf",
+    "page": 14,
+    "crop": [
+     80,
+     130,
+     790,
+     460
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      252,
+      216,
+      320,
+      281
+     ],
+     "answer": "Symmetrische Teilung (symmetry)",
+     "accept": [
+      "symmetrisch",
+      "Symmetrie",
+      "symmetry",
+      "symmetric division",
+      "symmetrische Teilung"
+     ],
+     "x": 23.87,
+     "y": 25.3,
+     "w": 10.28,
+     "h": 21.21
+    },
+    {
+     "box": [
+      256,
+      322,
+      338,
+      382
+     ],
+     "answer": "Asymmetrische Teilung (asymmetry)",
+     "accept": [
+      "asymmetrisch",
+      "Asymmetrie",
+      "asymmetry",
+      "asymmetric division",
+      "asymmetrische Teilung"
+     ],
+     "x": 24.44,
+     "y": 57.42,
+     "w": 12.25,
+     "h": 19.7
+    },
+    {
+     "box": [
+      621,
+      326,
+      702,
+      347
+     ],
+     "answer": "Stammzelle (Selbsterneuerung)",
+     "accept": [
+      "stem cell",
+      "Stammzelle",
+      "Selbsterneuerung"
+     ],
+     "x": 75.85,
+     "y": 58.64,
+     "w": 12.11,
+     "h": 7.88
+    },
+    {
+     "box": [
+      626,
+      420,
+      774,
+      444
+     ],
+     "answer": "Differenzierte Zelle",
+     "accept": [
+      "differentiated cell",
+      "differenzierte Zelle",
+      "differenzierende Zelle",
+      "Vorläuferzelle"
+     ],
+     "x": 76.55,
+     "y": 87.12,
+     "w": 21.55,
+     "h": 8.79
+    }
+   ],
+   "explanation": "Symmetrisch: Stammzelle → 2 Stammzellen (Expansion des Pools). Asymmetrisch: Stammzelle → 1 Stammzelle (Selbsterneuerung) + 1 differenzierende Zelle.",
+   "image": "assets/figures/vl04-teilung-schema.webp",
+   "iw": 1400,
+   "ih": 651
+  },
+  {
+   "id": "vl04-laterale-ausdehnung",
+   "type": "single",
+   "topic": "Symmetrische & asymmetrische Teilung",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folien 14, 21 (vgl. VL05 · Folien 42, 44)",
+   "stem": "Wie kann im Cortex laterale Ausdehnung erreicht werden?",
+   "options": [
+    {
+     "t": "Symmetrische Teilung",
+     "correct": true
+    },
+    {
+     "t": "Asymmetrische Teilung",
+     "correct": false
+    },
+    {
+     "t": "Zelltod von Vorläuferzellen",
+     "correct": false
+    }
+   ],
+   "explanation": "Symmetrische (proliferative) Teilungen der radialen Glia vergrößern den Vorläuferpool (NPC → 2 NPCs) – es entstehen mehr radiale Einheiten nebeneinander → Flächen- bzw. Lateralwachstum. Asymmetrische Teilungen liefern pro Einheit Neurone (Dickenwachstum).",
+   "note": "Lösung laut Protokoll (ohne Gewähr): A. Die Folien zeigen symmetrische Teilung als Expansion des Pools; die Verknüpfung mit lateraler Ausdehnung (Radial-Unit-Hypothese) ist Lehrbuchwissen."
+  },
+  {
+   "id": "vl04-asymmetrie-blockiert",
+   "type": "single",
+   "topic": "Symmetrische & asymmetrische Teilung",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL04 · Folien 14, 21 (vgl. VL05 · Folie 44)",
+   "stem": "Was passiert in der Entwicklung mit einer Hirnregion, wenn die asymmetrische Zellteilung blockiert wird?",
+   "options": [
+    {
+     "t": "Der laterale Anteil dieser Region wird größer im Vergleich zur normalen Entwicklung.",
+     "correct": true
+    },
+    {
+     "t": "Der apikale Anteil dieser Region wird größer im Vergleich zur normalen Entwicklung.",
+     "correct": false
+    },
+    {
+     "t": "Es gibt keine Unterschiede.",
+     "correct": false
+    },
+    {
+     "t": "Sie wird kleiner.",
+     "correct": false
+    }
+   ],
+   "explanation": "Ohne asymmetrische Teilungen bleiben die Vorläufer in symmetrischen, proliferativen Teilungen: Der Vorläuferpool (Zahl der radialen Einheiten) wächst weiter → laterale/tangentiale Vergrößerung – analog zur Altklausurfrage „laterale Ausdehnung durch symmetrische Teilung“.",
+   "note": "Keine Lösung im Protokoll. Aus dem Konzept der Folien abgeleitet (symmetrisch = Expansion/laterales Wachstum, asymmetrisch = Neurogenese) – bitte prüfen."
+  },
+  {
+   "id": "vl04-sym-asym-nsc",
+   "type": "combo",
+   "topic": "Symmetrische & asymmetrische Teilung",
+   "source": "slides",
+   "ref": "VL04 · Folie 21",
+   "stem": "Welche Aussagen zur Teilung radialer Gliazellen (RGCs) treffen zu?",
+   "statements": [
+    {
+     "t": "Zu Beginn der Neurogenese wechseln RGCs von symmetrischer zu asymmetrischer Teilung.",
+     "correct": true
+    },
+    {
+     "t": "Bei asymmetrischer Teilung bleibt die Tochterzelle mit hoher Notch-Aktivität eine RGC; die Tochter mit niedriger Notch-Aktivität wird zum intermediären Progenitor bzw. Neuron.",
+     "correct": true
+    },
+    {
+     "t": "Bei symmetrischer Teilung entstehen aus einer NPC eine NPC und ein Neuron.",
+     "correct": false
+    },
+    {
+     "t": "PAX6 ist ein Master-Regulator der Neurogenese und fördert RGC-Proliferation und Spindelorientierung.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ACD",
+    "BD",
+    "ABCD"
+   ],
+   "explanation": "Symmetrisch: NPC → 2 NPCs; asymmetrisch: NPC → 1 NPC + 1 Neuron. Asymmetrische Teilungen zeigen asymmetrische Notch-Signalgebung (Notch↑ = RGC, Notch↓ = IP/Neuron)."
+  },
+  {
+   "id": "vl04-signalwege",
+   "type": "multi",
+   "topic": "Symmetrische & asymmetrische Teilung",
+   "source": "slides",
+   "ref": "VL04 · Folie 22",
+   "stem": "Welche Zuordnungen von Signalweg und Funktion bei neuralen Stammzellen (NSCs) treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "NOTCH – hemmt vorzeitige Differenzierung und fördert die Gliogenese",
+     "correct": true
+    },
+    {
+     "t": "BMP – steuert neuronales vs. astrozytäres Schicksal",
+     "correct": true
+    },
+    {
+     "t": "Retinsäure (RA) – induziert neuronale Differenzierung",
+     "correct": true
+    },
+    {
+     "t": "WNT – hemmt die Zellzyklus-Progression",
+     "correct": false
+    },
+    {
+     "t": "EGF – löst Apoptose der NSCs aus",
+     "correct": false
+    }
+   ],
+   "explanation": "NOTCH, WNT und BMP sind die zentralen Wege für NSC-Differenzierung und -Reifung. WNT fördert die Zellzyklus-Progression (und später die synaptische Entwicklung), EGF unterstützt Selbsterneuerung und Überleben."
+  },
+  {
+   "id": "vl04-teilung-open",
+   "type": "open",
+   "topic": "Symmetrische & asymmetrische Teilung",
+   "source": "slides",
+   "ref": "VL04 · Folien 14, 21",
+   "stem": "Beschreiben Sie symmetrische und asymmetrische Teilung neuraler Stammzellen und ihre Bedeutung für die Cortexentwicklung.",
+   "points": [
+    "Symmetrisch: NPC → 2 NPCs (Expansion des Vorläuferpools)",
+    "Asymmetrisch: NPC → 1 NPC (Selbsterneuerung) + 1 Neuron bzw. intermediärer Progenitor",
+    "Zu Beginn der Neurogenese Wechsel von symmetrischer zu asymmetrischer Teilung",
+    "Asymmetrische Notch-Signalgebung: Notch↑ bleibt RGC, Notch↓ wird IP/Neuron",
+    "Symmetrische Teilungen → laterale Ausdehnung (mehr radiale Einheiten)"
+   ],
+   "need": 4,
+   "explanation": "Mehr symmetrische Teilungen vergrößern die Cortexfläche, asymmetrische Teilungen liefern die Neurone jeder radialen Einheit."
+  },
+  {
+   "id": "vl04-nischen-alterung",
+   "type": "single",
+   "topic": "Stammzellnischen & Alterung",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL04 · Folie 16",
+   "stem": "Was trägt zur Alterung von Stammzell-Nischen bei?",
+   "options": [
+    {
+     "t": "Versteifung der ECM",
+     "correct": false
+    },
+    {
+     "t": "Zytokin-Produktion",
+     "correct": false
+    },
+    {
+     "t": "Infiltration von Immunzellen",
+     "correct": false
+    },
+    {
+     "t": "Alle diese",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 16 („Ageing in the surrounding niche“): Immunzell-Infiltration (NSC-Nische), Sekretion von Zytokinen (NSC- und HSC-Nische, Gefäßentzündung) und Versteifung der Nische/ECM (MuSC- und OPC-Nische)."
+  },
+  {
+   "id": "vl04-nischen-adult-gewebe",
+   "type": "combo",
+   "topic": "Stammzellnischen & Alterung",
+   "source": "slides",
+   "ref": "VL04 · Folien 15–16",
+   "stem": "Welche Aussagen zu Stammzellen im adulten Gewebe treffen zu?",
+   "statements": [
+    {
+     "t": "Gewebewachstum durch ausgedehnte Zellteilung findet bei Säugern v. a. embryonal und früh postnatal statt; adulte Stammzellen sind überwiegend quieszent.",
+     "correct": true
+    },
+    {
+     "t": "Zahl und Funktion der meisten somatischen Stammzellen nehmen mit dem Alter ab – Ausnahme sind hämatopoetische Stammzellen.",
+     "correct": true
+    },
+    {
+     "t": "Das Gehirn zählt wie Haut und Darm zu den hochregenerativen Organen.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "B",
+    "AB",
+    "ABC",
+    "BC"
+   ],
+   "explanation": "In der Organübersicht (Folie 15) gehört das Gehirn (NSCs, OPCs) zu den Organen mit geringer bzw. spezifischer Regeneration; Haut, Darm und Knochenmark sind hochregenerativ."
+  },
+  {
+   "id": "vl04-alterung-nsc",
+   "type": "multi",
+   "topic": "Stammzellnischen & Alterung",
+   "source": "slides",
+   "ref": "VL04 · Folie 16",
+   "stem": "Welche altersbedingten Veränderungen sind für neurale Stammzellen (NSCs) bzw. die NSC-Nische beschrieben? (4 richtig)",
+   "options": [
+    {
+     "t": "Tiefe Quieszenz (deep quiescence)",
+     "correct": true
+    },
+    {
+     "t": "Verminderte Aktivierung",
+     "correct": true
+    },
+    {
+     "t": "Progenitor-Bias (einseitige Differenzierung)",
+     "correct": true
+    },
+    {
+     "t": "Infiltration von Immunzellen in die Nische",
+     "correct": true
+    },
+    {
+     "t": "Klonale Expansion",
+     "correct": false
+    },
+    {
+     "t": "Abnormale Differenzierung",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 16: Deep quiescence, reduced activation, progenitor bias und Immunzell-Infiltration (+ Zytokine) betreffen NSCs bzw. ihre Nische. Klonale Expansion ist für HSCs, abnormale Differenzierung (und Seneszenz) für Muskelstammzellen (MuSCs) beschrieben."
+  },
+  {
+   "id": "vl04-svz-nische-open",
+   "type": "open",
+   "topic": "Stammzellnischen & Alterung",
+   "source": "slides",
+   "ref": "VL04 · Folien 15–16, 19–20",
+   "stem": "Nennen Sie 3 Bestandteile bzw. Einflussgrößen der Stammzellnische in der subventrikulären Zone (SVZ).",
+   "points": [
+    "Liquor (CSF) im Seitenventrikel – Kontakt über apikalen Endfuß",
+    "Ependymzellen (Zilienschlag; Signale wie Noggin)",
+    "Blutgefäße",
+    "Axone (Innervation)",
+    "Nischen-Astrozyten (Notch, Wnt, Shh, BMP)",
+    "Extrazelluläre Matrix",
+    "Immunzellen/Entzündung (T-Zellen, Makrophagen → Interferon; Entzündungsfaktoren aus dem Blut)",
+    "OPCs (Oligodendrozyten-Vorläufer; Wnt)"
+   ],
+   "need": 3,
+   "explanation": "Laut Folie 20 wird die SVZ-Nische und die NSC-Aktivität v. a. durch Ependymzellen und Veränderungen der Liquorzusammensetzung kontrolliert."
+  },
+  {
+   "id": "vl04-rgc-primaere-nsc",
+   "type": "single",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folien 17–18",
+   "stem": "Welche Zellen sind die primären neuralen Stammzellen, aus denen alle Neurone, Astrozyten, Oligodendrozyten und Ependymzellen hervorgehen?",
+   "options": [
+    {
+     "t": "Radiale Gliazellen",
+     "correct": true
+    },
+    {
+     "t": "Ependymzellen",
+     "correct": false
+    },
+    {
+     "t": "Mikroglia",
+     "correct": false
+    },
+    {
+     "t": "Oligodendrozyten-Vorläuferzellen (OPCs)",
+     "correct": false
+    }
+   ],
+   "explanation": "Radiale Gliazellen sind die primären NSCs. NSCs verschwinden in der späten Embryonal-/frühen Postnatalzeit aus den meisten ZNS-Regionen und bleiben im Adulten nur in wenigen Nischen erhalten."
+  },
+  {
+   "id": "vl04-nischen-adult",
+   "type": "multi",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL04 · Folien 18–19",
+   "stem": "Wo befinden sich neuronale Stammzellnischen im Erwachsenen? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Subgranuläre Zone (SGZ)",
+     "correct": true
+    },
+    {
+     "t": "Subventrikuläre Zone (SVZ)",
+     "correct": true
+    },
+    {
+     "t": "Hippocampus",
+     "correct": true
+    },
+    {
+     "t": "Amygdala und Thalamus",
+     "correct": false
+    },
+    {
+     "t": "Hypothalamus (Wand des 3. Ventrikels)",
+     "correct": true
+    }
+   ],
+   "explanation": "Adulte NSC-Nischen: Subependymal-/Subventrikulärzone in der lateralen Wand der Seitenventrikel, subgranuläre Zone im Gyrus dentatus (= Hippocampus) und der 3. Ventrikel im Hypothalamus. Amygdala und Thalamus sind keine Nischen.",
+   "note": "Option „Hypothalamus“ ergänzt (Folie 18 nennt den 3. Ventrikel im Hypothalamus als dritte Nische). Keine Lösung im Protokoll."
+  },
+  {
+   "id": "vl04-nischen-schema",
+   "type": "label",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folie 18",
+   "stem": "Beschriften Sie das Schema der NSC-Nischen im adulten Säugergehirn (Sagittalschnitt, Maus).",
+   "src": {
+    "pdf": "VL04_Neural stem cells.pdf",
+    "page": 18,
+    "crop": [
+     52,
+     165,
+     680,
+     465
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      120,
+      235,
+      142,
+      249
+     ],
+     "answer": "Bulbus olfactorius (OB)",
+     "accept": [
+      "OB",
+      "olfactory bulb",
+      "Riechkolben",
+      "Bulbus olfactorius",
+      "Riechhirn"
+     ],
+     "x": 10.43,
+     "y": 22.5,
+     "w": 4.3,
+     "h": 6.33
+    },
+    {
+     "box": [
+      191,
+      349,
+      220,
+      363
+     ],
+     "answer": "Rostraler migratorischer Strom (RMS)",
+     "accept": [
+      "RMS",
+      "rostral migratory stream",
+      "rostraler Migrationsstrom",
+      "rostraler migratorischer Strom"
+     ],
+     "x": 21.74,
+     "y": 60.5,
+     "w": 5.41,
+     "h": 6.33
+    },
+    {
+     "box": [
+      278,
+      293,
+      304,
+      307
+     ],
+     "answer": "Subependymale/subventrikuläre Zone (SEZ)",
+     "accept": [
+      "SEZ",
+      "SVZ",
+      "V-SVZ",
+      "Subependymalzone",
+      "subventrikuläre Zone",
+      "subependymal zone",
+      "Subventrikulärzone"
+     ],
+     "x": 35.59,
+     "y": 41.83,
+     "w": 4.94,
+     "h": 6.33
+    },
+    {
+     "box": [
+      321,
+      265,
+      338,
+      279
+     ],
+     "answer": "Seitenventrikel (LV)",
+     "accept": [
+      "LV",
+      "lateral ventricle",
+      "Seitenventrikel",
+      "lateraler Ventrikel"
+     ],
+     "x": 42.44,
+     "y": 32.5,
+     "w": 3.5,
+     "h": 6.33
+    },
+    {
+     "box": [
+      449,
+      267,
+      469,
+      281
+     ],
+     "answer": "Gyrus dentatus (DG)",
+     "accept": [
+      "DG",
+      "dentate gyrus",
+      "Gyrus dentatus",
+      "SGZ"
+     ],
+     "x": 62.82,
+     "y": 33.17,
+     "w": 3.98,
+     "h": 6.33
+    },
+    {
+     "box": [
+      440,
+      340,
+      461,
+      354
+     ],
+     "answer": "Hypothalamus (HY)",
+     "accept": [
+      "HY",
+      "Hypothalamus",
+      "3. Ventrikel"
+     ],
+     "x": 61.39,
+     "y": 57.5,
+     "w": 4.14,
+     "h": 6.33
+    },
+    {
+     "box": [
+      306,
+      189,
+      331,
+      203
+     ],
+     "answer": "Cortex (CTX)",
+     "accept": [
+      "CTX",
+      "Cortex",
+      "Kortex",
+      "Neocortex"
+     ],
+     "x": 40.05,
+     "y": 7.17,
+     "w": 4.78,
+     "h": 6.33
+    },
+    {
+     "box": [
+      263,
+      325,
+      290,
+      339
+     ],
+     "answer": "Striatum (STR)",
+     "accept": [
+      "STR",
+      "Striatum"
+     ],
+     "x": 33.2,
+     "y": 52.5,
+     "w": 5.1,
+     "h": 6.33
+    }
+   ],
+   "explanation": "Neuroblasten aus der SEZ wandern über den RMS in den Bulbus olfactorius; die SGZ liegt im Gyrus dentatus; dritte Nische: 3. Ventrikel im Hypothalamus.",
+   "image": "assets/figures/vl04-nischen-schema.webp",
+   "iw": 1256,
+   "ih": 600
+  },
+  {
+   "id": "vl04-svz-dg-schema",
+   "type": "label",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folie 19",
+   "stem": "Beschriften Sie das Schema der beiden großen adulten NSC-Nischen (links V-SVZ, rechts Gyrus dentatus).",
+   "src": {
+    "pdf": "VL04_Neural stem cells.pdf",
+    "page": 19,
+    "crop": [
+     20,
+     120,
+     640,
+     492
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      70,
+      303,
+      95,
+      318
+     ],
+     "answer": "Liquor (CSF)",
+     "accept": [
+      "CSF",
+      "Liquor",
+      "Liquor cerebrospinalis",
+      "cerebrospinal fluid",
+      "Cerebrospinalflüssigkeit"
+     ],
+     "x": 7.66,
+     "y": 48.52,
+     "w": 4.84,
+     "h": 5.38
+    },
+    {
+     "box": [
+      179,
+      169,
+      197,
+      183
+     ],
+     "answer": "Ventrikuläre Zone (VZ)",
+     "accept": [
+      "VZ",
+      "Ventrikulärzone",
+      "ventricular zone",
+      "ventrikuläre Zone"
+     ],
+     "x": 25.24,
+     "y": 12.5,
+     "w": 3.71,
+     "h": 5.11
+    },
+    {
+     "box": [
+      217,
+      169,
+      243,
+      183
+     ],
+     "answer": "Subventrikuläre Zone (SVZ)",
+     "accept": [
+      "SVZ",
+      "Subventrikulärzone",
+      "subventricular zone",
+      "subventrikuläre Zone"
+     ],
+     "x": 31.37,
+     "y": 12.5,
+     "w": 5.0,
+     "h": 5.11
+    },
+    {
+     "box": [
+      169,
+      214,
+      181,
+      230
+     ],
+     "answer": "Ependymzelle (E)",
+     "accept": [
+      "E",
+      "Ependymzelle",
+      "ependymal cell",
+      "Ependym",
+      "Ependymzellen"
+     ],
+     "x": 23.63,
+     "y": 24.6,
+     "w": 2.74,
+     "h": 5.65
+    },
+    {
+     "box": [
+      609,
+      215,
+      630,
+      229
+     ],
+     "answer": "Molekularschicht (ML)",
+     "accept": [
+      "ML",
+      "molecular layer",
+      "Molekularschicht",
+      "Stratum moleculare"
+     ],
+     "x": 94.6,
+     "y": 24.87,
+     "w": 4.19,
+     "h": 5.11
+    },
+    {
+     "box": [
+      607,
+      307,
+      633,
+      321
+     ],
+     "answer": "Körnerzellschicht (GCL)",
+     "accept": [
+      "GCL",
+      "granule cell layer",
+      "Körnerzellschicht",
+      "Stratum granulosum"
+     ],
+     "x": 94.27,
+     "y": 49.6,
+     "w": 5.0,
+     "h": 5.11
+    },
+    {
+     "box": [
+      607,
+      379,
+      633,
+      394
+     ],
+     "answer": "Subgranuläre Zone (SGZ)",
+     "accept": [
+      "SGZ",
+      "subgranular zone",
+      "subgranuläre Zone"
+     ],
+     "x": 94.27,
+     "y": 68.95,
+     "w": 5.0,
+     "h": 5.38
+    },
+    {
+     "box": [
+      606,
+      416,
+      634,
+      430
+     ],
+     "answer": "Hilus",
+     "accept": [
+      "Hilus",
+      "hilus",
+      "Hilus des Gyrus dentatus"
+     ],
+     "x": 94.11,
+     "y": 78.9,
+     "w": 5.32,
+     "h": 5.11
+    }
+   ],
+   "explanation": "V-SVZ: NSCs (blau) berühren mit einem apikalen Fortsatz zwischen den Ependymzellen den Liquor und mit einem basalen Fortsatz Blutgefäße; Neuroblasten wandern zum RMS. Gyrus dentatus: NSCs liegen in der SGZ zwischen Hilus und Körnerzellschicht – ohne Ventrikelkontakt.",
+   "image": "assets/figures/vl04-svz-dg-schema.webp",
+   "iw": 1240,
+   "ih": 744
+  },
+  {
+   "id": "vl04-svz-nicht",
+   "type": "single",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL04 · Folien 15–16, 19–20",
+   "stem": "Von welchen Signalen werden Stammzellen in der subventrikulären Zone <b>nicht</b> beeinflusst?",
+   "options": [
+    {
+     "t": "Entzündungsfaktoren im Blut",
+     "correct": false
+    },
+    {
+     "t": "Versteifung der ECM",
+     "correct": false
+    },
+    {
+     "t": "Faktoren in der cerebrospinalen Flüssigkeit",
+     "correct": false
+    },
+    {
+     "t": "Signale aus dem Cerebellum",
+     "correct": true
+    }
+   ],
+   "explanation": "Die SVZ-Nische wird durch Liquor (CSF) und Ependymzellen (Folie 20), Blutgefäße bzw. Entzündung (Zytokine, Immunzellen) und Matrixeigenschaften (Folien 15–16) reguliert. Das Kleinhirn hat keinen direkten Kontakt zur SVZ.",
+   "note": "Lösung laut Protokoll (ohne Gewähr): D – mit den Folien vereinbar. ECM-Versteifung ist auf Folie 16 v. a. für MuSC- und OPC-Nischen genannt."
+  },
+  {
+   "id": "vl04-dg-einfluss",
+   "type": "multi",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL04 · Folien 16, 19–20, 23, 37",
+   "stem": "Dentate gyrus: Was beeinflusst die neuralen Stammzellen in der subgranulären Zone? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Faktoren aus dem Blut (Blutgefäße der Nische)",
+     "correct": true
+    },
+    {
+     "t": "Liquor (CSF) über einen apikalen Fortsatz in den Ventrikel",
+     "correct": false
+    },
+    {
+     "t": "Chronisch aktivierte Mikroglia / niedriggradige Entzündung (low-grade inflammation)",
+     "correct": true
+    },
+    {
+     "t": "Mitogene Signale von Ependymzellen",
+     "correct": false
+    }
+   ],
+   "explanation": "Im Gyrus dentatus liegen die NSCs in der SGZ tief im Gewebe und haben keinen Ventrikelkontakt – Liquor und Ependymzellen sind typisch für die SVZ (Folien 19–20). Blutgefäße sind Teil der DG-Nische; Entzündung (Immunzellen, Zytokine) und Mikroglia beeinflussen NSCs (Folien 16, 23, 37).",
+   "note": "Optionen im Protokoll stichwortartig („Blut, CSF, chronisch aktivierte Mikroglia, Ependymzellen mitogen“) – ausformuliert. Keine Lösung im Protokoll; aus dem Nischenaufbau (Folien 19–20) abgeleitet."
+  },
+  {
+   "id": "vl04-svz-endfuss",
+   "type": "single",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folien 19–20",
+   "stem": "Wie stehen NSCs in der SVZ-Nische mit dem Liquor in Kontakt?",
+   "options": [
+    {
+     "t": "Sie strecken einen apikalen Endfuß durch die Ependymschicht bis an den Seitenventrikel.",
+     "correct": true
+    },
+    {
+     "t": "Über Gap Junctions mit den Körnerzellen des Gyrus dentatus, die Liquorsignale weiterleiten.",
+     "correct": false
+    },
+    {
+     "t": "Über einen langen basalen Fortsatz bis zur Pia mater an der Hirnoberfläche.",
+     "correct": false
+    },
+    {
+     "t": "Gar nicht – nur die Ependymzellen haben direkten Kontakt zum Liquor.",
+     "correct": false
+    }
+   ],
+   "explanation": "In der SVZ-Nische reichen NSCs mit einem apikalen Endfuß durch die Ependymschicht bis in den Ventrikel; so wirken Liquor-Faktoren und Ependymzellen (z. B. Noggin) direkt auf die NSCs."
+  },
+  {
+   "id": "vl04-nsc-order",
+   "type": "order",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folie 17",
+   "stem": "Bringen Sie die Stadien der adulten Neurogenese in die richtige Reihenfolge.",
+   "items": [
+    "Tief quieszente NSC (deep quiescence)",
+    "Flach quieszente NSC (shallow quiescence)",
+    "Aktive NSC",
+    "Intermediärer Progenitor (IPC)",
+    "Neuroblast",
+    "Neuron"
+   ],
+   "explanation": "Aktivierung (reversibel, Rückkehr in die Quieszenz möglich) → Proliferation/neuronale Festlegung (IPC) → Differenzierung (Neuroblast) → Reifung und Schaltkreisintegration (Neuron). Quieszenzgene z. B. Aqp4, Id3, Hes1; neurogene Gene z. B. Sox11, Dcx, Prox1, NeuN."
+  },
+  {
+   "id": "vl04-dcx-marker",
+   "type": "single",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folie 28",
+   "stem": "Welcher Marker wird in Neuroblasten und unreifen Neuronen der adulten Neurogenese exprimiert, nicht aber in radialgliaähnlichen Typ-1-Zellen?",
+   "options": [
+    {
+     "t": "Doublecortin (DCX)",
+     "correct": true
+    },
+    {
+     "t": "Nestin",
+     "correct": false
+    },
+    {
+     "t": "GFAP",
+     "correct": false
+    },
+    {
+     "t": "SOX2",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 28: Typ-1-Zellen (RGL) exprimieren Nestin, SOX2 und GFAP; DCX reicht von Typ-2b-Zellen über Neuroblasten (Typ 3) bis zu frühen unreifen Neuronen, NeuN markiert unreife bis reife Neurone, S100β reife Astrozyten."
+  },
+  {
+   "id": "vl04-nsc-aussagen",
+   "type": "combo",
+   "topic": "Adulte neurale Stammzellen (SVZ/SGZ)",
+   "source": "slides",
+   "ref": "VL04 · Folien 17, 19, 23",
+   "stem": "Welche Aussagen zu neuralen Stammzellen (NSCs) treffen zu?",
+   "statements": [
+    {
+     "t": "NSCs verschwinden aus den meisten ZNS-Regionen in der späten Embryonal- bzw. frühen Postnatalzeit.",
+     "correct": true
+    },
+    {
+     "t": "Die V-SVZ ist die größte germinative Zone im adulten Gehirn.",
+     "correct": true
+    },
+    {
+     "t": "Der Gyrus dentatus ist an Lernen und Gedächtnis beteiligt und bei Morbus Alzheimer früh betroffen.",
+     "correct": true
+    },
+    {
+     "t": "Die Eigenschaften adulter NSCs im menschlichen Gehirn sind vollständig aufgeklärt.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "ABCD",
+    "BC",
+    "ACD"
+   ],
+   "explanation": "Folie 23: Der DG ist früh bei Alzheimer betroffen, die genauen Eigenschaften adulter humaner NSCs sind aber noch ungeklärt."
+  },
+  {
+   "id": "vl04-parkinson",
+   "type": "single",
+   "topic": "Zellersatztherapie",
+   "source": "slides",
+   "ref": "VL04 · Folie 25",
+   "stem": "Welche Zellen zeigten in kleinen klinischen Studien zur Zellersatztherapie bei Morbus Parkinson vielversprechende Ergebnisse?",
+   "options": [
+    {
+     "t": "Aus humanen ES-Zellen abgeleitete dopaminerge neuronale Vorläuferzellen",
+     "correct": true
+    },
+    {
+     "t": "Aus iPSCs abgeleitete Mikroglia",
+     "correct": false
+    },
+    {
+     "t": "Unveränderte mesenchymale Stammzellen aus dem Knochenmark",
+     "correct": false
+    },
+    {
+     "t": "Direkt aus Fibroblasten umgewandelte Astrozyten",
+     "correct": false
+    }
+   ],
+   "explanation": "Ziel ist der Ersatz der verlorenen dopaminergen Neurone. Transplantierte hESC-abgeleitete dopaminerge Progenitoren überlebten, ohne Tumorbildung; Langzeitnutzen und Sicherheit sind noch offen."
+  },
+  {
+   "id": "vl04-zellquellen",
+   "type": "open",
+   "topic": "Zellersatztherapie",
+   "source": "slides",
+   "ref": "VL04 · Folie 25",
+   "stem": "Nennen Sie 3 mögliche Zellquellen für die Gewinnung dopaminerger Neurone zur Zellersatztherapie bei Parkinson.",
+   "points": [
+    "Humane neurale Stammzellen (hNSCs) aus fetalem oder adultem Gehirn",
+    "Humane ES-Zellen (innere Zellmasse befruchteter Oozyten)",
+    "Parthenogenetische ES-Zellen (hpESCs, aus nicht befruchteten Oozyten)",
+    "Humane iPSCs (reprogrammierte Fibroblasten)",
+    "Mesenchymale Stammzellen (hMSCs; Knochenmark, Fettgewebe) bzw. Transdifferenzierung"
+   ],
+   "need": 3,
+   "explanation": "Folie 25 unterscheidet multipotente (hNSCs, hMSCs) und pluripotente Quellen (hESCs, hpESCs, hiPSCs); Schritte: Isolation/Reprogrammierung → Expansion → Differenzierung → Transplantation."
+  },
+  {
+   "id": "vl04-modelle-aussagen",
+   "type": "combo",
+   "topic": "Modellsysteme (Organoide & Co.)",
+   "source": "slides",
+   "ref": "VL04 · Folien 31–36",
+   "stem": "Welche Aussagen zu experimentellen Modellen der Neurogenese treffen zu?",
+   "statements": [
+    {
+     "t": "Hirnorganoide bilden die menschliche Neurogenese teilweise nach (Zelldiversität, Zytoarchitektur).",
+     "correct": true
+    },
+    {
+     "t": "Es lassen sich regionsspezifische Organoide herstellen, z. B. Vorderhirn, Plexus choroideus oder Hippocampus.",
+     "correct": true
+    },
+    {
+     "t": "In neuralen Sphäroiden werden ausgereifte, differenzierte Zellen in festgelegten Verhältnissen kombiniert.",
+     "correct": true
+    },
+    {
+     "t": "In die Maus transplantierte humane Cortex-Organoide bleiben isoliert und bilden keine Verbindungen mit dem Wirtsgewebe.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "ABCD",
+    "AC",
+    "BCD"
+   ],
+   "explanation": "Xenotransplantierte humane Cortex-Organoide füllen den Raum und verschalten sich mit murinen Schaltkreisen (Folie 36)."
+  },
+  {
+   "id": "vl04-assembloid",
+   "type": "single",
+   "topic": "Modellsysteme (Organoide & Co.)",
+   "source": "slides",
+   "ref": "VL04 · Folien 34–36",
+   "stem": "Was versteht man unter Assembloiden?",
+   "options": [
+    {
+     "t": "Getrennt erzeugte, regionsspezifische Organoide/Sphäroide, die zusammengefügt werden und sich funktionell verbinden (z. B. Cortex–Rückenmark–Muskel)",
+     "correct": true
+    },
+    {
+     "t": "Aggregate, in denen ausgereifte neurale Zelltypen in vorher festgelegten Verhältnissen kombiniert werden",
+     "correct": false
+    },
+    {
+     "t": "Humane Cortex-Organoide, die in das Gehirn einer neugeborenen Maus transplantiert und dort vaskularisiert werden",
+     "correct": false
+    },
+    {
+     "t": "Zweidimensionale Kulturen undifferenzierter iPSC-Kolonien auf einer Feeder-Schicht aus embryonalen Fibroblasten",
+     "correct": false
+    }
+   ],
+   "explanation": "Assembloide = getrennt generierte und funktionell integrierte Einheiten (z. B. kortiko-motorischer Schaltkreis). Option 2 beschreibt Sphäroide, Option 3 Xenotransplantation."
+  },
+  {
+   "id": "vl04-organoid-order",
+   "type": "order",
+   "topic": "Modellsysteme (Organoide & Co.)",
+   "source": "slides",
+   "ref": "VL04 · Folie 31",
+   "stem": "Bringen Sie die Schritte der Herstellung eines Hirnorganoids in die richtige Reihenfolge.",
+   "items": [
+    "Humane pluripotente Stammzellen (hPSCs)",
+    "Aggregation zum Embryoid Body",
+    "Neurale Induktion (Neuroektoderm)",
+    "Reifung zum Hirnorganoid"
+   ],
+   "explanation": "hPSCs → Aggregation (Embryoid Body) → neurale Induktion (Neuroektoderm) → Reifung (Organoid mit VZ/SVZ, oSVZ, Kortikalplatte)."
+  },
+  {
+   "id": "vl04-ipsc-marker",
+   "type": "single",
+   "topic": "Modellsysteme (Organoide & Co.)",
+   "source": "slides",
+   "ref": "VL04 · Folie 29",
+   "stem": "Welche Marker kennzeichnen die undifferenzierte Stammzellkolonie zu Beginn der iPSC-Differenzierung?",
+   "options": [
+    {
+     "t": "OCT4 und TRA1-60",
+     "correct": true
+    },
+    {
+     "t": "Nestin und PAX6",
+     "correct": false
+    },
+    {
+     "t": "ChAT und vAChT",
+     "correct": false
+    },
+    {
+     "t": "GFAP und S100β",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 29: Stammzellkolonie (OCT4, TRA1-60) → Embryoid Body (Nestin, PAX6) → neurale Rosette → Neuro- bzw. Glia-Progenitor → z. B. cholinerges Neuron (ChAT, vAChT) oder Astrozyt (GFAP, ALDH1L1, EAAT1/2)."
+  },
+  {
+   "id": "vl04-mikroglia-organoid",
+   "type": "multi",
+   "topic": "Glia & Mikroglia-Ersatz",
+   "source": "slides",
+   "ref": "VL04 · Folie 37",
+   "stem": "Welche Effekte haben Mikroglia in Vorderhirn-Organoiden? (3 richtig)",
+   "options": [
+    {
+     "t": "Verminderte Stressantwort",
+     "correct": true
+    },
+    {
+     "t": "Verminderte Interferon-Antwort",
+     "correct": true
+    },
+    {
+     "t": "Mehr synchronisierte neuronale Aktivität",
+     "correct": true
+    },
+    {
+     "t": "Mehr DNA-Schäden (mehr pH2AX-Foci)",
+     "correct": false
+    },
+    {
+     "t": "Vollständige Hemmung der Neurogenese",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 37: Mikroglia reduzieren Stress- und Typ-I-Interferon-Antwort der radialen Glia (z. B. IFITM3, weniger pH2AX-Foci) und erhöhen die synchronisierte Netzwerkaktivität; zudem phagozytieren sie Synapsen."
+  },
+  {
+   "id": "vl04-primitive-haematopoese",
+   "type": "single",
+   "topic": "Glia & Mikroglia-Ersatz",
+   "source": "slides",
+   "ref": "VL04 · Folie 38",
+   "stem": "Welche Signalkonstellation treibt bei der Differenzierung humaner pluripotenter Stammzellen die primitive Hämatopoese an?",
+   "options": [
+    {
+     "t": "Hohe Activin-Nodal- und niedrige WNT-Signalgebung",
+     "correct": true
+    },
+    {
+     "t": "Niedrige Activin-Nodal- und hohe WNT-Signalgebung",
+     "correct": false
+    },
+    {
+     "t": "Hohe BMP- und niedrige FGF-Signalgebung",
+     "correct": false
+    },
+    {
+     "t": "Hohe Shh- und niedrige Retinsäure-Signalgebung",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 38: Hohe Nodal-Activin-Signale → primitives hämatopoetisches Mesoderm (KDR⁺, CD235a⁺); hohe WNT-β-Catenin-Signale → definitive Hämatopoese. Relevant, weil Mikroglia aus der primitiven Hämatopoese (Dottersack) stammen."
+  },
+  {
+   "id": "vl04-mikroglia-ersatz",
+   "type": "single",
+   "topic": "Glia & Mikroglia-Ersatz",
+   "source": "slides",
+   "ref": "VL04 · Folie 40",
+   "stem": "Welche Strategie ermöglicht einen effizienten Ersatz der residenten Mikroglia (> 92 %)?",
+   "options": [
+    {
+     "t": "Knochenmarktransplantation nach Bestrahlung kombiniert mit CSF1R-Inhibition (Mr BMT)",
+     "correct": true
+    },
+    {
+     "t": "Knochenmarktransplantation nach Ganzkörperbestrahlung ohne CSF1R-Inhibition (tBMT)",
+     "correct": false
+    },
+    {
+     "t": "Direkte Transplantation von Mikroglia ohne vorherige Depletion (tMT)",
+     "correct": false
+    },
+    {
+     "t": "Gabe eines CSF1R-Inhibitors allein, ohne Zelltransplantation",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 40: tBMT ≈ 2 %, tMT ≈ 0,03 %, Mr BMT > 92 %. Entscheidend ist, die Nische durch CSF1R-Inhibition (Depletion der residenten Mikroglia) freizumachen und gleichzeitig Spenderzellen zuzuführen."
+  }
+ ]
+}

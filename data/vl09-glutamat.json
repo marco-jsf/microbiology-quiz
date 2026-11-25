@@ -1,0 +1,2127 @@
+{
+ "id": "vl09",
+ "title": "VL09 · Glutamat-Neurotransmission",
+ "short": "Glutamat",
+ "color": "#ff8a4c",
+ "topics": [
+  "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+  "NMDA-Rezeptor",
+  "mGluR: Struktur, Gruppen & Modulation",
+  "mGluR-Signalwege",
+  "Glutamat-Transporter",
+  "Exzitotoxizität & Schlaganfall"
+ ],
+ "questions": [
+  {
+   "id": "vl09-iglur-benennung",
+   "type": "single",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folie 3",
+   "stem": "Wonach wurden die ionotropen Glutamatrezeptoren (AMPA-, Kainat-, NMDA-Rezeptoren) benannt?",
+   "options": [
+    {
+     "t": "Nach ihren spezifischen synthetischen Agonisten (pharmakologisch)",
+     "correct": true
+    },
+    {
+     "t": "Nach den Ionen, die sie bevorzugt leiten",
+     "correct": false
+    },
+    {
+     "t": "Nach den Genen, die ihre Untereinheiten codieren",
+     "correct": false
+    },
+    {
+     "t": "Nach den Hirnregionen, in denen sie zuerst gefunden wurden",
+     "correct": false
+    }
+   ],
+   "explanation": "iGluR wurden „pharmakologisch“ nach ihren selektiven synthetischen Agonisten AMPA, Kainat und NMDA unterschieden und benannt. (Streng genommen sind nur AMPA und NMDA synthetisch; Kainsäure ist ein Naturstoff aus der Rotalge Digenea simplex.) Glutamat ist an allen ein nicht-selektiver Agonist."
+  },
+  {
+   "id": "vl09-iglur-pharmaka",
+   "type": "multi",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folien 3, 9, 42",
+   "stem": "Welche Zuordnungen von Substanz und Wirkung an ionotropen Glutamatrezeptoren sind korrekt? (mehrere richtig)",
+   "options": [
+    {
+     "t": "D-APV (AP5) – selektiver Antagonist an der Glutamat-Bindestelle des NMDA-R",
+     "correct": true
+    },
+    {
+     "t": "MK801 / Ketamin – Kanalblocker (open channel block) des NMDA-R",
+     "correct": true
+    },
+    {
+     "t": "CNQX / DNQX – nicht-selektive Antagonisten der Non-NMDA-Rezeptoren",
+     "correct": true
+    },
+    {
+     "t": "Glycin / D-Serin – Agonisten an der Glycin-Bindestelle des NMDA-R",
+     "correct": true
+    },
+    {
+     "t": "GYKI 53655 – selektiver Antagonist des NMDA-R",
+     "correct": false
+    },
+    {
+     "t": "Bicucullin – selektiver Antagonist des Kainat-R",
+     "correct": false
+    }
+   ],
+   "explanation": "Tabelle Folie 3: GYKI 53655/NBQX hemmen AMPA-R, LY293558 Kainat-R, D-APV die Glu-Stelle und 5,7-Dichlorkynurenat die Gly-Stelle des NMDA-R; MK801/Ketamin blockieren den offenen NMDA-Kanal. Bicucullin ist ein GABA-A-Antagonist."
+  },
+  {
+   "id": "vl09-iglur-gene",
+   "type": "single",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folie 4",
+   "stem": "Von wie vielen Genen werden die Untereinheiten der AMPA-, Kainat- und NMDA-Rezeptoren jeweils codiert?",
+   "options": [
+    {
+     "t": "AMPA: 4 (GluR1–4) · Kainat: 5 (GluR5–7, KA1, KA2) · NMDA: 7 (NR1, NR2A–D, NR3A/B)",
+     "correct": true
+    },
+    {
+     "t": "AMPA: 5 (GluR1–5) · Kainat: 4 (GluR6, GluR7, KA1, KA2) · NMDA: 7 (NR1, NR2A–D, NR3A/B)",
+     "correct": false
+    },
+    {
+     "t": "AMPA: 4 (GluR1–4) · Kainat: 7 (GluR5–7, KA1–4) · NMDA: 5 (NR1, NR2A–D)",
+     "correct": false
+    },
+    {
+     "t": "AMPA: 7 (GluR1–7) · Kainat: 2 (KA1, KA2) · NMDA: 7 (NR1, NR2A–D, NR3A/B)",
+     "correct": false
+    }
+   ],
+   "explanation": "Stammbaum Folie 4: 4 AMPA-Gene (mit Flip/Flop-Spleißvarianten), 5 Kainat-Gene, 7 NMDA-Gene (plus Spleißvarianten)."
+  },
+  {
+   "id": "vl09-iglur-struktur",
+   "type": "combo",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folie 5",
+   "stem": "Welche Aussagen zur molekularen Struktur ionotroper Glutamatrezeptoren treffen zu?",
+   "statements": [
+    {
+     "t": "Jede Untereinheit besitzt 3 Transmembrandomänen und 1 Porenelement (M2).",
+     "correct": true
+    },
+    {
+     "t": "Vier Untereinheiten bilden ein Hetero-Tetramer.",
+     "correct": true
+    },
+    {
+     "t": "Ein AMPA-/Kainat-R hat 4 Glutamat-Bindestellen, ein NMDA-R 2 für Glutamat und 2 für Glycin.",
+     "correct": true
+    },
+    {
+     "t": "Die Untereinheiten haben große intrazelluläre, aber nur kleine extrazelluläre Schleifen.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "AC"
+   ],
+   "explanation": "iGluR-Untereinheiten haben eine andere Topologie als GABA-A-Untereinheiten (4 TM, Pentamer): 3 TM + Porenschleife, Tetramer, große extrazelluläre Schleifen mit den Ligandbindestellen."
+  },
+  {
+   "id": "vl09-qr-editing",
+   "type": "single",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folien 6, 41",
+   "stem": "Warum sind die meisten AMPA-Rezeptoren im ZNS praktisch nicht für Ca²⁺ durchlässig?",
+   "options": [
+    {
+     "t": "Sie enthalten GluR2, dessen Q/R-Stelle in M2 durch RNA-Editing ein positiv geladenes Arginin trägt",
+     "correct": true
+    },
+    {
+     "t": "Sie enthalten GluR1 in der Flip-Spleißvariante, die schnell desensitisiert",
+     "correct": false
+    },
+    {
+     "t": "Extrazelluläres Mg²⁺ blockiert die Pore bei Ruhepotential",
+     "correct": false
+    },
+    {
+     "t": "Ca²⁺ wird von der Glycin-Bindestelle der NR1-Untereinheit abgefangen",
+     "correct": false
+    }
+   ],
+   "explanation": "Durch Editing wird an der Q/R-Stelle im M2-Loop von GluR2 (auch GluR5/6) Glutamin (Q, neutral) gegen Arginin (R⁺) getauscht. GluR1(Q)-Homomere leiten Na⁺ und Ca²⁺, mit GluR2(R) fällt der Ca²⁺-Strom weg."
+  },
+  {
+   "id": "vl09-flip-flop",
+   "type": "single",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folien 6–7",
+   "stem": "Flip- und Flop-Spleißvarianten von AMPA-Rezeptoren unterscheiden sich in der Affinität der Dimer-Grenzflächen. Welche Kombination ist richtig?",
+   "options": [
+    {
+     "t": "Flop: hohe Affinität → schnelle Inaktivierung → kleiner Strom; Flip: geringe Affinität → langsame Inaktivierung → großer Strom",
+     "correct": true
+    },
+    {
+     "t": "Flip: hohe Affinität → schnelle Inaktivierung → kleiner Strom; Flop: geringe Affinität → langsame Inaktivierung → großer Strom",
+     "correct": false
+    },
+    {
+     "t": "Flop: hohe Affinität → langsame Inaktivierung → großer Strom; Flip: geringe Affinität → schnelle Inaktivierung → kleiner Strom",
+     "correct": false
+    },
+    {
+     "t": "Flip und Flop unterscheiden sich nur in ihrer Ca²⁺-Permeabilität, nicht in der Kinetik",
+     "correct": false
+    }
+   ],
+   "explanation": "Glu-Bindung erzeugt Spannung zwischen den Dimeren. Je fester die Dimer-Grenzfläche (hohe Affinität, Flop), desto schneller die Desensitisierung und desto kleiner der Strom – so steht es auf Folie 7, für die Klausur so lernen. Achtung: Nach Sun et al. 2002 gilt mechanistisch eher das Umgekehrte (stabilere Dimer-Grenzfläche → langsamere Desensitisierung, z. B. Cyclothiazid). Sicher gilt: Flop desensitisiert schnell (kleiner Strom), Flip langsam (großer Strom)."
+  },
+  {
+   "id": "vl09-ampa-assembly",
+   "type": "combo",
+   "topic": "Ionotrope Glu-Rezeptoren: Typen & Struktur",
+   "source": "slides",
+   "ref": "VL09 · Folien 6, 41",
+   "stem": "Welche Aussagen zu Spleißen, Editing und Assemblierung von AMPA-Rezeptoren treffen zu?",
+   "statements": [
+    {
+     "t": "Flip/Flop-Varianten entstehen durch alternatives Spleißen.",
+     "correct": true
+    },
+    {
+     "t": "Homomere Rezeptoren aus unedierter GluR1(Q) leiten Na⁺ und Ca²⁺.",
+     "correct": true
+    },
+    {
+     "t": "Die Q/R-Editierstelle liegt in der Transmembrandomäne M4.",
+     "correct": false
+    },
+    {
+     "t": "Zuerst bilden sich Dimere (v. a. GluR1/R2 und GluR2/R3); zwei gleiche Dimere bilden dann das Hetero-Tetramer.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "ABCD",
+    "AD",
+    "BD",
+    "ABC"
+   ],
+   "explanation": "Die Q/R-Stelle liegt im Porenloop M2, die Flip/Flop-Region extrazellulär vor M4. Die Assemblierung (Dimer → Tetramer) erfolgt im ER."
+  },
+  {
+   "id": "vl09-nmda-aktivierung",
+   "type": "open",
+   "topic": "NMDA-Rezeptor",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL09 · Folien 8–9, 11, 27",
+   "stem": "Wie werden NMDA-Rezeptoren aktiviert? Welche Ionen lassen sie bevorzugt durch? Auf welcher subzellulären Struktur befinden sie sich?",
+   "points": [
+    "Glutamat bindet an die NR2-Untereinheiten (Ligand)",
+    "Co-Agonist Glycin (oder D-Serin) muss an NR1 gebunden sein",
+    "Zusätzlich Vordepolarisation der Postsynapse (durch schnelle AMPA-R) – entfernt den Mg²⁺-Block der Pore",
+    "→ liganden- UND spannungsgesteuert = Koinzidenzdetektor (prä: Glu-Freisetzung, post: Depolarisation)",
+    "Kationenkanal mit hoher Ca²⁺-Leitfähigkeit (Ca²⁺ und Na⁺ strömen ein, K⁺ aus)",
+    "Lokalisation: postsynaptisch in dendritischen Spines (postsynaptische Dichte glutamaterger Synapsen)"
+   ],
+   "explanation": "Erst wenn Glutamat + Glycin gebunden sind UND die Membran depolarisiert ist (Mg²⁺ verlässt die Pore), fließt Ca²⁺ ein – Grundlage für LTP/LTD und für Exzitotoxizität.",
+   "note": "WS23/24 Frage 28, in WS25/26 erneut gestellt. Lösung im Protokoll „vergessen“. Aktivierung und Ionen direkt aus Folie 9/11; die Lokalisation (dendritischer Spine) zeigen die Schemata auf Folie 27 und VL08 Folie 34, ausformuliert steht sie nicht auf den Folien."
+  },
+  {
+   "id": "vl09-nmda-label",
+   "type": "label",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 9",
+   "stem": "Beschriften Sie das Schema des NMDA-Rezeptors (Liganden, Ionen und Bindestellen).",
+   "src": {
+    "pdf": "VL09Glutamate Neurotransmission_09Nov26.pdf",
+    "page": 9,
+    "crop": [
+     40,
+     95,
+     240,
+     365
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      49,
+      158,
+      73,
+      170
+     ],
+     "answer": "Glutamat (Glu)",
+     "accept": [
+      "Glu",
+      "Glutamat",
+      "Glutamate"
+     ],
+     "x": 3.25,
+     "y": 22.41,
+     "w": 14.5,
+     "h": 6.3
+    },
+    {
+     "box": [
+      44,
+      187,
+      64,
+      199
+     ],
+     "answer": "Glycin (Gly)",
+     "accept": [
+      "Gly",
+      "Glycin",
+      "Glycine",
+      "D-Serin"
+     ],
+     "x": 0.75,
+     "y": 33.15,
+     "w": 12.5,
+     "h": 6.3
+    },
+    {
+     "box": [
+      104,
+      139,
+      132,
+      153
+     ],
+     "answer": "Ca²⁺",
+     "accept": [
+      "Ca2+",
+      "Ca",
+      "Calcium",
+      "Kalzium"
+     ],
+     "x": 30.75,
+     "y": 15.37,
+     "w": 16.5,
+     "h": 7.04
+    },
+    {
+     "box": [
+      151,
+      134,
+      169,
+      146
+     ],
+     "answer": "Na⁺",
+     "accept": [
+      "Na+",
+      "Na",
+      "Natrium"
+     ],
+     "x": 54.25,
+     "y": 13.52,
+     "w": 11.5,
+     "h": 6.3
+    },
+    {
+     "box": [
+      176,
+      157,
+      204,
+      173
+     ],
+     "answer": "Mg²⁺ (wird bei Depolarisation verdrängt)",
+     "accept": [
+      "Mg2+",
+      "Mg",
+      "Magnesium",
+      "Mg-Block"
+     ],
+     "x": 66.75,
+     "y": 22.04,
+     "w": 16.5,
+     "h": 7.78
+    },
+    {
+     "box": [
+      193,
+      172,
+      221,
+      190
+     ],
+     "answer": "Zn²⁺",
+     "accept": [
+      "Zn2+",
+      "Zn",
+      "Zink"
+     ],
+     "x": 75.25,
+     "y": 27.59,
+     "w": 16.5,
+     "h": 8.52
+    },
+    {
+     "box": [
+      202,
+      201,
+      223,
+      213
+     ],
+     "answer": "PCP-Bindestelle (Phencyclidin)",
+     "accept": [
+      "PCP",
+      "Phencyclidin",
+      "Phencyclidine",
+      "Ketamin",
+      "MK801"
+     ],
+     "x": 79.75,
+     "y": 38.33,
+     "w": 13.0,
+     "h": 6.3
+    },
+    {
+     "box": [
+      202,
+      226,
+      233,
+      243
+     ],
+     "answer": "Mg²⁺-Bindestelle in der Pore",
+     "accept": [
+      "Mg2+",
+      "Mg",
+      "Magnesium",
+      "Mg-Block"
+     ],
+     "x": 79.75,
+     "y": 47.59,
+     "w": 18.0,
+     "h": 8.15
+    },
+    {
+     "box": [
+      157,
+      342,
+      175,
+      358
+     ],
+     "answer": "K⁺",
+     "accept": [
+      "K+",
+      "K",
+      "Kalium"
+     ],
+     "x": 57.25,
+     "y": 90.56,
+     "w": 11.5,
+     "h": 7.78
+    }
+   ],
+   "explanation": "Glutamat (an NR2) und Glycin (an NR1) müssen binden; Mg²⁺ blockiert die Pore spannungsabhängig. PCP/Ketamin/MK801 blockieren den offenen Kanal, Zn²⁺ moduliert. Einstrom von Ca²⁺ und Na⁺, Ausstrom von K⁺.",
+   "image": "assets/figures/vl09-nmda-label.webp",
+   "iw": 400,
+   "ih": 540
+  },
+  {
+   "id": "vl09-nmda-glycin-nr1",
+   "type": "single",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 8",
+   "stem": "Welche Aussage zur Ligandbindung am NMDA-Rezeptor trifft zu?",
+   "options": [
+    {
+     "t": "Glycin (bzw. D-Serin) bindet an NR1-, Glutamat an NR2-Untereinheiten",
+     "correct": true
+    },
+    {
+     "t": "Glutamat bindet an NR1-, Glycin an NR2-Untereinheiten",
+     "correct": false
+    },
+    {
+     "t": "Glutamat und Glycin binden beide an NR2-Untereinheiten",
+     "correct": false
+    },
+    {
+     "t": "Glycin bindet an NR3-Untereinheiten, die in jedem NMDA-R obligat enthalten sind",
+     "correct": false
+    }
+   ],
+   "explanation": "Funktionelle Kanäle bestehen aus 2 NR1 + 2 NR2; die Bindestellen liegen in den S1-S2-Halbdomänen. NR1 muss zusammen mit NR2 exprimiert werden."
+  },
+  {
+   "id": "vl09-nmda-untereinheiten",
+   "type": "combo",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folien 8, 43",
+   "stem": "Welche Aussagen zu den NMDA-Rezeptor-Untereinheiten treffen zu?",
+   "statements": [
+    {
+     "t": "NR1 kommt in 8 Isoformen (Spleißvarianten) vor.",
+     "correct": true
+    },
+    {
+     "t": "Die Untereinheiten-Zusammensetzung bestimmt die Eigenschaften: Der Mg²⁺-Block ist bei NR1-NR2A stark, bei NR1-NR2C schwach.",
+     "correct": true
+    },
+    {
+     "t": "NR1-NR3B-Heteromere werden allein durch Glutamat geöffnet und haben einen starken Mg²⁺-Block.",
+     "correct": false
+    },
+    {
+     "t": "Klassische glutamat- und glycingesteuerte NMDA-Rezeptoren bestehen aus 2 NR1- und 2 NR2-Untereinheiten.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "ABCD",
+    "AD",
+    "BD",
+    "AB"
+   ],
+   "explanation": "NR1-NR3B-Heteromere sind „exzitatorische Glycinrezeptoren“: allein durch Glycin gesteuert, kaum Ca²⁺-Leitfähigkeit, kein Mg²⁺-Block. Auch die Glycin-Potenzierung ist bei NR1-NR2A/B stark, bei NR1-NR2C schwach."
+  },
+  {
+   "id": "vl09-nmda-eigenschaften",
+   "type": "multi",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folien 9, 11",
+   "stem": "Welche Aussagen zu NMDA-Rezeptoren treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Sie sind sowohl liganden- als auch spannungsgesteuert.",
+     "correct": true
+    },
+    {
+     "t": "Sie sind Kationenkanäle mit hoher Ca²⁺-Leitfähigkeit.",
+     "correct": true
+    },
+    {
+     "t": "Sie öffnen langsam und bleiben lange offen – sie tragen die späte Phase des EPSP.",
+     "correct": true
+    },
+    {
+     "t": "Sie spielen eine Hauptrolle bei funktioneller (LTP, LTD) und struktureller synaptischer Plastizität.",
+     "correct": true
+    },
+    {
+     "t": "Der Mg²⁺-Block wird durch Hyperpolarisation der Membran aufgehoben.",
+     "correct": false
+    },
+    {
+     "t": "Sie vermitteln durch ihre schnelle Kinetik den schnell ansteigenden Teil des EPSP.",
+     "correct": false
+    }
+   ],
+   "explanation": "Der Mg²⁺-Block wird durch Depolarisation (über schnelle AMPA-R) entfernt. Den schnellen Anstieg des EPSP liefern AMPA-/Kainat-R; NMDA-R tragen moderat, aber lang anhaltend bei."
+  },
+  {
+   "id": "vl09-koinzidenzdetektor",
+   "type": "single",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 9",
+   "stem": "NMDA-Rezeptoren gelten als „Koinzidenzdetektoren“. Welche beiden Ereignisse müssen zusammentreffen?",
+   "options": [
+    {
+     "t": "Präsynaptische Freisetzung von Glutamat (und Glycin) und postsynaptische Depolarisation",
+     "correct": true
+    },
+    {
+     "t": "Präsynaptische Hyperpolarisation und postsynaptische Glutamat-Wiederaufnahme",
+     "correct": false
+    },
+    {
+     "t": "Bindung von Mg²⁺ und Bindung von Zn²⁺ an die Pore",
+     "correct": false
+    },
+    {
+     "t": "Aktivierung von mGluR der Gruppe I und Freisetzung von Ca²⁺ aus dem ER",
+     "correct": false
+    }
+   ],
+   "explanation": "„Detect coincident activity pre- and post-synaptically“: prä = Glu-Gly-Freisetzung (Ligand; so der Folienwortlaut – der Co-Agonist Glycin/D-Serin stammt meist aus Astrozyten bzw. dem Extrazellulärraum), post = Depolarisation (entfernt Mg²⁺-Block)."
+  },
+  {
+   "id": "vl09-nmda-modulatoren",
+   "type": "multi",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 9",
+   "stem": "Welche Substanzen bzw. Faktoren haben laut Vorlesung modulatorische Bindestellen am NMDA-Rezeptor? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Phencyclidin (PCP, „angel dust“)",
+     "correct": true
+    },
+    {
+     "t": "MK801 und Ketamin (open channel block)",
+     "correct": true
+    },
+    {
+     "t": "Polyamine",
+     "correct": true
+    },
+    {
+     "t": "pH (H⁺)",
+     "correct": true
+    },
+    {
+     "t": "Benzodiazepine",
+     "correct": false
+    },
+    {
+     "t": "Baclofen",
+     "correct": false
+    }
+   ],
+   "explanation": "NMDA-R haben mehrere modulatorische Bindestellen (u. a. halluzinogene Drogen wie PCP, Kanalblocker MK801/Ketamin, Polyamine, H⁺, Zn²⁺). Benzodiazepine wirken an GABA-A-, Baclofen an GABA-B-Rezeptoren."
+  },
+  {
+   "id": "vl09-glu-gly-kooperativ",
+   "type": "single",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 10",
+   "stem": "Kultivierte Neurone werden in Mg²⁺-freier Lösung im Voltage-Clamp abgeleitet. Was beobachtet man bei Applikation von NMDA bzw. Glycin?",
+   "options": [
+    {
+     "t": "NMDA allein und Glycin allein lösen kaum einen Strom aus; NMDA + Glycin einen deutlichen Einwärtsstrom",
+     "correct": true
+    },
+    {
+     "t": "Glycin allein löst den größten Strom aus, NMDA verstärkt ihn nicht",
+     "correct": false
+    },
+    {
+     "t": "NMDA allein löst einen maximalen Strom aus; Glycin hemmt ihn",
+     "correct": false
+    },
+    {
+     "t": "Glycin verstärkt auch die Ströme von Kainat- und Quisqualat-Rezeptoren stark",
+     "correct": false
+    }
+   ],
+   "explanation": "Glutamat und Glycin wirken kooperativ (Glycin = Co-Agonist). Die Ströme der Non-NMDA-Rezeptoren (Quis, Kai) werden durch Glycin nicht verstärkt. Mg²⁺-frei, um den Mg²⁺-Block auszuschalten."
+  },
+  {
+   "id": "vl09-apv-experiment",
+   "type": "single",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 42",
+   "stem": "Im Hippocampus wird in Mg²⁺-freier Lösung ein glutamaterges EPSP abgeleitet und dann APV appliziert. Was ist zu erwarten?",
+   "options": [
+    {
+     "t": "Die späte, lang anhaltende Komponente nimmt ab; die schnelle APV-insensitive (Non-NMDA-)Komponente bleibt",
+     "correct": true
+    },
+    {
+     "t": "Das EPSP verschwindet vollständig, da APV alle ionotropen Glutamatrezeptoren blockiert",
+     "correct": false
+    },
+    {
+     "t": "Die schnelle Anfangskomponente verschwindet; die späte Komponente bleibt",
+     "correct": false
+    },
+    {
+     "t": "Das EPSP wird größer, da APV den Mg²⁺-Block aufhebt",
+     "correct": false
+    }
+   ],
+   "explanation": "APV blockiert selektiv NMDA-R, die den langsamen, späten EPSP-Anteil tragen. Der schnelle Anteil ist AMPA-vermittelt (blockierbar durch GYKI); unter weiteren Blockern bleibt ein kleiner Kainat-Anteil (LY293558)."
+  },
+  {
+   "id": "vl09-ampa-vs-nmda",
+   "type": "open",
+   "topic": "NMDA-Rezeptor",
+   "source": "slides",
+   "ref": "VL09 · Folie 11",
+   "stem": "Nennen Sie 3 Unterschiede zwischen AMPA-/Kainat- und NMDA-Rezeptoren.",
+   "points": [
+    "Gating: AMPA/Kainat nur Glu-gesteuert – NMDA Glu-, Gly- UND spannungsgesteuert (Mg²⁺-Block)",
+    "Ionen: AMPA/Kainat v. a. Na⁺, i. d. R. keine Ca²⁺-Permeabilität – NMDA hohe Ca²⁺-Leitfähigkeit",
+    "Kinetik: AMPA/Kainat schnell → schnell ansteigendes EPSP – NMDA öffnet langsam → langsamer Anstieg",
+    "Dauer: NMDA bleibt länger offen → lange EPSP-Dauer; AMPA desensitisiert schnell/langsam (Flop/Flip)",
+    "Beitrag: AMPA = schnelle exzitatorische Transmission – NMDA moderater Beitrag zum EPSP",
+    "NMDA: CaM-Kinase erhöht die Öffnungswahrscheinlichkeit; viele Bindestellen für Drogen/Modulatoren",
+    "Ligandbindestellen: AMPA/Kainat 4 Glu – NMDA 2 Glu + 2 Gly"
+   ],
+   "need": 3,
+   "explanation": "AMPA-R sorgen für die schnelle Depolarisation, die den Mg²⁺-Block der NMDA-R aufhebt – beide arbeiten an der Synapse zusammen."
+  },
+  {
+   "id": "vl09-mglur-struktur-label",
+   "type": "label",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folie 12",
+   "stem": "Beschriften Sie die Domänen und Bindestellen eines metabotropen Glutamatrezeptors.",
+   "src": {
+    "pdf": "VL09Glutamate Neurotransmission_09Nov26.pdf",
+    "page": 12,
+    "crop": [
+     85,
+     95,
+     660,
+     525
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      88,
+      152,
+      213,
+      198
+     ],
+     "answer": "N-terminale extrazelluläre Ligandenbindungsdomäne (Venus-Fliegenfallen-Modul)",
+     "accept": [
+      "Venus flytrap",
+      "Venus-fly-trap module",
+      "VFTM",
+      "Venusfliegenfalle",
+      "Ligandenbindungsdomäne",
+      "N-terminale Domäne"
+     ],
+     "x": 0.09,
+     "y": 12.67,
+     "w": 22.61,
+     "h": 11.86
+    },
+    {
+     "box": [
+      92,
+      249,
+      222,
+      290
+     ],
+     "answer": "Cystein-reiche Domäne (S-S-Brücken)",
+     "accept": [
+      "Cysteine-rich domain",
+      "Cystein-reiche Domäne",
+      "cysteinreiche Domäne",
+      "Disulfidbrücken"
+     ],
+     "x": 0.78,
+     "y": 35.23,
+     "w": 23.48,
+     "h": 10.7
+    },
+    {
+     "box": [
+      118,
+      354,
+      184,
+      369
+     ],
+     "answer": "7TM-Domäne",
+     "accept": [
+      "7TM domain",
+      "7TM",
+      "Transmembrandomäne",
+      "7 Transmembranhelices"
+     ],
+     "x": 5.3,
+     "y": 59.65,
+     "w": 12.35,
+     "h": 4.65
+    },
+    {
+     "box": [
+      98,
+      412,
+      201,
+      440
+     ],
+     "answer": "intrazelluläre C-terminale Domäne",
+     "accept": [
+      "Intracellular C-terminal domain",
+      "C-Terminus",
+      "C-terminale Domäne"
+     ],
+     "x": 1.83,
+     "y": 73.14,
+     "w": 18.78,
+     "h": 7.67
+    },
+    {
+     "box": [
+      495,
+      156,
+      620,
+      185
+     ],
+     "answer": "kompetitive Agonisten/Antagonisten",
+     "accept": [
+      "Competitive agonists/antagonists",
+      "kompetitive Liganden",
+      "Glutamat-Bindestelle",
+      "orthosterische Bindestelle"
+     ],
+     "x": 70.87,
+     "y": 13.6,
+     "w": 22.61,
+     "h": 7.91
+    },
+    {
+     "box": [
+      462,
+      266,
+      624,
+      298
+     ],
+     "answer": "nicht-kompetitive allosterische Modulatoren (pos./neg.)",
+     "accept": [
+      "allosteric modulators",
+      "allosterische Modulatoren",
+      "PAM/NAM",
+      "PAM",
+      "NAM"
+     ],
+     "x": 65.13,
+     "y": 39.19,
+     "w": 29.04,
+     "h": 8.6
+    },
+    {
+     "find": "G-protein",
+     "answer": "G-Protein",
+     "accept": [
+      "G protein",
+      "G-Protein",
+      "Gq",
+      "Gi"
+     ],
+     "x": 52.69,
+     "y": 84.12,
+     "w": 12.47,
+     "h": 4.88
+    }
+   ],
+   "explanation": "Glutamat und kompetitive Liganden binden in der extrazellulären Venus-Fliegenfalle; allosterische Modulatoren (PAM/NAM) binden in der 7TM-Domäne. Der C-Terminus koppelt an G-Proteine, Kinasen, Homer und Ca²⁺-Calmodulin.",
+   "image": "assets/figures/vl09-mglur-struktur-label.webp",
+   "iw": 1150,
+   "ih": 860
+  },
+  {
+   "id": "vl09-mglur-gruppen",
+   "type": "single",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folien 13–14",
+   "stem": "Welche Zuordnung der 8 mGluR-Subtypen zu den 3 Gruppen ist korrekt?",
+   "options": [
+    {
+     "t": "Gruppe I: mGluR1, 5 · Gruppe II: mGluR2, 3 · Gruppe III: mGluR4, 6, 7, 8",
+     "correct": true
+    },
+    {
+     "t": "Gruppe I: mGluR1, 2 · Gruppe II: mGluR3, 4 · Gruppe III: mGluR5–8",
+     "correct": false
+    },
+    {
+     "t": "Gruppe I: mGluR1, 5 · Gruppe II: mGluR2, 3, 4 · Gruppe III: mGluR6, 7, 8",
+     "correct": false
+    },
+    {
+     "t": "Gruppe I: mGluR2, 3 · Gruppe II: mGluR1, 5 · Gruppe III: mGluR4, 6, 7, 8",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Gruppen beruhen auf Sequenzhomologie und sind durch G-Protein-Kopplung (I: Gq; II/III: Gi/o) und Pharmakologie bestätigt. Pro Subtyp gibt es bis zu 4 Spleißvarianten (C-Terminus)."
+  },
+  {
+   "id": "vl09-mglur-klassen-label",
+   "type": "label",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folie 14",
+   "stem": "Ergänzen Sie in der Klassifikation der mGluR die Gruppen und die Signaltransduktion (G-Protein und Effekte).",
+   "src": {
+    "pdf": "VL09Glutamate Neurotransmission_09Nov26.pdf",
+    "page": 14,
+    "crop": [
+     45,
+     95,
+     340,
+     400
+    ],
+    "hide": [
+     [
+      251,
+      310,
+      331,
+      377
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      211,
+      182,
+      224,
+      198
+     ],
+     "answer": "Gruppe I",
+     "accept": [
+      "I",
+      "1",
+      "Group I",
+      "Gruppe 1"
+     ],
+     "x": 55.42,
+     "y": 27.7,
+     "w": 6.1,
+     "h": 6.89
+    },
+    {
+     "box": [
+      209,
+      244,
+      226,
+      260
+     ],
+     "answer": "Gruppe II",
+     "accept": [
+      "II",
+      "2",
+      "Group II",
+      "Gruppe 2"
+     ],
+     "x": 54.75,
+     "y": 48.03,
+     "w": 7.46,
+     "h": 6.89
+    },
+    {
+     "box": [
+      210,
+      332,
+      229,
+      350
+     ],
+     "answer": "Gruppe III",
+     "accept": [
+      "III",
+      "3",
+      "Group III",
+      "Gruppe 3"
+     ],
+     "x": 55.08,
+     "y": 76.89,
+     "w": 8.14,
+     "h": 7.54
+    },
+    {
+     "box": [
+      252,
+      174,
+      335,
+      204
+     ],
+     "answer": "Gq → PLC ↑",
+     "accept": [
+      "Gq",
+      "PLC",
+      "Gq PLC",
+      "Gq/11",
+      "Phospholipase C"
+     ],
+     "x": 69.32,
+     "y": 25.08,
+     "w": 29.83,
+     "h": 11.48
+    },
+    {
+     "box": [
+      251,
+      222,
+      331,
+      285
+     ],
+     "answer": "Gi/o → AC ↓, GIRK ↑, I(Ca) ↓",
+     "accept": [
+      "Gi",
+      "Gi/o",
+      "Go",
+      "AC",
+      "Gi AC"
+     ],
+     "x": 68.98,
+     "y": 40.82,
+     "w": 28.81,
+     "h": 22.3
+    }
+   ],
+   "bank": [
+    "Gs → AC ↑"
+   ],
+   "explanation": "Gruppe I (mGluR1/5) koppelt an Gq → PLC ↑. Gruppen II (mGluR2/3) und III (mGluR4/6/7/8) koppeln an Gi/o → AC ↓, K⁺(GIRK)-Strom ↑, Ca²⁺-Strom ↓ (die Gruppe-III-Spalte ist abgedeckt, weil sie identisch ist).",
+   "image": "assets/figures/vl09-mglur-klassen-label.webp",
+   "iw": 590,
+   "ih": 610
+  },
+  {
+   "id": "vl09-mglur-cterminus",
+   "type": "multi",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folie 13",
+   "stem": "Woran bindet der C-Terminus metabotroper Glutamatrezeptoren laut Vorlesung? (mehrere richtig)",
+   "options": [
+    {
+     "t": "G-Protein (Signaltransduktion)",
+     "correct": true
+    },
+    {
+     "t": "Kinasen (Phosphorylierung, regulatorische Proteine)",
+     "correct": true
+    },
+    {
+     "t": "Homer (Dimerisierung, Kopplung an IP3-Rezeptoren)",
+     "correct": true
+    },
+    {
+     "t": "Ca²⁺-Calmodulin (CaM-Kinase, Transkriptionsfaktoren)",
+     "correct": true
+    },
+    {
+     "t": "Glutamat (orthosterische Bindestelle)",
+     "correct": false
+    },
+    {
+     "t": "KCTD-Hilfsproteine wie bei GABA-B2",
+     "correct": false
+    }
+   ],
+   "explanation": "Glutamat bindet extrazellulär in der Venus-Fliegenfalle. KCTD-Proteine sind Hilfsuntereinheiten des GABA-B-Rezeptors (VL08). Die bis zu 4 Spleißvarianten pro Subtyp betreffen das C-terminale Ende."
+  },
+  {
+   "id": "vl09-pam",
+   "type": "single",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folien 15–16",
+   "stem": "Welche Aussage zu positiven allosterischen Modulatoren (PAMs) an mGluR trifft zu?",
+   "options": [
+    {
+     "t": "Sie erhöhen Potenz (Linksverschiebung der Dosis-Wirkungs-Kurve) und Wirksamkeit – aber nur bei gebundenem Agonisten",
+     "correct": true
+    },
+    {
+     "t": "Sie binden kompetitiv an der Glutamat-Bindestelle der Venus-Fliegenfalle und verdrängen dort den Agonisten",
+     "correct": false
+    },
+    {
+     "t": "Sie aktivieren den Rezeptor auch ohne Glutamat maximal, wirken also wie ein voller Agonist",
+     "correct": false
+    },
+    {
+     "t": "Sie verschieben die Dosis-Wirkungs-Kurve nach rechts und senken den Maximaleffekt des Agonisten",
+     "correct": false
+    }
+   ],
+   "explanation": "PAMs stabilisieren eine Konformation mit verstärkter Wirkung (Affinität ↑, Kopplung an das G-Protein ↑); NAMs bewirken das Gegenteil (Rechtsverschiebung, Maximaleffekt ↓). „Modulators exert their actions only in the presence of the bound agonist.“"
+  },
+  {
+   "id": "vl09-mglur-lokalisation",
+   "type": "multi",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folie 28",
+   "stem": "Welche Zuordnungen von mGluR-Subtyp und (sub)zellulärer Lokalisation sind korrekt? (mehrere richtig)",
+   "options": [
+    {
+     "t": "mGluR1 – Kleinhirn, Purkinje-Zellen, postsynaptisch",
+     "correct": true
+    },
+    {
+     "t": "mGluR6 – Retina, ON-Bipolarzellen, postsynaptisch",
+     "correct": true
+    },
+    {
+     "t": "mGluR7 – gesamtes ZNS, ausschließlich präsynaptisch",
+     "correct": true
+    },
+    {
+     "t": "mGluR4 – Kleinhirn, Parallelfaser-Endigungen, präsynaptisch",
+     "correct": true
+    },
+    {
+     "t": "mGluR5 – ausschließlich präsynaptisch an Axonterminalen",
+     "correct": false
+    },
+    {
+     "t": "mGluR2 – ausschließlich in der Retina",
+     "correct": false
+    }
+   ],
+   "explanation": "mGluR5 (Gruppe I) liegt soma-dendritisch postsynaptisch und auf Gliazellen; mGluR2 findet sich in Cortex und Kleinhirn an Axonen (präsynaptisch). Faustregel: Gruppe I eher post-, Gruppen II/III oft präsynaptisch."
+  },
+  {
+   "id": "vl09-mglur-gruppen-open",
+   "type": "open",
+   "topic": "mGluR: Struktur, Gruppen & Modulation",
+   "source": "slides",
+   "ref": "VL09 · Folien 13–14, 20, 22",
+   "stem": "Nennen Sie die drei Gruppen metabotroper Glutamatrezeptoren mit ihren Mitgliedern und ihrer G-Protein-Kopplung.",
+   "points": [
+    "Gruppe I: mGluR1 und mGluR5",
+    "Gruppe I koppelt an Gq → PLC ↑ → IP3 + DAG",
+    "Gruppe II: mGluR2 und mGluR3",
+    "Gruppe III: mGluR4, 6, 7, 8",
+    "Gruppen II und III koppeln an Gi/o → AC ↓ (cAMP ↓), GIRK ↑, Ca²⁺-Kanäle ↓"
+   ],
+   "explanation": "8 Subtypen in 3 Gruppen, bestätigt durch Sequenzhomologie, G-Protein-Kopplung und Pharmakologie."
+  },
+  {
+   "id": "vl09-mglur23-praesynapse",
+   "type": "open",
+   "topic": "mGluR-Signalwege",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL09 · Folien 19–20; VL08 · Folien 31–33",
+   "stem": "Metabotrope Glutamatrezeptoren der Klasse II/III können prä- und postsynaptisch lokalisiert sein. Beschreiben Sie für den Fall der präsynaptischen Lokalisation in Stichworten die Schritte von der Bindung des Liganden Glutamat bis zum zellulären Effekt in der Präsynapse. Wozu führt es in der Postsynapse nach mehreren APs der Präsynapse?",
+   "points": [
+    "Glutamat bindet an die extrazelluläre Venus-Fliegenfallen-Domäne des präsynaptischen mGluR II/III (Autorezeptor)",
+    "Konformationsänderung → Aktivierung des gekoppelten Gi/o-Proteins (GDP → GTP)",
+    "Dissoziation in Gα(i/o) und Gβγ",
+    "Gβγ bindet an spannungsgesteuerte Ca²⁺-Kanäle und hemmt sie",
+    "Weniger Ca²⁺-Einstrom → weniger Vesikelfusion → Transmitterfreisetzung ↓",
+    "Postsynapse nach mehreren APs: zunehmend geringere Depolarisation (kleinere EPSPs) – negative Rückkopplung"
+   ],
+   "answer": "Bei einem Heterorezeptor an einer GABAergen Synapse wäre die Folge entsprechend eine geringere postsynaptische Hyperpolarisation.",
+   "explanation": "Präsynaptische mGluR II/III wirken wie präsynaptische GABA-B-Rezeptoren: Gβγ hemmt Ca²⁺-Kanäle → Freisetzung ↓. Bei wiederholter Aktivität sammelt sich Glutamat an und dämpft über die Autorezeptoren die eigene Freisetzung.",
+   "note": "WS23/24 Frage 27 (offen); Lösung im Protokoll „vergessen“. Mechanismus nach Folie 20 und den GABA-B-Folien (VL08 Folien 31–33), auf die Folie 20 ausdrücklich verweist."
+  },
+  {
+   "id": "vl09-mglur23-order",
+   "type": "order",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folien 19–20",
+   "stem": "Bringen Sie die Schritte der präsynaptischen Hemmung durch mGluR der Gruppen II/III in die richtige Reihenfolge.",
+   "items": [
+    "Glutamat bindet an den präsynaptischen mGluR II/III",
+    "Aktivierung des Gi/o-Proteins (GDP → GTP)",
+    "Dissoziation in Gα und Gβγ",
+    "Gβγ hemmt spannungsgesteuerte Ca²⁺-Kanäle",
+    "Weniger Ca²⁺-Einstrom beim nächsten AP",
+    "Verminderte Glutamatfreisetzung",
+    "Geringere postsynaptische Depolarisation"
+   ],
+   "explanation": "Variante der Altklausur-Frage WS23/24 Nr. 27: Ligand → Gi/o → Gβγ → Ca²⁺-Kanäle ↓ → Freisetzung ↓ → kleineres EPSP."
+  },
+  {
+   "id": "vl09-mglur1-ip3",
+   "type": "single",
+   "topic": "mGluR-Signalwege",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL09 · Folien 22–25",
+   "stem": "Metabotrope Glutamatrezeptoren vom Typ I bilden IP3. Was ist die Wirkung von IP3?",
+   "options": [
+    {
+     "t": "Ca²⁺-Freisetzung aus dem ER über IP3-Rezeptoren",
+     "correct": true
+    },
+    {
+     "t": "Direkte Öffnung von K⁺-Kanälen in der Plasmamembran",
+     "correct": false
+    },
+    {
+     "t": "Aktivierung der Adenylylcyclase → cAMP ↑",
+     "correct": false
+    },
+    {
+     "t": "Hemmung spannungsgesteuerter Ca²⁺-Kanäle über Gβγ",
+     "correct": false
+    }
+   ],
+   "explanation": "Gruppe I → Gq → PLC spaltet PIP2 in DAG und IP3; IP3 öffnet den IP3-Rezeptor (IP3-gesteuerter Ca²⁺-Kanal) im ER. K⁺-Kanäle öffnen sich nur indirekt: In dopaminergen Neuronen aktiviert das freigesetzte Ca²⁺ K⁺-Kanäle → IPSP (Folie 25).",
+   "note": "WS25/26; im Protokoll nur zwei Optionen (Ca²⁺-Freisetzung aus ER / öffnet K⁺-Kanäle) – zwei Ablenker ergänzt."
+  },
+  {
+   "id": "vl09-pip2-label",
+   "type": "label",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folie 23",
+   "stem": "Beschriften Sie den Signalweg der Gruppe-I-mGluR (mGluR1/5).",
+   "src": {
+    "pdf": "VL09Glutamate Neurotransmission_09Nov26.pdf",
+    "page": 23,
+    "crop": [
+     0,
+     62,
+     720,
+     383
+    ],
+    "hide": [
+     [
+      238,
+      186,
+      253,
+      200
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      83,
+      185,
+      99,
+      201
+     ],
+     "answer": "Gq (α-Untereinheit)",
+     "accept": [
+      "Gq",
+      "Gαq",
+      "Gq-Protein",
+      "G alpha q"
+     ],
+     "x": 11.18,
+     "y": 37.54,
+     "w": 2.92,
+     "h": 6.54
+    },
+    {
+     "box": [
+      263,
+      184,
+      294,
+      201
+     ],
+     "answer": "Phospholipase C (PLC)",
+     "accept": [
+      "PLC",
+      "Phospholipase C",
+      "PLCβ"
+     ],
+     "x": 36.18,
+     "y": 37.23,
+     "w": 5.0,
+     "h": 6.85
+    },
+    {
+     "box": [
+      296,
+      125,
+      321,
+      141
+     ],
+     "answer": "PIP2",
+     "accept": [
+      "PIP2",
+      "Phosphatidylinositol-4,5-bisphosphat",
+      "PIP₂"
+     ],
+     "x": 40.76,
+     "y": 18.85,
+     "w": 4.17,
+     "h": 6.54
+    },
+    {
+     "box": [
+      349,
+      126,
+      372,
+      140
+     ],
+     "answer": "DAG (Diacylglycerol)",
+     "accept": [
+      "DAG",
+      "Diacylglycerol",
+      "Diacylglycerin"
+     ],
+     "x": 48.12,
+     "y": 19.16,
+     "w": 3.89,
+     "h": 5.92
+    },
+    {
+     "box": [
+      356,
+      218,
+      377,
+      233
+     ],
+     "answer": "IP3 (Inositoltrisphosphat)",
+     "accept": [
+      "IP3",
+      "Inositoltrisphosphat",
+      "Inositol-1,4,5-trisphosphat",
+      "InsP3"
+     ],
+     "x": 49.1,
+     "y": 47.82,
+     "w": 3.61,
+     "h": 6.23
+    },
+    {
+     "box": [
+      433,
+      255,
+      459,
+      269
+     ],
+     "answer": "IP3-Rezeptor (IP3R)",
+     "accept": [
+      "IP3R",
+      "IP3-R",
+      "IP3-Rezeptor",
+      "IP3-gated Ca2+ channel"
+     ],
+     "x": 59.79,
+     "y": 59.35,
+     "w": 4.31,
+     "h": 5.92
+    },
+    {
+     "box": [
+      414,
+      218,
+      448,
+      233
+     ],
+     "answer": "Ca²⁺",
+     "accept": [
+      "Ca2+",
+      "Ca",
+      "Calcium"
+     ],
+     "x": 57.15,
+     "y": 47.82,
+     "w": 5.42,
+     "h": 6.23
+    },
+    {
+     "box": [
+      470,
+      185,
+      499,
+      200
+     ],
+     "answer": "Proteinkinase C (PKC)",
+     "accept": [
+      "PKC",
+      "Proteinkinase C",
+      "protein kinase C"
+     ],
+     "x": 64.93,
+     "y": 37.54,
+     "w": 4.72,
+     "h": 6.23
+    },
+    {
+     "box": [
+      563,
+      238,
+      605,
+      252
+     ],
+     "answer": "CaMKII",
+     "accept": [
+      "CaMKII",
+      "CaM-Kinase II",
+      "CaM kinase II",
+      "Calmodulin-Kinase II"
+     ],
+     "x": 77.85,
+     "y": 54.05,
+     "w": 6.53,
+     "h": 5.92
+    },
+    {
+     "box": [
+      206,
+      311,
+      262,
+      336
+     ],
+     "answer": "endoplasmatisches Retikulum (ER)",
+     "accept": [
+      "ER",
+      "endoplasmic reticulum",
+      "endoplasmatisches Retikulum"
+     ],
+     "x": 28.26,
+     "y": 76.79,
+     "w": 8.47,
+     "h": 9.35
+    }
+   ],
+   "bank": [
+    "Adenylylcyclase",
+    "cAMP"
+   ],
+   "explanation": "mGluR1/5 → Gq → PLC spaltet PIP2 in DAG (bleibt in der Membran, aktiviert mit Ca²⁺ die PKC) und IP3 (öffnet den IP3R am ER → Ca²⁺ → Calmodulin → CaMKII).",
+   "image": "assets/figures/vl09-pip2-label.webp",
+   "iw": 1400,
+   "ih": 624
+  },
+  {
+   "id": "vl09-gruppe1-order",
+   "type": "order",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folien 22–24",
+   "stem": "Bringen Sie die Signalkaskade der Gruppe-I-mGluR in die richtige Reihenfolge.",
+   "items": [
+    "Glutamat bindet an mGluR1/5",
+    "Aktivierung des Gq-Proteins",
+    "Aktivierung der Phospholipase C",
+    "Spaltung von PIP2 in IP3 und DAG",
+    "IP3 öffnet IP3-Rezeptoren am ER",
+    "Ca²⁺-Freisetzung ins Zytosol",
+    "DAG + Ca²⁺ aktivieren die Proteinkinase C"
+   ],
+   "explanation": "Gq → PLC → IP3/DAG. Ca²⁺ wird zusammen mit DAG für die PKC gebraucht; über CaM-Kinase und MAP-Kinase führt der Weg bis zur Genexpression."
+  },
+  {
+   "id": "vl09-gruppe23-effekte",
+   "type": "multi",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folien 19–20",
+   "stem": "Welche Effekte vermitteln mGluR der Gruppen II und III? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Postsynaptisch: Hemmung der Adenylylcyclase → cAMP ↓ → PKA ↓",
+     "correct": true
+    },
+    {
+     "t": "Postsynaptisch: Öffnung von GIRK-Kanälen → K⁺-Ausstrom → Hyperpolarisation",
+     "correct": true
+    },
+    {
+     "t": "Präsynaptisch: Blockade spannungsgesteuerter Ca²⁺-Kanäle → Hemmung der Transmitterfreisetzung",
+     "correct": true
+    },
+    {
+     "t": "Aktivierung der Phospholipase C → IP3 → Ca²⁺-Freisetzung aus dem ER",
+     "correct": false
+    },
+    {
+     "t": "Öffnung eines Ca²⁺-durchlässigen Kationenkanals im Rezeptor selbst",
+     "correct": false
+    },
+    {
+     "t": "Aktivierung der Adenylylcyclase über Gs → cAMP ↑",
+     "correct": false
+    }
+   ],
+   "explanation": "Gruppen II/III sind Gi/o-gekoppelt – dieselben Effektorsysteme wie beim GABA-B-Rezeptor. PLC/IP3 gehört zu Gruppe I (Gq); einen eigenen Ionenkanal haben nur iGluR."
+  },
+  {
+   "id": "vl09-auto-hetero",
+   "type": "combo",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folie 20",
+   "stem": "Welche Aussagen zu präsynaptischen mGluR der Gruppen II/III treffen zu?",
+   "statements": [
+    {
+     "t": "Als Autorezeptoren an glutamatergen Synapsen verringern sie die postsynaptische Depolarisation.",
+     "correct": true
+    },
+    {
+     "t": "Als Heterorezeptoren z. B. an GABAergen Synapsen verringern sie die postsynaptische Hyperpolarisation.",
+     "correct": true
+    },
+    {
+     "t": "Präsynaptisch steigern sie die Transmitterfreisetzung über DAG und PKC.",
+     "correct": false
+    },
+    {
+     "t": "Pertussistoxin kann ihre Signalübertragung unterbrechen.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "AD",
+    "BCD"
+   ],
+   "explanation": "Präsynaptische Gi/o-gekoppelte mGluR (Gruppe II/III) hemmen über spannungsabhängige Ca²⁺-Kanäle die Freisetzung des jeweiligen Transmitters (Folie 20). Pertussistoxin ADP-ribosyliert die Gα-Untereinheit von Gi/o und entkoppelt sie so vom Rezeptor (nicht Gq; Gs ist Ziel des Choleratoxins). Hinweis: Folie 19 nennt zusätzlich Gs – lehrbuchgemäß ist Gs aber kein PTX-Substrat."
+  },
+  {
+   "id": "vl09-pertussis",
+   "type": "single",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folie 19",
+   "stem": "Pertussistoxin verändert die Gα-Untereinheit so, dass kein GTP mehr gebunden werden kann. Welche mGluR-Signalwege bleiben davon unbeeinflusst?",
+   "options": [
+    {
+     "t": "Die der Gruppe I (Gq-gekoppelt)",
+     "correct": true
+    },
+    {
+     "t": "Die der Gruppe II (Gi/o-gekoppelt)",
+     "correct": false
+    },
+    {
+     "t": "Die der Gruppe III (Gi/o-gekoppelt)",
+     "correct": false
+    },
+    {
+     "t": "Keine – Pertussistoxin blockiert alle G-Protein-Typen gleichermaßen",
+     "correct": false
+    }
+   ],
+   "explanation": "Gruppe-I-mGluR (Gq → PLC-β) bleiben aktiv, Gruppe II/III (Gi/o) werden blockiert. Pertussistoxin ADP-ribosyliert die Gα-Untereinheit von Gi/o und entkoppelt sie so vom Rezeptor (nicht Gq; Gs ist Ziel des Choleratoxins). Hinweis: Folie 19 nennt zusätzlich Gs – lehrbuchgemäß ist Gs aber kein PTX-Substrat."
+  },
+  {
+   "id": "vl09-mglur1-mglur5-ca",
+   "type": "single",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folien 24, 26",
+   "stem": "Gruppe-I-mGluR setzen über IP3 Ca²⁺ aus intrazellulären Speichern frei. Wie unterscheiden sich mGluR1 und mGluR5 dabei laut Vorlesung?",
+   "options": [
+    {
+     "t": "mGluR1: einzelne Ca²⁺-Pulse (→ Kationenkanäle, Ca²⁺-abhängige Proteine); mGluR5: Ca²⁺-Oszillationen (~2/min) → Transkriptionsfaktor → Genexpression",
+     "correct": true
+    },
+    {
+     "t": "mGluR1: Ca²⁺-Oszillationen (~2/min) → Genexpression; mGluR5: einzelne Ca²⁺-Pulse → Kationenkanäle",
+     "correct": false
+    },
+    {
+     "t": "mGluR1 setzt Ca²⁺ aus dem ER frei, mGluR5 öffnet stattdessen spannungsgesteuerte Ca²⁺-Kanäle",
+     "correct": false
+    },
+    {
+     "t": "Beide erzeugen nur einzelne Ca²⁺-Pulse; Genexpression wird ausschließlich über cAMP/PKA ausgelöst",
+     "correct": false
+    }
+   ],
+   "explanation": "mGluR5 erzeugt Ca²⁺-Oszillationen, die Transkriptionsfaktoren aktivieren. Zusätzlich führen DAG + Ca²⁺ → PKC sowie Ca²⁺ → CaM-Kinase/MAP-Kinase zur Genexpression."
+  },
+  {
+   "id": "vl09-mglur1-ipsp",
+   "type": "single",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folie 25",
+   "stem": "In dopaminergen Neuronen vermittelt mGluR1 ein <i>inhibitorisches</i> PSP. Über welchen Mechanismus?",
+   "options": [
+    {
+     "t": "Gq → PLC → IP3 → Ca²⁺-Freisetzung aus dem ER (IP3-R, Ryanodin-R) → Ca²⁺-aktivierte K⁺-Kanäle → K⁺-Ausstrom",
+     "correct": true
+    },
+    {
+     "t": "Gi/o → Gβγ öffnet GIRK-Kanäle → K⁺-Ausstrom",
+     "correct": false
+    },
+    {
+     "t": "mGluR1 ist selbst ein Cl⁻-Kanal → Cl⁻-Einstrom",
+     "correct": false
+    },
+    {
+     "t": "Gq → PLC → DAG hemmt die Na⁺/K⁺-ATPase → Hyperpolarisation",
+     "correct": false
+    }
+   ],
+   "explanation": "Beispiel dafür, dass der Effekt von Rezeptor und Zelltyp abhängt: Glutamat wirkt hier hemmend. Ca²⁺ aus dem ER (IP3-R, verstärkt über Ryanodin-R) aktiviert Ca²⁺-abhängige K⁺-Kanäle."
+  },
+  {
+   "id": "vl09-genexpression-label",
+   "type": "label",
+   "topic": "mGluR-Signalwege",
+   "source": "slides",
+   "ref": "VL09 · Folie 27",
+   "stem": "Beschriften Sie die Wege der glutamatinduzierten Genexpression über Ca²⁺.",
+   "src": {
+    "pdf": "VL09Glutamate Neurotransmission_09Nov26.pdf",
+    "page": 27,
+    "crop": [
+     30,
+     70,
+     720,
+     515
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      53,
+      178,
+      102,
+      208
+     ],
+     "answer": "NMDA-Rezeptor",
+     "accept": [
+      "NMDA receptor",
+      "NMDA-R",
+      "NMDAR",
+      "NMDA"
+     ],
+     "x": 2.97,
+     "y": 23.71,
+     "w": 7.83,
+     "h": 7.87
+    },
+    {
+     "box": [
+      211,
+      248,
+      290,
+      281
+     ],
+     "answer": "spannungsgesteuerter Ca²⁺-Kanal",
+     "accept": [
+      "voltage-gated Ca2+ channel",
+      "VGCC",
+      "Ca-Kanal",
+      "spannungsabhängiger Ca2+-Kanal",
+      "Cav"
+     ],
+     "x": 25.87,
+     "y": 39.44,
+     "w": 12.17,
+     "h": 8.54
+    },
+    {
+     "box": [
+      313,
+      181,
+      368,
+      246
+     ],
+     "answer": "mGluR1/5 (Gruppe I)",
+     "accept": [
+      "mGluR1,5",
+      "mGluR1/5",
+      "mGluR",
+      "mGluR1",
+      "mGluR5",
+      "Gruppe I"
+     ],
+     "x": 40.65,
+     "y": 24.38,
+     "w": 8.7,
+     "h": 15.73
+    },
+    {
+     "box": [
+      302,
+      266,
+      324,
+      292
+     ],
+     "answer": "IP3",
+     "accept": [
+      "IP3",
+      "Inositoltrisphosphat",
+      "InsP3"
+     ],
+     "x": 39.06,
+     "y": 43.48,
+     "w": 3.91,
+     "h": 6.97
+    },
+    {
+     "box": [
+      310,
+      377,
+      427,
+      396
+     ],
+     "answer": "Ryanodin-Rezeptor",
+     "accept": [
+      "ryanodine receptor",
+      "RyR",
+      "Ryanodinrezeptor",
+      "Rya-R",
+      "IP3-Rezeptor",
+      "IP3R",
+      "InsP3-Rezeptor",
+      "IP3 receptor"
+     ],
+     "x": 40.22,
+     "y": 68.43,
+     "w": 17.68,
+     "h": 5.39
+    },
+    {
+     "box": [
+      417,
+      389,
+      467,
+      420
+     ],
+     "answer": "CaM-Kinasen",
+     "accept": [
+      "CaM kinases",
+      "CaMK",
+      "CaMKII",
+      "Calmodulin-Kinasen",
+      "CaM-Kinase"
+     ],
+     "x": 55.72,
+     "y": 71.12,
+     "w": 7.97,
+     "h": 8.09
+    },
+    {
+     "box": [
+      385,
+      433,
+      438,
+      485
+     ],
+     "answer": "MAP-Kinase-Kaskade",
+     "accept": [
+      "MAP kinase cascade",
+      "MAPK",
+      "MAP-Kinase",
+      "ERK"
+     ],
+     "x": 51.09,
+     "y": 81.01,
+     "w": 8.41,
+     "h": 12.81
+    },
+    {
+     "box": [
+      537,
+      176,
+      558,
+      190
+     ],
+     "answer": "Adenylylcyclase (AC)",
+     "accept": [
+      "AC",
+      "Adenylylcyclase",
+      "Adenylatcyclase"
+     ],
+     "x": 73.12,
+     "y": 23.26,
+     "w": 3.77,
+     "h": 4.27
+    },
+    {
+     "box": [
+      563,
+      287,
+      584,
+      300
+     ],
+     "answer": "PKA",
+     "accept": [
+      "PKA",
+      "Proteinkinase A"
+     ],
+     "x": 76.88,
+     "y": 48.2,
+     "w": 3.77,
+     "h": 4.04
+    },
+    {
+     "box": [
+      561,
+      384,
+      599,
+      400
+     ],
+     "answer": "CREB",
+     "accept": [
+      "CREB",
+      "cAMP response element-binding protein"
+     ],
+     "x": 76.59,
+     "y": 70.0,
+     "w": 6.23,
+     "h": 4.72
+    }
+   ],
+   "bank": [
+    "PKC",
+    "GIRK"
+   ],
+   "explanation": "Ca²⁺ kommt über NMDA-R, spannungsgesteuerte Ca²⁺-Kanäle und (mGluR1/5 → IP3) aus dem ER. Ca²⁺/CaM aktiviert CaM-Kinasen, die Ras-MAP-Kinase-Kaskade und die Adenylylcyclase (→ PKA). Hinweis: Der ER-Kanal, auf den der IP3-Pfeil zeigt, ist in der Abbildung als Ryanodin-Rezeptor beschriftet; fachlich öffnet IP3 den IP3-Rezeptor, der RyR verstärkt über Ca²⁺-induzierte Ca²⁺-Freisetzung. Alle Wege phosphorylieren CREB → Transkription von Zielgenen.",
+   "image": "assets/figures/vl09-genexpression-label.webp",
+   "iw": 1380,
+   "ih": 890
+  },
+  {
+   "id": "vl09-eaat-stoechiometrie",
+   "type": "single",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folien 30, 37",
+   "stem": "Mit welcher Ionenkopplung transportieren die Plasmamembran-Glutamattransporter (EAAT1–5, SLC1) Glutamat in die Zelle?",
+   "options": [
+    {
+     "t": "Kotransport von 3 Na⁺ und 1 H⁺, Gegentransport von 1 K⁺",
+     "correct": true
+    },
+    {
+     "t": "Kotransport von 2 Na⁺ und 1 Cl⁻, kein K⁺",
+     "correct": false
+    },
+    {
+     "t": "Antiport gegen H⁺ (ATP-getriebener Protonengradient)",
+     "correct": false
+    },
+    {
+     "t": "Kotransport von 1 K⁺, Gegentransport von 3 Na⁺",
+     "correct": false
+    }
+   ],
+   "explanation": "EAATs nutzen den Na⁺/K⁺-Gradienten (3 Na⁺ + 1 H⁺ hinein, 1 K⁺ hinaus). Der H⁺-Antiport kennzeichnet die vesikulären vGluT1–3 (SLC17)."
+  },
+  {
+   "id": "vl09-slc1-slc17",
+   "type": "multi",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folie 30",
+   "stem": "Welche Aussagen zu den Genfamilien der Glutamattransporter treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Zur SLC1-Familie gehören die 5 Plasmamembran-Glutamattransporter (EAAT1–EAAT5).",
+     "correct": true
+    },
+    {
+     "t": "Die SLC17-Familie codiert 3 vesikuläre Glutamattransporter (vGluT1–3).",
+     "correct": true
+    },
+    {
+     "t": "vGluTs arbeiten als H⁺-Antiporter.",
+     "correct": true
+    },
+    {
+     "t": "EAATs bilden Trimere; jede Untereinheit hat laut Folie 6 TM-Domänen plus einen C-terminalen Abschnitt mit zwei Haarnadelschleifen.",
+     "correct": true
+    },
+    {
+     "t": "EAATs gehören wie GAT1 und DAT zur SLC6-Familie.",
+     "correct": false
+    },
+    {
+     "t": "vGluTs werden durch den Na⁺-Gradienten angetrieben.",
+     "correct": false
+    }
+   ],
+   "explanation": "Glutamattransporter bilden eine eigene Familie (SLC1); die SLC6-Familie umfasst GAT, GlyT, DAT, NET, SERT. Vesikuläre Transporter nutzen den H⁺-Gradienten der Vesikel-ATPase."
+  },
+  {
+   "id": "vl09-eaat-verteilung",
+   "type": "combo",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folie 31",
+   "stem": "Welche Aussagen zur Verteilung der EAA-Transporter im ZNS treffen zu?",
+   "statements": [
+    {
+     "t": "EAAT2 kommt im ganzen ZNS vor und ist glial.",
+     "correct": true
+    },
+    {
+     "t": "EAAT4 findet sich nur an Purkinje-Zellen des Kleinhirns.",
+     "correct": true
+    },
+    {
+     "t": "EAAT5 kommt nur in der Retina vor.",
+     "correct": true
+    },
+    {
+     "t": "EAAT3 ist ein rein glialer Transporter im Hirnstamm.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "ACD"
+   ],
+   "explanation": "EAAT3 ist neuronal (postsynaptisch) in Cortex, Hippocampus und Putamen; EAAT1 kommt in Cortex und Kleinhirn neuronal und glial vor. Die 5 EAATs unterscheiden sich in Affinität/Transportrate, Pharmakologie und Verteilung."
+  },
+  {
+   "id": "vl09-alternating-access",
+   "type": "single",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folie 32",
+   "stem": "Welche Aussage zum Transportzyklus eines Glutamattransporters („alternating access model“) trifft <b>nicht</b> zu?",
+   "options": [
+    {
+     "t": "Für den Transport genügt die Bindung von Glutamat; Ionen sind nicht erforderlich.",
+     "correct": true
+    },
+    {
+     "t": "Trimere Transporter bilden eine Pore, die von zwei Toren (außen/innen) kontrolliert wird.",
+     "correct": false
+    },
+    {
+     "t": "Die Bindung eines Liganden erhöht die Affinität für den anderen (kooperative Bindung).",
+     "correct": false
+    },
+    {
+     "t": "Der Transportzyklus ist langsam.",
+     "correct": false
+    }
+   ],
+   "explanation": "Kooperative Bindung: Beide Ligandtypen (Ionen + NT) sind erforderlich. Sequenzielles Binden und Lösen schaltet zwischen den Konformationen (a) und (c) um – „SLOW!!“."
+  },
+  {
+   "id": "vl09-uptake-effizienz",
+   "type": "open",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folie 33",
+   "stem": "Ein Transportzyklus dauert 20–70 ms. Wie wird trotzdem eine hocheffiziente Aufnahme bzw. Beseitigung des Neurotransmitters erreicht? Was kompensiert den langsamen Zyklus?",
+   "points": [
+    "NT-Transporter werden sehr zahlreich und in hoher Dichte exprimiert",
+    "Sie binden den NT mit hoher Affinität",
+    "Die Zahl hochaffiner Bindestellen (Rezeptoren + Transporter) reicht, um alle NT-Moleküle eines Freisetzungsereignisses zu binden (innerhalb ~500 µs)",
+    "Bis die NT-Moleküle von den (desensitisierenden) Rezeptoren abdissoziieren, haben die Transporter ihren Zyklus beendet und sind wieder bereit"
+   ],
+   "explanation": "Übungsfrage („QUESTION“) der Vorlesung: Nicht die Geschwindigkeit, sondern Dichte und Affinität der Bindestellen sorgen für die schnelle Beseitigung."
+  },
+  {
+   "id": "vl09-eaat2-astrozyten",
+   "type": "multi",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folie 34",
+   "stem": "Welche Aussagen zu Astrozyten und ihrem Glutamattransporter EAAT2 treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "EAAT2-exprimierende Astrozyten umhüllen Synapsen und verhindern ein Spill-over zu Nachbarsynapsen.",
+     "correct": true
+    },
+    {
+     "t": "Sie übernehmen den Großteil (ca. 80 %) der Glutamat-Wiederaufnahme und des Recyclings.",
+     "correct": true
+    },
+    {
+     "t": "Das Recycling erfolgt über den Glutamat-Glutamin-Shuttle.",
+     "correct": true
+    },
+    {
+     "t": "Die Mobilität von EAAT2 in der Membran trägt zur Pufferkapazität bei und beeinflusst den Zeitverlauf der EPSPs.",
+     "correct": true
+    },
+    {
+     "t": "Die Lage der EAAT2 in der Astrozytenmembran ist statisch.",
+     "correct": false
+    },
+    {
+     "t": "EAAT2 ist vor allem in präsynaptischen Axonterminalen exprimiert.",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Lage von EAAT2 ist dynamisch: Nach Cross-Linking (eingeschränkte Mobilität) ändern sich Anstiegszeit und Abfall der EPSPs. EAAT2 ist glial."
+  },
+  {
+   "id": "vl09-eaat2-als",
+   "type": "single",
+   "topic": "Glutamat-Transporter",
+   "source": "slides",
+   "ref": "VL09 · Folie 44",
+   "stem": "Eine Mutation in welchem Transporter wird laut Vorlesung mit der amyotrophen Lateralsklerose (ALS) in Verbindung gebracht?",
+   "options": [
+    {
+     "t": "Glutamattransporter EAAT2",
+     "correct": true
+    },
+    {
+     "t": "Noradrenalintransporter NET",
+     "correct": false
+    },
+    {
+     "t": "Serotonintransporter SERT",
+     "correct": false
+    },
+    {
+     "t": "GABA-Transporter GAT1",
+     "correct": false
+    }
+   ],
+   "explanation": "EAAT2 → ALS (Motoneuron-Degeneration, passend zur Glutamat-Toxizität). NET-Mutation → orthostatische Hypotonie; SERT-Mutationen → u. a. Zwangsstörung, Autismus, Anorexie."
+  },
+  {
+   "id": "vl09-schlaganfall-nicht",
+   "type": "single",
+   "topic": "Exzitotoxizität & Schlaganfall",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL09 · Folien 36–38",
+   "stem": "Was passiert beim Schlaganfall <b>nicht</b>?",
+   "options": [
+    {
+     "t": "Die oxidative Phosphorylierung in den Mitochondrien fällt aus → keine ATP-Synthese mehr",
+     "correct": false
+    },
+    {
+     "t": "verminderter spannungsabhängiger Ca²⁺-Strom",
+     "correct": true
+    },
+    {
+     "t": "erhöhter spannungsabhängiger Na⁺-Strom",
+     "correct": false
+    },
+    {
+     "t": "vermehrte Glutamat-Ausschüttung",
+     "correct": false
+    }
+   ],
+   "explanation": "Ohne O₂/Glucose stoppt die ATP-Produktion; die Ionengradienten brechen zusammen und die Membran depolarisiert. Dadurch öffnen spannungsgesteuerte Kanäle – der Ca²⁺-Strom steigt (nicht: sinkt), mit zusätzlicher Glutamatfreisetzung und Ca²⁺-Überladung.",
+   "note": "WS23/24 Frage 24; Lösung im Protokoll „vergessen“ – aus Folie 38 abgeleitet. Ein erhöhter Na⁺-Strom steht so nicht auf den Folien, folgt aber aus der beschriebenen Depolarisation."
+  },
+  {
+   "id": "vl09-exzitotox-ws2526",
+   "type": "multi",
+   "topic": "Exzitotoxizität & Schlaganfall",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL09 · Folien 37–38; VL11 · Folien 24–27",
+   "stem": "Glutamat-Exzitotoxizität beim Schlaganfall – was kommt vor? (mehrere richtig)",
+   "options": [
+    {
+     "t": "mehr Ca²⁺-Einstrom in die Neurone",
+     "correct": true
+    },
+    {
+     "t": "Glutamat öffnet spannungsabhängige Ca²⁺-Kanäle",
+     "correct": false
+    },
+    {
+     "t": "Prostaglandine verstärken die glutamaterge Neurotransmission",
+     "correct": true
+    },
+    {
+     "t": "Die Glutamat-Wiederaufnahme durch EAATs kommt zum Erliegen",
+     "correct": true
+    },
+    {
+     "t": "Die Na⁺/K⁺-ATPase arbeitet verstärkt und hyperpolarisiert die Membran",
+     "correct": false
+    },
+    {
+     "t": "Ca²⁺-Überladung aktiviert Caspasen → neuronale Apoptose",
+     "correct": true
+    }
+   ],
+   "explanation": "Glutamat öffnet ligandengesteuerte NMDA-R (exzessiver Ca²⁺-Einstrom); die spannungsabhängigen Ca²⁺-Kanäle öffnen durch die Depolarisation, nicht durch die Glutamatbindung selbst (indirekt trägt Glutamat über die AMPA-/NMDA-Depolarisation bei). Die Na⁺/K⁺-ATPase fällt ohne ATP aus. Prostaglandine (PGE₂) wirken laut VL11 als Lipid-Botenstoffe der glutamatergen Transmission ; NMDA-R/Hypoxie induzieren COX-2, der PG-Anstieg kommt v. a. mit der Reperfusion (VL11 Folien 27–28).",
+   "note": "WS25/26; im Protokoll drei Optionen ohne Lösung – drei Optionen aus Folien 37–38 ergänzt. Die Prostaglandin-Option stammt aus VL11 (Lipid-Botenstoffe); dass sie als richtig gemeint war, ist nicht sicher."
+  },
+  {
+   "id": "vl09-exzitotox-order",
+   "type": "order",
+   "topic": "Exzitotoxizität & Schlaganfall",
+   "source": "slides",
+   "ref": "VL09 · Folien 36–38",
+   "stem": "Bringen Sie die Ereignisse nach einem ischämischen Schlaganfall in die richtige Reihenfolge.",
+   "items": [
+    "Durchblutung ↓ → Mangel an O₂ und Glucose",
+    "ATP-Produktion stoppt",
+    "Na⁺/K⁺-ATPase fällt aus → Ionengradienten brechen zusammen, Membran depolarisiert",
+    "Glutamattransporter stoppen; spannungsgesteuerte Ca²⁺-Kanäle öffnen → zusätzliche Glutamatfreisetzung",
+    "Glutamat aktiviert NMDA-Rezeptoren",
+    "Exzessiver Ca²⁺-Einstrom → Ca²⁺-Überladung",
+    "Mitochondrienschaden/Radikale bzw. Caspase-Aktivierung → Nekrose/Apoptose"
+   ],
+   "explanation": "Energiemangel → Gradientenzusammenbruch → Glutamat-Akkumulation → NMDA-vermittelte Ca²⁺-Überladung → Zelltod."
+  },
+  {
+   "id": "vl09-exzitotox-open",
+   "type": "open",
+   "topic": "Exzitotoxizität & Schlaganfall",
+   "source": "slides",
+   "ref": "VL09 · Folien 37–38",
+   "stem": "Erklären Sie in Stichworten, wie es nach einem Schlaganfall zu irreversiblen neuronalen Schäden durch Glutamat kommt.",
+   "points": [
+    "Ischämie: kein O₂/keine Glucose → nach 1–2 min keine ATP-Produktion",
+    "Na⁺/K⁺-ATPase (verbraucht ~65 % des ATP im Gehirn) fällt aus → Ionengradienten brechen zusammen",
+    "Zusammenbruch des Ruhepotentials → Depolarisation",
+    "Glutamattransporter (Na⁺-gradientenabhängig) stoppen → keine Wiederaufnahme",
+    "Spannungsgesteuerte Ca²⁺-Kanäle öffnen → Vesikelfusion → zusätzliche Glutamatfreisetzung",
+    "Glutamat öffnet NMDA-Rezeptoren → exzessiver Ca²⁺-Einstrom",
+    "Ca²⁺-Überladung schädigt Mitochondrien → freie Radikale → Nekrose",
+    "Ca²⁺-Überladung aktiviert Caspasen → DNA-Schäden → Apoptose"
+   ],
+   "explanation": "Übungsfrage der Vorlesung („How does this lead to the irreversible neuronal damage observed after stroke?“). Kern: Glutamat ist in hohen Konzentrationen exzitotoxisch, vermittelt über die Ca²⁺-Überladung durch NMDA-R."
+  },
+  {
+   "id": "vl09-stroke-timeline",
+   "type": "single",
+   "topic": "Exzitotoxizität & Schlaganfall",
+   "source": "slides",
+   "ref": "VL09 · Folie 36",
+   "stem": "Welcher Zeitverlauf nach einem Schlaganfall ist laut Vorlesung korrekt?",
+   "options": [
+    {
+     "t": "Nach 10–20 s erste Symptome; nach 1–2 min ist O₂ verbraucht und die ATP-Produktion stoppt; nach > 5 min sterben Neurone (irreversibel)",
+     "correct": true
+    },
+    {
+     "t": "Nach 1–2 min erste Symptome; nach 10–20 min stoppt die ATP-Produktion; nach > 1 h sterben Neurone",
+     "correct": false
+    },
+    {
+     "t": "Nach 10–20 s sterben die ersten Neurone; nach 5 min treten erste Symptome auf",
+     "correct": false
+    },
+    {
+     "t": "Die ATP-Produktion bleibt über Stunden erhalten; Neurone sterben erst nach > 24 h",
+     "correct": false
+    }
+   ],
+   "explanation": "Das Gehirn hat praktisch keine Reserven: O₂ ist nach 1–2 min verbraucht, nach > 5 min entsteht irreversibler Gewebeschaden (Glutamat-Toxizität)."
+  },
+  {
+   "id": "vl09-na-k-atpase",
+   "type": "single",
+   "topic": "Exzitotoxizität & Schlaganfall",
+   "source": "slides",
+   "ref": "VL09 · Folie 37",
+   "stem": "Warum versagt die Glutamat-Wiederaufnahme bei Ischämie so schnell?",
+   "options": [
+    {
+     "t": "Die Transporter brauchen den Na⁺/K⁺-Gradienten, den die Na⁺/K⁺-ATPase (≈ 65 % des ATP-Verbrauchs im Gehirn) ohne ATP nicht mehr aufrechterhält",
+     "correct": true
+    },
+    {
+     "t": "Die Glutamat-Transporter hydrolysieren selbst ATP und fallen deshalb bei ATP-Mangel unmittelbar und vollständig aus",
+     "correct": false
+    },
+    {
+     "t": "Glutamat wird bei Ischämie durch die Glutaminsynthetase bereits im synaptischen Spalt vollständig abgebaut",
+     "correct": false
+    },
+    {
+     "t": "Der H⁺-Gradient der synaptischen Vesikel bricht zusammen, deshalb können die EAATs kein Glutamat mehr aufnehmen",
+     "correct": false
+    }
+   ],
+   "explanation": "EAATs sind sekundär aktiv: Ihre „Antriebskraft“ ist der Na⁺/K⁺-Gradient. Ohne O₂ kein ATP, ohne ATP keine Pumpe → Gradienten brechen rasch zusammen → Glutamat wird nicht mehr aufgenommen."
+  }
+ ]
+}

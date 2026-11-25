@@ -1,66 +1,75 @@
-# Microbiology Quiz
+# Neuro-Quiz
 
-A static, no-build study app for the Microbiology exam. Practice **exam-accurate
-multiple-choice questions** (multi-select with partial credit) and track
-**per-chapter mastery** on a dashboard. Questions come from two sources:
+Statische Lern-App (kein Build-Schritt) für die Klausur **Grundlagen der Neurobiologie**.
+Pro Vorlesung ein Kapitel, Fragen aus den Folien und aus Gedankenprotokollen der
+Altklausuren (WS23/24, WS24/25, WS25/26). Lernstand mit Spaced Repetition, Münzen und
+Vogel-Garten als Belohnung.
 
-- **Real past-exam questions** (transcribed verbatim, with multi-correct answers).
-- **Auto-generated questions** built from structured organism data.
+## Fragetypen
 
-## Run locally
+| Typ | Wofür | Wertung |
+|---|---|---|
+| Single Choice | eine richtige Antwort, auch „trifft **nicht** zu“ | alles oder nichts |
+| Mehrfachauswahl | „mehrere richtig“, „(4 richtig)“ | Teilpunkte pro Option |
+| Aussagenkombination | Klausur-Klassiker „nur A und C stimmen“ | alles oder nichts |
+| Offene Frage | „Nennen Sie 3 …“, „Beschreiben Sie …“, „Zeichnen Sie …“ – Musterlösung aufdecken und Kernpunkte selbst abhaken | Anteil Kernpunkte |
+| Schaubild beschriften | Abbildung aus den Folien mit abgedeckten Beschriftungen; Wortbank oder Freitext (Tippfehler-tolerant, Deutsch/Englisch) | Anteil richtiger Felder |
+| Reihenfolge | Synthesewege, Signalkaskaden, Entwicklungsschritte | Anteil richtig benachbarter Paare |
 
-It loads JSON via `fetch`, so it must be served over HTTP (opening `index.html`
-directly with `file://` will not work). Any static server is fine:
+## Starten
+
+Die App lädt JSON per `fetch` und muss deshalb über HTTP laufen:
 
 ```bash
 cd microbio-quiz
-npx serve            # then open the printed http://localhost:... URL
-# or
-python3 -m http.server 8799   # then open http://localhost:8799
+python3 -m http.server 8799   # dann http://localhost:8799 öffnen
 ```
 
-## Deploy
-
-It's pure static files — push the `microbio-quiz/` folder to GitHub Pages,
-Netlify, Vercel, Cloudflare Pages, etc. No build step.
-
-## Project layout
+## Aufbau
 
 ```
-index.html            shell: chapter selector, mode tabs, mount points
-css/styles.css        styles
+index.html             Oberfläche: Filter (Vorlesung, Thema, Format, Auswahl, Runde, nur Altklausur)
 js/
-  data.js             chapter registry + fetch
-  engine.js           scoring (single = all-or-nothing; multi = ¼-per-option partial), SRS/mastery, session build
-  quizgen.js          auto-generates MCQs from entities (single + multi-select)
-  render.js           quiz card, feedback, dashboard, entity profile
-  app.js              bootstrap, router, controls, event handling
+  data.js              Kapitel-Registry + Laden
+  engine.js            Spaced Repetition (Leitner), Lernstand, Münzen, Rundenbau
+  qtypes.js            die sechs Fragetypen: Darstellung, Interaktion, Wertung, Auflösung
+  render.js            Fragekarte, Feedback, Lernstand-Dashboard
+  app.js               Steuerung, Tastatur, Ereignisse
+  garden-data.js       Garten-Katalog: Vögel, Steckbriefe, Eier, Farbvarianten, Deko
+  garden-store.js      Garten-Spielstand (Vögel mit Namen, Nest, Deko) in localStorage
+  garden.js            Garten-Szene (Canvas): Verhalten, Auswahl, Nest & Schlüpfen, Deko
+  garden-art.js        selbst gezeichnete Pixel-Grafik (Deko, Eier, Effekte) + Umfärben
+  garden-ui.js         Vogel-/Ei-Karte und Banner über dem Garten
+  shop.js              Shop: Vögel · Eier · Deko + Sammlung seltener Varianten
 data/
-  schema.md           the data model (read this before editing data)
-  bacteriology-general.json    concept questions (no entities)
-  bacteriology-specific.json   53 organisms + organism questions
-  (virology.json, mycology.json, parasitology.json — added in later phases)
+  schema.md            Datenformat – vor dem Bearbeiten lesen
+  vlXX-*.json          ein Kapitel pro Vorlesung
+  x-weitere-themen.json Klausurthemen ohne Folien in VL01–11 (Sehsystem, TMS, Kanalopathien …)
+assets/figures/        aus den Folien erzeugte Schaubilder (Beschriftungen abgedeckt)
+tools/
+  figtool.py           Folien sichten (sheet/grid/words) und Schaubilder bauen (build)
+  validate.py          prüft alle Kapitel gegen das Schema
 ```
 
-## Scoring
+## Garten
 
-Matches the real exam: each question has (usually) 4 options.
-- **Single-answer:** 1.00 if the correct option is chosen, else 0.
-- **Multi-select:** every option is graded; score = correctly-classified / total
-  → `{0, 0.25, 0.5, 0.75, 1.0}`. (Selecting a wrong option *and* missing a
-  correct one both cost ¼ each.)
+Münzen gibt es für (teilweise) richtige Antworten; im Garten-Tab werden sie ausgegeben.
 
-## Add a chapter
+- **Vögel** direkt im Shop kaufen. Vögel antippen → Steckbrief, Name vergeben.
+- **Eier** (einfach / selten / episch) kommen ins Nest (max. 3). Jede Antwort im Quiz wärmt alle Eier
+  um die erreichte Punktzahl; ist ein Ei warm genug, schlüpft es per Antippen im Garten.
+- **Seltene Farbvarianten** (Gold, Weiß, Mitternacht, Rosé, Mint) gibt es nur aus Eiern – nie im Shop.
+  Spätestens jedes 8. Ei bringt eine Variante. Gefundene Varianten sammelt der Shop unter „Eier“.
+- **Deko**: Gartenobjekte (manche besuchen die Vögel) und Effekte; im Shop ein-/ausblendbar.
 
-1. Create `data/<chapter>.json` following `data/schema.md`
-   (a `title`, `color`, an `entities` array for auto-generated questions, and a
-   `questions` array for authored/exam items).
-2. Add the filename to `CHAPTER_FILES` in `js/data.js`.
+Spielstand im Browser (`localStorage`): `microbioCoinsV1` (Münzen), `microbioBirdsV1` (Garten).
+Beide Schlüssel stammen noch aus der Mikrobio-Version und dürfen nicht umbenannt werden. Im
+Garten-Schlüssel bleibt `owned` ({Art: Anzahl}) erhalten und wird mitgeschrieben.
 
-That's it — the engine, chapter selector and dashboard pick it up automatically.
+## Inhalte pflegen
 
-## Progress
-
-Mastery/accuracy is stored in your browser's `localStorage` (key
-`microbioQuizV1`). Use **Dashboard → Reset all progress** to clear it. Progress
-is per-browser; it does not sync across devices.
+- Fragen in `data/<kapitel>.json` bearbeiten (Format: `data/schema.md`), danach
+  `python3 tools/validate.py`.
+- Schaubild-Fragen nach Änderungen an `src`/`labels` neu bauen:
+  `python3 tools/figtool.py build data/<kapitel>.json --pdf-dir <Ordner mit den Folien-PDFs>`.
+- Neue Vorlesung: JSON anlegen und in `js/data.js` (`CHAPTER_FILES`) eintragen.

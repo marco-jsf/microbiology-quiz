@@ -1,0 +1,1878 @@
+{
+ "id": "vl11",
+ "title": "VL11 · Neuromodulatoren",
+ "short": "Modulatoren",
+ "color": "#b0b84c",
+ "topics": [
+  "Neuropeptide: Synthese & Sekretion",
+  "Prozessierung & CRH",
+  "Stickstoffmonoxid (NO)",
+  "Oxidativer Stress & Arachidonsäure",
+  "Phospholipide & Eikosanoide",
+  "Ischämie, Exzitotoxizität & Entzündung"
+ ],
+ "questions": [
+  {
+   "id": "vl11-neuropeptide-falsch",
+   "type": "single",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL11 · Folien 3, 8, 11–13",
+   "stem": "Was ist <b>falsch</b> zu Neuropeptiden?",
+   "options": [
+    {
+     "t": "Ihre Produktion unterliegt transkriptioneller Regulation",
+     "correct": false
+    },
+    {
+     "t": "CRH wird am C-Terminus amidiert",
+     "correct": false
+    },
+    {
+     "t": "CRH aktiviert einen Ca²⁺-Kanal",
+     "correct": false
+    },
+    {
+     "t": "Sie sind synaptisch höher konzentriert als klassische Transmitter",
+     "correct": true
+    }
+   ],
+   "explanation": "Die synaptische Konzentration von Neuropeptiden ist viel niedriger als die klassischer Transmitter (≪, Folie 3) – ausgeglichen durch sehr hochaffine Rezeptoren. Die übrigen Aussagen stimmen: Neuropeptid-Produktion wird transkriptionell reguliert, CRH wird durch PAM C-terminal amidiert, und CRH aktiviert über CRHR1 → Gs → AC → cAMP → PKA Ca²⁺-Kanäle (Folie 13, indirekt – kein ionotroper Rezeptor).",
+   "note": "Im Protokoll WS24/25 fehlt die vierte Option („0“). Ergänzt nach der fast gleichen Frage WS25/26 („In höherer synaptischer Konz. als klassische NT“). Die Lösung ist damit abgeleitet, nicht protokolliert."
+  },
+  {
+   "id": "vl11-neuropeptide-aussagen",
+   "type": "multi",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL11 · Folien 3, 8, 11",
+   "stem": "Welche Aussagen zu Neuropeptiden treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "Sie werden aus großen Vorläuferproteinen gebildet",
+     "correct": true
+    },
+    {
+     "t": "Ihre Synthese unterliegt transkriptioneller Regulation",
+     "correct": true
+    },
+    {
+     "t": "CRH ist C-terminal amidiert",
+     "correct": true
+    },
+    {
+     "t": "Sie liegen in höherer synaptischer Konzentration vor als klassische Neurotransmitter",
+     "correct": false
+    }
+   ],
+   "explanation": "Die synaptische Konzentration von Neuropeptiden ist viel niedriger als die klassischer Transmitter (≪) – ausgeglichen durch Neuropeptid-Rezeptoren mit sehr hoher Affinität.",
+   "note": "Antwortformat im Protokoll nicht angegeben; als Mehrfachauswahl umgesetzt."
+  },
+  {
+   "id": "vl11-peptid-vs-klassisch",
+   "type": "combo",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "slides",
+   "ref": "VL11 · Folien 3–4",
+   "stem": "Welche Aussagen zu Unterschieden zwischen Neuropeptiden und klassischen Neurotransmittern treffen zu?",
+   "statements": [
+    {
+     "t": "Neuropeptide werden im Soma (raues ER, Golgi) synthetisiert und in Large Dense-Core Vesicles (LDCVs) zur Synapse transportiert.",
+     "correct": true
+    },
+    {
+     "t": "Für Neuropeptide gibt es keine Wiederaufnahme und kein Recycling.",
+     "correct": true
+    },
+    {
+     "t": "Neuropeptid-Rezeptoren haben eine deutlich höhere Affinität als die Rezeptoren klassischer Transmitter.",
+     "correct": true
+    },
+    {
+     "t": "Neuropeptide werden wie klassische Transmitter im Axonterminal synthetisiert und in kleine synaptische Vesikel nachgeladen.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BCD"
+   ],
+   "explanation": "Klassische Transmitter werden lokal im Terminal synthetisiert, in kleine synaptische Vesikel (SVs) gefüllt und recycelt. Neuropeptide stammen dagegen aus dem Soma; Nachschub gibt es nur per axonalem Transport."
+  },
+  {
+   "id": "vl11-neuropeptid-synthese-schema",
+   "type": "label",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "slides",
+   "ref": "VL11 · Folien 3, 7",
+   "stem": "Beschriften Sie das Schema zur Synthese und Sekretion von Neuropeptiden im Vergleich zu klassischen Transmittern.",
+   "src": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 3,
+    "crop": [
+     30,
+     86,
+     700,
+     505
+    ],
+    "hide": [
+     [
+      544,
+      262,
+      612,
+      299
+     ],
+     [
+      542,
+      330,
+      612,
+      366
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      79,
+      190,
+      139,
+      210
+     ],
+     "answer": "Zellkern (Nucleus)",
+     "accept": [
+      "Nucleus",
+      "Zellkern",
+      "Kern",
+      "Nukleus"
+     ],
+     "x": 6.94,
+     "y": 24.22,
+     "w": 9.7,
+     "h": 5.97
+    },
+    {
+     "box": [
+      101,
+      389,
+      173,
+      409
+     ],
+     "answer": "Ribosom",
+     "accept": [
+      "Ribosome",
+      "Ribosomen"
+     ],
+     "x": 10.22,
+     "y": 71.72,
+     "w": 11.49,
+     "h": 5.97
+    },
+    {
+     "box": [
+      90,
+      456,
+      181,
+      492
+     ],
+     "answer": "Endoplasmatisches Retikulum (raues ER)",
+     "accept": [
+      "ER",
+      "raues ER",
+      "rER",
+      "Endoplasmic reticulum",
+      "endoplasmatisches Retikulum"
+     ],
+     "x": 8.58,
+     "y": 87.71,
+     "w": 14.33,
+     "h": 9.79
+    },
+    {
+     "box": [
+      125,
+      272,
+      163,
+      293
+     ],
+     "answer": "Golgi-Apparat",
+     "accept": [
+      "Golgi",
+      "Golgi apparatus",
+      "Golgi-Apparat"
+     ],
+     "x": 13.81,
+     "y": 43.79,
+     "w": 6.42,
+     "h": 6.21
+    },
+    {
+     "box": [
+      201,
+      219,
+      285,
+      257
+     ],
+     "answer": "Trans-Golgi-Netzwerk",
+     "accept": [
+      "TGN",
+      "trans-Golgi network",
+      "Trans-Golgi"
+     ],
+     "x": 25.15,
+     "y": 31.15,
+     "w": 13.28,
+     "h": 10.26
+    },
+    {
+     "box": [
+      390,
+      222,
+      462,
+      259
+     ],
+     "answer": "Axonaler Transport",
+     "accept": [
+      "axonal transport",
+      "Axontransport"
+     ],
+     "x": 53.36,
+     "y": 31.86,
+     "w": 11.49,
+     "h": 10.02
+    },
+    {
+     "box": [
+      517,
+      128,
+      626,
+      164
+     ],
+     "answer": "Kleines synaptisches Vesikel (SV)",
+     "accept": [
+      "small synaptic vesicle",
+      "SV",
+      "SSV",
+      "synaptisches Vesikel",
+      "kleines synaptisches Vesikel"
+     ],
+     "x": 72.31,
+     "y": 9.43,
+     "w": 17.01,
+     "h": 9.79
+    },
+    {
+     "box": [
+      391,
+      394,
+      489,
+      432
+     ],
+     "answer": "Large Dense-Core Vesicle (LDCV)",
+     "accept": [
+      "LDCV",
+      "large dense-core vesicle",
+      "dense core vesicle",
+      "Vesikel mit dichtem Kern"
+     ],
+     "x": 53.51,
+     "y": 72.91,
+     "w": 15.37,
+     "h": 10.26
+    },
+    {
+     "box": [
+      508,
+      481,
+      600,
+      502
+     ],
+     "answer": "Sekretion",
+     "accept": [
+      "Secretion",
+      "Exozytose",
+      "Freisetzung"
+     ],
+     "x": 70.97,
+     "y": 93.68,
+     "w": 14.48,
+     "h": 6.21
+    }
+   ],
+   "bank": [
+    "Endosom",
+    "Lysosom"
+   ],
+   "explanation": "Neuropeptide: Initialsynthese am rauen ER, initiale Prozessierung im (Trans-)Golgi, Verpackung in LDCVs, weitere Prozessierung während des axonalen Transports, Sekretion. Die LDCV-Freisetzung braucht laut Folie eine andere (geringere) Ca²⁺-Konzentration als die von SVs.",
+   "image": "assets/figures/vl11-neuropeptid-synthese-schema.webp",
+   "iw": 1340,
+   "ih": 838
+  },
+  {
+   "id": "vl11-neuropeptid-weg",
+   "type": "order",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "slides",
+   "ref": "VL11 · Folien 3–8",
+   "stem": "Bringen Sie den Weg eines Neuropeptids von der Synthese bis zur Freisetzung in die richtige Reihenfolge.",
+   "items": [
+    "Translation des Vorläuferproteins an Ribosomen des rauen ER",
+    "Kotranslationaler Import ins ER-Lumen und Abspaltung des Signalpeptids",
+    "Initiale Prozessierung im (Trans-)Golgi-Netzwerk",
+    "Verpackung in Large Dense-Core Vesicles (LDCVs)",
+    "Axonaler Transport mit weiterer Prozessierung",
+    "Ca²⁺-abhängige Sekretion"
+   ],
+   "explanation": "Neuropeptide werden – anders als klassische Transmitter – nicht lokal im Terminal synthetisiert und nicht recycelt; Nachschub kommt nur per axonalem Transport aus dem Soma."
+  },
+  {
+   "id": "vl11-signalpeptid",
+   "type": "single",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "slides",
+   "ref": "VL11 · Folien 5–6, 9",
+   "stem": "Was geschieht mit der N-terminalen Signalsequenz eines sekretorischen Proteins wie eines Neuropeptid-Vorläufers?",
+   "options": [
+    {
+     "t": "Sie wird vom SRP erkannt, lenkt das Ribosom an das raue ER und wird dort von der Signalpeptidase abgespalten",
+     "correct": true
+    },
+    {
+     "t": "Sie bleibt als Membrananker erhalten und verankert das Peptid in der Vesikelmembran",
+     "correct": false
+    },
+    {
+     "t": "Sie wird erst im LDCV durch Prohormonkonvertasen nach dibasischen Resten abgeschnitten",
+     "correct": false
+    },
+    {
+     "t": "Sie wird durch PAM in eine C-terminale Amidgruppe umgewandelt",
+     "correct": false
+    }
+   ],
+   "explanation": "Das Signal Recognition Particle (SRP) bindet die Signalsequenz, pausiert die Translation und bringt das Ribosom zum SRP-Rezeptor/Translocon am rauen ER; die Signalpeptidase spaltet die Signalsequenz im ER ab (Prepro- → Pro-Peptid)."
+  },
+  {
+   "id": "vl11-peptide-unterschiede-offen",
+   "type": "open",
+   "topic": "Neuropeptide: Synthese & Sekretion",
+   "source": "slides",
+   "ref": "VL11 · Folien 3–9",
+   "stem": "Nennen Sie 3 Unterschiede zwischen Neuropeptiden und klassischen Neurotransmittern.",
+   "points": [
+    "Synthese im Soma (raues ER/Golgi) statt lokal im Axonterminal",
+    "Entstehen aus großen Vorläuferproteinen, die prozessiert werden (Prohormonkonvertasen, CPE, PAM)",
+    "Produktion über Genexpression (transkriptionell) reguliert",
+    "Speicherung in Large Dense-Core Vesicles statt kleinen synaptischen Vesikeln",
+    "Keine Wiederaufnahme/kein Recycling – Nachschub nur per axonalem Transport",
+    "Viel niedrigere synaptische Konzentration, dafür hochaffine Rezeptoren",
+    "Andere Ca²⁺-Anforderung der Freisetzung (LDCVs vs. SVs)",
+    "Freisetzung nicht nur an der aktiven Zone, sondern auch extrasynaptisch (Soma, Dendriten, entlang des Axons) → Volumentransmission",
+    "Freisetzung erst bei hochfrequenter/Burst-Aktivität (LDCVs nicht an der aktiven Zone angedockt)",
+    "Wirkung über GPCRs (metabotrop, langsam/modulierend) statt auch ionotrop"
+   ],
+   "need": 3,
+   "explanation": "Merksatz der Folie: Anders als bei klassischen Transmittern können Neurone die Neuropeptid-Produktion per Genregulation „wählen“; synaptische Konzentration ≪ klassische NT → Rezeptoren mit viel höherer Affinität."
+  },
+  {
+   "id": "vl11-npy-prozessierung",
+   "type": "order",
+   "topic": "Prozessierung & CRH",
+   "source": "slides",
+   "ref": "VL11 · Folie 9",
+   "stem": "Ordnen Sie die Enzyme der Prozessierung von Prepro-NPY in der Reihenfolge ihrer Wirkung.",
+   "items": [
+    "Signalpeptidase (ER)",
+    "Prohormonkonvertase PC2",
+    "Carboxypeptidase E (CPE)",
+    "PAM (Peptidylglycin-α-amidierende Monooxygenase)"
+   ],
+   "explanation": "Prepro-NPY →(Signalpeptidase) Pro-NPY →(PC2, Spaltung nach Lys-Arg) NPY-Gly-Lys-Arg + CPON →(CPE entfernt die basischen Reste) NPY-Gly →(PAM) NPY-NH₂."
+  },
+  {
+   "id": "vl11-prohormonkonvertasen",
+   "type": "single",
+   "topic": "Prozessierung & CRH",
+   "source": "slides",
+   "ref": "VL11 · Folie 9",
+   "stem": "Wo spalten Prohormonkonvertasen (PCs, z. B. PC1, PC2) ihre Substrate?",
+   "options": [
+    {
+     "t": "Nach dibasischen Sequenzen (z. B. Lys-Arg)",
+     "correct": true
+    },
+    {
+     "t": "Nach C-terminalen Glycinresten",
+     "correct": false
+    },
+    {
+     "t": "Vor der hydrophoben Signalsequenz am N-Terminus",
+     "correct": false
+    },
+    {
+     "t": "An Cysteinresten von Disulfidbrücken",
+     "correct": false
+    }
+   ],
+   "explanation": "PCs (Ca²⁺-abhängige LDCV-Enzyme mit katalytischer Triade D-H-S) schneiden nach Paaren basischer Aminosäuren; die Zn²⁺-abhängige Carboxypeptidase E entfernt anschließend die verbliebenen C-terminalen basischen Reste."
+  },
+  {
+   "id": "vl11-pam-amidierung",
+   "type": "multi",
+   "topic": "Prozessierung & CRH",
+   "source": "slides",
+   "ref": "VL11 · Folien 9, 11",
+   "stem": "Welche Aussagen zur C-terminalen Amidierung durch PAM treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "PAM ist bifunktionell: PHM (Peptidylglycin-α-hydroxylierende Monooxygenase) und PAL (Peptidylamidoglycolat-Lyase)",
+     "correct": true
+    },
+    {
+     "t": "Das C-terminale Glycin liefert die Amidgruppe; dabei wird Glyoxylat frei",
+     "correct": true
+    },
+    {
+     "t": "Die PHM ist kupferabhängig und braucht Ascorbat als Cofaktor – analog zur Dopamin-β-Hydroxylase",
+     "correct": true
+    },
+    {
+     "t": "PAM spaltet Vorläuferproteine nach dibasischen Sequenzen",
+     "correct": false
+    },
+    {
+     "t": "Die Amidierung findet erst nach der Exozytose im Extrazellulärraum statt",
+     "correct": false
+    }
+   ],
+   "explanation": "Wie die meisten aktiven Peptidhormone wird CRH durch PAM C-terminal amidiert. Das Ascorbat wird über Cytochrom b561 recycelt. Die Spaltung nach dibasischen Resten ist Aufgabe der Prohormonkonvertasen."
+  },
+  {
+   "id": "vl11-crh-signal",
+   "type": "multi",
+   "topic": "Prozessierung & CRH",
+   "source": "slides",
+   "ref": "VL11 · Folien 11–13",
+   "stem": "Welche Aussagen zu CRH (Corticotropin-Releasing-Hormon) und seiner Signalgebung treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "CRH wirkt über G-Protein-gekoppelte Rezeptoren (CRHR1) und erhöht cAMP",
+     "correct": true
+    },
+    {
+     "t": "CRH stimuliert die Transkription von POMC (ACTH-Vorläufer)",
+     "correct": true
+    },
+    {
+     "t": "CRH fördert die ACTH-Freisetzung (Sekretagogum, Membrandepolarisation)",
+     "correct": true
+    },
+    {
+     "t": "CRH ist ein ionotroper Ligand, der direkt einen Ca²⁺-Kanal öffnet",
+     "correct": false
+    },
+    {
+     "t": "CRH wird als freie Säure mit C-terminalem Glycin sezerniert",
+     "correct": false
+    }
+   ],
+   "explanation": "CRHR1 → Gs → AC → cAMP → PKA → u. a. CREB-Phosphorylierung, c-Fos/Nur77 → POMC-Transkription. PKA öffnet außerdem Ca²⁺-Kanäle (Folie 13) – Ca²⁺ wird also nachgeschaltet aktiviert, nicht direkt durch CRH. CRH ist C-terminal amidiert (PAM)."
+  },
+  {
+   "id": "vl11-no-falsch",
+   "type": "single",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL11 · Folien 14–16, 18, 20",
+   "stem": "Was ist <b>falsch</b> zu NO (Stickstoffmonoxid)?",
+   "options": [
+    {
+     "t": "Diffusion über biologische Membranen",
+     "correct": false
+    },
+    {
+     "t": "Aktivierung der Guanylatzyklase",
+     "correct": false
+    },
+    {
+     "t": "Quelle für ROS",
+     "correct": false
+    },
+    {
+     "t": "Benötigt α-Ketoglutarat und Ammoniak zur Synthese",
+     "correct": true
+    }
+   ],
+   "explanation": "NO entsteht durch die NO-Synthase aus L-Arginin + O₂ (NADPH, Häm, BH₄, Flavine) unter Bildung von L-Citrullin. α-Ketoglutarat + NH₃ gehören zur Glutamat-Synthese. NOS gilt neben Mitochondrien und Arachidonsäure-Oxidation als Hauptquelle oxidativen Stresses (NO•, O₂•⁻, Peroxynitrit)."
+  },
+  {
+   "id": "vl11-sgc-aktivator",
+   "type": "single",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL11 · Folien 14, 18–19",
+   "stem": "Welches kurzlebige Molekül aktiviert die lösliche Guanylatzyklase (sGC) und führt zur Steigerung von cGMP?",
+   "options": [
+    {
+     "t": "H₂O₂",
+     "correct": false
+    },
+    {
+     "t": "NO",
+     "correct": true
+    },
+    {
+     "t": "H₂O",
+     "correct": false
+    },
+    {
+     "t": "Prostaglandin",
+     "correct": false
+    },
+    {
+     "t": "O₂•⁻",
+     "correct": false
+    }
+   ],
+   "explanation": "NO bindet an das Häm-Eisen der sGC (α/β-Heterodimer) und steigert die Umsetzung von GTP zu cGMP. Lösung B laut WS23/24-Klausureinsicht, durch die Folien bestätigt."
+  },
+  {
+   "id": "vl11-nos-reaktion-schema",
+   "type": "label",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folien 15–16, 20",
+   "stem": "Beschriften Sie die Reaktion der NO-Synthase (Substrat, Produkte, Enzym, Cosubstrate/Cofaktoren).",
+   "src": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 15,
+    "crop": [
+     30,
+     130,
+     690,
+     400
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      57,
+      369,
+      155,
+      395
+     ],
+     "answer": "L-Arginin",
+     "accept": [
+      "Arginin",
+      "L-arginine",
+      "Arginine",
+      "Arg"
+     ],
+     "x": 3.71,
+     "y": 87.59,
+     "w": 15.61,
+     "h": 11.48
+    },
+    {
+     "box": [
+      470,
+      369,
+      579,
+      395
+     ],
+     "answer": "L-Citrullin",
+     "accept": [
+      "Citrullin",
+      "L-citrulline",
+      "Citrulline"
+     ],
+     "x": 66.29,
+     "y": 87.59,
+     "w": 17.27,
+     "h": 11.48
+    },
+    {
+     "box": [
+      636,
+      272,
+      676,
+      296
+     ],
+     "answer": "NO (Stickstoffmonoxid)",
+     "accept": [
+      "NO",
+      "Stickstoffmonoxid",
+      "nitric oxide",
+      "Stickoxid"
+     ],
+     "x": 91.44,
+     "y": 51.67,
+     "w": 6.82,
+     "h": 10.74
+    },
+    {
+     "box": [
+      281,
+      288,
+      342,
+      316
+     ],
+     "answer": "NO-Synthase (NOS)",
+     "accept": [
+      "NOS",
+      "NO-Synthase",
+      "nitric oxide synthase",
+      "Stickstoffmonoxid-Synthase"
+     ],
+     "x": 37.65,
+     "y": 57.59,
+     "w": 10.0,
+     "h": 12.22
+    },
+    {
+     "box": [
+      250,
+      241,
+      332,
+      265
+     ],
+     "answer": "NADPH",
+     "accept": [
+      "NADPH + H+",
+      "NADPH/H+"
+     ],
+     "x": 32.95,
+     "y": 40.19,
+     "w": 13.18,
+     "h": 10.74
+    },
+    {
+     "box": [
+      337,
+      228,
+      388,
+      276
+     ],
+     "answer": "O₂",
+     "accept": [
+      "O2",
+      "Sauerstoff",
+      "oxygen"
+     ],
+     "x": 46.14,
+     "y": 35.37,
+     "w": 8.48,
+     "h": 19.63
+    },
+    {
+     "box": [
+      225,
+      182,
+      405,
+      205
+     ],
+     "answer": "Häm, BH₄, Flavine",
+     "accept": [
+      "Häm",
+      "BH4",
+      "Tetrahydrobiopterin",
+      "Flavin",
+      "FAD/FMN",
+      "Haem, BH4, Flavin",
+      "Häm/BH4/Flavin"
+     ],
+     "x": 29.17,
+     "y": 18.33,
+     "w": 28.03,
+     "h": 10.37
+    }
+   ],
+   "bank": [
+    "L-Ornithin",
+    "Harnstoff",
+    "Pyridoxalphosphat"
+   ],
+   "explanation": "L-Arginin + O₂ + NADPH →(NOS; Häm, Tetrahydrobiopterin, FAD/FMN; Ca²⁺/Calmodulin) L-Citrullin + NO. Im Gehirn katalysiert die NOS den Schritt Arginin → Citrullin, der in der Leber über Ornithin im Harnstoffzyklus abläuft.",
+   "image": "assets/figures/vl11-nos-reaktion-schema.webp",
+   "iw": 1320,
+   "ih": 540
+  },
+  {
+   "id": "vl11-nos-reaktion",
+   "type": "single",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folien 15–16",
+   "stem": "Welche Reaktion katalysiert die NO-Synthase?",
+   "options": [
+    {
+     "t": "L-Arginin + O₂ + NADPH → L-Citrullin + NO",
+     "correct": true
+    },
+    {
+     "t": "L-Arginin + H₂O → L-Ornithin + Harnstoff",
+     "correct": false
+    },
+    {
+     "t": "L-Citrullin + Aspartat → Argininosuccinat + NO",
+     "correct": false
+    },
+    {
+     "t": "L-Glutamin + H₂O → L-Glutamat + NH₃",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Spaltung von Arginin zu Ornithin + Harnstoff ist die Arginase-Reaktion des Harnstoffzyklus (Leber); die Glutaminase-Reaktion liefert Glutamat. Die NOS bildet aus Arginin direkt Citrullin und NO."
+  },
+  {
+   "id": "vl11-nos-isoformen",
+   "type": "multi",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folien 17–18",
+   "stem": "Welche Aussagen zu den drei Isoformen der NO-Synthase treffen zu? (3 richtig)",
+   "options": [
+    {
+     "t": "Typ I – nNOS: in Neuronen, Ca²⁺/Calmodulin-abhängig, z. B. nach Aktivierung von NMDA-Rezeptoren",
+     "correct": true
+    },
+    {
+     "t": "Typ II – iNOS: in Makrophagen, Mikroglia und Astrozyten; durch Zytokine induziert",
+     "correct": true
+    },
+    {
+     "t": "Typ III – eNOS: im Gefäßendothel; NO relaxiert über Guanylylcyclase/cGMP die glatte Gefäßmuskulatur",
+     "correct": true
+    },
+    {
+     "t": "iNOS ist konstitutiv in präsynaptischen Neuronen exprimiert und wird durch Ca²⁺ an- und abgeschaltet",
+     "correct": false
+    },
+    {
+     "t": "eNOS kommt vor allem in Mikroglia vor und hemmt dort die Zellteilung",
+     "correct": false
+    }
+   ],
+   "explanation": "nNOS und eNOS werden über Ca²⁺/Calmodulin aktiviert; die iNOS wird transkriptionell durch stimulatorische Zytokine induziert und produziert große NO-Mengen (Hemmung von Glykolyse, Citratzyklus, Atmungskette; Peroxynitrit)."
+  },
+  {
+   "id": "vl11-sgc-haem",
+   "type": "single",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folie 18",
+   "stem": "Wo bindet NO an der löslichen Guanylylcyclase?",
+   "options": [
+    {
+     "t": "An das Häm-Eisen (koordiniert über His105 der β-Untereinheit)",
+     "correct": true
+    },
+    {
+     "t": "An die katalytische GTP-Bindungsstelle der α-Untereinheit",
+     "correct": false
+    },
+    {
+     "t": "An die extrazelluläre Domäne einer membranständigen Guanylylcyclase",
+     "correct": false
+    },
+    {
+     "t": "An Calmodulin, das die Cyclase anschließend aktiviert",
+     "correct": false
+    }
+   ],
+   "explanation": "Die sGC ist ein zytosolisches α/β-Heterodimer mit NO/Häm-Bindungs-, Dimerisierungs- und katalytischer Domäne. NO-Bindung am Häm aktiviert die Umsetzung von GTP zu cGMP (+ PPᵢ). Calmodulin aktiviert dagegen die NOS."
+  },
+  {
+   "id": "vl11-no-retrograd-schema",
+   "type": "label",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folie 19",
+   "stem": "Beschriften Sie das Schema der retrograden NO-Signalgebung an der glutamatergen Synapse.",
+   "src": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 19,
+    "crop": [
+     110,
+     90,
+     610,
+     520
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      187,
+      361,
+      265,
+      382
+     ],
+     "answer": "NMDA-Rezeptor (NMDAR)",
+     "accept": [
+      "NMDAR",
+      "NMDA-R",
+      "NMDA-Rezeptor",
+      "NMDA receptor",
+      "NMDA"
+     ],
+     "x": 14.9,
+     "y": 62.44,
+     "w": 16.6,
+     "h": 6.05
+    },
+    {
+     "box": [
+      266,
+      396,
+      314,
+      421
+     ],
+     "answer": "Ca²⁺",
+     "accept": [
+      "Ca2+",
+      "Calcium",
+      "Kalzium",
+      "Ca"
+     ],
+     "x": 30.7,
+     "y": 70.58,
+     "w": 10.6,
+     "h": 6.98
+    },
+    {
+     "box": [
+      320,
+      438,
+      367,
+      462
+     ],
+     "answer": "Calmodulin (CaM)",
+     "accept": [
+      "CaM",
+      "Calmodulin",
+      "Ca2+/Calmodulin"
+     ],
+     "x": 41.5,
+     "y": 80.35,
+     "w": 10.4,
+     "h": 6.74
+    },
+    {
+     "box": [
+      417,
+      394,
+      463,
+      417
+     ],
+     "answer": "NO-Synthase (NOS)",
+     "accept": [
+      "NOS",
+      "nNOS",
+      "NO-Synthase"
+     ],
+     "x": 60.9,
+     "y": 70.12,
+     "w": 10.2,
+     "h": 6.51
+    },
+    {
+     "box": [
+      500,
+      335,
+      529,
+      351
+     ],
+     "answer": "NO",
+     "accept": [
+      "Stickstoffmonoxid",
+      "nitric oxide",
+      "Stickoxid"
+     ],
+     "x": 77.5,
+     "y": 56.4,
+     "w": 6.8,
+     "h": 4.88
+    },
+    {
+     "box": [
+      473,
+      293,
+      517,
+      315
+     ],
+     "answer": "Lösliche Guanylylcyclase (sGC)",
+     "accept": [
+      "sGC",
+      "Guanylylcyclase",
+      "Guanylatzyklase",
+      "lösliche Guanylatzyklase",
+      "soluble guanylyl cyclase",
+      "GC"
+     ],
+     "x": 72.1,
+     "y": 46.63,
+     "w": 9.8,
+     "h": 6.28
+    },
+    {
+     "box": [
+      499,
+      255,
+      547,
+      272
+     ],
+     "answer": "cGMP",
+     "accept": [
+      "zyklisches GMP",
+      "cyclic GMP"
+     ],
+     "x": 77.3,
+     "y": 37.79,
+     "w": 10.6,
+     "h": 5.12
+    },
+    {
+     "box": [
+      403,
+      232,
+      462,
+      258
+     ],
+     "answer": "Proteinkinase G (PKG)",
+     "accept": [
+      "PKG",
+      "Proteinkinase G",
+      "protein kinase G",
+      "cGMP-abhängige Proteinkinase"
+     ],
+     "x": 58.1,
+     "y": 32.44,
+     "w": 12.8,
+     "h": 7.21
+    }
+   ],
+   "bank": [
+    "cAMP",
+    "PKA",
+    "Adenylylcyclase"
+   ],
+   "explanation": "Postsynaptisch: NMDAR → Ca²⁺ → Calmodulin → NOS → NO. NO diffundiert retrograd in die Präsynapse → sGC → cGMP → PKG → beschleunigter Vesikelzyklus.",
+   "image": "assets/figures/vl11-no-retrograd-schema.webp",
+   "iw": 1000,
+   "ih": 860
+  },
+  {
+   "id": "vl11-no-retrograd-offen",
+   "type": "open",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folien 14–19",
+   "stem": "Beschreiben Sie in Stichworten, wie NO als retrograder Botenstoff an der glutamatergen Synapse wirkt – von der postsynaptischen Aktivierung bis zum präsynaptischen Effekt.",
+   "points": [
+    "Glutamat aktiviert postsynaptische NMDA-Rezeptoren → Ca²⁺-Einstrom",
+    "Ca²⁺/Calmodulin aktiviert die (neuronale) NO-Synthase",
+    "NOS bildet NO aus L-Arginin (+ O₂, NADPH) → L-Citrullin",
+    "NO diffundiert frei durch Membranen in die Präsynapse (keine Vesikel, kein Membranrezeptor)",
+    "NO aktiviert die lösliche Guanylylcyclase (Häm) → cGMP ↑",
+    "cGMP aktiviert PKG → beschleunigter präsynaptischer Vesikelzyklus"
+   ],
+   "explanation": "NO ist ein kurzlebiges, membrangängiges Gas – es wird bei Bedarf synthetisiert statt gespeichert und wirkt über die sGC als intrazellulären „Rezeptor“."
+  },
+  {
+   "id": "vl11-no-glatte-muskulatur",
+   "type": "single",
+   "topic": "Stickstoffmonoxid (NO)",
+   "source": "slides",
+   "ref": "VL11 · Folie 14",
+   "stem": "Wie führt NO aus Endothelzellen bzw. nitrergen Nervenendigungen zur Relaxation glatter Muskulatur (z. B. bei der Erektion)?",
+   "options": [
+    {
+     "t": "NO diffundiert in die Muskelzelle, bindet an die Guanylylcyclase → cGMP ↑ → Relaxation",
+     "correct": true
+    },
+    {
+     "t": "NO bindet an einen G-Protein-gekoppelten NO-Rezeptor der Muskelzelle → cAMP ↑ → Relaxation",
+     "correct": false
+    },
+    {
+     "t": "NO wird in Vesikeln gespeichert und wirkt nach Exozytose über nikotinische Rezeptoren",
+     "correct": false
+    },
+    {
+     "t": "NO hemmt die Guanylylcyclase → cGMP ↓ → Relaxation",
+     "correct": false
+    }
+   ],
+   "explanation": "Acetylcholin aktiviert die NO-Synthase im Endothel; NO diffundiert rasch durch Membranen, bindet an die Guanylylcyclase der glatten Muskelzelle und erhöht cGMP → rasche Relaxation. Periphere NO-Effekte: glatte Muskulatur im Gastrointestinal- und Urogenitaltrakt."
+  },
+  {
+   "id": "vl11-oxidativer-stress-quellen",
+   "type": "open",
+   "topic": "Oxidativer Stress & Arachidonsäure",
+   "source": "slides",
+   "ref": "VL11 · Folie 20",
+   "stem": "Nennen Sie 3 Hauptquellen von oxidativem Stress im Gehirn.",
+   "points": [
+    "Mitochondriale Elektronentransportkette (O₂•⁻ → H₂O₂)",
+    "NO-Synthase (NO•, O₂•⁻; zusammen → Peroxynitrit)",
+    "Oxidation der Arachidonsäure (Cyclooxygenase, Lipoxygenase, Epoxygenase → O₂•⁻, LOO•, L•)"
+   ],
+   "need": 3,
+   "explanation": "Folientitel: „NO and ARA production plus mitochondria are the major sources of oxidative stress“. Weitere ROS-Quellen laut Folie (keine Hauptquellen): Xanthinoxidase, NADPH-Oxidase, Monoaminoxidase, P450-Enzyme und „Glucoseoxidase“ – letztere steht so auf der Folie, ist aber ein Pilzenzym und kommt im Säugerhirn nicht vor."
+  },
+  {
+   "id": "vl11-arachidonsaeure-struktur",
+   "type": "open",
+   "topic": "Oxidativer Stress & Arachidonsäure",
+   "source": "slides",
+   "ref": "VL11 · Folien 21, 23",
+   "stem": "Wie heißt die dargestellte Fettsäure? Nennen Sie Kettenlänge, Fettsäure-Familie, Herkunft beim Menschen und wofür sie Vorläufer ist.",
+   "stemSrc": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 21,
+    "crop": [
+     40,
+     100,
+     660,
+     205
+    ],
+    "hide": [
+     [
+      236,
+      105,
+      481,
+      124
+     ]
+    ]
+   },
+   "points": [
+    "Arachidonsäure (ARA; all-cis-5,8,11,14-Eikosatetraensäure)",
+    "20 C-Atome, 4 cis-Doppelbindungen (mehrfach ungesättigt, PUFA)",
+    "ω-6-Fettsäure",
+    "Beim Menschen aus der essentiellen ω-6-Fettsäure Linolsäure synthetisierbar",
+    "Vorläufer der Eikosanoide (Prostaglandine, Prostacyclin, Thromboxane, Leukotriene)"
+   ],
+   "explanation": "Säuger können keine Doppelbindungen jenseits von C9/C10 einführen – deshalb ist Linolsäure essentiell. Aus Membranphospholipiden freigesetzt wird Arachidonsäure durch die Phospholipase A2.",
+   "stemImage": "assets/figures/vl11-arachidonsaeure-struktur-stem.webp"
+  },
+  {
+   "id": "vl11-prostaglandin-ws2324",
+   "type": "combo",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL11 · Folien 21, 23–24",
+   "stem": "Prostaglandin – welche Aussagen treffen zu?",
+   "statements": [
+    {
+     "t": "Hat 20 C-Atome.",
+     "correct": true
+    },
+    {
+     "t": "Kommt von Cholesterol.",
+     "correct": false
+    },
+    {
+     "t": "Entsteht aus einer ungesättigten Fettsäure und enthält einen Cyclopentanring (5 C-Atome).",
+     "correct": true
+    },
+    {
+     "t": "Kann durch eine spezifische Transaminasereaktion + PALP in Glutamat umgewandelt werden.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AC",
+    "A",
+    "ABC",
+    "ACD",
+    "C"
+   ],
+   "explanation": "Prostaglandine sind Eikosanoide (είκοσι = 20) aus Arachidonsäure (C20:4) mit Cyclopentanring (siehe PGE₂-/PGA₂-Struktur). Aus Cholesterol entstehen Steroide; Transaminierung mit Pyridoxalphosphat (PALP) betrifft Amino- und Ketosäuren (Glutamat-Synthese).",
+   "note": "Lösung im Protokoll nicht erinnert; Kombinationsformat angenommen. Aussage C aus dem Protokoll sinngemäß übernommen („Aus ungesättigter Fettsäure mit Cyclopentanring“)."
+  },
+  {
+   "id": "vl11-pge2-ltp",
+   "type": "combo",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL11 · Folien 5, 20, 23–24",
+   "stem": "Langzeitpotenzierung mit Prostaglandinen (PGE₂) – welche Aussagen treffen zu?",
+   "statements": [
+    {
+     "t": "PGE₂ basiert auf 20 C-Atomen.",
+     "correct": true
+    },
+    {
+     "t": "PGE₂ wird im rauen ER hergestellt.",
+     "correct": false
+    },
+    {
+     "t": "Die Biosynthese beginnt mit der Phospholipase A2.",
+     "correct": true
+    },
+    {
+     "t": "PGE₂ wird in synaptischen Vesikeln gespeichert und per Exozytose freigesetzt.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AC",
+    "ABC",
+    "A",
+    "ACD",
+    "BC"
+   ],
+   "explanation": "PGE₂ ist ein Lipid-Botenstoff: Die Ca²⁺-aktivierte cPLA2 setzt Arachidonsäure (20:4) aus Membranphospholipiden frei, die COX bildet PGG₂/PGH₂ → PGE₂. Es wird bei Bedarf enzymatisch gebildet – nicht wie Neuropeptide am rauen ER translatiert und nicht vesikulär gespeichert.",
+   "note": "Option D ergänzt. B als falsch gewertet, weil PGE₂ kein Peptid ist (raues ER = Proteinsynthese); die COX-Enzyme selbst sind allerdings an ER-/Kernhüllen-Membranen lokalisiert – im Zweifel beim Dozenten nachfragen."
+  },
+  {
+   "id": "vl11-pla2-start",
+   "type": "single",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "slides",
+   "ref": "VL11 · Folien 22–23",
+   "stem": "Welches Enzym setzt Arachidonsäure aus Membranphospholipiden frei und leitet damit die Eikosanoid-Synthese ein?",
+   "options": [
+    {
+     "t": "Die (Ca²⁺-abhängige) Phospholipase A2",
+     "correct": true
+    },
+    {
+     "t": "Die Phospholipase C",
+     "correct": false
+    },
+    {
+     "t": "Die Phospholipase D",
+     "correct": false
+    },
+    {
+     "t": "Die Sphingomyelinase",
+     "correct": false
+    }
+   ],
+   "explanation": "PLA2 spaltet die Esterbindung an der sn-2-Position → Arachidonsäure + Lysophospholipid. PLC liefert Diacylglycerol + IP₃, Sphingomyelinase Ceramid."
+  },
+  {
+   "id": "vl11-phospholipasen-schema",
+   "type": "label",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "slides",
+   "ref": "VL11 · Folie 22",
+   "stem": "Welche Phospholipase spaltet jeweils an der markierten Bindung des Phospholipids (Phosphatidylcholin)?",
+   "src": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 22,
+    "crop": [
+     5,
+     80,
+     372,
+     530
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      13,
+      443,
+      39,
+      469
+     ],
+     "answer": "Phospholipase A1",
+     "accept": [
+      "A1",
+      "PLA1",
+      "Phospholipase A1"
+     ],
+     "x": 1.5,
+     "y": 80.11,
+     "w": 8.45,
+     "h": 6.89
+    },
+    {
+     "box": [
+      313,
+      443,
+      341,
+      469
+     ],
+     "answer": "Phospholipase A2",
+     "accept": [
+      "A2",
+      "PLA2",
+      "Phospholipase A2"
+     ],
+     "x": 83.24,
+     "y": 80.11,
+     "w": 8.99,
+     "h": 6.89
+    },
+    {
+     "box": [
+      345,
+      317,
+      362,
+      337
+     ],
+     "answer": "Phospholipase C",
+     "accept": [
+      "C",
+      "PLC",
+      "Phospholipase C"
+     ],
+     "x": 91.96,
+     "y": 52.11,
+     "w": 5.99,
+     "h": 5.56
+    },
+    {
+     "box": [
+      343,
+      278,
+      362,
+      300
+     ],
+     "answer": "Phospholipase D",
+     "accept": [
+      "D",
+      "PLD",
+      "Phospholipase D"
+     ],
+     "x": 91.42,
+     "y": 43.44,
+     "w": 6.54,
+     "h": 6.0
+    }
+   ],
+   "bank": [
+    "Sphingomyelinase",
+    "Lysophospholipase"
+   ],
+   "explanation": "A1/A2 spalten die Fettsäure-Esterbindungen an sn-1 bzw. sn-2 (PLA2 → Arachidonsäure → Eikosanoide). PLC spaltet vor dem Phosphat (→ Diacylglycerol + Phosphokopfgruppe/IP₃), PLD hinter dem Phosphat (→ Phosphatidsäure + Kopfgruppe).",
+   "image": "assets/figures/vl11-phospholipasen-schema.webp",
+   "iw": 734,
+   "ih": 900
+  },
+  {
+   "id": "vl11-phospholipasen-botenstoffe",
+   "type": "multi",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "slides",
+   "ref": "VL11 · Folie 22",
+   "stem": "Welche Zuordnungen von Enzym und gebildetem Second Messenger sind korrekt? (3 richtig)",
+   "options": [
+    {
+     "t": "PLA2 → Arachidonsäure → Eikosanoide (Prostaglandine, Leukotriene)",
+     "correct": true
+    },
+    {
+     "t": "PLC → Diacylglycerol + IP₃",
+     "correct": true
+    },
+    {
+     "t": "Sphingomyelinase → Ceramid",
+     "correct": true
+    },
+    {
+     "t": "PLC → Arachidonsäure → Leukotriene",
+     "correct": false
+    },
+    {
+     "t": "PLA2 → Diacylglycerol + Ceramid",
+     "correct": false
+    }
+   ],
+   "explanation": "Membranen sind Reservoir und Quelle von Lipid-Botenstoffen. Zusätzlich setzt PLC GPI-verankerte Proteine (Enzyme) frei; PLA2, Lysophospholipase und Esterasen dienen auch dem Abbau/Turnover."
+  },
+  {
+   "id": "vl11-eikosanoide-schema",
+   "type": "label",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "slides",
+   "ref": "VL11 · Folie 23",
+   "stem": "Beschriften Sie den Syntheseweg der Eikosanoide aus Membranphospholipiden.",
+   "src": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 23,
+    "crop": [
+     10,
+     55,
+     700,
+     275
+    ],
+    "hide": [
+     [
+      150,
+      58,
+      336,
+      75
+     ],
+     [
+      441,
+      110,
+      517,
+      133
+     ],
+     [
+      378,
+      211,
+      431,
+      233
+     ],
+     [
+      524,
+      211,
+      588,
+      233
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      225,
+      77,
+      263,
+      97
+     ],
+     "answer": "Phospholipase A2 (PLA2)",
+     "accept": [
+      "PLA2",
+      "Phospholipase A2",
+      "cPLA2",
+      "Ca-abhängige Phospholipase A2"
+     ],
+     "x": 30.8,
+     "y": 8.86,
+     "w": 6.23,
+     "h": 11.36
+    },
+    {
+     "find": "Arachidonic Acid",
+     "answer": "Arachidonsäure",
+     "accept": [
+      "Arachidonic acid",
+      "ARA",
+      "AA",
+      "Arachidonat",
+      "Arachidonsaeure"
+     ],
+     "x": 27.67,
+     "y": 55.75,
+     "w": 9.74,
+     "h": 14.83
+    },
+    {
+     "find": "Lyso-Phospholipids",
+     "answer": "Lysophospholipide",
+     "accept": [
+      "Lyso-Phospholipide",
+      "Lysophospholipid",
+      "Lyso-phospholipids"
+     ],
+     "x": 43.95,
+     "y": 46.31,
+     "w": 16.04,
+     "h": 7.99
+    },
+    {
+     "box": [
+      443,
+      59,
+      515,
+      75
+     ],
+     "answer": "Leukotriene",
+     "accept": [
+      "Leukotrienes",
+      "Leukotrien"
+     ],
+     "x": 62.39,
+     "y": 0.68,
+     "w": 11.16,
+     "h": 9.55
+    },
+    {
+     "box": [
+      483,
+      88,
+      550,
+      101
+     ],
+     "answer": "Lipoxygenasen",
+     "accept": [
+      "Lipoxygenase",
+      "Lipoxygenases",
+      "LOX"
+     ],
+     "x": 68.19,
+     "y": 13.86,
+     "w": 10.43,
+     "h": 8.18
+    },
+    {
+     "box": [
+      483,
+      137,
+      547,
+      163
+     ],
+     "answer": "Prostaglandin-Synthase (Cyclooxygenase, COX)",
+     "accept": [
+      "Prostaglandin synthase",
+      "Prostaglandin-Synthase",
+      "COX",
+      "Cyclooxygenase",
+      "Cyclooxygenasen"
+     ],
+     "x": 68.19,
+     "y": 36.14,
+     "w": 10.0,
+     "h": 14.09
+    },
+    {
+     "box": [
+      433,
+      175,
+      525,
+      206
+     ],
+     "answer": "Prostaglandin H₂ (PGH₂)",
+     "accept": [
+      "PGH2",
+      "Prostaglandin H2",
+      "PGH₂"
+     ],
+     "x": 60.94,
+     "y": 53.41,
+     "w": 14.06,
+     "h": 16.36
+    },
+    {
+     "box": [
+      343,
+      243,
+      409,
+      259
+     ],
+     "answer": "Prostacyclin",
+     "accept": [
+      "PGI2",
+      "Prostazyklin",
+      "Prostacyclin"
+     ],
+     "x": 47.9,
+     "y": 84.32,
+     "w": 10.29,
+     "h": 9.55
+    },
+    {
+     "box": [
+      548,
+      243,
+      629,
+      259
+     ],
+     "answer": "Thromboxane",
+     "accept": [
+      "Thromboxanes",
+      "Thromboxan",
+      "TXA2"
+     ],
+     "x": 77.61,
+     "y": 84.32,
+     "w": 12.46,
+     "h": 9.55
+    }
+   ],
+   "bank": [
+    "Phospholipase C (PLC)",
+    "Diacylglycerol",
+    "Ceramid"
+   ],
+   "explanation": "Ca²⁺-abhängige PLA2 hydrolysiert Phospholipide zu Arachidonsäure + Lysophospholipid (alternativ: Arachidonat aus Diacylglycerol über die DG-Lipase). Lipoxygenasen → Leukotriene; Prostaglandin-Synthase (COX) → PGH₂ → Prostacyclin, weitere Prostaglandine, Thromboxane.",
+   "image": "assets/figures/vl11-eikosanoide-schema.webp",
+   "iw": 1380,
+   "ih": 440
+  },
+  {
+   "id": "vl11-pge2-signalweg-schema",
+   "type": "label",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "slides",
+   "ref": "VL11 · Folie 24",
+   "stem": "Beschriften Sie das Schema „Lipid-Botenstoffe der exzitatorischen glutamatergen Transmission“ (PGE₂-Bildung und -Wirkung).",
+   "src": {
+    "pdf": "VL11Neuromodulators.pdf",
+    "page": 24,
+    "crop": [
+     135,
+     92,
+     706,
+     530
+    ],
+    "hide": [
+     [
+      549,
+      218,
+      702,
+      241
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      183,
+      211,
+      255,
+      227
+     ],
+     "answer": "NMDA-Rezeptor",
+     "accept": [
+      "NMDA-R",
+      "NMDAR",
+      "NMDA receptor",
+      "NMDA"
+     ],
+     "x": 7.97,
+     "y": 26.6,
+     "w": 13.49,
+     "h": 4.79
+    },
+    {
+     "box": [
+      213,
+      312,
+      266,
+      331
+     ],
+     "answer": "cPLA2 (zytosolische Phospholipase A2)",
+     "accept": [
+      "cPLA2",
+      "PLA2",
+      "Phospholipase A2",
+      "zytosolische Phospholipase A2"
+     ],
+     "x": 13.22,
+     "y": 49.66,
+     "w": 10.16,
+     "h": 5.48
+    },
+    {
+     "box": [
+      218,
+      344,
+      263,
+      358
+     ],
+     "answer": "Arachidonsäure (20:4)",
+     "accept": [
+      "20:4",
+      "Arachidonsäure",
+      "AA",
+      "ARA",
+      "Arachidonic acid"
+     ],
+     "x": 14.1,
+     "y": 56.96,
+     "w": 8.76,
+     "h": 4.34
+    },
+    {
+     "box": [
+      293,
+      318,
+      341,
+      337
+     ],
+     "answer": "Cyclooxygenase (COX)",
+     "accept": [
+      "COX",
+      "Cyclooxygenase",
+      "COX-2",
+      "Prostaglandin-Synthase"
+     ],
+     "x": 27.23,
+     "y": 51.03,
+     "w": 9.28,
+     "h": 5.48
+    },
+    {
+     "box": [
+      371,
+      273,
+      402,
+      290
+     ],
+     "answer": "PGE₂",
+     "accept": [
+      "PGE2",
+      "Prostaglandin E2",
+      "Prostaglandin E₂"
+     ],
+     "x": 40.89,
+     "y": 40.75,
+     "w": 6.3,
+     "h": 5.02
+    },
+    {
+     "box": [
+      520,
+      328,
+      539,
+      342
+     ],
+     "answer": "EP-Rezeptor",
+     "accept": [
+      "EP",
+      "EP receptor",
+      "Prostaglandin-E-Rezeptor",
+      "EP-Rezeptor"
+     ],
+     "x": 66.99,
+     "y": 53.31,
+     "w": 4.2,
+     "h": 4.34
+    },
+    {
+     "box": [
+      508,
+      358,
+      585,
+      372
+     ],
+     "answer": "Adenylylcyclase",
+     "accept": [
+      "Adenylatcyclase",
+      "Adenylatzyklase",
+      "AC",
+      "adenylyl cyclase"
+     ],
+     "x": 64.89,
+     "y": 60.16,
+     "w": 14.36,
+     "h": 4.34
+    }
+   ],
+   "bank": [
+    "Lipoxygenase",
+    "Phospholipase C",
+    "Guanylylcyclase"
+   ],
+   "explanation": "Glutamat → NMDA-R → Ca²⁺ → cPLA2 (zusätzlich über ERK phosphoryliert) → Arachidonsäure (20:4) → COX → PGG₂ → PGH₂ → PGE₂. PGE₂ wirkt über G-Protein-gekoppelte EP-Rezeptoren → Adenylylcyclase → cAMP → PKA → CREB → Genexpression.",
+   "image": "assets/figures/vl11-pge2-signalweg-schema.webp",
+   "iw": 1142,
+   "ih": 876
+  },
+  {
+   "id": "vl11-pge2-signalweg",
+   "type": "single",
+   "topic": "Phospholipide & Eikosanoide",
+   "source": "slides",
+   "ref": "VL11 · Folie 24",
+   "stem": "Über welchen Signalweg wirkt PGE₂ laut Schema „Lipid Anterograde Messengers“?",
+   "options": [
+    {
+     "t": "EP-Rezeptor (G-Protein-gekoppelt) → Adenylylcyclase → cAMP → PKA → CREB → Genexpression",
+     "correct": true
+    },
+    {
+     "t": "Ionotroper EP-Kanal → Ca²⁺-Einstrom → Calmodulin → NOS",
+     "correct": false
+    },
+    {
+     "t": "Nukleärer Rezeptor → direkte Bindung an CRE-Elemente ohne Second Messenger",
+     "correct": false
+    },
+    {
+     "t": "EP-Rezeptor → lösliche Guanylylcyclase → cGMP → PKG",
+     "correct": false
+    }
+   ],
+   "explanation": "PGE₂ wird nach Ca²⁺-Einstrom über cPLA2 → Arachidonsäure → COX gebildet, nicht gespeichert, sondern sofort freigesetzt (überwiegend transportervermittelt – als Anion bei physiologischem pH kaum frei membrangängig, anders als NO). Es wirkt über G-Protein-gekoppelte EP-Rezeptoren; laut Schema über AC → cAMP → PKA → CREB → Genexpression, was PGE₂ mit synaptischer Plastizität (LTP) verknüpft."
+  },
+  {
+   "id": "vl11-ischaemie-kaskade",
+   "type": "order",
+   "topic": "Ischämie, Exzitotoxizität & Entzündung",
+   "source": "slides",
+   "ref": "VL11 · Folie 25",
+   "stem": "Bringen Sie die Ereigniskaskade bei Ischämie in die richtige Reihenfolge.",
+   "items": [
+    "Ausfall der Glukose- und Sauerstoffversorgung",
+    "Abfall der ATP-Spiegel",
+    "Energiemangel der Na⁺/K⁺-ATPase",
+    "Depolarisation der Membran",
+    "Öffnung spannungsgesteuerter Ca²⁺-Kanäle"
+   ],
+   "explanation": "Folge: extrazelluläres Ca²⁺ fällt ab (Einstrom in die Zellen), Glutamat wird freigesetzt → Exzitotoxizität mit Aktivierung von PLA2, NOS, Proteasen und mitochondrialer Schädigung."
+  },
+  {
+   "id": "vl11-prostaglandine-exzitotoxizitaet",
+   "type": "combo",
+   "topic": "Ischämie, Exzitotoxizität & Entzündung",
+   "source": "slides",
+   "ref": "VL11 · Folien 24, 26–29",
+   "stem": "Glutamat-Exzitotoxizität beim Schlaganfall: Welche Aussagen zu Lipid-Botenstoffen treffen zu?",
+   "statements": [
+    {
+     "t": "Prostaglandine (z. B. PGE₂) verstärken die glutamaterge Neurotransmission.",
+     "correct": true
+    },
+    {
+     "t": "Der Ca²⁺-Anstieg aktiviert die cPLA2, die Arachidonsäure und (über Lyso-PAF) PAF bildet.",
+     "correct": true
+    },
+    {
+     "t": "Bei der Reperfusion entstehen durch den O₂-Anstieg reaktive Sauerstoffspezies und nicht-enzymatische Lipidperoxidation (z. B. Neuroprostane).",
+     "correct": true
+    },
+    {
+     "t": "Glukokortikoide induzieren den COX-2-Promotor und steigern so die Prostaglandin-Synthese.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "AC"
+   ],
+   "explanation": "Glukokortikoide hemmen den COX-2-Promotor; Zytokine und PAF (über Proteinkinase-Kaskaden) induzieren ihn. Prostaglandine wirken an der glutamatergen Synapse fördernd (PGE₂ als anterograder Botenstoff, Wirkung auf Astrozyten) und tragen bei Ischämie zur Übererregung bei.",
+   "note": "Variante zur WS25/26-Exzitotoxizitätsfrage (die Originalfrage steht in VL09); Aussagen aus VL11 ergänzt. Die Folien zeigen die Verstärkung nur schematisch (Folien 24, 29)."
+  },
+  {
+   "id": "vl11-exzitotoxizitaet-folgen",
+   "type": "multi",
+   "topic": "Ischämie, Exzitotoxizität & Entzündung",
+   "source": "slides",
+   "ref": "VL11 · Folie 26",
+   "stem": "Welche Folgen hat der massive intrazelluläre Ca²⁺-Anstieg bei der Exzitotoxizität laut Schema? (4 richtig)",
+   "options": [
+    {
+     "t": "Aktivierung der PLA2 → Arachidonsäure → Eikosanoide und Lipidperoxidation",
+     "correct": true
+    },
+    {
+     "t": "Aktivierung der NO-Synthase → NO, das mit O₂•⁻ zu Peroxynitrit reagiert",
+     "correct": true
+    },
+    {
+     "t": "Aktivierung von Proteasen, Zerstörung des Zytoskeletts, DNA-Schäden",
+     "correct": true
+    },
+    {
+     "t": "Mitochondriale Schädigung mit gestörter Energieproduktion",
+     "correct": true
+    },
+    {
+     "t": "Hemmung der weiteren Glutamat-Freisetzung als Schutzmechanismus",
+     "correct": false
+    },
+    {
+     "t": "Hyperpolarisation über Ca²⁺-aktivierte Cl⁻-Kanäle, die den Zelltod verhindert",
+     "correct": false
+    }
+   ],
+   "explanation": "Alle Wege münden in Destabilisierung der Membranen und Zelltod; die gestörte Energieproduktion verstärkt die Glutamat-Freisetzung zusätzlich (Teufelskreis). Ca²⁺ strömt über NMDA-R und spannungsgesteuerte Ca²⁺-Kanäle (VSCC) ein und wird über IP₃ (mGluR → PLC) aus dem ER freigesetzt; der GluR (AMPA/Kainat) leitet im Schema nur Na⁺ und trägt so zur Depolarisation bei."
+  },
+  {
+   "id": "vl11-peroxynitrit",
+   "type": "single",
+   "topic": "Ischämie, Exzitotoxizität & Entzündung",
+   "source": "slides",
+   "ref": "VL11 · Folien 17, 26, 30",
+   "stem": "Welches toxische Produkt entsteht, wenn NO mit Superoxid (O₂•⁻) reagiert?",
+   "options": [
+    {
+     "t": "Peroxynitrit (ONOO⁻)",
+     "correct": true
+    },
+    {
+     "t": "Wasserstoffperoxid (H₂O₂)",
+     "correct": false
+    },
+    {
+     "t": "Distickstoffmonoxid (N₂O)",
+     "correct": false
+    },
+    {
+     "t": "Hydroxylamin (NH₂OH)",
+     "correct": false
+    }
+   ],
+   "explanation": "Peroxynitrit (ONOO⁻) ist stark oxidierend und nitrierend; es entsteht bei Exzitotoxizität und durch die iNOS aktivierter Mikroglia/Makrophagen. H₂O₂ entsteht dagegen aus Superoxid (Dismutation)."
+  },
+  {
+   "id": "vl11-paf-retrograd",
+   "type": "single",
+   "topic": "Ischämie, Exzitotoxizität & Entzündung",
+   "source": "slides",
+   "ref": "VL11 · Folien 28–29",
+   "stem": "Welche Rolle spielt der Plättchen-aktivierende Faktor (PAF) laut Schema an der glutamatergen Synapse?",
+   "options": [
+    {
+     "t": "Retrograder Lipid-Botenstoff: postsynaptisch über cPLA2 → Lyso-PAF → PAF gebildet, wirkt auf präsynaptische Rezeptoren und fördert die Glutamat-Freisetzung",
+     "correct": true
+    },
+    {
+     "t": "Anterograder Botenstoff, der in synaptischen Vesikeln gespeichert und zusammen mit Glutamat aus der Präsynapse freigesetzt wird",
+     "correct": false
+    },
+    {
+     "t": "Hemmender Botenstoff aus Astrozyten, der postsynaptische NMDA-Rezeptoren blockiert und so vor Exzitotoxizität schützt",
+     "correct": false
+    },
+    {
+     "t": "Postsynaptisches Enzym, das freigesetzte Arachidonsäure zu PGH₂ umsetzt und so die Prostaglandin-Synthese startet",
+     "correct": false
+    }
+   ],
+   "explanation": "PAF ist ein Etherphospholipid; es entsteht aus Lyso-PAF und wirkt retrograd auf präsynaptische (G-Protein-gekoppelte) PAF-Rezeptoren. Bei Krampfanfällen/Hypoxie induziert PAF zudem über Proteinkinase-Kaskaden die COX-2."
+  },
+  {
+   "id": "vl11-neuroinflammation",
+   "type": "multi",
+   "topic": "Ischämie, Exzitotoxizität & Entzündung",
+   "source": "slides",
+   "ref": "VL11 · Folie 30",
+   "stem": "Welche Aussagen zur Neuroinflammation treffen zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Ruhende Mikroglia erkennen Immunogene (z. B. LPS) und Pathogene u. a. über Toll-like-Rezeptoren (TLR)",
+     "correct": true
+    },
+    {
+     "t": "Aktivierte Mikroglia setzen u. a. O₂•⁻, NO, ONOO⁻, PGE₂, TNF-α, IL-1β und IL-6 frei und exprimieren COX-2 und iNOS",
+     "correct": true
+    },
+    {
+     "t": "Auslöser sind u. a. Verletzung, Schlaganfall, Infektion, Neurotoxine und β-Amyloid-Peptide",
+     "correct": true
+    },
+    {
+     "t": "Chronische Entzündung (reaktive Astrozyten) kann zu Neuronentod und neurodegenerativen Erkrankungen (AD, ALS, PD, MS …) führen",
+     "correct": true
+    },
+    {
+     "t": "Neuroinflammation endet stets im Neuronentod; eine Resolution mit Gewebereparatur gibt es nicht",
+     "correct": false
+    },
+    {
+     "t": "Die Mediatoren aktivierter Mikroglia beeinflussen weder Endothelzellen noch die Blut-Hirn-Schranke",
+     "correct": false
+    }
+   ],
+   "explanation": "Akute Entzündung kann in Resolution (Gewebereparatur, Homöostase) oder chronische Entzündung (reaktive Astrozyten → Neuronentod, Neurodegeneration) übergehen. Die Mediatoren aktivieren weitere ruhende Mikroglia (Amplifikation = positive Rückkopplung zwischen ruhender und aktivierter Mikroglia). Sie wirken außerdem auf Endothel/BHS; Neutrophile wandern ein und steuern weitere Mediatoren bei."
+  }
+ ]
+}

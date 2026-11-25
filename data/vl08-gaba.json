@@ -1,0 +1,2099 @@
+{
+ "id": "vl08",
+ "title": "VL08 · GABA-Neurotransmission",
+ "short": "GABA",
+ "color": "#3ecf8e",
+ "topics": [
+  "Grundlagen: NT-Rezeptoren & Transporter",
+  "GABA-A: Aufbau & Bindestellen",
+  "GABA-A: Modulation & Benzodiazepine",
+  "GABA-Switch in der Entwicklung",
+  "GABA-B: Struktur & Heterodimer",
+  "GABA-B: Signalwege prä/post",
+  "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+  "GABA-Transporter"
+ ],
+ "questions": [
+  {
+   "id": "vl08-rezeptor-bestimmt-effekt",
+   "type": "single",
+   "topic": "Grundlagen: NT-Rezeptoren & Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 3",
+   "stem": "Ein Neurotransmitter kann an verschiedenen Zellen ganz unterschiedliche Effekte auslösen. Was bestimmt laut Vorlesung den ausgelösten Effekt?",
+   "options": [
+    {
+     "t": "Der Rezeptor (Klasse und Subtyp) und seine zelluläre/subzelluläre Lokalisation",
+     "correct": true
+    },
+    {
+     "t": "Allein die chemische Struktur des freigesetzten Neurotransmitters",
+     "correct": false
+    },
+    {
+     "t": "Die Konzentration des Neurotransmitters im synaptischen Spalt",
+     "correct": false
+    },
+    {
+     "t": "Der Vesikeltyp, in dem der Neurotransmitter gespeichert wird",
+     "correct": false
+    }
+   ],
+   "explanation": "Take-home message: Nicht der NT selbst, sondern die NT-Rezeptoren (Klasse und Subtyp) und ihre Lokalisation (prä-, post-, extrasynaptisch, glial) bestimmen den ausgelösten Effekt."
+  },
+  {
+   "id": "vl08-ionotrop-metabotrop",
+   "type": "combo",
+   "topic": "Grundlagen: NT-Rezeptoren & Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folien 2, 6",
+   "stem": "Welche Aussagen zu ionotropen und metabotropen Neurotransmitter-Rezeptoren treffen zu?",
+   "statements": [
+    {
+     "t": "Bei ionotropen Rezeptoren öffnet der Neurotransmitter direkt einen Ionenkanal – schnelle, kurz anhaltende Effekte.",
+     "correct": true
+    },
+    {
+     "t": "Metabotrope Rezeptoren modulieren intrazelluläre Botenstoffe – langsame, lang anhaltende Effekte.",
+     "correct": true
+    },
+    {
+     "t": "Rezeptor-Tyrosinkinasen (trk-Rezeptoren) zählen zu den klassischen Neurotransmitter-Rezeptoren.",
+     "correct": false
+    },
+    {
+     "t": "Für GABA gibt es sowohl ionotrope (GABA-A) als auch metabotrope (GABA-B) Rezeptoren.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ABCD",
+    "BD",
+    "AC"
+   ],
+   "explanation": "Ionotrop: NT „gates an ion channel“ (schnell, kurz); metabotrop: NT moduliert intrazelluläre Metabolite (langsam, lang). Die Folie betont ausdrücklich „no trk-receptors!“."
+  },
+  {
+   "id": "vl08-transporter-funktionen",
+   "type": "multi",
+   "topic": "Grundlagen: NT-Rezeptoren & Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 4",
+   "stem": "Welche Funktionen haben neuronale bzw. gliale Neurotransmitter-Transporter? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Sie entfernen den NT aus dem Spalt und beenden so die chemische Transmission",
+     "correct": true
+    },
+    {
+     "t": "Sie verhindern ein „Spill-over“ zu benachbarten Synapsen",
+     "correct": true
+    },
+    {
+     "t": "Sie prägen Kinetik, Präzision und Feinabstimmung der Signalübertragung mit",
+     "correct": true
+    },
+    {
+     "t": "Sie recyceln die wertvollen NT-Moleküle zur Wiederverwendung",
+     "correct": true
+    },
+    {
+     "t": "Sie bauen durch ATP-Hydrolyse den Na⁺-Gradienten auf",
+     "correct": false
+    },
+    {
+     "t": "Sie spalten den Neurotransmitter enzymatisch im Spalt",
+     "correct": false
+    }
+   ],
+   "explanation": "Plasmamembran-Transporter sind Na⁺-abhängig: Sie nutzen den Gradienten, den die Na⁺/K⁺-ATPase aufbaut, und binden den NT mit hoher Affinität. Enzymatischer Abbau im Spalt gehört nicht zu ihren Aufgaben."
+  },
+  {
+   "id": "vl08-gaba-rezeptor-gene",
+   "type": "single",
+   "topic": "Grundlagen: NT-Rezeptoren & Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folien 6, 8",
+   "stem": "Welche Aussage zur Vielfalt der GABA-Rezeptoren trifft zu?",
+   "options": [
+    {
+     "t": "Ionotrope GABA-Rezeptoren (GABA-A, GABA-Aρ) werden von 19 Genen codiert, GABA-B-Rezeptoren von 2 Genen.",
+     "correct": true
+    },
+    {
+     "t": "Ionotrope GABA-Rezeptoren werden von 2 Genen codiert, GABA-B-Rezeptoren von 19 Genen.",
+     "correct": false
+    },
+    {
+     "t": "GABA-Aρ-Rezeptoren sind metabotrope Rezeptoren mit 7 Transmembrandomänen.",
+     "correct": false
+    },
+    {
+     "t": "Alle GABA-A-Untereinheiten stammen von einem Gen und entstehen durch Spleißen.",
+     "correct": false
+    }
+   ],
+   "explanation": "19 Gene für die ionotropen Untereinheiten (α1–6, β1–3, γ1–3, δ, ε, θ, π, ρ1–3), 2 Gene (GABA-B1, GABA-B2) für die metabotropen. GABA-Aρ ist ebenfalls ein Cl⁻-Kanal."
+  },
+  {
+   "id": "vl08-gabaa-untereinheit-label",
+   "type": "label",
+   "topic": "GABA-A: Aufbau & Bindestellen",
+   "source": "slides",
+   "ref": "VL08 · Folie 9",
+   "stem": "Beschriften Sie das Schema des GABA-A-Rezeptors (links: Topologie einer Untereinheit; rechts: Bindetasche zwischen zwei Untereinheiten).",
+   "src": {
+    "pdf": "VL08GABA Neurotransmission_04Nov26.pdf",
+    "page": 9,
+    "crop": [
+     45,
+     85,
+     692,
+     305
+    ],
+    "hide": [
+     [
+      59,
+      200,
+      102,
+      212
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      148,
+      98,
+      200,
+      110
+     ],
+     "answer": "N-Terminus",
+     "accept": [
+      "N-terminus",
+      "N-Term",
+      "Aminoterminus",
+      "NH2-Terminus"
+     ],
+     "x": 15.53,
+     "y": 4.77,
+     "w": 8.81,
+     "h": 7.73
+    },
+    {
+     "box": [
+      173,
+      116,
+      249,
+      141
+     ],
+     "answer": "Neurotransmitter-Bindestelle",
+     "accept": [
+      "Neurotransmitter binding site",
+      "GABA-Bindestelle",
+      "Ligandenbindestelle",
+      "Bindestelle"
+     ],
+     "x": 19.4,
+     "y": 12.95,
+     "w": 12.52,
+     "h": 13.64
+    },
+    {
+     "box": [
+      254,
+      151,
+      304,
+      163
+     ],
+     "answer": "C-Terminus",
+     "accept": [
+      "C-terminus",
+      "Carboxyterminus",
+      "COOH-Terminus"
+     ],
+     "x": 31.92,
+     "y": 28.86,
+     "w": 8.5,
+     "h": 7.73
+    },
+    {
+     "box": [
+      167,
+      199,
+      184,
+      211
+     ],
+     "answer": "M2 (Pore/Selektivitätsfilter)",
+     "accept": [
+      "M2",
+      "TM2",
+      "M2-Segment",
+      "Pore"
+     ],
+     "x": 18.47,
+     "y": 50.68,
+     "w": 3.4,
+     "h": 7.73
+    },
+    {
+     "box": [
+      235,
+      279,
+      330,
+      291
+     ],
+     "answer": "Phosphorylierungsstellen (i2, M3–M4)",
+     "accept": [
+      "Phosphorylation sites",
+      "Phosphorylierungsstellen",
+      "Phosphorylierung",
+      "i2"
+     ],
+     "x": 28.98,
+     "y": 87.05,
+     "w": 15.46,
+     "h": 7.73
+    },
+    {
+     "box": [
+      399,
+      189,
+      419,
+      213
+     ],
+     "answer": "β-Untereinheit (principal SU)",
+     "accept": [
+      "β",
+      "beta",
+      "β-UE",
+      "beta-Untereinheit",
+      "principal subunit"
+     ],
+     "x": 54.33,
+     "y": 46.14,
+     "w": 3.86,
+     "h": 13.18
+    },
+    {
+     "box": [
+      630,
+      211,
+      652,
+      232
+     ],
+     "answer": "α-Untereinheit (complementary SU)",
+     "accept": [
+      "α",
+      "alpha",
+      "α-UE",
+      "alpha-Untereinheit",
+      "complementary subunit"
+     ],
+     "x": 90.03,
+     "y": 56.14,
+     "w": 4.17,
+     "h": 11.82
+    },
+    {
+     "box": [
+      515,
+      206,
+      562,
+      228
+     ],
+     "answer": "Neurotransmitter (GABA)",
+     "accept": [
+      "GABA",
+      "Neurotransmitter",
+      "Ligand"
+     ],
+     "x": 72.26,
+     "y": 53.86,
+     "w": 8.04,
+     "h": 12.27
+    }
+   ],
+   "bank": [
+    "M4",
+    "γ-Untereinheit",
+    "Benzodiazepin-Bindestelle"
+   ],
+   "explanation": "Jede Untereinheit hat 4 TM-Segmente; M2 kleidet die Pore aus und trägt Ringe positiver Ladung (Lys⁺, Arg⁺) → Anionenselektivität. Die intrazelluläre Schleife i2 (M3–M4) kann phosphoryliert werden. GABA bindet an der β-UE (principal), die α-UE trägt komplementär bei.",
+   "image": "assets/figures/vl08-gabaa-untereinheit-label.webp",
+   "iw": 1294,
+   "ih": 440
+  },
+  {
+   "id": "vl08-gabaa-gaba-bindung",
+   "type": "single",
+   "topic": "GABA-A: Aufbau & Bindestellen",
+   "source": "slides",
+   "ref": "VL08 · Folien 9, 12",
+   "stem": "Welche Untereinheit des GABA-A-Rezeptors bindet laut Vorlesung als „principal subunit“ den Liganden GABA?",
+   "options": [
+    {
+     "t": "die β-Untereinheit",
+     "correct": true
+    },
+    {
+     "t": "die α-Untereinheit",
+     "correct": false
+    },
+    {
+     "t": "die γ-Untereinheit",
+     "correct": false
+    },
+    {
+     "t": "die ρ-Untereinheit",
+     "correct": false
+    }
+   ],
+   "explanation": "β = principal SU der GABA-Bindetasche (β⁺/α⁻-Grenzfläche), α trägt als „complementary SU“ bei. Zur Kanalöffnung sind 2 GABA-Moleküle nötig. Benzodiazepine binden dagegen an der α-UE (α⁺/γ⁻-Grenzfläche)."
+  },
+  {
+   "id": "vl08-gabaa-kanal-combo",
+   "type": "combo",
+   "topic": "GABA-A: Aufbau & Bindestellen",
+   "source": "slides",
+   "ref": "VL08 · Folien 9–10",
+   "stem": "Welche Aussagen zum GABA-A-Rezeptor treffen zu?",
+   "statements": [
+    {
+     "t": "Er ist ein Anionenkanal mit Leitfähigkeit für Cl⁻ (Einstrom).",
+     "correct": true
+    },
+    {
+     "t": "Das Segment M2 bildet die Pore (Selektivitätsfilter) und trägt Ringe positiver Ladung (Lys⁺, Arg⁺).",
+     "correct": true
+    },
+    {
+     "t": "Ein einzelnes GABA-Molekül reicht aus, um die Kanalpore zu öffnen.",
+     "correct": false
+    },
+    {
+     "t": "Die intrazelluläre Schleife i2 (zwischen M3 und M4) kann phosphoryliert werden.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ABCD",
+    "AD",
+    "BCD"
+   ],
+   "explanation": "Für das Gating sind 2 GABA-Moleküle nötig (2 Bindestellen im Pentamer). Die Phosphorylierung an i2 reduziert in der Regel den GABA-induzierten Strom."
+  },
+  {
+   "id": "vl08-gabaa-struktur",
+   "type": "multi",
+   "topic": "GABA-A: Aufbau & Bindestellen",
+   "source": "slides",
+   "ref": "VL08 · Folie 8",
+   "stem": "Welche Aussagen zur Struktur des GABA-A-Rezeptors treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Er ist ein Pentamer, typischerweise aus 2 α-, 2 β- und 1 γ-Untereinheit.",
+     "correct": true
+    },
+    {
+     "t": "Jede Untereinheit besitzt 4 Transmembrandomänen (M1–M4).",
+     "correct": true
+    },
+    {
+     "t": "Für die α-Untereinheit gibt es 6 Isoformen (α1–α6).",
+     "correct": true
+    },
+    {
+     "t": "Die M2-Segmente aller Untereinheiten kleiden die zentrale Pore aus.",
+     "correct": true
+    },
+    {
+     "t": "Er ist ein Tetramer aus 4 identischen Untereinheiten.",
+     "correct": false
+    },
+    {
+     "t": "Jede Untereinheit hat 3 Transmembrandomänen und ein Porenelement.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 8: Pentamer (γ-α-β-α-β), 4 TM pro Untereinheit, M2 zur Pore gerichtet. Tetramer und „3 TM + Porenschleife“ kennzeichnen die ionotropen Glutamatrezeptoren (VL09)."
+  },
+  {
+   "id": "vl08-bzd-alpha-isoform",
+   "type": "single",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL08 · Folie 12",
+   "stem": "Welche Aussage ist korrekt? GABA-A-Rezeptoren …",
+   "options": [
+    {
+     "t": "… binden immer Benzodiazepine.",
+     "correct": false
+    },
+    {
+     "t": "… binden nur einige Benzodiazepine.",
+     "correct": false
+    },
+    {
+     "t": "… binden Benzodiazepine in unterschiedlicher Affinität in Abhängigkeit der exprimierten Isoform der α-Untereinheit.",
+     "correct": true
+    },
+    {
+     "t": "… binden Benzodiazepine immer dann, wenn eine der 6 Isoformen der α-Untereinheit exprimiert ist.",
+     "correct": false
+    }
+   ],
+   "explanation": "α1 → BZD-Typ I (hohe Affinität), α2/α3/α5 → BZD-Typ II (niedrige Affinität), α4/α6 → BZD-insensitiv (Arg statt His in der Bindestelle). Zusätzlich muss eine γ-Untereinheit koexprimiert sein – daher ist auch D falsch.",
+   "note": "WS23/24 Frage 21; in WS25/26 als „GABA und Benzodiazepine – Altklausurfrage“ erneut gestellt. Lösung im Protokoll „vergessen“ – aus Folie 12 abgeleitet."
+  },
+  {
+   "id": "vl08-bzd-bindung-label",
+   "type": "label",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "slides",
+   "ref": "VL08 · Folie 12",
+   "stem": "Beschriften Sie die Bindestellen im GABA-A-Pentamer (links) und ordnen Sie den α-Isoformen ihre Benzodiazepin-Empfindlichkeit zu (unten).",
+   "src": {
+    "pdf": "VL08GABA Neurotransmission_04Nov26.pdf",
+    "page": 12,
+    "crop": [
+     20,
+     120,
+     700,
+     505
+    ],
+    "hide": [
+     [
+      335,
+      110,
+      605,
+      140
+     ],
+     [
+      31,
+      260,
+      64,
+      280
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      150,
+      136,
+      170,
+      156
+     ],
+     "answer": "Benzodiazepin-Bindestelle (α⁺/γ⁻)",
+     "accept": [
+      "Bz",
+      "BZD",
+      "Benzodiazepin",
+      "Benzodiazepine",
+      "BZD-Bindestelle"
+     ],
+     "x": 18.75,
+     "y": 3.51,
+     "w": 3.68,
+     "h": 6.49
+    },
+    {
+     "box": [
+      191,
+      225,
+      218,
+      239
+     ],
+     "answer": "GABA-Bindestelle (β⁺/α⁻)",
+     "accept": [
+      "GABA",
+      "GABA-Bindestelle"
+     ],
+     "x": 24.78,
+     "y": 26.62,
+     "w": 4.71,
+     "h": 4.94
+    },
+    {
+     "box": [
+      270,
+      448,
+      354,
+      498
+     ],
+     "answer": "BZD-Typ I – hohe Affinität",
+     "accept": [
+      "Typ I",
+      "BZD-Type I",
+      "high affinity",
+      "hohe Affinität",
+      "BZD-Typ I"
+     ],
+     "x": 36.4,
+     "y": 84.55,
+     "w": 13.09,
+     "h": 14.29
+    },
+    {
+     "box": [
+      417,
+      448,
+      507,
+      498
+     ],
+     "answer": "BZD-Typ II – niedrige Affinität",
+     "accept": [
+      "Typ II",
+      "BZD-Type II",
+      "low affinity",
+      "niedrige Affinität",
+      "BZD-Typ II"
+     ],
+     "x": 58.01,
+     "y": 84.55,
+     "w": 13.97,
+     "h": 14.29
+    },
+    {
+     "box": [
+      553,
+      448,
+      667,
+      498
+     ],
+     "answer": "BZD-insensitiv – keine Bindung",
+     "accept": [
+      "insensitiv",
+      "BZD insensitive",
+      "keine Bindung",
+      "no binding",
+      "BZD-insensitiv"
+     ],
+     "x": 78.01,
+     "y": 84.55,
+     "w": 17.5,
+     "h": 14.29
+    }
+   ],
+   "explanation": "BZD binden an der α⁺/γ⁻-Grenzfläche (γ muss koexprimiert sein), GABA an der β⁺/α⁻-Grenzfläche. α1 = Typ I (hochaffin), α2/3/5 = Typ II (niedrigaffin), α4/α6 tragen Arg statt His → keine Bindung.",
+   "image": "assets/figures/vl08-bzd-bindung-label.webp",
+   "iw": 1360,
+   "ih": 770
+  },
+  {
+   "id": "vl08-bzd-gamma",
+   "type": "single",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "slides",
+   "ref": "VL08 · Folien 10, 12",
+   "stem": "Ein rekombinanter GABA-A-Rezeptor nur aus α1- und β2-Untereinheiten (ohne γ) wird exprimiert. Was erwarten Sie bei Gabe von Diazepam?",
+   "options": [
+    {
+     "t": "Keine BZD-Wirkung, da für die BZD-Bindung eine γ-Untereinheit koexprimiert sein muss",
+     "correct": true
+    },
+    {
+     "t": "Hochaffine BZD-Bindung, da α1 die Typ-I-Isoform ist",
+     "correct": false
+    },
+    {
+     "t": "Niedrigaffine BZD-Bindung, da β2 die BZD-Bindestelle allein bildet",
+     "correct": false
+    },
+    {
+     "t": "Vollständige Kanalöffnung durch Diazepam auch ohne GABA",
+     "correct": false
+    }
+   ],
+   "explanation": "„The α-subunit binds benzodiazepines, a γ-subunit has to be co-expressed.“ Benzodiazepine potenzieren außerdem nur den GABA-induzierten Strom; GABA-mimetische Wirkung in hohen Dosen haben Barbiturate, Anästhetika und Neurosteroide."
+  },
+  {
+   "id": "vl08-diazepam-pentobarbital",
+   "type": "single",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "slides",
+   "ref": "VL08 · Folie 13",
+   "stem": "Diazepam (DZP) und Pentobarbital (PB) potenzieren beide das GABA-A-vermittelte IPSP. Wie unterscheiden sie sich laut Vorlesung im Mechanismus?",
+   "options": [
+    {
+     "t": "DZP erhöht die Öffnungshäufigkeit, PB die Öffnungsdauer des Kanals",
+     "correct": true
+    },
+    {
+     "t": "DZP erhöht die Öffnungsdauer, PB die Öffnungshäufigkeit des Kanals",
+     "correct": false
+    },
+    {
+     "t": "Beide erhöhen die Einzelkanal-Leitfähigkeit des Cl⁻-Kanals",
+     "correct": false
+    },
+    {
+     "t": "Beide binden kompetitiv an der GABA-Bindestelle der β-UE",
+     "correct": false
+    }
+   ],
+   "explanation": "Merksatz: Benzodiazepine → Frequenz, Barbiturate → Dauer. Gezeigt im Hippocampus-Schnitt (Reizung GABAerger Interneurone, Ableitung an Pyramidenzellen). Beide binden allosterisch an getrennten Stellen."
+  },
+  {
+   "id": "vl08-gabaa-modulatoren",
+   "type": "multi",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "slides",
+   "ref": "VL08 · Folien 10, 38",
+   "stem": "Welche Substanzen binden allosterisch an den GABA-A-Rezeptor und verstärken den GABA-induzierten Strom? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Benzodiazepine (z. B. Diazepam/Valium)",
+     "correct": true
+    },
+    {
+     "t": "Barbiturate (z. B. Pentobarbital)",
+     "correct": true
+    },
+    {
+     "t": "Anästhetika (z. B. Enfluran, Propofol)",
+     "correct": true
+    },
+    {
+     "t": "Neurosteroide (endogen)",
+     "correct": true
+    },
+    {
+     "t": "Bicucullin",
+     "correct": false
+    },
+    {
+     "t": "Baclofen",
+     "correct": false
+    }
+   ],
+   "explanation": "Diese Substanzen (sowie Alkohol an γ2L-/α6-haltigen Rezeptoren im Kleinhirn) binden an räumlich getrennten Stellen und potenzieren den Strom → stärkere Hyperpolarisation. Bicucullin ist kompetitiver GABA-A-Antagonist, Baclofen ein GABA-B-Agonist."
+  },
+  {
+   "id": "vl08-bzd-endogener-ligand",
+   "type": "single",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "slides",
+   "ref": "VL08 · Folie 10",
+   "stem": "Welche Aussage zur Modulation von GABA-A-Rezeptoren trifft <b>nicht</b> zu?",
+   "options": [
+    {
+     "t": "Für die Benzodiazepin-Bindestelle ist ein endogener Ligand eindeutig nachgewiesen.",
+     "correct": true
+    },
+    {
+     "t": "Barbiturate, Anästhetika und Neurosteroide wirken in hohen Konzentrationen GABA-mimetisch (überdosiert toxisch).",
+     "correct": false
+    },
+    {
+     "t": "Die Phosphorylierung an i2 (M3/M4) verringert in der Regel den GABA-induzierten Strom.",
+     "correct": false
+    },
+    {
+     "t": "Alkohol wirkt an GABA-A-Rezeptoren mit γ2L- und α6-Untereinheit im Kleinhirn.",
+     "correct": false
+    }
+   ],
+   "explanation": "„Binding sites for drugs do not necessarily have an endogenous ligand“ – für die BZD-Stelle gibt es keinen Beleg für einen endogenen Liganden. Die übrigen Aussagen stehen so auf Folie 10."
+  },
+  {
+   "id": "vl08-bzd-mechanismus-open",
+   "type": "open",
+   "topic": "GABA-A: Modulation & Benzodiazepine",
+   "source": "slides",
+   "ref": "VL08 · Folien 10–13",
+   "stem": "Beschreiben Sie in Stichworten den Wirkmechanismus von Benzodiazepinen am GABA-A-Rezeptor.",
+   "points": [
+    "Allosterische Bindung an eigene Stelle (nicht die GABA-Bindestelle)",
+    "Bindestelle an der α-Untereinheit (α⁺/γ⁻); γ-Untereinheit muss koexprimiert sein",
+    "Nur BZD-sensitive α-Isoformen: α1 hochaffin, α2/3/5 niedrigaffin, α4/α6 insensitiv",
+    "Potenzierung des GABA-induzierten Cl⁻-Stroms",
+    "Erhöhte Öffnungshäufigkeit des Kanals",
+    "Stärkere Hyperpolarisation → verstärkte Inhibition (anxiolytisch, muskelrelaxierend)"
+   ],
+   "explanation": "Benzodiazepine sind positive allosterische Modulatoren: Sie verstärken die Wirkung von GABA (Frequenz ↑), öffnen den Kanal aber nicht selbst wie Barbiturate in hoher Dosis."
+  },
+  {
+   "id": "vl08-gaba-switch-label",
+   "type": "label",
+   "topic": "GABA-Switch in der Entwicklung",
+   "source": "slides",
+   "ref": "VL08 · Folie 15",
+   "stem": "Beschriften Sie das Schema zum Funktionswandel des GABA-A-Rezeptors während der Entwicklung („GABA-Switch“).",
+   "src": {
+    "pdf": "VL08GABA Neurotransmission_04Nov26.pdf",
+    "page": 15,
+    "crop": [
+     178,
+     262,
+     545,
+     472
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      237,
+      266,
+      326,
+      279
+     ],
+     "answer": "unreifes Neuron (Developing neuron)",
+     "accept": [
+      "Developing neuron",
+      "unreifes Neuron",
+      "sich entwickelndes Neuron",
+      "junges Neuron",
+      "embryonales Neuron"
+     ],
+     "x": 15.4,
+     "y": 0.71,
+     "w": 25.61,
+     "h": 8.57
+    },
+    {
+     "box": [
+      408,
+      265,
+      474,
+      280
+     ],
+     "answer": "adultes Neuron (Adult neuron)",
+     "accept": [
+      "Adult neuron",
+      "adultes Neuron",
+      "reifes Neuron",
+      "erwachsenes Neuron"
+     ],
+     "x": 61.99,
+     "y": 0.24,
+     "w": 19.35,
+     "h": 9.52
+    },
+    {
+     "box": [
+      183,
+      326,
+      228,
+      349
+     ],
+     "answer": "NKCC1 (Importer)",
+     "accept": [
+      "NKCC1",
+      "Na-K-2Cl-Cotransporter",
+      "NKCC"
+     ],
+     "x": 0.68,
+     "y": 29.29,
+     "w": 13.62,
+     "h": 13.33
+    },
+    {
+     "box": [
+      395,
+      425,
+      441,
+      446
+     ],
+     "answer": "KCC2 (Exporter)",
+     "accept": [
+      "KCC2",
+      "K-Cl-Symporter",
+      "KCC"
+     ],
+     "x": 58.45,
+     "y": 76.43,
+     "w": 13.9,
+     "h": 12.38
+    },
+    {
+     "box": [
+      189,
+      396,
+      248,
+      408
+     ],
+     "answer": "depolarisierend",
+     "accept": [
+      "depolarizing",
+      "Depolarisation",
+      "depolarisierend",
+      "erregend"
+     ],
+     "x": 2.32,
+     "y": 62.62,
+     "w": 17.44,
+     "h": 8.1
+    },
+    {
+     "box": [
+      425,
+      304,
+      496,
+      317
+     ],
+     "answer": "hyperpolarisierend",
+     "accept": [
+      "hyperpolarizing",
+      "Hyperpolarisation",
+      "hyperpolarisierend",
+      "hemmend"
+     ],
+     "x": 66.62,
+     "y": 18.81,
+     "w": 20.71,
+     "h": 8.57
+    }
+   ],
+   "explanation": "Unreif: NKCC1 importiert Cl⁻ → [Cl⁻]ᵢ hoch → GABA-A-Öffnung führt zu Cl⁻-Ausstrom → Depolarisation. Adult: NKCC1 ↓, KCC2 ↑ (Exporter) → [Cl⁻]ᵢ niedrig → Cl⁻-Einstrom → Hyperpolarisation.",
+   "image": "assets/figures/vl08-gaba-switch-label.webp",
+   "iw": 734,
+   "ih": 420
+  },
+  {
+   "id": "vl08-gaba-switch-combo",
+   "type": "combo",
+   "topic": "GABA-Switch in der Entwicklung",
+   "source": "slides",
+   "ref": "VL08 · Folie 15",
+   "stem": "Welche Aussagen zum „GABA-Switch“ treffen zu?",
+   "statements": [
+    {
+     "t": "In unreifen Neuronen sorgt eine hohe NKCC1-Expression für eine hohe intrazelluläre Cl⁻-Konzentration.",
+     "correct": true
+    },
+    {
+     "t": "In unreifen Neuronen führt die Öffnung von GABA-A-Rezeptoren zu Cl⁻-Ausstrom und Depolarisation.",
+     "correct": true
+    },
+    {
+     "t": "Im adulten Neuron wird KCC2 herunterreguliert, während NKCC1 hochreguliert wird.",
+     "correct": false
+    },
+    {
+     "t": "Laut Folie erfolgt die Umstellung postnatal (ab ca. P4/P5); danach wirkt GABA hyperpolarisierend.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ABCD",
+    "BCD",
+    "AD"
+   ],
+   "explanation": "C vertauscht die Transporter: adult wird NKCC1 herunter- und KCC2 hochreguliert. Die frühe Erregung durch GABA wird für Migration, neuronales Wachstum und Synapsenbildung gebraucht."
+  },
+  {
+   "id": "vl08-gaba-switch-open",
+   "type": "open",
+   "topic": "GABA-Switch in der Entwicklung",
+   "source": "slides",
+   "ref": "VL08 · Folien 14–15",
+   "stem": "Erklären Sie, warum GABA im unreifen Nervensystem erregend wirkt, wozu das gut ist und wie es zum „GABA-Switch“ kommt.",
+   "points": [
+    "Unreife Neurone exprimieren viel NKCC1 (Na-K-2Cl-Cotransporter, Cl⁻-Importer)",
+    "→ hohe intrazelluläre Cl⁻-Konzentration",
+    "GABA-A-Öffnung → Cl⁻-Ausstrom → Depolarisation (Erregung, APs)",
+    "Erregung nötig für Zellmigration, neuronales Wachstum und Synapsenbildung",
+    "Später NKCC1 herunter-, KCC2 (K-Cl-Symporter, Cl⁻-Exporter) hochreguliert",
+    "→ niedrige [Cl⁻]ᵢ → Cl⁻-Einstrom → Hyperpolarisation (Inhibition)",
+    "Inhibition verhindert unkontrollierte Übererregung im fertig verschalteten Gehirn"
+   ],
+   "explanation": "Entscheidend ist nicht der Rezeptor, sondern der Cl⁻-Gradient, der durch das Verhältnis von NKCC1 zu KCC2 festgelegt wird."
+  },
+  {
+   "id": "vl08-kcc2-knockout",
+   "type": "single",
+   "topic": "GABA-Switch in der Entwicklung",
+   "source": "slides",
+   "ref": "VL08 · Folie 15",
+   "stem": "In einem Neuron wird KCC2 experimentell ausgeschaltet, NKCC1 bleibt hoch exprimiert. Welche Wirkung hat GABA an GABA-A-Rezeptoren am ehesten?",
+   "options": [
+    {
+     "t": "Depolarisierend, weil Cl⁻ wegen der hohen intrazellulären Konzentration ausströmt",
+     "correct": true
+    },
+    {
+     "t": "Hyperpolarisierend, weil Cl⁻ entlang seines Gradienten in die Zelle einströmt",
+     "correct": false
+    },
+    {
+     "t": "Keine, weil GABA-A-Rezeptoren ohne KCC2 nicht in die Membran gelangen",
+     "correct": false
+    },
+    {
+     "t": "Hyperpolarisierend, weil K⁺ über den GABA-A-Rezeptor ausströmt",
+     "correct": false
+    }
+   ],
+   "explanation": "Ohne den Cl⁻-Exporter KCC2 und mit aktivem Importer NKCC1 bleibt [Cl⁻]ᵢ hoch – wie im unreifen Neuron. Die Öffnung des Cl⁻-Kanals führt dann zu Cl⁻-Ausstrom und Depolarisation."
+  },
+  {
+   "id": "vl08-gabab-ws2526",
+   "type": "multi",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL08 · Folien 17, 20–21",
+   "stem": "Welche Aussagen zu GABA-B-Rezeptoren treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Sie sind im Cortex geringer exprimiert als GABA-A-Rezeptoren.",
+     "correct": true
+    },
+    {
+     "t": "Sie funktionieren nur als Heterodimere.",
+     "correct": true
+    },
+    {
+     "t": "Sie können auch funktionelle Homodimere bilden.",
+     "correct": false
+    },
+    {
+     "t": "B1 vermittelt G-Protein-Kopplung und Ligandbindung, B2 bindet allosterische Modulatoren.",
+     "correct": false
+    },
+    {
+     "t": "B1 bindet den Liganden, B2 koppelt an das G-Protein.",
+     "correct": true
+    },
+    {
+     "t": "Intrazelluläre Modulatoren verändern die Antwort.",
+     "correct": true
+    },
+    {
+     "t": "B1 und B2 werden in denselben Zellen koexprimiert.",
+     "correct": true
+    }
+   ],
+   "explanation": "Nur B1/B2-Heterodimere zeigen die Eigenschaften nativer GABA-B-Rezeptoren („obligatorische“ Heterodimere), Homodimere sind nicht funktionell. GABA bindet an B1; B2 koppelt an das G-Protein und bindet allosterische Modulatoren. Intrazellulär lagern sich KCTD-Proteine an und verändern Potenz und Kinetik. Expression (Folie 17): im Gehirn insgesamt GABA-A : GABA-B ≈ 50 : 50, in Hirnstamm, Thalamuskernen, Kleinhirn und Rückenmark aber 90 % GABA-B – im Cortex überwiegen also GABA-A-Rezeptoren.",
+   "note": "WS25/26, Block „GABA-B Rezeptoren“; Anzahl richtiger Antworten im Protokoll nicht angegeben. Aussage 1 (Cortex) steht so nicht auf den Folien – aus Folie 17 erschlossen (Gesamtverhältnis 50:50, subkortikal 90 % GABA-B → Cortex GABA-A-dominiert)."
+  },
+  {
+   "id": "vl08-gabab-heterodimer-label",
+   "type": "label",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "slides",
+   "ref": "VL08 · Folie 20",
+   "stem": "Beschriften Sie den GABA-B-Rezeptor-Komplex.",
+   "src": {
+    "pdf": "VL08GABA Neurotransmission_04Nov26.pdf",
+    "page": 20,
+    "crop": [
+     0,
+     75,
+     352,
+     540
+    ]
+   },
+   "labels": [
+    {
+     "find": "GABA B 1 a",
+     "answer": "GABA-B1a",
+     "accept": [
+      "GABAB1a",
+      "B1a",
+      "GABA B1a"
+     ],
+     "x": 2.3,
+     "y": 0.71,
+     "w": 21.69,
+     "h": 6.83
+    },
+    {
+     "find": "GABA B 1 b",
+     "answer": "GABA-B1b",
+     "accept": [
+      "GABAB1b",
+      "B1b",
+      "GABA B1b"
+     ],
+     "x": 6.77,
+     "y": 11.24,
+     "w": 21.86,
+     "h": 6.83
+    },
+    {
+     "find": "GABA B 2",
+     "answer": "GABA-B2",
+     "accept": [
+      "GABAB2",
+      "B2",
+      "GABA B2"
+     ],
+     "x": 72.26,
+     "y": 9.54,
+     "w": 19.97,
+     "h": 6.83
+    },
+    {
+     "box": [
+      110,
+      197,
+      135,
+      210
+     ],
+     "answer": "GABA (Ligand)",
+     "accept": [
+      "GABA",
+      "Ligand"
+     ],
+     "x": 30.54,
+     "y": 25.7,
+     "w": 8.52,
+     "h": 3.87
+    },
+    {
+     "box": [
+      180,
+      188,
+      228,
+      224
+     ],
+     "answer": "Venus-Fliegenfallen-Modul (VFTM)",
+     "accept": [
+      "Venus flytrap",
+      "Venus-Flytrap",
+      "VFTM",
+      "Venus fly trap",
+      "Venusfliegenfalle"
+     ],
+     "x": 50.43,
+     "y": 23.76,
+     "w": 15.06,
+     "h": 8.82
+    },
+    {
+     "find": "allosteric modulators",
+     "answer": "allosterische Modulatoren",
+     "accept": [
+      "allosteric modulators",
+      "Modulatoren",
+      "allosterische Bindestelle"
+     ],
+     "x": 56.44,
+     "y": 44.16,
+     "w": 19.86,
+     "h": 7.82
+    },
+    {
+     "find": "coiled-coil dimerization domain",
+     "answer": "Coiled-coil-Dimerisierungsdomäne",
+     "accept": [
+      "coiled-coil",
+      "coiled coil",
+      "Dimerisierungsdomäne",
+      "coiled-coil dimerization domain"
+     ],
+     "x": 19.07,
+     "y": 70.22,
+     "w": 24.03,
+     "h": 14.12
+    },
+    {
+     "find": "G-protein",
+     "answer": "G-Protein (Gi/o)",
+     "accept": [
+      "G-Protein",
+      "G protein",
+      "Gi/o",
+      "Gi",
+      "Go"
+     ],
+     "x": 60.83,
+     "y": 74.2,
+     "w": 16.96,
+     "h": 5.03
+    },
+    {
+     "find": "KCTD",
+     "answer": "KCTD (Hilfsuntereinheiten)",
+     "accept": [
+      "KCTD",
+      "KCTD-Proteine",
+      "auxiliary subunits"
+     ],
+     "x": 79.67,
+     "y": 71.07,
+     "w": 11.56,
+     "h": 5.03
+    },
+    {
+     "find": "ER-retention signal",
+     "answer": "ER-Retentionssignal",
+     "accept": [
+      "ER-retention signal",
+      "ER retention",
+      "ER-Retention",
+      "Retentionssignal"
+     ],
+     "x": 61.25,
+     "y": 92.77,
+     "w": 37.08,
+     "h": 5.52
+    }
+   ],
+   "explanation": "B1 (a/b) bindet GABA in seiner Venus-Fliegenfalle, B2 koppelt an das G-Protein und bindet allosterische Modulatoren. Die Coiled-coil-Domäne maskiert das ER-Retentionssignal – nur Dimere gelangen in die Membran. B1a trägt Sushi-Domänen (präsynaptisches Targeting).",
+   "image": "assets/figures/vl08-gabab-heterodimer-label.webp",
+   "iw": 704,
+   "ih": 930
+  },
+  {
+   "id": "vl08-gabab-familie-c",
+   "type": "single",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "slides",
+   "ref": "VL08 · Folie 19",
+   "stem": "GABA-B-Rezeptoren gehören zur Gruppe (c) der metabotropen Rezeptoren mit großer extrazellulärer „Venus-Fliegenfallen“-Domäne (VFTM). Welcher Rezeptor gehört <b>nicht</b> zu dieser Gruppe?",
+   "options": [
+    {
+     "t": "Rhodopsin",
+     "correct": true
+    },
+    {
+     "t": "metabotrope Glutamatrezeptoren",
+     "correct": false
+    },
+    {
+     "t": "Geschmacksrezeptoren (süß, umami)",
+     "correct": false
+    },
+    {
+     "t": "Ca²⁺-sensing-Rezeptor",
+     "correct": false
+    },
+    {
+     "t": "Pheromonrezeptoren",
+     "correct": false
+    }
+   ],
+   "explanation": "Gruppe (c): Glutamat-, GABA-B-, Geschmacks- (süß/umami), Pheromon- und Ca²⁺-sensing-Rezeptoren – große VFTM, bilden Dimere. Rhodopsin (Retinal + Opsin) gehört zur Gruppe (a); dort liegt der Ligand innerhalb der 7TM-Domäne."
+  },
+  {
+   "id": "vl08-gabab-domaenen",
+   "type": "combo",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "slides",
+   "ref": "VL08 · Folie 20",
+   "stem": "Welche Aussagen zu den Domänen und Isoformen des GABA-B-Rezeptors treffen zu?",
+   "statements": [
+    {
+     "t": "Die Sushi-Domänen von B1a lenken den Rezeptor in die Axonterminale (präsynaptisch).",
+     "correct": true
+    },
+    {
+     "t": "Ein maskiertes ER-Retentionssignal sorgt dafür, dass nur dimerisierte Rezeptoren in die Membran gelangen.",
+     "correct": true
+    },
+    {
+     "t": "Die Dimerisierung erfolgt über eine Coiled-coil-Domäne der C-Termini.",
+     "correct": true
+    },
+    {
+     "t": "B1a findet sich nur postsynaptisch, B1b nur präsynaptisch.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "ACD"
+   ],
+   "explanation": "B1a: präsynaptisch (Sushi-Domänen → Axonterminale); B1b: prä- und postsynaptisch. Die Coiled-coil-Interaktion von B1 und B2 maskiert das ER-Retentionssignal – eine Qualitätskontrolle für funktionelle Heterodimere."
+  },
+  {
+   "id": "vl08-kctd",
+   "type": "multi",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "slides",
+   "ref": "VL08 · Folie 21",
+   "stem": "Welche Aussagen zu den KCTD-Proteinen treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Sie lagern sich als Tetramere an den C-Terminus von GABA-B2 bzw. das G-Protein an.",
+     "correct": true
+    },
+    {
+     "t": "Sie erhöhen die Agonisten-Potenz (allosterische Interaktion).",
+     "correct": true
+    },
+    {
+     "t": "Sie beschleunigen den Beginn der Antwort und fördern je nach Subtyp eine schnelle Desensitisierung.",
+     "correct": true
+    },
+    {
+     "t": "Ihre Expression variiert zwischen Neuronenpopulationen und im Lauf der Entwicklung.",
+     "correct": true
+    },
+    {
+     "t": "Sie binden extrazellulär an die Venus-Fliegenfallen-Domäne von GABA-B1.",
+     "correct": false
+    },
+    {
+     "t": "Sie bilden selbst die Pore des GIRK-K⁺-Kanals.",
+     "correct": false
+    }
+   ],
+   "explanation": "KCTD = „potassium channel tetramerization domain-containing proteins“ (KCTD8, 12, 12b, 16) – trotz des Namens keine Kanäle, sondern Hilfsuntereinheiten. Take-home: Sie bestimmen Pharmakologie und Kinetik der GABA-B-Antwort und erhöhen deren funktionelle Diversität."
+  },
+  {
+   "id": "vl08-gabab-aktivierung-order",
+   "type": "order",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "slides",
+   "ref": "VL08 · Folie 22",
+   "stem": "Bringen Sie die Schritte der GABA-B-Rezeptor-Aktivierung in die richtige Reihenfolge.",
+   "items": [
+    "GABA bindet in die offene Bindetasche von GABA-B1 (Konformationsänderung, durch Ca²⁺ stabilisiert)",
+    "GABA-B1 interagiert über Coiled-coil-Domäne und TMs mit GABA-B2 (Ruhe → aktiver Zustand)",
+    "Konformationsänderung aktiviert das G-Protein (Gi/o)",
+    "Dissoziation von Gα und Gβγ",
+    "Gα und Gβγ beeinflussen ihre jeweiligen Effektoren"
+   ],
+   "explanation": "Ligandbindung an B1, Signalweitergabe an B2, das das G-Protein aktiviert. Danach wirken Gα (Adenylylcyclase ↓) und Gβγ (GIRK ↑, Ca²⁺-Kanäle ↓) getrennt."
+  },
+  {
+   "id": "vl08-gabab-heterodimer-open",
+   "type": "open",
+   "topic": "GABA-B: Struktur & Heterodimer",
+   "source": "slides",
+   "ref": "VL08 · Folien 17, 20",
+   "stem": "Warum bezeichnet man GABA-B-Rezeptoren als „obligatorische Heterodimere“? Beschreiben Sie die Aufgaben von B1 und B2.",
+   "points": [
+    "Nur B1/B2-Heterodimere zeigen die Eigenschaften nativer GABA-B-Rezeptoren (GABA-Affinität, Physiologie, Second-Messenger-Kopplung)",
+    "B1 (B1a/B1b) bindet GABA in seiner Venus-Fliegenfallen-Domäne",
+    "B2 koppelt an das G-Protein (Gi/o)",
+    "B2 bindet allosterische Modulatoren",
+    "Dimerisierung über die Coiled-coil-Domäne maskiert das ER-Retentionssignal → nur Dimere gelangen in die Membran",
+    "B1a trägt Sushi-Domänen → Targeting in Axonterminale (präsynaptisch)"
+   ],
+   "explanation": "B1 und B2 sind funktionell verschieden (nur 35 % Sequenzhomologie) und werden in denselben Zellen koexprimiert."
+  },
+  {
+   "id": "vl08-gabab-effektor-label",
+   "type": "label",
+   "topic": "GABA-B: Signalwege prä/post",
+   "source": "slides",
+   "ref": "VL08 · Folie 26",
+   "stem": "Beschriften Sie die an den GABA-B-Rezeptor gekoppelten Effektorsysteme.",
+   "src": {
+    "pdf": "VL08GABA Neurotransmission_04Nov26.pdf",
+    "page": 26,
+    "crop": [
+     193,
+     112,
+     668,
+     508
+    ],
+    "hide": [
+     [
+      193,
+      112,
+      301,
+      338
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      491,
+      241,
+      576,
+      256
+     ],
+     "answer": "Pertussistoxin",
+     "accept": [
+      "Pertussis toxin",
+      "Pertussistoxin",
+      "PTX",
+      "Pertussis"
+     ],
+     "x": 62.21,
+     "y": 31.94,
+     "w": 18.95,
+     "h": 5.05
+    },
+    {
+     "box": [
+      388,
+      313,
+      466,
+      330
+     ],
+     "answer": "Gi/Go-Protein",
+     "accept": [
+      "Gi/Go",
+      "Gi/o",
+      "Gi",
+      "Go",
+      "G-Protein"
+     ],
+     "x": 40.53,
+     "y": 50.13,
+     "w": 17.47,
+     "h": 5.56
+    },
+    {
+     "box": [
+      289,
+      350,
+      351,
+      366
+     ],
+     "answer": "Gα-Untereinheit",
+     "accept": [
+      "Gα",
+      "G alpha",
+      "alpha",
+      "α-Untereinheit",
+      "Galpha"
+     ],
+     "x": 19.68,
+     "y": 59.47,
+     "w": 14.11,
+     "h": 5.3
+    },
+    {
+     "box": [
+      436,
+      383,
+      501,
+      400
+     ],
+     "answer": "Gβγ-Untereinheit (→ Ca²⁺-Kanäle)",
+     "accept": [
+      "Gβγ",
+      "βγ",
+      "beta gamma",
+      "Gbetagamma",
+      "βγ-Untereinheit"
+     ],
+     "x": 50.63,
+     "y": 67.8,
+     "w": 14.74,
+     "h": 5.56
+    },
+    {
+     "box": [
+      502,
+      350,
+      568,
+      366
+     ],
+     "answer": "Gβγ-Untereinheit (→ K⁺-Kanäle)",
+     "accept": [
+      "Gβγ",
+      "βγ",
+      "beta gamma",
+      "Gbetagamma",
+      "βγ-Untereinheit"
+     ],
+     "x": 64.53,
+     "y": 59.47,
+     "w": 14.95,
+     "h": 5.3
+    },
+    {
+     "box": [
+      203,
+      407,
+      313,
+      425
+     ],
+     "answer": "Adenylylcyclase ↓",
+     "accept": [
+      "Adenylyl cyclase",
+      "Adenylatcyclase",
+      "Adenylylcyclase",
+      "AC"
+     ],
+     "x": 1.58,
+     "y": 73.86,
+     "w": 24.21,
+     "h": 5.81
+    },
+    {
+     "box": [
+      358,
+      454,
+      482,
+      486
+     ],
+     "answer": "spannungsabhängige Ca²⁺-Kanäle ↓",
+     "accept": [
+      "Voltage-dependent calcium channels",
+      "Calciumkanäle",
+      "Ca-Kanäle",
+      "VGCC",
+      "spannungsgesteuerte Ca2+-Kanäle"
+     ],
+     "x": 34.21,
+     "y": 85.73,
+     "w": 27.16,
+     "h": 9.34
+    },
+    {
+     "box": [
+      528,
+      407,
+      654,
+      425
+     ],
+     "answer": "K⁺-Kanäle ↑ (GIRK)",
+     "accept": [
+      "Potassium channels",
+      "Kaliumkanäle",
+      "K-Kanäle",
+      "GIRK",
+      "K+-Kanäle"
+     ],
+     "x": 70.0,
+     "y": 73.86,
+     "w": 27.58,
+     "h": 5.81
+    }
+   ],
+   "bank": [
+    "Phospholipase C ↑",
+    "Gq-Protein"
+   ],
+   "explanation": "GABA-B koppelt an Gi/Go (Pertussistoxin-sensitiv): Gα hemmt die Adenylylcyclase (cAMP ↓), Gβγ öffnet K⁺-Kanäle (GIRK) und hemmt spannungsabhängige Ca²⁺-Kanäle.",
+   "image": "assets/figures/vl08-gabab-effektor-label.webp",
+   "iw": 950,
+   "ih": 792
+  },
+  {
+   "id": "vl08-gabab-postsynaptisch",
+   "type": "multi",
+   "topic": "GABA-B: Signalwege prä/post",
+   "source": "slides",
+   "ref": "VL08 · Folien 28–30",
+   "stem": "Welche Effekte hat die Aktivierung <i>postsynaptischer</i> GABA-B-Rezeptoren? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Gαi/o hemmt die Adenylylcyclase → cAMP ↓",
+     "correct": true
+    },
+    {
+     "t": "Weniger PKA → weniger Phosphorylierung (z. B. NMDA-R an Spines)",
+     "correct": true
+    },
+    {
+     "t": "Gβγ öffnet GIRK-Kanäle → K⁺-Ausstrom → Hyperpolarisation",
+     "correct": true
+    },
+    {
+     "t": "Gα öffnet direkt Cl⁻-Kanäle → Cl⁻-Einstrom",
+     "correct": false
+    },
+    {
+     "t": "Gαq aktiviert die PLC → IP3 → Ca²⁺-Freisetzung",
+     "correct": false
+    },
+    {
+     "t": "Gβγ öffnet spannungsabhängige Ca²⁺-Kanäle → Ca²⁺-Einstrom",
+     "correct": false
+    }
+   ],
+   "explanation": "Postsynaptisch: Effektorsystem I (Gα → AC ↓ → cAMP ↓ → PKA ↓) und II (Gβγ → GIRK, „G-protein-activated inwardly rectifying K⁺ channel“ → langsames IPSP). Cl⁻-Ströme gehören zu GABA-A; Ca²⁺-Kanäle werden durch Gβγ gehemmt, nicht geöffnet."
+  },
+  {
+   "id": "vl08-gabab-praesynaptisch-open",
+   "type": "open",
+   "topic": "GABA-B: Signalwege prä/post",
+   "source": "slides",
+   "ref": "VL08 · Folien 31–33",
+   "stem": "Beschreiben Sie in Stichworten die präsynaptische Wirkung von GABA-B-Rezeptoren. Wie unterscheidet sich die postsynaptische Folge bei Auto- bzw. Heterorezeptoren?",
+   "points": [
+    "GABA bindet an präsynaptische GABA-B-Rezeptoren",
+    "Aktivierung von Gi/Go, Trennung in Gα und Gβγ",
+    "Gβγ bindet an spannungsgesteuerte Ca²⁺-Kanäle und verändert deren Spannungsabhängigkeit",
+    "Geringeres Gating → weniger Ca²⁺-Einstrom in die Präsynapse",
+    "→ verminderte Transmitterfreisetzung",
+    "Autorezeptor (GABAerge Endigung): postsynaptisch weniger Inhibition",
+    "Heterorezeptor (z. B. glutamaterge Endigung): postsynaptisch weniger Exzitation"
+   ],
+   "explanation": "Präsynaptisch zählt vor allem der Gβγ-Effekt auf Cav2-Kanäle. Derselbe Mechanismus gilt für präsynaptische mGluR der Gruppen II/III (VL09)."
+  },
+  {
+   "id": "vl08-auto-hetero-combo",
+   "type": "combo",
+   "topic": "GABA-B: Signalwege prä/post",
+   "source": "slides",
+   "ref": "VL08 · Folien 26, 31–33",
+   "stem": "Welche Aussagen zu GABA-B-Rezeptoren treffen zu?",
+   "statements": [
+    {
+     "t": "Präsynaptische GABA-B-Autorezeptoren an GABAergen Endigungen führen postsynaptisch zu weniger Inhibition.",
+     "correct": true
+    },
+    {
+     "t": "GABA-B-Heterorezeptoren an glutamatergen Endigungen führen postsynaptisch zu weniger Exzitation.",
+     "correct": true
+    },
+    {
+     "t": "Die präsynaptische Hemmung beruht hauptsächlich auf der Gα-vermittelten Öffnung präsynaptischer K⁺-Kanäle.",
+     "correct": false
+    },
+    {
+     "t": "Pertussistoxin unterbricht die Signalübertragung zwischen GABA-B-Rezeptor und G-Protein.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ABCD",
+    "AD",
+    "BCD"
+   ],
+   "explanation": "Präsynaptisch bindet Gβγ an spannungsgesteuerte Ca²⁺-Kanäle → weniger Ca²⁺-Einstrom → weniger Freisetzung. Pertussistoxin entkoppelt Gi/o-gekoppelte Rezeptoren vom G-Protein."
+  },
+  {
+   "id": "vl08-gabab-summary-label",
+   "type": "label",
+   "topic": "GABA-B: Signalwege prä/post",
+   "source": "slides",
+   "ref": "VL08 · Folie 34",
+   "stem": "Beschriften Sie die Übersicht zu subzellulärer Lokalisation und Funktionen der GABA-B-Rezeptoren.",
+   "src": {
+    "pdf": "VL08GABA Neurotransmission_04Nov26.pdf",
+    "page": 34,
+    "crop": [
+     0,
+     70,
+     720,
+     478
+    ],
+    "hide": [
+     [
+      642,
+      385,
+      668,
+      400
+     ],
+     [
+      458,
+      217,
+      491,
+      232
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      0,
+      218,
+      84,
+      270
+     ],
+     "answer": "präsynaptische Hemmung (Autorezeptor)",
+     "accept": [
+      "autoreceptor",
+      "Autorezeptor",
+      "presynaptic inhibition autoreceptor"
+     ],
+     "x": -0.35,
+     "y": 35.66,
+     "w": 12.36,
+     "h": 13.97
+    },
+    {
+     "box": [
+      624,
+      150,
+      719,
+      198
+     ],
+     "answer": "präsynaptische Hemmung (Heterorezeptor)",
+     "accept": [
+      "heteroreceptor",
+      "Heterorezeptor",
+      "presynaptic inhibition heteroreceptor"
+     ],
+     "x": 86.32,
+     "y": 19.0,
+     "w": 13.89,
+     "h": 12.99
+    },
+    {
+     "box": [
+      251,
+      305,
+      286,
+      321
+     ],
+     "answer": "GAT1",
+     "accept": [
+      "GAT-1",
+      "GAT 1"
+     ],
+     "x": 34.51,
+     "y": 56.99,
+     "w": 5.56,
+     "h": 5.15
+    },
+    {
+     "box": [
+      314,
+      294,
+      352,
+      310
+     ],
+     "answer": "GAT3",
+     "accept": [
+      "GAT-3",
+      "GAT 3"
+     ],
+     "x": 43.26,
+     "y": 54.29,
+     "w": 5.97,
+     "h": 5.15
+    },
+    {
+     "box": [
+      212,
+      381,
+      237,
+      396
+     ],
+     "answer": "Kir3 (GIRK)",
+     "accept": [
+      "Kir3",
+      "GIRK",
+      "K+-Kanal",
+      "Kaliumkanal",
+      "GIRK-Kanal"
+     ],
+     "x": 29.1,
+     "y": 75.61,
+     "w": 4.17,
+     "h": 4.9
+    },
+    {
+     "box": [
+      105,
+      303,
+      138,
+      317
+     ],
+     "answer": "Cav2 (präsynaptischer Ca²⁺-Kanal)",
+     "accept": [
+      "Cav2",
+      "Ca-Kanal",
+      "VGCC",
+      "Cav2.1",
+      "Cav2.2"
+     ],
+     "x": 14.24,
+     "y": 56.5,
+     "w": 5.28,
+     "h": 4.66
+    },
+    {
+     "box": [
+      478,
+      416,
+      541,
+      431
+     ],
+     "answer": "langsames IPSP (slow IPSP)",
+     "accept": [
+      "slow IPSP",
+      "langsames IPSP",
+      "IPSP"
+     ],
+     "x": 66.04,
+     "y": 84.19,
+     "w": 9.44,
+     "h": 4.9
+    },
+    {
+     "box": [
+      555,
+      235,
+      604,
+      249
+     ],
+     "answer": "NMDA-Rezeptor",
+     "accept": [
+      "NMDAR",
+      "NMDA",
+      "NMDA-R"
+     ],
+     "x": 76.74,
+     "y": 39.83,
+     "w": 7.5,
+     "h": 4.66
+    },
+    {
+     "box": [
+      482,
+      296,
+      565,
+      312
+     ],
+     "answer": "PKA-cAMP-AC (gehemmt)",
+     "accept": [
+      "PKA-cAMP-AC",
+      "PKA",
+      "cAMP",
+      "Adenylylcyclase",
+      "AC"
+     ],
+     "x": 66.6,
+     "y": 54.78,
+     "w": 12.22,
+     "h": 5.15
+    }
+   ],
+   "explanation": "Präsynaptisch hemmen GABA-B-Rezeptoren Cav2-Kanäle (Auto- bzw. Heterorezeptor). Postsynaptisch öffnen sie Kir3/GIRK (langsames IPSP) und hemmen über AC-cAMP-PKA die Phosphorylierung des NMDA-Rezeptors im Spine. In dieser Abbildung nehmen GAT1 und GAT3 am Astrozytenfortsatz GABA auf und beenden so das Signal. Allgemein gilt laut Folie 41: GAT1 sitzt vorwiegend neuronal in präsynaptischen GABAergen Terminalen, GAT3 nur in Glia.",
+   "image": "assets/figures/vl08-gabab-summary-label.webp",
+   "iw": 1400,
+   "ih": 793
+  },
+  {
+   "id": "vl08-ipsp-ionen",
+   "type": "single",
+   "topic": "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL08 · Folien 29, 36, 38",
+   "stem": "Was stimmt über (postsynaptische) GABA-A- (A) und GABA-B-Rezeptoren (B)?",
+   "options": [
+    {
+     "t": "Bei B gibt es nur Chlorid-Strom.",
+     "correct": false
+    },
+    {
+     "t": "Bei A gibt es K⁺-Strom.",
+     "correct": false
+    },
+    {
+     "t": "A vermittelt das IPSP über Cl⁻-Strom und B über K⁺-Strom.",
+     "correct": true
+    },
+    {
+     "t": "Beide vermitteln das IPSP über Cl⁻-Strom.",
+     "correct": false
+    },
+    {
+     "t": "B vermittelt das IPSP über Ca²⁺.",
+     "correct": false
+    }
+   ],
+   "explanation": "GABA-A ist ein ligandengesteuerter Cl⁻-Kanal (schnelles IPSP, Cl⁻-Einstrom). GABA-B ist Gi/o-gekoppelt; Gβγ öffnet GIRK-K⁺-Kanäle (langsames IPSP, K⁺-Auswärtsstrom). Ca²⁺-Ströme werden durch GABA-B gehemmt.",
+   "note": "WS23/24 Frage 22; Lösung im Protokoll „vergessen“ – aus den Folien abgeleitet."
+  },
+  {
+   "id": "vl08-ipsp-kinetik",
+   "type": "single",
+   "topic": "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+   "source": "slides",
+   "ref": "VL08 · Folie 36",
+   "stem": "Welche Aussage zum Zeitverlauf der GABA-vermittelten Hyperpolarisation trifft zu?",
+   "options": [
+    {
+     "t": "GABA-A: Latenz ca. 3 ms, nach 50–75 ms abgeklungen; GABA-B: Maximum erst nach 150–200 ms, zurück auf Baseline nach ca. 1000 ms.",
+     "correct": true
+    },
+    {
+     "t": "GABA-B: Latenz ca. 3 ms, nach 50–75 ms abgeklungen; GABA-A: Maximum erst nach 150–200 ms, zurück auf Baseline nach ca. 1000 ms.",
+     "correct": false
+    },
+    {
+     "t": "Beide Antworten haben eine Latenz von 15–35 ms und kehren nach ca. 1000 ms zur Baseline zurück.",
+     "correct": false
+    },
+    {
+     "t": "Beide Antworten haben eine Latenz von ca. 3 ms; nur ihre Amplitude unterscheidet sich.",
+     "correct": false
+    }
+   ],
+   "explanation": "GABA-A (ionotrop): Latenz 3 ms, Peak 15–25 ms, Baseline 50–75 ms – „fast kinetics“. GABA-B (G-Protein-Kaskade): Latenz 15–35 ms, Peak 150–200 ms, Baseline ~1000 ms – „slow kinetics“."
+  },
+  {
+   "id": "vl08-picrotoxin-experiment",
+   "type": "single",
+   "topic": "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+   "source": "slides",
+   "ref": "VL08 · Folie 37",
+   "stem": "Im Gyrus dentatus löst die Reizung inhibitorischer Fasern in Körnerzellen ein IPSP mit früher (A) und später (B) Komponente aus (Glutamatrezeptoren mit DNQX + D-APV blockiert). Was bleibt nach zusätzlicher Gabe von Picrotoxin übrig?",
+   "options": [
+    {
+     "t": "Nur die späte, langsame Komponente B (GABA-B-vermittelt)",
+     "correct": true
+    },
+    {
+     "t": "Nur die frühe, schnelle Komponente A (GABA-A-vermittelt)",
+     "correct": false
+    },
+    {
+     "t": "Kein IPSP mehr, da Picrotoxin GABA-A und GABA-B blockiert",
+     "correct": false
+    },
+    {
+     "t": "Beide Komponenten unverändert, da Picrotoxin nur an GABA-Aρ wirkt",
+     "correct": false
+    }
+   ],
+   "explanation": "Picrotoxin blockiert den GABA-A-Kanal (M2-Segment) → die schnelle Komponente A fällt weg. Erst 2-OH-Saclofen (GABA-B-Antagonist) hebt auch B auf. Umgekehrt bleibt nach Saclofen allein nur die GABA-A-Komponente A."
+  },
+  {
+   "id": "vl08-pharmaka-zuordnung",
+   "type": "multi",
+   "topic": "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+   "source": "slides",
+   "ref": "VL08 · Folie 38",
+   "stem": "Welche Zuordnungen von Substanz und Wirkung sind korrekt? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Baclofen – spezifischer GABA-B-Agonist",
+     "correct": true
+    },
+    {
+     "t": "Bicucullin – kompetitiver GABA-A-Antagonist",
+     "correct": true
+    },
+    {
+     "t": "Picrotoxin – Kanalblocker (M2-Segment) von GABA-A/GABA-Aρ",
+     "correct": true
+    },
+    {
+     "t": "Muscimol – spezifischer GABA-A-Agonist",
+     "correct": true
+    },
+    {
+     "t": "Phaclofen – Kanalblocker des GABA-A-Rezeptors",
+     "correct": false
+    },
+    {
+     "t": "Benzodiazepine – kompetitive GABA-B-Antagonisten",
+     "correct": false
+    }
+   ],
+   "explanation": "Tabelle Folie 38: GABA-A – Agonist Muscimol, Antagonist Bicucullin, Kanalblocker Picrotoxin, Modulatoren BZD/Barbiturate. GABA-B – Agonist Baclofen, Antagonisten Phaclofen/CGP64213, allosterische Modulatoren an B2."
+  },
+  {
+   "id": "vl08-gabaa-rho",
+   "type": "single",
+   "topic": "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+   "source": "slides",
+   "ref": "VL08 · Folie 38",
+   "stem": "Welche Aussage zum Vergleich von GABA-A- und GABA-Aρ-Rezeptoren trifft <b>nicht</b> zu?",
+   "options": [
+    {
+     "t": "GABA-Aρ-Rezeptoren werden durch Benzodiazepine stark potenziert.",
+     "correct": true
+    },
+    {
+     "t": "GABA-Aρ-Rezeptoren haben eine höhere GABA-Affinität (EC50 1–4 µM statt 10–100 µM).",
+     "correct": false
+    },
+    {
+     "t": "GABA-Aρ-Kanäle haben eine kleinere Leitfähigkeit (7 statt 30 pS) und bleiben länger offen.",
+     "correct": false
+    },
+    {
+     "t": "Beide sind Cl⁻-Kanäle, die von Picrotoxin blockiert werden.",
+     "correct": false
+    }
+   ],
+   "explanation": "Für GABA-Aρ (ρ1–3) sind keine Modulatoren wie Benzodiazepine aufgeführt. Es ist ein hochaffiner, langsam aktivierender Cl⁻-Kanal (150 ms offen) mit eigenen Antagonisten (3-APA, 3-APMPA)."
+  },
+  {
+   "id": "vl08-gabaa-gabab-vergleich-open",
+   "type": "open",
+   "topic": "GABA-A vs. GABA-B: Physiologie & Pharmakologie",
+   "source": "slides",
+   "ref": "VL08 · Folien 36–38",
+   "stem": "Nennen Sie 4 Unterschiede zwischen GABA-A- und GABA-B-Rezeptoren.",
+   "points": [
+    "Typ: GABA-A ionotrop (ligandengesteuerter Kanal) – GABA-B metabotrop (7TM, G-Protein-gekoppelt)",
+    "Aufbau: GABA-A Pentamer (α1–6, β1–3, γ1–3 …) – GABA-B obligates Heterodimer B1/B2",
+    "Ionen: GABA-A Cl⁻-Einstrom – GABA-B K⁺-Ausstrom (GIRK) und Ca²⁺-Strom ↓",
+    "Kinetik: GABA-A schnell (Latenz 3 ms, Ende nach 50–75 ms) – GABA-B langsam (Latenz 15–35 ms, ca. 1 s)",
+    "Second Messenger: GABA-B über Gi/Go → AC ↓, cAMP ↓ – GABA-A keiner",
+    "Pharmakologie: GABA-A Muscimol/Bicucullin/Picrotoxin/BZD – GABA-B Baclofen/Phaclofen",
+    "GABA-B wirkt auch präsynaptisch als Auto-/Heterorezeptor (Freisetzung ↓)"
+   ],
+   "need": 4,
+   "explanation": "Beide vermitteln Hemmung, aber GABA-A schnell und kurz über Cl⁻, GABA-B langsam und lang über G-Proteine (K⁺ ↑, Ca²⁺ ↓, cAMP ↓)."
+  },
+  {
+   "id": "vl08-gat-genfamilien",
+   "type": "multi",
+   "topic": "GABA-Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 40",
+   "stem": "Welche Aussagen zu den Genfamilien der Neurotransmitter-Transporter treffen zu? (mehrere richtig)",
+   "options": [
+    {
+     "t": "Die Plasmamembran-GABA-Transporter GAT1, GAT2 und GAT3 gehören zur SLC6-Familie.",
+     "correct": true
+    },
+    {
+     "t": "Zur SLC6-Familie gehören auch DAT, NET, SERT sowie GlyT1/2.",
+     "correct": true
+    },
+    {
+     "t": "GABA und Glycin werden vom gemeinsamen vesikulären Transporter vIAAT aufgenommen.",
+     "correct": true
+    },
+    {
+     "t": "SLC6-Transporter sind Na⁺- (und Cl⁻-)abhängig.",
+     "correct": true
+    },
+    {
+     "t": "Vesikuläre Transporter werden durch einen Na⁺-Gradienten angetrieben.",
+     "correct": false
+    },
+    {
+     "t": "GAT1 ist ein vesikulärer Transporter der SLC32-Familie.",
+     "correct": false
+    }
+   ],
+   "explanation": "SLC6: Plasmamembran-Transporter (Na⁺/Cl⁻-Kotransport). SLC18/SLC32: vesikuläre Transporter (VMAT1/2, VAChT, VIAAT) – H⁺-Antiporter."
+  },
+  {
+   "id": "vl08-gat-lokalisation",
+   "type": "combo",
+   "topic": "GABA-Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folien 41–42",
+   "stem": "Welche Aussagen zur Lokalisation der GABA-Transporter treffen zu?",
+   "statements": [
+    {
+     "t": "GAT1 findet sich vorwiegend neuronal in präsynaptischen (GABAergen) Axonterminalen.",
+     "correct": true
+    },
+    {
+     "t": "GAT3 kommt nur in Glia vor, v. a. in astrozytären Fortsätzen nahe der Synapsen.",
+     "correct": true
+    },
+    {
+     "t": "GAT2 ist der wichtigste präsynaptische GABA-Transporter im Cortex.",
+     "correct": false
+    },
+    {
+     "t": "Laut Folie (Schema nach Scimemi 2014) besitzen Synapsen auf Purkinje-Zellen keine neuronalen GATs; die Bergmann-Glia exprimiert GAT3.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABD",
+    "ABCD",
+    "BD",
+    "ACD"
+   ],
+   "explanation": "Aussage D gibt Folie 42 wieder; streng genommen fehlt GAT1 den Purkinje-Zellen selbst, die Korb- und Sternzell-Terminalen auf Purkinje-Zellen tragen laut Literatur GAT1. GAT2 kommt nur in den Leptomeningen (Arachnoidea, Pia mater) vor. GAT1 dient dem GABA-Recycling in der Präsynapse; GAT3 ist rein glial (bei Katze, Affe, Mensch auch in Oligodendrozyten)."
+  },
+  {
+   "id": "vl08-gat-open",
+   "type": "open",
+   "topic": "GABA-Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 41",
+   "stem": "Nennen Sie die drei Plasmamembran-GABA-Transporter und ihre zelluläre Lokalisation.",
+   "points": [
+    "GAT1: vorwiegend neuronal, präsynaptisch in GABAergen Axonterminalen (z. T. auch Astrozyten)",
+    "GAT3: nur in Glia, v. a. astrozytäre Fortsätze nahe der Synapsen",
+    "GAT2: nur in den Leptomeningen (Arachnoidea, Pia mater)"
+   ],
+   "explanation": "GAT1-Terminalen liegen an Soma, Axoninitialsegment und proximalen Dendriten – also dort, wo Aktionspotentiale entstehen."
+  },
+  {
+   "id": "vl08-gat-thalamus",
+   "type": "single",
+   "topic": "GABA-Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 42",
+   "stem": "Im Thalamus liegen GAT1 und GAT3 beide in Astrozyten. Welche Funktionsteilung beschreibt die Vorlesung?",
+   "options": [
+    {
+     "t": "GAT1 liegt synapsennah und klärt phasisch freigesetztes GABA; GAT3 liegt weiter entfernt und regelt die tonische GABA-Konzentration",
+     "correct": true
+    },
+    {
+     "t": "GAT3 liegt synapsennah und klärt phasisch freigesetztes GABA; GAT1 liegt weiter entfernt und regelt die tonische GABA-Konzentration",
+     "correct": false
+    },
+    {
+     "t": "GAT1 transportiert GABA nur aus der Zelle heraus, GAT3 nur hinein; beide liegen direkt an der Synapse",
+     "correct": false
+    },
+    {
+     "t": "Beide liegen außerhalb des Parenchyms in den Leptomeningen und regeln dort den Liquor-GABA-Spiegel",
+     "correct": false
+    }
+   ],
+   "explanation": "Thalamus: GAT1 (nah) → phasische Ereignisse, GAT3 (fern) → basale, tonische extrazelluläre GABA-Konzentration. Im Cortex liegt GAT1 dagegen präsynaptisch und GAT3 in benachbarten Astrozyten."
+  },
+  {
+   "id": "vl08-reversed-uptake",
+   "type": "single",
+   "topic": "GABA-Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 43",
+   "stem": "Welche Aussage zur GABA-Freisetzung durch „reversed uptake“ trifft zu?",
+   "options": [
+    {
+     "t": "Der GABA-Transporter arbeitet rückwärts und setzt GABA nicht-vesikulär frei, z. B. in retinalen Horizontalzellen",
+     "correct": true
+    },
+    {
+     "t": "Es handelt sich um eine Ca²⁺-abhängige Exozytose GABA-haltiger Vesikel aus Astrozyten",
+     "correct": false
+    },
+    {
+     "t": "Reversed uptake tritt ausschließlich unter pathologischen Bedingungen auf",
+     "correct": false
+    },
+    {
+     "t": "Reversed uptake lässt sich durch Blockade von GABA-A-Rezeptoren nachweisen",
+     "correct": false
+    }
+   ],
+   "explanation": "Nicht-vesikuläre Freisetzung durch einen rückwärts arbeitenden GABA-Transporter, z. B. in retinalen Horizontalzellen (laterale Inhibition); Astrozyten setzen auf diese Weise Glycin frei (Co-Agonist am NMDA-R). Nachweis: Blockade des GABA-Transporters."
+  },
+  {
+   "id": "vl08-tiagabin",
+   "type": "single",
+   "topic": "GABA-Transporter",
+   "source": "slides",
+   "ref": "VL08 · Folie 44",
+   "stem": "Tiagabin wird als Antikonvulsivum (Antiepileptikum) eingesetzt. Wie wirkt es?",
+   "options": [
+    {
+     "t": "Selektive Hemmung der GAT1-Wiederaufnahme → mehr GABA im Spalt → stärkere Inhibition",
+     "correct": true
+    },
+    {
+     "t": "Agonist an GABA-B-Rezeptoren → präsynaptische Hemmung der Glutamatfreisetzung",
+     "correct": false
+    },
+    {
+     "t": "Blockade des GABA-A-Kanals im M2-Segment → weniger Cl⁻-Einstrom",
+     "correct": false
+    },
+    {
+     "t": "Hemmung von KCC2 → Anstieg der intrazellulären Cl⁻-Konzentration",
+     "correct": false
+    }
+   ],
+   "explanation": "Epileptische Anfälle beruhen auf einem kortikalen Ungleichgewicht von Exzitation und Inhibition. GATs sind Angriffspunkte antikonvulsiver Substanzen: Weniger Aufnahme → höhere GABA-Konzentration an der Synapse → mehr Inhibition."
+  }
+ ]
+}

@@ -1,0 +1,3268 @@
+{
+ "id": "vl03",
+ "title": "VL03 + VL06 · Energetik & Mitochondrien",
+ "short": "Energetik",
+ "color": "#e0a030",
+ "topics": [
+  "Mitochondrien: Aufbau & Genom",
+  "Dynamik, Biogenese & Qualitätskontrolle",
+  "Energiebedarf des Gehirns & Pumpen",
+  "Energiegewinnung, Redox & ATP",
+  "Glykolyse, Citratzyklus & OXPHOS",
+  "ROS & mitochondriale Toxine",
+  "Pentosephosphatweg & Glutathion",
+  "Substrat-Shuttling & Laktat-Shuttle"
+ ],
+ "questions": [
+  {
+   "id": "vl03-mito-aufbau-label",
+   "type": "label",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL06 · Folien 3–4",
+   "stem": "Beschriften Sie den Aufbau eines Mitochondriums.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 4,
+    "crop": [
+     95,
+     50,
+     625,
+     330
+    ],
+    "hide": [
+     [
+      103,
+      135,
+      172,
+      159
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      207,
+      76,
+      241,
+      90
+     ],
+     "answer": "Porine (porins)",
+     "accept": [
+      "Porins",
+      "Porin",
+      "Porine",
+      "VDAC"
+     ],
+     "x": 20.66,
+     "y": 8.39,
+     "w": 7.36,
+     "h": 6.79
+    },
+    {
+     "box": [
+      103,
+      172,
+      157,
+      198
+     ],
+     "answer": "Äußere Membran (outer membrane)",
+     "accept": [
+      "Außenmembran",
+      "äußere Membran",
+      "äußere Mitochondrienmembran",
+      "outer membrane",
+      "OMM",
+      "MOM"
+     ],
+     "x": 1.04,
+     "y": 42.68,
+     "w": 11.13,
+     "h": 11.07
+    },
+    {
+     "box": [
+      103,
+      210,
+      157,
+      236
+     ],
+     "answer": "Innere Membran (inner membrane)",
+     "accept": [
+      "Innenmembran",
+      "innere Membran",
+      "innere Mitochondrienmembran",
+      "inner membrane",
+      "IMM",
+      "MIM"
+     ],
+     "x": 1.04,
+     "y": 56.25,
+     "w": 11.13,
+     "h": 11.07
+    },
+    {
+     "box": [
+      103,
+      250,
+      178,
+      276
+     ],
+     "answer": "Intermembranraum (intermembrane space)",
+     "accept": [
+      "Intermembranraum",
+      "intermembrane space",
+      "IMS"
+     ],
+     "x": 1.04,
+     "y": 70.54,
+     "w": 15.09,
+     "h": 11.07
+    },
+    {
+     "box": [
+      233,
+      204,
+      264,
+      218
+     ],
+     "answer": "Matrix",
+     "accept": [
+      "Matrix",
+      "mitochondriale Matrix",
+      "Mitochondrienmatrix"
+     ],
+     "x": 25.57,
+     "y": 54.11,
+     "w": 6.79,
+     "h": 6.79
+    },
+    {
+     "box": [
+      310,
+      242,
+      365,
+      263
+     ],
+     "answer": "Mitochondriales Genom (mtDNA)",
+     "accept": [
+      "mtDNA",
+      "mitochondriale DNA",
+      "mitochondrial genome",
+      "mitochondriales Genom",
+      "Genom"
+     ],
+     "x": 40.09,
+     "y": 67.68,
+     "w": 11.32,
+     "h": 9.29
+    },
+    {
+     "box": [
+      335,
+      56,
+      490,
+      69
+     ],
+     "answer": "Enzyme der oxidativen Phosphorylierung",
+     "accept": [
+      "OXPHOS-Enzyme",
+      "OXPHOS",
+      "oxidative phosphorylation enzymes",
+      "Atmungskette",
+      "Atmungskettenkomplexe",
+      "oxidative Phosphorylierung"
+     ],
+     "x": 44.81,
+     "y": 1.25,
+     "w": 30.19,
+     "h": 6.43
+    },
+    {
+     "box": [
+      545,
+      100,
+      594,
+      113
+     ],
+     "answer": "Cardiolipin",
+     "accept": [
+      "Cardiolipin",
+      "Kardiolipin"
+     ],
+     "x": 84.43,
+     "y": 16.96,
+     "w": 10.19,
+     "h": 6.43
+    },
+    {
+     "box": [
+      425,
+      190,
+      491,
+      212
+     ],
+     "answer": "Citratzyklus-Enzyme",
+     "accept": [
+      "citric acid cycle enzymes",
+      "TCA-Enzyme",
+      "Citratzyklus",
+      "Krebszyklus-Enzyme",
+      "Zitronensäurezyklus",
+      "TCA cycle enzymes",
+      "TCA"
+     ],
+     "x": 61.79,
+     "y": 49.11,
+     "w": 13.4,
+     "h": 9.64
+    },
+    {
+     "box": [
+      444,
+      229,
+      486,
+      263
+     ],
+     "answer": "Enzyme der Fettsäureoxidation",
+     "accept": [
+      "fatty acid oxidation enzymes",
+      "Fettsäureoxidation",
+      "β-Oxidation",
+      "beta-Oxidation",
+      "Fettsäureoxidations-Enzyme"
+     ],
+     "x": 65.38,
+     "y": 63.04,
+     "w": 8.87,
+     "h": 13.93
+    }
+   ],
+   "bank": [
+    "Cristae",
+    "Tom-Komplex"
+   ],
+   "explanation": "Außenmembran mit Porinen (durchlässig für Moleküle unter 1000 Da); gefaltete Innenmembran (Cristae) mit den OXPHOS-Enzymen und Cardiolipin; dazwischen der Intermembranraum. In der Matrix liegen mtDNA sowie die Enzyme von Citratzyklus und Fettsäureoxidation.",
+   "image": "assets/figures/vl03-mito-aufbau-label.webp",
+   "iw": 1060,
+   "ih": 560
+  },
+  {
+   "id": "vl03-mtdna-gene",
+   "type": "single",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL06 · Folien 6, 10",
+   "stem": "Wie viele Gene enthält das menschliche mitochondriale Genom (mtDNA) und wofür kodieren sie?",
+   "options": [
+    {
+     "t": "37 Gene: 2 rRNAs, 22 tRNAs und 13 Proteinuntereinheiten (v. a. OXPHOS)",
+     "correct": true
+    },
+    {
+     "t": "37 Gene, die alle für Untereinheiten der Atmungskettenkomplexe kodieren",
+     "correct": false
+    },
+    {
+     "t": "ca. 1100–1500 Gene, die das gesamte mitochondriale Proteom kodieren",
+     "correct": false
+    },
+    {
+     "t": "22 Gene für rRNAs und 2 für tRNAs; Proteine sind ausschließlich nukleär kodiert",
+     "correct": false
+    }
+   ],
+   "explanation": "Die ~16 kb große, zirkuläre mtDNA kodiert nur 37 Gene. Das mitochondriale Proteom umfasst aber 1100–1500 Proteine – weniger als 1 % davon sind mitochondrial kodiert, der Rest wird im Kern kodiert, im Cytosol synthetisiert und importiert."
+  },
+  {
+   "id": "vl03-mtdna-vs-kern",
+   "type": "combo",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL03 · Folie 8",
+   "stem": "Welche Aussagen zum Vergleich von mitochondrialer (mtDNA) und nukleärer DNA treffen zu?",
+   "statements": [
+    {
+     "t": "Die mtDNA ist zirkulär, ~16 kb groß und liegt in Hunderten bis Tausenden Kopien pro Zelle vor.",
+     "correct": true
+    },
+    {
+     "t": "Die mtDNA wird maternal vererbt und rekombiniert nicht (nur Replikation).",
+     "correct": true
+    },
+    {
+     "t": "Die mtDNA enthält zahlreiche Introns und ist durch Histone geschützt.",
+     "correct": false
+    },
+    {
+     "t": "Die mtDNA hat eine niedrigere Mutationsrate als die Kern-DNA.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "ABD",
+    "A",
+    "BCD"
+   ],
+   "explanation": "mtDNA: zirkulär, 16 kb, maternal, 100e–1000e Kopien/Zelle, dicht gepackt ohne Introns, keine Rekombination, häufige Mutationen. Schutz nur durch Nukleoide (Nukleoprotein-Komplexe) statt Histone; Reparatur u. a. über POLG, Twinkle, APE1."
+  },
+  {
+   "id": "vl03-mito-fakten",
+   "type": "multi",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL06 · Folien 5–6; VL03 · Folien 4–5",
+   "stem": "Welche Aussagen zu Mitochondrien treffen zu?",
+   "options": [
+    {
+     "t": "Eine eukaryotische Zelle enthält etwa 100–10.000 Mitochondrien.",
+     "correct": true
+    },
+    {
+     "t": "Jedes Mitochondrium enthält 2–10 Kopien seines Genoms.",
+     "correct": true
+    },
+    {
+     "t": "Das mitochondriale Proteom umfasst ca. 1100–1500 Proteine, weniger als 1 % davon mitochondrial kodiert.",
+     "correct": true
+    },
+    {
+     "t": "Mitochondrien sind außer an OXPHOS auch an Ca²⁺-Pufferung und Lipidstoffwechsel beteiligt.",
+     "correct": true
+    },
+    {
+     "t": "Mitochondrial und nukleär kodierte Atmungsketten-Untereinheiten werden unabhängig vom Energiebedarf assembliert.",
+     "correct": false
+    },
+    {
+     "t": "Die mtDNA wird sowohl maternal als auch paternal vererbt.",
+     "correct": false
+    }
+   ],
+   "explanation": "Mitochondrien sind endosymbiotischen Ursprungs, daher eigenes Genom – aber unter dualer Kontrolle: mt- und kernkodierte Untereinheiten der Atmungskette müssen zeitlich exakt und passend zum Energiebedarf assembliert werden. Vererbung nur maternal."
+  },
+  {
+   "id": "vl03-proteinimport",
+   "type": "combo",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL06 · Folien 7–8",
+   "stem": "Welche Aussagen zum Import mitochondrialer Proteine treffen zu?",
+   "statements": [
+    {
+     "t": "Matrixproteine tragen eine N-terminale Präsequenz mit positiv geladenen Aminosäuren, die vom Tom-Komplex der Außenmembran erkannt wird.",
+     "correct": true
+    },
+    {
+     "t": "Nach Passage des Tom-Komplexes bindet die Präsequenz an den Tim23-Komplex der Innenmembran.",
+     "correct": true
+    },
+    {
+     "t": "Ein Importmotor mit Hsp70 treibt die Translokation in die Matrix unter ATP-Hydrolyse an; die Präsequenz wird von der MPP abgespalten.",
+     "correct": true
+    },
+    {
+     "t": "Innenmembranproteine mit mehreren Transmembrandomänen werden ausschließlich über eine N-terminale Präsequenz und Tim23 eingebaut.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BCD"
+   ],
+   "explanation": "Präsequenz-Weg: Tom → Tim23 → Hsp70-Importmotor (ATP) → MPP. Polytope Innenmembranproteine haben interne Signalsequenzen und gelangen über Tim9-Tim10-Chaperone zum Tim22-Komplex; mtDNA-kodierte Innenmembranproteine werden über Oxa1 eingebaut."
+  },
+  {
+   "id": "vl03-heteroplasmie-discussion",
+   "type": "open",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL03 · Folien 9–10; VL06 · Folie 10",
+   "stem": "Discussion: Wie ist es möglich, dass die mtDNA bei Geburt eine Heteroplasmie bzw. Mutationsrate von nahezu null aufweist? Was passiert im weiteren Leben?",
+   "points": [
+    "Weibliche Keimbahn schützt die mtDNA durch metabolische Ruhe (Quieszenz/Dormanz)",
+    "Nur maternale Vererbung – väterliche Mitochondrien werden nach der Befruchtung abgebaut (LC3-assoziierter, phagozytose-ähnlicher Weg)",
+    "Im Laufe des Lebens nimmt die somatische Heteroplasmie zu (verschiedene mtDNA-Varianten nebeneinander)",
+    "Typisch sind häufige mtDNA-Deletionen (Region ND4–ND5)"
+   ],
+   "need": 3,
+   "explanation": "„Mitochondria are similar at birth and then become more diverse“: Keimbahn-Schutz → nahezu einheitliche mtDNA; danach akkumulieren somatische Mutationen und Deletionen (ND4–ND5 häufig deletiert, ND1 stabil)."
+  },
+  {
+   "id": "vl03-heteroplasmie-def",
+   "type": "single",
+   "topic": "Mitochondrien: Aufbau & Genom",
+   "source": "slides",
+   "ref": "VL06 · Folie 10; VL03 · Folie 7",
+   "stem": "Was versteht man unter Heteroplasmie?",
+   "options": [
+    {
+     "t": "Das Nebeneinander unterschiedlicher mtDNA-Varianten (z. B. Wildtyp und deletiert) in einer Zelle bzw. einem Gewebe",
+     "correct": true
+    },
+    {
+     "t": "Die ausschließlich maternale Vererbung der mtDNA mitsamt den Mitochondrien der Eizelle",
+     "correct": false
+    },
+    {
+     "t": "Die Aufteilung des mitochondrialen Proteoms auf nukleär und mitochondrial kodierte Proteine",
+     "correct": false
+    },
+    {
+     "t": "Die Fusion zweier Mitochondrien mit vollständiger Durchmischung ihres Matrixinhalts",
+     "correct": false
+    }
+   ],
+   "explanation": "„Not all mitochondria are the same“: In der Keimbahn ist die mtDNA einheitlich; mit dem Alter entstehen somatisch veränderte Mitochondrien (z. B. häufige mtDNA-Deletionen) neben unveränderten."
+  },
+  {
+   "id": "vl03-biogenese-prozesse",
+   "type": "open",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL03 · Folien 13–14, 19",
+   "stem": "Discussion: Nennen Sie 5 Prozesse, die an der mitochondrialen Biogenese beteiligt sind.",
+   "points": [
+    "Fission (Teilung)",
+    "Fusion",
+    "Ersatz/Turnover des nukleär und mitochondrial kodierten Proteoms (Proteinimport über TOM)",
+    "Membranerneuerung/-synthese",
+    "Transkriptionsfaktor-initiierte mtDNA-Replikation (PGC-1α → NRF-1/2, TFAM)",
+    "Mitophagie",
+    "Piecemeal-Mitophagie",
+    "Mitochondrial derived vesicles (MDVs)"
+   ],
+   "need": 5,
+   "explanation": "Biogenese = Bildung neuer Mitochondrien durch Wachstum und Teilung bestehender (nicht de novo) – Teamwork von Kern- und mt-Genom."
+  },
+  {
+   "id": "vl03-biogenese-de-novo",
+   "type": "single",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL03 · Folien 13–14, 18",
+   "stem": "Discussion: Mitochondrien werden nicht „de novo“ gebildet. Wie wird das mitochondriale Netzwerk stattdessen aufrechterhalten?",
+   "options": [
+    {
+     "t": "Durch Wachstum und Teilung bestehender Mitochondrien, kombiniert mit Fusion, Turnover und Mitophagie",
+     "correct": true
+    },
+    {
+     "t": "Durch Abschnürung neuer Mitochondrien von der Kernhülle unter Mitnahme nukleärer DNA",
+     "correct": false
+    },
+    {
+     "t": "Durch Neubildung aus ER-Membranen, in die neu synthetisierte mtDNA eingeschleust wird",
+     "correct": false
+    },
+    {
+     "t": "Ausschließlich durch Übernahme von Mitochondrien aus benachbarten Astrozyten",
+     "correct": false
+    }
+   ],
+   "explanation": "Mitochondriale Biogenese = „growth and division of existing ones“: Membransynthese, Proteinimport, mtDNA-Replikation, mitochondrial derived vesicles, piecemeal mitophagy und abschließende Fission."
+  },
+  {
+   "id": "vl03-pgc1a",
+   "type": "single",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL03 · Folie 14",
+   "stem": "Welcher Faktor aktiviert nukleäre Transkriptionsfaktoren wie NRF-1/2 (und darüber den mitochondrialen Transkriptionsfaktor TFAM) und löst so die mtDNA-Replikation bei der mitochondrialen Biogenese aus?",
+   "options": [
+    {
+     "t": "PGC-1α",
+     "correct": true
+    },
+    {
+     "t": "PINK1",
+     "correct": false
+    },
+    {
+     "t": "Parkin",
+     "correct": false
+    },
+    {
+     "t": "P5CS",
+     "correct": false
+    }
+   ],
+   "explanation": "PGC-1α ist der Hauptregulator der mitochondrialen Biogenese – genauer ein Transkriptions-Koaktivator von NRF-1/2; diese induzieren TFAM, den kernkodierten mitochondrialen Transkriptionsfaktor A, der an der mtDNA wirkt. PINK1 und Parkin vermitteln dagegen die Mitophagie; P5CS markiert eine spezialisierte Mitochondrien-Subpopulation."
+  },
+  {
+   "id": "vl03-qualitaetskontrolle",
+   "type": "multi",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL06 · Folie 12; VL03 · Folie 15",
+   "stem": "Die mitochondriale Qualitätskontrolle (QC) erfolgt auf mehreren Ebenen. Welche Zuordnungen treffen zu?",
+   "options": [
+    {
+     "t": "Molekulare QC: Chaperone und Proteasen (Proteinfaltung, Proteinumsatz)",
+     "correct": true
+    },
+    {
+     "t": "Organelläre QC: Fusion (Durchmischung des Inhalts, Membranbiogenese)",
+     "correct": true
+    },
+    {
+     "t": "Organelläre QC: Fission (Segregation, Mitophagie)",
+     "correct": true
+    },
+    {
+     "t": "Zelluläre QC: Apoptose (MOMP, Cytochrom-c-Freisetzung)",
+     "correct": true
+    },
+    {
+     "t": "Molekulare QC: Apoptose über Cytochrom-c-Freisetzung",
+     "correct": false
+    },
+    {
+     "t": "Zelluläre QC: Fusion zur Reparatur geschädigter mtDNA",
+     "correct": false
+    }
+   ],
+   "explanation": "Mit zunehmendem Schaden: molekular → organellär → zellulär. Gelingt die QC nicht, lösen Mitochondrien den Zelltod aus – deshalb so bedeutsam bei neurodegenerativen Erkrankungen."
+  },
+  {
+   "id": "vl03-pink1-parkin-order",
+   "type": "order",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL06 · Folie 14; VL03 · Folie 16",
+   "stem": "Bringen Sie die Schritte der klassischen PINK1/Parkin-abhängigen Mitophagie in die richtige Reihenfolge.",
+   "items": [
+    "Depolarisation des Mitochondriums (z. B. durch CCCP)",
+    "PINK1 wird nicht mehr abgebaut und akkumuliert an der äußeren Membran (MOM)",
+    "PINK1-Autophosphorylierung, Ubiquitin-Phosphorylierung, Rekrutierung von Parkin",
+    "Phosphorylierung und Aktivierung von Parkin",
+    "Ubiquitinierung von MOM-Substraten (z. B. Miro1, Mitofusin)",
+    "Bindung von Autophagie-Rezeptoren und Bildung des Autophagosoms",
+    "Fusion mit dem Lysosom"
+   ],
+   "explanation": "Unter Basalbedingungen wird PINK1 ständig über das Proteasom abgebaut; erst bei Depolarisation stabilisiert es sich an der MOM und startet die Kaskade (ca. 24 h bis zur Mitophagie)."
+  },
+  {
+   "id": "vl03-pink1-parkin-combo",
+   "type": "combo",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL06 · Folie 14; VL03 · Folie 16",
+   "stem": "Welche Aussagen zur PINK1/Parkin-Mitophagie treffen zu?",
+   "statements": [
+    {
+     "t": "Unter Basalbedingungen wird PINK1 ständig über das Proteasom abgebaut.",
+     "correct": true
+    },
+    {
+     "t": "Mutationen in PINK1 bzw. Parkin verursachen erbliche, früh beginnende bzw. juvenile Parkinson-Formen.",
+     "correct": true
+    },
+    {
+     "t": "Basale Mitophagie in Geweben mit hohem Energiebedarf ist strikt von PINK1 abhängig.",
+     "correct": false
+    },
+    {
+     "t": "Parkin ist eine Kinase, die PINK1 an der Innenmembran phosphoryliert.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "A",
+    "ABD",
+    "BC"
+   ],
+   "explanation": "PINK1 (Kinase) phosphoryliert Ubiquitin und Parkin; Parkin (E3-Ubiquitinligase) ubiquitiniert MOM-Proteine. Die Folie betont: basale Mitophagie läuft in Drosophila und in Mausgeweben mit hohem Energiebedarf weitgehend unabhängig von PINK1/Parkin."
+  },
+  {
+   "id": "vl03-p5cs",
+   "type": "single",
+   "topic": "Dynamik, Biogenese & Qualitätskontrolle",
+   "source": "slides",
+   "ref": "VL06 · Folie 15; VL03 · Folie 17",
+   "stem": "Zellulärer ATP-Bedarf erzeugt metabolisch unterschiedliche Subpopulationen von Mitochondrien. Was kennzeichnet die P5CS-positiven filamentösen Mitochondrien?",
+   "options": [
+    {
+     "t": "Keine Cristae, keine Atmungskettenkomplexe, keine mtDNA – sie teilen/fusionieren untereinander",
+     "correct": true
+    },
+    {
+     "t": "Besonders dichte Cristae mit hoher ATP-Synthase-Dichte für maximale ATP-Produktion",
+     "correct": false
+    },
+    {
+     "t": "Eigene mtDNA ohne Cristae – sie fusionieren nur mit ATP-produzierenden Mitochondrien",
+     "correct": false
+    },
+    {
+     "t": "Sie sind die Hauptquelle von Superoxid durch Elektronenlecks an Komplex I",
+     "correct": false
+    }
+   ],
+   "explanation": "P5CS (Prolin-Synthese aus Glutamat, reduktiver Weg) sitzt in filamentösen Mitochondrien ohne Cristae, Komplexe und mtDNA, getrennt von den ATP-Synthase-positiven OXPHOS-Mitochondrien."
+  },
+  {
+   "id": "vl03-gehirn-energieanteil",
+   "type": "single",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "slides",
+   "ref": "VL06 · Folie 17; VL03 · Folie 20",
+   "stem": "Welchen Anteil am Körpergewicht bzw. am Energiebedarf des Körpers hat das menschliche Gehirn etwa?",
+   "options": [
+    {
+     "t": "~2 % des Körpergewichts, ~20 % des Energiebedarfs",
+     "correct": true
+    },
+    {
+     "t": "~20 % des Körpergewichts, ~2 % des Energiebedarfs",
+     "correct": false
+    },
+    {
+     "t": "~2 % des Körpergewichts, ~2 % des Energiebedarfs",
+     "correct": false
+    },
+    {
+     "t": "~10 % des Körpergewichts, ~50 % des Energiebedarfs",
+     "correct": false
+    }
+   ],
+   "explanation": "1 g Gehirn verbraucht etwa so viel ATP pro Minute wie 1 g Beinmuskel beim Marathonlauf – ein unverhältnismäßig hoher Energiebedarf."
+  },
+  {
+   "id": "vl03-exam-energetics",
+   "type": "multi",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL06 · Folien 19, 22–23, 39; VL03 · Folien 21, 23–24",
+   "stem": "Welche Aussagen zur Energetik treffen zu?",
+   "options": [
+    {
+     "t": "Den prozentual höchsten Anteil am ATP-Verbrauch hat die Na⁺/K⁺-Pumpe.",
+     "correct": true
+    },
+    {
+     "t": "ATP wird generiert, indem H⁺ durch Komplex V (ATP-Synthase) in die Matrix einströmen.",
+     "correct": true
+    },
+    {
+     "t": "ATP wird generiert, indem Komplex V H⁺ aus der Matrix in den Intermembranraum pumpt.",
+     "correct": false
+    },
+    {
+     "t": "Den größten Anteil (~75 %) am Energieverbrauch des Gehirns haben Protein- und Lipidumsatz.",
+     "correct": false
+    },
+    {
+     "t": "Das Gehirn macht ~20 % des Körpergewichts aus, verbraucht aber nur ~2 % der Energie.",
+     "correct": false
+    }
+   ],
+   "note": "Im Protokoll sind nur die beiden zutreffenden Aussagen überliefert; die falschen Optionen wurden aus den Folien ergänzt.",
+   "explanation": "~75 % der Hirnenergie gehen in die Signalübertragung (Aktionspotentiale, postsynaptische Ströme, Ruhepotential) – vor allem für die Na⁺/K⁺-ATPase, die die Gradienten wiederherstellt (allgemein ~25 % des zellulären ATP). Die ATP-Synthase nutzt den H⁺-Rückstrom vom Intermembranraum in die Matrix."
+  },
+  {
+   "id": "vl03-energieverbrauch-ap",
+   "type": "single",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "slides",
+   "ref": "VL03 · Folie 21; VL06 · Folie 19",
+   "stem": "Welcher einzelne Prozess hat laut Tabelle der Vorlesung (nach Attwell & Laughlin 2001) den größten Anteil am Energieverbrauch des Gehirns?",
+   "options": [
+    {
+     "t": "Aktionspotentiale",
+     "correct": true
+    },
+    {
+     "t": "Postsynaptische Rezeptoren",
+     "correct": false
+    },
+    {
+     "t": "Aufrechterhaltung des Ruhepotentials",
+     "correct": false
+    },
+    {
+     "t": "Glutamat-Recycling",
+     "correct": false
+    },
+    {
+     "t": "Phospholipid- und Membranumsatz",
+     "correct": false
+    }
+   ],
+   "explanation": "Signalübertragung ≈ 75 %: Aktionspotentiale 35,3 %, postsynaptische Rezeptoren 25,5 %, Ruhepotential 9,8 %, Glutamat-Recycling 2,3 %, postsynaptisches Ca²⁺ 2,3 %. Grundaktivitäten ≈ 25 % (Membranen ~5 %, Proteinumsatz ~2 %, Transport, Protonenleck). Hinweis: In neueren Bilanzen für den Kortex (Howarth et al. 2012) liegen die postsynaptischen Rezeptoren vorn – für die Klausur gelten die Folienwerte."
+  },
+  {
+   "id": "vl03-energiebedarf-open",
+   "type": "open",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "slides",
+   "ref": "VL03 · Folien 21, 26; VL06 · Folie 19",
+   "stem": "Discussion: Nennen Sie Beispiele für den Energieverbrauch im Gehirn. Warum haben Neurone einen so hohen Energiebedarf? (3 Punkte)",
+   "points": [
+    "Signalübertragung verbraucht ~75 % der Energie",
+    "Aktionspotentiale (laut Folie größter Einzelposten, ~35 %)",
+    "Postsynaptische Rezeptoren/Ströme (~25 %)",
+    "Aufrechterhaltung des Ruhepotentials (~10 %)",
+    "Glutamat-Recycling und postsynaptisches Ca²⁺ (je ~2 %)",
+    "Na⁺/K⁺-ATPase muss die Ionengradienten ständig wiederherstellen",
+    "Grundaktivitäten (~25 %): Membran- und Proteinumsatz, axonaler Transport, Protonenleck"
+   ],
+   "need": 3,
+   "explanation": "Der Energiebedarf ist v. a. Signalisierungs-Bedarf: Jeder Ionenfluss (AP, EPSP, Ruhepotential) muss unter ATP-Verbrauch zurückgepumpt werden."
+  },
+  {
+   "id": "vl03-pumpen-label",
+   "type": "label",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "slides",
+   "ref": "VL06 · Folien 21, 24–25; VL03 · Folien 22, 25",
+   "stem": "Discussion: Um welche Art von Pumpe bzw. Transporter handelt es sich jeweils? Ergänzen Sie auch die fehlenden Kompartimente.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 21,
+    "crop": [
+     95,
+     55,
+     600,
+     372
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      235,
+      63,
+      317,
+      77
+     ],
+     "answer": "Ionen-Transporter (P-Typ-ATPase)",
+     "accept": [
+      "Ionen-Transporter",
+      "Ionentransporter",
+      "Ionenpumpe",
+      "P-Typ",
+      "P-Typ-ATPase",
+      "P-type ATPase",
+      "ion transporter",
+      "Na+/K+-ATPase",
+      "Na/K-ATPase",
+      "Natrium-Kalium-Pumpe"
+     ],
+     "x": 27.23,
+     "y": 1.74,
+     "w": 17.23,
+     "h": 5.99
+    },
+    {
+     "box": [
+      369,
+      63,
+      438,
+      89
+     ],
+     "answer": "V-Typ-Protonenpumpe",
+     "accept": [
+      "V-Typ",
+      "V-Typ Protonen Pumpe",
+      "V-Typ-Pumpe",
+      "V-ATPase",
+      "V-type proton pump"
+     ],
+     "x": 53.76,
+     "y": 1.74,
+     "w": 14.65,
+     "h": 9.78
+    },
+    {
+     "box": [
+      237,
+      222,
+      335,
+      235
+     ],
+     "answer": "Moleküle-Transporter (ABC-Transporter)",
+     "accept": [
+      "Moleküle-Transporter",
+      "Molekültransporter",
+      "Molekül-Transporter",
+      "ABC-Transporter",
+      "ABC transporter"
+     ],
+     "x": 27.62,
+     "y": 51.89,
+     "w": 20.4,
+     "h": 5.68
+    },
+    {
+     "box": [
+      370,
+      223,
+      440,
+      247
+     ],
+     "answer": "F-Typ-Protonenpumpe (ATP-Synthase)",
+     "accept": [
+      "F-Typ",
+      "F-Typ Protonen Pumpe",
+      "F-Typ-Pumpe",
+      "ATP-Synthase",
+      "F-ATPase",
+      "F-type proton pump",
+      "Komplex V",
+      "F0F1"
+     ],
+     "x": 53.96,
+     "y": 52.21,
+     "w": 14.85,
+     "h": 9.15
+    },
+    {
+     "box": [
+      541,
+      126,
+      553,
+      171
+     ],
+     "answer": "Lysosom",
+     "accept": [
+      "Lysosom",
+      "lysosome"
+     ],
+     "x": 87.82,
+     "y": 21.61,
+     "w": 3.37,
+     "h": 15.77
+    },
+    {
+     "box": [
+      544,
+      272,
+      556,
+      336
+     ],
+     "answer": "Mitochondriale Matrix",
+     "accept": [
+      "Matrix",
+      "Mito-Matrix",
+      "Mito Matrix",
+      "mitochondrial matrix",
+      "Mitochondrienmatrix"
+     ],
+     "x": 88.42,
+     "y": 67.67,
+     "w": 3.37,
+     "h": 21.77
+    }
+   ],
+   "explanation": "Ionen-Transporter (z. B. Na⁺/K⁺-ATPase) werden durch ATP phosphoryliert; Moleküle-Transporter nutzen ATP für den Substrattransport; die V-Typ-Pumpe säuert unter ATP-Verbrauch das Lysosom an (Achtung: auf der Folie verkehrt herum gezeichnet – tatsächlich wird ATP cytosolisch hydrolysiert und H⁺ ins Lysosomenlumen gepumpt). Die F-Typ-Pumpe (ATP-Synthase) arbeitet umgekehrt: H⁺ strömen vom Intermembranraum in die Matrix und treiben die Phosphorylierung von ADP.",
+   "image": "assets/figures/vl03-pumpen-label.webp",
+   "iw": 1010,
+   "ih": 634
+  },
+  {
+   "id": "vl03-na-k-pumpe",
+   "type": "combo",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "slides",
+   "ref": "VL06 · Folie 22; VL03 · Folie 23",
+   "stem": "Welche Aussagen zur Na⁺/K⁺-Pumpe treffen zu?",
+   "statements": [
+    {
+     "t": "Pro Zyklus werden 3 Na⁺ nach außen und 2 K⁺ nach innen transportiert.",
+     "correct": true
+    },
+    {
+     "t": "Der Schlüsselschritt ist die Phosphorylierung der Pumpe durch ATP.",
+     "correct": true
+    },
+    {
+     "t": "Sie verbraucht etwa 25 % des gesamten ATP einer Zelle.",
+     "correct": true
+    },
+    {
+     "t": "Sie ist eine F-Typ-Pumpe, die den Na⁺-Gradienten zur ATP-Synthese nutzt.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BCD"
+   ],
+   "explanation": "Die Na⁺/K⁺-ATPase ist ATP-getrieben (Phosphorylierung). Ihr Gradient treibt sekundär aktiven Transport anderer Moleküle, sichert osmotisches Gleichgewicht/Zellvolumen und die Weiterleitung elektrischer Signale."
+  },
+  {
+   "id": "vl03-hyperaemie",
+   "type": "single",
+   "topic": "Energiebedarf des Gehirns & Pumpen",
+   "source": "slides",
+   "ref": "VL06 · Folie 18",
+   "stem": "Was versteht man unter funktioneller Hyperämie (BOLD-Antwort)?",
+   "options": [
+    {
+     "t": "Lokale Steigerung der Durchblutung als Antwort auf erhöhte metabolische Aktivität",
+     "correct": true
+    },
+    {
+     "t": "Konstanthaltung der Hirnperfusion trotz Blutdruckschwankungen im Tagesverlauf",
+     "correct": false
+    },
+    {
+     "t": "Lokale Abnahme der Durchblutung bei Aktivität, um die ROS-Bildung zu begrenzen",
+     "correct": false
+    },
+    {
+     "t": "Umstellung der Hirnversorgung von Glucose auf Ketonkörper im Hungerzustand",
+     "correct": false
+    }
+   ],
+   "explanation": "Grundsätzlich hält der Bayliss-Effekt die Hirnperfusion konstant. Ausnahme ist die funktionelle lokale Hyperämie (neurovaskuläre Kopplung): mehr Blutfluss dort, wo Neurone aktiv sind – sichtbar im PET/fMRT."
+  },
+  {
+   "id": "vl03-energie-aus-nahrung-label",
+   "type": "label",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "slides",
+   "ref": "VL06 · Folie 28; VL03 · Folien 27, 32",
+   "stem": "Discussion: Ergänzen Sie die Lücken – wie wird über Mitochondrien Energie aus der Nahrung gewonnen?",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 28,
+    "crop": [
+     80,
+     62,
+     600,
+     372
+    ],
+    "hide": [
+     [
+      393,
+      309,
+      419,
+      323
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      290,
+      90,
+      340,
+      104
+     ],
+     "answer": "oxidiert (oxidised)",
+     "accept": [
+      "oxidiert",
+      "oxidised",
+      "oxidized",
+      "oxidieren"
+     ],
+     "x": 39.9,
+     "y": 8.23,
+     "w": 10.58,
+     "h": 6.13
+    },
+    {
+     "box": [
+      475,
+      89,
+      527,
+      103
+     ],
+     "answer": "Elektronen (electrons)",
+     "accept": [
+      "Elektronen",
+      "electrons",
+      "e-"
+     ],
+     "x": 75.48,
+     "y": 7.9,
+     "w": 10.96,
+     "h": 6.13
+    },
+    {
+     "box": [
+      402,
+      155,
+      429,
+      168
+     ],
+     "answer": "NAD⁺",
+     "accept": [
+      "NAD+",
+      "NAD"
+     ],
+     "x": 61.44,
+     "y": 29.19,
+     "w": 6.15,
+     "h": 5.81
+    },
+    {
+     "box": [
+      467,
+      150,
+      493,
+      161
+     ],
+     "answer": "FMN",
+     "accept": [
+      "FMN",
+      "Flavinmononukleotid"
+     ],
+     "x": 73.94,
+     "y": 27.58,
+     "w": 5.96,
+     "h": 5.16
+    },
+    {
+     "box": [
+      532,
+      147,
+      552,
+      158
+     ],
+     "answer": "FAD",
+     "accept": [
+      "FAD",
+      "Flavin-Adenin-Dinukleotid"
+     ],
+     "x": 86.44,
+     "y": 26.61,
+     "w": 4.81,
+     "h": 5.16
+    },
+    {
+     "box": [
+      247,
+      212,
+      277,
+      223
+     ],
+     "answer": "NADH",
+     "accept": [
+      "NADH",
+      "NADH + H+"
+     ],
+     "x": 31.63,
+     "y": 47.58,
+     "w": 6.73,
+     "h": 5.16
+    },
+    {
+     "box": [
+      311,
+      212,
+      346,
+      226
+     ],
+     "answer": "FMNH₂",
+     "accept": [
+      "FMNH2",
+      "FMNH"
+     ],
+     "x": 43.94,
+     "y": 47.58,
+     "w": 7.69,
+     "h": 6.13
+    },
+    {
+     "box": [
+      375,
+      209,
+      407,
+      223
+     ],
+     "answer": "FADH₂",
+     "accept": [
+      "FADH2",
+      "FADH"
+     ],
+     "x": 56.25,
+     "y": 46.61,
+     "w": 7.12,
+     "h": 6.13
+    },
+    {
+     "box": [
+      146,
+      258,
+      192,
+      273
+     ],
+     "answer": "(re-)oxidiert (oxidised)",
+     "accept": [
+      "oxidiert",
+      "reoxidiert",
+      "oxidised",
+      "re-oxidised",
+      "oxidized"
+     ],
+     "x": 12.21,
+     "y": 62.42,
+     "w": 9.81,
+     "h": 6.45
+    },
+    {
+     "box": [
+      315,
+      257,
+      350,
+      273
+     ],
+     "answer": "Sauerstoff (oxygen)",
+     "accept": [
+      "Sauerstoff",
+      "oxygen",
+      "O2"
+     ],
+     "x": 44.71,
+     "y": 62.1,
+     "w": 7.69,
+     "h": 6.77
+    },
+    {
+     "box": [
+      301,
+      329,
+      327,
+      343
+     ],
+     "answer": "ATP",
+     "accept": [
+      "ATP",
+      "Adenosintriphosphat"
+     ],
+     "x": 42.02,
+     "y": 85.32,
+     "w": 5.96,
+     "h": 6.13
+    }
+   ],
+   "explanation": "Nährstoffe werden oxidiert (geben Elektronen ab); die Elektronen werden von Carriern (NAD⁺ bzw. den Flavinen FMN/FAD) aufgenommen. Die reduzierten Formen NADH, FMNH₂, FADH₂ werden im Mitochondrium über Sauerstoff reoxidiert – die freiwerdende Energie wird als ATP gespeichert.",
+   "image": "assets/figures/vl03-energie-aus-nahrung-label.webp",
+   "iw": 1040,
+   "ih": 620
+  },
+  {
+   "id": "vl03-energiequellen-label",
+   "type": "label",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "slides",
+   "ref": "VL06 · Folie 29; VL03 · Folien 28, 34",
+   "stem": "Discussion: Ergänzen Sie die Tabelle der genutzten und gespeicherten Energiesubstrate von Gehirn (oben) und Körper (unten).",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 29,
+    "crop": [
+     70,
+     65,
+     625,
+     375
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      184,
+      152,
+      224,
+      168
+     ],
+     "answer": "100 % (Glucose)",
+     "accept": [
+      "100",
+      "100%",
+      "100 %",
+      "100 % Glucose"
+     ],
+     "x": 20.09,
+     "y": 27.26,
+     "w": 8.11,
+     "h": 6.77
+    },
+    {
+     "box": [
+      355,
+      149,
+      420,
+      183
+     ],
+     "answer": "Ketonkörper im Fasten (75 %)",
+     "accept": [
+      "Ketonkörper",
+      "ketone bodies",
+      "Ketonkörper (75%)",
+      "Ketone bodies during fasting",
+      "75%",
+      "75 %"
+     ],
+     "x": 50.9,
+     "y": 26.29,
+     "w": 12.61,
+     "h": 12.58
+    },
+    {
+     "box": [
+      430,
+      149,
+      501,
+      183
+     ],
+     "answer": "Glykogen in Glia (kurzfristig, Minuten)",
+     "accept": [
+      "Glykogen",
+      "Glykogen in Glia",
+      "glycogen in glia",
+      "Glykogen in Astrozyten",
+      "glycogen"
+     ],
+     "x": 64.41,
+     "y": 26.29,
+     "w": 13.69,
+     "h": 12.58
+    },
+    {
+     "box": [
+      583,
+      147,
+      612,
+      176
+     ],
+     "answer": "Kein ATP-Speicher",
+     "accept": [
+      "kein",
+      "keiner",
+      "nein",
+      "x",
+      "kein ATP",
+      "keine Speicherung",
+      "kein Speicher"
+     ],
+     "x": 91.98,
+     "y": 25.65,
+     "w": 6.13,
+     "h": 10.97
+    },
+    {
+     "box": [
+      189,
+      290,
+      221,
+      306
+     ],
+     "answer": "50 %",
+     "accept": [
+      "50",
+      "50%"
+     ],
+     "x": 20.99,
+     "y": 71.77,
+     "w": 6.67,
+     "h": 6.77
+    },
+    {
+     "box": [
+      254,
+      290,
+      287,
+      306
+     ],
+     "answer": "35 %",
+     "accept": [
+      "35",
+      "35%"
+     ],
+     "x": 32.7,
+     "y": 71.77,
+     "w": 6.85,
+     "h": 6.77
+    },
+    {
+     "box": [
+      307,
+      290,
+      339,
+      306
+     ],
+     "answer": "15 %",
+     "accept": [
+      "15",
+      "15%"
+     ],
+     "x": 42.25,
+     "y": 71.77,
+     "w": 6.67,
+     "h": 6.77
+    }
+   ],
+   "bank": [
+    "Laktat (75 %)",
+    "Fettsäuren"
+   ],
+   "explanation": "Gehirn: deckt seinen Bedarf normalerweise zu 100 % aus Glucose; ergänzend Laktat aus Astrozyten, im Fasten Ketonkörper (bis 75 %). Speicher nur Glykogen in Glia (Minuten). Körper: 50 % Glucose, 35 % Fettsäuren, 15 % Proteine. ATP wird nirgends gespeichert.",
+   "image": "assets/figures/vl03-energiequellen-label.webp",
+   "iw": 1110,
+   "ih": 620
+  },
+  {
+   "id": "vl03-atp-label",
+   "type": "label",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "slides",
+   "ref": "VL06 · Folien 32–33; VL03 · Folien 31, 33",
+   "stem": "Discussion: Beschriften Sie die Hauptgruppen von ATP.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 32,
+    "crop": [
+     262,
+     88,
+     450,
+     246
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      278,
+      96,
+      322,
+      108
+     ],
+     "answer": "Adenin (adenine)",
+     "accept": [
+      "Adenin",
+      "adenine",
+      "Base",
+      "Purinbase"
+     ],
+     "x": 7.18,
+     "y": 3.48,
+     "w": 26.06,
+     "h": 10.76
+    },
+    {
+     "box": [
+      326,
+      197,
+      362,
+      210
+     ],
+     "answer": "Ribose",
+     "accept": [
+      "Ribose",
+      "Zucker",
+      "Pentose"
+     ],
+     "x": 32.71,
+     "y": 67.41,
+     "w": 21.81,
+     "h": 11.39
+    },
+    {
+     "box": [
+      290,
+      226,
+      347,
+      239
+     ],
+     "answer": "Adenosin (adenosine)",
+     "accept": [
+      "Adenosin",
+      "adenosine",
+      "Nukleosid"
+     ],
+     "x": 13.56,
+     "y": 85.76,
+     "w": 32.98,
+     "h": 11.39
+    },
+    {
+     "box": [
+      370,
+      226,
+      440,
+      239
+     ],
+     "answer": "Triphosphat (triphosphate)",
+     "accept": [
+      "Triphosphat",
+      "triphosphate",
+      "3 Phosphate",
+      "Phosphatgruppen"
+     ],
+     "x": 56.12,
+     "y": 85.76,
+     "w": 39.89,
+     "h": 11.39
+    },
+    {
+     "box": [
+      372,
+      184,
+      381,
+      194
+     ],
+     "answer": "α",
+     "accept": [
+      "alpha",
+      "a",
+      "α-Phosphat"
+     ],
+     "x": 57.18,
+     "y": 59.18,
+     "w": 7.45,
+     "h": 9.49
+    },
+    {
+     "box": [
+      393,
+      184,
+      402,
+      194
+     ],
+     "answer": "β",
+     "accept": [
+      "beta",
+      "b",
+      "β-Phosphat"
+     ],
+     "x": 68.35,
+     "y": 59.18,
+     "w": 7.45,
+     "h": 9.49
+    },
+    {
+     "box": [
+      413,
+      184,
+      423,
+      194
+     ],
+     "answer": "γ",
+     "accept": [
+      "gamma",
+      "g",
+      "y",
+      "γ-Phosphat"
+     ],
+     "x": 78.99,
+     "y": 59.18,
+     "w": 7.98,
+     "h": 9.49
+    }
+   ],
+   "explanation": "ATP = Adenosin (Adenin + Ribose) + Triphosphat (α, β, γ). Die beiden energiereichen Phosphoanhydridbindungen (Sternchen) liegen zwischen α–β und β–γ.",
+   "image": "assets/figures/vl03-atp-label.webp",
+   "iw": 376,
+   "ih": 316
+  },
+  {
+   "id": "vl03-exam-hauptenergiequelle",
+   "type": "single",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL06 · Folien 29, 35; VL03 · Folien 28, 35",
+   "stem": "Was ist die Hauptenergiequelle von Neuronen bei normaler Ernährung?",
+   "options": [
+    {
+     "t": "Glucose",
+     "correct": true
+    },
+    {
+     "t": "Proteine",
+     "correct": false
+    },
+    {
+     "t": "Fette",
+     "correct": false
+    },
+    {
+     "t": "Glykogen",
+     "correct": false
+    },
+    {
+     "t": "Laktat",
+     "correct": false
+    }
+   ],
+   "explanation": "„Glucose is the main energy source in the brain“ – unter normalen Bedingungen zu 100 %. Laktat aus Astrozyten ist nur ergänzend, Ketonkörper nur im Fasten (bis 75 %), Glykogen gibt es nur in Glia und nur für Minuten."
+  },
+  {
+   "id": "vl03-exam-energie-nicht",
+   "type": "single",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL06 · Folien 29, 52–56",
+   "stem": "Was trifft auf die Energieversorgung von Neuronen <b>nicht</b> zu?",
+   "options": [
+    {
+     "t": "Das Gehirn kann in Hungerzuständen Ketonkörper verstoffwechseln.",
+     "correct": false
+    },
+    {
+     "t": "Astrozyten liefern den Neuronen direkt ATP als Energie.",
+     "correct": true
+    },
+    {
+     "t": "Unter normalen Bedingungen ist Glucose die Hauptenergiequelle des Gehirns.",
+     "correct": false
+    },
+    {
+     "t": "Neurone nehmen Glucose über GLUT3 durch erleichterte Diffusion entlang des Gradienten auf.",
+     "correct": false
+    }
+   ],
+   "note": "Optionen C und D im Protokoll unvollständig („…“) – aus den Folien ergänzt. Lösung laut Protokoll: B.",
+   "explanation": "ATP wird weder gespeichert noch zwischen Zellen als Energiesubstrat ausgetauscht. Astrozyten liefern Substrate (Laktat, im Fasten Ketonkörper), aus denen das Neuron selbst ATP bildet."
+  },
+  {
+   "id": "vl03-atp-energiereich",
+   "type": "single",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "slides",
+   "ref": "VL06 · Folien 26, 32",
+   "stem": "Warum ist ATP ein „energiereiches“ Molekül?",
+   "options": [
+    {
+     "t": "Es enthält zwei Phosphoanhydridbindungen, und seine ~4 negativen Ladungen stoßen sich ab",
+     "correct": true
+    },
+    {
+     "t": "Es enthält drei Phosphoanhydridbindungen zwischen Ribose und positiv geladenen Phosphaten",
+     "correct": false
+    },
+    {
+     "t": "Die glykosidische Bindung zwischen Adenin und Ribose speichert den Großteil der Energie",
+     "correct": false
+    },
+    {
+     "t": "Seine Phosphatgruppen sind ungeladen und reagieren daher besonders leicht mit Wasser",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Abstoßung der negativen Ladungen nimmt bei der Hydrolyse ab. ATP ist der wichtigste unmittelbare Donor freier Energie: Seine Hydrolyse verschiebt das Gleichgewicht gekoppelter Reaktionen um den Faktor 10⁸."
+  },
+  {
+   "id": "vl03-redox-multi",
+   "type": "multi",
+   "topic": "Energiegewinnung, Redox & ATP",
+   "source": "slides",
+   "ref": "VL06 · Folien 26, 29–31; VL03 · Folien 29–30",
+   "stem": "Welche Aussagen zu Redoxchemie und Energieüberträgern treffen zu?",
+   "options": [
+    {
+     "t": "Elektronen werden über Carrier übertragen: Pyridinnukleotide (z. B. NAD⁺) oder Flavine (z. B. FAD).",
+     "correct": true
+    },
+    {
+     "t": "Die reduzierten Carrier geben ihre Elektronen über die Elektronentransportkette an O₂ ab.",
+     "correct": true
+    },
+    {
+     "t": "Reduktionskraft wird auch für Biosynthesen und antioxidative Abwehr gebraucht (z. B. NADPH aus dem PPP).",
+     "correct": true
+    },
+    {
+     "t": "ATP-Hydrolyse verschiebt das Gleichgewicht gekoppelter Reaktionen um etwa den Faktor 10⁸.",
+     "correct": true
+    },
+    {
+     "t": "Das Gehirn speichert größere Mengen ATP als Energiereserve.",
+     "correct": false
+    },
+    {
+     "t": "Bei der Oxidation nimmt ein Molekül Elektronen auf.",
+     "correct": false
+    }
+   ],
+   "explanation": "Oxidation = Elektronenabgabe, Reduktion = Elektronenaufnahme. Reduzierte Carrier liefern ihre energiereichen Elektronen entweder an die Atmungskette oder an reduktive Biosynthesen. ATP wird nicht gespeichert, sondern ständig regeneriert."
+  },
+  {
+   "id": "vl03-glykolyse-tca-oxphos-label",
+   "type": "label",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folie 36; VL03 · Folien 36, 40",
+   "stem": "Beschriften Sie die Stufen der Glucoseverwertung und ergänzen Sie die ATP-Ausbeute.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 36,
+    "crop": [
+     200,
+     70,
+     525,
+     352
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      266,
+      184,
+      320,
+      195
+     ],
+     "answer": "Glykolyse (glycolysis)",
+     "accept": [
+      "Glykolyse",
+      "Glycolysis",
+      "Glucolyse"
+     ],
+     "x": 19.54,
+     "y": 39.54,
+     "w": 18.15,
+     "h": 5.67
+    },
+    {
+     "box": [
+      269,
+      263,
+      322,
+      274
+     ],
+     "answer": "Citratzyklus (TCA cycle)",
+     "accept": [
+      "TCA",
+      "TCA cycle",
+      "TCA-Zyklus",
+      "Citratzyklus",
+      "Krebszyklus",
+      "Zitronensäurezyklus"
+     ],
+     "x": 20.46,
+     "y": 67.55,
+     "w": 17.85,
+     "h": 5.67
+    },
+    {
+     "box": [
+      226,
+      324,
+      362,
+      336
+     ],
+     "answer": "Oxidative Phosphorylierung (OXPHOS)",
+     "accept": [
+      "OXPHOS",
+      "oxidative phosphorylation",
+      "oxidative Phosphorylierung",
+      "Atmungskette"
+     ],
+     "x": 7.23,
+     "y": 89.18,
+     "w": 43.38,
+     "h": 6.03
+    },
+    {
+     "find": "2 ATP",
+     "answer": "2 ATP (Glykolyse)",
+     "accept": [
+      "2",
+      "2 ATP",
+      "2ATP",
+      "zwei ATP"
+     ],
+     "x": 34.62,
+     "y": 29.44,
+     "w": 16.43,
+     "h": 7.68
+    },
+    {
+     "find": "2 ATP",
+     "nth": 1,
+     "answer": "2 ATP (Citratzyklus)",
+     "accept": [
+      "2",
+      "2 ATP",
+      "2ATP",
+      "2 GTP",
+      "zwei ATP"
+     ],
+     "x": 39.71,
+     "y": 49.06,
+     "w": 16.46,
+     "h": 7.69
+    },
+    {
+     "find": "6 CO 2",
+     "answer": "6 CO₂",
+     "accept": [
+      "6 CO2",
+      "6CO2",
+      "6",
+      "CO2"
+     ],
+     "x": 39.71,
+     "y": 56.74,
+     "w": 16.52,
+     "h": 8.8
+    },
+    {
+     "find": "28 ATP",
+     "answer": "28 ATP",
+     "accept": [
+      "28",
+      "28ATP"
+     ],
+     "x": 50.71,
+     "y": 88.39,
+     "w": 19.51,
+     "h": 7.68
+    },
+    {
+     "box": [
+      478,
+      203,
+      513,
+      215
+     ],
+     "answer": "32 ATP (gesamt)",
+     "accept": [
+      "32",
+      "32 ATP",
+      "32ATP",
+      "~32 ATP"
+     ],
+     "x": 84.77,
+     "y": 46.28,
+     "w": 12.31,
+     "h": 6.03
+    }
+   ],
+   "explanation": "Glykolyse 2 ATP (im Cytosol, „vor Ort“), Citratzyklus 2 ATP/GTP und 6 CO₂, OXPHOS 28 ATP → ~32 ATP pro Glucose. OXPHOS ist hocheffizient, erzeugt aber ROS.",
+   "image": "assets/figures/vl03-glykolyse-tca-oxphos-label.webp",
+   "iw": 650,
+   "ih": 564
+  },
+  {
+   "id": "vl03-glykolyse-bevorzugt",
+   "type": "open",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL03 · Folie 40; VL06 · Folie 36",
+   "stem": "Discussion: OXPHOS ist effizienter als Glykolyse. Nennen Sie 2 Gründe bzw. Beispiele, warum Glykolyse trotzdem gegenüber OXPHOS bevorzugt werden kann.",
+   "points": [
+    "Mitochondrien müssen erst in distale Neuronenenden transportiert werden – Glykolyse liefert ATP direkt im Cytosol (z. B. an Synapsen)",
+    "OXPHOS erzeugt ROS – Umschalten auf Glykolyse schützt vor Zelltod",
+    "Warburg-Effekt: Krebszellen/Tumorwachstum setzen bevorzugt auf Glykolyse",
+    "Mitochondrien/OXPHOS kompromittiert oder gehemmt (z. B. Hypoxie/O₂-Mangel, mtDNA-Schäden, Toxine) – Glykolyse liefert ATP auch ohne O₂",
+    "Glykolyse liefert ATP schneller (höhere Rate) bei plötzlich hohem Bedarf – wenn auch mit geringerer Ausbeute"
+   ],
+   "need": 2,
+   "explanation": "Ausbeute: Glykolyse 2 ATP vs. ~32 ATP bei vollständiger Oxidation – Glykolyse ist aber schnell, ortsunabhängig von Mitochondrien und ROS-arm."
+  },
+  {
+   "id": "vl03-anaplerotisch",
+   "type": "single",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folien 37–38",
+   "stem": "Was bedeutet „anaplerotisch“ im Zusammenhang mit dem Citratzyklus?",
+   "options": [
+    {
+     "t": "Auffüllend: Reaktionen, die dem Zyklus Zwischenprodukte zuführen (z. B. Glutamat → α-Ketoglutarat)",
+     "correct": true
+    },
+    {
+     "t": "Entziehend: Reaktionen, die dem Zyklus Zwischenprodukte für Biosynthesen entnehmen",
+     "correct": false
+    },
+    {
+     "t": "Sauerstoffunabhängig: Reaktionen, die ohne Atmungskette ATP bereitstellen",
+     "correct": false
+    },
+    {
+     "t": "Entkoppelnd: Reaktionen, die den Protonengradienten ohne ATP-Synthese abbauen",
+     "correct": false
+    }
+   ],
+   "explanation": "Griech. „auffüllen“ (replenish). Aminosäuren speisen an mehreren Stellen ein (z. B. Glutamat → α-KG, Aspartat → Oxalacetat). Umgekehrt werden Zwischenprodukte entnommen: Citrat → Fettsäuren/Cholesterin, Malat → Gluconeogenese, Succinyl-CoA → Porphyrine."
+  },
+  {
+   "id": "vl03-tca-order",
+   "type": "order",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folien 37–38",
+   "stem": "Bringen Sie die Zwischenprodukte des Citratzyklus ab Citrat in die richtige Reihenfolge.",
+   "items": [
+    "Citrat",
+    "Isocitrat",
+    "α-Ketoglutarat",
+    "Succinyl-CoA",
+    "Succinat",
+    "Fumarat",
+    "Malat"
+   ],
+   "explanation": "Oxalacetat + Acetyl-CoA → Citrat → Isocitrat → α-Ketoglutarat (CO₂, NADH) → Succinyl-CoA (CO₂, NADH) → Succinat (ATP/GTP) → Fumarat (FADH₂) → Malat → Oxalacetat (NADH)."
+  },
+  {
+   "id": "vl03-tca-substratkette",
+   "type": "single",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folie 38",
+   "stem": "An welchem Schritt des Citratzyklus wird direkt ATP (bzw. GTP) gebildet?",
+   "options": [
+    {
+     "t": "Succinyl-CoA → Succinat (Succinyl-CoA-Synthetase)",
+     "correct": true
+    },
+    {
+     "t": "Isocitrat → α-Ketoglutarat (Isocitrat-Dehydrogenase)",
+     "correct": false
+    },
+    {
+     "t": "Succinat → Fumarat (Succinat-Dehydrogenase)",
+     "correct": false
+    },
+    {
+     "t": "Malat → Oxalacetat (Malat-Dehydrogenase)",
+     "correct": false
+    }
+   ],
+   "explanation": "Substratkettenphosphorylierung an der Succinyl-CoA-Synthetase. Die Dehydrogenasen liefern NADH (Isocitrat-, α-KG-, Malat-DH) bzw. FADH₂ (Succinat-DH). Bilanz für 2 Pyruvat: 6 CO₂, 2 GTP, 8 NADH, 2 FADH₂."
+  },
+  {
+   "id": "vl03-oxphos-multi",
+   "type": "multi",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folien 39, 41; VL03 · Folien 37, 43",
+   "stem": "Welche Aussagen zur oxidativen Phosphorylierung (OXPHOS) treffen zu?",
+   "options": [
+    {
+     "t": "Elektronen fließen von NADH über die Komplexe I, III und IV zu O₂; dabei werden Protonen aus der Matrix gepumpt.",
+     "correct": true
+    },
+    {
+     "t": "Die protonenmotorische Kraft besteht aus einem pH-Gradienten und einem elektrischen Membranpotential.",
+     "correct": true
+    },
+    {
+     "t": "ATP wird synthetisiert, wenn Protonen durch Komplex V in die Matrix zurückfließen.",
+     "correct": true
+    },
+    {
+     "t": "O₂ ist terminaler Elektronenakzeptor und wird an Komplex IV zu Wasser reduziert.",
+     "correct": true
+    },
+    {
+     "t": "Komplex II ist die wichtigste Protonenpumpe der Atmungskette.",
+     "correct": false
+    },
+    {
+     "t": "Die elektronenmotorische Kraft wird ohne Protonengradient direkt in ATP umgewandelt.",
+     "correct": false
+    }
+   ],
+   "explanation": "Elektronenmotorische Kraft → protonenmotorische Kraft → Phosphorylierungspotential. Komplex V: ADP + Pᵢ binden, Konformationsänderung presst sie zu ATP zusammen, offener Zustand setzt ATP frei."
+  },
+  {
+   "id": "vl03-etc-order",
+   "type": "order",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folien 39–41",
+   "stem": "Bringen Sie die Stationen des Elektronenflusses in der Atmungskette in die richtige Reihenfolge.",
+   "items": [
+    "NADH",
+    "Komplex I",
+    "Ubichinon (Q-Pool)",
+    "Komplex III",
+    "Cytochrom c",
+    "Komplex IV",
+    "O₂ → H₂O"
+   ],
+   "explanation": "NADH gibt seine Elektronen an Komplex I, über Ubichinon (hier speist auch Komplex II/FADH₂ ein) gelangen sie zu Komplex III, über Cytochrom c zu Komplex IV (Cytochrom-c-Oxidase), der O₂ zu Wasser reduziert. Komplexe I, III und IV pumpen dabei Protonen."
+  },
+  {
+   "id": "vl03-entkopplung",
+   "type": "single",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL06 · Folien 40, 43; VL03 · Folie 38",
+   "stem": "Was versteht man unter Entkopplung (uncoupling) der oxidativen Phosphorylierung?",
+   "options": [
+    {
+     "t": "Protonen strömen an der ATP-Synthase vorbei zurück – die Atmung läuft weiter, aber ohne ATP-Synthese",
+     "correct": true
+    },
+    {
+     "t": "Die ATP-Synthase arbeitet ohne Elektronentransport allein mit ATP aus der Glykolyse",
+     "correct": false
+    },
+    {
+     "t": "Die Elektronentransportkette stoppt, während die ATP-Synthese unverändert weiterläuft",
+     "correct": false
+    },
+    {
+     "t": "Elektronen werden direkt von NADH auf die ATP-Synthase übertragen, ohne Protonengradient",
+     "correct": false
+    }
+   ],
+   "explanation": "Bild der Folie: Die Fahrradkette ist abgesprungen – die Pedale (Atmung) drehen sich, das Rad (ATP-Synthase) wird nicht angetrieben. Entkoppler wie FCCP führen zu maximaler Atmung und induzieren Mitophagie."
+  },
+  {
+   "id": "vl03-oxphos-rueckwaerts",
+   "type": "single",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL03 · Folie 41",
+   "stem": "Discussion: Kann OXPHOS rückwärts laufen? Was passiert, wenn der Protonengradient stark absinkt?",
+   "options": [
+    {
+     "t": "Die ATP-Synthase läuft als ATPase: Sie hydrolysiert ATP und pumpt H⁺ aus der Matrix",
+     "correct": true
+    },
+    {
+     "t": "Nichts – die ATP-Synthase ist irreversibel und stoppt bei fehlendem Gradienten",
+     "correct": false
+    },
+    {
+     "t": "Die Atmungskette überträgt Elektronen von H₂O zurück auf NAD⁺ und bildet NADH",
+     "correct": false
+    },
+    {
+     "t": "Die ATP-Synthase pumpt verstärkt H⁺ in die Matrix, um dort mehr ATP zu bilden",
+     "correct": false
+    }
+   ],
+   "explanation": "Die ATP-Synthase ist eine vollständig reversible Maschine; die Richtung bestimmt das thermodynamische Gleichgewicht. Bei erschöpftem Gradienten verbraucht sie ATP, um das Membranpotential zu halten und den Zelltod zu verhindern."
+  },
+  {
+   "id": "vl03-entkopplung-combo",
+   "type": "combo",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL03 · Folie 41; VL06 · Folien 40, 43, 51",
+   "stem": "Discussion: Ist Entkopplung gut, schlecht oder beides? Welche Aussagen treffen zu?",
+   "statements": [
+    {
+     "t": "Entkopplung steigert den Sauerstoffverbrauch (Atmung), senkt aber die ATP-Ausbeute.",
+     "correct": true
+    },
+    {
+     "t": "Milde Entkopplung bzw. eine leichte Senkung des Membranpotentials schützt vor ROS.",
+     "correct": true
+    },
+    {
+     "t": "Der Entkoppler FCCP führt zu maximaler Atmung und induziert Mitophagie.",
+     "correct": true
+    },
+    {
+     "t": "Entkopplung erhöht die ATP-Ausbeute pro oxidiertem NADH.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "AC",
+    "ABCD",
+    "BC"
+   ],
+   "explanation": "Beides: Entkopplung verschwendet Energie (Wärme statt ATP), senkt aber das Membranpotential und damit die ROS-Bildung – sie wird deshalb als Schutzmechanismus gegen ROS genannt; starke Depolarisation löst Mitophagie aus."
+  },
+  {
+   "id": "vl03-oxphos-gehemmt",
+   "type": "open",
+   "topic": "Glykolyse, Citratzyklus & OXPHOS",
+   "source": "slides",
+   "ref": "VL03 · Folien 39, 42; VL06 · Folie 43",
+   "stem": "Discussion: Nennen Sie 3 Beispiele, wodurch OXPHOS in der Natur oder im Labor gehemmt bzw. beeinträchtigt werden kann.",
+   "points": [
+    "Hypoxie",
+    "Hitzestress",
+    "mtDNA-Schäden",
+    "Defekte der Atmungskette",
+    "Pestizide (z. B. Rotenon, Komplex I → Parkinson)",
+    "Andere Chemikalien/Mitochondrientoxine (z. B. Oligomycin, Cyanid, MPP⁺, Entkoppler wie FCCP)"
+   ],
+   "need": 3,
+   "explanation": "OXPHOS ist auf O₂, intakte mtDNA und funktionierende Komplexe angewiesen; Umweltgifte, die Komplex I hemmen (Rotenon, MPP⁺), sind mit Parkinson assoziiert."
+  },
+  {
+   "id": "vl03-exam-ros-antioxidans",
+   "type": "open",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "exam",
+   "exam": "WS24/25, WS25/26",
+   "ref": "VL06 · Folien 42, 44, 51; VL03 · Folie 53",
+   "stem": "Nennen Sie je ein Beispiel für eine reaktive Sauerstoffspezies (ROS) und für einen antioxidativen Mechanismus.",
+   "points": [
+    {
+     "t": "Superoxid (O₂•⁻) aus dem Elektronenleck der Atmungskette",
+     "g": "ROS"
+    },
+    {
+     "t": "Superoxid aus dem Citratzyklus (α-Ketoglutarat-Dehydrogenase)",
+     "g": "ROS"
+    },
+    {
+     "t": "H₂O₂, z. B. aus der Monoaminoxidase (MAO)",
+     "g": "ROS"
+    },
+    {
+     "t": "Hydroxylradikal (•OH) aus H₂O₂ + Metallionen",
+     "g": "ROS"
+    },
+    {
+     "t": "Peroxynitrit (ONOO⁻) aus NO + O₂•⁻",
+     "g": "ROS"
+    },
+    {
+     "t": "Superoxid-Dismutase (SOD): O₂•⁻ → H₂O₂",
+     "g": "Antioxidativer Mechanismus"
+    },
+    {
+     "t": "Glutathion-System (Glutathion-Peroxidase GPx, Glutathion-Reduktase, NADPH)",
+     "g": "Antioxidativer Mechanismus"
+    },
+    {
+     "t": "Thioredoxin/Thioredoxin-Reduktase, Peroxiredoxin, Glutaredoxin",
+     "g": "Antioxidativer Mechanismus"
+    },
+    {
+     "t": "(milde) Entkopplung bzw. leichte Senkung des Membranpotentials",
+     "g": "Antioxidativer Mechanismus"
+    },
+    {
+     "t": "Katalase: 2 H₂O₂ → 2 H₂O + O₂ (v. a. peroxisomal)",
+     "g": "Antioxidativer Mechanismus"
+    },
+    {
+     "t": "Nicht-enzymatische Radikalfänger, z. B. Vitamin E (α-Tocopherol), Vitamin C (Ascorbat)",
+     "g": "Antioxidativer Mechanismus"
+    }
+   ],
+   "explanation": "Folien-Lösung (Question theme 2 / Discussion VI): Quellen = Superoxid (ETC-Leck, TCA), H₂O₂ (MAO); Schutz = SOD, mitochondriale Enzyme (GPx), Glutathion-System, Entkopplung, milde Senkung des MMP. Die Folien-Lösung ist nicht abschließend – Lehrbuch-Antioxidantien wie Katalase oder Vitamin C/E zählen ebenfalls."
+  },
+  {
+   "id": "vl03-exam-radikal-ros",
+   "type": "open",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL06 · Folien 42, 44, 50",
+   "stem": "Nennen Sie ein freies Radikal und ein ROS.",
+   "points": [
+    {
+     "t": "Superoxid-Radikal (O₂•⁻)",
+     "g": "Freies Radikal"
+    },
+    {
+     "t": "Hydroxyl-Radikal (•OH)",
+     "g": "Freies Radikal"
+    },
+    {
+     "t": "Stickstoffmonoxid (NO•) – Radikal, aber reaktive Stickstoffspezies (RNS), kein ROS i. e. S.",
+     "g": "Freies Radikal"
+    },
+    {
+     "t": "Lipid-/Lipidperoxylradikal (L•, LOO•) aus der Lipidperoxidation (VL11 Folie 20)",
+     "g": "Freies Radikal"
+    },
+    {
+     "t": "Wasserstoffperoxid (H₂O₂)",
+     "g": "ROS"
+    },
+    {
+     "t": "Superoxid (O₂•⁻) oder Hydroxylradikal (•OH) – Radikale zählen ebenfalls zu den ROS",
+     "g": "ROS"
+    }
+   ],
+   "answer": "Ideal: ein Radikal (O₂•⁻ oder •OH) und H₂O₂ als ROS, das selbst kein Radikal ist (Radikale zählen aber ebenfalls zu den ROS). Auch NO• ist ein freies Radikal (RNS, kein ROS im engeren Sinn).",
+   "note": "Zweiter Teil von WS23/24 Frage 32 (der Teil zum Pentosephosphatweg ist als eigene Frage umgesetzt).",
+   "explanation": "Radikale tragen ein ungepaartes Elektron (O₂•⁻; •OH = reaktivstes, t½ ~10⁻⁹ s). H₂O₂ hat kein ungepaartes Elektron, ist relativ stabil und dient als Signalmolekül – reagiert aber mit Metallionen zu •OH."
+  },
+  {
+   "id": "vl03-ros-quellen-label",
+   "type": "label",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "slides",
+   "ref": "VL06 · Folien 41–42; VL03 · Folie 44",
+   "stem": "Beschriften Sie Quellen und Arten von ROS im Mitochondrium.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 42,
+    "crop": [
+     128,
+     56,
+     552,
+     378
+    ],
+    "hide": [
+     [
+      480,
+      167,
+      529,
+      176
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      138,
+      64,
+      208,
+      86
+     ],
+     "answer": "α-Ketoglutarat-Dehydrogenase",
+     "accept": [
+      "alpha-Ketoglutarat-Dehydrogenase",
+      "α-KG-DH",
+      "a-KGDH",
+      "alpha-ketoglutarate dehydrogenase",
+      "α-Ketoglutarat Dehydrogenase"
+     ],
+     "x": 1.77,
+     "y": 1.71,
+     "w": 17.69,
+     "h": 8.39
+    },
+    {
+     "box": [
+      258,
+      62,
+      343,
+      74
+     ],
+     "answer": "Superoxid-Radikal (O₂•⁻)",
+     "accept": [
+      "Superoxid",
+      "Superoxide",
+      "Superoxid-Radikal",
+      "Superoxide radical",
+      "O2-"
+     ],
+     "x": 30.07,
+     "y": 1.09,
+     "w": 21.23,
+     "h": 5.28
+    },
+    {
+     "box": [
+      172,
+      109,
+      229,
+      120
+     ],
+     "answer": "Elektronenleck (electron leak)",
+     "accept": [
+      "Elektronenleck",
+      "electron leak",
+      "ETC-Leck",
+      "Elektronenleak"
+     ],
+     "x": 9.79,
+     "y": 15.68,
+     "w": 14.62,
+     "h": 4.97
+    },
+    {
+     "box": [
+      343,
+      160,
+      401,
+      194
+     ],
+     "answer": "Cytochrom-c-Oxidase (Komplex IV)",
+     "accept": [
+      "Komplex IV",
+      "Complex IV",
+      "Cytochrom-Oxidase",
+      "Cytochrome oxidase",
+      "Cytochrom-c-Oxidase",
+      "CIV"
+     ],
+     "x": 50.12,
+     "y": 31.52,
+     "w": 14.86,
+     "h": 12.11
+    },
+    {
+     "box": [
+      470,
+      121,
+      545,
+      133
+     ],
+     "answer": "Hydroxyl-Radikal (•OH)",
+     "accept": [
+      "Hydroxylradikal",
+      "Hydroxyl-Radikal",
+      "hydroxyl radical",
+      "OH",
+      "OH-Radikal"
+     ],
+     "x": 80.07,
+     "y": 19.41,
+     "w": 18.87,
+     "h": 5.28
+    },
+    {
+     "box": [
+      480,
+      200,
+      530,
+      213
+     ],
+     "answer": "H₂O₂ (Wasserstoffperoxid)",
+     "accept": [
+      "H2O2",
+      "Wasserstoffperoxid",
+      "hydrogen peroxide"
+     ],
+     "x": 82.43,
+     "y": 43.94,
+     "w": 12.97,
+     "h": 5.59
+    },
+    {
+     "box": [
+      481,
+      230,
+      534,
+      252
+     ],
+     "answer": "Monoaminoxidase (MAO)",
+     "accept": [
+      "MAO",
+      "Monoaminoxidase",
+      "monoamine oxidase",
+      "Monoamin-Oxidase"
+     ],
+     "x": 82.67,
+     "y": 53.26,
+     "w": 13.68,
+     "h": 8.39
+    }
+   ],
+   "bank": [
+    "Superoxid-Dismutase (SOD)",
+    "Komplex V"
+   ],
+   "explanation": "Superoxid entsteht durch Elektronenlecks der ETC und an der α-KG-Dehydrogenase; die MAO bildet H₂O₂, aus dem das Hydroxylradikal entsteht. Beide schädigen u. a. die DNA. Regulär werden die Elektronen an Komplex IV auf O₂ übertragen (→ Wasser).",
+   "image": "assets/figures/vl03-ros-quellen-label.webp",
+   "iw": 848,
+   "ih": 644
+  },
+  {
+   "id": "vl03-sauerstoff-komplex4",
+   "type": "single",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "slides",
+   "ref": "VL06 · Folie 41; VL03 · Folie 43",
+   "stem": "Sauerstoff ist toxisch, wird aber trotzdem benötigt. Welche Rolle spielt O₂ in der Atmungskette?",
+   "options": [
+    {
+     "t": "Terminaler Elektronenakzeptor: wird an Komplex IV (Cytochrom-c-Oxidase) zu Wasser reduziert",
+     "correct": true
+    },
+    {
+     "t": "Elektronendonor für Komplex I: oxidiert dort NADH zu NAD⁺",
+     "correct": false
+    },
+    {
+     "t": "Substrat der ATP-Synthase: wird für die Phosphorylierung von ADP verbraucht",
+     "correct": false
+    },
+    {
+     "t": "Wird an Komplex III zu H₂O₂ umgesetzt, das den Protonengradienten aufbaut",
+     "correct": false
+    }
+   ],
+   "explanation": "„Oxygen is toxic but is needed to accept electrons and is reduced to water.“ Unvollständige Reduktion (Elektronenleck) erzeugt dagegen ROS."
+  },
+  {
+   "id": "vl03-ros-signal",
+   "type": "multi",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "slides",
+   "ref": "VL06 · Folie 44; VL03 · Folie 45",
+   "stem": "Welche Aussagen zu mitochondrialen ROS und Antioxidantien treffen zu?",
+   "options": [
+    {
+     "t": "Die Superoxid-Dismutase (SOD) wandelt Superoxid in H₂O₂ um.",
+     "correct": true
+    },
+    {
+     "t": "Aus H₂O₂ kann in Gegenwart von Metallionen das Hydroxylradikal (OH•) entstehen.",
+     "correct": true
+    },
+    {
+     "t": "H₂O₂ ist ein Signalmolekül: niedrige Spiegel fördern Proliferation, hohe führen zu Wachstumsstopp/Apoptose.",
+     "correct": true
+    },
+    {
+     "t": "H₂O₂ wird u. a. durch GPx, Peroxiredoxin und das Thioredoxin-System entgiftet.",
+     "correct": true
+    },
+    {
+     "t": "Das Hydroxylradikal hat unter den ROS die längste Halbwertszeit.",
+     "correct": false
+    },
+    {
+     "t": "Superoxid ist kein Radikal und deshalb für die Zelle harmlos.",
+     "correct": false
+    }
+   ],
+   "explanation": "O₂ → O₂•⁻ → H₂O₂ → OH• → H₂O. Halbwertszeiten ~10⁻⁶ s, 10⁻⁵ s, 10⁻⁹ s – OH• ist am kurzlebigsten und reaktivsten (Reduktionspotential 2,31 V). H₂O₂: ~10⁻⁸ M Proliferation, 10⁻⁶ M Wachstumsstopp, 10⁻⁴ M Apoptose."
+  },
+  {
+   "id": "vl03-toxine",
+   "type": "multi",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "slides",
+   "ref": "VL06 · Folie 43; VL03 · Folie 39",
+   "stem": "Welche Zuordnungen von Mitochondrientoxin und Wirkung treffen zu?",
+   "options": [
+    {
+     "t": "Oligomycin – hemmt Komplex V (ATP-Synthase)",
+     "correct": true
+    },
+    {
+     "t": "Rotenon – hemmt Komplex I; Pestizid, das Parkinson verursachen kann",
+     "correct": true
+    },
+    {
+     "t": "Cyanid – hemmt Komplex IV",
+     "correct": true
+    },
+    {
+     "t": "FCCP – Entkoppler: maximale Atmung, induziert Mitophagie",
+     "correct": true
+    },
+    {
+     "t": "Oligomycin – Entkoppler, der die Atmung maximal steigert",
+     "correct": false
+    },
+    {
+     "t": "MPP⁺ – hemmt Komplex V und erzeugt daher keine ROS",
+     "correct": false
+    }
+   ],
+   "explanation": "Komplex-I-Hemmer (Rotenon, MPP⁺) und Komplex-IV-Hemmer (Cyanid) erzeugen ROS; Oligomycin (Komplex V) senkt die Atmung auf ein Minimum; der Entkoppler FCCP baut das Membranpotential ab."
+  },
+  {
+   "id": "vl03-mptp",
+   "type": "single",
+   "topic": "ROS & mitochondriale Toxine",
+   "source": "slides",
+   "ref": "VL06 · Folie 43; VL03 · Folie 39",
+   "stem": "MPTP ist ein Neurotoxin, das Parkinson auslöst. Wie wirkt es?",
+   "options": [
+    {
+     "t": "Als Pro-Toxin: Die MAO bildet daraus MPP⁺, das Komplex I hemmt und ROS erzeugt",
+     "correct": true
+    },
+    {
+     "t": "Es hemmt direkt Komplex IV wie Cyanid und blockiert so die Reduktion von O₂",
+     "correct": false
+    },
+    {
+     "t": "Es wirkt als Entkoppler und induziert dadurch Mitophagie dopaminerger Neurone",
+     "correct": false
+    },
+    {
+     "t": "Es hemmt wie Oligomycin die ATP-Synthase, ohne dabei ROS zu bilden",
+     "correct": false
+    }
+   ],
+   "explanation": "MPTP → (MAO) → MPP⁺ → Hemmung von Komplex I → ROS → Untergang dopaminerger Neurone. Ebenso hemmt das Pestizid Rotenon Komplex I."
+  },
+  {
+   "id": "vl03-exam-ppp",
+   "type": "open",
+   "topic": "Pentosephosphatweg & Glutathion",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL06 · Folien 45–50; VL03 · Folien 46–52",
+   "stem": "Nennen Sie ein Produkt des oxidativen Pentosephosphatwegs (PPP) und eine Wirkung – wofür ist der PPP für Neurone wichtig?",
+   "points": [
+    {
+     "t": "NADPH (Reduktionskraft)",
+     "g": "Produkt"
+    },
+    {
+     "t": "NADPH → Reduktion von Glutathion (GSSG → 2 GSH) = antioxidative Abwehr gegen ROS",
+     "g": "Wirkung"
+    },
+    {
+     "t": "NADPH → Vorstufen für Cholesterin, Hormone (Steroide) und Fettsäuren",
+     "g": "Wirkung"
+    },
+    {
+     "t": "Ribose-5-phosphat",
+     "g": "Produkt"
+    },
+    {
+     "t": "Ribose-5-phosphat → Nukleotide (DNA/RNA) und Nukleotid-Cofaktoren (NAD, FAD, CoA)",
+     "g": "Wirkung"
+    },
+    {
+     "t": "Recycling von Zuckern (Rückführung zu Fructose-6-phosphat/Glykolyse)",
+     "g": "Wirkung"
+    }
+   ],
+   "note": "WS25/26: „Ein Produkt des oxidativen PPP und eine Wirkung“; WS23/24 Frage 32 (1. Teil): „Nennen Sie eine Sache, wofür der PPP für Neurone wichtig ist“ – zusammengeführt. Der Teil „freies Radikal und ROS“ ist eine eigene Frage.",
+   "explanation": "Der PPP hat nicht das Ziel, ATP zu bilden: Die oxidative Phase liefert NADPH und Ribose-5-phosphat. Für Neurone besonders wichtig: NADPH für das Glutathion-System gegen die ROS aus ihrer hohen OXPHOS-Aktivität."
+  },
+  {
+   "id": "vl03-ppp-label",
+   "type": "label",
+   "topic": "Pentosephosphatweg & Glutathion",
+   "source": "slides",
+   "ref": "VL06 · Folie 46; VL03 · Folie 47",
+   "stem": "Beschriften Sie die oxidative Phase des Pentosephosphatwegs.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 46,
+    "crop": [
+     165,
+     120,
+     560,
+     365
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      262,
+      176,
+      336,
+      187
+     ],
+     "answer": "Glucose-6-phosphat",
+     "accept": [
+      "G6P",
+      "Glucose 6-phosphat",
+      "Glucose-6-phosphate",
+      "Glukose-6-phosphat",
+      "Glucose-6-P"
+     ],
+     "x": 23.92,
+     "y": 21.84,
+     "w": 20.0,
+     "h": 6.53
+    },
+    {
+     "box": [
+      262,
+      231,
+      333,
+      242
+     ],
+     "answer": "6-Phosphogluconat",
+     "accept": [
+      "6-phosphogluconate",
+      "6-Phosphoglukonat",
+      "Phosphogluconat",
+      "6-PG"
+     ],
+     "x": 23.92,
+     "y": 44.29,
+     "w": 19.24,
+     "h": 6.53
+    },
+    {
+     "box": [
+      261,
+      279,
+      338,
+      290
+     ],
+     "answer": "Ribulose-5-phosphat",
+     "accept": [
+      "Ribulose 5-phosphat",
+      "Ribulose-5-phosphate",
+      "Ru5P",
+      "Ribulose-5-P"
+     ],
+     "x": 23.67,
+     "y": 63.88,
+     "w": 20.76,
+     "h": 6.53
+    },
+    {
+     "box": [
+      264,
+      332,
+      334,
+      344
+     ],
+     "answer": "Ribose-5-phosphat",
+     "accept": [
+      "Ribose 5-phosphat",
+      "Ribose-5-phosphate",
+      "R5P",
+      "Ribose-5-P"
+     ],
+     "x": 24.43,
+     "y": 85.51,
+     "w": 18.99,
+     "h": 6.94
+    },
+    {
+     "box": [
+      172,
+      130,
+      246,
+      140
+     ],
+     "answer": "Fructose-6-phosphat",
+     "accept": [
+      "Fructose 6-phosphat",
+      "Fructose-6-phosphate",
+      "F6P",
+      "Fruktose-6-phosphat"
+     ],
+     "x": 1.14,
+     "y": 3.06,
+     "w": 20.0,
+     "h": 6.12
+    },
+    {
+     "box": [
+      382,
+      196,
+      412,
+      207
+     ],
+     "answer": "NADPH (1. Oxidation)",
+     "accept": [
+      "NADPH",
+      "NADPH + H+",
+      "NADPH+H"
+     ],
+     "x": 54.3,
+     "y": 30.0,
+     "w": 8.86,
+     "h": 6.53
+    },
+    {
+     "box": [
+      382,
+      248,
+      412,
+      259
+     ],
+     "answer": "NADPH (2. Oxidation)",
+     "accept": [
+      "NADPH",
+      "NADPH + H+",
+      "NADPH+H"
+     ],
+     "x": 54.3,
+     "y": 51.22,
+     "w": 8.86,
+     "h": 6.53
+    }
+   ],
+   "bank": [
+    "NADH",
+    "Pyruvat"
+   ],
+   "explanation": "Oxidative Phase: Glucose-6-phosphat → 6-Phosphogluconat → Ribulose-5-phosphat (zwei Oxidationsschritte, je 1 NADPH) → Ribose-5-phosphat. Überschüssige Pentosen werden zu Fructose-6-phosphat recycelt (Anschluss an die Glykolyse).",
+   "image": "assets/figures/vl03-ppp-label.webp",
+   "iw": 790,
+   "ih": 490
+  },
+  {
+   "id": "vl03-gsh-label",
+   "type": "label",
+   "topic": "Pentosephosphatweg & Glutathion",
+   "source": "slides",
+   "ref": "VL06 · Folie 50; VL03 · Folie 51",
+   "stem": "Beschriften Sie das Glutathion-System.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 50,
+    "crop": [
+     160,
+     65,
+     560,
+     375
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      193,
+      120,
+      217,
+      136
+     ],
+     "answer": "Superoxid (O₂•⁻)",
+     "accept": [
+      "O2-",
+      "Superoxid",
+      "Superoxide",
+      "O2•-",
+      "Superoxidanion"
+     ],
+     "x": 7.62,
+     "y": 16.94,
+     "w": 7.25,
+     "h": 6.77
+    },
+    {
+     "box": [
+      189,
+      179,
+      222,
+      196
+     ],
+     "answer": "H₂O₂",
+     "accept": [
+      "H2O2",
+      "Wasserstoffperoxid",
+      "hydrogen peroxide"
+     ],
+     "x": 6.62,
+     "y": 35.97,
+     "w": 9.5,
+     "h": 7.1
+    },
+    {
+     "box": [
+      188,
+      232,
+      216,
+      246
+     ],
+     "answer": "Hydroxylradikal (•OH)",
+     "accept": [
+      "OH",
+      "•OH",
+      "Hydroxylradikal",
+      "Hydroxyl-Radikal",
+      "hydroxyl radical"
+     ],
+     "x": 6.38,
+     "y": 53.06,
+     "w": 8.25,
+     "h": 6.13
+    },
+    {
+     "box": [
+      315,
+      154,
+      373,
+      181
+     ],
+     "answer": "Glutathion-Peroxidase (GPx)",
+     "accept": [
+      "Glutathionperoxidase",
+      "glutathione peroxidase",
+      "GPx",
+      "Glutathion-Peroxidase"
+     ],
+     "x": 38.12,
+     "y": 27.9,
+     "w": 15.75,
+     "h": 10.32
+    },
+    {
+     "box": [
+      290,
+      224,
+      324,
+      236
+     ],
+     "answer": "2 GSH (reduziertes Glutathion)",
+     "accept": [
+      "GSH",
+      "2 GSH",
+      "2GSH",
+      "reduziertes Glutathion"
+     ],
+     "x": 31.87,
+     "y": 50.48,
+     "w": 9.75,
+     "h": 5.48
+    },
+    {
+     "box": [
+      366,
+      224,
+      397,
+      236
+     ],
+     "answer": "GSSG (oxidiertes Glutathion)",
+     "accept": [
+      "GSSG",
+      "oxidiertes Glutathion",
+      "Glutathiondisulfid"
+     ],
+     "x": 50.88,
+     "y": 50.48,
+     "w": 9.0,
+     "h": 5.48
+    },
+    {
+     "box": [
+      379,
+      252,
+      438,
+      280
+     ],
+     "answer": "Glutathion-Reduktase",
+     "accept": [
+      "Glutathionreduktase",
+      "glutathione reductase",
+      "GR",
+      "Glutathion-Reduktase"
+     ],
+     "x": 54.12,
+     "y": 59.52,
+     "w": 16.0,
+     "h": 10.65
+    },
+    {
+     "box": [
+      366,
+      302,
+      429,
+      314
+     ],
+     "answer": "NADPH + H⁺",
+     "accept": [
+      "NADPH",
+      "NADPH + H+",
+      "NADPH+H"
+     ],
+     "x": 50.88,
+     "y": 75.65,
+     "w": 17.0,
+     "h": 5.48
+    },
+    {
+     "box": [
+      332,
+      351,
+      363,
+      363
+     ],
+     "answer": "G6PD (Glucose-6-phosphat-Dehydrogenase)",
+     "accept": [
+      "G6PD",
+      "G6PDH",
+      "Glucose-6-phosphat-Dehydrogenase",
+      "glucose-6-phosphate dehydrogenase"
+     ],
+     "x": 42.38,
+     "y": 91.45,
+     "w": 9.0,
+     "h": 5.48
+    },
+    {
+     "box": [
+      459,
+      329,
+      552,
+      358
+     ],
+     "answer": "6-Phosphoglucono-δ-lacton",
+     "accept": [
+      "6-phosphoglucono-delta-lactone",
+      "6-Phosphogluconolacton",
+      "Phosphogluconolacton",
+      "6-Phosphoglucono-delta-lacton"
+     ],
+     "x": 74.12,
+     "y": 84.35,
+     "w": 24.5,
+     "h": 10.97
+    }
+   ],
+   "bank": [
+    "Superoxid-Dismutase",
+    "NADH + H⁺"
+   ],
+   "explanation": "H₂O₂ wird von der Glutathion-Peroxidase mit 2 GSH zu Wasser reduziert (GSH → GSSG). Die Glutathion-Reduktase regeneriert GSH mit NADPH, das die G6PD im ersten Schritt des PPP liefert. Ohne Entgiftung entsteht aus H₂O₂ das schädliche •OH.",
+   "image": "assets/figures/vl03-gsh-label.webp",
+   "iw": 800,
+   "ih": 620
+  },
+  {
+   "id": "vl03-ppp-ziel",
+   "type": "single",
+   "topic": "Pentosephosphatweg & Glutathion",
+   "source": "slides",
+   "ref": "VL06 · Folien 35, 45–46",
+   "stem": "Welche Aussage zum Pentosephosphatweg (PPP) trifft zu?",
+   "options": [
+    {
+     "t": "Er zweigt von der Glykolyse ab und liefert Intermediate und Reduktionskraft – nicht ATP",
+     "correct": true
+    },
+    {
+     "t": "Er ist nach OXPHOS die zweitwichtigste ATP-Quelle des Neurons",
+     "correct": false
+    },
+    {
+     "t": "Er läuft in der Mitochondrienmatrix und speist NADH direkt in Komplex I ein",
+     "correct": false
+    },
+    {
+     "t": "Er liefert NADH für die Glutathion-Reduktase und Acetyl-CoA für den Citratzyklus",
+     "correct": false
+    }
+   ],
+   "explanation": "„PPP – an ancient metabolic pathway (and the goal is not to make ATP)“: Er beginnt am Glucose-6-phosphat (Cytosol) und liefert NADPH (nicht NADH!) sowie Ribose-5-phosphat für die Nukleotidsynthese."
+  },
+  {
+   "id": "vl03-ppp-produkte",
+   "type": "multi",
+   "topic": "Pentosephosphatweg & Glutathion",
+   "source": "slides",
+   "ref": "VL06 · Folien 47–48; VL03 · Folien 48–49, 52",
+   "stem": "Wofür werden die Produkte des Pentosephosphatwegs benötigt?",
+   "options": [
+    {
+     "t": "Ribose-5-phosphat → Nukleotide für DNA und RNA",
+     "correct": true
+    },
+    {
+     "t": "Ribose-5-phosphat → Nukleotid-Cofaktoren wie NAD, FAD und CoA",
+     "correct": true
+    },
+    {
+     "t": "NADPH → Vorstufen für Cholesterin, Hormone und Fettsäuren",
+     "correct": true
+    },
+    {
+     "t": "NADPH → Reduktion von Glutathion (antioxidative Abwehr)",
+     "correct": true
+    },
+    {
+     "t": "NADPH → direkte Einspeisung von Elektronen in Komplex I",
+     "correct": false
+    },
+    {
+     "t": "Ribose-5-phosphat → Bildung von Laktat für den Laktat-Shuttle",
+     "correct": false
+    }
+   ],
+   "explanation": "Discussion VI: Recycling von Zuckern, Ribose-5-phosphat für Nukleotide und Cofaktoren, Steroid- und Lipidbiosynthese – und vor allem NADPH für das Glutathion-System."
+  },
+  {
+   "id": "vl03-glutathion-combo",
+   "type": "combo",
+   "topic": "Pentosephosphatweg & Glutathion",
+   "source": "slides",
+   "ref": "VL06 · Folien 49–50; VL03 · Folien 50–51",
+   "stem": "Welche Aussagen zu Glutathion treffen zu?",
+   "statements": [
+    {
+     "t": "Die Glutathion-Reduktase reduziert oxidiertes Glutathion (GSSG) mit NADPH zu zwei GSH.",
+     "correct": true
+    },
+    {
+     "t": "Reduziertes Glutathion (GSH) wirkt als Sulfhydryl-Puffer und schützt vor Peroxidation und Proteinschäden.",
+     "correct": true
+    },
+    {
+     "t": "Die Glutathion-Peroxidase entgiftet H₂O₂, wobei GSH zu GSSG oxidiert wird.",
+     "correct": true
+    },
+    {
+     "t": "Glutathion ist ein Dipeptid aus Glutamat und Cystein, das Elektronen auf NADP⁺ überträgt.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BCD"
+   ],
+   "explanation": "GSH ist ein Tripeptid (γ-Glu-Cys-Gly); zwei GSH bilden über eine Disulfidbrücke GSSG. Weitere Funktion laut Folie: Aufrechterhaltung des Eisenstatus. NADPH reduziert GSSG – nicht umgekehrt."
+  },
+  {
+   "id": "vl03-laktat-shuttle-label",
+   "type": "label",
+   "topic": "Substrat-Shuttling & Laktat-Shuttle",
+   "source": "slides",
+   "ref": "VL06 · Folien 52, 54–55",
+   "stem": "Beschriften Sie das Schema zum Substrat-Shuttling unter normalen Bedingungen.",
+   "src": {
+    "pdf": "VL06Energetics.pdf",
+    "page": 52,
+    "crop": [
+     2,
+     90,
+     718,
+     345
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      35,
+      310,
+      91,
+      323
+     ],
+     "answer": "Kapillare (capillary)",
+     "accept": [
+      "Kapillare",
+      "capillary",
+      "Blutgefäß",
+      "Blut"
+     ],
+     "x": 4.26,
+     "y": 85.29,
+     "w": 8.52,
+     "h": 7.06
+    },
+    {
+     "box": [
+      248,
+      310,
+      310,
+      323
+     ],
+     "answer": "Astrozyt (astrocyte)",
+     "accept": [
+      "Astrozyt",
+      "Astrocyte",
+      "Astrozyte"
+     ],
+     "x": 34.01,
+     "y": 85.29,
+     "w": 9.36,
+     "h": 7.06
+    },
+    {
+     "box": [
+      526,
+      310,
+      573,
+      323
+     ],
+     "answer": "Neuron",
+     "accept": [
+      "Neuron",
+      "Nervenzelle"
+     ],
+     "x": 72.84,
+     "y": 85.29,
+     "w": 7.26,
+     "h": 7.06
+    },
+    {
+     "box": [
+      196,
+      280,
+      260,
+      298
+     ],
+     "answer": "Glykogen (glycogen)",
+     "accept": [
+      "Glykogen",
+      "glycogen"
+     ],
+     "x": 26.75,
+     "y": 73.53,
+     "w": 9.64,
+     "h": 9.02
+    },
+    {
+     "box": [
+      264,
+      152,
+      297,
+      164
+     ],
+     "answer": "LDH5",
+     "accept": [
+      "LDH-5",
+      "LDH5",
+      "Laktatdehydrogenase 5"
+     ],
+     "x": 36.24,
+     "y": 23.33,
+     "w": 5.31,
+     "h": 6.67
+    },
+    {
+     "box": [
+      312,
+      154,
+      361,
+      172
+     ],
+     "answer": "Laktat (im Astrozyten)",
+     "accept": [
+      "Laktat",
+      "lactate",
+      "Lactat"
+     ],
+     "x": 42.95,
+     "y": 24.12,
+     "w": 7.54,
+     "h": 9.02
+    },
+    {
+     "box": [
+      376,
+      150,
+      420,
+      162
+     ],
+     "answer": "MCT1/4",
+     "accept": [
+      "MCT1/4",
+      "MCT1",
+      "MCT4",
+      "MCT"
+     ],
+     "x": 51.89,
+     "y": 22.55,
+     "w": 6.84,
+     "h": 6.67
+    },
+    {
+     "box": [
+      466,
+      150,
+      500,
+      162
+     ],
+     "answer": "MCT2",
+     "accept": [
+      "MCT2",
+      "MCT-2"
+     ],
+     "x": 64.46,
+     "y": 22.55,
+     "w": 5.45,
+     "h": 6.67
+    },
+    {
+     "box": [
+      523,
+      156,
+      572,
+      173
+     ],
+     "answer": "Laktat (im Neuron)",
+     "accept": [
+      "Laktat",
+      "lactate",
+      "Lactat"
+     ],
+     "x": 72.42,
+     "y": 24.9,
+     "w": 7.54,
+     "h": 8.63
+    },
+    {
+     "box": [
+      542,
+      177,
+      572,
+      212
+     ],
+     "answer": "LDH1",
+     "accept": [
+      "LDH-1",
+      "LDH1",
+      "Laktatdehydrogenase 1"
+     ],
+     "x": 75.07,
+     "y": 33.14,
+     "w": 4.89,
+     "h": 15.69
+    },
+    {
+     "box": [
+      656,
+      196,
+      683,
+      209
+     ],
+     "answer": "PPP (Pentosephosphatweg)",
+     "accept": [
+      "PPP",
+      "Pentosephosphatweg",
+      "pentose phosphate pathway"
+     ],
+     "x": 90.99,
+     "y": 40.59,
+     "w": 4.47,
+     "h": 7.06
+    }
+   ],
+   "bank": [
+    "GLUT3",
+    "Ketonkörper"
+   ],
+   "explanation": "Astrozyten nehmen Glucose auf, speichern Glykogen und bilden über LDH5 Laktat, das über MCT1/4 exportiert und über MCT2 vom Neuron aufgenommen wird; LDH1 macht daraus Pyruvat für den TCA. Neurone nutzen Glucose zusätzlich im PPP (NADPH, Bausteine).",
+   "image": "assets/figures/vl03-laktat-shuttle-label.webp",
+   "iw": 1400,
+   "ih": 499
+  },
+  {
+   "id": "vl03-glut3",
+   "type": "single",
+   "topic": "Substrat-Shuttling & Laktat-Shuttle",
+   "source": "slides",
+   "ref": "VL06 · Folie 54",
+   "stem": "Wie nehmen Neurone Glucose auf?",
+   "options": [
+    {
+     "t": "Über GLUT3 durch erleichterte Diffusion entlang des Gefälles (Blut ~5 mM, Hirn ~1–2 mM)",
+     "correct": true
+    },
+    {
+     "t": "Über SGLT1 durch sekundär aktiven Na⁺-Glucose-Cotransport gegen den Gradienten",
+     "correct": false
+    },
+    {
+     "t": "Über MCT2 im Symport mit H⁺, da GLUT-Transporter nur auf Astrozyten vorkommen",
+     "correct": false
+    },
+    {
+     "t": "Gar nicht direkt – nur als Laktat, das Astrozyten aus Glucose bilden",
+     "correct": false
+    }
+   ],
+   "explanation": "„Glucose is taken up by neurons based on gradient facilitated transport“: GLUT1 an Kapillarendothel/Astrozyten, GLUT3 an Neuronen. MCT2 transportiert Laktat, nicht Glucose."
+  },
+  {
+   "id": "vl03-laktat-shuttle-multi",
+   "type": "multi",
+   "topic": "Substrat-Shuttling & Laktat-Shuttle",
+   "source": "slides",
+   "ref": "VL06 · Folien 55–56",
+   "stem": "Welche Aussagen zum Astrozyten-Neuron-Laktat-Shuttle treffen zu?",
+   "options": [
+    {
+     "t": "Astrozyten bilden Laktat aus Glykogen → Glucose → Pyruvat mithilfe der LDH-5.",
+     "correct": true
+    },
+    {
+     "t": "Laktat verlässt Astrozyten über MCT1/4 und gelangt über MCT2 in Neurone.",
+     "correct": true
+    },
+    {
+     "t": "Vorteil von Laktat: Das Neuron umgeht die Glykolyse und speist Pyruvat direkt in die Mitochondrien ein.",
+     "correct": true
+    },
+    {
+     "t": "Er gewinnt v. a. bei vorübergehendem Glucosemangel (hohe synaptische Aktivität, Hypoperfusion) an Bedeutung.",
+     "correct": true
+    },
+    {
+     "t": "LDH-5 ist vor allem in Neuronen, LDH-1 vor allem in Astrozyten exprimiert.",
+     "correct": false
+    },
+    {
+     "t": "Seine energetische Bedeutung ist unumstritten und stöchiometrisch eindeutig belegt.",
+     "correct": false
+    }
+   ],
+   "explanation": "LDH-5 hoch in Astrozyten, LDH-1 hoch in Neuronen. Die Vorlesung betont die Kontroverse: Es gibt Hinweise, dass die Stöchiometrie gegen einen energetisch bedeutsamen Laktat-Shuttle spricht."
+  },
+  {
+   "id": "vl03-fasten-combo",
+   "type": "combo",
+   "topic": "Substrat-Shuttling & Laktat-Shuttle",
+   "source": "slides",
+   "ref": "VL06 · Folien 29, 53",
+   "stem": "Welche Aussagen zur Energieversorgung des Gehirns im Hungerzustand (Fasten) treffen zu?",
+   "statements": [
+    {
+     "t": "Ketonkörper können im Fasten bis zu ~75 % des Energiebedarfs des Gehirns decken.",
+     "correct": true
+    },
+    {
+     "t": "Neurone verwerten Fettsäuren direkt als Hauptenergiequelle.",
+     "correct": false
+    },
+    {
+     "t": "Ketonkörper werden von Neuronen aufgenommen und im Citratzyklus verwertet.",
+     "correct": true
+    },
+    {
+     "t": "Das Glykogen der Gliazellen reicht aus, um das Gehirn mehrere Tage zu versorgen.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AC",
+    "A",
+    "ABC",
+    "ACD",
+    "CD"
+   ],
+   "explanation": "Fettsäuren sind für den Körper (35 %) wichtig, im Gehirn spielen sie direkt kaum eine Rolle; im Fasten werden aus ihnen Ketonkörper, die Neurone (über MCT) aufnehmen und in den TCA einspeisen. Glia-Glykogen reicht nur kurzfristig (Minuten)."
+  },
+  {
+   "id": "vl03-exam-glutamat-denovo",
+   "type": "single",
+   "topic": "Substrat-Shuttling & Laktat-Shuttle",
+   "source": "exam",
+   "exam": "WS23/24, WS24/25, WS25/26",
+   "ref": "VL07 · Folien 7, 9–11; VL06 · Folie 37",
+   "stem": "Die De-novo-Synthese von Glutamat kann zum Problem werden, weil …",
+   "options": [
+    {
+     "t": "α-Ketoglutarat dem Citratzyklus (TCA) entzogen wird",
+     "correct": true
+    },
+    {
+     "t": "sie einen sekundär aktiven Transport von Glucose erfordert",
+     "correct": false
+    },
+    {
+     "t": "dabei Laktat aus den Astrozyten diffundiert",
+     "correct": false
+    },
+    {
+     "t": "dafür Ketonkörper als Kohlenstoffquelle benötigt werden",
+     "correct": false
+    }
+   ],
+   "note": "WS24/25: 4. Option im Protokoll unvollständig („…“) – ergänzt. WS23/24 Frage 15 (Lösung „vergessen“) enthielt die inhaltsgleiche Option „Die Produktion von GABA und Glutamat entzieht dem Citratzyklus α-Ketoglutarat“. Die Energetik-Folien zeigen nur Glutamat → α-KG als anaplerotischen Zufluss (VL06 Folie 37); die Begründung steht in VL07.",
+   "explanation": "Glutamat entsteht aus α-Ketoglutarat (Glucose liefert das Kohlenstoffgerüst). Jedes neu synthetisierte Glutamat (und daraus GABA) entzieht dem TCA ein Zwischenprodukt, das anaplerotisch (v. a. Pyruvat-Carboxylase in Astrozyten) nachgeliefert werden muss – deshalb wird Glutamat über den Glutamin-Glutamat-Zyklus recycelt."
+  },
+  {
+   "id": "vl03-substrattransport-open",
+   "type": "open",
+   "topic": "Substrat-Shuttling & Laktat-Shuttle",
+   "source": "slides",
+   "ref": "VL06 · Folien 52–57",
+   "stem": "Question theme 3: Nennen Sie 2 Beispiele für den Transport von Substraten bzw. Stoffwechselintermediaten durch andere Gehirnzellen zu Neuronen.",
+   "points": [
+    "Laktat-Shuttle (Astrozyt → Neuron, MCT1/4 → MCT2)",
+    "Pyruvat-Shuttle",
+    "Glutamat/Glutamin (Glutamin-Glutamat-Zyklus)",
+    "Cholesterin-Transport",
+    "Ketonkörper (im Fasten)"
+   ],
+   "need": 2,
+   "explanation": "„Brain cells work together to provide metabolic support under different conditions“ – Gliazellen versorgen Neurone mit Substraten statt mit ATP."
+  }
+ ]
+}

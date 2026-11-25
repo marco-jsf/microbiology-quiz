@@ -1,0 +1,1869 @@
+{
+ "id": "vl07",
+ "title": "VL07 · Neurotransmitter",
+ "short": "Transmitter",
+ "color": "#e0567a",
+ "topics": [
+  "Grundlagen & Transmitterklassen",
+  "Glutamat: Synthese & Glutamin-Zyklus",
+  "Glycin",
+  "GABA",
+  "Katecholamine",
+  "Serotonin & Histamin",
+  "Acetylcholin"
+ ],
+ "questions": [
+  {
+   "id": "vl07-vier-schritte",
+   "type": "order",
+   "topic": "Grundlagen & Transmitterklassen",
+   "source": "slides",
+   "ref": "VL07 · Folie 2",
+   "stem": "Bringen Sie die 4 Schritte der Neurotransmission in die richtige Reihenfolge.",
+   "items": [
+    "Synthese des Neurotransmitters",
+    "Speicherung und Freisetzung",
+    "Bindung an Rezeptoren der postsynaptischen Membran",
+    "Wiederaufnahme aus dem synaptischen Spalt"
+   ],
+   "explanation": "Synthese → Speicherung/Freisetzung → Rezeptorbindung → Wiederaufnahme (Reuptake), die das Signal beendet und den Transmitter recycelt."
+  },
+  {
+   "id": "vl07-grundlagen",
+   "type": "combo",
+   "topic": "Grundlagen & Transmitterklassen",
+   "source": "slides",
+   "ref": "VL07 · Folien 3, 5",
+   "stem": "Welche Aussagen zu Neurotransmittern treffen zu?",
+   "statements": [
+    {
+     "t": "Glutamat und GABA sind die häufigsten Neurotransmitter im Gehirn (zusammen ca. 80 %).",
+     "correct": true
+    },
+    {
+     "t": "Mehr als 100 Substanzen dienen als Neurotransmitter.",
+     "correct": true
+    },
+    {
+     "t": "Neuropeptide sind kleiner als die klassischen Transmitter (1–2 Aminosäuren).",
+     "correct": false
+    },
+    {
+     "t": "Glycin ist ein exzitatorischer Aminosäure-Transmitter.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "A",
+    "ABD",
+    "B"
+   ],
+   "explanation": "Neuropeptide sind größer (3–36 Aminosäuren). Glycin und GABA wirken inhibitorisch; exzitatorisch sind Glutamat, Aspartat und NAAG."
+  },
+  {
+   "id": "vl07-transmitter-zelltyp",
+   "type": "multi",
+   "topic": "Grundlagen & Transmitterklassen",
+   "source": "slides",
+   "ref": "VL07 · Folien 3, 42",
+   "stem": "Welche Zuordnungen von Transmitter und typischem Einsatzort (Wirbeltiere) treffen zu?",
+   "options": [
+    {
+     "t": "Acetylcholin – Motoneurone, die Skelettmuskeln erregen",
+     "correct": true
+    },
+    {
+     "t": "Glycin – einige inhibitorische ZNS-Neurone, vor allem in Hirnstamm und Rückenmark",
+     "correct": true
+    },
+    {
+     "t": "Serotonin und Dopamin – modulatorische ZNS-Neurone",
+     "correct": true
+    },
+    {
+     "t": "Glutamat – die meisten inhibitorischen ZNS-Neurone",
+     "correct": false
+    },
+    {
+     "t": "Noradrenalin – alle präganglionären Neurone des vegetativen Nervensystems",
+     "correct": false
+    }
+   ],
+   "explanation": "Glutamat: die meisten exzitatorischen ZNS- und sensorischen Neurone; GABA: die meisten inhibitorischen ZNS-Neurone. Präganglionär (Sympathikus wie Parasympathikus) wird immer ACh verwendet."
+  },
+  {
+   "id": "vl07-exzitatorische-as",
+   "type": "multi",
+   "topic": "Grundlagen & Transmitterklassen",
+   "source": "slides",
+   "ref": "VL07 · Folie 5",
+   "stem": "Welche der folgenden Aminosäure-Transmitter wirken exzitatorisch?",
+   "options": [
+    {
+     "t": "Glutamat",
+     "correct": true
+    },
+    {
+     "t": "Aspartat",
+     "correct": true
+    },
+    {
+     "t": "N-Acetylaspartylglutamat (NAAG)",
+     "correct": true
+    },
+    {
+     "t": "Glycin",
+     "correct": false
+    },
+    {
+     "t": "GABA (γ-Aminobuttersäure)",
+     "correct": false
+    }
+   ],
+   "explanation": "Exzitatorisch: Glutamat (Haupttransmitter), Aspartat, NAAG. Inhibitorisch: Glycin (v. a. Rückenmark) und GABA (Gehirn)."
+  },
+  {
+   "id": "vl07-strukturen-label",
+   "type": "label",
+   "topic": "Grundlagen & Transmitterklassen",
+   "source": "slides",
+   "ref": "VL07 · Folie 4",
+   "stem": "Benennen Sie die dargestellten Neurotransmitter anhand ihrer Strukturformeln.",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 4,
+    "crop": [
+     145,
+     80,
+     700,
+     560
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      155,
+      88,
+      234,
+      101
+     ],
+     "answer": "Acetylcholin",
+     "accept": [
+      "Acetylcholine",
+      "ACh"
+     ],
+     "x": 1.35,
+     "y": 1.15,
+     "w": 15.14,
+     "h": 3.75
+    },
+    {
+     "box": [
+      155,
+      164,
+      202,
+      179
+     ],
+     "answer": "Glycin",
+     "accept": [
+      "Glycine",
+      "Gly"
+     ],
+     "x": 1.35,
+     "y": 16.98,
+     "w": 9.37,
+     "h": 4.17
+    },
+    {
+     "box": [
+      155,
+      230,
+      218,
+      246
+     ],
+     "answer": "Glutamat",
+     "accept": [
+      "Glutamate",
+      "Glutaminsäure",
+      "Glu"
+     ],
+     "x": 1.35,
+     "y": 30.73,
+     "w": 12.25,
+     "h": 4.38
+    },
+    {
+     "box": [
+      150,
+      342,
+      271,
+      370
+     ],
+     "answer": "γ-Aminobuttersäure (GABA)",
+     "accept": [
+      "GABA",
+      "gamma-Aminobuttersäure",
+      "γ-Aminobutyric acid",
+      "Gamma-Aminobuttersäure"
+     ],
+     "x": 0.45,
+     "y": 54.06,
+     "w": 22.7,
+     "h": 6.88
+    },
+    {
+     "box": [
+      155,
+      433,
+      216,
+      452
+     ],
+     "answer": "Histamin",
+     "accept": [
+      "Histamine"
+     ],
+     "x": 1.35,
+     "y": 73.02,
+     "w": 11.89,
+     "h": 5.0
+    },
+    {
+     "box": [
+      422,
+      88,
+      482,
+      101
+     ],
+     "answer": "Dopamin",
+     "accept": [
+      "Dopamine",
+      "DA"
+     ],
+     "x": 49.46,
+     "y": 1.15,
+     "w": 11.71,
+     "h": 3.75
+    },
+    {
+     "box": [
+      422,
+      202,
+      514,
+      218
+     ],
+     "answer": "Noradrenalin",
+     "accept": [
+      "Norepinephrine",
+      "Norepinephrin",
+      "NA",
+      "NE"
+     ],
+     "x": 49.46,
+     "y": 24.9,
+     "w": 17.48,
+     "h": 4.38
+    },
+    {
+     "box": [
+      422,
+      319,
+      491,
+      334
+     ],
+     "answer": "Adrenalin",
+     "accept": [
+      "Epinephrine",
+      "Epinephrin"
+     ],
+     "x": 49.46,
+     "y": 49.27,
+     "w": 13.33,
+     "h": 4.17
+    },
+    {
+     "box": [
+      422,
+      440,
+      480,
+      454
+     ],
+     "answer": "Serotonin",
+     "accept": [
+      "5-HT",
+      "5-Hydroxytryptamin"
+     ],
+     "x": 49.46,
+     "y": 74.48,
+     "w": 11.35,
+     "h": 3.96
+    }
+   ],
+   "explanation": "Katecholamine = Catechol (Benzolring mit 2 OH) + Ethylamin; Noradrenalin trägt zusätzlich eine β-OH-Gruppe, Adrenalin außerdem N-CH₃. Serotonin = Indol + 5-OH; Histamin = Imidazolring; GABA = C4-Kette mit Amino- und Carboxylgruppe; ACh = Acetylester des Cholins (N⁺(CH₃)₃).",
+   "image": "assets/figures/vl07-strukturen-label.webp",
+   "iw": 1110,
+   "ih": 960
+  },
+  {
+   "id": "vl07-transaminierung",
+   "type": "single",
+   "topic": "Glutamat: Synthese & Glutamin-Zyklus",
+   "source": "slides",
+   "ref": "VL07 · Folien 7–8",
+   "stem": "Glutamat entsteht durch Transaminierung von α-Ketoglutarat. Welcher Cofaktor ist für Transaminasen essenziell?",
+   "options": [
+    {
+     "t": "Pyridoxalphosphat (PLP, aktive Form von Vitamin B6)",
+     "correct": true
+    },
+    {
+     "t": "Tetrahydrofolat (THF, Vitamin B9)",
+     "correct": false
+    },
+    {
+     "t": "Tetrahydrobiopterin (BH₄)",
+     "correct": false
+    },
+    {
+     "t": "S-Adenosylmethionin (SAM)",
+     "correct": false
+    },
+    {
+     "t": "Thiaminpyrophosphat (Vitamin B1)",
+     "correct": false
+    }
+   ],
+   "explanation": "Transaminasen übertragen die Aminogruppe einer Aminosäure (z. B. Alanin, Aspartat) auf α-Ketoglutarat → Glutamat + α-Ketosäure (Pyruvat, Oxalacetat); PLP dient als Zwischenträger der Aminogruppe."
+  },
+  {
+   "id": "vl07-glukose-rueckgrat",
+   "type": "combo",
+   "topic": "Glutamat: Synthese & Glutamin-Zyklus",
+   "source": "slides",
+   "ref": "VL07 · Folien 7, 9",
+   "stem": "Welche Aussagen zur Herkunft des Kohlenstoffgerüsts von Glutamat im Gehirn treffen zu?",
+   "statements": [
+    {
+     "t": "Glucose liefert die Kohlenstoffatome für die Glutamat-Biosynthese.",
+     "correct": true
+    },
+    {
+     "t": "Aminosäuren werden deutlich weniger effizient über die Blut-Hirn-Schranke transportiert als Glucose.",
+     "correct": true
+    },
+    {
+     "t": "Die wichtigste anaplerotische Reaktion in Synapsen ist die Pyruvat-Carboxylierung – in Neuronen durch die Pyruvatcarboxylase, in Astrozyten durch das Malatenzym.",
+     "correct": false
+    },
+    {
+     "t": "Glutamat ist Vorstufe von GABA und Glutathion.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "ABCD",
+    "AB",
+    "BD",
+    "ACD"
+   ],
+   "explanation": "Die Pyruvatcarboxylase (CO₂-Fixierung → Oxalacetat) sitzt in Astrozyten, Neurone nutzen das Malatenzym – Aussage C ist vertauscht. Über α-Ketoglutarat gelangt Glucose-Kohlenstoff in Glutamat."
+  },
+  {
+   "id": "vl07-glutamat-recycling-label",
+   "type": "label",
+   "topic": "Glutamat: Synthese & Glutamin-Zyklus",
+   "source": "slides",
+   "ref": "VL07 · Folie 10",
+   "stem": "Beschriften Sie das Schema zum Glutamat-Recycling zwischen Neuron und Gliazelle.",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 10,
+    "crop": [
+     92,
+     80,
+     762,
+     580
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      96,
+      168,
+      186,
+      202
+     ],
+     "answer": "Präsynaptisches Terminal (Neuron)",
+     "accept": [
+      "Presynaptic terminal",
+      "Präsynapse",
+      "präsynaptische Endigung",
+      "Neuron"
+     ],
+     "x": 0.22,
+     "y": 17.1,
+     "w": 14.18,
+     "h": 7.8
+    },
+    {
+     "box": [
+      576,
+      110,
+      645,
+      127
+     ],
+     "answer": "Gliazelle (Astrozyt)",
+     "accept": [
+      "Glial cell",
+      "Astrozyt",
+      "Gliazelle",
+      "Astrocyte"
+     ],
+     "x": 71.87,
+     "y": 5.5,
+     "w": 11.04,
+     "h": 4.4
+    },
+    {
+     "box": [
+      219,
+      316,
+      291,
+      328
+     ],
+     "answer": "Glutaminase",
+     "accept": [],
+     "x": 18.58,
+     "y": 46.7,
+     "w": 11.49,
+     "h": 3.4
+    },
+    {
+     "box": [
+      622,
+      250,
+      684,
+      278
+     ],
+     "answer": "Glutamin-Synthetase",
+     "accept": [
+      "Glutamine synthetase",
+      "Glutaminsynthetase",
+      "GS"
+     ],
+     "x": 78.73,
+     "y": 33.5,
+     "w": 10.0,
+     "h": 6.6
+    },
+    {
+     "find": "SLC38-type Na + /AA co- transporters",
+     "answer": "SLC38-Na⁺/Aminosäure-Cotransporter",
+     "accept": [
+      "SLC38",
+      "SLC38-type",
+      "Na+/AA-Cotransporter",
+      "Glutamin-Transporter",
+      "SNAT"
+     ],
+     "x": 45.85,
+     "y": 23.22,
+     "w": 9.25,
+     "h": 8.97
+    },
+    {
+     "box": [
+      468,
+      232,
+      556,
+      277
+     ],
+     "answer": "Glutamat-Transporter EAAT2",
+     "accept": [
+      "EAAT2",
+      "Glutamate transporter",
+      "Glutamattransporter",
+      "GLT-1"
+     ],
+     "x": 55.75,
+     "y": 29.9,
+     "w": 13.88,
+     "h": 10.0
+    },
+    {
+     "find": "EAAT1/2",
+     "answer": "EAAT1/2 (glialer Glutamat-Transporter)",
+     "accept": [
+      "EAAT1/2",
+      "EAAT1",
+      "EAAT2",
+      "GLAST",
+      "GLT-1",
+      "Glutamat-Transporter"
+     ],
+     "x": 64.46,
+     "y": 51.06,
+     "w": 7.64,
+     "h": 3.4
+    }
+   ],
+   "explanation": "Freigesetztes Glutamat wird v. a. von Astrozyten (EAAT1/2) aufgenommen und dort durch die Glutamin-Synthetase zu Glutamin umgesetzt. Glutamin gelangt über SLC38-Na⁺/Aminosäure-Cotransporter ins Neuron und wird von der Glutaminase wieder zu Glutamat.",
+   "image": "assets/figures/vl07-glutamat-recycling-label.webp",
+   "iw": 1340,
+   "ih": 1000
+  },
+  {
+   "id": "vl07-gs-glutaminase",
+   "type": "open",
+   "topic": "Glutamat: Synthese & Glutamin-Zyklus",
+   "source": "slides",
+   "ref": "VL07 · Folie 11",
+   "stem": "Nennen Sie für die Glutamin-Synthetase und die Glutaminase jeweils Zelltyp, Reaktion und Funktion im Glutamin-Zyklus.",
+   "points": [
+    "Glutamin-Synthetase sitzt in Astrozyten",
+    "Reaktion: Glutamat + NH₃ + ATP → Glutamin (über ein Acylphosphat-Zwischenprodukt)",
+    "Funktion: Entgiftung von freiem Ammoniak, Regulation des Stickstoff-Stoffwechsels, Reservoir der Glutamin-Vorstufe",
+    "Glutaminase sitzt in Neuronen",
+    "Reaktion: Glutamin + H₂O → Glutamat + NH₃",
+    "Funktion im Glutamin-Zyklus: Regeneration des Transmitters Glutamat in der Präsynapse",
+    "Allgemein: liefert NH₃ – in Leber (Harnstoffzyklus) und Niere (NH₄⁺-Ausscheidung) eigene Glutaminasen; im Gehirn geht das neuronale NH₃ größtenteils zurück zum Astrozyten und wird dort von der GS erneut fixiert"
+   ],
+   "explanation": "Astrozyten ‚parken‘ Glutamat als ungiftiges Glutamin; Neurone gewinnen daraus mit der Glutaminase ihren Transmitter zurück."
+  },
+  {
+   "id": "vl07-glutamin-zyklus",
+   "type": "multi",
+   "topic": "Glutamat: Synthese & Glutamin-Zyklus",
+   "source": "slides",
+   "ref": "VL07 · Folien 10–11",
+   "stem": "Welche Aussagen zum Glutamat-Glutamin-Zyklus treffen zu?",
+   "options": [
+    {
+     "t": "Synaptisch freigesetztes Glutamat wird zu einem großen Teil von Astrozyten über EAAT1/2 aufgenommen.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten wandeln Glutamat ATP-abhängig mit NH₃ zu Glutamin um.",
+     "correct": true
+    },
+    {
+     "t": "Neurone nehmen Glutamin über SLC38-Na⁺/Aminosäure-Cotransporter auf.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten geben Glutamat in Vesikeln direkt an die Präsynapse zurück.",
+     "correct": false
+    },
+    {
+     "t": "Die Glutaminase sitzt in Astrozyten und bildet dort Glutamin.",
+     "correct": false
+    }
+   ],
+   "explanation": "Richtung des Zyklus: Spalt → Astrozyt (EAAT1/2) → Glutamin-Synthetase → Glutamin → Neuron (SLC38) → Glutaminase → Glutamat → Vesikel."
+  },
+  {
+   "id": "vl07-sekundaer-aktiv",
+   "type": "multi",
+   "topic": "Glutamat: Synthese & Glutamin-Zyklus",
+   "source": "slides",
+   "ref": "VL07 · Folie 12",
+   "stem": "Welche Aussagen zur Energetik von Glutamat-Wiederaufnahme und Vesikelbefüllung treffen zu?",
+   "options": [
+    {
+     "t": "Die Na⁺/K⁺-ATPase baut den Na⁺-Gradienten auf, der die Wiederaufnahme sekundär aktiv antreibt.",
+     "correct": true
+    },
+    {
+     "t": "Glutamat-Transporter der Plasmamembran koppeln die Aufnahme an den Cotransport von 3 Na⁺.",
+     "correct": true
+    },
+    {
+     "t": "Eine ATP-getriebene Protonenpumpe säuert die Vesikel an; der H⁺-Gradient treibt die Befüllung.",
+     "correct": true
+    },
+    {
+     "t": "Glutamat ist in den Vesikeln (~10 mM) niedriger konzentriert als im Zytosol (~200 mM).",
+     "correct": false
+    },
+    {
+     "t": "Im synaptischen Spalt liegt Glutamat in Ruhe im millimolaren Bereich vor.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 12: Spalt µM, Zytosol ~10 mM, Vesikel ~200 mM – beide Aufnahmeschritte laufen gegen den Gradienten und werden über Ionengradienten (Na⁺ bzw. H⁺) sekundär aktiv angetrieben."
+  },
+  {
+   "id": "vl07-glycin-ort",
+   "type": "single",
+   "topic": "Glycin",
+   "source": "slides",
+   "ref": "VL07 · Folien 3, 14",
+   "stem": "Wo ist Glycin ein besonders wichtiger inhibitorischer Neurotransmitter?",
+   "options": [
+    {
+     "t": "Im Rückenmark (und Hirnstamm)",
+     "correct": true
+    },
+    {
+     "t": "Im Neocortex",
+     "correct": false
+    },
+    {
+     "t": "Im Striatum (Basalganglien)",
+     "correct": false
+    },
+    {
+     "t": "Im Bulbus olfactorius",
+     "correct": false
+    }
+   ],
+   "explanation": "Glycin hemmt v. a. in Rückenmark und Hirnstamm; im Gehirn ist GABA der wichtigste inhibitorische Transmitter."
+  },
+  {
+   "id": "vl07-glycin-synthese",
+   "type": "combo",
+   "topic": "Glycin",
+   "source": "slides",
+   "ref": "VL07 · Folien 9, 15–17",
+   "stem": "Welche Aussagen zur Biosynthese von Glycin treffen zu?",
+   "statements": [
+    {
+     "t": "Glycin entsteht aus Serin durch die Serin-Hydroxymethyltransferase.",
+     "correct": true
+    },
+    {
+     "t": "Dabei wird eine C₁-Einheit auf Tetrahydrofolat (Vitamin B9) übertragen; es entsteht 5,10-Methylen-Tetrahydrofolat.",
+     "correct": true
+    },
+    {
+     "t": "Serin selbst stammt aus dem Glykolyse-Zwischenprodukt 3-Phosphoglycerat.",
+     "correct": true
+    },
+    {
+     "t": "Neurone beziehen ihr Glycin überwiegend aus der Nahrung über die Blut-Hirn-Schranke.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BC"
+   ],
+   "explanation": "Folie 17: Glucose → Serin → Glycin direkt in der Präsynapse. Aminosäuren passieren die Blut-Hirn-Schranke schlecht – Glucose liefert das Kohlenstoffgerüst."
+  },
+  {
+   "id": "vl07-glycin-synapse-label",
+   "type": "label",
+   "topic": "Glycin",
+   "source": "slides",
+   "ref": "VL07 · Folie 17",
+   "stem": "Beschriften Sie das Schema der glycinergen Synapse.",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 17,
+    "crop": [
+     175,
+     70,
+     690,
+     560
+    ],
+    "hide": [
+     [
+      365,
+      452,
+      410,
+      467
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      388,
+      239,
+      433,
+      253
+     ],
+     "answer": "Glucose",
+     "accept": [
+      "Glukose"
+     ],
+     "x": 40.87,
+     "y": 33.98,
+     "w": 9.71,
+     "h": 3.88
+    },
+    {
+     "box": [
+      351,
+      264,
+      387,
+      276
+     ],
+     "answer": "Serin",
+     "accept": [
+      "Serine",
+      "Ser"
+     ],
+     "x": 33.69,
+     "y": 39.08,
+     "w": 7.96,
+     "h": 3.47
+    },
+    {
+     "box": [
+      420,
+      338,
+      527,
+      360
+     ],
+     "answer": "Serin-Hydroxymethyltransferase",
+     "accept": [
+      "Serine transhydroxymethylase",
+      "SHMT",
+      "Serin-Transhydroxymethylase",
+      "Serinhydroxymethyltransferase"
+     ],
+     "x": 47.09,
+     "y": 54.18,
+     "w": 21.75,
+     "h": 5.51
+    },
+    {
+     "box": [
+      335,
+      354,
+      379,
+      368
+     ],
+     "answer": "Glycin",
+     "accept": [
+      "Glycine",
+      "Gly"
+     ],
+     "x": 30.58,
+     "y": 57.45,
+     "w": 9.51,
+     "h": 3.88
+    },
+    {
+     "box": [
+      467,
+      199,
+      530,
+      226
+     ],
+     "answer": "Glycin-Transporter",
+     "accept": [
+      "Glycine transporter",
+      "GlyT",
+      "Glycintransporter"
+     ],
+     "x": 56.21,
+     "y": 25.82,
+     "w": 13.2,
+     "h": 6.53
+    },
+    {
+     "box": [
+      337,
+      511,
+      389,
+      536
+     ],
+     "answer": "Glycin-Rezeptoren",
+     "accept": [
+      "Glycine receptors",
+      "GlyR",
+      "Glycinrezeptor"
+     ],
+     "x": 30.97,
+     "y": 89.49,
+     "w": 11.07,
+     "h": 6.12
+    }
+   ],
+   "explanation": "Glycin wird in der Präsynapse aus Glucose über Serin (Serin-Hydroxymethyltransferase) gebildet, vesikulär gespeichert, wirkt an Glycin-Rezeptoren und wird über Glycin-Transporter in Neuron und Glia zurückgeholt.",
+   "image": "assets/figures/vl07-glycin-synapse-label.webp",
+   "iw": 1030,
+   "ih": 980
+  },
+  {
+   "id": "vl07-gaba-interneuron",
+   "type": "single",
+   "topic": "GABA",
+   "source": "exam",
+   "exam": "WS24/25, WS25/26",
+   "ref": "VL07 · Folien 3, 18–19",
+   "stem": "Welche Substanz erwartet man in einem hemmenden (inhibitorischen) Interneuron im ZNS zu finden?",
+   "options": [
+    {
+     "t": "Homovanillinsäure (HVA)",
+     "correct": false
+    },
+    {
+     "t": "5-Hydroxytryptamin (5-HT)",
+     "correct": false
+    },
+    {
+     "t": "GABA",
+     "correct": true
+    },
+    {
+     "t": "EDTA",
+     "correct": false
+    },
+    {
+     "t": "Acetylcholin",
+     "correct": false
+    }
+   ],
+   "note": "WS24/25 Frage 15 (HVA, 5-HT, GABA, „etwas ganz Abwegiges“) und WS25/26 (EDTA, GABA, Homovanillinsäure, Acetylcholin) zusammengeführt.",
+   "explanation": "GABA ist der wichtigste inhibitorische Transmitter im Gehirn; GAD kommt im ZNS nur in GABAergen Neuronen vor (außerhalb z. B. auch in β-Zellen des Pankreas). HVA ist ein Dopamin-Abbauprodukt, 5-HT (Serotonin) ein modulatorischer Transmitter, EDTA ein Chelator."
+  },
+  {
+   "id": "vl07-gaba-struktur",
+   "type": "single",
+   "topic": "GABA",
+   "source": "slides",
+   "ref": "VL07 · Folie 18",
+   "stem": "Welcher Neurotransmitter ist hier als Strukturformel dargestellt?",
+   "stemSrc": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 18,
+    "crop": [
+     285,
+     235,
+     545,
+     345
+    ]
+   },
+   "options": [
+    {
+     "t": "GABA (γ-Aminobuttersäure)",
+     "correct": true
+    },
+    {
+     "t": "Glutamat",
+     "correct": false
+    },
+    {
+     "t": "Glycin",
+     "correct": false
+    },
+    {
+     "t": "Succinat-Semialdehyd",
+     "correct": false
+    },
+    {
+     "t": "Acetylcholin",
+     "correct": false
+    }
+   ],
+   "explanation": "H₂N–CH₂–CH₂–CH₂–COOH: Aminogruppe am γ-C-Atom einer Buttersäure = GABA. Glutamat hätte eine zweite Carboxylgruppe, Glycin nur 2 C-Atome.",
+   "stemImage": "assets/figures/vl07-gaba-struktur-stem.webp"
+  },
+  {
+   "id": "vl07-gaba-shunt-label",
+   "type": "label",
+   "topic": "GABA",
+   "source": "slides",
+   "ref": "VL07 · Folie 19",
+   "stem": "Beschriften Sie Synthese und Abbau von GABA (GABA-Shunt).",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 19,
+    "crop": [
+     80,
+     160,
+     760,
+     470
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      141,
+      229,
+      218,
+      248
+     ],
+     "answer": "Glutamat",
+     "accept": [
+      "Glutamate",
+      "Glu"
+     ],
+     "x": 8.6,
+     "y": 21.45,
+     "w": 12.06,
+     "h": 7.74
+    },
+    {
+     "box": [
+      187,
+      266,
+      224,
+      281
+     ],
+     "answer": "GAD (Glutamat-Decarboxylase)",
+     "accept": [
+      "GAD",
+      "Glutamatdecarboxylase",
+      "Glutaminsäure-Decarboxylase",
+      "Glutamic acid decarboxylase"
+     ],
+     "x": 15.37,
+     "y": 33.39,
+     "w": 6.18,
+     "h": 6.45
+    },
+    {
+     "box": [
+      298,
+      242,
+      364,
+      261
+     ],
+     "answer": "GABA-Transaminase (GABA-T)",
+     "accept": [
+      "GABA-T",
+      "GABA-Transaminase",
+      "GABA:aKG transaminase"
+     ],
+     "x": 31.69,
+     "y": 25.65,
+     "w": 10.44,
+     "h": 7.74
+    },
+    {
+     "box": [
+      433,
+      229,
+      572,
+      250
+     ],
+     "answer": "α-Ketoglutarat",
+     "accept": [
+      "alpha-Ketoglutarat",
+      "a-Ketoglutarat",
+      "α-KG",
+      "2-Oxoglutarat",
+      "Ketoglutarat"
+     ],
+     "x": 51.54,
+     "y": 21.45,
+     "w": 21.18,
+     "h": 8.39
+    },
+    {
+     "box": [
+      431,
+      316,
+      599,
+      334
+     ],
+     "answer": "Succinat-Semialdehyd",
+     "accept": [
+      "Succinic semialdehyde",
+      "Succinatsemialdehyd",
+      "Bernsteinsäuresemialdehyd",
+      "SSA"
+     ],
+     "x": 51.25,
+     "y": 49.52,
+     "w": 25.44,
+     "h": 7.42
+    },
+    {
+     "box": [
+      521,
+      341,
+      580,
+      360
+     ],
+     "answer": "SSADH (Succinat-Semialdehyd-Dehydrogenase)",
+     "accept": [
+      "SSADH",
+      "Succinatsemialdehyd-Dehydrogenase"
+     ],
+     "x": 64.49,
+     "y": 57.58,
+     "w": 9.41,
+     "h": 7.74
+    },
+    {
+     "box": [
+      467,
+      430,
+      565,
+      449
+     ],
+     "answer": "Succinat (Bernsteinsäure)",
+     "accept": [
+      "Succinic acid",
+      "Succinat",
+      "Bernsteinsäure"
+     ],
+     "x": 56.54,
+     "y": 86.29,
+     "w": 15.15,
+     "h": 7.74
+    },
+    {
+     "box": [
+      108,
+      381,
+      252,
+      421
+     ],
+     "answer": "γ-Aminobuttersäure (GABA)",
+     "accept": [
+      "GABA",
+      "gamma-Aminobuttersäure",
+      "γ-Aminobutyric acid"
+     ],
+     "x": 3.75,
+     "y": 70.48,
+     "w": 21.91,
+     "h": 14.52
+    }
+   ],
+   "explanation": "GAD decarboxyliert Glutamat zu GABA (im ZNS nur in GABAergen Neuronen). Abbau: Die GABA-T überträgt die Aminogruppe auf α-Ketoglutarat (→ Glutamat) und liefert Succinat-Semialdehyd, das die SSADH zu Succinat oxidiert – Einspeisung in den Krebs-Zyklus (GABA-Shunt, anaplerotisch).",
+   "image": "assets/figures/vl07-gaba-shunt-label.webp",
+   "iw": 1360,
+   "ih": 620
+  },
+  {
+   "id": "vl07-gaba-synthese",
+   "type": "combo",
+   "topic": "GABA",
+   "source": "slides",
+   "ref": "VL07 · Folien 19–20",
+   "stem": "Welche Aussagen zu Synthese und Abbau von GABA treffen zu?",
+   "statements": [
+    {
+     "t": "Die Glutamat-Decarboxylase (GAD) bildet GABA aus Glutamat; im ZNS kommt sie nur in GABAergen Neuronen vor.",
+     "correct": true
+    },
+    {
+     "t": "Die GABA-Transaminase überträgt die Aminogruppe von GABA auf α-Ketoglutarat; dabei entstehen Succinat-Semialdehyd und Glutamat.",
+     "correct": true
+    },
+    {
+     "t": "Astrozyten besitzen GAD und synthetisieren daraus ihr eigenes GABA.",
+     "correct": false
+    },
+    {
+     "t": "Über den GABA-Shunt gelangt das Kohlenstoffgerüst von GABA als Succinat in den Krebs-Zyklus (laut Folie eine „anaplerotische Reaktion“).",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "AD"
+   ],
+   "explanation": "Astrozyten fehlt die GAD; sie regenerieren aus aufgenommenem GABA über GABA-T und Krebs-Zyklus Glutamat."
+  },
+  {
+   "id": "vl07-gad-cofaktor",
+   "type": "single",
+   "topic": "GABA",
+   "source": "slides",
+   "ref": "VL07 · Folie 20",
+   "stem": "Welcher Cofaktor wird von der Glutamat-Decarboxylase (GAD) benötigt?",
+   "options": [
+    {
+     "t": "Pyridoxalphosphat (PLP)",
+     "correct": true
+    },
+    {
+     "t": "Tetrahydrofolat (THF)",
+     "correct": false
+    },
+    {
+     "t": "Tetrahydrobiopterin (BH₄)",
+     "correct": false
+    },
+    {
+     "t": "S-Adenosylmethionin (SAM)",
+     "correct": false
+    },
+    {
+     "t": "NAD⁺",
+     "correct": false
+    }
+   ],
+   "explanation": "Wie AADC und Histidin-Decarboxylase ist GAD eine PLP-abhängige Decarboxylase (Folie 20: ‚Glutamic acid decarboxylase + pyridoxal phosphate‘)."
+  },
+  {
+   "id": "vl07-gaba-recycling",
+   "type": "multi",
+   "topic": "GABA",
+   "source": "slides",
+   "ref": "VL07 · Folie 20",
+   "stem": "Welche Aussagen zum GABA-Recycling treffen zu?",
+   "options": [
+    {
+     "t": "GABA wird über GABA-Transporter sowohl in die Präsynapse als auch in Gliazellen aufgenommen.",
+     "correct": true
+    },
+    {
+     "t": "Ein vesikulärer GABA-Transporter füllt GABA in synaptische Vesikel.",
+     "correct": true
+    },
+    {
+     "t": "Der Abbau von GABA findet in den Mitochondrien statt.",
+     "correct": true
+    },
+    {
+     "t": "GABA wird im synaptischen Spalt durch eine Esterase inaktiviert, ähnlich wie ACh.",
+     "correct": false
+    },
+    {
+     "t": "GABA entsteht in der Präsynapse direkt aus Glutamin durch die Glutaminase.",
+     "correct": false
+    }
+   ],
+   "explanation": "Das Signal endet durch Wiederaufnahme (GABA-Transporter), nicht durch Spaltung im Spalt. Die Glutaminase liefert Glutamat; erst die GAD macht daraus GABA."
+  },
+  {
+   "id": "vl07-katecholamine-rollen",
+   "type": "multi",
+   "topic": "Katecholamine",
+   "source": "slides",
+   "ref": "VL07 · Folien 21–22",
+   "stem": "Welche Aussagen zu den Katecholaminen treffen zu?",
+   "options": [
+    {
+     "t": "Dopamin wirkt als Transmitter u. a. im ZNS (Basalganglien) und in der Niere.",
+     "correct": true
+    },
+    {
+     "t": "Noradrenalin ist Transmitter im Gehirn und in sympathischen Neuronen.",
+     "correct": true
+    },
+    {
+     "t": "Adrenalin wirkt v. a. als Hormon des Nebennierenmarks.",
+     "correct": true
+    },
+    {
+     "t": "Adrenalin ist der Haupttransmitter der postganglionären Sympathikusneurone.",
+     "correct": false
+    },
+    {
+     "t": "Katecholaminerge Neurone projizieren nur lokal und spielen bei psychiatrischen Erkrankungen kaum eine Rolle.",
+     "correct": false
+    }
+   ],
+   "explanation": "Katecholamine projizieren in weite Teile des Gehirns und sind an den meisten psychiatrischen Erkrankungen beteiligt. Postganglionär-sympathisch ist Noradrenalin der Transmitter, Adrenalin ist v. a. Hormon der Nebenniere."
+  },
+  {
+   "id": "vl07-katecholamin-struktur",
+   "type": "single",
+   "topic": "Katecholamine",
+   "source": "slides",
+   "ref": "VL07 · Folien 4, 21–23",
+   "stem": "Welches gemeinsame Strukturmerkmal definiert die Katecholamine Dopamin, Noradrenalin und Adrenalin?",
+   "options": [
+    {
+     "t": "Ein Catechol-Ring (Benzolring mit zwei benachbarten OH-Gruppen) mit einer Ethylamin-Seitenkette",
+     "correct": true
+    },
+    {
+     "t": "Ein Indol-Ring mit einer OH-Gruppe an Position 5 und einer Ethylamin-Seitenkette",
+     "correct": false
+    },
+    {
+     "t": "Ein Imidazol-Ring mit einer Ethylamin-Seitenkette",
+     "correct": false
+    },
+    {
+     "t": "Eine quartäre Ammoniumgruppe, die mit Essigsäure verestert ist",
+     "correct": false
+    }
+   ],
+   "explanation": "Catechol = 1,2-Dihydroxybenzol; alle Katecholamine stammen aus Tyrosin. Indol + 5-OH = Serotonin, Imidazol = Histamin, Acetylester des Cholins = Acetylcholin."
+  },
+  {
+   "id": "vl07-th-regulation",
+   "type": "order",
+   "topic": "Katecholamine",
+   "source": "slides",
+   "ref": "VL07 · Folie 31",
+   "stem": "Bringen Sie die Schritte der aktivitätsabhängigen Steigerung der Katecholamin-Synthese in die richtige Reihenfolge.",
+   "items": [
+    "Aktionspotential erreicht die Endigung",
+    "Ca²⁺-Einstrom über Ca²⁺-Kanäle",
+    "Aktivierung von Second Messengern",
+    "Aktivierung von Proteinkinasen",
+    "Phosphorylierung der Tyrosin-Hydroxylase",
+    "Gesteigerte Katecholamin-Synthese",
+    "Gesteigerte Transmitterfreisetzung"
+   ],
+   "explanation": "Aktivität koppelt über Ca²⁺ und Kinasen an die Phosphorylierung (Aktivierung) der Tyrosin-Hydroxylase – so entsteht Nachschub für die gesteigerte Freisetzung; der vesikuläre Monoamin-Transporter (VMAT) verpackt das Katecholamin in Vesikel."
+  },
+  {
+   "id": "vl07-serotonin-zeichnen",
+   "type": "open",
+   "topic": "Serotonin & Histamin",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL07 · Folien 4, 32",
+   "stem": "Zeichnen Sie Serotonin.",
+   "points": [
+    "Indol-Grundgerüst: Benzolring kondensiert mit einem 5-Ring, der ein N–H enthält",
+    "OH-Gruppe an Position 5 des Indols (5-Hydroxy-)",
+    "Ethylamin-Seitenkette –CH₂–CH₂–NH₂ am 5-Ring (Position 3)",
+    "Name/Abkürzung: 5-Hydroxytryptamin (5-HT)"
+   ],
+   "answerSrc": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 32,
+    "crop": [
+     60,
+     95,
+     780,
+     300
+    ]
+   },
+   "note": "WS23/24 Frage 2 und WS25/26 „Zeichne Serotonin“ – identische Frage.",
+   "explanation": "Serotonin = 5-Hydroxytryptamin: Tryptophan mit OH an Position 5 und ohne Carboxylgruppe (decarboxyliert).",
+   "answerImage": "assets/figures/vl07-serotonin-zeichnen-answer.webp"
+  },
+  {
+   "id": "vl07-struktur-name",
+   "type": "single",
+   "topic": "Serotonin & Histamin",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL07 · Folien 32, 36",
+   "stem": "Wie heißt die dargestellte Struktur?",
+   "stemSrc": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 36,
+    "crop": [
+     55,
+     95,
+     545,
+     215
+    ],
+    "hide": [
+     [
+      316,
+      191,
+      512,
+      217
+     ]
+    ]
+   },
+   "options": [
+    {
+     "t": "Serotonin (5-Hydroxytryptamin)",
+     "correct": true
+    },
+    {
+     "t": "Tryptophan",
+     "correct": false
+    },
+    {
+     "t": "5-Hydroxyindolessigsäure (5-HIAA)",
+     "correct": false
+    },
+    {
+     "t": "Histamin",
+     "correct": false
+    },
+    {
+     "t": "Dopamin",
+     "correct": false
+    }
+   ],
+   "note": "WS24/25 Frage 16, Teil 1. Welche Struktur in der Klausur gezeigt wurde, ist nicht überliefert – hier beispielhaft Serotonin (Folie 36, Name abgedeckt).",
+   "explanation": "Indolring mit 5-OH und Ethylamin-Seitenkette (–CH₂–CH₂–NH₂) = Serotonin. Tryptophan hätte zusätzlich eine COOH-Gruppe, 5-HIAA statt der Aminogruppe eine Carbonsäure.",
+   "stemImage": "assets/figures/vl07-struktur-name-stem.webp"
+  },
+  {
+   "id": "vl07-struktur-synthese",
+   "type": "open",
+   "topic": "Serotonin & Histamin",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL07 · Folien 33–35",
+   "stem": "Die dargestellte Substanz ist Serotonin. Aus welcher proteinogenen Aminosäure entsteht sie? Zeichnen Sie deren Strukturformel auf! Welche Enzyme katalysieren die Umwandlung zur dargestellten Substanz?",
+   "stemSrc": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 36,
+    "crop": [
+     55,
+     95,
+     545,
+     215
+    ],
+    "hide": [
+     [
+      316,
+      191,
+      512,
+      217
+     ]
+    ]
+   },
+   "points": [
+    "Proteinogene Aminosäure: L-Tryptophan",
+    "Strukturformel Tryptophan: Indolring, am 5-Ring –CH₂–CH(NH₂)–COOH",
+    "1. Tryptophan-Hydroxylase (geschwindigkeitsbestimmend) → 5-Hydroxytryptophan (5-HTP)",
+    "2. Aromatische-L-Aminosäure-Decarboxylase (AADC = DOPA-Decarboxylase, PLP-abhängig) → Serotonin + CO₂"
+   ],
+   "answerSrc": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 33,
+    "crop": [
+     348,
+     95,
+     800,
+     575
+    ]
+   },
+   "note": "WS24/25 Frage 16, Teile 2–4. „Zeichnen Sie die Strukturformel auf!“ hier als Strukturformel der Vorläufer-Aminosäure interpretiert; die Formel von Serotonin selbst siehe „Zeichnen Sie Serotonin“.",
+   "explanation": "Tryptophan → (Tryptophan-Hydroxylase) → 5-HTP → (AADC, dasselbe Enzym wie bei L-DOPA → Dopamin) → Serotonin.",
+   "stemImage": "assets/figures/vl07-struktur-synthese-stem.webp",
+   "answerImage": "assets/figures/vl07-struktur-synthese-answer.webp"
+  },
+  {
+   "id": "vl07-serotonin-synthese-label",
+   "type": "label",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folie 33",
+   "stem": "Beschriften Sie den Biosyntheseweg von Serotonin.",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 33,
+    "crop": [
+     348,
+     95,
+     800,
+     575
+    ],
+    "hide": [
+     [
+      352,
+      402,
+      480,
+      418
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      617,
+      192,
+      709,
+      209
+     ],
+     "answer": "Tryptophan",
+     "accept": [
+      "L-Tryptophan",
+      "Trp"
+     ],
+     "x": 58.96,
+     "y": 19.69,
+     "w": 21.46,
+     "h": 4.58
+    },
+    {
+     "box": [
+      586,
+      229,
+      677,
+      262
+     ],
+     "answer": "Tryptophan-Hydroxylase",
+     "accept": [
+      "Tryptophan hydroxylase",
+      "TPH",
+      "Tryptophanhydroxylase"
+     ],
+     "x": 52.1,
+     "y": 27.4,
+     "w": 21.24,
+     "h": 7.92
+    },
+    {
+     "box": [
+      617,
+      361,
+      783,
+      378
+     ],
+     "answer": "5-Hydroxytryptophan (5-HTP)",
+     "accept": [
+      "5-Hydroxytryptophan",
+      "5-HTP"
+     ],
+     "x": 58.96,
+     "y": 54.9,
+     "w": 37.83,
+     "h": 4.58
+    },
+    {
+     "box": [
+      586,
+      398,
+      732,
+      431
+     ],
+     "answer": "Aromatische-L-Aminosäure-Decarboxylase (AADC)",
+     "accept": [
+      "AADC",
+      "Aromatic amino acid decarboxylase",
+      "DOPA-Decarboxylase",
+      "DDC",
+      "aromatische Aminosäure-Decarboxylase"
+     ],
+     "x": 52.1,
+     "y": 62.6,
+     "w": 33.41,
+     "h": 7.92
+    },
+    {
+     "box": [
+      617,
+      528,
+      747,
+      546
+     ],
+     "answer": "Serotonin (5-HT)",
+     "accept": [
+      "Serotonin",
+      "5-HT",
+      "5-Hydroxytryptamin"
+     ],
+     "x": 58.96,
+     "y": 89.69,
+     "w": 29.87,
+     "h": 4.79
+    }
+   ],
+   "explanation": "Tryptophan → (Tryptophan-Hydroxylase, geschwindigkeitsbestimmend) → 5-HTP → (AADC, dasselbe Enzym wie die DOPA-Decarboxylase) → Serotonin – parallel zur Dopaminsynthese aus Tyrosin.",
+   "image": "assets/figures/vl07-serotonin-synthese-label.webp",
+   "iw": 904,
+   "ih": 960
+  },
+  {
+   "id": "vl07-serotonin-weg",
+   "type": "order",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folien 33–36",
+   "stem": "Bringen Sie Synthese und Abbau von Serotonin in die richtige Reihenfolge.",
+   "items": [
+    "L-Tryptophan",
+    "5-Hydroxytryptophan (5-HTP)",
+    "Serotonin (5-Hydroxytryptamin)",
+    "5-Hydroxyindolessigsäure (5-HIAA)"
+   ],
+   "explanation": "Hydroxylierung (Tryptophan-Hydroxylase) → Decarboxylierung (AADC) → Abbau durch MAO + Aldehyd-Dehydrogenase zur 5-Hydroxyindolessigsäure."
+  },
+  {
+   "id": "vl07-serotonin-abbau",
+   "type": "single",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folie 36",
+   "stem": "Wie wird Serotonin abgebaut?",
+   "options": [
+    {
+     "t": "Durch Monoaminoxidase und Aldehyd-Dehydrogenase zur 5-Hydroxyindolessigsäure (5-HIAA)",
+     "correct": true
+    },
+    {
+     "t": "Durch COMT und Monoaminoxidase zur Homovanillinsäure (HVA)",
+     "correct": false
+    },
+    {
+     "t": "Durch die Acetylcholinesterase zu Indol und Cholin",
+     "correct": false
+    },
+    {
+     "t": "Durch die aromatische L-Aminosäure-Decarboxylase zu 5-Hydroxytryptophan",
+     "correct": false
+    }
+   ],
+   "explanation": "Wie die Katecholamine wird Serotonin durch die MAO oxidativ desaminiert; das Aldehyd wird zur Säure 5-HIAA oxidiert. HVA ist ein Dopamin-Abbauprodukt."
+  },
+  {
+   "id": "vl07-serotonin-dopamin-parallelen",
+   "type": "multi",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folien 25, 33–34",
+   "stem": "Welche Aussagen zu den Parallelen zwischen Serotonin- und Dopamin-Biosynthese treffen zu?",
+   "options": [
+    {
+     "t": "Beide gehen von einer proteinogenen aromatischen Aminosäure aus (Tryptophan bzw. Tyrosin).",
+     "correct": true
+    },
+    {
+     "t": "Der geschwindigkeitsbestimmende Schritt ist jeweils eine aromatische Hydroxylase.",
+     "correct": true
+    },
+    {
+     "t": "Die Decarboxylierung von L-DOPA und von 5-HTP katalysiert dasselbe Enzym (AADC).",
+     "correct": true
+    },
+    {
+     "t": "Für die Serotonin-Synthese ist zusätzlich die Dopamin-β-Hydroxylase nötig.",
+     "correct": false
+    },
+    {
+     "t": "Die Tryptophan-Hydroxylase katalysiert auch die Hydroxylierung von Tyrosin zu L-DOPA.",
+     "correct": false
+    }
+   ],
+   "explanation": "Tyrosin → (Tyrosin-Hydroxylase) → L-DOPA → (AADC) → Dopamin; Tryptophan → (Tryptophan-Hydroxylase) → 5-HTP → (AADC) → Serotonin. Die Dopamin-β-Hydroxylase gehört zu keinem der beiden Wege: Sie macht im Katecholamin-Zweig aus Dopamin Noradrenalin und ist damit auch Voraussetzung für Adrenalin (Noradrenalin → PNMT → Adrenalin), nicht aber für Serotonin."
+  },
+  {
+   "id": "vl07-raphe",
+   "type": "single",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folien 32, 37",
+   "stem": "Wo liegen die Zellkörper der serotonergen Neurone, die in weite Teile des Gehirns projizieren?",
+   "options": [
+    {
+     "t": "In den Raphe-Kernen des Hirnstamms",
+     "correct": true
+    },
+    {
+     "t": "Im Nucleus tuberomammillaris des Hypothalamus",
+     "correct": false
+    },
+    {
+     "t": "In der Substantia nigra pars compacta",
+     "correct": false
+    },
+    {
+     "t": "Im Thalamus",
+     "correct": false
+    }
+   ],
+   "explanation": "Serotonin: Raphe-Kerne (Hirnstamm); Histamin: Nucleus tuberomammillaris des Hypothalamus (Folie 37); nigrostriatales Dopamin: Substantia nigra."
+  },
+  {
+   "id": "vl07-histamin",
+   "type": "combo",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folien 37–39",
+   "stem": "Welche Aussagen zu Histamin als Neurotransmitter treffen zu?",
+   "statements": [
+    {
+     "t": "Histamin entsteht in einem Schritt aus der proteinogenen Aminosäure Histidin durch eine PLP-abhängige Decarboxylase.",
+     "correct": true
+    },
+    {
+     "t": "Histaminerge Neurone liegen im Nucleus tuberomammillaris des Hypothalamus.",
+     "correct": true
+    },
+    {
+     "t": "Im Gehirn wird Histamin durch eine Methyltransferase und anschließend durch MAO abgebaut.",
+     "correct": true
+    },
+    {
+     "t": "Histamin wird wie Dopamin aus Tyrosin gebildet.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BC"
+   ],
+   "explanation": "Histidin-Decarboxylase (PLP, analog zur AADC) → Histamin. Abbau im Gehirn: Histamin-N-Methyltransferase → tele-Methylhistamin → MAO; in der Peripherie über die Diaminoxidase (DAO)."
+  },
+  {
+   "id": "vl07-biogene-amine",
+   "type": "open",
+   "topic": "Serotonin & Histamin",
+   "source": "slides",
+   "ref": "VL07 · Folien 23, 33, 38",
+   "stem": "Nennen Sie 3 biogene Amin-Transmitter und jeweils die proteinogene Aminosäure, aus der sie gebildet werden.",
+   "points": [
+    "Dopamin ← Tyrosin",
+    "Noradrenalin ← Tyrosin (über Dopamin)",
+    "Adrenalin ← Tyrosin (über Noradrenalin)",
+    "Serotonin (5-HT) ← Tryptophan",
+    "Histamin ← Histidin"
+   ],
+   "need": 3,
+   "explanation": "Alle Katecholamine stammen aus Tyrosin, Serotonin aus Tryptophan, Histamin in einem einzigen Schritt aus Histidin."
+  },
+  {
+   "id": "vl07-ach-rollen",
+   "type": "multi",
+   "topic": "Acetylcholin",
+   "source": "slides",
+   "ref": "VL07 · Folie 42",
+   "stem": "Welche Aussagen zu den Funktionen von Acetylcholin treffen zu?",
+   "options": [
+    {
+     "t": "ACh ist der Transmitter an der neuromuskulären Endplatte.",
+     "correct": true
+    },
+    {
+     "t": "Alle präganglionären sympathischen Neurone verwenden ACh.",
+     "correct": true
+    },
+    {
+     "t": "Einige postganglionäre sympathische Fasern (zu den Schweißdrüsen) verwenden ACh.",
+     "correct": true
+    },
+    {
+     "t": "Alle postganglionären sympathischen Neurone verwenden ACh.",
+     "correct": false
+    },
+    {
+     "t": "Im ZNS wirkt ACh überwiegend inhibitorisch und spielt für Lernen und Gedächtnis keine Rolle.",
+     "correct": false
+    }
+   ],
+   "explanation": "PNS: Endplatte, alle prä- und postganglionären parasympathischen, alle präganglionären sympathischen Neurone und sympathische Fasern zu Schweißdrüsen. ZNS: meist exzitatorisch – Plastizität (Lernen/Gedächtnis, Alzheimer), Arousal und Belohnung (Tabak)."
+  },
+  {
+   "id": "vl07-chat",
+   "type": "single",
+   "topic": "Acetylcholin",
+   "source": "slides",
+   "ref": "VL07 · Folie 43",
+   "stem": "Durch welches Enzym und aus welchen Substraten wird Acetylcholin synthetisiert?",
+   "options": [
+    {
+     "t": "Cholin-Acetyltransferase (ChAT) aus Acetyl-CoA und Cholin",
+     "correct": true
+    },
+    {
+     "t": "Acetylcholinesterase (AChE) aus Acetat und Cholin",
+     "correct": false
+    },
+    {
+     "t": "Cholin-Acetyltransferase (ChAT) aus Acetat und Serin",
+     "correct": false
+    },
+    {
+     "t": "Phenylethanolamin-N-Methyltransferase aus Acetyl-CoA und Ethanolamin",
+     "correct": false
+    }
+   ],
+   "explanation": "ChAT überträgt die Acetylgruppe von Acetyl-CoA (aus Glykolyse/Pyruvat) auf Cholin. Die AChE spaltet ACh im Spalt wieder."
+  },
+  {
+   "id": "vl07-ach-label",
+   "type": "label",
+   "topic": "Acetylcholin",
+   "source": "slides",
+   "ref": "VL07 · Folie 45",
+   "stem": "Beschriften Sie das Schema des Acetylcholin-Stoffwechsels an der cholinergen Synapse.",
+   "src": {
+    "pdf": "VL07Neurotransmitters.pdf",
+    "page": 45,
+    "crop": [
+     195,
+     75,
+     665,
+     580
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      306,
+      263,
+      358,
+      278
+     ],
+     "answer": "Acetyl-CoA",
+     "accept": [
+      "Acetyl CoA",
+      "AcetylCoA",
+      "Acetyl-Coenzym A"
+     ],
+     "x": 23.09,
+     "y": 36.73,
+     "w": 12.13,
+     "h": 3.96
+    },
+    {
+     "box": [
+      389,
+      319,
+      458,
+      338
+     ],
+     "answer": "Cholin-Acetyltransferase (ChAT)",
+     "accept": [
+      "ChAT",
+      "Choline acetyltransferase",
+      "Cholinacetyltransferase"
+     ],
+     "x": 40.74,
+     "y": 47.82,
+     "w": 15.74,
+     "h": 4.75
+    },
+    {
+     "box": [
+      488,
+      326,
+      544,
+      364
+     ],
+     "answer": "Vesikulärer ACh-Transporter (VAChT)",
+     "accept": [
+      "VAChT",
+      "Vesicular ACh transporter",
+      "vesikulärer Acetylcholin-Transporter"
+     ],
+     "x": 61.81,
+     "y": 49.21,
+     "w": 12.98,
+     "h": 8.51
+    },
+    {
+     "box": [
+      558,
+      201,
+      631,
+      226
+     ],
+     "answer": "Na⁺/Cholin-Transporter",
+     "accept": [
+      "Na+/choline transporter",
+      "Cholin-Transporter",
+      "Cholintransporter",
+      "CHT"
+     ],
+     "x": 76.7,
+     "y": 24.46,
+     "w": 16.6,
+     "h": 5.94
+    },
+    {
+     "box": [
+      346,
+      437,
+      434,
+      450
+     ],
+     "answer": "Acetylcholinesterase (AChE)",
+     "accept": [
+      "AChE",
+      "Acetylcholinesterase",
+      "Cholinesterase"
+     ],
+     "x": 31.6,
+     "y": 71.19,
+     "w": 19.79,
+     "h": 3.56
+    },
+    {
+     "box": [
+      435,
+      420,
+      473,
+      434
+     ],
+     "answer": "Acetat",
+     "accept": [
+      "Acetate",
+      "Essigsäure"
+     ],
+     "x": 50.53,
+     "y": 67.82,
+     "w": 9.15,
+     "h": 3.76
+    },
+    {
+     "box": [
+      379,
+      519,
+      446,
+      543
+     ],
+     "answer": "Acetylcholin-Rezeptoren",
+     "accept": [
+      "Acetylcholine receptors",
+      "AChR",
+      "nAChR",
+      "Acetylcholinrezeptoren",
+      "ACh-Rezeptoren"
+     ],
+     "x": 38.62,
+     "y": 87.43,
+     "w": 15.32,
+     "h": 5.74
+    }
+   ],
+   "explanation": "Acetyl-CoA (aus Glucose/Pyruvat) + Cholin → ACh (ChAT); VAChT füllt die Vesikel; im Spalt spaltet die AChE ACh in Acetat + Cholin; Cholin wird über den Na⁺/Cholin-Transporter zurückgeholt.",
+   "image": "assets/figures/vl07-ach-label.webp",
+   "iw": 940,
+   "ih": 1010
+  },
+  {
+   "id": "vl07-ach-stoffwechsel",
+   "type": "open",
+   "topic": "Acetylcholin",
+   "source": "slides",
+   "ref": "VL07 · Folien 43–45",
+   "stem": "Beschreiben Sie in Stichworten Synthese, Inaktivierung und Recycling von Acetylcholin einschließlich der Herkunft der Substrate.",
+   "points": [
+    "Acetyl-CoA stammt aus der Glykolyse (Pyruvat → Acetyl-CoA im Mitochondrium)",
+    "Cholin ist ein essenzieller Nahrungsbestandteil (Lecithin = Phosphatidylcholin: Eigelb, Sojabohnen)",
+    "Cholin passiert die Blut-Hirn-Schranke über einen Cholin-Transporter",
+    "Synthese durch Cholin-Acetyltransferase (ChAT): Acetyl-CoA + Cholin → ACh + CoA-SH",
+    "Vesikelbefüllung über den vesikulären ACh-Transporter",
+    "Inaktivierung im Spalt: Acetylcholinesterase spaltet ACh in Acetat + Cholin",
+    "Cholin-Wiederaufnahme über den Na⁺-gekoppelten Cholin-Transporter"
+   ],
+   "need": 5,
+   "explanation": "Besonderheit von ACh: Das Signal endet durch enzymatische Spaltung im Spalt (AChE), nicht durch Wiederaufnahme des Transmitters selbst – recycelt wird nur das Cholin."
+  },
+  {
+   "id": "vl07-ach-abbau",
+   "type": "single",
+   "topic": "Acetylcholin",
+   "source": "slides",
+   "ref": "VL07 · Folie 45",
+   "stem": "Wie wird die Wirkung von Acetylcholin im synaptischen Spalt beendet?",
+   "options": [
+    {
+     "t": "Spaltung durch die Acetylcholinesterase in Acetat und Cholin; Cholin wird Na⁺-gekoppelt wieder aufgenommen",
+     "correct": true
+    },
+    {
+     "t": "Wiederaufnahme des intakten ACh über einen Na⁺-abhängigen ACh-Transporter in die Präsynapse",
+     "correct": false
+    },
+    {
+     "t": "Oxidative Desaminierung durch die Monoaminoxidase in den Mitochondrien der Gliazellen",
+     "correct": false
+    },
+    {
+     "t": "Methylierung durch die Catechol-O-Methyltransferase (COMT) im synaptischen Spalt",
+     "correct": false
+    }
+   ],
+   "explanation": "Die AChE sitzt im Spalt und hydrolysiert ACh sehr schnell; die Präsynapse holt nur das Cholin zurück. MAO und COMT bauen Monoamine ab."
+  }
+ ]
+}

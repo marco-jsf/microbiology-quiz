@@ -1,100 +1,134 @@
 import { loadChapters } from './data.js';
 import * as engine from './engine.js';
-import { generateItems, entityItemIds } from './quizgen.js';
-import { quizCardHTML, feedback, dashboardHTML, entityProfileHTML } from './render.js';
+import * as qt from './qtypes.js';
+import { quizCardHTML, feedbackHTML, dashboardHTML } from './render.js';
 import { mountGarden, unmountGarden } from './garden.js';
+import { warmEggs, listEggs, isEggReady, readyEggCount, onGardenChange } from './garden-store.js';
 
 const $ = s => document.querySelector(s);
 const view = $('#view');
 
+const PREF_KEY = 'neuroQuizPrefs';
+const prefs = (() => { try { return JSON.parse(localStorage.getItem(PREF_KEY)) || {}; } catch (e) { return {}; } })();
+function savePrefs() {
+  try {
+    localStorage.setItem(PREF_KEY, JSON.stringify({
+      chapterSel: state.chapterSel, topicSel: state.topicSel, format: state.format,
+      scope: state.scope, examOnly: state.examOnly, size: state.size
+    }));
+  } catch (e) { }
+}
+
 const state = {
-  chapters: [], chapterSel: 'mixed', scope: 'all', mode: 'quiz',
-  pool: [], queue: [], idx: 0, current: null, answered: false,
-  selected: new Set(), session: { seen: 0, scoreSum: 0 }
+  chapters: [], mode: 'quiz',
+  chapterSel: prefs.chapterSel || 'mixed', topicSel: prefs.topicSel || '', format: prefs.format || 'all',
+  scope: prefs.scope || 'all', examOnly: !!prefs.examOnly, size: prefs.size ?? 30,
+  pool: [], queue: [], idx: 0, current: null, st: null, answered: false,
+  session: { seen: 0, scoreSum: 0 }
 };
 
 /* ---------- pool / session ---------- */
-function selectedChapters() {
-  return state.chapterSel === 'mixed' ? state.chapters : state.chapters.filter(c => c.id === state.chapterSel);
-}
-function buildPool() {
-  const chaps = selectedChapters();
-  const distract = chaps.flatMap(c => c.entities);
+function filteredQuestions() {
+  const chaps = state.chapterSel === 'mixed' ? state.chapters : state.chapters.filter(c => c.id === state.chapterSel);
+  const types = state.format === 'all' ? null : qt.FORMAT_GROUPS[state.format].types;
   const items = [];
   for (const c of chaps) {
-    for (const q of c.questions) items.push({ ...q, chapter: c.id, chapterTitle: c.title, chapterColor: c.color });
-    if (c.entities.length) items.push(...generateItems(c.entities, distract, c));
+    for (const q of c.questions) {
+      if (state.topicSel && state.chapterSel !== 'mixed' && q.topic !== state.topicSel) continue;
+      if (types && !types.includes(q.type)) continue;
+      if (state.examOnly && q.source !== 'exam') continue;
+      items.push({ ...q, chapter: c.id, chapterTitle: c.title, chapterShort: c.short, chapterColor: c.color });
+    }
   }
   return items;
 }
 function buildSession() {
-  state.pool = buildPool();
-  state.queue = engine.buildQueue(state.pool, { scope: state.scope });
-  state.idx = 0; state.answered = false; state.selected = new Set();
+  state.pool = filteredQuestions();
+  state.queue = engine.buildQueue(state.pool, { scope: state.scope, size: state.size }).map(qt.prepare);
+  state.idx = 0; state.answered = false;
   state.session = { seen: 0, scoreSum: 0 };
 }
 
 /* ---------- statbar ---------- */
 function renderStatbar() {
-  const weak = state.pool.filter(it => !engine.isNew(it.id) && engine.isWeak(it.id)).length;
+  const weak = state.pool.filter(it => engine.isWeak(it.id)).length;
+  const due = state.pool.filter(it => engine.isDue(it.id)).length;
   const acc = state.session.seen ? Math.round(100 * state.session.scoreSum / state.session.seen) : 0;
   $('#statbar').innerHTML = `
-    <div class="stat"><div class="n">${state.queue.length}</div><div class="l">This round</div></div>
-    <div class="stat"><div class="n">${state.session.seen}</div><div class="l">Answered</div></div>
-    <div class="stat"><div class="n" style="color:${acc >= 70 ? 'var(--good)' : acc >= 40 ? 'var(--warn)' : 'var(--bad)'}">${acc}%</div><div class="l">Avg score</div></div>
-    <div class="stat"><div class="n" style="color:var(--warn)">${weak}</div><div class="l">Weak in scope</div></div>`;
+    <div class="stat"><div class="n">${state.queue.length}<span class="of">/${state.pool.length}</span></div><div class="l">Diese Runde / Auswahl</div></div>
+    <div class="stat"><div class="n">${state.session.seen}</div><div class="l">Beantwortet</div></div>
+    <div class="stat"><div class="n" style="color:${acc >= 70 ? 'var(--good)' : acc >= 40 ? 'var(--warn)' : 'var(--bad)'}">${acc}%</div><div class="l">Ø Punkte</div></div>
+    <div class="stat"><div class="n" style="color:var(--warn)">${weak}</div><div class="l">Schwach · ${due} fällig</div></div>`;
 }
 
 /* ---------- render ---------- */
 function render() {
-  if (state.mode === 'garden') return;   // garden owns #view; don't clobber it
+  if (state.mode === 'garden') return;
   if (state.mode === 'dash') { view.innerHTML = dashboardHTML(state.chapters); $('#statbar').innerHTML = ''; return; }
+  if (!state.queue.length) return renderEmpty();
   if (state.idx >= state.queue.length) return renderDone();
   const item = state.queue[state.idx];
-  state.current = item; state.answered = false; state.selected = new Set();
-  view.innerHTML = quizCardHTML(item, state.idx, state.queue.length);
+  state.current = item; state.answered = false;
+  state.st = qt.createState(item);
+  view.innerHTML = quizCardHTML(item, state.st, state.idx, state.queue.length);
+  qt.sync(item, state.st, view);
+  updateActionBtn();
+  renderStatbar();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function rerenderInteract() {
+  const item = state.current;
+  $('#qinteract').innerHTML = qt.bodyHTML(item, state.st);
+  $('#qhint').textContent = qt.hintFor(item, state.st);
+  qt.sync(item, state.st, view);
+  updateActionBtn();
+}
+function updateActionBtn() {
+  const b = $('#actionBtn'); if (!b || state.answered) return;
+  b.textContent = qt.actionLabel(state.current, state.st);
+  b.disabled = !qt.canAct(state.current, state.st);
+}
+function renderEmpty() {
+  const why = state.scope === 'due' ? 'Gerade ist nichts fällig – super!' : state.scope === 'weak' ? 'Keine schwachen Fragen in dieser Auswahl.' :
+    state.scope === 'new' ? 'Alle Fragen dieser Auswahl hast du schon gesehen.' : 'Keine Fragen passen zu diesen Filtern.';
+  view.innerHTML = `<div class="empty">${why}<br><br><button class="btn" id="resetFiltersBtn">Filter zurücksetzen</button></div>`;
   renderStatbar();
 }
 function renderDone() {
   const acc = state.session.seen ? Math.round(100 * state.session.scoreSum / state.session.seen) : 0;
   view.innerHTML = `<div class="card"><div class="card-body" style="align-items:center;justify-content:center;text-align:center">
-      <div style="font-size:46px">🎉</div><h2 style="margin:8px 0">Round complete!</h2>
-      <p style="color:var(--mut)">Answered <b style="color:var(--txt)">${state.session.seen}</b> questions · average score
-      <b style="color:${acc >= 70 ? 'var(--good)' : 'var(--warn)'}">${acc}%</b>.</p>
+      <div style="font-size:46px">🎉</div><h2 style="margin:8px 0">Runde geschafft!</h2>
+      <p style="color:var(--mut)"><b style="color:var(--txt)">${state.session.seen}</b> Fragen beantwortet · Ø
+      <b style="color:${acc >= 70 ? 'var(--good)' : 'var(--warn)'}">${acc}%</b></p>
       <div class="actions" style="max-width:430px">
-        <button class="btn primary" id="againBtn">New round</button>
-        <button class="btn" id="weakBtn">Focus weak spots</button>
+        <button class="btn primary" id="againBtn">Neue Runde</button>
+        <button class="btn" id="weakBtn">Schwache Fragen üben</button>
       </div></div></div>`;
   renderStatbar();
 }
 
-function updateOptionsUI() {
-  document.querySelectorAll('.opt').forEach((el, i) => {
-    const sel = state.selected.has(i);
-    el.classList.toggle('sel', sel);
-    el.querySelector('.box').textContent = sel ? '✓' : '';
-  });
-}
-
 function submit() {
-  const item = state.current;
-  const score = engine.scoreItem(item, state.selected);
+  const item = state.current, st = state.st;
+  if (qt.preSubmit(item, st, view)) { qt.sync(item, st, view); updateActionBtn(); return; }
+  const score = qt.score(item, st);
   const grade = engine.gradeScore(item.id, score);
-  const reward = engine.awardCoins(score, grade);
+  const reward = engine.awardCoins(score, { ...grade, weight: item.type === 'label' ? 2 : 1 });
+  const hatchReady = warmEggs(score);   // every answer warms the eggs in the garden nest
   state.session.seen++; state.session.scoreSum += score; state.answered = true;
-  document.querySelectorAll('.opt').forEach((el, i) => {
-    el.classList.add('disabled');
-    const correct = !!item.options[i].correct, sel = state.selected.has(i);
-    if (correct && sel) el.classList.add('correct');
-    else if (correct && !sel) el.classList.add('missed');
-    else if (!correct && sel) el.classList.add('wrongpick');
-  });
-  const fb = $('#fb'); const r = feedback(item, score, reward);
+  qt.reveal(item, st, view);
+  const fb = $('#fb'); const r = feedbackHTML(item, score, reward);
   fb.className = 'fb show ' + r.cls; fb.innerHTML = r.html;
-  $('#actionBtn').textContent = state.idx + 1 >= state.queue.length ? 'Finish' : 'Next';
+  const eggNote = eggLine(hatchReady);
+  if (eggNote) fb.querySelector('.score')?.insertAdjacentHTML('beforeend', eggNote);
+  const b = $('#actionBtn');
+  b.disabled = false; b.textContent = state.idx + 1 >= state.queue.length ? 'Fertig' : 'Weiter';
+  const skip = $('#skipBtn'); if (skip) skip.remove();
   updateCoinDisplay(reward.total);
+  if (hatchReady.length) eggReadyToast(hatchReady.length);
   renderStatbar();
+  fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
+function next() { state.idx++; render(); }
 
 /* ---------- coin display ---------- */
 function updateCoinDisplay(justEarned = 0) {
@@ -110,88 +144,153 @@ function updateCoinDisplay(justEarned = 0) {
   }
 }
 
+/* ---------- garden eggs (warmed by answering) ---------- */
+// Small note in the feedback line: how close the nearest egg is to hatching.
+function eggLine(justReady) {
+  const eggs = listEggs();
+  if (!eggs.length) return '';
+  if (justReady.length) return ` <span class="egg-earn">🥚 ${justReady.length > 1 ? 'Eier sind' : 'Ein Ei ist'} bereit zum Schlüpfen!</span>`;
+  const waiting = eggs.filter(e => !isEggReady(e));
+  if (!waiting.length) return '';
+  const left = Math.min(...waiting.map(e => Math.ceil(e.need - e.warmth)));
+  return ` <span class="egg-earn" title="Eier im Garten werden warm, während du Fragen beantwortest">🥚 noch ${left} ${left === 1 ? 'Antwort' : 'Antworten'}</span>`;
+}
+function updateGardenBadge() {
+  const tab = document.querySelector('.tab[data-mode="garden"]');
+  if (!tab) return;
+  const n = readyEggCount();
+  tab.classList.toggle('has-news', n > 0);
+  tab.title = n ? (n > 1 ? `${n} Eier sind bereit zum Schlüpfen` : 'Ein Ei ist bereit zum Schlüpfen') : '';
+}
+function eggReadyToast(n) {
+  const tab = document.querySelector('.tab[data-mode="garden"]');
+  if (!tab) return;
+  const toast = document.createElement('span');
+  toast.className = 'egg-toast';
+  toast.textContent = n > 1 ? '🐣 Eier bereit!' : '🐣 Ein Ei ist bereit!';
+  tab.appendChild(toast);
+  setTimeout(() => toast.remove(), 2600);
+}
+onGardenChange(type => { if (type === 'eggs') updateGardenBadge(); });
+
 /* ---------- events ---------- */
 view.addEventListener('click', e => {
-  const opt = e.target.closest('.opt');
-  if (opt && state.mode === 'quiz' && !state.answered) {
-    const i = +opt.dataset.i;
-    if (state.current.multi) { state.selected.has(i) ? state.selected.delete(i) : state.selected.add(i); }
-    else { state.selected = new Set([i]); }
-    updateOptionsUI();
+  const t = e.target;
+  if (t.id === 'actionBtn') { state.answered ? next() : submit(); return; }
+  if (t.id === 'skipBtn') { next(); return; }
+  if (t.id === 'againBtn') { buildSession(); render(); return; }
+  if (t.id === 'weakBtn') { state.scope = 'weak'; syncControls(); restart(); return; }
+  if (t.id === 'resetFiltersBtn') {
+    Object.assign(state, { chapterSel: 'mixed', topicSel: '', format: 'all', scope: 'all', examOnly: false });
+    syncControls(); restart(); return;
+  }
+  if (t.id === 'resetBtn') {
+    if (confirm('Gesamten Lernfortschritt zurücksetzen? (Münzen und Vögel bleiben.) Das lässt sich nicht rückgängig machen.')) { engine.resetProgress(); render(); }
     return;
   }
-  if (e.target.id === 'actionBtn') { state.answered ? next() : submit(); return; }
-  if (e.target.id === 'againBtn') { buildSession(); render(); return; }
-  if (e.target.id === 'weakBtn') { state.scope = 'weak'; syncPills(); buildSession(); render(); return; }
-  if (e.target.id === 'resetBtn') { if (confirm('Reset ALL progress (including coins)? This cannot be undone.')) { engine.resetProgress(); updateCoinDisplay(); render(); } return; }
-  if (e.target.id === 'toggleAllBtn') {
+  if (t.id === 'toggleAllBtn') {
     const cards = [...document.querySelectorAll('.chap-card')];
     const collapse = cards.some(c => c.classList.contains('open'));
     cards.forEach(c => c.classList.toggle('open', !collapse));
-    e.target.textContent = collapse ? 'Expand all' : 'Collapse all';
+    t.textContent = collapse ? 'Alle aufklappen' : 'Alle zuklappen';
     return;
   }
-  const head = e.target.closest('.chap-head');
+  const pr = t.closest('[data-practice]');
+  if (pr) { startPractice(pr.dataset); return; }
+  const head = t.closest('.chap-head');
   if (head) { head.parentElement.classList.toggle('open'); return; }
-  const chip = e.target.closest('.gchip');
-  if (chip) {
-    const ent = state.chapters.flatMap(c => c.entities).find(x => x.id === chip.dataset.eid);
-    if (ent) openEntityDialog(ent);
+  if (t.closest('.stem-img, .sol-img')) { t.closest('img').classList.toggle('zoom'); return; }
+
+  if (state.mode === 'quiz' && state.current && !state.answered) {
+    const r = qt.onClick(state.current, state.st, t);
+    if (r === 'rerender') rerenderInteract();
+    else if (r) { qt.sync(state.current, state.st, view); updateActionBtn(); }
   }
 });
-
-/* ---------- entity profile dialog ---------- */
-function openEntityDialog(ent) {
-  const dlg = $('#entityDialog');
-  dlg.innerHTML = entityProfileHTML(ent, engine.entityProgress(ent.id, entityItemIds(ent)));
-  dlg.showModal();
-}
-$('#entityDialog').addEventListener('click', e => {
-  // close on backdrop click (target is the dialog itself) or the ✕ button
-  if (e.target.id === 'entityDialog' || e.target.closest('[data-close]')) $('#entityDialog').close();
+view.addEventListener('input', e => {
+  if (state.mode !== 'quiz' || !state.current || state.answered) return;
+  qt.onInput(state.current, state.st, e.target);
+  updateActionBtn();
 });
-function next() { state.idx++; render(); }
+
+function startPractice(ds) {
+  if (ds.practice === 'exam') Object.assign(state, { chapterSel: 'mixed', topicSel: '', examOnly: true, format: 'all', scope: 'all' });
+  if (ds.practice === 'chapter') Object.assign(state, { chapterSel: ds.cid, topicSel: '', examOnly: false, format: 'all', scope: 'all' });
+  if (ds.practice === 'topic') Object.assign(state, { chapterSel: ds.cid, topicSel: decodeURIComponent(ds.topic), examOnly: false, format: 'all', scope: 'all' });
+  switchMode('quiz');
+  syncControls(); restart();
+}
 
 document.addEventListener('keydown', e => {
   if (state.mode !== 'quiz' || !state.current) return;
-  if (!state.answered && /^[1-4]$/.test(e.key)) {
-    const i = +e.key - 1;
-    if (i < state.current.options.length) {
-      if (state.current.multi) { state.selected.has(i) ? state.selected.delete(i) : state.selected.add(i); }
-      else state.selected = new Set([i]);
-      updateOptionsUI();
-    }
-  } else if (e.code === 'Enter' || e.code === 'Space') {
-    e.preventDefault();
-    if (state.answered) next();
-    else if (state.selected.size) submit();
+  const tag = (e.target.tagName || '').toLowerCase();
+  const typing = tag === 'textarea' || tag === 'input' || tag === 'select';
+  if (!typing && !state.answered && /^[1-9]$/.test(e.key)) {
+    if (qt.onDigit(state.current, state.st, +e.key)) { qt.sync(state.current, state.st, view); updateActionBtn(); }
+    return;
   }
+  if (e.key !== 'Enter') return;
+  if (tag === 'textarea' && !(e.metaKey || e.ctrlKey)) return;
+  if (tag === 'input' && e.target.classList.contains('linput') && !state.answered) {
+    e.preventDefault();
+    const inputs = [...document.querySelectorAll('.linput')];
+    const k = inputs.indexOf(e.target);
+    if (k < inputs.length - 1) { inputs[k + 1].focus(); return; }
+  } else if (tag === 'select' || (tag === 'input' && !e.target.classList.contains('linput'))) return;
+  e.preventDefault();
+  const b = $('#actionBtn');
+  if (b && !b.disabled) b.click();
 });
 
 /* ---------- controls ---------- */
-function syncPills() {
+function topicOptions() {
+  const ch = state.chapters.find(c => c.id === state.chapterSel);
+  const sel = $('#topicSel');
+  if (!ch) { sel.innerHTML = '<option value="">Alle Themen</option>'; sel.disabled = true; state.topicSel = ''; return; }
+  sel.disabled = false;
+  sel.innerHTML = '<option value="">Alle Themen</option>' + ch.topics.map(t => `<option>${t}</option>`).join('');
+  if (!ch.topics.includes(state.topicSel)) state.topicSel = '';
+  sel.value = state.topicSel;
+}
+function syncControls() {
+  $('#chapSel').value = state.chapters.some(c => c.id === state.chapterSel) ? state.chapterSel : (state.chapterSel = 'mixed');
+  topicOptions();
+  $('#formatSel').value = state.format;
+  $('#sizeSel').value = String(state.size);
+  $('#examOnly').checked = state.examOnly;
   document.querySelectorAll('#scopePill button').forEach(b => b.classList.toggle('on', b.dataset.s === state.scope));
 }
-function restart() { buildSession(); render(); }
+function restart() { savePrefs(); buildSession(); render(); }
+
+function switchMode(mode) {
+  const prev = state.mode;
+  if (mode === prev && mode === 'quiz') return;   // re-rendering would re-open an answered question
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
+  state.mode = mode;
+  if (prev === 'garden' && mode !== 'garden') unmountGarden();
+  $('#controls').style.display = mode === 'quiz' ? 'flex' : 'none';
+  if (mode === 'garden') { $('#statbar').innerHTML = ''; mountGarden(view); return; }
+  // Coming back after answering: move on, otherwise render() would show the same
+  // question unanswered again and it could be graded (coins, eggs, SRS) twice.
+  if (mode === 'quiz' && state.answered) { state.idx++; state.answered = false; }
+  if (mode === 'quiz' && state.idx >= state.queue.length) buildSession();
+  render();
+}
 
 function wireControls() {
   const sel = $('#chapSel');
-  sel.innerHTML = `<option value="mixed">Mixed — all chapters</option>` +
-    state.chapters.map(c => `<option value="${c.id}">${c.title}</option>`).join('');
-  sel.onchange = () => { state.chapterSel = sel.value; restart(); };
-  $('#scopePill').onclick = e => { if (e.target.dataset.s) { state.scope = e.target.dataset.s; syncPills(); restart(); } };
+  sel.innerHTML = `<option value="mixed">Alle Vorlesungen gemischt</option>` +
+    state.chapters.map(c => `<option value="${c.id}">${c.title} (${c.questions.length})</option>`).join('');
+  sel.onchange = () => { state.chapterSel = sel.value; state.topicSel = ''; topicOptions(); restart(); };
+  $('#topicSel').onchange = e => { state.topicSel = e.target.value; restart(); };
+  $('#formatSel').innerHTML = `<option value="all">Alle Formate</option>` +
+    Object.entries(qt.FORMAT_GROUPS).map(([k, g]) => `<option value="${k}">${g.label}</option>`).join('');
+  $('#formatSel').onchange = e => { state.format = e.target.value; restart(); };
+  $('#sizeSel').onchange = e => { state.size = +e.target.value; restart(); };
+  $('#examOnly').onchange = e => { state.examOnly = e.target.checked; restart(); };
+  $('#scopePill').onclick = e => { if (e.target.dataset.s) { state.scope = e.target.dataset.s; syncControls(); restart(); } };
   $('#restartBtn').onclick = restart;
-  document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
-    const prev = state.mode;
-    document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
-    t.classList.add('active'); state.mode = t.dataset.mode;
-    if (prev === 'garden' && state.mode !== 'garden') unmountGarden();
-    const sidebars = state.mode === 'dash' || state.mode === 'garden';
-    $('#controls').style.display = sidebars ? 'none' : 'flex';
-    if (state.mode === 'garden') { $('#statbar').innerHTML = ''; mountGarden(view); return; }
-    if (state.mode === 'quiz' && state.idx >= state.queue.length) buildSession();
-    render();
-  });
+  document.querySelectorAll('.tab').forEach(t => t.onclick = () => switchMode(t.dataset.mode));
 }
 
 /* ---------- boot ---------- */
@@ -199,8 +298,8 @@ function wireControls() {
   try {
     state.chapters = await loadChapters();
   } catch (err) {
-    view.innerHTML = `<div class="empty">⚠ ${err.message}<br><br>This app loads JSON, so it must be served over HTTP.<br>Run <kbd>npx serve</kbd> or <kbd>python3 -m http.server</kbd> in the project folder and open the localhost URL.</div>`;
+    view.innerHTML = `<div class="empty">⚠ ${err.message}<br><br>Die App lädt JSON-Dateien und muss deshalb über HTTP laufen.<br>Im Projektordner <kbd>python3 -m http.server 8799</kbd> starten und <kbd>http://localhost:8799</kbd> öffnen.</div>`;
     return;
   }
-  wireControls(); syncPills(); updateCoinDisplay(); buildSession(); render();
+  wireControls(); syncControls(); updateCoinDisplay(); updateGardenBadge(); buildSession(); render();
 })();

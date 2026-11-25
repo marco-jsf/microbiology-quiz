@@ -1,0 +1,2106 @@
+{
+ "id": "vl02",
+ "title": "VL02 · Neurone",
+ "short": "Neurone",
+ "color": "#5a7ad8",
+ "topics": [
+  "Neuron: Aufbau & Kompartimente",
+  "Soma-dendritische Morphologie & Zytoskelett",
+  "Dendritische Spines & Plastizität (LTP)",
+  "Axonmorphologie & Axoninitialsegment",
+  "Axonaler & dendritischer Transport",
+  "Chemische Synapse & Transmitterfreisetzung",
+  "Ca²⁺-Homöostase"
+ ],
+ "questions": [
+  {
+   "id": "vl02-ein-ausgang",
+   "type": "single",
+   "topic": "Neuron: Aufbau & Kompartimente",
+   "source": "slides",
+   "ref": "VL02 · Folien 4–5",
+   "stem": "Neurone sind stark asymmetrisch. Welche Zuordnung von Eingangs- und Ausgangsstrukturen ist korrekt?",
+   "options": [
+    {
+     "t": "Eingang: Dendritenbaum mit Spines (postsynaptisch) – Ausgang: Axon mit Kollateralen und Terminalen (präsynaptisch)",
+     "correct": true
+    },
+    {
+     "t": "Eingang: Axon mit Kollateralen und Terminalen (präsynaptisch) – Ausgang: Dendritenbaum mit Spines (postsynaptisch)",
+     "correct": false
+    },
+    {
+     "t": "Eingang: Soma mit rauem ER (Nissl-Schollen) – Ausgang: Dendritenbaum mit Spines und Axonhügel",
+     "correct": false
+    },
+    {
+     "t": "Eingang: Axoninitialsegment mit Nav-Kanälen – Ausgang: Soma und proximale Dendriten mit Spines",
+     "correct": false
+    }
+   ],
+   "explanation": "Dendritenbaum (95 % des Neuropils) und Spines tragen die postsynaptischen Elemente = Eingang. Das Axon leitet APs fort und bildet an Boutons, Varikositäten und Endplatten die präsynaptischen Elemente = Ausgang."
+  },
+  {
+   "id": "vl02-soma",
+   "type": "multi",
+   "topic": "Neuron: Aufbau & Kompartimente",
+   "source": "slides",
+   "ref": "VL02 · Folie 5",
+   "stem": "Welche Aussagen zum Soma (Zellkörper) eines Neurons treffen zu?",
+   "options": [
+    {
+     "t": "Es ist das Hauptkompartiment der Proteinbiosynthese.",
+     "correct": true
+    },
+    {
+     "t": "Es enthält raues ER (Ribosomen/Nissl-Schollen) und den Golgi-Apparat.",
+     "correct": true
+    },
+    {
+     "t": "Hier werden Mikrotubuli produziert.",
+     "correct": true
+    },
+    {
+     "t": "Es macht etwa 95 % des Neuropils aus.",
+     "correct": false
+    },
+    {
+     "t": "Hier werden normalerweise die Aktionspotentiale generiert.",
+     "correct": false
+    }
+   ],
+   "explanation": "Das Soma ist die ‚Fabrik‘ (raues ER, Golgi, Mikrotubuli-Produktion). 95 % des Neuropils stellt der Dendritenbaum; APs entstehen am Axonhügel/AIS mit seinen Nav-Kanälen."
+  },
+  {
+   "id": "vl02-axon",
+   "type": "combo",
+   "topic": "Neuron: Aufbau & Kompartimente",
+   "source": "slides",
+   "ref": "VL02 · Folie 5",
+   "stem": "Welche Aussagen zum Axon treffen zu?",
+   "statements": [
+    {
+     "t": "Funktionen des Axons sind die Fortleitung von Aktionspotentialen und der axonale Transport.",
+     "correct": true
+    },
+    {
+     "t": "Im ZNS bilden Oligodendrozyten die Myelinscheiden; dazwischen liegen die Ranvier-Schnürringe.",
+     "correct": true
+    },
+    {
+     "t": "Interneurone sind typischerweise myelinisiert, Projektionsneurone typischerweise nicht.",
+     "correct": false
+    },
+    {
+     "t": "Axonterminale können als Boutons, Varikositäten oder motorische Endplatte ausgebildet sein.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "ACD"
+   ],
+   "explanation": "Folie 5: Projektions- vs. Interneurone = myelinisiert vs. nicht myelinisiert – Aussage C ist genau vertauscht."
+  },
+  {
+   "id": "vl02-purkinje-form",
+   "type": "single",
+   "topic": "Soma-dendritische Morphologie & Zytoskelett",
+   "source": "slides",
+   "ref": "VL02 · Folie 8",
+   "stem": "„Form follows function“: Warum ist der Dendritenbaum der Purkinje-Zelle in der Seitenansicht flach wie ein Fächer?",
+   "options": [
+    {
+     "t": "Er steht senkrecht zu den Parallelfasern der Körnerzellen und kann so möglichst viele dieser Fasern kontaktieren.",
+     "correct": true
+    },
+    {
+     "t": "Er ragt in einen Glomerulus, in dem er die Eingänge aus dem Riechepithel bündelt und verrechnet.",
+     "correct": false
+    },
+    {
+     "t": "Er ist vollständig myelinisiert und muss deshalb besonders platzsparend in einer Ebene liegen.",
+     "correct": false
+    },
+    {
+     "t": "Er bildet keine Synapsen, sondern dient nur der mechanischen Stabilisierung der Kleinhirnrinde.",
+     "correct": false
+    }
+   ],
+   "explanation": "Der Purkinje-Dendritenbaum ist in einer Ebene ausgebreitet, die Parallelfasern der Körnerzellen laufen senkrecht hindurch → maximale Zahl an Kontakten. Der Glomerulus gehört zur Mitralzelle des Bulbus olfactorius."
+  },
+  {
+   "id": "vl02-zytoskelett-label",
+   "type": "label",
+   "topic": "Soma-dendritische Morphologie & Zytoskelett",
+   "source": "slides",
+   "ref": "VL02 · Folien 8–9",
+   "stem": "Beschriften Sie die Elemente des Zytoskeletts (fibrilläre Proteine).",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 9,
+    "crop": [
+     452,
+     78,
+     652,
+     530
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      457,
+      84,
+      532,
+      99
+     ],
+     "answer": "Mikrofilament (Aktin)",
+     "accept": [
+      "Mikrofilament",
+      "Microfilament",
+      "Aktinfilament",
+      "Aktin",
+      "Actin"
+     ],
+     "x": 1.25,
+     "y": 0.77,
+     "w": 40.0,
+     "h": 4.42
+    },
+    {
+     "box": [
+      457,
+      195,
+      522,
+      209
+     ],
+     "answer": "Mikrotubulus",
+     "accept": [
+      "Microtubule",
+      "Mikrotubuli",
+      "Tubulin"
+     ],
+     "x": 1.25,
+     "y": 25.33,
+     "w": 35.0,
+     "h": 4.2
+    },
+    {
+     "box": [
+      457,
+      358,
+      512,
+      372
+     ],
+     "answer": "Gliafilament",
+     "accept": [
+      "Glial filament",
+      "Gliales Filament",
+      "GFAP"
+     ],
+     "x": 1.25,
+     "y": 61.39,
+     "w": 30.0,
+     "h": 4.2
+    },
+    {
+     "box": [
+      457,
+      449,
+      516,
+      463
+     ],
+     "answer": "Neurofilament",
+     "accept": [
+      "Neurofilamente",
+      "NF"
+     ],
+     "x": 1.25,
+     "y": 81.53,
+     "w": 32.0,
+     "h": 4.2
+    }
+   ],
+   "bank": [
+    "Myosinfilament",
+    "Spektrin"
+   ],
+   "explanation": "Mikrofilamente (Aktin, dünn), Mikrotubuli (dick, hohl; mit MAPs als Seitenarmen – Schienen für den Transport) und Intermediärfilamente: Gliafilamente (Glia) und Neurofilamente (Neurone, mit Seitenarmen).",
+   "image": "assets/figures/vl02-zytoskelett-label.webp",
+   "iw": 400,
+   "ih": 904
+  },
+  {
+   "id": "vl02-zytoskelett",
+   "type": "multi",
+   "topic": "Soma-dendritische Morphologie & Zytoskelett",
+   "source": "slides",
+   "ref": "VL02 · Folien 8–9, 30",
+   "stem": "Welche Aussagen zum neuronalen Zytoskelett treffen zu?",
+   "options": [
+    {
+     "t": "Es besteht aus multimeren, fibrillären Proteinen, die Form und innere Organisation der Zelle aufrechterhalten.",
+     "correct": true
+    },
+    {
+     "t": "Es bestimmt die soma-dendritische Morphologie eines Neurons.",
+     "correct": true
+    },
+    {
+     "t": "Mikrotubuli dienen als Schienen für den gerichteten Transport in Axon und Dendriten.",
+     "correct": true
+    },
+    {
+     "t": "Neurofilamente sind die Schienen, auf denen Kinesin und Dynein laufen.",
+     "correct": false
+    },
+    {
+     "t": "Das Zytoskelett ist nur während der Zellteilung vorhanden und in reifen Neuronen abgebaut.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 9: Zytoskelett = multimere fibrilläre Proteine → Form, Organisation, mechanischer Halt und gerichteter Transport. Die Motorproteine laufen auf Mikrotubuli, nicht auf Neurofilamenten."
+  },
+  {
+   "id": "vl02-golgi-faerbung",
+   "type": "single",
+   "topic": "Soma-dendritische Morphologie & Zytoskelett",
+   "source": "slides",
+   "ref": "VL02 · Folie 10",
+   "stem": "Was leistet die Golgi-Färbung (Silberimprägnierung) für die Analyse des Cortex?",
+   "options": [
+    {
+     "t": "Sie färbt einzelne Neurone vollständig an (Soma, Dendriten, Axon), sodass ihre Morphologie den Cortexschichten zugeordnet werden kann.",
+     "correct": true
+    },
+    {
+     "t": "Sie färbt selektiv nur die Myelinscheiden an und zeigt so den Verlauf der Faserbahnen in der weißen Substanz.",
+     "correct": false
+    },
+    {
+     "t": "Sie markiert spezifisch die Zellkerne aller Neurone und Gliazellen und dient so der Zellzählung.",
+     "correct": false
+    },
+    {
+     "t": "Sie macht die Aktionspotentiale einzelner Neurone im lebenden Gewebe direkt sichtbar.",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Golgi-Methode imprägniert nur einen kleinen Teil der Neurone, diese aber komplett – so wurde gezeigt, dass die soma-dendritische Morphologie (z. B. Pyramidenzellen) die Cortexschichten prägt."
+  },
+  {
+   "id": "vl02-spines-funktionen",
+   "type": "open",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folien 13–15",
+   "stem": "Nennen Sie 3 Eigenschaften bzw. Funktionen dendritischer Spines.",
+   "points": [
+    "Bilden den postsynaptischen Teil exzitatorischer (glutamaterger) Synapsen (Folie: „exclusively“; fachlich: ganz überwiegend)",
+    "Vergrößern die postsynaptische Membranfläche → mehr mögliche Kontakte (4.000 Spines → +40 %)",
+    "Lokale Rechenkompartimente: trennen bzw. integrieren synaptische Eingänge",
+    "Spine-Zahl korreliert mit der Rechenleistung (computational power) des Neurons",
+    "Strukturelle Plastizität: wachsen und bilden sich zurück, auch im adulten Gehirn (z. B. bei LTP)",
+    "Können PSD, glattes ER (Ca²⁺-Speicher), Spine-Apparat (v. a. in Mushroom-Spines) und Polyribosomen (lokale Proteinsynthese) enthalten",
+    "Formen: stubby, thin, mushroom"
+   ],
+   "need": 3,
+   "explanation": "Spines sind die postsynaptischen Kompartimente exzitatorischer Synapsen: Sie vergrößern die Kontaktfläche, isolieren Eingänge (lokale Verrechnung) und sind strukturell plastisch."
+  },
+  {
+   "id": "vl02-spines-label",
+   "type": "label",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folie 14",
+   "stem": "Beschriften Sie die Spine-Typen und die Farblegende der elektronenmikroskopischen Aufnahmen.",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 14,
+    "crop": [
+     40,
+     80,
+     700,
+     470
+    ]
+   },
+   "labels": [
+    {
+     "find": "stubby spine",
+     "answer": "Stubby Spine (stummelförmig)",
+     "accept": [
+      "stubby spine",
+      "stubby",
+      "stummelförmig"
+     ],
+     "x": 28.04,
+     "y": 11.02,
+     "w": 2.84,
+     "h": 16.85
+    },
+    {
+     "find": "thin spine",
+     "answer": "Thin Spine (dünn)",
+     "accept": [
+      "thin spine",
+      "thin",
+      "dünner Spine",
+      "dünn"
+     ],
+     "x": 28.08,
+     "y": 40.92,
+     "w": 2.84,
+     "h": 13.2
+    },
+    {
+     "find": "mushroom spine",
+     "answer": "Mushroom Spine (pilzförmig)",
+     "accept": [
+      "mushroom spine",
+      "mushroom",
+      "pilzförmig",
+      "Pilz-Spine"
+     ],
+     "x": 28.33,
+     "y": 69.01,
+     "w": 2.84,
+     "h": 21.61
+    },
+    {
+     "box": [
+      503,
+      88,
+      651,
+      116
+     ],
+     "answer": "Spines (Postsynapse)",
+     "accept": [
+      "Spine",
+      "Spines",
+      "Postsynapse",
+      "postsynaptisch"
+     ],
+     "x": 69.77,
+     "y": 1.41,
+     "w": 23.18,
+     "h": 8.46
+    },
+    {
+     "find": "Axonterminale (Präsynapse)",
+     "answer": "Axonterminale (Präsynapse)",
+     "accept": [
+      "Axonterminale",
+      "Präsynapse",
+      "Bouton",
+      "Axonterminal"
+     ],
+     "x": 70.21,
+     "y": 14.75,
+     "w": 29.13,
+     "h": 7.17
+    },
+    {
+     "find": "Astrozyt (Ast)",
+     "answer": "Astrozyt",
+     "accept": [
+      "Astrozyt",
+      "Astrocyte",
+      "Astrozytenfortsatz",
+      "Glia"
+     ],
+     "x": 70.28,
+     "y": 28.21,
+     "w": 14.62,
+     "h": 7.17
+    }
+   ],
+   "explanation": "Grün = Spine (Postsynapse), rot = Axonterminale (Präsynapse), gelb = Astrozytenfortsatz. Spine-Typen: stubby (ohne Hals), thin (langer dünner Hals), mushroom (großer Kopf, hier mit Spine-Apparat und perforierter PSD).",
+   "image": "assets/figures/vl02-spines-label.webp",
+   "iw": 1320,
+   "ih": 780
+  },
+  {
+   "id": "vl02-spine-ultrastruktur",
+   "type": "multi",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folie 14",
+   "stem": "Welche Zuordnungen von Spine-Ultrastrukturen (EM) und ihrer Bedeutung treffen zu?",
+   "options": [
+    {
+     "t": "PSD – postsynaptische Dichte",
+     "correct": true
+    },
+    {
+     "t": "SER – glattes ER, dient als Ca²⁺-Speicher",
+     "correct": true
+    },
+    {
+     "t": "PR – Polyribosomen, lokale Proteinsynthese im Spine",
+     "correct": true
+    },
+    {
+     "t": "SA – Spine-Apparat, Ort der Transmitterfreisetzung",
+     "correct": false
+    },
+    {
+     "t": "P – Perforation der PSD, Kennzeichen eines degenerierenden Spines",
+     "correct": false
+    }
+   ],
+   "explanation": "SA = Spine-Apparat (Proteintransport). Eine perforierte PSD wird mit höherer Rechenleistung (computational power) in Verbindung gebracht. Transmitter wird präsynaptisch freigesetzt, nicht im Spine."
+  },
+  {
+   "id": "vl02-strukturelle-plastizitaet",
+   "type": "single",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folien 15, 18–19",
+   "stem": "Welche Aussage zur strukturellen Plastizität dendritischer Spines trifft zu?",
+   "options": [
+    {
+     "t": "Spines können auch im adulten Gehirn wachsen und sich zurückbilden; späte LTP kann sich z. B. als Verdopplung von Spines zeigen.",
+     "correct": true
+    },
+    {
+     "t": "Spines werden nur während der Entwicklung gebildet und sind im adulten Gehirn strukturell unveränderlich.",
+     "correct": false
+    },
+    {
+     "t": "Strukturelle Plastizität betrifft nur die Präsynapse; die Zahl der Spines bleibt bei LTP konstant.",
+     "correct": false
+    },
+    {
+     "t": "Neue Spines entstehen ausschließlich nach einer Schädigung, nicht durch Lernen oder Aktivität.",
+     "correct": false
+    }
+   ],
+   "explanation": "Spines sind dynamisch. Nach LTP-Induktion (CA1, Schaffer-Kollateralen) entstehen neue Spines; in vivo führt motorisches Lernen zur Spinogenese im Motorcortex."
+  },
+  {
+   "id": "vl02-ltp-definition",
+   "type": "single",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folie 16",
+   "stem": "Was versteht man unter Langzeitpotenzierung (LTP), und wie wird sie experimentell ausgelöst?",
+   "options": [
+    {
+     "t": "Lang anhaltende Verstärkung der synaptischen Effizienz, ausgelöst durch hochfrequente Reizung der Eingangsaxone",
+     "correct": true
+    },
+    {
+     "t": "Lang anhaltende Abschwächung der synaptischen Effizienz, ausgelöst durch wiederholte niederfrequente Einzelreize",
+     "correct": false
+    },
+    {
+     "t": "Kurzzeitige Anhebung des Ruhemembranpotentials, ausgelöst durch Applikation von extrazellulärem Kalium",
+     "correct": false
+    },
+    {
+     "t": "Dauerhafte Erhöhung der Leitungsgeschwindigkeit, ausgelöst durch zusätzliche Myelinisierung des Axons",
+     "correct": false
+    }
+   ],
+   "explanation": "Nach Hochfrequenzreizung (Folie: 10 s mit 15 Hz) sind die fEPSP-Amplituden auf Einzelreize über Stunden bis Tage erhöht."
+  },
+  {
+   "id": "vl02-ltp-mechanismen",
+   "type": "combo",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folie 17",
+   "stem": "Welche Aussagen zu den Mechanismen der LTP an einer glutamatergen Spine-Synapse treffen zu?",
+   "statements": [
+    {
+     "t": "Eine Synapse, deren Effizienz durch Koaktivierung von Prä- und Postsynapse verstärkt werden kann, nennt man Hebb’sche Synapse.",
+     "correct": true
+    },
+    {
+     "t": "Präsynaptisch steigt die Freisetzungswahrscheinlichkeit für Glutamat (über cAMP und Proteinkinase A).",
+     "correct": true
+    },
+    {
+     "t": "Postsynaptisch werden AMPA-Rezeptoren rekrutiert und in die Membran eingebaut.",
+     "correct": true
+    },
+    {
+     "t": "Die schnell einsetzenden LTP-Effekte beruhen vor allem auf der Neubildung von Synapsen.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "AC"
+   ],
+   "explanation": "Schnelle Effekte: mehr Transmitterfreisetzung (cAMP/PKA) und mehr AMPA-Rezeptoren. Neue Synapsen und Spine-Wachstum gehören zur langfristigen Plastizität (strukturelle Veränderungen)."
+  },
+  {
+   "id": "vl02-ltp-neue-spines",
+   "type": "single",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folien 18–19",
+   "stem": "Was zeigten die Experimente zur LTP-Induktion an CA1-Pyramidenzellen in hippocampalen Schnittkulturen (2-Photonen-Imaging)?",
+   "options": [
+    {
+     "t": "Nach LTP-Induktion durch Reizung der Schaffer-Kollateralen entstanden neue Spines am stimulierten Dendriten.",
+     "correct": true
+    },
+    {
+     "t": "Nach LTP-Induktion verschwanden die meisten bereits vorhandenen Spines am stimulierten Dendriten.",
+     "correct": false
+    },
+    {
+     "t": "LTP ließ sich nur auslösen, nachdem die vorhandenen Spines pharmakologisch entfernt worden waren.",
+     "correct": false
+    },
+    {
+     "t": "Neue Spines bildeten sich ausschließlich an den Axonen der gereizten Schaffer-Kollateralen.",
+     "correct": false
+    }
+   ],
+   "explanation": "LTP → neue Spines (nach ca. 20 min); offen blieb, ob die LTP auf den neuen Spines beruht. Später zeigte eine In-vivo-Studie, dass motorisches Lernen über Spinogenese neue exzitatorische Synapsen bildet."
+  },
+  {
+   "id": "vl02-spine-faktoren",
+   "type": "multi",
+   "topic": "Dendritische Spines & Plastizität (LTP)",
+   "source": "slides",
+   "ref": "VL02 · Folie 20",
+   "stem": "Welche Aussagen zu Faktoren, die Spine-Zahl und -Morphologie beeinflussen, treffen zu?",
+   "options": [
+    {
+     "t": "Visuelle Deprivation reduziert die Spine-Anzahl im visuellen Cortex.",
+     "correct": true
+    },
+    {
+     "t": "Im Winterschlaf verschwinden ca. 40 % der hippocampalen Spines und werden innerhalb weniger Stunden wiederhergestellt.",
+     "correct": true
+    },
+    {
+     "t": "Beim Fragilen-X-Syndrom sind die Spines sehr lang und dünn.",
+     "correct": true
+    },
+    {
+     "t": "Beim Down-Syndrom ist die Spine-Dichte in Hippocampus und Cortex erhöht.",
+     "correct": false
+    },
+    {
+     "t": "Die Entfernung von Tasthaaren (Whiskern) führt zu einem Verlust von Spines im Barrel-Cortex.",
+     "correct": false
+    }
+   ],
+   "explanation": "Down-Syndrom und Epilepsie: reduzierte Spine-Dichte. Whisker-Entfernung: kompensatorische Zunahme von Spines im Barrel-Cortex."
+  },
+  {
+   "id": "vl02-axonale-arborisation",
+   "type": "single",
+   "topic": "Axonmorphologie & Axoninitialsegment",
+   "source": "slides",
+   "ref": "VL02 · Folie 22",
+   "stem": "Welche Aussage zur axonalen Verzweigung (Arborisation) trifft zu?",
+   "options": [
+    {
+     "t": "Korbzellen bilden mit ihren Axonkollateralen korbartige Endigungen um die Somata von Purkinje-Zellen.",
+     "correct": true
+    },
+    {
+     "t": "Das Axon einer Pyramidenzelle verzweigt sich nur lokal und verlässt nie die graue Substanz.",
+     "correct": false
+    },
+    {
+     "t": "Sensorische Ganglienneurone besitzen nur einen zentralen Axonast ohne peripheren Fortsatz.",
+     "correct": false
+    },
+    {
+     "t": "Die Axone von Motoneuronen verzweigen sich ausschließlich innerhalb des Rückenmarks.",
+     "correct": false
+    }
+   ],
+   "explanation": "Axone können lokal verzweigen (rekurrent/Interneuron) und/oder zu entfernten Zielen projizieren: Pyramidenzellen über die weiße Substanz, Motoneurone zum Muskel, sensorische Ganglienneurone mit peripherem (Haut) und zentralem (Rückenmark) Ast."
+  },
+  {
+   "id": "vl02-interneurone-ca1",
+   "type": "single",
+   "topic": "Axonmorphologie & Axoninitialsegment",
+   "source": "slides",
+   "ref": "VL02 · Folie 25",
+   "stem": "Ein GABAerges Interneuron der CA1-Region projiziert mit seinem Axon auf die Somata der CA1-Pyramidenzellen. Was kontrolliert es damit vor allem?",
+   "options": [
+    {
+     "t": "Die Generierung von Aktionspotentialen der Pyramidenzellen",
+     "correct": true
+    },
+    {
+     "t": "Den synaptischen Eingang vom entorhinalen Cortex an den distalen Dendriten",
+     "correct": false
+    },
+    {
+     "t": "Die Myelinisierung der Pyramidenzell-Axone durch Oligodendrozyten",
+     "correct": false
+    },
+    {
+     "t": "Die Bildung neuer Spines an den apikalen Dendriten",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Zielregion des Axons bestimmt die Funktion: perisomatische Hemmung → AP-Generierung; Axone an den distalen Dendriten → Kontrolle des Eingangs vom entorhinalen Cortex."
+  },
+  {
+   "id": "vl02-ais-label",
+   "type": "label",
+   "topic": "Axonmorphologie & Axoninitialsegment",
+   "source": "slides",
+   "ref": "VL02 · Folie 26",
+   "stem": "Beschriften Sie das Schema des Neurons.",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 26,
+    "crop": [
+     22,
+     86,
+     478,
+     252
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      102,
+      156,
+      141,
+      188
+     ],
+     "answer": "Zellkörper (Soma)",
+     "accept": [
+      "cell body",
+      "Soma",
+      "Zellkörper",
+      "Perikaryon"
+     ],
+     "x": 17.0,
+     "y": 40.66,
+     "w": 9.65,
+     "h": 22.29
+    },
+    {
+     "box": [
+      130,
+      198,
+      180,
+      213
+     ],
+     "answer": "Axonhügel (hillock)",
+     "accept": [
+      "hillock",
+      "axon hillock",
+      "Axonhügel",
+      "Ursprungshügel"
+     ],
+     "x": 23.14,
+     "y": 65.96,
+     "w": 12.06,
+     "h": 12.05
+    },
+    {
+     "box": [
+      190,
+      198,
+      218,
+      213
+     ],
+     "answer": "Axoninitialsegment (AIS)",
+     "accept": [
+      "AIS",
+      "axon initial segment",
+      "Initialsegment"
+     ],
+     "x": 36.29,
+     "y": 65.96,
+     "w": 7.24,
+     "h": 12.05
+    },
+    {
+     "box": [
+      283,
+      198,
+      361,
+      214
+     ],
+     "answer": "distales Axon",
+     "accept": [
+      "distal axon",
+      "distales Axon"
+     ],
+     "x": 56.69,
+     "y": 65.96,
+     "w": 18.2,
+     "h": 12.65
+    },
+    {
+     "box": [
+      28,
+      229,
+      94,
+      246
+     ],
+     "answer": "Dendriten",
+     "accept": [
+      "dendrites",
+      "Dendrit"
+     ],
+     "x": 0.77,
+     "y": 84.64,
+     "w": 15.57,
+     "h": 13.25
+    },
+    {
+     "box": [
+      245,
+      229,
+      281,
+      246
+     ],
+     "answer": "Axon",
+     "accept": [
+      "axon"
+     ],
+     "x": 48.36,
+     "y": 84.64,
+     "w": 8.99,
+     "h": 13.25
+    }
+   ],
+   "explanation": "Vom Soma geht der Axonhügel ab, daran schließt das AIS an (orange, 20–60 µm), dann folgt das distale Axon. Das AIS trennt das somatodendritische vom axonalen Kompartiment.",
+   "image": "assets/figures/vl02-ais-label.webp",
+   "iw": 912,
+   "ih": 332
+  },
+  {
+   "id": "vl02-ais-molekular",
+   "type": "open",
+   "topic": "Axonmorphologie & Axoninitialsegment",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL02 · Folien 5, 26, 34",
+   "stem": "Der Axonhügel (morphologische Bezeichnung) entspricht funktionell dem Axoninitialsegment (AIS). Nennen Sie molekulare Eigenschaften des AIS und jeweils eine passende Funktion.",
+   "points": [
+    "Hohe Dichte spannungsgesteuerter Na⁺-Kanäle (Nav) → Generierung und Formung des Aktionspotentials",
+    "Weitere Ionenkanäle (z. B. K⁺-Kanäle) → bestimmen die neuronale Erregbarkeit",
+    "Gerüst aus Ankyrin(-G) und βIV-Spektrin (ß4-spectrin) mit NF-186 (Neurofascin) → verankert die Kanäle, bildet eine Diffusionsbarriere zwischen somatodendritischer und axonaler Membran",
+    "Mikrotubuli in Faszikeln gebündelt, spezielle MAPs/molekulare Signale (cues) → Kinesin erkennt sie: selektiver Eintritt axonaler Cargos",
+    "Aktin-Patches + Myosin → stoppen dendritische Cargo-Vesikel, Rücktransport per Dynein (Gatekeeper/Filter)"
+   ],
+   "need": 3,
+   "note": "WS23/24 Frage 30 (2 molekulare Eigenschaften + je eine Funktion) und WS25/26 „AIS Funktionen (3P)“ zusammengeführt; deshalb need = 3. Ankyrin-G/Neurofascin sind die Lehrbuchnamen zu ‚ankyrin‘ und ‚NF-186‘ auf den Folien.",
+   "explanation": "AIS = Generator (Nav-Cluster → AP-Initiation, Erregbarkeit) und Gatekeeper (Diffusionsbarriere, Filter für den Proteintransport ins Axon). Streng anatomisch schließt das AIS (20–60 µm) distal an den Axonhügel an (Folie 26) – der Stem gibt den Klausurwortlaut wieder."
+  },
+  {
+   "id": "vl02-ais-eigenschaften",
+   "type": "multi",
+   "topic": "Axonmorphologie & Axoninitialsegment",
+   "source": "slides",
+   "ref": "VL02 · Folie 26",
+   "stem": "Welche Aussagen zum Axoninitialsegment (AIS) treffen zu?",
+   "options": [
+    {
+     "t": "Es ist ca. 20–60 µm lang und liegt zwischen somatodendritischem und axonalem Kompartiment.",
+     "correct": true
+    },
+    {
+     "t": "Es generiert und formt das Aktionspotential.",
+     "correct": true
+    },
+    {
+     "t": "Es bestimmt über seine Ionenkanäle die neuronale Erregbarkeit.",
+     "correct": true
+    },
+    {
+     "t": "Es wirkt als Diffusionsbarriere und kontrolliert den Proteintransport ins Axon.",
+     "correct": true
+    },
+    {
+     "t": "Es lässt sich mit dem Marker MAP2 spezifisch anfärben.",
+     "correct": false
+    },
+    {
+     "t": "Es ist der Hauptort der Proteinbiosynthese des Neurons.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 26: AIS = Generator & Gatekeeper. Als AIS-Marker dienen βIV-Spektrin und NF-186; MAP2 markiert Soma und Dendriten. Die Proteinbiosynthese findet im Soma statt."
+  },
+  {
+   "id": "vl02-ais-gatekeeper",
+   "type": "single",
+   "topic": "Axonmorphologie & Axoninitialsegment",
+   "source": "slides",
+   "ref": "VL02 · Folie 34",
+   "stem": "Wie verhindert das AIS, dass dendritische Cargo-Vesikel ins Axon gelangen?",
+   "options": [
+    {
+     "t": "Sie werden durch Myosin an Aktin-Patches immobilisiert und danach per Dynein zum Soma zurückgebracht.",
+     "correct": true
+    },
+    {
+     "t": "Sie werden von Kinesin erkannt und gezielt über die Mikrotubuli-Faszikel ins distale Axon gebracht.",
+     "correct": false
+    },
+    {
+     "t": "Sie werden an den Nav-Kanälen des AIS durch die lokale Depolarisation zum Platzen gebracht.",
+     "correct": false
+    },
+    {
+     "t": "Sie werden im AIS per Exozytose freigesetzt und anschließend von Astrozyten aufgenommen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Axonale Cargos tragen Kinesin, das molekulare Signale (cues) auf den Mikrotubuli am AIS-Eingang erkennt → Eintritt ins Axon. Dendritische Cargos werden durch Myosin an Aktin-Patches gestoppt und per Dynein zurücktransportiert („You shall not pass“)."
+  },
+  {
+   "id": "vl02-axonaler-transport-warum",
+   "type": "open",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "exam",
+   "exam": "WS24/25, WS25/26",
+   "ref": "VL02 · Folien 28–32",
+   "stem": "Neurone sind große Strukturen mit unterschiedlichen Kompartimenten. Wozu braucht man gerichteten (axonalen) Transport? Welche molekularen Strukturen braucht man dafür?",
+   "points": [
+    "Neurone sind groß und stark polarisiert (Soma, Dendriten + Spines, Axon mit Kollateralen und Terminalen)",
+    "Die Kompartimente sind funktionell, morphologisch und biochemisch verschieden → brauchen gezielte Versorgung",
+    "Proteine, Membranen, Organellen (z. B. Mitochondrien) werden im Soma hergestellt und müssen rechtzeitig an ihren Bestimmungsort",
+    "Diffusion ist viel zu langsam (1 m ≈ 2,7 Jahre); aktiver Transport ist bis ~400× schneller",
+    "Bidirektional: retrograd z. B. Abtransport fehlgefalteter Proteine, retrograde Signale (NGF)",
+    "Mikrotubuli als polare Schienen (Plus-Ende Richtung Axonterminale)",
+    "Motorproteine: Kinesin (anterograd, zum Plus-Ende) und Dynein (retrograd, zum Minus-Ende), angetrieben durch ATP-Hydrolyse",
+    "Adaptorproteine koppeln die Cargo-Vesikel an den Motor"
+   ],
+   "need": 5,
+   "note": "WS24/25 Frage 20 und WS25/26 „Warum axonaler Transport und welche molekularen Strukturen“ zusammengeführt.",
+   "explanation": "Synthese zentral im Soma, Bedarf dezentral in weit entfernten Kompartimenten – Diffusion reicht nicht. Schienen = Mikrotubuli, Motoren = Kinesin (Plus-Ende, anterograd) und Dynein (Minus-Ende, retrograd)."
+  },
+  {
+   "id": "vl02-diffusion-1m",
+   "type": "single",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folien 28–29, 32",
+   "stem": "Das Axon eines menschlichen Motoneurons kann bis zu 1 m lang sein. Wie lange bräuchte ein Protein für diese Strecke allein durch Diffusion?",
+   "options": [
+    {
+     "t": "ca. 2,7 Jahre",
+     "correct": true
+    },
+    {
+     "t": "ca. 2,7 Tage",
+     "correct": false
+    },
+    {
+     "t": "ca. 2,7 Stunden",
+     "correct": false
+    },
+    {
+     "t": "ca. 27 Minuten",
+     "correct": false
+    }
+   ],
+   "explanation": "Diffusion schafft nur ~0,1 cm/Tag → für 1 m rund 1000 Tage ≈ 2,7 Jahre (Folienwert, linear hochgerechnet). Physikalisch wächst die Diffusionszeit mit dem Quadrat der Strecke (t ≈ x²/2D) – real wären es eher Jahrhunderte. Für die Klausur zählt der Folienwert. Schneller axonaler Transport (20–40 cm/Tag) ist bis ~400× schneller."
+  },
+  {
+   "id": "vl02-motoren-label",
+   "type": "label",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folie 30",
+   "stem": "Beschriften Sie das Schema der molekularen Motoren am Mikrotubulus.",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 30,
+    "crop": [
+     352,
+     197,
+     693,
+     490
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      538,
+      252,
+      628,
+      269
+     ],
+     "answer": "Adaptorprotein",
+     "accept": [
+      "Adapterprotein",
+      "adaptor protein",
+      "Adaptor"
+     ],
+     "x": 53.81,
+     "y": 17.92,
+     "w": 27.86,
+     "h": 7.51
+    },
+    {
+     "box": [
+      539,
+      306,
+      584,
+      322
+     ],
+     "answer": "Kinesin",
+     "accept": [
+      "Kinesine",
+      "KIF"
+     ],
+     "x": 54.11,
+     "y": 36.35,
+     "w": 14.66,
+     "h": 7.17
+    },
+    {
+     "box": [
+      498,
+      352,
+      571,
+      369
+     ],
+     "answer": "Mikrotubulus",
+     "accept": [
+      "Microtubule",
+      "Mikrotubuli"
+     ],
+     "x": 42.08,
+     "y": 52.05,
+     "w": 22.87,
+     "h": 7.51
+    },
+    {
+     "box": [
+      438,
+      392,
+      481,
+      408
+     ],
+     "answer": "Dynein",
+     "accept": [
+      "Dyneine"
+     ],
+     "x": 24.49,
+     "y": 65.7,
+     "w": 14.08,
+     "h": 7.17
+    },
+    {
+     "box": [
+      368,
+      351,
+      426,
+      369
+     ],
+     "answer": "Plus-Ende (+)",
+     "accept": [
+      "+-Ende",
+      "Plus-Ende",
+      "plus end",
+      "Plusende",
+      "+"
+     ],
+     "x": 3.96,
+     "y": 51.71,
+     "w": 18.48,
+     "h": 7.85
+    },
+    {
+     "box": [
+      632,
+      351,
+      688,
+      369
+     ],
+     "answer": "Minus-Ende (−)",
+     "accept": [
+      "--Ende",
+      "Minus-Ende",
+      "minus end",
+      "Minusende",
+      "-"
+     ],
+     "x": 81.38,
+     "y": 51.71,
+     "w": 17.89,
+     "h": 7.85
+    },
+    {
+     "find": "anterograde",
+     "answer": "anterograd",
+     "accept": [
+      "anterograde",
+      "anterograder Transport"
+     ],
+     "x": 4.62,
+     "y": 58.51,
+     "w": 18.14,
+     "h": 6.41
+    },
+    {
+     "find": "retrograde",
+     "answer": "retrograd",
+     "accept": [
+      "retrograde",
+      "retrograder Transport"
+     ],
+     "x": 81.86,
+     "y": 45.5,
+     "w": 15.9,
+     "h": 6.41
+    }
+   ],
+   "explanation": "Kinesin läuft zum Plus-Ende (anterograd, Richtung Axonterminale), Dynein zum Minus-Ende (retrograd, Richtung Soma). Beide hydrolysieren ATP; Adaptorproteine koppeln den Vesikel an den Motor.",
+   "image": "assets/figures/vl02-motoren-label.webp",
+   "iw": 682,
+   "ih": 586
+  },
+  {
+   "id": "vl02-cargo",
+   "type": "open",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folie 32",
+   "stem": "Nennen Sie je 2 typische Cargos des schnellen anterograden und des schnellen retrograden axonalen Transports sowie den jeweils zuständigen Motor.",
+   "points": [
+    "anterograd: Vesikel mit Enzymen der Transmittersynthese / Peptid-Vorstufen",
+    "anterograd: Vesikel mit Rezeptoren, Ionenkanälen, Release-/Docking-Proteinen",
+    "anterograd: Mitochondrien (regeneriert, metabolisch aktiv)",
+    "anterograd: Lipide für den Membranumsatz",
+    "Motor anterograd: Kinesin (Plus-End-Motor)",
+    "retrograd: fehlgefaltete/aggregierte Proteine, Membranstücke, Zelltrümmer",
+    "retrograd: Moleküle der retrograden Kommunikation (NGF)",
+    "retrograd: Toxine, Viren (HIV, Herpes)",
+    "retrograd: degenerierte, inaktive Mitochondrien",
+    "Motor retrograd: Dynein (Minus-End-Motor)"
+   ],
+   "need": 6,
+   "explanation": "Anterograd (Soma → Terminale, Kinesin, 20–40 cm/Tag) wird Nachschub geliefert; retrograd (Terminale → Soma, Dynein, 20–30 cm/Tag) laufen ‚Abfall‘, Signale wie NGF und auch Krankheitserreger."
+  },
+  {
+   "id": "vl02-langsamer-transport",
+   "type": "single",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folie 32",
+   "stem": "Wie werden Neurofilamente, Mikrotubuli-Bausteine und Glykolyse-Enzyme im Axon transportiert?",
+   "options": [
+    {
+     "t": "Langsam anterograd (0,2–0,8 cm/Tag) durch Kinesine im ‚Stop-and-go‘-Modus",
+     "correct": true
+    },
+    {
+     "t": "Schnell anterograd (20–40 cm/Tag) in Vesikeln durch Kinesine",
+     "correct": false
+    },
+    {
+     "t": "Schnell retrograd (20–30 cm/Tag) durch Dynein",
+     "correct": false
+    },
+    {
+     "t": "Ausschließlich durch Diffusion (ca. 0,1 cm/Tag)",
+     "correct": false
+    }
+   ],
+   "explanation": "Zytosolische Proteine (z. B. Glykolyse-Enzyme) und Zytoskelett-Proteine reisen im langsamen anterograden Transport; Kinesine bewegen sie mit Pausen (stop & go)."
+  },
+  {
+   "id": "vl02-transport-richtung",
+   "type": "combo",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folien 30–32",
+   "stem": "Welche Aussagen zum schnellen axonalen Transport treffen zu?",
+   "statements": [
+    {
+     "t": "Kinesine sind Plus-End-Motoren und vermitteln den anterograden Transport vom Soma zur Axonterminale.",
+     "correct": true
+    },
+    {
+     "t": "Dynein läuft zum Minus-Ende der Mikrotubuli und vermittelt den retrograden Transport zum Soma.",
+     "correct": true
+    },
+    {
+     "t": "Mitochondrien werden ausschließlich anterograd transportiert.",
+     "correct": false
+    },
+    {
+     "t": "Herpesviren und Toxine können den retrograden Transport nutzen, um zum Soma zu gelangen.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "AD"
+   ],
+   "explanation": "Mitochondrien wandern in beide Richtungen: regenerierte, aktive anterograd; degenerierte, inaktive retrograd."
+  },
+  {
+   "id": "vl02-motor-mechanismus",
+   "type": "single",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folie 30",
+   "stem": "Wie wandeln Kinesin und Dynein chemische Energie in gerichtete Bewegung um?",
+   "options": [
+    {
+     "t": "ATP-Hydrolyse spannt über ein instabiles phosphoryliertes Zwischenprodukt den ‚neck linker‘, der beim Zurückschnellen die Motordomäne nach vorn schwingt.",
+     "correct": true
+    },
+    {
+     "t": "GTP-Hydrolyse löst eine Konformationsänderung aus, durch die sich der Motor ringförmig um den Mikrotubulus zusammenzieht.",
+     "correct": false
+    },
+    {
+     "t": "Der Motor wird durch die Polymerisation des Mikrotubulus an dessen Plus-Ende passiv vorwärtsgeschoben, ohne selbst Energie zu verbrauchen.",
+     "correct": false
+    },
+    {
+     "t": "Der Vesikel bindet an die Motordomäne, während die Stieldomäne über Ca²⁺-abhängige Bindungen am Mikrotubulus entlangläuft.",
+     "correct": false
+    }
+   ],
+   "explanation": "Gekoppelte Reaktion: ATP-Hydrolyse (ATPase-Aktivität der Motordomäne) → Spannung im ‚neck linker‘ → Schritt der Motordomäne (16 nm) – so das Modell der Folie. Lehrbuch: Es entsteht kein phosphoryliertes Protein-Intermediat; bei Kinesin löst die ATP-Bindung am vorderen Kopf das Andocken des neck linker aus, Dynein hat statt neck linker einen AAA⁺-Ring mit Linker-Powerstroke. GTP-abhängige Konstriktion ist das Prinzip von Dynamin beim Vesikel-Recycling."
+  },
+  {
+   "id": "vl02-dendritischer-transport",
+   "type": "multi",
+   "topic": "Axonaler & dendritischer Transport",
+   "source": "slides",
+   "ref": "VL02 · Folie 33",
+   "stem": "Welche Aussagen zum dendritischen Transport treffen zu?",
+   "options": [
+    {
+     "t": "Er liefert Moleküle der postsynaptischen Dichte sowie NMDA- und AMPA-Rezeptoren.",
+     "correct": true
+    },
+    {
+     "t": "Auch RNA-Granula mit spezifischen mRNAs werden transportiert (synaptische Plastizität, Spine-Wachstum).",
+     "correct": true
+    },
+    {
+     "t": "Er wird von Kinesinen der KIF-Familie vermittelt, z. B. KIF17 für NMDAR2B-haltige Vesikel.",
+     "correct": true
+    },
+    {
+     "t": "In Dendriten sind alle Mikrotubuli gleich orientiert wie im Axon (Plus-Ende nach distal).",
+     "correct": false
+    },
+    {
+     "t": "Dendriten erhalten ihre Proteine ausschließlich durch Diffusion aus dem Soma.",
+     "correct": false
+    }
+   ],
+   "explanation": "Dendritische Cargos: PSD-Proteine, Rezeptoren, Ionenkanäle/Transporter und mRNA-Granula (lokale Translation). In Dendriten sind die Mikrotubuli gemischt orientiert, im Axon einheitlich (Plus-Ende distal)."
+  },
+  {
+   "id": "vl02-synaptischer-spalt",
+   "type": "single",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 36",
+   "stem": "Wie breit ist der synaptische Spalt einer chemischen Synapse im elektronenmikroskopischen Bild?",
+   "options": [
+    {
+     "t": "10–20 nm",
+     "correct": true
+    },
+    {
+     "t": "1–2 nm",
+     "correct": false
+    },
+    {
+     "t": "100–200 nm",
+     "correct": false
+    },
+    {
+     "t": "1–2 µm",
+     "correct": false
+    }
+   ],
+   "explanation": "Im EM erscheint der Spalt (10–20 nm) als heller Raum zwischen prä- und postsynaptischer Dichte; die Präsynapsen sind mit runden, hellen Vesikeln gefüllt."
+  },
+  {
+   "id": "vl02-dichten",
+   "type": "multi",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folien 37, 39",
+   "stem": "Welche Aussagen zur prä- und postsynaptischen Dichte treffen zu?",
+   "options": [
+    {
+     "t": "Die präsynaptische Dichte entspricht der aktiven Zone mit Ca²⁺-Kanälen und Docking-Proteinen.",
+     "correct": true
+    },
+    {
+     "t": "In der PSD sind Transmitterrezeptoren stark angereichert (ca. 1000×).",
+     "correct": true
+    },
+    {
+     "t": "Die PSD enthält PSD-Proteine und Aktinfilamente als Gerüst.",
+     "correct": true
+    },
+    {
+     "t": "Der Begriff ‚Dichte‘ stammt aus der Elektronenmikroskopie (Kontrastierung mit Schwermetallen).",
+     "correct": true
+    },
+    {
+     "t": "Die PSD enthält vor allem spannungsgesteuerte Ca²⁺-Kanäle und Docking-Proteine.",
+     "correct": false
+    },
+    {
+     "t": "Die aktive Zone enthält die ionotropen Glutamatrezeptoren der Synapse.",
+     "correct": false
+    }
+   ],
+   "explanation": "Aktive Zone (präsynaptisch): Ca²⁺-Kanäle + Docking-Proteine. PSD (postsynaptisch): Rezeptoren (1000×), Na⁺-Kanäle (20×), PSD-Proteine, Aktin. ‚Dichte‘ = elektronendicht nach Schwermetallkontrastierung."
+  },
+  {
+   "id": "vl02-psd-label",
+   "type": "label",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 38",
+   "stem": "Beschriften Sie die Proteine der postsynaptischen Dichte einer glutamatergen Synapse.",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 38,
+    "crop": [
+     55,
+     112,
+     705,
+     437
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      146,
+      119,
+      234,
+      134
+     ],
+     "answer": "Densin-180",
+     "accept": [
+      "densin",
+      "densin 180"
+     ],
+     "x": 13.62,
+     "y": 1.38,
+     "w": 14.31,
+     "h": 6.15
+    },
+    {
+     "box": [
+      242,
+      136,
+      299,
+      164
+     ],
+     "answer": "AMPA-Rezeptor",
+     "accept": [
+      "AMPA receptor",
+      "AMPA",
+      "AMPA-R",
+      "AMPAR"
+     ],
+     "x": 28.38,
+     "y": 6.62,
+     "w": 9.54,
+     "h": 10.15
+    },
+    {
+     "box": [
+      449,
+      136,
+      510,
+      164
+     ],
+     "answer": "NMDA-Rezeptor",
+     "accept": [
+      "NMDA receptor",
+      "NMDA",
+      "NMDA-R",
+      "NMDAR"
+     ],
+     "x": 60.23,
+     "y": 6.62,
+     "w": 10.15,
+     "h": 10.15
+    },
+    {
+     "box": [
+      579,
+      166,
+      628,
+      182
+     ],
+     "answer": "mGluR (metabotroper Glutamatrezeptor)",
+     "accept": [
+      "mGluR",
+      "metabotroper Glutamatrezeptor",
+      "mGlu-Rezeptor"
+     ],
+     "x": 80.23,
+     "y": 15.85,
+     "w": 8.31,
+     "h": 6.46
+    },
+    {
+     "box": [
+      256,
+      292,
+      296,
+      311
+     ],
+     "answer": "GRIP",
+     "accept": [],
+     "x": 30.54,
+     "y": 54.62,
+     "w": 6.92,
+     "h": 7.38
+    },
+    {
+     "box": [
+      422,
+      292,
+      484,
+      328
+     ],
+     "answer": "PSD-95 (Familie)",
+     "accept": [
+      "PSD-95",
+      "PSD95",
+      "PSD-95 family"
+     ],
+     "x": 56.08,
+     "y": 54.62,
+     "w": 10.31,
+     "h": 12.62
+    },
+    {
+     "find": "Homer",
+     "answer": "Homer",
+     "accept": [],
+     "x": 81.63,
+     "y": 48.98,
+     "w": 7.56,
+     "h": 7.54
+    },
+    {
+     "box": [
+      541,
+      319,
+      574,
+      338
+     ],
+     "answer": "NOS (NO-Synthase)",
+     "accept": [
+      "NOS",
+      "NO-Synthase",
+      "nNOS"
+     ],
+     "x": 74.38,
+     "y": 62.92,
+     "w": 5.85,
+     "h": 7.38
+    },
+    {
+     "box": [
+      379,
+      399,
+      459,
+      418
+     ],
+     "answer": "CaM-Kinase",
+     "accept": [
+      "CaMKII",
+      "CaM kinase",
+      "Calmodulin-Kinase",
+      "CaMK"
+     ],
+     "x": 49.46,
+     "y": 87.54,
+     "w": 13.08,
+     "h": 7.38
+    }
+   ],
+   "explanation": "Die Rezeptoren (AMPA, NMDA, mGluR) werden über Gerüstproteine verankert: GRIP am AMPA-Rezeptor, PSD-95 am NMDA-Rezeptor (koppelt z. B. NOS), Homer am mGluR. Densin-180 = transsynaptisches Signalmolekül (Synapsenbildung); Aktin stabilisiert den Komplex.",
+   "image": "assets/figures/vl02-psd-label.webp",
+   "iw": 1300,
+   "ih": 650
+  },
+  {
+   "id": "vl02-psd-geruest",
+   "type": "single",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 38",
+   "stem": "Welche Funktion haben GRIP, PSD-95 und Homer in der postsynaptischen Dichte?",
+   "options": [
+    {
+     "t": "Quervernetzung und Clusterbildung über Protein-Protein-Interaktionsdomänen (Gerüstfunktion)",
+     "correct": true
+    },
+    {
+     "t": "Transsynaptische Signalübertragung zur Einleitung der Synapsenbildung",
+     "correct": false
+    },
+    {
+     "t": "Ca²⁺-Sensor für die Fusion der synaptischen Vesikel",
+     "correct": false
+    },
+    {
+     "t": "Bildung der Ionenpore der ionotropen Glutamatrezeptoren",
+     "correct": false
+    }
+   ],
+   "explanation": "GRIP, PSD-95 und Homer sind Gerüstproteine (cross-linking, clustering). Transsynaptisches Signalmolekül ist Densin-180; Ca²⁺-Sensor der Fusion ist Synaptotagmin (präsynaptisch)."
+  },
+  {
+   "id": "vl02-docking-label",
+   "type": "label",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 43",
+   "stem": "Beschriften Sie die Proteine des Docking-Komplexes (‚high-energy configuration‘).",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 43,
+    "crop": [
+     25,
+     137,
+     447,
+     452
+    ],
+    "hide": [
+     [
+      105,
+      376,
+      148,
+      390
+     ],
+     [
+      252,
+      279,
+      278,
+      291
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      126,
+      169,
+      204,
+      186
+     ],
+     "answer": "Synaptotagmin",
+     "accept": [
+      "Synaptotagmin 1"
+     ],
+     "x": 23.34,
+     "y": 9.37,
+     "w": 19.67,
+     "h": 6.98
+    },
+    {
+     "box": [
+      216,
+      152,
+      301,
+      181
+     ],
+     "answer": "Synaptobrevin (v-SNARE)",
+     "accept": [
+      "Synaptobrevin",
+      "Synaptobrevin-2",
+      "VAMP",
+      "VAMP2",
+      "v-SNARE"
+     ],
+     "x": 44.67,
+     "y": 3.97,
+     "w": 21.33,
+     "h": 10.79
+    },
+    {
+     "box": [
+      167,
+      192,
+      244,
+      208
+     ],
+     "answer": "Synaptophysin",
+     "accept": [],
+     "x": 33.06,
+     "y": 16.67,
+     "w": 19.43,
+     "h": 6.67
+    },
+    {
+     "box": [
+      231,
+      339,
+      278,
+      354
+     ],
+     "answer": "SNAP-25",
+     "accept": [
+      "SNAP25",
+      "SNAP 25"
+     ],
+     "x": 48.22,
+     "y": 63.33,
+     "w": 12.32,
+     "h": 6.35
+    },
+    {
+     "box": [
+      276,
+      369,
+      329,
+      398
+     ],
+     "answer": "Syntaxin (t-SNARE)",
+     "accept": [
+      "Syntaxin",
+      "t-SNARE"
+     ],
+     "x": 58.89,
+     "y": 72.86,
+     "w": 13.74,
+     "h": 10.79
+    },
+    {
+     "box": [
+      42,
+      372,
+      118,
+      402
+     ],
+     "answer": "N-Typ-Ca²⁺-Kanal",
+     "accept": [
+      "N-type Ca channel",
+      "Ca-Kanal",
+      "Calciumkanal",
+      "Ca2+-Kanal",
+      "spannungsgesteuerter Ca-Kanal"
+     ],
+     "x": 3.44,
+     "y": 73.81,
+     "w": 19.19,
+     "h": 11.11
+    },
+    {
+     "box": [
+      106,
+      414,
+      234,
+      444
+     ],
+     "answer": "Neurexin (α-Latrotoxin-Rezeptor)",
+     "accept": [
+      "Neurexin",
+      "Neurexine",
+      "alpha-Latrotoxin-Rezeptor"
+     ],
+     "x": 18.6,
+     "y": 87.14,
+     "w": 31.52,
+     "h": 11.11
+    },
+    {
+     "box": [
+      311,
+      274,
+      333,
+      291
+     ],
+     "answer": "NSF",
+     "accept": [
+      "N-ethylmaleimide-sensitive factor"
+     ],
+     "x": 67.18,
+     "y": 42.7,
+     "w": 6.4,
+     "h": 6.98
+    }
+   ],
+   "explanation": "v-SNARE Synaptobrevin (Vesikel) bildet mit den t-SNAREs Syntaxin und SNAP-25 (Plasmamembran) den Kernkomplex; NSF (+ SNAPs) dient dem Priming. Synaptotagmin ist der Ca²⁺-Sensor, Synaptophysin bildet die Pore; der N-Typ-Ca²⁺-Kanal liegt direkt daneben.",
+   "image": "assets/figures/vl02-docking-label.webp",
+   "iw": 844,
+   "ih": 630
+  },
+  {
+   "id": "vl02-vesikelzyklus",
+   "type": "order",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folien 40–42, 45",
+   "stem": "Bringen Sie die Schritte des synaptischen Vesikelzyklus in die richtige Reihenfolge.",
+   "items": [
+    "Verankerung am Zytoskelett (Synapsine, Aktin)",
+    "Rekrutierung zur aktiven Zone (Rab3-GTP)",
+    "Docking (Synaptobrevin, Syntaxin, SNAPs, Neurexin)",
+    "Priming (NSF, ATP)",
+    "Ca²⁺-getriggerte Fusion (Synaptotagmin, Synaptophysin-Pore)",
+    "Recycling (Dynamin-GTP, Clathrin)"
+   ],
+   "explanation": "Anchored → docked → primed → exocytosed (Folie 42). Rekrutierung, Docking und Priming laufen langsam bei niedrigem Ca²⁺ ab; nur die Fusion braucht lokal > 100 µM Ca²⁺ und ist schnell."
+  },
+  {
+   "id": "vl02-docking-proteine",
+   "type": "combo",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 40",
+   "stem": "Welche Zuordnungen präsynaptischer Proteine zu ihrer Funktion treffen zu?",
+   "statements": [
+    {
+     "t": "Synapsine – Verankerung der Vesikel am Aktin-Zytoskelett",
+     "correct": true
+    },
+    {
+     "t": "Rab3-GTP – Rekrutierung der Vesikel",
+     "correct": true
+    },
+    {
+     "t": "NSF – Ca²⁺-Sensor der Vesikelfusion",
+     "correct": false
+    },
+    {
+     "t": "Dynamin – GTP-abhängige Abschnürung beim Vesikel-Recycling",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "ACD"
+   ],
+   "explanation": "NSF (mit ATP) ist für das Priming zuständig; Ca²⁺-Sensor ist Synaptotagmin."
+  },
+  {
+   "id": "vl02-synaptotagmin",
+   "type": "open",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folien 40, 42–43",
+   "stem": "Beschreiben Sie in Stichworten die Rolle von Synaptotagmin bei der Transmitterfreisetzung und wie die Vesikelfusion beendet wird.",
+   "points": [
+    "Synaptotagmin sitzt in der Vesikelmembran und ist Teil des Docking-Komplexes (‚high-energy configuration‘)",
+    "AP → Öffnung der Ca²⁺-Kanäle der aktiven Zone → lokaler Ca²⁺-Anstieg (> 100 µM)",
+    "Synaptotagmin wirkt als Ca²⁺-Sensor: Ca²⁺-Bindung → Konformationsänderung",
+    "Zieht die Fusionspore (aus Synaptophysinen) auf → Exozytose des Transmitters",
+    "Beendigung durch schnelle Ca²⁺-Pufferung (z. B. Calbindin)"
+   ],
+   "explanation": "Synaptotagmin ist das Schlüsselmolekül der Ca²⁺-getriggerten Fusion. Weil der Komplex vorgespannt ist und die Ca²⁺-Kanäle direkt danebenliegen, dauert die Freisetzung nur 150–200 µs. Synaptophysin als Porenbildner ist das Modell der Vorlesung; nach heutigem Lehrbuchstand öffnet Ca²⁺-gebundenes Synaptotagmin (C2-Domänen) die Fusionspore über SNARE-Komplex und Membranlipide."
+  },
+  {
+   "id": "vl02-release-schnell",
+   "type": "multi",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 42",
+   "stem": "Transmitterfreisetzung ist schnell. Welche Aussagen dazu treffen zu?",
+   "options": [
+    {
+     "t": "Die Latenz zwischen Ca²⁺-Einstrom und Freisetzung beträgt nur ca. 150–200 µs.",
+     "correct": true
+    },
+    {
+     "t": "Vesikel und Membran sind bereits ‚vormontiert‘ (high-energy configuration).",
+     "correct": true
+    },
+    {
+     "t": "Ca²⁺-Kanäle und Freisetzungsstellen liegen eng beieinander.",
+     "correct": true
+    },
+    {
+     "t": "Für die Fusion genügt die Ruhe-Ca²⁺-Konzentration von ca. 0,1 µM.",
+     "correct": false
+    },
+    {
+     "t": "Rekrutierung, Docking und Priming laufen erst nach dem Ca²⁺-Einstrom ab.",
+     "correct": false
+    }
+   ],
+   "explanation": "Die langsamen Schritte (Rekrutierung, Docking, Priming unter ATP-Verbrauch) laufen schon vorher bei niedrigem Ca²⁺ (0,3–0,5 µM) ab; nur die Fusion braucht lokal > 100 µM Ca²⁺."
+  },
+  {
+   "id": "vl02-kiss-and-run",
+   "type": "single",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 44",
+   "stem": "Was versteht man unter ‚kiss & run‘ bei der Vesikelfusion?",
+   "options": [
+    {
+     "t": "Der Vesikel öffnet nur kurz eine Fusionspore, gibt Transmitter ab und löst sich wieder, ohne vollständig zu verschmelzen.",
+     "correct": true
+    },
+    {
+     "t": "Der Vesikel verschmilzt vollständig mit der Plasmamembran und wird später über Clathrin-Endozytose zurückgewonnen.",
+     "correct": false
+    },
+    {
+     "t": "Zwei Vesikel verschmelzen im Zytosol miteinander, bevor sie gemeinsam an der aktiven Zone andocken.",
+     "correct": false
+    },
+    {
+     "t": "Der Vesikel wird nach dem Andocken ohne Fusion per Dynein wieder zum Soma zurücktransportiert.",
+     "correct": false
+    }
+   ],
+   "explanation": "Kiss & run = Der Vesikel öffnet nur kurz eine Fusionspore, gibt Transmitter ab und löst sich wieder, ohne in die Membran zu kollabieren (Folie 44: Ω-förmige Fusionsprofile, „Ω-figure exocytosis“). Gegensatz: vollständige Fusion – der Vesikel verschmilzt ganz mit der Plasmamembran und wird anschließend Clathrin/Dynamin-vermittelt per Endozytose zurückgewonnen (Folie 45)."
+  },
+  {
+   "id": "vl02-vesikel-recycling",
+   "type": "combo",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 45",
+   "stem": "Welche Aussagen zum Recycling synaptischer Vesikel treffen zu?",
+   "statements": [
+    {
+     "t": "Dynamin hydrolysiert GTP; die Konformationsänderung schnürt den Vesikel ab.",
+     "correct": true
+    },
+    {
+     "t": "Leere Vesikel werden mit Clathrin umhüllt (coated vesicle).",
+     "correct": true
+    },
+    {
+     "t": "Im Schema der Vorlesung werden die Clathrin-umhüllten Vesikel über frühe Endosomen recycelt, bevor sie wieder befüllt werden.",
+     "correct": true
+    },
+    {
+     "t": "Das Wiederbefüllen mit Transmitter erfolgt durch Diffusion ohne Energieaufwand.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "AC",
+    "BC"
+   ],
+   "explanation": "Folie 45: Dynamin (GTP) → Abschnürung; Clathrin-Hülle → frühes Endosom → neuer Vesikel. Die Befüllung läuft gegen den Gradienten über einen H⁺-Gradienten (sekundär aktiv)."
+  },
+  {
+   "id": "vl02-quantale-freisetzung",
+   "type": "single",
+   "topic": "Chemische Synapse & Transmitterfreisetzung",
+   "source": "slides",
+   "ref": "VL02 · Folie 46",
+   "stem": "Was zeigten die Ableitungen von Miniatur-Endplattenpotentialen (mEPPs) an Froschmuskeln bei sehr niedriger Ca²⁺-Konzentration?",
+   "options": [
+    {
+     "t": "Die mEPPs haben eine feste Einheitsgröße (~1 mV) oder ein Vielfaches davon – Transmitter wird in Quanten (je ein Vesikel) freigesetzt.",
+     "correct": true
+    },
+    {
+     "t": "Die mEPP-Amplitude steigt kontinuierlich mit der Ca²⁺-Konzentration an, ohne erkennbare Stufen oder Einheitsgrößen.",
+     "correct": false
+    },
+    {
+     "t": "Die mEPPs entstehen durch spontane Aktionspotentiale der Muskelfaser selbst, unabhängig von der Nervenendigung.",
+     "correct": false
+    },
+    {
+     "t": "Jedes mEPP entspricht der Öffnung eines einzelnen postsynaptischen Ionenkanals durch ein Transmittermolekül.",
+     "correct": false
+    }
+   ],
+   "explanation": "Niedriges Ca²⁺ senkt die Fusionswahrscheinlichkeit, sodass einzelne Freisetzungsereignisse sichtbar werden. Diskrete Stufen = ‚Quanten‘ – passend zu den im EM entdeckten Vesikeln."
+  },
+  {
+   "id": "vl02-ca-funktionen",
+   "type": "open",
+   "topic": "Ca²⁺-Homöostase",
+   "source": "slides",
+   "ref": "VL02 · Folie 48",
+   "stem": "Nennen Sie 4 zelluläre Prozesse in Neuronen, die durch einen Anstieg der zytosolischen Ca²⁺-Konzentration ausgelöst bzw. gesteuert werden.",
+   "points": [
+    "Transmitterfreisetzung an der chemischen Synapse",
+    "Öffnung Ca²⁺-aktivierter Ionenkanäle (Cl⁻(Ca), K⁺(Ca))",
+    "Ca²⁺-induzierte Ca²⁺-Freisetzung über IP₃- und Ryanodin-Rezeptoren",
+    "Aktivierung von Enzymen (Ca²⁺-Calmodulin, Ca²⁺-abhängige Proteinkinasen)",
+    "Aktivierung von Transkriptionsfaktoren → Genexpression",
+    "Synaptische Plastizität (LTP)",
+    "Neurotoxizität bei zu hohem [Ca²⁺]i (Glutamat → NMDA-Rezeptor)"
+   ],
+   "need": 4,
+   "explanation": "Ca²⁺ ist ein universeller Second Messenger – deshalb muss [Ca²⁺]i räumlich und zeitlich präzise kontrolliert werden; Dysregulation führt zu Pathologien."
+  },
+  {
+   "id": "vl02-ca-konzentration",
+   "type": "single",
+   "topic": "Ca²⁺-Homöostase",
+   "source": "slides",
+   "ref": "VL02 · Folien 42, 49",
+   "stem": "Welche Angabe zur freien Ca²⁺-Konzentration in Neuronen trifft zu?",
+   "options": [
+    {
+     "t": "Intrazellulär ca. 0,1 µM, extrazellulär ca. 1,5 mM; für die Vesikelfusion lokal > 100 µM",
+     "correct": true
+    },
+    {
+     "t": "Intrazellulär ca. 1,5 mM, extrazellulär ca. 0,1 µM; für die Vesikelfusion lokal > 100 µM",
+     "correct": false
+    },
+    {
+     "t": "Intrazellulär ca. 0,1 mM, extrazellulär ca. 140 mM; für die Vesikelfusion lokal > 1 mM",
+     "correct": false
+    },
+    {
+     "t": "Intrazellulär ca. 10 µM, extrazellulär ca. 10 µM; für die Vesikelfusion lokal ca. 0,1 µM",
+     "correct": false
+    }
+   ],
+   "explanation": "Freies Ca²⁺ ist intrazellulär extrem niedrig (0,0001 mM = 0,1 µM) – ein ~10.000-facher Gradient zu 1,5 mM außen. Lokal kann die Arbeitskonzentration auf das ~1000-Fache steigen."
+  },
+  {
+   "id": "vl02-ca-kompartimente",
+   "type": "open",
+   "topic": "Ca²⁺-Homöostase",
+   "source": "slides",
+   "ref": "VL02 · Folie 50",
+   "stem": "Nennen Sie die 3 Ca²⁺-Kompartimente im Nervengewebe und erklären Sie, warum Ca²⁺ vor allem lokal (in Mikrodomänen) wirkt.",
+   "points": [
+    "Extrazellulärraum",
+    "Intrazellulär/zytosolisch",
+    "Intrazelluläre Speicher (v. a. ER)",
+    "Sehr geringe Diffusionsreichweite (0,1–0,5 µm bei 20–30 µm Neuronendurchmesser)",
+    "Sehr schnelle Pufferung durch Ca²⁺-bindende Proteine (~30 µs)"
+   ],
+   "explanation": "Weil Ca²⁺ kaum diffundiert und sofort gepuffert wird, bleibt ein Anstieg auf Mikrodomänen (z. B. an der aktiven Zone) begrenzt und wirkt dort lokal."
+  },
+  {
+   "id": "vl02-ca-quellen-label",
+   "type": "label",
+   "topic": "Ca²⁺-Homöostase",
+   "source": "slides",
+   "ref": "VL02 · Folie 51",
+   "stem": "Wie gelangt Ca²⁺ ins Zytoplasma? Beschriften Sie die Ca²⁺-Quellen.",
+   "src": {
+    "pdf": "VL02Neurons_14Okt26.pdf",
+    "page": 51,
+    "crop": [
+     40,
+     65,
+     700,
+     535
+    ],
+    "hide": [
+     [
+      274,
+      317,
+      316,
+      339
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "find": "CNG Ca 2+ channels",
+     "answer": "CNG-Kanäle (zyklisch-Nukleotid-gesteuert)",
+     "accept": [
+      "CNG",
+      "CNG-Kanal",
+      "CNG Ca2+ channels",
+      "zyklisch nukleotidgesteuerte Kanäle"
+     ],
+     "x": 5.64,
+     "y": 13.26,
+     "w": 9.78,
+     "h": 8.47
+    },
+    {
+     "find": "voltage gated Ca 2+ channels",
+     "answer": "Spannungsgesteuerte Ca²⁺-Kanäle",
+     "accept": [
+      "voltage gated Ca2+ channels",
+      "VGCC",
+      "spannungsabhängige Ca-Kanäle",
+      "Cav"
+     ],
+     "x": 17.61,
+     "y": 4.19,
+     "w": 13.32,
+     "h": 8.47
+    },
+    {
+     "find": "metabotropic-receptors",
+     "answer": "Metabotrope Rezeptoren (GPCR)",
+     "accept": [
+      "metabotropic receptors",
+      "metabotrope Rezeptoren",
+      "GPCR",
+      "G-Protein-gekoppelte Rezeptoren"
+     ],
+     "x": 36.87,
+     "y": 1.14,
+     "w": 21.2,
+     "h": 4.97
+    },
+    {
+     "find": "NMDA- receptors",
+     "answer": "NMDA-Rezeptoren",
+     "accept": [
+      "NMDA receptors",
+      "NMDA",
+      "NMDA-R"
+     ],
+     "x": 70.48,
+     "y": 7.71,
+     "w": 9.04,
+     "h": 8.47
+    },
+    {
+     "find": "IP 3 -R",
+     "answer": "IP₃-Rezeptor",
+     "accept": [
+      "IP3-R",
+      "IP3R",
+      "IP3-Rezeptor",
+      "Inositoltrisphosphat-Rezeptor"
+     ],
+     "x": 46.96,
+     "y": 32.04,
+     "w": 5.47,
+     "h": 5.62
+    },
+    {
+     "find": "Rya-R",
+     "nth": 1,
+     "answer": "Ryanodin-Rezeptor",
+     "accept": [
+      "Rya-R",
+      "RyR",
+      "Ryanodinrezeptor"
+     ],
+     "x": 65.09,
+     "y": 54.41,
+     "w": 6.5,
+     "h": 4.97
+    },
+    {
+     "find": "ER",
+     "answer": "ER (endoplasmatisches Retikulum)",
+     "accept": [
+      "ER",
+      "endoplasmatisches Retikulum",
+      "glattes ER"
+     ],
+     "x": 52.72,
+     "y": 46.61,
+     "w": 3.86,
+     "h": 5.46
+    },
+    {
+     "find": "DHP- channel",
+     "answer": "DHP-Rezeptor (L-Typ-Ca²⁺-Kanal, Muskel)",
+     "accept": [
+      "DHP-channel",
+      "DHP-Kanal",
+      "Dihydropyridin-Rezeptor",
+      "DHPR",
+      "L-Typ Ca-Kanal"
+     ],
+     "x": 25.5,
+     "y": 82.39,
+     "w": 7.72,
+     "h": 8.16
+    }
+   ],
+   "explanation": "Einstrom von außen: spannungsgesteuerte Ca²⁺-Kanäle, NMDA-Rezeptoren, CNG-Kanäle. Freisetzung aus Speichern: metabotrope Rezeptoren → IP₃ → IP₃-Rezeptor am ER; Ca²⁺-induzierte Ca²⁺-Freisetzung über Ryanodin-Rezeptoren. Im Muskel koppelt der DHP-Rezeptor an den Ryanodin-Rezeptor des SR.",
+   "image": "assets/figures/vl02-ca-quellen-label.webp",
+   "iw": 1320,
+   "ih": 940
+  },
+  {
+   "id": "vl02-ca-entfernung",
+   "type": "combo",
+   "topic": "Ca²⁺-Homöostase",
+   "source": "slides",
+   "ref": "VL02 · Folie 52",
+   "stem": "Welche Aussagen zur Ca²⁺-Pufferung und -Entfernung treffen zu?",
+   "statements": [
+    {
+     "t": "Der Na⁺/Ca²⁺-Austauscher der Plasmamembran hat eine hohe Kapazität, aber eine niedrige Affinität.",
+     "correct": true
+    },
+    {
+     "t": "Ca²⁺-ATPasen (PMCA, SERCA) haben eine niedrige Kapazität, aber eine hohe Affinität.",
+     "correct": true
+    },
+    {
+     "t": "Calsequestrin ist der wichtigste zytosolische Ca²⁺-Puffer.",
+     "correct": false
+    },
+    {
+     "t": "Parvalbumin und Calbindin sind zytosolische Ca²⁺-bindende Proteine.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "AD"
+   ],
+   "explanation": "Calsequestrin puffert Ca²⁺ im Lumen des (S)ER. Austauscher (NCX, mitochondrialer H⁺/Ca²⁺-Austausch) = viel, aber grob; Pumpen (PMCA, SERCA, MMCA) = wenig, aber bis zu sehr niedrigen Konzentrationen."
+  },
+  {
+   "id": "vl02-ca-nicht-quelle",
+   "type": "single",
+   "topic": "Ca²⁺-Homöostase",
+   "source": "slides",
+   "ref": "VL02 · Folien 51–52",
+   "stem": "Welcher Mechanismus führt <b>nicht</b> zu einem Anstieg der zytosolischen Ca²⁺-Konzentration?",
+   "options": [
+    {
+     "t": "Aktivität der Plasmamembran-Ca²⁺-ATPase (PMCA)",
+     "correct": true
+    },
+    {
+     "t": "Öffnung von NMDA-Rezeptoren",
+     "correct": false
+    },
+    {
+     "t": "Aktivierung von IP₃-Rezeptoren am ER",
+     "correct": false
+    },
+    {
+     "t": "Öffnung spannungsgesteuerter Ca²⁺-Kanäle",
+     "correct": false
+    }
+   ],
+   "explanation": "Die PMCA pumpt Ca²⁺ unter ATP-Verbrauch aus der Zelle (niedrige Kapazität, hohe Affinität) – sie senkt [Ca²⁺]i."
+  }
+ ]
+}

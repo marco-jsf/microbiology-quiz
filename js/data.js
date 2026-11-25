@@ -1,20 +1,26 @@
-// Chapter registry. Add a new chapter by dropping its JSON in /data and
-// listing the filename here — no other code changes needed.
+// Chapter registry (one JSON per lecture, see data/schema.md).
+// Add a chapter by dropping its JSON in /data and listing the filename here.
 export const CHAPTER_FILES = [
-  'bacteriology-general.json',
-  'bacteriology-specific.json',
-  'virology.json',
-  'mycology.json',
-  'parasitology.json',
+  'vl01-neuroglia.json',
+  'vl02-neurone.json',
+  'vl03-energetik.json',
+  'vl04-stammzellen.json',
+  'vl05-entwicklung.json',
+  'vl07-neurotransmitter.json',
+  'vl08-gaba.json',
+  'vl09-glutamat.json',
+  'vl10-dopamin.json',
+  'vl11-neuromodulatoren.json',
+  'x-weitere-themen.json',
 ];
 
 export async function loadChapters() {
-  const chapters = [];
-  for (const file of CHAPTER_FILES) {
-    const res = await fetch('data/' + file);
-    if (!res.ok) throw new Error('Failed to load data/' + file + ' (' + res.status + ')');
-    const ch = await res.json();
-    chapters.push(ch);
-  }
+  const results = await Promise.all(CHAPTER_FILES.map(async file => {
+    const res = await fetch('data/' + file, { cache: 'no-cache' });
+    if (!res.ok) { console.warn('Kapitel fehlt: data/' + file + ' (' + res.status + ')'); return null; }
+    return res.json();
+  }));
+  const chapters = results.filter(Boolean);
+  if (!chapters.length) throw new Error('Keine Kapitel gefunden (data/*.json).');
   return chapters;
 }
