@@ -65,7 +65,7 @@ Münzen gibt es für (teilweise) richtige Antworten; im Garten-Tab werden sie au
 - **Seltene Farbvarianten** gibt es nur aus Eiern: je Art drei echte Farbformen (Mutationen wie Lutino
   oder Leuzismus, Jugendkleider, bei Gattungen auch nahe Verwandte), definiert in `js/garden-variants.js`
   als Farbtausch der Sprite-Palette. Spätestens jedes 8. Ei bringt eine Variante. Der Shop zeigt
-  im **Vogelbuch** (3. Tab) jede Art mit ihren drei Varianten. Alte Fantasiefarben (Gold, Weiß,
+  im **Vogelbuch** (3. Tab) jede Art mit ihren drei Varianten (Namen erst, wenn sie geschlüpft sind). Alte Fantasiefarben (Gold, Weiß,
   Mitternacht, Rosé, Mint) aus früheren Spielständen werden beim Laden in eine echte Variante umgewandelt.
 - **Deko**: Gartenobjekte (manche besuchen die Vögel) und Effekte; im Shop ein-/ausblendbar.
 - **Neu anfangen** (ganz unten im Vogelbuch, mit Rückfrage): löscht Vögel, Eier, Deko und das Vogelbuch,

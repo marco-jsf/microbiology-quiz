@@ -240,7 +240,8 @@ function linkToTab(id, text) {
 // Undiscovered species show as a silhouette with a link to the eggs they hatch
 // from; once one has hatched, its tile turns into a normal "buy more" tile.
 // Every tile lists the species' three colour variants: a swatch per variant
-// (silhouette until one has hatched) and their names below.
+// (silhouette until one has hatched) and their names below — a variant's name
+// stays a „?“ until it has hatched, so what is still out there stays a surprise.
 function buildBirdPanel(el) {
   const note = h('p', 'shop-note');
   const found = h('b'), foundV = h('b');
@@ -266,7 +267,7 @@ function buildBirdPanel(el) {
       const vp = pic(SWATCH_W, SWATCH_H, 'shop-swatch-cv');
       box.append(vp.el);
       sw.append(box);
-      const label = h('span', 'shop-vname', v.name);
+      const label = h('span', 'shop-vname', '?');
       label.style.setProperty('--vc', v.accent);
       if (i) names.append(' · ');
       names.append(label);
@@ -312,8 +313,9 @@ function buildBirdPanel(el) {
           c.box.classList.toggle('is-seen', seen);
           c.box.classList.toggle('is-unseen', !seen);
           c.label.classList.toggle('is-seen', seen);
-          c.box.title = seen ? `${t.de} · ${c.v.name}` : `${c.v.name} – noch nicht entdeckt`;
-          c.box.setAttribute('aria-label', c.box.title);
+          c.label.textContent = seen ? c.v.name : '?';
+          c.box.title = seen ? `${t.de} · ${c.v.name}` : 'Noch nicht entdeckt';
+          c.box.setAttribute('aria-label', seen ? c.box.title : `${t.de}: Farbvariante noch nicht entdeckt`);
           if (seen) {
             want(c.p, 'seen', () => idleClip(t.def.id, c.v.id), (cx, clip, dpr) => drawClip(cx, clip, dpr, { pad: 2 }));
           } else {
