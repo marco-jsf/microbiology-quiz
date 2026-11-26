@@ -46,8 +46,11 @@ Gleiche `options`-Struktur, mehrere `correct:true`. Wertung: Anteil korrekt
 klassifizierter Optionen (Teilpunkte). Wenn das Protokoll die Anzahl nennt,
 in den Stem schreiben: „(4 richtig)“.
 
-### `combo` — Aussagenkombination (Klausur-Klassiker „A und C sind richtig“)
-Aussagen A, B, C, D … werden aufgelistet, gewählt wird **eine** Kombination.
+### `combo` — Aussagen A, B, C … (Klausur-Klassiker „A und C sind richtig“)
+Im Protokoll werden Aussagen A, B, C, D … aufgelistet und eine Kombination gewählt.
+Die App stellt sie als **Mehrfachauswahl**: jede Aussage wird einzeln angekreuzt,
+die Buchstaben bleiben stehen (Erklärungen dürfen sich auf „Aussage C“ beziehen).
+Reihenfolge der Aussagen wird nicht gemischt („Dabei …“ darf sich auf A beziehen).
 ```json
 {
   "type": "combo",
@@ -57,12 +60,13 @@ Aussagen A, B, C, D … werden aufgelistet, gewählt wird **eine** Kombination.
     {"t": "Sie phagozytieren Synapsen.", "correct": true},
     {"t": "Sie sind die einzigen Makrophagen im Gehirn.", "correct": false}
   ],
-  "combos": ["A", "B", "AB", "ABC"]     // optional; Buchstabenfolgen, "" = keine
+  "combos": ["A", "B", "AB", "ABC"]     // optional; Kombinationen wie im Protokoll, "" = keine
 }
 ```
-Die richtige Kombination ergibt sich aus den `correct`-Flags und **muss** in
-`combos` enthalten sein. Ohne `combos` erzeugt die App 4–5 plausible Kombinationen.
-Wertung: alles oder nichts.
+`combos` dokumentiert nur die Antwortmöglichkeiten aus dem Protokoll (wird von
+`validate.py` geprüft, in der App aber nicht angezeigt); die richtige Kombination
+aus den `correct`-Flags muss darin enthalten sein. Mindestens eine Aussage muss
+zutreffen. Wertung: Anteil korrekt beurteilter Aussagen (Teilpunkte).
 
 ### `open` — Offene Frage mit Musterlösung & Selbstbewertung
 Für „Nennen Sie …“, „Beschreiben Sie …“, „Wie werden NMDA-Rezeptoren aktiviert?“,

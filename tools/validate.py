@@ -68,6 +68,7 @@ def check_file(path, seen_ids):
             if len(st) < 3: errs.append(f'{w}: combo braucht ≥ 3 statements')
             letters = 'ABCDEFGH'[:len(st)]
             right = ''.join(l for l, s in zip(letters, st) if s.get('correct'))
+            if not right: errs.append(f'{w}: combo ohne zutreffende Aussage (App fragt als Mehrfachauswahl)')
             if 'combos' in q:
                 cs = q['combos']
                 if right not in cs: errs.append(f'{w}: richtige Kombination "{right}" fehlt in combos {cs}')

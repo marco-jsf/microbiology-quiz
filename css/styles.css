@@ -154,14 +154,13 @@ select:disabled{opacity:.5;cursor:not-allowed}
 .fb .topic.exam{color:#ffd76b}
 .fb .more.note{font-style:italic}
 
-/* combo statements */
-.stmts{list-style:none;margin:2px 0 14px;padding:0;display:flex;flex-direction:column;gap:7px}
-.stmts li{display:flex;gap:10px;align-items:flex-start;background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:9px 13px;font-size:14.5px}
-.stmts .sl{flex:none;font-weight:800;color:var(--accent);width:16px}
-.stmts .st{flex:1}
-.stmts .sv{flex:none;font-size:12px;font-weight:700}
-.stmts li.st-true{border-color:var(--good)} .stmts li.st-true .sv{color:var(--good)}
-.stmts li.st-false{border-color:var(--bad);opacity:.85} .stmts li.st-false .sv{color:var(--bad)}
+/* statement options A, B, C … (combo questions) */
+.opt .ol{flex:none;font-weight:800;color:var(--accent);width:14px}
+.opt .ot{flex:1}
+.opt .ov{flex:none;font-size:12px;font-weight:700;white-space:nowrap;padding-top:2px}
+.opt .ov.yes{color:var(--good)} .opt .ov.no{color:var(--bad)}
+.opt .ov:empty{display:none}
+@media(max-width:600px){.opt:has(.ov){flex-wrap:wrap;row-gap:4px}.opt .ov{flex-basis:100%;padding:0 0 0 56px}}
 
 /* open questions */
 .open-ta{width:100%;background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:9px;padding:11px 13px;font:inherit;font-size:14.5px;resize:vertical}

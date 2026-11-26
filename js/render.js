@@ -23,7 +23,7 @@ export function quizCardHTML(item, st, idx, total) {
         </div>
       </div>
     </div>
-    <div class="hint">${item.type === 'single' || item.type === 'multi' || item.type === 'combo' ? '<kbd>1</kbd>–<kbd>9</kbd> auswählen · ' : ''}<kbd>Enter</kbd> prüfen / weiter</div>`;
+    <div class="hint">${item.type === 'single' || item.type === 'multi' ? '<kbd>1</kbd>–<kbd>9</kbd> auswählen · ' : ''}<kbd>Enter</kbd> prüfen / weiter</div>`;
 }
 
 export function feedbackHTML(item, score, reward) {
@@ -66,7 +66,7 @@ function masteryBar(d) {
 }
 function accColor(acc) { return acc >= 70 ? 'var(--good)' : acc >= 40 ? 'var(--warn)' : 'var(--bad)'; }
 
-const TYPE_ICON = { single: '◉', multi: '☑', combo: 'AB', open: '✎', label: '🖼', order: '⇅' };
+const TYPE_ICON = { single: '◉', multi: '☑', open: '✎', label: '🖼', order: '⇅' };
 
 export function dashboardHTML(chapters) {
   const all = chapters.flatMap(c => c.questions);
@@ -109,7 +109,7 @@ export function dashboardHTML(chapters) {
     const cd = distOf(chap.questions);
     const ca = accOf(chap.questions);
     const types = {};
-    for (const q of chap.questions) types[q.type] = (types[q.type] || 0) + 1;
+    for (const q of chap.questions) { const t = q.type === 'combo' ? 'multi' : q.type; types[t] = (types[t] || 0) + 1; }
     const typeChips = Object.entries(types).map(([t, n]) =>
       `<span class="tchip" title="${TYPE_INFO[t].label}">${TYPE_ICON[t]} ${n}</span>`).join('');
     const rows = chap.topics.map(tp => {

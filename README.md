@@ -11,7 +11,7 @@ Vogel-Garten als Belohnung.
 |---|---|---|
 | Single Choice | eine richtige Antwort, auch „trifft **nicht** zu“ | alles oder nichts |
 | Mehrfachauswahl | „mehrere richtig“, „(4 richtig)“ | Teilpunkte pro Option |
-| Aussagenkombination | Klausur-Klassiker „nur A und C stimmen“ | alles oder nichts |
+| Aussagen A–D | Klausur-Klassiker „nur A und C stimmen“ – hier wird jede Aussage einzeln angekreuzt statt eine Kombination gewählt | Teilpunkte pro Aussage |
 | Offene Frage | „Nennen Sie 3 …“, „Beschreiben Sie …“, „Zeichnen Sie …“ – Musterlösung aufdecken und Kernpunkte selbst abhaken | Anteil Kernpunkte |
 | Schaubild beschriften | Abbildung aus den Folien mit abgedeckten Beschriftungen; Wortbank oder Freitext (Tippfehler-tolerant, Deutsch/Englisch) | Anteil richtiger Felder |
 | Reihenfolge | Synthesewege, Signalkaskaden, Entwicklungsschritte | Anteil richtig benachbarter Paare |

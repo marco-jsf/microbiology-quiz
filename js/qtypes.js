@@ -1,5 +1,6 @@
 // Question types: render, interaction, scoring and reveal for each `type`.
-//   single · multi · combo  — option buttons (combo = single over statement combinations)
+//   single · multi          — option buttons
+//   combo                   — asked as multi: tick each statement A, B, C … that applies
 //   open                    — model answer + self-assessment checklist
 //   label                   — label a figure (word bank or free text)
 //   order                   — put items into the right sequence
@@ -11,7 +12,6 @@ const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').re
 export const TYPE_INFO = {
   single: { label: 'Single Choice', hint: 'Genau eine Antwort ist richtig.' },
   multi: { label: 'Mehrfachauswahl', hint: 'Mehrere Antworten können richtig sein – Teilpunkte pro Option.' },
-  combo: { label: 'Aussagenkombination', hint: 'Prüfe jede Aussage und wähle die richtige Kombination.' },
   open: { label: 'Offene Frage', hint: 'Formuliere deine Antwort (schriftlich oder im Kopf), dann Lösung aufdecken und selbst bewerten.' },
   label: { label: 'Schaubild beschriften', hint: '' },
   order: { label: 'Reihenfolge', hint: 'Tippe die Elemente in der richtigen Reihenfolge an. Antippen in deiner Liste entfernt ein Element wieder.' }
@@ -19,7 +19,7 @@ export const TYPE_INFO = {
 
 // Format groups for the "Format" filter.
 export const FORMAT_GROUPS = {
-  mc: { label: 'Ankreuzen (Single/Multi/Kombi)', types: ['single', 'multi', 'combo'] },
+  mc: { label: 'Ankreuzen (Single/Multi)', types: ['single', 'multi', 'combo'] },
   open: { label: 'Offene Fragen', types: ['open'] },
   label: { label: 'Schaubilder beschriften', types: ['label'] },
   order: { label: 'Reihenfolgen', types: ['order'] }
@@ -67,34 +67,16 @@ export function matchesLabel(lab, input) {
   });
 }
 
-/* ---------------- combo helpers ---------------- */
-export function comboLabel(c, n) {
-  if (!c) return 'keine der Aussagen';
-  if (c.length === n && n > 1) return 'alle Aussagen';
-  const l = c.split('');
-  if (l.length === 1) return 'nur ' + l[0];
-  return 'nur ' + l.slice(0, -1).join(', ') + ' und ' + l[l.length - 1];
-}
-function genCombos(right, n) {
-  const all = [];
-  for (let m = 1; m < (1 << n); m++) {
-    let s = ''; for (let k = 0; k < n; k++) if (m & (1 << k)) s += LETTERS[k];
-    all.push(s);
-  }
-  const dist = c => LETTERS.slice(0, n).split('').filter(L => c.includes(L) !== right.includes(L)).length;
-  const others = shuffle(all.filter(c => c !== right)).sort((a, b) => dist(a) - dist(b));
-  const pick = [right, ...others.slice(0, 2), ...shuffle(others.slice(2)).slice(0, 1)];
-  return pick.sort((a, b) => a.length - b.length || a.localeCompare(b));
-}
-
 /* ---------------- prepare (once per session) ---------------- */
 export function prepare(q) {
   const it = { ...q };
+  // Aussagenkombinationen („nur A und C“) werden nicht als Kombination gewählt,
+  // sondern jede Aussage wird einzeln angekreuzt (= multi, Teilpunkte pro Aussage).
+  // Die Buchstaben bleiben, weil Erklärungen sich darauf beziehen („Aussage C …“).
   if (q.type === 'combo') {
-    const n = q.statements.length;
-    const right = q.statements.map((s, i) => s.correct ? LETTERS[i] : '').join('');
-    const combos = q.combos && q.combos.length ? q.combos : genCombos(right, n);
-    it.options = combos.map(c => ({ t: comboLabel(c, n), correct: c === right }));
+    it.type = 'multi';
+    it.options = q.statements;
+    it.lettered = true;
   }
   if (q.type === 'label') {
     it.bankItems = shuffle([...new Set([...q.labels.map(l => l.answer), ...(q.bank || [])])]);
@@ -132,12 +114,13 @@ export function hintFor(item, st) {
     return `Gefragt ist je ein Punkt aus: ${pointGroups(item).join(' · ')}.`;
   if (item.type === 'open' && item.need && item.need < item.points.length)
     return `Gefragt sind ${item.need} Punkte – ${item.need} richtige Kernpunkte reichen für volle Punktzahl.`;
+  if (item.lettered) return 'Kreuze alle Aussagen an, die zutreffen – Teilpunkte pro Aussage.';
   return TYPE_INFO[item.type].hint;
 }
 
 export function bodyHTML(item, st) {
   switch (item.type) {
-    case 'single': case 'multi': case 'combo': return optionsHTML(item);
+    case 'single': case 'multi': return optionsHTML(item);
     case 'open': return openHTML(item, st);
     case 'label': return labelHTML(item, st);
     case 'order': return orderHTML(item, st);
@@ -147,14 +130,12 @@ export function bodyHTML(item, st) {
 
 function optionsHTML(item) {
   const multi = item.type === 'multi';
-  let pre = '';
-  if (item.type === 'combo') {
-    pre = `<ol class="stmts">${item.statements.map((s, i) =>
-      `<li data-si="${i}"><span class="sl">${LETTERS[i]}</span><span class="st">${s.t}</span><span class="sv"></span></li>`).join('')}</ol>`;
-  }
-  return pre + `<div class="opts" id="opts">${item.options.map((o, i) => `
+  const text = (o, i) => item.lettered
+    ? `<span class="ol">${LETTERS[i]}</span><span class="ot">${o.t}</span><span class="ov"></span>`
+    : `<span>${o.t}</span>`;
+  return `<div class="opts" id="opts">${item.options.map((o, i) => `
     <button class="opt ${multi ? 'checkbox' : 'radio'}" data-i="${i}">
-      <span class="box"></span><span>${o.t}</span>
+      <span class="box"></span>${text(o, i)}
     </button>`).join('')}</div>`;
 }
 
@@ -216,7 +197,7 @@ function orderHTML(item, st) {
 
 /* ---------------- sync UI with state ---------------- */
 export function sync(item, st, root) {
-  if (['single', 'multi', 'combo'].includes(item.type)) {
+  if (['single', 'multi'].includes(item.type)) {
     root.querySelectorAll('.opt').forEach((el, i) => {
       const sel = st.selected.has(i);
       el.classList.toggle('sel', sel);
@@ -256,7 +237,7 @@ export function sync(item, st, root) {
 /* ---------------- interaction ---------------- */
 // Returns 'rerender' when the whole body must be rebuilt, true when sync is enough.
 export function onClick(item, st, target) {
-  if (['single', 'multi', 'combo'].includes(item.type)) {
+  if (['single', 'multi'].includes(item.type)) {
     const opt = target.closest('.opt'); if (!opt) return false;
     const i = +opt.dataset.i;
     if (item.type === 'multi') st.selected.has(i) ? st.selected.delete(i) : st.selected.add(i);
@@ -313,7 +294,7 @@ export function onInput(item, st, target) {
 // Keyboard digit (1-based). Returns true if handled.
 export function onDigit(item, st, n) {
   const i = n - 1;
-  if (['single', 'multi', 'combo'].includes(item.type) && i < item.options.length) {
+  if (['single', 'multi'].includes(item.type) && i < item.options.length) {
     if (item.type === 'multi') st.selected.has(i) ? st.selected.delete(i) : st.selected.add(i);
     else st.selected = new Set([i]);
     return true;
@@ -351,7 +332,7 @@ export function preSubmit(item, st, root) {
 
 export function score(item, st) {
   switch (item.type) {
-    case 'single': case 'combo': {
+    case 'single': {
       const ci = item.options.findIndex(o => o.correct);
       return st.selected.size === 1 && st.selected.has(ci) ? 1 : 0;
     }
@@ -397,16 +378,16 @@ function labelOk(item, st, i) {
 
 // Lock the UI and paint correct / wrong.
 export function reveal(item, st, root) {
-  if (['single', 'multi', 'combo'].includes(item.type)) {
+  if (['single', 'multi'].includes(item.type)) {
     root.querySelectorAll('.opt').forEach((el, i) => {
       el.classList.add('disabled');
       const c = !!item.options[i].correct, s = st.selected.has(i);
       if (c && s) el.classList.add('correct'); else if (c) el.classList.add('missed'); else if (s) el.classList.add('wrongpick');
     });
-    if (item.type === 'combo') root.querySelectorAll('.stmts li').forEach((li, i) => {
-      const ok = item.statements[i].correct;
-      li.classList.add(ok ? 'st-true' : 'st-false');
-      li.querySelector('.sv').textContent = ok ? '✓ richtig' : '✗ falsch';
+    if (item.lettered) root.querySelectorAll('.opt .ov').forEach((el, i) => {
+      const ok = !!item.options[i].correct;
+      el.classList.add(ok ? 'yes' : 'no');
+      el.textContent = ok ? '✓ trifft zu' : '✗ trifft nicht zu';
     });
   } else if (item.type === 'label') {
     root.querySelector('.fig').classList.add('done');
