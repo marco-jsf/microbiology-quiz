@@ -27,6 +27,9 @@ export const BIRDS = [
     tags: { idle: 'Idle', walk: 'walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
   { id: 'peacock', name: 'Peacock', size: 1.5, rarity: 'epic', cost: 600, sheet: 'assets/birds/peacock/Peacock.json',
     tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
+  // Not from a pack: drawn on top of the Collared Dove's animation by tools/make_cockatiel.py.
+  { id: 'cockatiel', name: 'Cockatiel', size: 0.79, rarity: 'rare', cost: 120, sheet: 'assets/birds/cockatiel/Cockatiel.json',
+    tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
 
   // ---- multi-file (one frame-array JSON per animation) ----
   { id: 'flamingo', name: 'Flamingo', size: 1.5, rarity: 'rare', cost: 120, dir: 'assets/birds/flamingo', prefix: 'Flamingo',
@@ -72,6 +75,8 @@ export const SPECIES_INFO = {
     fact: 'Der riesige Schnabel ist innen wabenartig hohl und federleicht – und hilft beim Abgeben von Körperwärme.' },
   macaw: { de: 'Blauer Ara', latin: 'Anodorhynchus',
     fact: 'Knackt mit seinem kräftigen Schnabel sogar steinharte Palmnüsse. Große Aras können über 50 Jahre alt werden.' },
+  cockatiel: { de: 'Nymphensittich', latin: 'Nymphicus hollandicus',
+    fact: 'Der kleinste Kakadu stammt aus Australien. An seiner Federhaube sieht man die Stimmung: steil aufgestellt heißt neugierig oder aufgeregt, flach angelegt eher ängstlich oder gereizt.' },
 };
 export function speciesInfo(id) { return SPECIES_INFO[id] || { de: birdById(id)?.name || id, latin: '', fact: '' }; }
 
