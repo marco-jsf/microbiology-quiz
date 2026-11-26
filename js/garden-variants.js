@@ -213,6 +213,64 @@ export const SPECIES_VARIANTS = {
       map: { '#314879': '#6a9ba6', '#223467': '#4c7887', '#486a94': '#97c3c4', '#1a1c5b': '#36596a',
         '#d0b10b': '#ecc72a', '#bc7105': '#cc9512' } },
   ],
+  // The three parrots below are drawn by tools/make_<id>.py, which also defines
+  // these variants as full palettes and prints the maps (or writes the sheet).
+  budgie: [   // Wellensittich
+    // https://en.wikipedia.org/wiki/Blue_budgerigar_mutation · https://omia.org/4165
+    { id: 'skyblue', name: 'Himmelblau', tone: 'color', accent: '#72c4ec',
+      fact: 'Rezessiv vererbt: Ein einziger Aminosäuretausch im Enzym MuPKS stoppt die Bildung gelber Psittacofulvine – aus Grün wird Blau, die Maske weiß.',
+      map: { '#f4e04d': '#f6f7f4', '#d6bd2c': '#d5dbe0', '#e8d84a': '#f6f7f4', '#e6d648': '#e8eef2',
+        '#6cc040': '#86cdf0', '#52a32f': '#5fa9dc', '#3b7f24': '#3f86bf', '#2c3a2a': '#1f2634' } },
+    // https://en.wikipedia.org/wiki/Ino_budgerigar_mutation · https://world-budgerigar.org/colourstds.htm
+    { id: 'lutino', name: 'Lutino', tone: 'pale', accent: '#f8dd3a',
+      fact: 'Die geschlechtsgebundene Ino-Mutation unterdrückt das Melanin: Übrig bleibt reines Gelb ohne Wellen, dazu rote Augen und rosa Füße.',
+      sheet: 'assets/birds/budgie/Budgie-Lutino.json' },
+    // https://en.wikipedia.org/wiki/Violet_budgerigar_mutation · https://world-budgerigar.org/colourstds.htm
+    { id: 'violet', name: 'Violett', tone: 'dark', accent: '#7d5bc8',
+      fact: 'Klassisches Violett vereint drei Erbanlagen: Blau, einen Dunkelfaktor und den Violettfaktor – erst zusammen entsteht das satte Violett.',
+      map: { '#f4e04d': '#f6f7f4', '#d6bd2c': '#d5dbe0', '#5a4fc0': '#4a2fae', '#3e3596': '#321c84',
+        '#e8d84a': '#f6f7f4', '#e6d648': '#ece9f4', '#6cc040': '#9478d8', '#52a32f': '#7d5bc8',
+        '#3b7f24': '#573a9e', '#2c3a2a': '#1f1b2a', '#2e4f9a': '#4a2f94', '#1f3670': '#321f6c' } },
+  ],
+  caique: [   // Weißbauchpapagei (genus Pionites: its relative and that relative's mutation count)
+    // https://en.wikipedia.org/wiki/Black-headed_parrot · https://de.wikipedia.org/wiki/Grünzügelpapagei
+    { id: 'blackheaded', name: 'Grünzügelpapagei', tone: 'dark', accent: '#2b2a30',
+      fact: 'Der Grünzügelpapagei lebt vor allem nördlich des Amazonas: schwarze Kappe, grüner Zügelstreif bis unters Auge, orange Schenkel, dunkler Schnabel.',
+      map: { '#f3e6e1': '#57525a', '#f2dfd5': '#3c3a40', '#d0b4a8': '#2a292e', '#f59a32': '#2b2a30',
+        '#f59a33': '#2b2a31', '#e3801f': '#1d1c21', '#e3801e': '#f7901c', '#f7d23b': '#3e9444',
+        '#f7d23a': '#f5c21a', '#dfb02a': '#dca712', '#8cc63e': '#f28a1e', '#6ea832': '#d46f14',
+        '#f5c62e': '#f4a830', '#d9a822': '#d88e22', '#e3aaa2': '#4e4a4e', '#bd8880': '#38353a' } },
+    // https://watchbird-ojs-tamu.tdl.org/watchbird/article/view/3783 · https://watchbird-ojs-tamu.tdl.org/watchbird/article/view/3208/3192
+    { id: 'parblue', name: 'Parblau', tone: 'color', accent: '#58a8a4',
+      fact: 'Rezessive Mutation des Grünzügelpapageis, in Australien gezüchtet: Gelb und Orange sind stark reduziert, Grün wirkt dadurch türkis.',
+      map: { '#f3e6e1': '#5a524e', '#f2dfd5': '#3c3a40', '#d0b4a8': '#2a292e', '#f59a32': '#2b2a30',
+        '#f59a33': '#2b2a31', '#e3801f': '#1d1c21', '#e3801e': '#eed8c0', '#f7d23b': '#568e88',
+        '#f7d23a': '#f1e6cf', '#dfb02a': '#d9cbb0', '#8cc63e': '#eee5d2', '#6ea832': '#d6cbb5',
+        '#f5c62e': '#ebe2cf', '#d9a822': '#d3c8b2', '#5cb043': '#6dbdb8', '#43923a': '#58a8a4',
+        '#2f6f2b': '#3d807f', '#4a9a3c': '#5696a6', '#e3aaa2': '#4e4a4e', '#bd8880': '#38353a' } },
+    // https://de.wikipedia.org/wiki/Rostkappenpapagei · https://watchbird-ojs-tamu.tdl.org/watchbird/article/view/1026
+    { id: 'juvenile', name: 'Jungvogel', tone: 'pale', accent: '#b07040',
+      fact: 'Jungvögel haben eine bräunliche, oft schwarz gesprenkelte Kappe, gelblichen Bauch und braune Augen. Meist bis zum dritten Jahr wird die Kappe orange.',
+      map: { '#1e1410': '#3a2418', '#f3e6e1': '#b3aeaa', '#f2dfd5': '#dccdb6', '#d0b4a8': '#bba98e',
+        '#f59a32': '#b07040', '#f59a33': '#4a3022', '#e3801f': '#9c6038', '#e3801e': '#a86e3e',
+        '#fbfaf5': '#f6eecb', '#e3e0d8': '#e6d9a8', '#c6c1b8': '#cbbd8a' } },
+  ],
+  cockatoo: [   // Kakadu (genus Cacatua, drawn as a Gelbhaubenkakadu; the variants are relatives)
+    // https://en.wikipedia.org/wiki/White_cockatoo · https://animaldiversity.org/accounts/Cacatua_alba/
+    { id: 'umbrella', name: 'Weißhaubenkakadu', tone: 'pale', accent: '#f5f5f1',
+      fact: 'Der Weißhaubenkakadu stellt seine breite, rein weiße Haube halbrund auf wie einen Schirm – auf Englisch heißt er deshalb auch „Umbrella Cockatoo“.',
+      map: { '#f8d83a': '#fcfcf8', '#e0b31c': '#e8e3cf', '#f6eb9e': '#fcfcf9', '#cfdeee': '#dde8f1' } },
+    // https://en.wikipedia.org/wiki/Salmon-crested_cockatoo · https://www.parrots.org/encyclopedia/moluccan-cockatoo
+    { id: 'moluccan', name: 'Molukkenkakadu', tone: 'color', accent: '#f39b82',
+      fact: 'Der Molukkenkakadu aus dem Seram-Archipel ist lachsrosa überhaucht. Bei Gefahr stellt er die Haube auf und zeigt versteckte rotorange Federn.',
+      map: { '#fdfdfb': '#fce3d8', '#e9ebee': '#f5cbbb', '#cfd3da': '#e4ad9a', '#aab0bb': '#c8907e',
+        '#f8d83a': '#f5a083', '#e0b31c': '#e06a50', '#f6eb9e': '#f7cdbb', '#f3e58c': '#f7d68a',
+        '#dcc867': '#e0b862', '#cfdeee': '#f3f6f8' } },
+    // https://en.wikipedia.org/wiki/Citron-crested_cockatoo · https://dublinzoo.ie/animal/citron-crested-cockatoo
+    { id: 'citron', name: 'Orangehaubenkakadu', tone: 'color', accent: '#f5a033',
+      fact: 'Seine Haube ist orange statt gelb. Der Orangehaubenkakadu lebt nur auf der indonesischen Insel Sumba und ist vom Aussterben bedroht.',
+      map: { '#f8d83a': '#f5a033', '#e0b31c': '#d97a1c', '#f6eb9e': '#f8c98a', '#cfdeee': '#cfe2f2' } },
+  ],
 };
 
 // Before 2026-11 every species could hatch in the same five fantasy colours.

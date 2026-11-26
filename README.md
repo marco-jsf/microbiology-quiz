@@ -50,6 +50,10 @@ assets/figures/        aus den Folien erzeugte Schaubilder (Beschriftungen abged
 tools/
   figtool.py           Folien sichten (sheet/grid/words) und Schaubilder bauen (build)
   validate.py          prüft alle Kapitel gegen das Schema
+  dove_rig.py          zeichnet Vögel auf der Animation der Türkentaube (Grundlage der make_*.py)
+  make_<art>.py        Sprites der selbst gezeichneten Papageien samt Farbvarianten:
+                       cockatiel (Nymphensittich), budgie (Wellensittich),
+                       caique (Weißbauchpapagei), cockatoo (Kakadu)
 ```
 
 ## Garten

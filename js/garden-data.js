@@ -31,6 +31,14 @@ export const BIRDS = [
   // (which also draws its Lutino variant sheet, see garden-variants.js).
   { id: 'cockatiel', name: 'Cockatiel', size: 0.79, rarity: 'rare', cost: 120, sheet: 'assets/birds/cockatiel/Cockatiel.json',
     tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
+  // Drawn the same way with tools/dove_rig.py: tools/make_budgie.py, make_caique.py,
+  // make_cockatoo.py (they also draw any variant sheet a palette swap can't do).
+  { id: 'budgie', name: 'Budgerigar', size: 0.64, rarity: 'normal', cost: 25, sheet: 'assets/birds/budgie/Budgie.json',
+    tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
+  { id: 'caique', name: 'Caique', size: 0.68, rarity: 'rare', cost: 160, sheet: 'assets/birds/caique/Caique.json',
+    tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
+  { id: 'cockatoo', name: 'Cockatoo', size: 0.94, rarity: 'epic', cost: 450, sheet: 'assets/birds/cockatoo/Cockatoo.json',
+    tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
 
   // ---- multi-file (one frame-array JSON per animation) ----
   { id: 'flamingo', name: 'Flamingo', size: 1.5, rarity: 'rare', cost: 120, dir: 'assets/birds/flamingo', prefix: 'Flamingo',
@@ -78,6 +86,15 @@ export const SPECIES_INFO = {
     fact: 'Knackt mit seinem kräftigen Schnabel sogar steinharte Palmnüsse. Große Aras können über 50 Jahre alt werden.' },
   cockatiel: { de: 'Nymphensittich', latin: 'Nymphicus hollandicus',
     fact: 'Der kleinste Kakadu stammt aus Australien. Seine Federhaube zeigt die Stimmung: aufgestellt heißt neugierig, angelegt eher ängstlich.' },
+  budgie: { de: 'Wellensittich', latin: 'Melopsittacus undulatus', likes: ['feeder'],
+    fact: 'Benannt ist er nach der Wellenzeichnung auf Kopf und Flügeln. In Australien zieht er in Schwärmen dem Regen nach – manchmal zu Zehntausenden.' },
+  // Genus card (Weißbauchpapageien): the normal colours are the white-bellied
+  // caique; its rare variants include the black-headed caique (garden-variants.js).
+  caique: { de: 'Weißbauchpapagei', latin: 'Pionites', likes: ['birdbath'],
+    fact: 'Weißbauchpapageien gelten als Clowns: Als Heimvögel hüpfen sie lieber, als zu fliegen, spielen auf dem Rücken liegend und baden für ihr Leben gern.' },
+  // Genus card: drawn as a Gelbhaubenkakadu; the rare variants are relatives.
+  cockatoo: { de: 'Kakadu', latin: 'Cacatua', likes: ['feeder'],
+    fact: 'Gelbhaubenkakadus in Sydney öffnen Mülltonnen mit Schnabel und Fuß. Den Trick schauen sie sich voneinander ab – so wandert er von Vorort zu Vorort.' },
 };
 export function speciesInfo(id) { return SPECIES_INFO[id] || { de: birdById(id)?.name || id, latin: '', fact: '' }; }
 
