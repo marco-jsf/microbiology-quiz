@@ -1,16 +1,17 @@
-// Garden shop — a modal dialog with three tabs:
-//   Eier      — buy eggs for the nest: the only way to discover a species or
-//               one of its rare colour variants.
-//   Deko      — garden objects are bought piece by piece (up to their max) and
-//               put down in the garden by the player; the pond (landscape)
-//               and the ambient effects are bought once, then switched on/off.
-//   Vogelbuch — every species, grouped by rarity: a black silhouette until it
-//               first hatches (birds only come from eggs, nothing is sold
-//               here); each with its three colour variants (silhouette and
-//               „?“ until one has hatched).
+// Garden shop and Vogelbuch — one modal dialog with two views:
+//   Shop (openShop)  — one scrolling list: first the eggs for the nest (the
+//                      only way to discover a species or one of its rare colour
+//                      variants), then the decor: garden objects are bought
+//                      piece by piece (up to their max) and put down in the
+//                      garden by the player; the pond (landscape) and the
+//                      ambient effects are bought once, then switched on/off.
+//   Vogelbuch (openBook) — not part of the shop (nothing is sold there): every
+//                      species, grouped by rarity, a black silhouette until it
+//                      first hatches; each with its three colour variants
+//                      (silhouette and „?“ until one has hatched).
 //
-// Built to stay snappy: a tab's DOM is created the first time it is shown,
-// tile canvases are only painted for the visible tab, and each canvas is
+// Built to stay snappy: a section's DOM is created the first time it is shown,
+// tile canvases are only painted for the visible view, and each canvas is
 // repainted only when what it shows changes (silhouette → owned, unseen →
 // discovered) or the screen's pixel ratio does.
 //
@@ -36,20 +37,22 @@ const EGG_ADJ = { normal: 'einfachen', rare: 'seltenen', epic: 'epischen' };
 // Birds grouped by rarity (Normal → Selten → Episch), cheapest first within a tier.
 const SORTED = [...BIRDS].sort((a, b) => RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity] || a.cost - b.cost);
 
-const TABS = [
-  { id: 'eggs', icon: '🥚', label: 'Eier' },
-  { id: 'decor', icon: '🌷', label: 'Deko' },
-  { id: 'birds', icon: '📖', label: 'Vogelbuch' },
+// Sections of the dialog and which view shows them (in this order).
+const SECTIONS = [
+  { id: 'eggs', view: 'shop', title: '🥚 Eier' },
+  { id: 'decor', view: 'shop', title: '🌷 Deko' },
+  { id: 'birds', view: 'book', title: null },
 ];
+const VIEW_TITLE = { shop: '🛒 Shop', book: '📖 Vogelbuch' };
 
 const TILE_W = 76, TILE_H = 62;        // CSS px of a tile's picture
 const SWATCH_W = 34, SWATCH_H = 30;    // CSS px of a variant swatch's picture
 const SILHOUETTE = '#000';             // locked bird in the Vögel tab
 const SWATCH_SILHOUETTE = '#06090d';   // undiscovered variant
 
-let dialog, headEl, body, coinEl, io;
-let activeTab = 'eggs';               // remembered while the page lives
-const tabBtns = {}, panelEls = {}, panels = {};
+let dialog, headEl, body, coinEl, titleEl, walletEl, io;
+let view = 'shop';                    // 'shop' | 'book'
+const panelEls = {}, panels = {};
 
 /* ---------- tiny DOM helpers ---------- */
 function h(tag, cls, text) {
@@ -346,9 +349,10 @@ function buyButton() {
   b.addEventListener('animationend', onAnimEnd);
   return b;
 }
+// A link from the Vogelbuch to the eggs in the shop.
 function linkToTab(id, text) {
   const b = button('shop-link', text);
-  b.onclick = () => showTab(id, { focus: true });
+  b.onclick = () => openShop(id);
   return b;
 }
 
@@ -683,29 +687,21 @@ function onceTile(d) {
 
 const BUILDERS = { birds: buildBirdPanel, eggs: buildEggPanel, decor: buildDecorPanel };
 
-/* ---------- dialog + tabs ---------- */
+/* ---------- dialog + views ---------- */
 function ensurePanel(id) {
-  if (!panels[id]) panels[id] = { scroll: 0, ...BUILDERS[id](panelEls[id]) };
+  if (!panels[id]) panels[id] = BUILDERS[id](panelEls[id]);
   return panels[id];
 }
+const viewPanels = () => SECTIONS.filter(sec => sec.view === view).map(sec => ensurePanel(sec.id));
 
-function showTab(id, { focus = false } = {}) {
-  if (!BUILDERS[id]) id = 'birds';
-  const cur = panels[activeTab];
-  if (cur && id !== activeTab && !panelEls[activeTab].hidden) cur.scroll = body.scrollTop;
-  activeTab = id;
-  const p = ensurePanel(id);
-  for (const t of TABS) {
-    const on = t.id === id;
-    tabBtns[t.id].classList.toggle('on', on);
-    tabBtns[t.id].setAttribute('aria-selected', String(on));
-    tabBtns[t.id].tabIndex = on ? 0 : -1;
-    panelEls[t.id].hidden = !on;
-  }
-  p.refresh(getCoins());
-  body.scrollTop = p.scroll || 0;
-  paintAll(p);
-  if (focus) tabBtns[id].focus({ preventScroll: true });
+function showView(v) {
+  view = v === 'book' ? 'book' : 'shop';
+  titleEl.textContent = VIEW_TITLE[view];
+  walletEl.hidden = view !== 'shop';
+  dialog.classList.toggle('is-book', view === 'book');
+  for (const sec of SECTIONS) panelEls[sec.id].hidden = sec.view !== view;
+  const coins = getCoins();
+  for (const p of viewPanels()) { p.refresh(coins); paintAll(p); }
 }
 
 function syncWallet() {
@@ -719,8 +715,7 @@ function syncWallet() {
 function refresh() {
   if (!dialog) return;
   const coins = syncWallet();
-  const p = panels[activeTab];
-  if (p) { p.refresh(coins); paintAll(p); }
+  for (const p of viewPanels()) { p.refresh(coins); paintAll(p); }
 }
 
 // Store changes while the shop is open (purchases, toggles) → one coalesced refresh.
@@ -736,9 +731,9 @@ function build() {
   dialog.setAttribute('aria-labelledby', 'shopTitle');
 
   const head = headEl = h('div', 'shop-head');
-  const title = h('div', 'shop-title', 'Shop');
-  title.id = 'shopTitle';
-  const wallet = h('div', 'shop-wallet');
+  titleEl = h('div', 'shop-title', VIEW_TITLE.shop);
+  titleEl.id = 'shopTitle';
+  const wallet = walletEl = h('div', 'shop-wallet');
   wallet.title = 'Deine Münzen';
   coinEl = h('b', null, '0');
   coinEl.id = 'shopCoins';
@@ -746,44 +741,24 @@ function build() {
   const close = button('shop-close', '✕');
   close.setAttribute('aria-label', 'Schließen');
   close.onclick = () => closeShop();
-  head.append(title, wallet, close);
-
-  const bar = h('div', 'shop-tabbar');
-  const list = h('div', 'pill shop-tabs');
-  list.setAttribute('role', 'tablist');
-  list.setAttribute('aria-label', 'Shop-Bereiche');
-  for (const t of TABS) {
-    const b = button(null);
-    b.id = `shopTab-${t.id}`;
-    b.setAttribute('role', 'tab');
-    b.setAttribute('aria-controls', `shopPanel-${t.id}`);
-    b.append(h('span', 'shop-tab-ico', t.icon), t.label);
-    b.querySelector('.shop-tab-ico').setAttribute('aria-hidden', 'true');
-    b.onclick = () => showTab(t.id);
-    tabBtns[t.id] = b;
-    list.append(b);
-  }
-  list.addEventListener('keydown', e => {   // arrow keys move between tabs
-    const i = TABS.findIndex(t => t.id === activeTab);
-    const to = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: TABS.length - 1 }[e.key];
-    if (to == null) return;
-    e.preventDefault();
-    showTab(TABS[(to + TABS.length) % TABS.length].id, { focus: true });
-  });
-  bar.append(list);
+  head.append(titleEl, wallet, close);
 
   body = h('div', 'shop-body');
-  for (const t of TABS) {
+  for (const sec of SECTIONS) {
     const p = h('section', 'shop-panel');
-    p.id = `shopPanel-${t.id}`;
-    p.setAttribute('role', 'tabpanel');
-    p.setAttribute('aria-labelledby', `shopTab-${t.id}`);
+    p.id = `shopPanel-${sec.id}`;
+    if (sec.title) {
+      const hd = h('h2', 'shop-part', sec.title);
+      hd.id = `shopPart-${sec.id}`;
+      p.setAttribute('aria-labelledby', hd.id);
+      p.append(hd);
+    }
     p.hidden = true;
-    panelEls[t.id] = p;
+    panelEls[sec.id] = p;
     body.append(p);
   }
 
-  dialog.append(head, bar, body);
+  dialog.append(head, body);
   document.body.appendChild(dialog);
 
   // Close on a click on the backdrop — only when the press also started there,
@@ -809,16 +784,24 @@ function build() {
 // scene holds a bought or „Aufstellen“ piece back until this turns false.
 export function isShopOpen() { return !!dialog && dialog.open; }
 
-// Open the shop, on `tab` ('birds' | 'eggs' | 'decor') or the last one used.
-export function openShop(tab) {
+function openView(v, section) {
   if (!dialog) build();
   if (closing) { clearTimeout(closing); closing = 0; dialog.classList.remove('is-closing'); dialog.close(); }
   endCelebration(false);
-  if (typeof tab === 'string' && BUILDERS[tab]) activeTab = tab;
-  for (const p of Object.values(panels)) p.scroll = 0;   // every visit starts at the top
   syncWallet();
-  showTab(activeTab);
+  showView(v);
   if (!dialog.open) dialog.showModal();
-  body.scrollTop = 0;
-  tabBtns[activeTab].focus({ preventScroll: true });
+  body.scrollTop = 0;                                  // every visit starts at the top (the eggs)
+  if (section === 'decor') panelEls.decor.scrollIntoView({ block: 'start' });
+  headEl.querySelector('.shop-close').focus({ preventScroll: true });
 }
+
+// Open the shop (eggs first, decor below); section 'decor' scrolls to the decor.
+// ('birds' — from older callers — opens the Vogelbuch instead.)
+export function openShop(section) {
+  if (section === 'birds') { openBook(); return; }
+  openView('shop', section);
+}
+
+// Open the Vogelbuch (every species and colour variant; nothing for sale).
+export function openBook() { openView('book'); }

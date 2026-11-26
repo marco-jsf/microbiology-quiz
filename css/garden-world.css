@@ -27,6 +27,13 @@ body.is-garden .wrap{max-width:1480px}
 .g3d-btn.is-gold:hover{filter:brightness(1.06);color:#1d1606}
 .g3d-btn:disabled{opacity:.45;cursor:not-allowed;filter:none}
 .g3d-icon{padding:7px 10px}
+.g3d-ico{margin-right:5px}
+@media (max-width:560px){                /* five buttons: icons only on phones */
+  .g3d-actions{gap:5px}
+  .g3d-actions .g3d-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .g3d-actions .g3d-ico{margin:0}
+  .g3d-actions .g3d-btn{padding:7px 10px;font-size:15px}
+}
 
 .g3d-clock{
   position:absolute;left:10px;bottom:10px;z-index:2;pointer-events:none;

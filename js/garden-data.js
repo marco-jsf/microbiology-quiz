@@ -115,9 +115,9 @@ export const NEW_SPECIES_WEIGHT = 3;
 export const SELL_SHARE = 0.25;
 export const SELL_VARIANT_FACTOR = 2;
 export const EGG_TIERS = [
-  { id: 'normal', name: 'Einfaches Ei', cost: 60, need: 10, variantChance: 0.12 },
-  { id: 'rare', name: 'Seltenes Ei', cost: 300, need: 20, variantChance: 0.15 },
-  { id: 'epic', name: 'Episches Ei', cost: 900, need: 35, variantChance: 0.20 },
+  { id: 'normal', name: 'Einfaches Ei', cost: 45, need: 10, variantChance: 0.12 },
+  { id: 'rare', name: 'Seltenes Ei', cost: 240, need: 20, variantChance: 0.15 },
+  { id: 'epic', name: 'Episches Ei', cost: 720, need: 35, variantChance: 0.20 },
 ];
 export const NEST_CAPACITY = 3;
 // Bad-luck protection: at most this many hatches in a row without a variant —

@@ -18,7 +18,7 @@ import {
   listBirds, getBird, listEggs, isEggReady, hatchEgg, renameBird, activeDecor, onGardenChange,
   sellBird, sellValue, canSell, getDecorItem, placeDecor,
 } from './garden-store.js';
-import { openShop } from './shop.js';
+import { openShop, openBook } from './shop.js';
 import {
   decorSize, drawDecor, createEffect, drawNest, drawNestFront, nestSize, nestEggSlots,
   eggSize, drawEgg, recolor, drawSparkle, drawSelectMarker, createBurst,
@@ -1255,11 +1255,18 @@ export async function mountGarden(container) {
   shopBtn.textContent = '🛒 Shop';
   shopBtn.onclick = () => openShop();
   wrap.appendChild(shopBtn);
+  const bookBtn = document.createElement('button');   // the Vogelbuch, left of the Shop button
+  bookBtn.type = 'button';
+  bookBtn.className = 'garden-shop-btn';
+  bookBtn.textContent = '📖 Vogelbuch';
+  bookBtn.onclick = () => openBook();
+  wrap.appendChild(bookBtn);
   const cap = document.createElement('div');
   cap.className = 'garden-cap';
   cap.textContent = '🐦 Dein Garten – tippe einen Vogel an, um ihn anzusehen und zu benennen. Neue Vögel schlüpfen aus Eiern – die gibt es im Shop.';
   container.innerHTML = '';
   container.appendChild(wrap);
+  bookBtn.style.right = `${shopBtn.offsetWidth + 16}px`;
   container.appendChild(cap);
   ctx = canvas.getContext('2d');
   initGardenUI(wrap);

@@ -32,7 +32,7 @@ import { decorById, speciesInfo } from '../garden-data.js';
 import { variantFor } from '../garden-variants.js';
 import * as store from '../garden-store.js';
 import { spendCoins, getCoins } from '../engine.js';
-import { openShop } from '../shop.js';
+import { openShop, openBook } from '../shop.js';
 import { drawDecorIcon } from '../garden-art.js';
 import {
   initGardenUI, destroyGardenUI, showBirdCard, showEggCard, hideCard, currentCard, showBanner,
@@ -522,6 +522,14 @@ function dropObject(o) {
 
 function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 function btn(cls, text, title) { const b = el('button', cls, text); b.type = 'button'; if (title) b.title = title; return b; }
+// Icon + label; on narrow gardens only the icon shows (the label stays for screen readers).
+function ibtn(icon, label, title) {
+  const b = btn('g3d-btn', null, title || label);
+  const i = el('span', 'g3d-ico', icon);
+  i.setAttribute('aria-hidden', 'true');
+  b.append(i, el('span', 'g3d-lbl', label));
+  return b;
+}
 
 let hintT = 0;
 function hint(text) {
@@ -541,11 +549,13 @@ function buildDom(container) {
   labels.append(label, hover);
   const clockEl = el('div', 'g3d-clock');
   const actions = el('div', 'g3d-actions');
-  const feedBtn = btn('g3d-btn', '🌾 Füttern', 'Körner streuen – jede Handvoll kostet 1 Münze');
-  const editBtn = btn('g3d-btn', '✏️ Gestalten', 'Deko und Nest umstellen, Deko ins Lager räumen');
-  const shopBtn = btn('garden-shop-btn g3d-btn', '🛒 Shop');
+  const feedBtn = ibtn('🌾', 'Füttern', 'Körner streuen – jede Handvoll kostet 1 Münze');
+  const editBtn = ibtn('✏️', 'Gestalten', 'Deko und Nest umstellen, Deko ins Lager räumen');
+  const bookBtn = ibtn('📖', 'Vogelbuch', 'Alle Vogelarten und Farbvarianten, die du entdeckt hast');
+  const shopBtn = ibtn('🛒', 'Shop', 'Eier und Deko kaufen');
+  shopBtn.classList.add('garden-shop-btn');
   const fullBtn = btn('g3d-btn g3d-icon', '⛶', 'Vollbild');
-  actions.append(feedBtn, editBtn, shopBtn);
+  actions.append(feedBtn, editBtn, bookBtn, shopBtn);
   if (wrap.requestFullscreen || wrap.webkitRequestFullscreen) actions.append(fullBtn);
   // edit mode bar + object bar + storage
   const bar = el('div', 'g3d-editbar');
@@ -567,6 +577,7 @@ function buildDom(container) {
   container.innerHTML = '';
   container.append(wrap, cap);
   shopBtn.onclick = () => openShop();
+  bookBtn.onclick = () => openBook();
   editBtn.onclick = () => setEditing(!editing);
   feedBtn.onclick = () => setFeeding(!feeding);
   feedBtn.addEventListener('animationend', () => feedBtn.classList.remove('shake'));

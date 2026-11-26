@@ -108,9 +108,10 @@
   flex:none;display:flex;align-items:center;gap:12px;padding:14px 18px;
   border-bottom:1px solid var(--line);background:var(--panel2);
 }
-.shop-title{font-family:'PressStart2P',monospace;font-size:13px;letter-spacing:.02em}
+/* the title takes the free space, so ✕ stays right even when the wallet is hidden (Vogelbuch) */
+.shop-title{flex:1;font-family:'PressStart2P',monospace;font-size:13px;letter-spacing:.02em}
 .shop-wallet{
-  margin-left:auto;display:inline-flex;align-items:center;gap:6px;
+  display:inline-flex;align-items:center;gap:6px;
   background:linear-gradient(180deg,#2a2415,#1d1a10);border:1px solid #5a4a1e;
   border-radius:20px;padding:5px 12px;font-weight:700;color:#ffd76b;
 }
@@ -122,15 +123,6 @@
 }
 .shop-close:hover{background:var(--panel);color:var(--txt)}
 
-/* tabs — the app's .pill control, stretched into a segmented bar */
-.shop-tabbar{flex:none;padding:12px 18px;border-bottom:1px solid var(--line)}
-.shop-tabs{display:flex;max-width:400px}
-.shop-tabs button{
-  flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;
-  font-size:13px;padding:7px 12px;transition:background .15s,color .15s;
-}
-.shop-tabs button:hover:not(.on){color:var(--txt)}
-.shop-tab-ico{font-size:14px;line-height:1}
 
 .shop-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:16px 18px 22px}
 .shop-note{margin:0 0 14px;font-size:12.5px;line-height:1.5;color:var(--mut)}
@@ -144,6 +136,10 @@
   font-family:'PressStart2P',monospace;font-size:10px;font-weight:400;line-height:1.5;letter-spacing:.02em;color:var(--txt);
 }
 .shop-sec::after{content:"";flex:1;min-width:16px;height:1px;background:var(--line)}
+/* the shop's two parts (eggs, decor) in one scrolling list */
+.shop-part{margin:0 0 12px;font-size:17px;font-weight:700;line-height:1.3;color:var(--txt)}
+.shop-panel + .shop-panel .shop-part{margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.shop-panel{scroll-margin-top:8px}
 
 /* two columns while a tile still has room for its buy button, else one */
 .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,312px),1fr));gap:12px}
@@ -213,7 +209,7 @@
 .shop-toggle.on:hover{background:color-mix(in srgb,var(--good) 18%,transparent)}
 .shop-tile.is-off .shop-sprite-wrap{opacity:.5;filter:saturate(.5)}
 
-.shop-close:focus-visible,.shop-tabs button:focus-visible,.shop-buy:focus-visible,
+.shop-close:focus-visible,.shop-buy:focus-visible,
 .shop-toggle:focus-visible,.shop-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* a purchase: soft glow in the tile's accent; an unlock: the picture fades up from black */
@@ -329,11 +325,8 @@
 }
 
 @media (max-width:360px){.shop-buy{white-space:normal}}
-@media (max-width:380px){.shop-tab-ico{display:none}}   /* "Vogelbuch" must fit the tab pill */
 @media (max-width:520px){
   .shop-head{padding:12px 14px}
-  .shop-tabbar{padding:10px 14px}
-  .shop-tabs{max-width:none}
   .shop-body{padding:14px 14px 20px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -342,6 +335,6 @@
   .shop-cel,.shop-cel *,.shop-dialog.is-celebrating .shop-wallet{animation:none !important}
   .shop-cel-spark{display:none}
   .shop-buy.shake{animation:shopNudge .5s ease}
-  .shop-tabs button,.shop-toggle,.shop-place{transition:none}
+  .shop-toggle,.shop-place{transition:none}
 }
 @keyframes shopNudge{0%,100%{box-shadow:inset 0 0 0 1px var(--line)}35%{box-shadow:inset 0 0 0 1px var(--warn)}}

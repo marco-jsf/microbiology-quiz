@@ -49,7 +49,7 @@ js/
     pixelart.js        prozedurale Pixel-Grafik (Mauer, Bäume, Büsche, Gras …)
   garden-art.js        selbst gezeichnete Pixel-Grafik (Deko, Eier, Effekte) + Umfärben
   garden-ui.js         Vogel-/Ei-Karte und Banner über dem Garten
-  shop.js              Shop: Eier · Deko · Vogelbuch (Arten + Farbvarianten)
+  shop.js              Shop (Eier, darunter Deko) und Vogelbuch (Arten + Farbvarianten) – eigener Knopf im Garten
 data/
   schema.md            Datenformat – vor dem Bearbeiten lesen
   vlXX-*.json          ein Kapitel pro Vorlesung
@@ -72,15 +72,15 @@ Münzen gibt es für (teilweise) richtige Antworten; im Garten-Tab werden sie au
   um die erreichte Punktzahl; ist ein Ei warm genug, schlüpft es per Antippen im Garten.
 - **Neue Vogelarten** gibt es nur aus Eiern; Arten, die man noch nicht hat, zählen beim Schlüpfen 3×
   so viel wie schon entdeckte (die Ei-Kachel im Shop zeigt die Chance auf eine neue Art).
-  Im Shop-Tab „Vogelbuch“ sind unentdeckte Arten schwarze Silhouetten. Vögel gibt es (vorerst) nur aus Eiern,
+  Im „Vogelbuch“ (eigener Knopf 📖 neben dem Shop) sind unentdeckte Arten schwarze Silhouetten. Vögel gibt es (vorerst) nur aus Eiern,
   nicht zu kaufen. Vögel antippen → Steckbrief, Name vergeben.
 - **Verkaufen** (auf der Vogelkarte, der Knopf zeigt den Wert; mit Rückfrage): der Vogel fliegt davon, dafür
   gibt es 25 % seines Werts (`cost`) als Münzen, bei seltenen Farbvarianten das Doppelte. Der letzte Vogel
   bleibt; Art und Variante bleiben im Vogelbuch (`discovered` im Spielstand).
 - **Seltene Farbvarianten** gibt es nur aus Eiern: je Art drei echte Farbformen (Mutationen wie Lutino
   oder Leuzismus, Jugendkleider, bei Gattungen auch nahe Verwandte), definiert in `js/garden-variants.js`
-  als Farbtausch der Sprite-Palette. Spätestens jedes 8. Ei bringt eine Variante. Der Shop zeigt
-  im **Vogelbuch** (3. Tab) jede Art mit ihren drei Varianten (Namen erst, wenn sie geschlüpft sind). Alte Fantasiefarben (Gold, Weiß,
+  als Farbtausch der Sprite-Palette. Spätestens jedes 8. Ei bringt eine Variante. Das
+  **Vogelbuch** zeigt jede Art mit ihren drei Varianten (Namen erst, wenn sie geschlüpft sind). Alte Fantasiefarben (Gold, Weiß,
   Mitternacht, Rosé, Mint) aus früheren Spielständen werden beim Laden in eine echte Variante umgewandelt.
 - **2.5D-Garten**: Ein Gartentag dauert 10 Minuten (Sonne und Schatten wandern, abends gehen die Laternen an,
   nachts schlafen die Vögel in Bäumen und Büschen – der Kiwi tagsüber). Die Tageszeit wird aus der echten Uhr
