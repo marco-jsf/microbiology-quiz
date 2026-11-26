@@ -161,6 +161,28 @@
 .gs-swatch{flex:none;width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,.45)}
 
 .gs-origin{font-size:12.5px;color:#c4d0db}
+.gs-origin-row{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px}
+.gs-origin-row .gs-origin{flex:1 1 auto;min-width:0}
+/* sell a bird: small button with its value, then a confirm in place of the fact */
+.gs-sell{
+  flex:none;margin-left:auto;display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;cursor:pointer;
+  background:none;border:1px solid rgba(159,176,192,.35);color:#c4d0db;font-size:11.5px;font-weight:600;
+}
+.gs-sell:hover{border-color:rgba(159,176,192,.7);color:#e8edf2}
+.gs-sell .coin-ico{width:12px;height:12px;vertical-align:0}
+.gs-confirm{
+  display:flex;flex-direction:column;gap:8px;padding:9px 10px;border-radius:9px;
+  background:rgba(255,107,107,.08);box-shadow:inset 0 0 0 1px rgba(255,107,107,.35);
+}
+.gs-confirm-q{margin:0;font-size:12px;line-height:1.45;color:#c4d0db}
+.gs-confirm-q b{color:#e8edf2}
+.gs-confirm-actions{display:flex;flex-wrap:wrap;gap:6px}
+.gs-confirm-yes,.gs-confirm-no{border-radius:8px;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer}
+.gs-confirm-yes{background:#ff6b6b;border:1px solid #ff6b6b;color:#1d0a0a}
+.gs-confirm-yes:hover{filter:brightness(1.08)}
+.gs-confirm-no{background:none;border:1px solid rgba(159,176,192,.4);color:#e8edf2}
+.gs-confirm-no:hover{border-color:rgba(159,176,192,.8)}
+.gs-sell:focus-visible,.gs-confirm-yes:focus-visible,.gs-confirm-no:focus-visible{outline:2px solid #3da9fc;outline-offset:2px}
 .gs-fact{
   margin:0;padding-top:9px;border-top:1px solid rgba(51,65,79,.85);
   font-size:12px;line-height:1.5;color:var(--mut);

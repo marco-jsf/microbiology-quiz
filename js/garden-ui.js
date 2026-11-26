@@ -213,7 +213,12 @@ function frame(kind, fallback) {
 // bird: store record. portrait: clip {img, frames, u} (img may be recoloured) or null.
 // side: 'left' (default) or 'right' — the scene puts the card on the side away
 // from the selected bird so it doesn't hide it (ignored on narrow gardens).
-export function showBirdCard(bird, { portrait = null, onRename = null, onClose = null, focusName = false, side = 'left' } = {}) {
+// onSell: lets the player sell the bird (after a confirm step) for sellCoins
+// coins, shown on the button; the button only shows when canSell.
+export function showBirdCard(bird, {
+  portrait = null, onRename = null, onClose = null, focusName = false, side = 'left',
+  onSell = null, sellCoins = 0, canSell = false,
+} = {}) {
   if (!root || !bird || !bird.uid) return;
   if (card && card.type === 'bird' && card.uid === bird.uid) {   // same bird → update in place
     const c = card;
@@ -222,12 +227,16 @@ export function showBirdCard(bird, { portrait = null, onRename = null, onClose =
     c.name = bird.name || '';
     c.onRename = onRename;
     c.onClose = onClose;
+    Object.assign(c, { onSell, sellCoins, canSell });
     if (focusName) c.focusName = true;
     if (portrait !== c.portrait) { c.portrait = portrait; if (c.el) paintBirdPortrait(c); }
     if (c.el) { fillBird(c); if (c.focusName) inviteName(c); }
     return;
   }
-  openCard({ type: 'bird', uid: bird.uid, bird: { ...bird }, name: bird.name || '', portrait, onRename, onClose, focusName, side });
+  openCard({
+    type: 'bird', uid: bird.uid, bird: { ...bird }, name: bird.name || '', portrait, onRename, onClose, focusName, side,
+    onSell, sellCoins, canSell, confirming: false,
+  });
 }
 
 function buildBirdCard(c) {
@@ -270,11 +279,45 @@ function buildBirdCard(c) {
   vchip.append(vtext, swatch);
   chips.append(rar, vchip);
 
+  const originRow = h('div', 'gs-origin-row');
   const origin = h('div', 'gs-origin');
+  const sell = h('button', 'gs-sell');            // „Verkaufen ⦿ 30“, filled in fillBird
+  sell.type = 'button';
+  originRow.append(origin, sell);
+  // Sell confirm: shown in place of the fact, so the card keeps its size.
+  const confirm = h('div', 'gs-confirm');
+  confirm.setAttribute('role', 'group');
+  confirm.setAttribute('aria-label', 'Verkaufen bestätigen');
+  const confirmQ = h('p', 'gs-confirm-q');
+  const yes = h('button', 'gs-confirm-yes');
+  yes.type = 'button';
+  const no = h('button', 'gs-confirm-no', 'Behalten');
+  no.type = 'button';
+  const actions = h('div', 'gs-confirm-actions');
+  actions.append(yes, no);
+  confirm.append(confirmQ, actions);
   const fact = h('p', 'gs-fact');
-  body.append(head, chips, origin, fact);
+  body.append(head, chips, originRow, confirm, fact);
 
-  Object.assign(c, { frame: fr, canvas: cv, input, nameWrap, species, latin, rar, vchip, vtext, swatch, origin, fact });
+  sell.addEventListener('click', () => {
+    c.confirming = true; fillBird(c);
+    no.focus({ preventScroll: true });            // the safe choice has focus
+  });
+  no.addEventListener('click', () => {
+    c.confirming = false; fillBird(c);
+    sell.focus({ preventScroll: true });
+  });
+  yes.addEventListener('click', () => {
+    c.confirming = false;
+    if (typeof c.onSell === 'function') {
+      try { c.onSell(); } catch (e) { console.error(e); }
+    }
+  });
+
+  Object.assign(c, {
+    frame: fr, canvas: cv, input, nameWrap, species, latin, rar, vchip, vtext, swatch, origin, fact,
+    sell, confirm, confirmQ, yes,
+  });
   wireName(c);
   return el;
 }
@@ -303,7 +346,25 @@ function fillBird(c) {
   // A bird in a rare variant explains its colour form instead of the species.
   const fact = variant?.fact || info.fact || '';
   c.fact.textContent = fact;
-  c.fact.hidden = !fact;
+  // Sell: button (with the bird's value) only when allowed; while confirming,
+  // the question takes the fact's place.
+  const canSell = typeof c.onSell === 'function' && !!c.canSell;
+  if (!canSell) c.confirming = false;
+  const coins = Math.max(0, Math.round(c.sellCoins || 0));
+  const word = coins === 1 ? 'Münze' : 'Münzen';
+  c.sell.hidden = !canSell || c.confirming;
+  if (canSell && c.sell.dataset.coins !== String(coins)) {
+    c.sell.dataset.coins = String(coins);
+    c.sell.replaceChildren('Verkaufen ', h('i', 'coin-ico'), String(coins));
+    c.sell.setAttribute('aria-label', `Verkaufen für ${coins} ${word}`);
+  }
+  c.confirm.hidden = !c.confirming;
+  if (c.confirming) {
+    c.confirmQ.replaceChildren(h('b', null, 'Wirklich verkaufen?'),
+      ` Du bekommst ${coins} ${word}. Die Art bleibt in deinem Vogelbuch.`);
+    c.yes.textContent = `Ja, verkaufen · +${coins}`;
+  }
+  c.fact.hidden = !fact || c.confirming;
 
   const editable = typeof c.onRename === 'function';
   c.input.readOnly = !editable;

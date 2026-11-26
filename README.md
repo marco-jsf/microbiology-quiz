@@ -37,8 +37,16 @@ js/
   app.js               Steuerung, Tastatur, Ereignisse
   garden-data.js       Garten-Katalog: Vögel, Steckbriefe, Eier, Deko
   garden-variants.js   je Vogelart drei echte Farbvarianten (Palettentausch)
-  garden-store.js      Garten-Spielstand (Vögel mit Namen, Nest, Deko) in localStorage
-  garden.js            Garten-Szene (Canvas): Verhalten, Auswahl, Nest & Schlüpfen, Deko
+  garden-store.js      Garten-Spielstand (Vögel mit Namen, Nest, Deko samt Positionen) in localStorage
+  garden.js            alte 2D-Garten-Szene (Canvas) – nur noch Rückfall ohne WebGL2
+  garden3d/            der 2.5D-Garten (Three.js, wird erst beim Öffnen des Garten-Tabs geladen):
+    scene.js           Einbindung in den Tab: Kamera, Antippen, Gestalten-Modus, Abgleich mit dem Spielstand
+    world.js           Gelände (Rasen, Terrasse mit Mauer und Treppe, Wege, Teich), Bäume, Büsche
+    birds.js           Vögel als Sprites im Raum: laufen, hüpfen, fliegen, sitzen, schlafen nachts
+    decor.js / eggs.js gekaufte Deko an ihren Plätzen · Nest mit Eiern und Schlüpfen
+    sky.js / post.js   Tageszeit (Sonne, Mond, Licht) · Tilt-Shift, Farbstimmung
+    fx.js / fx-extra.js Glühwürmchen, Schmetterlinge, Blütenblätter, Sonnenstrahlen, Funkeln
+    pixelart.js        prozedurale Pixel-Grafik (Mauer, Bäume, Büsche, Gras …)
   garden-art.js        selbst gezeichnete Pixel-Grafik (Deko, Eier, Effekte) + Umfärben
   garden-ui.js         Vogel-/Ei-Karte und Banner über dem Garten
   shop.js              Shop: Eier · Deko · Vogelbuch (Arten + Farbvarianten)
@@ -64,14 +72,27 @@ Münzen gibt es für (teilweise) richtige Antworten; im Garten-Tab werden sie au
   um die erreichte Punktzahl; ist ein Ei warm genug, schlüpft es per Antippen im Garten.
 - **Neue Vogelarten** gibt es nur aus Eiern; Arten, die man noch nicht hat, zählen beim Schlüpfen 3×
   so viel wie schon entdeckte (die Ei-Kachel im Shop zeigt die Chance auf eine neue Art).
-  Im Shop-Tab „Vogelbuch“ sind unentdeckte Arten schwarze Silhouetten; entdeckte kann man dort nachkaufen.
-  Vögel antippen → Steckbrief, Name vergeben.
+  Im Shop-Tab „Vogelbuch“ sind unentdeckte Arten schwarze Silhouetten. Vögel gibt es (vorerst) nur aus Eiern,
+  nicht zu kaufen. Vögel antippen → Steckbrief, Name vergeben.
+- **Verkaufen** (auf der Vogelkarte, der Knopf zeigt den Wert; mit Rückfrage): der Vogel fliegt davon, dafür
+  gibt es 25 % seines Werts (`cost`) als Münzen, bei seltenen Farbvarianten das Doppelte. Der letzte Vogel
+  bleibt; Art und Variante bleiben im Vogelbuch (`discovered` im Spielstand).
 - **Seltene Farbvarianten** gibt es nur aus Eiern: je Art drei echte Farbformen (Mutationen wie Lutino
   oder Leuzismus, Jugendkleider, bei Gattungen auch nahe Verwandte), definiert in `js/garden-variants.js`
   als Farbtausch der Sprite-Palette. Spätestens jedes 8. Ei bringt eine Variante. Der Shop zeigt
   im **Vogelbuch** (3. Tab) jede Art mit ihren drei Varianten (Namen erst, wenn sie geschlüpft sind). Alte Fantasiefarben (Gold, Weiß,
   Mitternacht, Rosé, Mint) aus früheren Spielständen werden beim Laden in eine echte Variante umgewandelt.
-- **Deko**: Gartenobjekte (manche besuchen die Vögel) und Effekte; im Shop ein-/ausblendbar.
+- **2.5D-Garten**: Ein Gartentag dauert 10 Minuten (Sonne und Schatten wandern, abends gehen die Laternen an,
+  nachts schlafen die Vögel in Bäumen und Büschen – der Kiwi tagsüber). Die Tageszeit wird aus der echten Uhr
+  berechnet (Stelle im aktuellen 10-Minuten-Abschnitt), läuft also weiter, wenn der Tab zu ist, und ist nach
+  dem Neuladen dieselbe. Im Modus 🌾 **Füttern**
+  streut ein Tipp auf den Rasen eine Handvoll Körner (kostet 1 Münze), Vögel in der Nähe kommen picken.
+  Ziehen = schwenken, Mausrad / zwei Finger = zoomen.
+  Zum Testen: `?gartenzeit=21.5` hält die Uhrzeit fest.
+- **Deko**: Gartenobjekte kann man mehrfach kaufen (Höchstzahl je Objekt in `garden-data.js`, `max`) und
+  selbst platzieren: nach dem Kauf stellt man sie im Garten auf, mit ✏️ **Gestalten** lassen sich Deko und
+  Nest verschieben oder Deko ins 📦 Lager räumen und später wieder aufstellen. Der Teich ist Landschaft
+  (einmal kaufen, ein-/ausblenden), Effekte ebenso.
 - **Neu anfangen** (ganz unten im Vogelbuch, mit Rückfrage): löscht Vögel, Eier, Deko und das Vogelbuch,
   zurück bleibt eine Stadttaube. Münzen und Lernfortschritt bleiben. Der alte Garten wird einmalig unter
   `microbioBirdsV1-backup` gesichert (Wiederherstellen per Konsole:
@@ -79,7 +100,10 @@ Münzen gibt es für (teilweise) richtige Antworten; im Garten-Tab werden sie au
 
 Spielstand im Browser (`localStorage`): `microbioCoinsV1` (Münzen), `microbioBirdsV1` (Garten).
 Beide Schlüssel stammen noch aus der Mikrobio-Version und dürfen nicht umbenannt werden. Im
-Garten-Schlüssel bleibt `owned` ({Art: Anzahl}) erhalten und wird mitgeschrieben.
+Garten-Schlüssel bleibt `owned` ({Art: Anzahl}) erhalten und wird mitgeschrieben. Platzierte Deko steht in
+`items` ([{uid, id, pos: {x, z} | null}], `pos: null` = im Lager), der Nest-Platz in `nestPos`; `decor[id].on`
+wird für ältere Versionen weiter gepflegt (an = mindestens eins aufgestellt). Alte Spielstände bekommen
+beim ersten Laden ihre Deko an Standardplätzen (`spot`), ausgeblendete Deko landet im Lager.
 
 ## Inhalte pflegen
 

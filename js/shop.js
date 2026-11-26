@@ -1,10 +1,13 @@
 // Garden shop — a modal dialog with three tabs:
 //   Eier      — buy eggs for the nest: the only way to discover a species or
 //               one of its rare colour variants.
-//   Deko      — buy garden objects / ambient effects once, then switch them on/off.
+//   Deko      — garden objects are bought piece by piece (up to their max) and
+//               put down in the garden by the player; the pond (landscape)
+//               and the ambient effects are bought once, then switched on/off.
 //   Vogelbuch — every species, grouped by rarity: a black silhouette until it
-//               first hatches, after that you can buy more of it; each with its
-//               three colour variants (silhouette until one has hatched).
+//               first hatches (birds only come from eggs, nothing is sold
+//               here); each with its three colour variants (silhouette and
+//               „?“ until one has hatched).
 //
 // Built to stay snappy: a tab's DOM is created the first time it is shown,
 // tile canvases are only painted for the visible tab, and each canvas is
@@ -15,12 +18,13 @@
 // scene (like this dialog) listens via onGardenChange.
 
 import {
-  BIRDS, birdById, RARITY_LABEL, speciesInfo, EGG_TIERS, speciesForTier, DECOR, NEW_SPECIES_WEIGHT,
+  BIRDS, birdById, RARITY_LABEL, speciesInfo, EGG_TIERS, speciesForTier, DECOR, NEW_SPECIES_WEIGHT, isPlaceable,
 } from './garden-data.js';
 import { variantsOf, variantCount } from './garden-variants.js';
 import {
-  ownedCount, isDiscovered, buy, listEggs, nestCapacity, nestFull, isEggReady, readyEggCount, buyEgg,
+  ownedCount, isDiscovered, listEggs, nestCapacity, nestFull, isEggReady, readyEggCount, buyEgg,
   hasSeenVariant, ownsDecor, isDecorOn, buyDecor, setDecorOn, onGardenChange, resetGarden,
+  decorCount, placedCount, storedCount, canBuyDecor, listDecorItems, requestPlacement,
 } from './garden-store.js';
 import { getCoins } from './engine.js';
 import { getIdleClip } from './garden.js';
@@ -43,7 +47,7 @@ const SWATCH_W = 34, SWATCH_H = 30;    // CSS px of a variant swatch's picture
 const SILHOUETTE = '#000';             // locked bird in the Vögel tab
 const SWATCH_SILHOUETTE = '#06090d';   // undiscovered variant
 
-let dialog, body, coinEl, io;
+let dialog, headEl, body, coinEl, io;
 let activeTab = 'eggs';               // remembered while the page lives
 const tabBtns = {}, panelEls = {}, panels = {};
 
@@ -81,6 +85,15 @@ function setBuy(btn, text, cost, coins) {
   btn.setAttribute('aria-disabled', String(short));
   const miss = cost - coins;
   btn.title = short ? `Dir fehlen noch ${miss} ${miss === 1 ? 'Münze' : 'Münzen'}.` : '';
+}
+// A buy button that can't be used for a reason other than coins (nest full,
+// maximum reached): really disabled, with the reason as its tooltip.
+function setBlocked(btn, text, why) {
+  setPlainLabel(btn, text);
+  btn.disabled = true;
+  btn.classList.remove('is-short');
+  btn.removeAttribute('aria-disabled');
+  btn.title = why;
 }
 function restartAnim(el, cls) {
   el.classList.remove(cls);
@@ -207,12 +220,115 @@ function drawIcon(c, dpr, p, pad, fn) {
 // button under the cursor), so each tile ignores clicks briefly after a purchase.
 const CLICK_GUARD_MS = 600;
 function recentlyBought(tile) { return performance.now() - (+tile.dataset.boughtAt || -1e9) < CLICK_GUARD_MS; }
-function purchase(btn, tile, attempt) {
-  if (btn.disabled || recentlyBought(tile)) return;
+function purchase(btn, tile, attempt, reveal = null) {
+  if (btn.disabled || recentlyBought(tile) || cel) return;
+  const before = getCoins();
   if (!attempt()) { restartAnim(btn, 'shake'); return; }   // can't afford — nudge the button
   tile.dataset.boughtAt = String(performance.now());
   refresh();
   restartAnim(tile, 'just-bought');
+  if (reveal) celebrate({ ...reveal, from: before, to: getCoins() });
+}
+
+/* ---------- purchase celebration ----------
+ * After buying an egg or a decor item the shop shows it off: the item drops in
+ * big with light rays, a glow and flying sparkles, its name and the price, while
+ * the wallet counts down. Then the whole shop closes (animated) and the garden
+ * scene takes over (the egg falls into the nest, the decor pops up). A click or
+ * a key skips ahead to the closing. */
+const CEL_HOLD_MS = 1900;            // how long the item is on show before the shop closes
+const CEL_ITEM = 128;                // CSS px of the item picture
+const reducedMotion = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+let cel = null;                      // the running celebration { el, timer }
+
+function celebrate({ kind, id, rar, title, sub, from, to }) {
+  endCelebration(false);
+  const el = h('div', `shop-cel ${rar}`);
+  el.setAttribute('role', 'status');
+  el.setAttribute('aria-live', 'polite');
+  const rays = h('div', 'shop-cel-rays');
+  const stage = h('div', 'shop-cel-stage');
+  const glow = h('div', 'shop-cel-glow');
+  const cv = h('canvas', 'shop-cel-item');
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = cv.height = Math.round(CEL_ITEM * dpr);
+  cv.style.width = cv.style.height = CEL_ITEM + 'px';
+  try {
+    const c = cv.getContext('2d');
+    c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    c.imageSmoothingEnabled = false;
+    if (kind === 'egg') drawEggIcon(c, id, CEL_ITEM, CEL_ITEM);
+    else drawDecorIcon(c, id, CEL_ITEM, CEL_ITEM);
+  } catch (e) { /* the text still tells what was bought */ }
+  stage.append(glow, cv);
+  for (let i = 0; i < 14; i++) {                    // sparkles flying out in a ring
+    const s = h('i', 'shop-cel-spark');
+    s.style.setProperty('--a', `${Math.round(i * (360 / 14) + (i % 2) * 9)}deg`);
+    s.style.setProperty('--d', `${70 + (i % 3) * 22}px`);
+    s.style.setProperty('--t', `${(i % 4) * 0.06}s`);
+    stage.append(s);
+  }
+  const t = h('div', 'shop-cel-title', title);
+  const st = h('div', 'shop-cel-sub', sub);
+  const cost = h('div', 'shop-cel-cost');
+  cost.append(`−${Math.max(0, from - to)}`, h('i', 'coin-ico'));
+  el.append(rays, stage, t, st, cost);
+  el.style.top = `${headEl.offsetHeight}px`;        // the head (and its wallet counting down) stays visible
+  dialog.append(el);
+  dialog.classList.add('is-celebrating');
+  countCoins(from, to);
+  // A key skips ahead — and is swallowed, so Enter / Space can't also press the
+  // buy button that still has focus (decor can be bought again and again).
+  const skip = e => {
+    if (e && e.type === 'keydown') { e.preventDefault(); e.stopPropagation(); }
+    endCelebration(true);
+  };
+  el.addEventListener('click', skip);
+  el.tabIndex = -1;
+  cel = { el, skip, timer: setTimeout(() => endCelebration(true), reducedMotion() ? 1200 : CEL_HOLD_MS) };
+  el.focus({ preventScroll: true });                 // take focus off the buy button
+  document.addEventListener('keydown', skip, { once: true, capture: true });
+}
+
+// Finish the celebration; with `close`, close the shop afterwards (animated).
+function endCelebration(close) {
+  if (!cel) return;
+  const { el, skip, timer } = cel;
+  cel = null;
+  clearTimeout(timer);
+  document.removeEventListener('keydown', skip, { capture: true });
+  if (close) closeShop(() => { el.remove(); dialog.classList.remove('is-celebrating'); });
+  else { el.remove(); dialog.classList.remove('is-celebrating'); }
+}
+
+// Wallet (shop + header) counts down from `from` to `to`.
+function countCoins(from, to) {
+  const hdr = document.getElementById('coinCount');
+  const set = v => { coinEl.textContent = v; if (hdr) hdr.textContent = v; };
+  if (reducedMotion() || from === to) { set(to); return; }
+  const t0 = performance.now(), dur = 700;
+  const step = now => {
+    const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    set(Math.round(from + (to - from) * e));
+    if (k < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+// Close the shop with its exit animation (every way of closing goes through here).
+let closing = 0;
+function closeShop(after = null) {
+  if (!dialog || !dialog.open) { if (after) after(); return; }
+  if (closing) return;
+  const done = () => {
+    closing = 0;
+    dialog.classList.remove('is-closing');
+    dialog.close();
+    if (after) after();
+  };
+  if (reducedMotion()) { done(); return; }
+  dialog.classList.add('is-closing');
+  closing = setTimeout(done, 260);
 }
 
 function tileShell(cls) {
@@ -238,15 +354,16 @@ function linkToTab(id, text) {
 
 /* ---------- tab: Vogelbuch ---------- */
 // Undiscovered species show as a silhouette with a link to the eggs they hatch
-// from; once one has hatched, its tile turns into a normal "buy more" tile.
+// from; once one has hatched, the tile shows the bird and how many live in the
+// garden (0 after all of them were sold — it stays discovered).
 // Every tile lists the species' three colour variants: a swatch per variant
 // (silhouette until one has hatched) and their names below — a variant's name
 // stays a „?“ until it has hatched, so what is still out there stays a surprise.
 function buildBirdPanel(el) {
   const note = h('p', 'shop-note');
   const found = h('b'), foundV = h('b');
-  note.append('Entdeckt: ', found, ' Arten und ', foundV, ' Farbvarianten. 🥚 Neue Arten und seltene Farben schlüpfen nur aus ',
-    linkToTab('eggs', 'Eiern'), ' – entdeckte Arten kannst du hier nachkaufen.');
+  note.append('Entdeckt: ', found, ' Arten und ', foundV, ' Farbvarianten. 🥚 Neue Vögel und seltene Farben schlüpfen nur aus ',
+    linkToTab('eggs', 'Eiern'), '.');
   const grid = h('div', 'shop-grid');
   const tiles = SORTED.map(def => {
     const de = speciesInfo(def.id).de;
@@ -273,23 +390,21 @@ function buildBirdPanel(el) {
       names.append(label);
       return { v, box, p: vp, label, prev: undefined };
     });
-    const btn = buyButton();
-    btn.onclick = () => purchase(btn, tile, () => buy(def.id));
     const egg = EGG_TIERS.some(t => t.id === def.rarity) && EGG_ADJ[def.rarity];
     const lock = h('div', 'shop-line shop-lock');
     if (egg) lock.append('🥚 Schlüpft aus ', linkToTab('eggs', `${egg} Eiern`));
     else lock.append('🥚 Schlüpft aus Eiern');
     info.append(name, sub);
     if (vars.length) info.append(sw, names);
-    info.append(btn, lock);
+    info.append(lock);
     grid.append(tile);
-    return { def, de, tile, p, star, owned, btn, lock, vars, prev: undefined };
+    return { def, de, tile, p, star, owned, lock, vars, prev: undefined };
   });
   el.append(note, grid, buildReset());
 
   return {
     pics: tiles.flatMap(t => [t.p, ...t.vars.map(c => c.p)]),
-    refresh(coins) {
+    refresh() {
       let n = 0, nv = 0;
       for (const t of tiles) {
         const has = isDiscovered(t.def.id);
@@ -299,9 +414,7 @@ function buildBirdPanel(el) {
         t.tile.classList.toggle('is-owned', has);
         t.tile.classList.toggle('is-locked', !has);
         t.owned.textContent = has ? `Im Garten: ${ownedCount(t.def.id)}` : 'Noch nicht entdeckt';
-        t.btn.hidden = !has;
         t.lock.hidden = has;
-        if (has) setBuy(t.btn, 'Noch einen kaufen', t.def.cost, coins);
         want(t.p, has ? 'bird' : 'silhouette', () => idleClip(t.def.id),
           (c, clip, dpr) => drawClip(c, clip, dpr, { pad: 6, fill: has ? null : SILHOUETTE }));
         for (const c of t.vars) {
@@ -364,7 +477,7 @@ function buildReset() {
   yes.onclick = () => {
     collapse();
     resetGarden();
-    dialog.close();
+    closeShop();
   };
   dialog.addEventListener('close', () => collapse());
   sec.append(h('h3', 'shop-sec', 'Neu anfangen'), text, ask, confirm);
@@ -393,7 +506,10 @@ function buildEggPanel(el) {
     const chance = h('div', 'shop-line shop-chance',
       `✨ Chance auf seltene Variante: ${Math.round(tier.variantChance * 100)}\u00a0%`);
     const btn = buyButton();
-    btn.onclick = () => purchase(btn, tile, () => buyEgg(tier.id));
+    btn.onclick = () => purchase(btn, tile, () => buyEgg(tier.id), {
+      kind: 'egg', id: tier.id, rar: `rarity-${tier.id}`, title: `${tier.name} gekauft!`,
+      sub: `Es liegt jetzt in deinem Nest – nach ${tier.need} richtigen Antworten schlüpft es.`,
+    });
     info.append(h('div', 'shop-name', tier.name), hatch, inside, fresh, chance, btn);
     grid.append(tile);
     return { tier, p, btn, fresh };
@@ -428,11 +544,7 @@ function buildEggPanel(el) {
         t.fresh.textContent = k ? `✦ Chance auf neue Art: ${pct}\u00a0%` : '✓ Alle Arten entdeckt';
         t.fresh.classList.toggle('is-done', !k);
         if (full) {
-          setPlainLabel(t.btn, 'Nest voll');
-          t.btn.disabled = true;
-          t.btn.classList.remove('is-short');
-          t.btn.removeAttribute('aria-disabled');
-          t.btn.title = `Im Nest ist Platz für ${cap} Eier – lass erst eins schlüpfen.`;
+          setBlocked(t.btn, 'Nest voll', `Im Nest ist Platz für ${cap} Eier – lass erst eins schlüpfen.`);
         } else {
           setBuy(t.btn, 'Kaufen', t.tier.cost, coins);
         }
@@ -441,53 +553,129 @@ function buildEggPanel(el) {
   };
 }
 
-/* ---------- tab: Deko ---------- */
+/* ---------- tab: Deko ----------
+ * Gartenobjekte (isPlaceable) are owned piece by piece, up to d.max. A new
+ * piece goes to storage („Lager“) and the store asks the garden scene to let
+ * the player put it down — the scene waits until the shop has closed.
+ * „Aufstellen“ does the same for a piece that is still in storage. Moving or
+ * storing pieces that already stand happens in the garden (✏️ Gestalten).
+ * Landschaft (the pond) and Effekte are bought once, then switched on/off. */
+const DECOR_SECTIONS = [
+  { title: 'Gartenobjekte', pick: d => isPlaceable(d.id), pieces: true },
+  { title: 'Landschaft', pick: d => d.kind === 'object' && !!d.terrain },
+  { title: 'Effekte', pick: d => d.kind === 'effect' },
+];
+
 function buildDecorPanel(el) {
-  el.append(h('p', 'shop-note', '🌿 Gekaufte Deko bleibt dir – du kannst sie jederzeit aus- und wieder einblenden.'));
+  el.append(h('p', 'shop-note', '🌿 Kauf Deko und stell sie in deinem Garten auf, wo es dir gefällt. '
+    + 'Mit ✏️ Gestalten im Garten kannst du alles jederzeit umstellen oder ins Lager räumen.'));
   const tiles = [];
-  const sections = [
-    { kind: 'object', title: 'Gartenobjekte' },
-    { kind: 'effect', title: 'Effekte' },
-  ];
-  for (const sec of sections) {
-    const items = DECOR.filter(d => d.kind === sec.kind);
+  for (const sec of DECOR_SECTIONS) {
+    const items = DECOR.filter(sec.pick);
     if (!items.length) continue;
     const grid = h('div', 'shop-grid');
     for (const d of items) {
-      const { tile, info, p } = tileShell(`shop-decor deco-${d.kind}`);
-      want(p, 'icon', null, (c, _, dpr) => drawIcon(c, dpr, p, 1, (cx, w, ht) => drawDecorIcon(cx, d.id, w, ht)));
-      const btn = buyButton();
-      const toggle = button('shop-toggle');
-      btn.onclick = () => {
-        const hadFocus = document.activeElement === btn;
-        purchase(btn, tile, () => buyDecor(d.id));
-        if (hadFocus && btn.hidden) toggle.focus({ preventScroll: true });   // keep keyboard focus on the tile
-      };
-      toggle.onclick = () => { if (recentlyBought(tile)) return; setDecorOn(d.id, !isDecorOn(d.id)); refresh(); };
-      info.append(h('div', 'shop-name', d.name), h('div', 'shop-desc', d.desc), btn, toggle);
-      grid.append(tile);
-      tiles.push({ d, tile, p, btn, toggle });
+      const t = sec.pieces ? pieceTile(d) : onceTile(d);
+      grid.append(t.tile);
+      tiles.push(t);
     }
     el.append(h('h3', 'shop-sec', sec.title), grid);
   }
 
   return {
     pics: tiles.map(t => t.p),
-    refresh(coins) {
-      for (const t of tiles) {
-        const owned = ownsDecor(t.d.id), on = owned && isDecorOn(t.d.id);
-        t.tile.classList.toggle('is-owned', owned);
-        t.tile.classList.toggle('is-off', owned && !on);
-        t.btn.hidden = owned;
-        t.toggle.hidden = !owned;
-        if (owned) {
-          t.toggle.textContent = on ? 'Im Garten ✓' : 'Ausgeblendet';
-          t.toggle.classList.toggle('on', on);
-          t.toggle.setAttribute('aria-pressed', String(on));
-          t.toggle.title = on ? 'Antippen zum Ausblenden' : 'Antippen zum Einblenden';
-        } else {
-          setBuy(t.btn, 'Kaufen', t.d.cost, coins);
-        }
+    refresh(coins) { for (const t of tiles) t.update(coins); },
+  };
+}
+
+function decorShell(d) {
+  const shell = tileShell(`shop-decor deco-${d.kind}`);
+  const { p } = shell;
+  want(p, 'icon', null, (c, _, dpr) => drawIcon(c, dpr, p, 1, (cx, w, ht) => drawDecorIcon(cx, d.id, w, ht)));
+  return shell;
+}
+const decorReveal = (d, sub) => ({ kind: 'decor', id: d.id, rar: `deco-${d.kind}`, title: `${d.name} gekauft!`, sub });
+
+// A garden object: buyable again and again up to d.max. Shows how many stand
+// in the garden and wait in storage, and „Aufstellen“ while some are stored.
+function pieceTile(d) {
+  const { tile, info, p } = decorShell(d);
+  const max = d.max || 1;
+  const sub = h('div', 'shop-sub');
+  const count = h('span', 'shop-owned');
+  const cap = h('span', 'shop-max', `max. ${max}`);
+  cap.title = `Bis zu ${max} Stück pro Garten`;
+  sub.append(count, cap);
+  const btn = buyButton();
+  const place = button('shop-place', 'Aufstellen');
+  const actions = h('div', 'shop-actions');
+  actions.append(btn, place);
+
+  // purchase() ignores clicks while the celebration runs and right after a
+  // purchase, so a quick double click buys one piece, not two.
+  btn.onclick = () => {
+    const hadFocus = document.activeElement === btn;
+    purchase(btn, tile, () => buyDecor(d.id),
+      decorReveal(d, 'Gleich darfst du dir einen Platz dafür in deinem Garten aussuchen.'));
+    if (hadFocus && btn.disabled && !place.hidden) place.focus({ preventScroll: true });   // max reached
+  };
+  // The piece that has waited longest goes first; the scene starts placing it
+  // once the shop is closed.
+  place.onclick = () => {
+    if (cel || recentlyBought(tile)) return;
+    const it = listDecorItems().find(i => i.id === d.id && !i.pos);
+    if (it && requestPlacement(it.uid)) closeShop();
+    else refresh();                                   // nothing stored any more (other tab) — just update
+  };
+  info.append(h('div', 'shop-name', d.name), sub, h('div', 'shop-desc', d.desc), actions);
+
+  return {
+    tile, p,
+    update(coins) {
+      const n = decorCount(d.id), placed = placedCount(d.id), stored = storedCount(d.id);
+      tile.classList.toggle('is-owned', n > 0);
+      tile.classList.toggle('is-off', n > 0 && !placed);        // all of them in storage
+      tile.classList.toggle('is-max', !canBuyDecor(d.id));
+      count.textContent = !n ? 'Noch nicht im Garten'
+        : stored ? `Im Garten: ${placed} · Im Lager: ${stored}` : `Im Garten: ${placed}`;
+      place.hidden = !stored;
+      place.title = stored === 1 ? 'Das Stück aus dem Lager in deinen Garten stellen'
+        : `Eins der ${stored} Stücke aus dem Lager in deinen Garten stellen`;
+      if (canBuyDecor(d.id)) setBuy(btn, 'Kaufen', d.cost, coins);
+      else setBlocked(btn, 'Maximum erreicht', `Du hast schon ${max}× ${d.name} – mehr passen nicht in deinen Garten.`);
+    },
+  };
+}
+
+// The pond and the effects: bought once, then an on/off switch replaces the buy button.
+function onceTile(d) {
+  const { tile, info, p } = decorShell(d);
+  const btn = buyButton();
+  const toggle = button('shop-toggle');
+  btn.onclick = () => {
+    const hadFocus = document.activeElement === btn;
+    purchase(btn, tile, () => buyDecor(d.id), decorReveal(d,
+      d.kind === 'effect' ? 'Ist ab jetzt in deinem Garten zu sehen.' : 'Liegt ab jetzt in deinem Garten.'));
+    if (hadFocus && btn.hidden) toggle.focus({ preventScroll: true });   // keep keyboard focus on the tile
+  };
+  toggle.onclick = () => { if (recentlyBought(tile)) return; setDecorOn(d.id, !isDecorOn(d.id)); refresh(); };
+  info.append(h('div', 'shop-name', d.name), h('div', 'shop-desc', d.desc), btn, toggle);
+
+  return {
+    tile, p,
+    update(coins) {
+      const owned = ownsDecor(d.id), on = owned && isDecorOn(d.id);
+      tile.classList.toggle('is-owned', owned);
+      tile.classList.toggle('is-off', owned && !on);
+      btn.hidden = owned;
+      toggle.hidden = !owned;
+      if (owned) {
+        toggle.textContent = on ? 'Im Garten ✓' : 'Ausgeblendet';
+        toggle.classList.toggle('on', on);
+        toggle.setAttribute('aria-pressed', String(on));
+        toggle.title = on ? 'Antippen zum Ausblenden' : 'Antippen zum Einblenden';
+      } else {
+        setBuy(btn, 'Kaufen', d.cost, coins);
       }
     },
   };
@@ -547,7 +735,7 @@ function build() {
   dialog = h('dialog', 'shop-dialog');
   dialog.setAttribute('aria-labelledby', 'shopTitle');
 
-  const head = h('div', 'shop-head');
+  const head = headEl = h('div', 'shop-head');
   const title = h('div', 'shop-title', 'Shop');
   title.id = 'shopTitle';
   const wallet = h('div', 'shop-wallet');
@@ -557,7 +745,7 @@ function build() {
   wallet.append(h('i', 'coin-ico'), coinEl);
   const close = button('shop-close', '✕');
   close.setAttribute('aria-label', 'Schließen');
-  close.onclick = () => dialog.close();
+  close.onclick = () => closeShop();
   head.append(title, wallet, close);
 
   const bar = h('div', 'shop-tabbar');
@@ -607,17 +795,25 @@ function build() {
   let downOutside = false;
   dialog.addEventListener('pointerdown', e => { downOutside = e.target === dialog && outside(e); });
   dialog.addEventListener('click', e => {
-    if (downOutside && e.target === dialog && outside(e)) dialog.close();
+    if (downOutside && e.target === dialog && outside(e) && !cel) closeShop();
     downOutside = false;
   });
 
+  // Escape closes with the exit animation too (and just skips ahead while a purchase is on show).
+  dialog.addEventListener('cancel', e => { e.preventDefault(); if (!cel) closeShop(); });
   if ('IntersectionObserver' in window) io = new IntersectionObserver(onIntersect, { root: body, threshold: 0.6 });
   onGardenChange(scheduleRefresh);
 }
 
+// Whether the shop dialog is showing (closing animation included) — the garden
+// scene holds a bought or „Aufstellen“ piece back until this turns false.
+export function isShopOpen() { return !!dialog && dialog.open; }
+
 // Open the shop, on `tab` ('birds' | 'eggs' | 'decor') or the last one used.
 export function openShop(tab) {
   if (!dialog) build();
+  if (closing) { clearTimeout(closing); closing = 0; dialog.classList.remove('is-closing'); dialog.close(); }
+  endCelebration(false);
   if (typeof tab === 'string' && BUILDERS[tab]) activeTab = tab;
   for (const p of Object.values(panels)) p.scroll = 0;   // every visit starts at the top
   syncWallet();

@@ -27,6 +27,83 @@
 .shop-dialog[open]{display:flex;flex-direction:column}
 .shop-dialog::backdrop{background:rgba(6,12,18,.62)}
 .shop-dialog [hidden]{display:none !important}
+/* open / close: a short lift-in and settle-out (closeShop adds .is-closing) */
+.shop-dialog[open]{animation:shopIn .32s cubic-bezier(.2,.85,.25,1.12)}
+.shop-dialog[open]::backdrop{animation:shopFadeIn .32s ease-out}
+.shop-dialog.is-closing{animation:shopOut .26s cubic-bezier(.4,0,.8,.4) forwards}
+.shop-dialog.is-closing::backdrop{animation:shopFadeOut .26s ease-in forwards}
+@keyframes shopIn{from{opacity:0;transform:translateY(14px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes shopOut{to{opacity:0;transform:translateY(10px) scale(.94)}}
+@keyframes shopFadeIn{from{opacity:0}}
+@keyframes shopFadeOut{to{opacity:0}}
+
+/* ---------- purchase celebration (shop.js celebrate) ---------- */
+.shop-cel{
+  position:absolute;left:0;right:0;bottom:0;top:0;z-index:5;overflow:hidden;cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center;
+  background:
+    radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--rar) 28%,transparent),transparent 60%),
+    rgba(12,16,22,.975);
+  animation:celIn .3s ease-out both;
+}
+.shop-cel-rays{
+  position:absolute;left:50%;top:40%;width:820px;height:820px;margin:-410px 0 0 -410px;pointer-events:none;
+  background:repeating-conic-gradient(from 0deg,color-mix(in srgb,var(--rar) 24%,transparent) 0deg 6deg,transparent 6deg 20deg);
+  -webkit-mask:radial-gradient(circle,#000 6%,transparent 58%);mask:radial-gradient(circle,#000 6%,transparent 58%);
+  animation:celRays 10s linear infinite,celRaysIn .7s cubic-bezier(.2,.8,.3,1) both;
+}
+.shop-cel-stage{position:relative;width:128px;height:128px;display:grid;place-items:center;margin-bottom:4px}
+.shop-cel-glow{
+  position:absolute;inset:-34px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,color-mix(in srgb,var(--rar) 60%,#fff 15%) 0%,transparent 66%);
+  filter:blur(8px);opacity:.85;
+  animation:celFade .5s ease-out both,celGlow 1.4s ease-in-out .5s infinite alternate;
+}
+.shop-cel-item{
+  position:relative;display:block;image-rendering:pixelated;filter:drop-shadow(0 8px 14px rgba(0,0,0,.5));
+  animation:celPop .75s cubic-bezier(.2,1.45,.4,1) both,celFloat 2.4s ease-in-out .75s infinite;
+}
+.shop-cel-spark{
+  position:absolute;left:50%;top:50%;width:9px;height:9px;margin:-4.5px;pointer-events:none;opacity:0;
+  background:#fff7cf;
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+  filter:drop-shadow(0 0 4px color-mix(in srgb,var(--rar) 80%,#fff));
+  animation:celSpark .95s cubic-bezier(.15,.7,.3,1) calc(.28s + var(--t)) both;
+}
+.shop-cel-title{
+  position:relative;font-family:'PressStart2P',monospace;font-size:15px;line-height:1.6;color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,.45);animation:celUp .45s ease-out .28s both;
+}
+.shop-cel-sub{position:relative;max-width:360px;font-size:13px;line-height:1.5;color:#c4d0db;animation:celUp .45s ease-out .4s both}
+.shop-cel-cost{
+  position:relative;display:inline-flex;align-items:center;gap:6px;margin-top:4px;padding:5px 13px;border-radius:20px;
+  background:linear-gradient(180deg,#2a2415,#1d1a10);border:1px solid #5a4a1e;color:#ffd76b;font-weight:700;
+  animation:celUp .45s ease-out .52s both;
+}
+.shop-cel-cost .coin-ico{width:15px;height:15px}
+.shop-dialog.is-celebrating .shop-wallet{animation:celWallet .8s ease-out}
+@keyframes celIn{from{opacity:0}}
+@keyframes celFade{from{opacity:0}}
+@keyframes celRays{to{transform:rotate(360deg)}}
+@keyframes celRaysIn{from{opacity:0;scale:.5}}
+@keyframes celGlow{to{opacity:.55;scale:1.1}}
+@keyframes celPop{
+  0%{transform:translateY(-42px) scale(.2) rotate(-14deg);opacity:0}
+  55%{opacity:1}
+  100%{transform:none;opacity:1}
+}
+@keyframes celFloat{50%{transform:translateY(-6px)}}
+@keyframes celSpark{
+  0%{transform:rotate(var(--a)) translateY(0) scale(.3);opacity:0}
+  25%{opacity:1}
+  100%{transform:rotate(var(--a)) translateY(calc(-1 * var(--d))) scale(1.1);opacity:0}
+}
+@keyframes celUp{from{opacity:0;transform:translateY(10px)}}
+@keyframes celWallet{
+  0%{box-shadow:0 0 0 0 rgba(255,215,107,.0)}
+  30%{box-shadow:0 0 0 4px rgba(255,215,107,.35);transform:scale(1.06)}
+  100%{box-shadow:0 0 0 0 rgba(255,215,107,0);transform:none}
+}
 .shop-head{
   flex:none;display:flex;align-items:center;gap:12px;padding:14px 18px;
   border-bottom:1px solid var(--line);background:var(--panel2);
@@ -159,6 +236,24 @@
   background:radial-gradient(ellipse at 50% 88%,#2b4536 0%,#1b2a22 62%,#141e19 100%);
 }
 .shop-panel > .shop-note + .shop-sec{margin-top:6px}
+/* garden objects: "Im Garten: 2 · Im Lager: 1", a small max chip, Kaufen + Aufstellen */
+.shop-decor .shop-sub{flex-wrap:wrap;gap:4px 8px}
+.shop-max{
+  margin-left:auto;flex:none;padding:1px 7px;border-radius:10px;
+  font-size:10.5px;line-height:1.5;color:var(--mut);border:1px solid var(--line);
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.shop-tile.is-max .shop-max{color:#ffd76b;border-color:#5a4a1e;background:linear-gradient(180deg,#2a2415,#1d1a10)}
+.shop-actions{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.shop-actions .shop-buy{margin-top:0}
+.shop-place{
+  display:inline-flex;align-items:center;gap:6px;
+  background:color-mix(in srgb,var(--rar) 12%,transparent);color:color-mix(in srgb,var(--rar) 70%,var(--txt));
+  border:1px solid color-mix(in srgb,var(--rar) 50%,transparent);border-radius:8px;
+  padding:6px 12px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s;
+}
+.shop-place:hover{background:color-mix(in srgb,var(--rar) 20%,transparent);border-color:var(--rar)}
+.shop-place:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* ---- Eier ---- */
 .shop-nest{display:flex;align-items:center;gap:10px;margin-bottom:6px}
@@ -243,7 +338,10 @@
 }
 @media (prefers-reduced-motion:reduce){
   .shop-tile.just-bought,.shop-reveal{animation:none}
+  .shop-dialog[open],.shop-dialog[open]::backdrop,.shop-dialog.is-closing,.shop-dialog.is-closing::backdrop{animation:none}
+  .shop-cel,.shop-cel *,.shop-dialog.is-celebrating .shop-wallet{animation:none !important}
+  .shop-cel-spark{display:none}
   .shop-buy.shake{animation:shopNudge .5s ease}
-  .shop-tabs button,.shop-toggle{transition:none}
+  .shop-tabs button,.shop-toggle,.shop-place{transition:none}
 }
 @keyframes shopNudge{0%,100%{box-shadow:inset 0 0 0 1px var(--line)}35%{box-shadow:inset 0 0 0 1px var(--warn)}}

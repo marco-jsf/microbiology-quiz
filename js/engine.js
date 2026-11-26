@@ -61,6 +61,15 @@ function saveWallet() { try { localStorage.setItem(COIN_KEY, JSON.stringify(wall
 export function getWallet() { wallet = loadWallet(); return { ...wallet }; }
 export function getCoins() { wallet = loadWallet(); return wallet.coins; }
 
+// Coins from selling a bird in the garden. Kept apart from earnedTotal, which
+// counts coins earned by answering.
+export function addSaleCoins(n) {
+  wallet = loadWallet();
+  n = Math.max(0, Math.round(n));
+  wallet.coins += n; wallet.soldTotal = (wallet.soldTotal || 0) + n; saveWallet();
+  return n;
+}
+
 // Spend coins (returns false if the player can't afford it) — for the garden.
 export function spendCoins(n) {
   wallet = loadWallet();

@@ -12,10 +12,11 @@
 // (`b.rec`), the eggs in the nest, and the active decor. It listens to store
 // events instead of being called by the shop.
 
-import { birdById, speciesInfo, DECOR, NEST_X, NEST_CAPACITY } from './garden-data.js';
+import { birdById, speciesInfo, DECOR, decorById, NEST_X, NEST_CAPACITY } from './garden-data.js';
 import { variantFor } from './garden-variants.js';
 import {
   listBirds, getBird, listEggs, isEggReady, hatchEgg, renameBird, activeDecor, onGardenChange,
+  sellBird, sellValue, canSell, getDecorItem, placeDecor,
 } from './garden-store.js';
 import { openShop } from './shop.js';
 import {
@@ -56,6 +57,12 @@ const ACTION_SPEED = { idle: 0.4 };
 const rnd = (a, b) => a + Math.random() * (b - a);
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const ease = (dt, rate) => 1 - Math.exp(-dt * rate);   // frame-rate independent smoothing factor
+const easeOutBack = k => { const c = 1.70158; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); };
+// Something just bought is shown off in the shop first; it only arrives in the
+// garden (egg falls into the nest, decor pops up) once the shop has closed.
+const shopOpen = () => !!document.querySelector('dialog.shop-dialog[open]');
+const EGG_FALL_G = 1400;     // px/s² — a bought egg dropping into the nest
+const DECOR_POP_S = 0.55;    // s — a bought decor object popping up
 function pickWeighted(opts) {
   let r = Math.random() * opts.reduce((s, o) => s + o.w, 0);
   for (const o of opts) { r -= o.w; if (r < 0) return o; }
@@ -240,7 +247,9 @@ let nestA = 0;               // nest opacity (fades in/out with its eggs)
 let decorObjs = [];          // active decor objects, pond first
 const effects = new Map();   // active ambient effects: id → instance
 let bursts = [];             // hatch puffs
-let fx = [];                 // sparkles: { anchor: bird|'nest', ox, oy, t, dur, size }
+let fx = [];                 // sparkles: { anchor: bird|'nest'|{x, yOff, fixed}, ox, oy, t, dur, size }
+let knownDecor = null;       // active decor ids after the last rebuild (null right after mounting)
+let effectReveal = null;     // { t } — a just-bought ambient effect: a sparkle shower once the shop closes
 const pending = new Set();   // bird uids whose scene bird is being built (no double spawns)
 let fontReady = false, fontLoading = false;
 const loggedErrors = new Set();
@@ -286,6 +295,13 @@ function nestX() { layoutScene(); return nestCx; }
 // Draw one decor object, scaled about its ground anchor on narrow gardens.
 function drawDecorObj(d) {
   const cx = Math.round(decorX(d));
+  if (d.pop) {                                 // just bought: hidden until the shop closes, then pops up
+    if (d.pop.t < 0) return;
+    const k = Math.max(0.01, easeOutBack(Math.min(1, d.pop.t / DECOR_POP_S)));
+    ctx.translate(cx, groundY); ctx.scale(d.s * k, d.s * k);
+    drawDecor(ctx, d.id, 0, 0, clock);
+    return;
+  }
   if (d.s === 1) { drawDecor(ctx, d.id, cx, groundY, clock); return; }
   ctx.translate(cx, groundY); ctx.scale(d.s, d.s);
   drawDecor(ctx, d.id, 0, 0, clock);
@@ -414,16 +430,33 @@ function decide(b) {
   }
 }
 
+// A sold bird heads for the nearest edge: flying up and away, or (if it
+// can't fly) hurrying off on foot. It is dropped once it is out of sight.
+function sendAway(b) {
+  b.leaving = true; b.visit = null; b.entering = false; b.air = false; b.vy = 0;
+  b.facing = b.x < W / 2 ? -1 : 1;
+  if (b.clips.fly) setAction(b, 'fly');
+  else if (b.clips.walk) setAction(b, 'walk');
+  else b.gone = true;
+}
+function leaveStep(b, dt) {
+  if (b.action === 'fly') { b.x += FLY_SPEED * 1.2 * dt * b.facing; b.yOff += FLY_SPEED * 0.5 * dt; }
+  else b.x += WALK_SPEED * 2.5 * dt * b.facing;
+  const off = idleHalfW(b) + 24;
+  if (b.x < -off || b.x > W + off || b.yOff > groundY + 40) b.gone = true;
+}
+
 function updateBird(b, dt, dtMs) {
   b.st -= dt;
-  if (b.air) {                                   // hop physics (jump action or a pose-hop)
+  if (b.leaving) leaveStep(b, dt);
+  else if (b.air) {                                   // hop physics (jump action or a pose-hop)
     b.vy -= GRAVITY * dt; b.yOff += b.vy * dt;
     if (b.yOff <= 0) {
       b.yOff = 0; b.vy = 0; b.air = false;
       if (b.action === 'jump') { setAction(b, 'idle'); b.st = rnd(2, 5); }
     }
   }
-  switch (b.action) {
+  if (!b.leaving) switch (b.action) {
     case 'walk': {
       const dir = Math.sign(b.tx - b.x) || 1; b.facing = dir;
       b.x += WALK_SPEED * dt * dir;
@@ -526,7 +559,7 @@ function reconcileBirds() {
   if (!mounted) return;
   const recs = listBirds();
   const byUid = new Map(recs.map(r => [r.uid, r]));
-  const kept = birds.filter(b => byUid.has(b.rec.uid));
+  const kept = birds.filter(b => b.leaving || byUid.has(b.rec.uid));   // sold ones finish leaving
   if (kept.length !== birds.length) {
     birds = kept;
     if (selected && !birds.includes(selected)) {
@@ -534,9 +567,9 @@ function reconcileBirds() {
       if (currentCard()?.type === 'bird') hideCard();
     }
     if (hoverBird && !birds.includes(hoverBird)) hoverBird = null;
-    fx = fx.filter(s => s.anchor === 'nest' || birds.includes(s.anchor));
+    fx = fx.filter(s => s.anchor === 'nest' || s.anchor.fixed || birds.includes(s.anchor));
   }
-  for (const b of birds) b.rec = byUid.get(b.rec.uid);
+  for (const b of birds) if (!b.leaving) b.rec = byUid.get(b.rec.uid);
   for (const rec of recs) {
     if (!pending.has(rec.uid) && !birds.some(b => b.rec.uid === rec.uid)) spawnArrival(rec);
   }
@@ -559,6 +592,9 @@ function selectBird(b, { focusName = false, bounce = true } = {}) {
     focusName,
     side: b.x < W / 2 ? 'right' : 'left',
     onRename: name => renameBird(uid, name),
+    onSell: () => sellBird(uid),                 // the 'bird-sold' event does the rest
+    sellCoins: sellValue(b.rec),
+    canSell: canSell(uid),
     onClose: () => { if (selected && selected.rec.uid === uid) selected = null; },
   });
   selected = b;     // (a replaced card's onClose may have run in between)
@@ -584,7 +620,7 @@ function deselectAll() {
 function newEggView(egg, settled) {
   return {
     egg, dx: 0, dy: 0, placed: false,
-    drop: settled ? 0 : 18,                   // a newly bought egg settles into the nest
+    drop: settled ? 0 : 0, vy: 0, held: !settled,   // a bought egg falls in once the shop is closed (updateEggs)
     wobP: settled ? -1 : 0, wobAmp: 0.12, wobDur: 0.85, wobNext: rnd(2, 8),
     sparkT: rnd(0.4, 1.6), phase: rnd(0, Math.PI * 2),
   };
@@ -613,6 +649,42 @@ function refreshEggs(initial = false) {
     const uid = selEgg;
     showEggCard(v.egg, { onClose: () => { if (selEgg === uid) selEgg = null; } });
     selEgg = uid;
+  }
+}
+
+// A bought egg hit the nest: a wobble and a ring of sparkles.
+function eggLanded(v) {
+  const { w: ew, h: eh } = eggDims();
+  nudgeEgg(v, 0.28);
+  for (let i = 0; i < 7; i++) {
+    const a = (i / 7) * Math.PI * 2;
+    addSparkle('nest', v.dx + Math.cos(a) * ew * 0.9, v.dy - eh * 0.45 + Math.sin(a) * eh * 0.55,
+      i % 2 ? SPARKLE_SMALL : SPARKLE_BIG, 0.8, i * 0.05);
+  }
+}
+
+// Bought decor: start popping once the shop is closed (with sparkles around it);
+// a bought effect gets a sparkle shower over the garden.
+function updateReveals(dt) {
+  const open = shopOpen();
+  for (const d of decorObjs) {
+    if (!d.pop) continue;
+    if (d.pop.t < 0) {
+      if (open) continue;
+      d.pop.t = 0;
+      const x = decorX(d), w = d.w || 30, hh = d.h || 20;
+      for (let i = 0; i < 8; i++) {
+        addSparkle({ x: x + rnd(-0.6, 0.6) * w, yOff: rnd(0.1, 1.1) * hh, fixed: true }, 0, 0,
+          i % 3 ? SPARKLE_SMALL : SPARKLE_BIG, 0.9, 0.12 + i * 0.05);
+      }
+    } else if ((d.pop.t += dt) >= DECOR_POP_S) d.pop = null;
+  }
+  if (effectReveal && effectReveal.t < 0 && !open) {
+    effectReveal = null;
+    for (let i = 0; i < 16; i++) {
+      addSparkle({ x: rnd(0.08, 0.92) * W, yOff: rnd(0.25, 0.85) * groundY, fixed: true }, 0, 0,
+        i % 3 ? SPARKLE_SMALL : SPARKLE_BIG, 1.1, i * 0.07);
+    }
   }
 }
 
@@ -656,7 +728,16 @@ function updateEggs(dt) {
   layoutEggs(nestX(), dt);
   const { w: ew, h: eh } = eggDims();
   for (const v of eggViews) {
-    v.drop = v.drop > 0.3 ? v.drop * (1 - ease(dt, 7)) : 0;
+    if (v.held) {
+      if (!shopOpen()) { v.held = false; v.drop = Math.max(60, groundY * 0.85); v.vy = 0; v.landed = false; }
+    } else if (v.drop > 0 || v.vy < 0) {
+      v.vy += EGG_FALL_G * dt; v.drop -= v.vy * dt;
+      if (v.drop <= 0) {
+        v.drop = 0;
+        if (!v.landed) { v.landed = true; eggLanded(v); }
+        v.vy = v.vy > 160 ? -v.vy * 0.3 : 0;          // one small bounce, then it rests
+      }
+    }
     const ready = isEggReady(v.egg);
     const r = clamp(v.egg.warmth / (v.egg.need || 1), 0, 1);
     if (v.wobP >= 0) {
@@ -684,6 +765,7 @@ function eggAt(px, py, pad) {
   const nx = nestX(), { w, h } = eggDims();
   for (let i = eggViews.length - 1; i >= 0; i--) {
     const v = eggViews[i], x = nx + v.dx, y = groundY + v.dy - v.drop;
+    if (v.held) continue;
     if (px >= x - w / 2 - pad && px <= x + w / 2 + pad && py >= y - h - pad && py <= y + pad) return v;
   }
   return null;
@@ -696,6 +778,7 @@ function drawNestLayer() {
   if (nestA < 0.999) ctx.globalAlpha = nestA;
   safeDraw('nest', () => drawNest(ctx, nx, groundY));
   for (const v of eggViews) {
+    if (v.held) continue;                      // bought, still on show in the shop
     const ready = isEggReady(v.egg);
     const glow = ready ? 0.55 + 0.35 * Math.sin(clock * 2.4 + v.phase) : 0;
     safeDraw('egg', () => drawEgg(ctx, v.egg.tier, nx + v.dx, groundY + v.dy - v.drop, { wobble: wobbleAngle(v), crack: 0, glow }));
@@ -777,10 +860,10 @@ function revealHatch(h) {
   safe('banner', () => {
     const vName = rare ? variantFor(h.res.bird.species, h.res.bird.variant)?.name || '' : '';
     if (h.res.isNewSpecies) {
-      // First of its species: the shop sells it from now on.
+      // First of its species: it is now in the Vogelbuch.
       showBanner({
         title: '🎉 Neue Art entdeckt!',
-        sub: rare ? `${info.de} · seltene Variante ${vName}` : `${info.de} · ab jetzt auch im Shop`,
+        sub: rare ? `${info.de} · seltene Variante ${vName}` : `${info.de} · neu in deinem Vogelbuch`,
         rare,
       });
     } else if (rare) {
@@ -828,6 +911,16 @@ function rebuildDecor() {
     objs.push({ id: def.id, def, size });
   }
   objs.sort((a, b) => (b.id === 'pond') - (a.id === 'pond'));   // the flat pond is drawn first
+  // Objects that are new since the last rebuild (bought or switched on) pop up;
+  // one that is still popping keeps going.
+  const prev = knownDecor;
+  knownDecor = active;
+  for (const o of objs) {
+    const was = decorObjs.find(d => d.id === o.id);
+    if (was && was.pop) o.pop = was.pop;
+    else if (prev && !prev.has(o.id)) o.pop = { t: -1 };
+  }
+  for (const id of active) if (prev && !prev.has(id) && decorById(id)?.kind === 'effect') effectReveal = { t: -1 };
   decorObjs = objs;
   layoutKey = '';                     // fresh objects need positions
   // Effects: keep running instances (no visual reset), add new ones, drop removed ones.
@@ -942,7 +1035,7 @@ function birdHit(b, px, py) {
 }
 function birdAt(px, py) {
   if (selected && birdHit(selected, px, py)) return selected;   // drawn last = on top
-  for (let i = birds.length - 1; i >= 0; i--) if (birdHit(birds[i], px, py)) return birds[i];
+  for (let i = birds.length - 1; i >= 0; i--) if (!birds[i].leaving && birdHit(birds[i], px, py)) return birds[i];
   return null;
 }
 // Eggs are tiny, so a tap right on one wins over a bird standing in front of it,
@@ -1014,6 +1107,33 @@ function onStoreChange(type, data) {
     }
     case 'eggs': refreshEggs(); break;
     case 'decor': rebuildDecor(); reconcileBirds(); break;
+    case 'place-request': {
+      // This fallback strip has no placement mode (that is the 3D garden's):
+      // a bought or unpacked object simply goes to its default spot.
+      const it = data && getDecorItem(data.uid);
+      const spot = it && !it.pos && decorById(it.id)?.spot;
+      if (spot) placeDecor(it.uid, spot[0], spot[1]);
+      break;
+    }
+    case 'bird-sold': {                                   // fly (or walk) off, then gone
+      const rec = data && data.bird;
+      const b = rec && birds.find(o => o.rec.uid === rec.uid && !o.leaving);
+      if (currentCard()?.type === 'bird' && currentCard().uid === rec?.uid) hideCard();
+      if (b) {
+        if (selected === b) selected = null;
+        if (hoverBird === b) hoverBird = null;
+        sendAway(b);
+      }
+      if (rec) {
+        const who = rec.name || speciesInfo(rec.species).de;
+        const how = b && !b.clips.fly ? 'läuft' : 'fliegt';
+        safe('banner', () => showBanner({
+          title: '💰 Verkauft',
+          sub: `${who} ${how} davon · +${data.coins} ${data.coins === 1 ? 'Münze' : 'Münzen'}`,
+        }));
+      }
+      break;
+    }
     case 'reset':                                          // the 'decor'/'eggs' that follow rebuild the scene
       hatch = null; bursts = [];
       deselectAll();
@@ -1034,6 +1154,7 @@ function resize() {
   lastPtr = null;
   const widthChanged = W !== prevW; prevW = W;
   for (const b of birds) {
+    if (b.leaving) continue;                   // on its way out — let it go
     if (b.action === 'walk' || b.action === 'fly') b.tx = clampX(b.tx);
     if (b.visit) b.visit.x = clampX(b.visit.x);
     const off = idleHalfW(b) + 12;
@@ -1065,7 +1186,12 @@ function drawBackground() {
 function update(dt, dtMs) {
   clock += dt;
   for (const b of birds) updateBird(b, dt, dtMs);
+  if (birds.some(b => b.gone)) {
+    birds = birds.filter(b => !b.gone);
+    fx = fx.filter(s => s.anchor === 'nest' || s.anchor.fixed || birds.includes(s.anchor));
+  }
   updateEggs(dt);
+  updateReveals(dt);
   updateHatch(dt);
   const e = effectEnv();
   for (const [id, inst] of effects) safe('fx:' + id, () => inst.update(dt, e));
@@ -1131,7 +1257,7 @@ export async function mountGarden(container) {
   wrap.appendChild(shopBtn);
   const cap = document.createElement('div');
   cap.className = 'garden-cap';
-  cap.textContent = '🐦 Dein Garten – tippe einen Vogel an, um ihn anzusehen und zu benennen. Neue Arten schlüpfen aus Eiern – die gibt es im Shop.';
+  cap.textContent = '🐦 Dein Garten – tippe einen Vogel an, um ihn anzusehen und zu benennen. Neue Vögel schlüpfen aus Eiern – die gibt es im Shop.';
   container.innerHTML = '';
   container.appendChild(wrap);
   container.appendChild(cap);
@@ -1146,7 +1272,7 @@ export async function mountGarden(container) {
   mounted = true;
 
   // fresh scene state
-  clock = 0; birds = []; bursts = []; fx = []; hatch = null;
+  clock = 0; birds = []; bursts = []; fx = []; hatch = null; knownDecor = null; effectReveal = null;
   selected = null; selEgg = null; hoverBird = null; pending.clear();
   eggViews = []; effects.clear(); nestSizeCache = null;
   layoutKey = ''; lastPtr = null; prevW = 0; cursorNow = '';

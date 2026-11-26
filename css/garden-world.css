@@ -1,0 +1,109 @@
+/* The 2.5D garden (js/garden3d/scene.js): it gets most of the screen. The
+   cards and banners (garden-scene.css) and the shop (garden.css) are shared
+   with the 2D fallback garden. */
+
+body.is-garden .wrap{max-width:1480px}
+.garden-loading{display:grid;place-items:center;height:clamp(420px,calc(100svh - 200px),980px);
+  color:var(--mut);font:11px/1.6 'PressStart2P',monospace;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+
+.garden.g3d{
+  height:clamp(300px,calc(100svh - 190px),980px);
+  background:#101820;touch-action:none;user-select:none;-webkit-user-select:none;
+}
+.garden.g3d:fullscreen{height:100vh;border-radius:0;border:0}
+.garden.g3d:-webkit-full-screen{height:100vh;border-radius:0;border:0}
+.g3d-canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
+.garden.g3d .garden-shop-btn{position:static}
+
+/* buttons over the scene */
+.g3d-actions{position:absolute;top:10px;right:10px;z-index:2;display:flex;gap:6px}
+.g3d-btn{
+  background:rgba(21,28,37,.82);border:1px solid var(--line);color:var(--txt);
+  padding:7px 12px;border-radius:9px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;line-height:1.2;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);white-space:nowrap;
+}
+.g3d-btn:hover{border-color:var(--accent);color:var(--accent)}
+.g3d-btn.on,.g3d-btn.is-gold{background:#ffd76b;border-color:#ffd76b;color:#1d1606}
+.g3d-btn.is-gold:hover{filter:brightness(1.06);color:#1d1606}
+.g3d-btn:disabled{opacity:.45;cursor:not-allowed;filter:none}
+.g3d-icon{padding:7px 10px}
+
+.g3d-clock{
+  position:absolute;left:10px;bottom:10px;z-index:2;pointer-events:none;
+  background:rgba(21,28,37,.78);border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+  font:10px/1.4 'PressStart2P',monospace;color:var(--txt);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+
+/* name tags over birds */
+.g3d-labels{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.g3d-tag{
+  position:absolute;left:0;top:0;font:8px/1 'PressStart2P',monospace;color:#f3f0df;
+  background:rgba(14,22,26,.78);padding:4px 6px 3px;border-radius:4px;white-space:nowrap;margin-top:-6px;
+}
+.g3d-tag:not(.soft)::after{content:"";position:absolute;left:50%;top:100%;margin-left:-4px;border:4px solid transparent;border-top-color:#ffd76b}
+.g3d-tag.soft{opacity:.85}
+
+/* edit mode */
+.g3d-editbar,.g3d-objbar{
+  position:absolute;left:10px;right:10px;margin:0 auto;width:fit-content;z-index:2;display:none;
+  align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;max-width:calc(100% - 20px);
+  background:rgba(21,28,37,.88);border:1px solid var(--line);border-radius:12px;padding:7px 8px 7px 12px;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.3);
+}
+.g3d-editbar{top:56px}
+.g3d-objbar{bottom:12px}
+.g3d-editbar.show,.g3d-objbar.show{display:flex}
+.g3d-editbar-text,.g3d-objname{font-size:13px;color:var(--txt)}
+.garden.g3d.is-editing{box-shadow:inset 0 0 0 2px rgba(255,215,107,.55)}
+.garden.g3d.is-editing .g3d-clock{display:none}
+
+/* feeding mode: a soft green frame; each handful shows its price where it lands */
+.garden.g3d.is-feeding{box-shadow:inset 0 0 0 2px rgba(150,220,120,.6)}
+.g3d-cost{
+  position:absolute;z-index:2;pointer-events:none;transform:translate(-50%,-100%);
+  font:9px/1 'PressStart2P',monospace;color:#ffe08a;text-shadow:0 1px 2px rgba(0,0,0,.7);
+  animation:g3dCost 1s ease-out forwards;
+}
+@keyframes g3dCost{0%{opacity:0;margin-top:4px}20%{opacity:1}100%{opacity:0;margin-top:-26px}}
+.g3d-btn.shake{animation:g3dShake .4s}
+@keyframes g3dShake{20%,60%{transform:translateX(-3px)}40%,80%{transform:translateX(3px)}}
+
+.g3d-lager{
+  position:absolute;top:104px;left:50%;transform:translateX(-50%);z-index:2;display:none;
+  width:min(320px,calc(100% - 20px));max-height:calc(100% - 170px);overflow-y:auto;
+  background:rgba(21,28,37,.94);border:1px solid var(--line);border-radius:12px;padding:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.g3d-lager.show{display:block}
+.g3d-lager-row{display:flex;align-items:center;gap:10px;padding:5px 4px}
+.g3d-lager-row + .g3d-lager-row{border-top:1px solid var(--line)}
+.g3d-lager-ico{width:40px;height:40px;image-rendering:pixelated;flex:none}
+.g3d-lager-name{flex:1;font-size:13px;font-weight:600}
+.g3d-lager-empty{margin:6px;font-size:13px;color:var(--mut)}
+
+.g3d-hint{
+  position:absolute;left:12px;right:12px;margin:0 auto;width:fit-content;bottom:62px;z-index:2;
+  transform:translateY(8px);opacity:0;pointer-events:none;
+  max-width:calc(100% - 24px);text-align:center;font-size:13px;color:var(--txt);
+  background:rgba(21,28,37,.9);border:1px solid var(--line);border-radius:10px;padding:7px 12px;transition:.25s;
+}
+.g3d-hint.on{opacity:1;transform:none}
+/* while the object bar is up, hints move to the top so they never cover its buttons */
+.g3d-objbar.show ~ .g3d-hint{bottom:auto;top:108px}
+/* hatch / sale banners sit below the button row */
+.garden.g3d .gs-banner{top:54px}
+
+@media (max-width:600px){
+  /* the header and tabs take ~220 px on a phone; keep the whole garden on screen */
+  .garden.g3d{height:clamp(360px,calc(100svh - 250px),900px);border-radius:12px}
+  .garden-loading{height:clamp(360px,calc(100svh - 250px),900px)}
+  .g3d-btn{padding:6px 9px;font-size:12px}
+  .g3d-editbar{top:50px}
+  .g3d-editbar-text{display:none}
+}
+/* phones held sideways: the garden takes the whole height (the page still scrolls via the caption) */
+@media (max-height:520px) and (orientation:landscape){
+  .garden.g3d,.garden-loading{height:calc(100svh - 28px)}
+  .g3d-editbar{top:48px}
+}
+@media (prefers-reduced-motion:reduce){.g3d-hint{transition:none}.g3d-cost,.g3d-btn.shake{animation:none}}

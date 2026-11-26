@@ -2,7 +2,7 @@ import { loadChapters } from './data.js';
 import * as engine from './engine.js';
 import * as qt from './qtypes.js';
 import { quizCardHTML, feedbackHTML, dashboardHTML } from './render.js';
-import { mountGarden, unmountGarden } from './garden.js';
+import { mountGarden as mount2D, unmountGarden as unmount2D } from './garden.js';
 import { warmEggs, listEggs, isEggReady, readyEggCount, onGardenChange } from './garden-store.js';
 
 const $ = s => document.querySelector(s);
@@ -171,7 +171,10 @@ function eggReadyToast(n) {
   tab.appendChild(toast);
   setTimeout(() => toast.remove(), 2600);
 }
-onGardenChange(type => { if (type === 'eggs') updateGardenBadge(); });
+onGardenChange((type, data) => {
+  if (type === 'eggs') updateGardenBadge();
+  if (type === 'bird-sold') updateCoinDisplay(data?.coins || 0);   // coins for a sold bird
+});
 
 /* ---------- events ---------- */
 view.addEventListener('click', e => {
@@ -267,14 +270,58 @@ function switchMode(mode) {
   if (mode === prev && mode === 'quiz') return;   // re-rendering would re-open an answered question
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
   state.mode = mode;
-  if (prev === 'garden' && mode !== 'garden') unmountGarden();
+  if (prev === 'garden' && mode !== 'garden') closeGarden();
   $('#controls').style.display = mode === 'quiz' ? 'flex' : 'none';
-  if (mode === 'garden') { $('#statbar').innerHTML = ''; mountGarden(view); return; }
+  if (mode === 'garden') { $('#statbar').innerHTML = ''; openGarden(); return; }
   // Coming back after answering: move on, otherwise render() would show the same
   // question unanswered again and it could be graded (coins, eggs, SRS) twice.
   if (mode === 'quiz' && state.answered) { state.idx++; state.answered = false; }
   if (mode === 'quiz' && state.idx >= state.queue.length) buildSession();
   render();
+}
+
+/* ---------- garden tab ----------
+ * The 2.5D garden (js/garden3d/, Three.js) is loaded only when the tab is
+ * opened, so a missing WebGL2 or a failed download never affects the quiz;
+ * then the old 2D garden (js/garden.js) takes over. */
+let garden3d = null;          // Promise of the 2.5D garden module (resolves to null if it can't load)
+let gardenNow = null;         // the garden that is mounted: { unmount }
+let gardenTicket = 0;         // guards against switching tabs while the module loads
+// Probed once: every probe would cost one of the few WebGL contexts a page may hold.
+let hasWebgl2 = null;
+function webgl2() {
+  if (hasWebgl2 === null) {
+    try {
+      const gl = document.createElement('canvas').getContext('webgl2');
+      hasWebgl2 = !!gl;
+      gl?.getExtension('WEBGL_lose_context')?.loseContext();
+    } catch (e) { hasWebgl2 = false; }
+  }
+  return hasWebgl2;
+}
+const GARDEN_LOAD_TIMEOUT = 20000;   // ms — a stalled download falls back to the 2D garden (for this visit)
+async function openGarden() {
+  const ticket = ++gardenTicket;
+  document.body.classList.add('is-garden');
+  let mod = null;
+  if (webgl2()) {
+    if (!gardenNow) view.innerHTML = '<div class="garden-loading">🌱 Garten wird gepflanzt …</div>';
+    garden3d = garden3d || import('./garden3d/scene.js').catch(e => { console.error('[garden] 3D garden failed to load', e); garden3d = null; return null; });
+    mod = await Promise.race([garden3d, new Promise(r => setTimeout(() => r(null), GARDEN_LOAD_TIMEOUT))]);
+  }
+  if (ticket !== gardenTicket || state.mode !== 'garden') return;   // left the tab meanwhile
+  if (mod) {
+    try { mod.mountGarden(view); gardenNow = { unmount: mod.unmountGarden }; return; }
+    catch (e) { console.error('[garden] 3D garden could not start', e); garden3d = Promise.resolve(null); }
+  }
+  mount2D(view);
+  gardenNow = { unmount: unmount2D };
+}
+function closeGarden() {
+  gardenTicket++;
+  document.body.classList.remove('is-garden');
+  if (gardenNow) { try { gardenNow.unmount(); } catch (e) { console.error(e); } }
+  gardenNow = null;
 }
 
 function wireControls() {

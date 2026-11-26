@@ -14,7 +14,9 @@
 // `size`   — relative on-screen scale multiplier (frame dimensions don't encode
 //            real-world size, so we set it by hand). 1.0 ≈ a crow.
 // `rarity` — 'normal' | 'rare' | 'epic'; drives the shop tile colour.
-// `cost`   — price in gold coins to buy one.
+// `cost`   — the bird's value in gold coins: its shop price (birds are not
+//            sold in the shop for now, they only hatch) and the basis of the
+//            coins the player gets for selling one (SELL_SHARE).
 export const BIRDS = [
   // ---- single-file (frames object + frameTags) ----
   { id: 'pigeon', name: 'Pigeon', size: 0.8, rarity: 'normal', cost: 20, sheet: 'assets/birds/pigeon/Pigeon.json',
@@ -108,6 +110,10 @@ export function speciesInfo(id) { return SPECIES_INFO[id] || { de: birdById(id)?
  * is the chance of a rare colour variant (one of the species' three in
  * garden-variants.js; variants can ONLY come from eggs). */
 export const NEW_SPECIES_WEIGHT = 3;
+// Selling a bird pays this share of its species' `cost` (× SELL_VARIANT_FACTOR
+// for a bird in a rare colour variant), rounded.
+export const SELL_SHARE = 0.25;
+export const SELL_VARIANT_FACTOR = 2;
 export const EGG_TIERS = [
   { id: 'normal', name: 'Einfaches Ei', cost: 60, need: 10, variantChance: 0.12 },
   { id: 'rare', name: 'Seltenes Ei', cost: 300, need: 20, variantChance: 0.15 },
@@ -121,27 +127,39 @@ export function eggTierById(id) { return EGG_TIERS.find(t => t.id === id); }
 export function speciesForTier(tier) { return BIRDS.filter(b => b.rarity === tier); }
 
 /* ---------- Decor ----------
- * kind 'object' — drawn in the scene, standing on the ground at fraction `x`
- *                 of the garden width. `interact` makes birds visit it:
- *                 'drink' / 'feed' → walk there and eat/peck for a while,
- *                 'wade' → like drink, strongly preferred by species whose
- *                 SPECIES_INFO.likes includes this decor id.
- * kind 'effect' — ambient animation layer (no position).
- * Owned decor can be switched on/off in the shop; nothing decays. */
+ * kind 'object' — drawn in the scene, standing on the ground. `interact` makes
+ *                 birds visit it: 'drink' / 'feed' → walk there and eat/peck
+ *                 for a while, 'wade' → like drink, strongly preferred by
+ *                 species whose SPECIES_INFO.likes includes this decor id.
+ *                 `x` is its spot as a fraction of the width of the old 2D
+ *                 garden strip (garden.js, still the fallback without WebGL).
+ *   Placeable objects (every object without `terrain`) are bought one piece at
+ *   a time and the player puts each piece where she likes in the 3D garden, or
+ *   keeps it in storage ("Lager"); see the `items` in garden-store.js.
+ *     max   how many of it one garden may own (placed + stored)
+ *     spot  [x, z] its default position in 3D world units (x east, z south)
+ *     r     its footprint radius in world units (keeps pieces from overlapping)
+ *   `terrain: true` — a landscape feature (the pond): bought once and switched
+ *                 on/off like an effect, never moved; the 3D world shapes the
+ *                 ground around it.
+ * kind 'effect' — ambient animation layer (no position), bought once and
+ *                 switched on/off. Nothing decays. */
 export const DECOR = [
-  { id: 'flowers', kind: 'object', name: 'Blumenbeet', cost: 60, x: 0.08,
+  { id: 'flowers', kind: 'object', name: 'Blumenbeet', cost: 60, x: 0.08, max: 10, spot: [-10.8, 5.6], r: 0.7,
     desc: 'Ein kleines Beet mit Wildblumen. Schmetterlinge landen gern darauf.' },
-  { id: 'mushrooms', kind: 'object', name: 'Pilzgrüppchen', cost: 40, x: 0.17,
+  { id: 'mushrooms', kind: 'object', name: 'Pilzgrüppchen', cost: 40, x: 0.17, max: 8, spot: [-10.3, -0.9], r: 0.35,
     desc: 'Ein paar rote Pilze im Gras.' },
   { id: 'birdbath', kind: 'object', name: 'Vogeltränke', cost: 120, x: 0.28, interact: 'drink',
+    max: 3, spot: [-0.4, 2.2], r: 0.55,
     desc: 'Eine steinerne Schale mit Wasser – deine Vögel kommen zum Trinken.' },
-  { id: 'pond', kind: 'object', name: 'Teich', cost: 300, x: 0.60, interact: 'wade',
+  { id: 'pond', kind: 'object', name: 'Teich', cost: 300, x: 0.60, interact: 'wade', terrain: true,
     desc: 'Ein kleiner Teich. Flamingo und Schuhschnabel lieben ihn.' },
-  { id: 'lantern', kind: 'object', name: 'Gartenlaterne', cost: 90, x: 0.74,
+  { id: 'lantern', kind: 'object', name: 'Gartenlaterne', cost: 90, x: 0.74, max: 8, spot: [0.7, 6.3], r: 0.25,
     desc: 'Eine Laterne mit sanft flackerndem Licht.' },
   { id: 'feeder', kind: 'object', name: 'Futterhaus', cost: 150, x: 0.84, interact: 'feed',
+    max: 3, spot: [-7.4, -1.4], r: 0.35,
     desc: 'Ein Futterhaus auf einem Pfahl – darunter wird fleißig gepickt.' },
-  { id: 'stones', kind: 'object', name: 'Findlinge', cost: 50, x: 0.95,
+  { id: 'stones', kind: 'object', name: 'Findlinge', cost: 50, x: 0.95, max: 6, spot: [14.0, 4.1], r: 0.6,
     desc: 'Zwei moosige Steine am Rand.' },
 
   { id: 'butterflies', kind: 'effect', name: 'Schmetterlinge', cost: 150,
@@ -153,6 +171,14 @@ export const DECOR = [
   { id: 'sunbeams', kind: 'effect', name: 'Sonnenstrahlen', cost: 80,
     desc: 'Weiche Lichtstrahlen fallen schräg in den Garten.' },
 ];
-// Where the nest (eggs) sits — between the bird bath and the pond.
+// Where the nest (eggs) sits — between the bird bath and the pond. NEST_X is
+// the spot in the old 2D strip; NEST_SPOT the default [x, z] in the 3D garden
+// (the player may move it, see nestPosition() in garden-store.js).
 export const NEST_X = 0.42;
+export const NEST_SPOT = [-5.0, 4.6];
 export function decorById(id) { return DECOR.find(d => d.id === id); }
+// True for decor the player buys piece by piece and places herself.
+export function isPlaceable(id) {
+  const d = decorById(id);
+  return !!d && d.kind === 'object' && !d.terrain;
+}
