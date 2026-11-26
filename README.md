@@ -44,7 +44,7 @@ js/
 data/
   schema.md            Datenformat – vor dem Bearbeiten lesen
   vlXX-*.json          ein Kapitel pro Vorlesung
-  x-weitere-themen.json Klausurthemen ohne Folien in VL01–11 (Sehsystem, TMS, Kanalopathien …)
+  x-weitere-themen.json Klausurthemen ohne Foliensatz (Modellorganismen, TMS, Schlaganfall, Sprache)
 assets/figures/        aus den Folien erzeugte Schaubilder (Beschriftungen abgedeckt)
 tools/
   figtool.py           Folien sichten (sheet/grid/words) und Schaubilder bauen (build)

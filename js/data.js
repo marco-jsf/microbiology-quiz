@@ -11,6 +11,8 @@ export const CHAPTER_FILES = [
   'vl09-glutamat.json',
   'vl10-dopamin.json',
   'vl11-neuromodulatoren.json',
+  'vl12-kanalopathien.json',
+  'vl13-sehsystem.json',
   'x-weitere-themen.json',
 ];
 

@@ -20,7 +20,7 @@ Fachbegriffe, die auf den Folien englisch stehen, stehen in Klammern dabei
 
 | Feld | Pflicht | Bedeutung |
 |---|---|---|
-| `id` | ✓ | stabil, kebab-case, mit Kapitelpräfix: `vl01-mikroglia-ursprung`. Fortschritt hängt an der ID, also nie umbenennen. |
+| `id` | ✓ | stabil, kebab-case, mit Kapitelpräfix: `vl01-mikroglia-ursprung`. Fortschritt hängt an der ID, also nie umbenennen. Zieht eine Frage in ein anderes Kapitel um, alte → neue ID in `ID_ALIASES` (js/engine.js) eintragen. |
 | `type` | ✓ | `single` · `multi` · `combo` · `open` · `label` · `order` |
 | `topic` | ✓ | genau einer der Einträge aus `topics` |
 | `source` | ✓ | `exam` (aus Gedankenprotokoll) · `slides` (aus den Folien erstellt) · `book` (Lehrbuchwissen, nur wo Folien fehlen) |

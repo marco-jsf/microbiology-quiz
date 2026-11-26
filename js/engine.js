@@ -3,9 +3,43 @@ const LS_KEY = 'neuroQuizV1';
 const DAY = 86400000;
 const INTERVALS = [0, 1, 3, 7, 14, 30]; // days per Leitner level 0..5
 
-let srs = load();
+// Questions that moved to another chapter got a new ID (IDs carry the chapter
+// prefix). Map old → new so the learning progress moves with them.
+const ID_ALIASES = {
+  // Altklausur-Fragen aus „Weitere Themen“, seit es Folien zu VL12/VL13 gibt
+  'weitere-dominant-negativ': 'vl12-dominant-negativ',
+  'weitere-brugada': 'vl12-brugada',
+  'weitere-kanalopathie': 'vl12-kanalopathie',
+  'weitere-scn1a-mauslinien': 'vl12-scn1a-mauslinien',
+  'weitere-kompensation': 'vl12-kompensation',
+  'weitere-cng-kanaele': 'vl13-cng-kanaele',
+  'weitere-laterale-inhibition': 'vl13-laterale-inhibition',
+  'weitere-rezeptive-felder': 'vl13-rezeptive-felder',
+  'weitere-visuelle-verarbeitung': 'vl13-visuelle-verarbeitung',
+  'weitere-farbensehen': 'vl13-farbensehen',
+  'weitere-cgl-zelltypen': 'vl13-cgl-zelltypen',
+  'weitere-parvozellulaer': 'vl13-parvozellulaer',
+  'weitere-complex-cells': 'vl13-complex-cells',
+  'weitere-hyperkolumne': 'vl13-hyperkolumne',
+  'weitere-sehbahn': 'vl13-sehbahn',
+  'weitere-sehbahn-reihenfolge': 'vl13-sehbahn-reihenfolge',
+  'weitere-visuelle-mechanismen': 'vl13-visuelle-mechanismen',
+};
+
+let srs = migrate(load());
 function load() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch (e) { return {}; } }
 function save() { try { localStorage.setItem(LS_KEY, JSON.stringify(srs)); } catch (e) { } }
+function migrate(map) {
+  let changed = false;
+  for (const [oldId, newId] of Object.entries(ID_ALIASES)) {
+    if (!map[oldId]) continue;
+    if (!map[newId]) map[newId] = map[oldId];
+    delete map[oldId];
+    changed = true;
+  }
+  if (changed) { try { localStorage.setItem(LS_KEY, JSON.stringify(map)); } catch (e) { } }
+  return map;
+}
 
 export function getSRS() { return srs; }
 export function resetProgress() { srs = {}; save(); }

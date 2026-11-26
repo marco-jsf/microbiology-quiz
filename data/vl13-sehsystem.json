@@ -1,0 +1,3588 @@
+{
+ "id": "vl13",
+ "title": "VL13 · Visuelles System",
+ "short": "Sehen",
+ "color": "#6c5ce7",
+ "topics": [
+  "Auge, Netzhaut & Photorezeptoren",
+  "Phototransduktion & Sehzyklus",
+  "Retinale Zelltypen & ON/OFF-Wege",
+  "Ganglienzellen & P/M-Pathways",
+  "Sehbahn, LGN & Retinotopie",
+  "Visueller Cortex & rezeptive Felder",
+  "Farbsehen & binokulares Sehen",
+  "Erbkrankheiten & Gentherapie",
+  "Zusammenfassung"
+ ],
+ "questions": [
+  {
+   "id": "vl13-auge-label",
+   "type": "label",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folie 4",
+   "stem": "Beschriften Sie den Querschnitt durch das Auge.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 4,
+    "crop": [
+     240,
+     92,
+     720,
+     512
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      248,
+      158,
+      304,
+      176
+     ],
+     "answer": "Hornhaut (Cornea)",
+     "accept": [
+      "Cornea",
+      "Hornhaut",
+      "Kornea"
+     ],
+     "x": 1.15,
+     "y": 15.12,
+     "w": 12.71,
+     "h": 5.48
+    },
+    {
+     "box": [
+      296,
+      119,
+      323,
+      138
+     ],
+     "answer": "Regenbogenhaut (Iris)",
+     "accept": [
+      "Iris",
+      "Regenbogenhaut"
+     ],
+     "x": 11.15,
+     "y": 5.83,
+     "w": 6.67,
+     "h": 5.71
+    },
+    {
+     "box": [
+      450,
+      158,
+      516,
+      196
+     ],
+     "answer": "Glaskörper (Corpus vitreum)",
+     "accept": [
+      "Glaskörper",
+      "Corpus vitreum",
+      "vitreous humor",
+      "vitreous body",
+      "Glaskoerper"
+     ],
+     "x": 43.23,
+     "y": 15.12,
+     "w": 14.79,
+     "h": 10.24
+    },
+    {
+     "box": [
+      533,
+      201,
+      583,
+      220
+     ],
+     "answer": "Netzhaut (Retina)",
+     "accept": [
+      "Retina",
+      "Netzhaut"
+     ],
+     "x": 60.52,
+     "y": 25.36,
+     "w": 11.46,
+     "h": 5.71
+    },
+    {
+     "box": [
+      614,
+      289,
+      703,
+      309
+     ],
+     "answer": "Sehnerv (N. opticus)",
+     "accept": [
+      "optic nerve",
+      "Sehnerv",
+      "Nervus opticus",
+      "N. opticus",
+      "Opticus"
+     ],
+     "x": 77.4,
+     "y": 46.31,
+     "w": 19.58,
+     "h": 5.95
+    },
+    {
+     "box": [
+      641,
+      321,
+      692,
+      340
+     ],
+     "answer": "Lederhaut (Sklera)",
+     "accept": [
+      "Sclera",
+      "Sklera",
+      "Lederhaut"
+     ],
+     "x": 83.02,
+     "y": 53.93,
+     "w": 11.67,
+     "h": 5.71
+    },
+    {
+     "box": [
+      620,
+      365,
+      684,
+      384
+     ],
+     "answer": "Aderhaut (Choroidea)",
+     "accept": [
+      "Choroid",
+      "Choroidea",
+      "Aderhaut",
+      "Chorioidea"
+     ],
+     "x": 78.65,
+     "y": 64.4,
+     "w": 14.37,
+     "h": 5.71
+    },
+    {
+     "box": [
+      591,
+      402,
+      672,
+      440
+     ],
+     "answer": "Retinales Pigmentepithel (RPE)",
+     "accept": [
+      "Pigmentepithel",
+      "pigment epithelium",
+      "RPE",
+      "retinales Pigmentepithel"
+     ],
+     "x": 72.6,
+     "y": 73.21,
+     "w": 17.92,
+     "h": 10.24
+    },
+    {
+     "box": [
+      256,
+      440,
+      326,
+      478
+     ],
+     "answer": "Kammerwasser (Humor aquosus)",
+     "accept": [
+      "Kammerwasser",
+      "aqueous humor",
+      "Humor aquosus",
+      "vordere Augenkammer",
+      "Augenkammer"
+     ],
+     "x": 2.81,
+     "y": 82.26,
+     "w": 15.62,
+     "h": 10.24
+    },
+    {
+     "box": [
+      353,
+      489,
+      444,
+      508
+     ],
+     "answer": "Ziliarkörper (Corpus ciliare)",
+     "accept": [
+      "ciliary body",
+      "Ziliarkörper",
+      "Corpus ciliare",
+      "Strahlenkörper",
+      "Ziliarkoerper"
+     ],
+     "x": 23.02,
+     "y": 93.93,
+     "w": 20.0,
+     "h": 5.71
+    }
+   ],
+   "bank": [
+    "Fovea centralis",
+    "Papille (blinder Fleck)",
+    "Bindehaut (Konjunktiva)"
+   ],
+   "explanation": "Wandschichten von außen nach innen: Lederhaut (Sklera) → Aderhaut (Choroidea) → Pigmentepithel (RPE) → Netzhaut. Vorne liegen Hornhaut, Kammerwasser, Iris und Ziliarkörper (Aufhängung der Linse), dahinter füllt der Glaskörper den Augapfel. Die Axone der Ganglienzellen verlassen das Auge als Sehnerv.",
+   "image": "assets/figures/vl13-auge-label.webp",
+   "iw": 960,
+   "ih": 840
+  },
+  {
+   "id": "vl13-netzhaut-schichten-label",
+   "type": "label",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folien 5, 29",
+   "stem": "Beschriften Sie das Schema zum Aufbau der Netzhaut (Schichten und Zelltypen).",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 5,
+    "crop": [
+     585,
+     100,
+     885,
+     508
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      751,
+      137,
+      878,
+      153
+     ],
+     "answer": "Retinales Pigmentepithel (RPE)",
+     "accept": [
+      "RPE",
+      "Pigmentepithel",
+      "RPE cells",
+      "RPE-Zellen",
+      "retinales Pigmentepithel"
+     ],
+     "x": 54.5,
+     "y": 8.46,
+     "w": 44.0,
+     "h": 5.15
+    },
+    {
+     "box": [
+      754,
+      159,
+      836,
+      175
+     ],
+     "answer": "Außensegmente",
+     "accept": [
+      "outer segments",
+      "Außensegment",
+      "Aussensegmente",
+      "Photorezeptor-Außensegmente",
+      "OS"
+     ],
+     "x": 55.5,
+     "y": 13.85,
+     "w": 29.0,
+     "h": 5.15
+    },
+    {
+     "box": [
+      755,
+      178,
+      836,
+      194
+     ],
+     "answer": "Innensegmente (inner segments)",
+     "accept": [
+      "inner segments",
+      "Innensegment",
+      "Innensegmente",
+      "Photorezeptor-Innensegmente",
+      "IS"
+     ],
+     "x": 55.83,
+     "y": 18.5,
+     "w": 28.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      748,
+      200,
+      872,
+      216
+     ],
+     "answer": "Äußere Grenzmembran (OLM)",
+     "accept": [
+      "outer limiting membrane",
+      "OLM",
+      "äußere Grenzmembran",
+      "Membrana limitans externa",
+      "aeussere Grenzmembran"
+     ],
+     "x": 53.5,
+     "y": 23.9,
+     "w": 43.0,
+     "h": 5.15
+    },
+    {
+     "box": [
+      769,
+      237,
+      865,
+      253
+     ],
+     "answer": "Äußere Körnerschicht (ONL)",
+     "accept": [
+      "outer nuclear layer",
+      "ONL",
+      "äußere Kernschicht",
+      "äußere nukleäre Schicht",
+      "aeussere Koernerschicht"
+     ],
+     "x": 60.5,
+     "y": 32.97,
+     "w": 33.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      756,
+      287,
+      860,
+      303
+     ],
+     "answer": "Äußere plexiforme Schicht (OPL)",
+     "accept": [
+      "outer plexiform layer",
+      "OPL",
+      "äußere plexiforme Schicht",
+      "aeussere plexiforme Schicht"
+     ],
+     "x": 56.17,
+     "y": 45.22,
+     "w": 36.33,
+     "h": 5.15
+    },
+    {
+     "box": [
+      762,
+      336,
+      855,
+      352
+     ],
+     "answer": "Innere Körnerschicht (INL)",
+     "accept": [
+      "inner nuclear layer",
+      "INL",
+      "innere Kernschicht",
+      "innere nukleäre Schicht",
+      "innere Koernerschicht"
+     ],
+     "x": 58.17,
+     "y": 57.23,
+     "w": 32.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      759,
+      411,
+      860,
+      427
+     ],
+     "answer": "Innere plexiforme Schicht (IPL)",
+     "accept": [
+      "inner plexiform layer",
+      "IPL",
+      "innere plexiforme Schicht"
+     ],
+     "x": 57.17,
+     "y": 75.61,
+     "w": 35.33,
+     "h": 5.15
+    },
+    {
+     "box": [
+      762,
+      469,
+      855,
+      485
+     ],
+     "answer": "Ganglienzellschicht (GCL)",
+     "accept": [
+      "ganglion cell layer",
+      "GCL",
+      "Ganglienzellschicht",
+      "Ganglionzellschicht"
+     ],
+     "x": 58.17,
+     "y": 89.83,
+     "w": 32.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      748,
+      488,
+      871,
+      504
+     ],
+     "answer": "Innere Grenzmembran (ILM)",
+     "accept": [
+      "inner limiting membrane",
+      "ILM",
+      "innere Grenzmembran",
+      "Membrana limitans interna"
+     ],
+     "x": 53.5,
+     "y": 94.49,
+     "w": 42.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      595,
+      319,
+      616,
+      335
+     ],
+     "answer": "Müller-Zelle (MC)",
+     "accept": [
+      "Müller cell",
+      "MC",
+      "Müller-Glia",
+      "Müller-Gliazelle",
+      "Müllerzelle",
+      "Mueller-Zelle"
+     ],
+     "x": 2.5,
+     "y": 53.06,
+     "w": 8.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      595,
+      348,
+      613,
+      364
+     ],
+     "answer": "Bipolarzelle (BC)",
+     "accept": [
+      "BC",
+      "bipolar cell",
+      "Bipolarzelle",
+      "bipolare Zelle"
+     ],
+     "x": 2.5,
+     "y": 60.17,
+     "w": 7.67,
+     "h": 5.15
+    },
+    {
+     "box": [
+      595,
+      456,
+      615,
+      471
+     ],
+     "answer": "Ganglienzelle (GC)",
+     "accept": [
+      "GC",
+      "ganglion cell",
+      "Ganglienzelle",
+      "retinale Ganglienzelle",
+      "RGC",
+      "Ganglionzelle"
+     ],
+     "x": 2.5,
+     "y": 86.64,
+     "w": 8.33,
+     "h": 4.9
+    }
+   ],
+   "bank": [
+    "Horizontalzelle",
+    "Amakrine Zelle",
+    "Nervenfaserschicht"
+   ],
+   "explanation": "Die Netzhaut ist „invers“: Licht durchquert Ganglienzellschicht, IPL, INL und OPL, bevor es die Außensegmente erreicht, die im RPE stecken. Körnerschichten enthalten Zellkörper (ONL: Photorezeptoren; INL: Bipolar-, Horizontal-, Amakrin- und Müller-Zellen), plexiforme Schichten die Synapsen (OPL: Photorezeptor → Bipolar-/Horizontalzelle; IPL: Bipolar-/Amakrinzelle → Ganglienzelle). Müller-Zellen durchspannen die ganze Netzhaut. Die äußere Grenzmembran (OLM) trennt Innensegmente und Zellkörper der Photorezeptoren, die innere Grenzmembran (ILM) bildet die Grenze zum Glaskörper (beide von Müller-Zellen gebildet, Lehrbuch).",
+   "image": "assets/figures/vl13-netzhaut-schichten-label.webp",
+   "iw": 600,
+   "ih": 816
+  },
+  {
+   "id": "vl13-netzhaut-aufbau",
+   "type": "single",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folie 5",
+   "stem": "Welche Aussage zum Schichtaufbau der Netzhaut trifft zu?",
+   "options": [
+    {
+     "t": "Die Außensegmente der Photorezeptoren grenzen an das retinale Pigmentepithel (RPE).",
+     "correct": true
+    },
+    {
+     "t": "Die Ganglienzellschicht liegt direkt dem RPE und der Aderhaut an.",
+     "correct": false
+    },
+    {
+     "t": "Die Zellkörper der Bipolarzellen liegen in der äußeren Körnerschicht.",
+     "correct": false
+    },
+    {
+     "t": "In der äußeren plexiformen Schicht verschalten Bipolarzellen auf Ganglienzellen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Außensegmente stecken im RPE (Nährstoffe, Pigmentrecycling); die Ganglienzellschicht liegt innen, zum Glaskörper hin – Licht muss die ganze Netzhaut durchqueren. Bipolarzell-Somata liegen in der inneren Körnerschicht, ihre Synapsen auf Ganglienzellen in der inneren plexiformen Schicht."
+  },
+  {
+   "id": "vl13-blut-retina-schranke",
+   "type": "combo",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folien 5, 13, 29",
+   "stem": "Welche Aussagen zur Blut-Retina-Schranke (Blut-Netzhaut-Schranke) treffen laut Vorlesung zu?",
+   "statements": [
+    {
+     "t": "Die äußere Schranke bilden Tight Junctions zwischen den Zellen des retinalen Pigmentepithels (RPE).",
+     "correct": true
+    },
+    {
+     "t": "Die innere Schranke bilden Tight Junctions zwischen Endothelzellen (EC) retinaler Kapillaren, die von Perizyten (PC) umgeben sind.",
+     "correct": true
+    },
+    {
+     "t": "Müller-Gliazellen tragen zur Blut-Netzhaut-Schranke bei.",
+     "correct": true
+    },
+    {
+     "t": "Die äußere Schranke bilden Tight Junctions zwischen den Endothelzellen der Aderhaut (Choroidea).",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "ACD"
+   ],
+   "explanation": "Folie 5 (Power et al. 2020): Tight Junctions sind an zwei Stellen eingezeichnet – zwischen den RPE-Zellen („RPE cells (tight junctions)“, äußere Schranke) und zwischen den Endothelzellen der Netzhautkapillaren in der Ganglienzellschicht, umgeben von Perizyten (innere Schranke). Die Endothelzellen der Choroidea tragen keine Tight Junctions (Lehrbuch: die Choriokapillaris ist gefenstert). Folie 13: Zu den Funktionen der Müller-Glia gehört die Blut-Netzhaut-Schranke."
+  },
+  {
+   "id": "vl13-fovea-papille",
+   "type": "combo",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folien 6–7",
+   "stem": "Welche Aussagen zu Fundus und Photorezeptor-Verteilung der menschlichen Netzhaut treffen zu?",
+   "statements": [
+    {
+     "t": "In der Fovea ist die Zapfendichte maximal, Stäbchen fehlen dort praktisch.",
+     "correct": true
+    },
+    {
+     "t": "Die Stäbchendichte ist bei etwa 20° Exzentrizität am höchsten.",
+     "correct": true
+    },
+    {
+     "t": "An der Papille (Sehnervenkopf, „optic disk“) gibt es keine Photorezeptoren – blinder Fleck.",
+     "correct": true
+    },
+    {
+     "t": "Die großen Netzhautgefäße ziehen quer über die Fovea hinweg.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "AC",
+    "ABCD",
+    "BCD"
+   ],
+   "explanation": "Folie 7 (Osterberg 1935): scharfer Zapfengipfel bei 0° (Fovea), Stäbchenmaxima bei ca. 20° temporal und nasal, keine Rezeptoren im Bereich der Papille (ca. 15° nasal). Folie 6: Die Fovea liegt ca. 3,4 mm von der Papille entfernt; die Gefäße ziehen bogenförmig um sie herum – die Fovea selbst ist gefäßfrei."
+  },
+  {
+   "id": "vl13-photorezeptor-verteilung-label",
+   "type": "label",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folie 7",
+   "stem": "Beschriften Sie die Verteilung der Photorezeptoren über die menschliche Netzhaut (Rezeptordichte gegen Exzentrizität).",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 7,
+    "crop": [
+     150,
+     138,
+     820,
+     520
+    ],
+    "hide": [
+     [
+      693,
+      306,
+      750,
+      311
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      268,
+      180,
+      402,
+      208
+     ],
+     "answer": "Stäbchenmaximum (rod peak)",
+     "accept": [
+      "rod peak",
+      "Stäbchengipfel",
+      "Stäbchen-Maximum",
+      "maximale Stäbchendichte",
+      "Stäbchendichtemaximum"
+     ],
+     "x": 17.24,
+     "y": 10.34,
+     "w": 20.75,
+     "h": 8.64
+    },
+    {
+     "box": [
+      398,
+      142,
+      555,
+      170
+     ],
+     "answer": "Zapfenmaximum (cone peak)",
+     "accept": [
+      "cone peak",
+      "Zapfengipfel",
+      "Zapfen-Maximum",
+      "maximale Zapfendichte",
+      "Zapfendichtemaximum"
+     ],
+     "x": 36.64,
+     "y": 0.39,
+     "w": 24.18,
+     "h": 8.64
+    },
+    {
+     "box": [
+      684,
+      284,
+      749,
+      307
+     ],
+     "answer": "Stäbchen (rods)",
+     "accept": [
+      "rods",
+      "rod",
+      "Stäbchen",
+      "Staebchen"
+     ],
+     "x": 79.33,
+     "y": 37.57,
+     "w": 10.45,
+     "h": 7.33
+    },
+    {
+     "box": [
+      344,
+      395,
+      440,
+      424
+     ],
+     "answer": "Zapfen (cones)",
+     "accept": [
+      "cones",
+      "cone",
+      "Zapfen"
+     ],
+     "x": 28.58,
+     "y": 66.62,
+     "w": 15.07,
+     "h": 8.9
+    },
+    {
+     "box": [
+      505,
+      283,
+      524,
+      368
+     ],
+     "answer": "Papille / blinder Fleck (optic disk)",
+     "accept": [
+      "optic disk",
+      "optic disc",
+      "Papille",
+      "blinder Fleck",
+      "Sehnervenkopf",
+      "Sehnervenpapille",
+      "Discus nervi optici"
+     ],
+     "x": 52.61,
+     "y": 37.3,
+     "w": 3.58,
+     "h": 23.56
+    },
+    {
+     "box": [
+      444,
+      462,
+      497,
+      482
+     ],
+     "answer": "Fovea (centralis)",
+     "accept": [
+      "fovea",
+      "Fovea centralis",
+      "Sehgrube"
+     ],
+     "x": 43.51,
+     "y": 84.16,
+     "w": 8.66,
+     "h": 6.54
+    }
+   ],
+   "bank": [
+    "Ora serrata",
+    "Makula"
+   ],
+   "explanation": "Folie 7 (Osterberg 1935): Zapfen (rot) erreichen nur in der Fovea (0°) ihr scharfes Maximum und sind sonst spärlich; Stäbchen (schwarz) fehlen in der Fovea und haben ihr Maximum bei ca. 20° Exzentrizität. Im Bereich der Papille (ca. 15° nasal, gestrichelt) gibt es gar keine Photorezeptoren – der blinde Fleck.",
+   "image": "assets/figures/vl13-photorezeptor-verteilung-label.webp",
+   "iw": 1340,
+   "ih": 764
+  },
+  {
+   "id": "vl13-absorptionsmaxima",
+   "type": "single",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folie 8",
+   "stem": "Bei welcher Wellenlänge liegt laut Vorlesung das Absorptionsmaximum der Stäbchen (Rhodopsin)?",
+   "options": [
+    {
+     "t": "437 nm",
+     "correct": false
+    },
+    {
+     "t": "498 nm",
+     "correct": true
+    },
+    {
+     "t": "533 nm",
+     "correct": false
+    },
+    {
+     "t": "564 nm",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 8 (Dowling 1987): Blauzapfen (S) 437 nm, Stäbchen 498 nm, Grünzapfen (M) 533 nm, Rotzapfen (L) 564 nm. Die Spektren überlappen breit; im langwelligen Rot absorbieren die Stäbchen praktisch nicht mehr."
+  },
+  {
+   "id": "vl13-absorptionsspektren-label",
+   "type": "label",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folie 8",
+   "stem": "Ordnen Sie den Absorptionsmaxima den jeweiligen Photorezeptortyp zu.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 8,
+    "crop": [
+     140,
+     105,
+     825,
+     501
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      266,
+      106,
+      318,
+      141
+     ],
+     "answer": "S-Zapfen (Blauzapfen)",
+     "accept": [
+      "blue cone",
+      "S-Zapfen",
+      "S cone",
+      "S-cone",
+      "Blauzapfen",
+      "blauer Zapfen",
+      "Kurzwellenzapfen"
+     ],
+     "x": 18.03,
+     "y": -0.38,
+     "w": 8.32,
+     "h": 10.1
+    },
+    {
+     "box": [
+      389,
+      116,
+      427,
+      139
+     ],
+     "answer": "Stäbchen (Rhodopsin)",
+     "accept": [
+      "rod",
+      "rods",
+      "Stäbchen",
+      "Rhodopsin",
+      "Staebchen"
+     ],
+     "x": 35.99,
+     "y": 2.15,
+     "w": 6.28,
+     "h": 7.07
+    },
+    {
+     "box": [
+      442,
+      106,
+      502,
+      141
+     ],
+     "answer": "M-Zapfen (Grünzapfen)",
+     "accept": [
+      "green cone",
+      "M-Zapfen",
+      "M cone",
+      "M-cone",
+      "Grünzapfen",
+      "grüner Zapfen",
+      "Mittelwellenzapfen"
+     ],
+     "x": 43.72,
+     "y": -0.38,
+     "w": 9.49,
+     "h": 10.1
+    },
+    {
+     "box": [
+      511,
+      106,
+      561,
+      141
+     ],
+     "answer": "L-Zapfen (Rotzapfen)",
+     "accept": [
+      "red cone",
+      "L-Zapfen",
+      "L cone",
+      "L-cone",
+      "Rotzapfen",
+      "roter Zapfen",
+      "Langwellenzapfen"
+     ],
+     "x": 53.8,
+     "y": -0.38,
+     "w": 8.03,
+     "h": 10.1
+    }
+   ],
+   "bank": [
+    "Melanopsin-Ganglienzelle",
+    "UV-Zapfen"
+   ],
+   "explanation": "Folie 8 (Dowling 1987): S-Zapfen 437 nm, Stäbchen 498 nm, M-Zapfen 533 nm, L-Zapfen 564 nm. Die Spektren überlappen breit – ein Zapfentyp allein ist „farbenblind“, Farbe entsteht erst durch den Vergleich mehrerer Zapfentypen (Folien 25, 32). Langwelliges Rot erregt die Stäbchen praktisch nicht mehr.",
+   "image": "assets/figures/vl13-absorptionsspektren-label.webp",
+   "iw": 1370,
+   "ih": 792
+  },
+  {
+   "id": "vl13-aussensegmente",
+   "type": "multi",
+   "topic": "Auge, Netzhaut & Photorezeptoren",
+   "source": "slides",
+   "ref": "VL13 · Folie 9",
+   "stem": "Was trifft auf die Außensegmente der Photorezeptoren und das Rhodopsin zu?",
+   "options": [
+    {
+     "t": "Rhodopsin sitzt in der Membran der gestapelten Disks (Membranscheibchen) des Außensegments.",
+     "correct": true
+    },
+    {
+     "t": "Rhodopsin ist ein Rezeptor mit sieben Transmembranhelices (GPCR).",
+     "correct": true
+    },
+    {
+     "t": "Licht isomerisiert das gebundene 11-cis-Retinal zu all-trans-Retinal.",
+     "correct": true
+    },
+    {
+     "t": "Licht isomerisiert das gebundene all-trans-Retinal zu 11-cis-Retinal.",
+     "correct": false
+    },
+    {
+     "t": "Rhodopsin ist ein ligandengesteuerter Ionenkanal der Plasmamembran.",
+     "correct": false
+    },
+    {
+     "t": "Die Disks liegen im Innensegment, das direkt an das RPE grenzt.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 9: Das Außensegment besteht aus einem Stapel von Disks, in deren Membran Rhodopsin (7 Transmembranhelices) dicht gepackt ist. Chromophor ist 11-cis-Retinal; Licht isomerisiert es zu all-trans-Retinal – das ist der einzige lichtabhängige Schritt. Das Außensegment (nicht das Innensegment) grenzt an das RPE.",
+   "note": "Folie 9 beschriftet das Photoprodukt als „retinal 11-trans“ – gemeint ist all-trans-Retinal."
+  },
+  {
+   "id": "vl13-cng-kanaele",
+   "type": "multi",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL13 · Folien 10–11",
+   "stem": "Was trifft auf die cGMP-gesteuerten Kanäle der Photorezeptoren (Phototransduktionskaskade) zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Sie lassen Na<sup>+</sup> durch.",
+     "correct": true
+    },
+    {
+     "t": "Sie lassen Ca<sup>2+</sup> durch.",
+     "correct": true
+    },
+    {
+     "t": "Sie sind primär spannungsgesteuert.",
+     "correct": false
+    },
+    {
+     "t": "Sie werden durch direkte Bindung von cGMP geöffnet.",
+     "correct": true
+    },
+    {
+     "t": "Im geöffneten (aktivierten) Zustand führen sie zur Hyperpolarisation.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind im Dunkeln geöffnet und tragen den Dunkelstrom.",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 10: Der „cGMP gated ion channel“ lässt Na⁺ und Ca²⁺ ins Außensegment einströmen; er ist ligandengesteuert (cGMP), nicht spannungsgesteuert. Folie 11: Im Dunkeln ist cGMP hoch, die Kanäle sind offen (Na⁺ in + K⁺ out) – der Photorezeptor ist depolarisiert und setzt Glutamat frei. Licht → Rhodopsin → Transducin → PDE6 baut cGMP zu GMP ab → Kanäle schließen → Hyperpolarisation.",
+   "note": "Im Protokoll waren zwei Optionen unvollständig bzw. unsicher erinnert („nach außen gleichrichtend“) – durch eindeutige Aussagen ersetzt. Lösung durch VL13 Folien 10–11 bestätigt."
+  },
+  {
+   "id": "vl13-phototransduktion-label",
+   "type": "label",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folie 10",
+   "stem": "Beschriften Sie das Schema der Phototransduktionskaskade im Außensegment eines Stäbchens.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 10,
+    "crop": [
+     110,
+     80,
+     860,
+     522
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      259,
+      222,
+      335,
+      234
+     ],
+     "answer": "Rhodopsin",
+     "accept": [
+      "Rhodopsin",
+      "Sehpurpur",
+      "Metarhodopsin II",
+      "Metarhodopsin 2",
+      "Meta II",
+      "Metarhodopsin",
+      "aktiviertes Rhodopsin"
+     ],
+     "x": 19.53,
+     "y": 31.56,
+     "w": 10.8,
+     "h": 3.85
+    },
+    {
+     "box": [
+      261,
+      286,
+      335,
+      299
+     ],
+     "answer": "Transducin (G-Protein)",
+     "accept": [
+      "Transducin",
+      "Gt",
+      "G-Protein",
+      "G-Protein Transducin"
+     ],
+     "x": 19.8,
+     "y": 46.04,
+     "w": 10.53,
+     "h": 4.07
+    },
+    {
+     "box": [
+      279,
+      344,
+      316,
+      359
+     ],
+     "answer": "Phosphodiesterase 6 (PDE6)",
+     "accept": [
+      "PDE6",
+      "PDE",
+      "Phosphodiesterase",
+      "Phosphodiesterase 6",
+      "cGMP-Phosphodiesterase"
+     ],
+     "x": 22.2,
+     "y": 59.16,
+     "w": 5.6,
+     "h": 4.52
+    },
+    {
+     "box": [
+      558,
+      306,
+      607,
+      328
+     ],
+     "answer": "cGMP",
+     "accept": [
+      "cGMP",
+      "zyklisches GMP",
+      "cyclisches GMP",
+      "zyklisches Guanosinmonophosphat",
+      "cyclic GMP"
+     ],
+     "x": 59.4,
+     "y": 50.57,
+     "w": 7.2,
+     "h": 6.11
+    },
+    {
+     "find": "GMP",
+     "answer": "GMP (Abbauprodukt)",
+     "accept": [
+      "GMP",
+      "5'-GMP",
+      "Guanosinmonophosphat"
+     ],
+     "x": 34.06,
+     "y": 86.94,
+     "w": 5.47,
+     "h": 5.2
+    },
+    {
+     "box": [
+      680,
+      133,
+      774,
+      177
+     ],
+     "answer": "cGMP-gesteuerter Kationenkanal (CNG-Kanal)",
+     "accept": [
+      "cGMP gated ion channel",
+      "CNG-Kanal",
+      "cGMP-gesteuerter Ionenkanal",
+      "CNG channel",
+      "cGMP-Kanal",
+      "cGMP-gesteuerter Kanal"
+     ],
+     "x": 75.67,
+     "y": 11.43,
+     "w": 13.2,
+     "h": 11.09
+    },
+    {
+     "find": "NCKX",
+     "answer": "NCKX (Na⁺/Ca²⁺-K⁺-Austauscher)",
+     "accept": [
+      "NCKX",
+      "Na/Ca-K-Austauscher",
+      "Natrium-Calcium-Kalium-Austauscher",
+      "Na+/Ca2+-K+-Austauscher",
+      "Na-Ca-K-Exchanger"
+     ],
+     "x": 78.22,
+     "y": 55.88,
+     "w": 5.99,
+     "h": 5.2
+    },
+    {
+     "box": [
+      492,
+      226,
+      532,
+      271
+     ],
+     "answer": "Na⁺ und Ca²⁺ (Einstrom)",
+     "accept": [
+      "Na+ Ca2+",
+      "Na+ und Ca2+",
+      "Natrium und Calcium",
+      "Na und Ca",
+      "Na+/Ca2+",
+      "Ca2+ und Na+",
+      "Ca2+ Na+",
+      "Ca2+/Na+",
+      "Calcium und Natrium",
+      "Natrium Calcium",
+      "Calcium Natrium"
+     ],
+     "x": 50.6,
+     "y": 32.47,
+     "w": 6.0,
+     "h": 11.31
+    },
+    {
+     "box": [
+      745,
+      387,
+      786,
+      432
+     ],
+     "answer": "K⁺ und Ca²⁺ (Ausstrom)",
+     "accept": [
+      "K+ Ca2+",
+      "K+ und Ca2+",
+      "Kalium und Calcium",
+      "K und Ca",
+      "K+/Ca2+",
+      "Ca2+ und K+",
+      "Ca2+ K+",
+      "Ca2+/K+",
+      "Calcium und Kalium",
+      "Kalium Calcium",
+      "Calcium Kalium"
+     ],
+     "x": 84.33,
+     "y": 68.89,
+     "w": 6.13,
+     "h": 11.31
+    }
+   ],
+   "bank": [
+    "Guanylatzyklase",
+    "cAMP",
+    "RPE65"
+   ],
+   "explanation": "Licht isomerisiert das 11-cis-Retinal im Rhodopsin zu all-trans-Retinal; das so aktivierte Rhodopsin (Metarhodopsin II, R*) aktiviert in der Disk-Membran Transducin (G-Protein) → PDE6 hydrolysiert cGMP zu GMP. Sinkt cGMP, schließen die cGMP-gesteuerten Kationenkanäle – der Na⁺/Ca²⁺-Einstrom entfällt. Der K⁺-Ausstrom (Folie 11: „K⁺ out“; Lehrbuch: K⁺-Kanäle im Innensegment) läuft weiter → Hyperpolarisation. Der NCKX (4 Na⁺ hinein gegen 1 Ca²⁺ + 1 K⁺ hinaus; netto leicht einwärts, also nicht hyperpolarisierend) befördert weiter Ca²⁺ hinaus, während kein Ca²⁺ mehr nachströmt → Ca²⁺ im Außensegment sinkt.",
+   "image": "assets/figures/vl13-phototransduktion-label.webp",
+   "iw": 1400,
+   "ih": 825
+  },
+  {
+   "id": "vl13-phototransduktion-order",
+   "type": "order",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folien 9–11",
+   "stem": "Bringen Sie die Schritte der Phototransduktion in die richtige Reihenfolge (vom Photon bis zur Synapse).",
+   "items": [
+    "Licht isomerisiert 11-cis-Retinal im Rhodopsin",
+    "Aktiviertes Rhodopsin aktiviert Transducin",
+    "Transducin aktiviert die PDE6",
+    "PDE6 hydrolysiert cGMP zu GMP",
+    "cGMP-gesteuerte Kationenkanäle schließen",
+    "Der Photorezeptor hyperpolarisiert",
+    "Die Glutamatfreisetzung an der Synapse sinkt"
+   ],
+   "explanation": "Verstärkerkaskade: Ein aktiviertes Rhodopsin aktiviert viele Transducine, jede PDE6 spaltet viele cGMP (Lehrbuch). Ergebnis ist eine Hyperpolarisation von knapp über −40 mV auf ca. −70 mV – und damit weniger Glutamat (Folie 11)."
+  },
+  {
+   "id": "vl13-photorezeptor-potential-label",
+   "type": "label",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folie 11",
+   "stem": "Beschriften Sie die Lichtantwort eines Photorezeptors (Membranpotential über die Zeit). Neben dem ab- und dem aufsteigenden Kurvenast ist jeweils der vorherrschende Ionenfluss gefragt.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 11,
+    "crop": [
+     540,
+     145,
+     868,
+     495
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      597,
+      326,
+      667,
+      338
+     ],
+     "answer": "Dunkelstrom: Na⁺ in + K⁺ out",
+     "accept": [
+      "Na+ in + K+ out",
+      "Dunkelstrom",
+      "Na+ Einstrom und K+ Ausstrom",
+      "Na in K out",
+      "Na+-Einstrom + K+-Ausstrom"
+     ],
+     "x": 16.62,
+     "y": 51.0,
+     "w": 22.87,
+     "h": 4.86
+    },
+    {
+     "box": [
+      690,
+      262,
+      739,
+      299
+     ],
+     "answer": "Ruhepotential (im Dunkeln)",
+     "accept": [
+      "Ruhepotential",
+      "resting potential",
+      "Ruhemembranpotential",
+      "Dunkelpotential"
+     ],
+     "x": 44.97,
+     "y": 32.71,
+     "w": 16.46,
+     "h": 12.0
+    },
+    {
+     "box": [
+      781,
+      308,
+      839,
+      338
+     ],
+     "answer": "Glutamatfreisetzung",
+     "accept": [
+      "glutamate release",
+      "Glutamatausschüttung",
+      "Glutamat-Freisetzung",
+      "Glutamat wird freigesetzt",
+      "Glutamatfreisetzung"
+     ],
+     "x": 72.71,
+     "y": 45.86,
+     "w": 19.21,
+     "h": 10.0
+    },
+    {
+     "box": [
+      780,
+      363,
+      855,
+      393
+     ],
+     "answer": "Keine Glutamatfreisetzung",
+     "accept": [
+      "no glutamate release",
+      "keine Glutamatausschüttung",
+      "kein Glutamat",
+      "keine Glutamat-Freisetzung"
+     ],
+     "x": 72.41,
+     "y": 61.57,
+     "w": 24.39,
+     "h": 10.0
+    },
+    {
+     "box": [
+      629,
+      394,
+      658,
+      403
+     ],
+     "answer": "K⁺ out (K⁺-Ausstrom)",
+     "accept": [
+      "K+ out",
+      "K+-Ausstrom",
+      "Kaliumausstrom",
+      "K raus",
+      "K+ Ausstrom"
+     ],
+     "x": 26.37,
+     "y": 70.43,
+     "w": 10.37,
+     "h": 4.0
+    },
+    {
+     "box": [
+      714,
+      394,
+      743,
+      403
+     ],
+     "answer": "Na⁺ in (Na⁺-Einstrom)",
+     "accept": [
+      "Na+ in",
+      "Na+-Einstrom",
+      "Natriumeinstrom",
+      "Na rein",
+      "Na+ Einstrom"
+     ],
+     "x": 52.29,
+     "y": 70.43,
+     "w": 10.37,
+     "h": 4.0
+    },
+    {
+     "box": [
+      637,
+      424,
+      728,
+      436
+     ],
+     "answer": "Hyperpolarisation (Licht)",
+     "accept": [
+      "Hyperpolarization",
+      "Hyperpolarisation",
+      "Hyperpolarisierung"
+     ],
+     "x": 28.81,
+     "y": 79.0,
+     "w": 29.27,
+     "h": 4.86
+    }
+   ],
+   "bank": [
+    "Aktionspotential",
+    "Overshoot",
+    "GABA-Freisetzung"
+   ],
+   "explanation": "Anders als ein „normales“ Neuron (Ruhe bei −70 mV, Depolarisation durch Na⁺-Einstrom → Glutamat) ist der Photorezeptor im Dunkeln vergleichsweise depolarisiert (Ruhepotential knapp über −40 mV; Na⁺ in + K⁺ out) und schüttet ständig Glutamat aus. Licht schließt die CNG-Kanäle, der K⁺-Ausstrom überwiegt → Hyperpolarisation bis ca. −70 mV → keine Glutamatfreisetzung; danach kehrt das Potential durch Na⁺-Einstrom zurück.",
+   "image": "assets/figures/vl13-photorezeptor-potential-label.webp",
+   "iw": 656,
+   "ih": 700
+  },
+  {
+   "id": "vl13-photorezeptor-vs-neuron",
+   "type": "multi",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folie 11",
+   "stem": "Was unterscheidet den Photorezeptor vom „normalen“ Neuron? (3 richtig)",
+   "options": [
+    {
+     "t": "Im Dunkeln liegt sein Membranpotential knapp oberhalb von −40 mV.",
+     "correct": true
+    },
+    {
+     "t": "Im Dunkeln setzt er kontinuierlich Glutamat frei.",
+     "correct": true
+    },
+    {
+     "t": "Licht hyperpolarisiert ihn auf ca. −70 mV, die Glutamatfreisetzung stoppt.",
+     "correct": true
+    },
+    {
+     "t": "Sein Ruhepotential liegt wie beim normalen Neuron bei ca. −70 mV.",
+     "correct": false
+    },
+    {
+     "t": "Licht depolarisiert ihn und löst wie beim normalen Neuron ein Aktionspotential aus.",
+     "correct": false
+    },
+    {
+     "t": "Im Dunkeln überwiegt der K⁺-Ausstrom, er ist hyperpolarisiert.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 11: Das normale Neuron ruht bei −70 mV, depolarisiert durch Na⁺-Einstrom zum Aktionspotential und setzt erst oberhalb von −40 mV Glutamat frei. Der Photorezeptor ist im Dunkeln dauerhaft depolarisiert (knapp über −40 mV; Na⁺ in + K⁺ out = Dunkelstrom) und schüttet ständig Glutamat aus. Licht schließt die CNG-Kanäle, der K⁺-Ausstrom überwiegt → Hyperpolarisation bis ca. −70 mV → keine Glutamatfreisetzung, kein Aktionspotential."
+  },
+  {
+   "id": "vl13-sehzyklus-label",
+   "type": "label",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folie 12",
+   "stem": "Beschriften Sie das Schema des Sehzyklus (Zellen, Enzym und Photopigment-Zustände).",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 12,
+    "crop": [
+     190,
+     115,
+     770,
+     455
+    ],
+    "hide": [
+     [
+      527,
+      128,
+      577,
+      149
+     ],
+     [
+      637,
+      307,
+      679,
+      321
+     ],
+     [
+      669,
+      431,
+      718,
+      442
+     ],
+     [
+      506,
+      431,
+      603,
+      442
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      370,
+      128,
+      418,
+      149
+     ],
+     "answer": "Retinales Pigmentepithel (RPE)",
+     "accept": [
+      "RPE",
+      "Pigmentepithel",
+      "retinales Pigmentepithel"
+     ],
+     "x": 30.6,
+     "y": 3.09,
+     "w": 9.14,
+     "h": 7.65
+    },
+    {
+     "box": [
+      642,
+      129,
+      742,
+      150
+     ],
+     "answer": "Müller-Zelle",
+     "accept": [
+      "Müller cell",
+      "Müller-Glia",
+      "Müllerzelle",
+      "Müller-Gliazelle",
+      "Müller glia",
+      "Mueller-Zelle"
+     ],
+     "x": 77.5,
+     "y": 3.38,
+     "w": 18.1,
+     "h": 7.65
+    },
+    {
+     "box": [
+      215,
+      237,
+      254,
+      259
+     ],
+     "answer": "Stäbchen",
+     "accept": [
+      "rod",
+      "Stäbchen",
+      "Stäbchenzelle",
+      "Staebchen"
+     ],
+     "x": 3.88,
+     "y": 35.15,
+     "w": 7.59,
+     "h": 7.94
+    },
+    {
+     "box": [
+      697,
+      237,
+      748,
+      258
+     ],
+     "answer": "Zapfen",
+     "accept": [
+      "cone",
+      "Zapfen",
+      "Zapfenzelle"
+     ],
+     "x": 86.98,
+     "y": 35.15,
+     "w": 9.66,
+     "h": 7.65
+    },
+    {
+     "box": [
+      339,
+      303,
+      380,
+      317
+     ],
+     "answer": "RDH8 (Retinol-Dehydrogenase 8)",
+     "accept": [
+      "RDH8",
+      "Retinol-Dehydrogenase",
+      "Retinoldehydrogenase",
+      "RDH",
+      "retinol dehydrogenase 8"
+     ],
+     "x": 25.26,
+     "y": 54.56,
+     "w": 7.93,
+     "h": 5.59
+    },
+    {
+     "box": [
+      372,
+      431,
+      421,
+      442
+     ],
+     "answer": "Metarhodopsin II (meta II)",
+     "accept": [
+      "meta II",
+      "Metarhodopsin II",
+      "Metarhodopsin",
+      "Meta-II",
+      "MII"
+     ],
+     "x": 30.95,
+     "y": 92.21,
+     "w": 9.31,
+     "h": 4.71
+    },
+    {
+     "box": [
+      216,
+      431,
+      300,
+      442
+     ],
+     "answer": "Rhodopsin (Stäbchenpigment)",
+     "accept": [
+      "Rhodopsin",
+      "rod pigment",
+      "Stäbchenpigment",
+      "Sehpurpur"
+     ],
+     "x": 4.05,
+     "y": 92.21,
+     "w": 15.34,
+     "h": 4.71
+    }
+   ],
+   "bank": [
+    "RPE65",
+    "Horizontalzelle",
+    "Transducin"
+   ],
+   "explanation": "Licht isomerisiert das 11-cis-Retinal im Sehpigment zu all-trans-Retinal (Metarhodopsin II). Das freigesetzte all-trans-Retinal wird im Photorezeptor durch RDH8 (NADPH → NADP⁺) zu all-trans-Retinol reduziert, das ins RPE wandert und dort (entscheidender Schritt: RPE65, Folie 31) wieder zu 11-cis-Retinal wird; dieses kehrt zum Photorezeptor zurück. Zapfen werden zusätzlich über Müller-Zellen mit 11-cis-Retinol versorgt.",
+   "image": "assets/figures/vl13-sehzyklus-label.webp",
+   "iw": 1160,
+   "ih": 680
+  },
+  {
+   "id": "vl13-mueller-zapfen-zyklus",
+   "type": "single",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folie 12",
+   "stem": "Welche Zelle versorgt laut Sehzyklus-Schema die Zapfen – nicht aber die Stäbchen – zusätzlich mit 11-cis-Retinol?",
+   "options": [
+    {
+     "t": "Müller-Gliazelle",
+     "correct": true
+    },
+    {
+     "t": "Retinale Pigmentepithelzelle (RPE)",
+     "correct": false
+    },
+    {
+     "t": "Horizontalzelle",
+     "correct": false
+    },
+    {
+     "t": "AII-Amakrinzelle",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 12 (Miyazono et al. 2008): In beiden Photorezeptortypen reduziert RDH8 das freigesetzte all-trans-Retinal mit NADPH zu all-trans-Retinol. Das RPE liefert Stäbchen und Zapfen 11-cis-Retinal zurück. Nur die Zapfen haben einen zweiten Weg: Die Müller-Zelle setzt all-trans-Retinol zu 11-cis-Retinol um, das im Zapfen (über noch unbekannte Proteine) zu 11-cis-Retinal oxidiert wird."
+  },
+  {
+   "id": "vl13-sehzyklus-order",
+   "type": "order",
+   "topic": "Phototransduktion & Sehzyklus",
+   "source": "slides",
+   "ref": "VL13 · Folien 12, 31",
+   "stem": "Bringen Sie die Stationen des Sehzyklus im Stäbchen in die richtige Reihenfolge (beginnend mit der Lichtabsorption).",
+   "items": [
+    "Rhodopsin (mit 11-cis-Retinal) absorbiert Licht",
+    "all-trans-Retinal im Metarhodopsin II",
+    "Reduktion zu all-trans-Retinol durch RDH8 im Stäbchen",
+    "Transport des all-trans-Retinols ins RPE",
+    "Isomerisierung zu 11-cis-Retinol durch RPE65",
+    "Oxidation zu 11-cis-Retinal und Rücktransport ins Stäbchen"
+   ],
+   "explanation": "Das Chromophor wird nicht im Stäbchen re-isomerisiert, sondern im RPE: RPE65 katalysiert den entscheidenden Schritt all-trans-Retinol → 11-cis-Retinol (Folie 31). Fällt RPE65 aus, fehlt 11-cis-Retinal → Nachtblindheit und Lebersche kongenitale Amaurose (LCA)."
+  },
+  {
+   "id": "vl13-laterale-inhibition",
+   "type": "single",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL13 · Folien 13, 16, 32",
+   "stem": "Wofür ist die laterale Inhibition in der Netzhaut vor allem wichtig?",
+   "options": [
+    {
+     "t": "Für das Farbensehen",
+     "correct": false
+    },
+    {
+     "t": "Für das Kontrastsehen (Kantenbetonung)",
+     "correct": true
+    },
+    {
+     "t": "Für die Dunkeladaptation der Stäbchen",
+     "correct": false
+    },
+    {
+     "t": "Für das räumliche Tiefensehen",
+     "correct": false
+    }
+   ],
+   "explanation": "Horizontalzellen – laut Folie 13 zuständig für „Signal Integration, Kontrast“ – hemmen benachbarte Bahnen. So entsteht die Zentrum-Umfeld-Organisation der rezeptiven Felder (Folie 16), die Helligkeitsunterschiede an Kanten verstärkt (Folie 32: die innere Retina verarbeitet u. a. Kontrast). Farbe entsteht durch den Vergleich der Zapfentypen, Tiefensehen durch binokulares Sehen.",
+   "note": "Optionen teilweise ergänzt. Protokoll-Option C („ist besonders ausgeprägt bei hoher Ortsfrequenz“) weggelassen, da fachlich nicht eindeutig zu bewerten. Lösung durch VL13 Folien 13 und 16 bestätigt."
+  },
+  {
+   "id": "vl13-zelltypen-combo",
+   "type": "combo",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "slides",
+   "ref": "VL13 · Folie 13",
+   "stem": "Welche Zuordnungen von retinalem Zelltyp und Funktion treffen laut Vorlesung zu?",
+   "statements": [
+    {
+     "t": "Müller-Gliazellen – Ernährung, Lichtleiter, Blut-Netzhaut-Schranke",
+     "correct": true
+    },
+    {
+     "t": "Horizontalzellen – Signalintegration und Kontrast",
+     "correct": true
+    },
+    {
+     "t": "Bipolarzellen (60+ Subtypen) – Modulation",
+     "correct": false
+    },
+    {
+     "t": "Ganglienzellen (40+ Subtypen) – 2. Processing, Bildanalyse, Lichtwahrnehmung, Signalweiterleitung",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BD",
+    "ACD"
+   ],
+   "explanation": "Folie 13: RPE (1) – Nährstoffe, Pigmentrecycling; Photorezeptoren (4) – Phototransduktion; Horizontalzellen (1) – Signalintegration, Kontrast; Müller-Glia (1) – Ernährung, Lichtleiter, Blut-Netzhaut-Schranke; Bipolarzellen (12+) – 1. Processing, Signalweiterleitung; Amakrinzellen (60+) – Modulation; Ganglienzellen (40+) – 2. Processing, Bildanalyse, Lichtwahrnehmung, Signalweiterleitung. Aussage C vertauscht Bipolar- und Amakrinzellen."
+  },
+  {
+   "id": "vl13-zelltypen-open",
+   "type": "open",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "slides",
+   "ref": "VL13 · Folie 13",
+   "stem": "Nennen Sie 4 retinale Zelltypen und jeweils ihre Hauptfunktion.",
+   "points": [
+    "RPE-Zellen (1 Subtyp): Nährstoffe, Pigmentrecycling",
+    "Photorezeptoren (4 Subtypen): Phototransduktion",
+    "Horizontalzellen (1): Signalintegration, Kontrast",
+    "Müller-Gliazellen (1): Ernährung, Lichtleiter, Blut-Netzhaut-Schranke",
+    "Bipolarzellen (12+): 1. Processing, Signalweiterleitung",
+    "Amakrine Zellen (60+): Modulation",
+    "Ganglienzellen (40+): 2. Processing, Bildanalyse, Lichtwahrnehmung, Signalweiterleitung"
+   ],
+   "need": 4,
+   "explanation": "Tabelle Folie 13. Die Subtyp-Zahlen zeigen, wo die Vielfalt liegt: Amakrinzellen (60+) > Ganglienzellen (40+) > Bipolarzellen (12+); die 4 Photorezeptor-Typen sind Stäbchen sowie S-, M- und L-Zapfen."
+  },
+  {
+   "id": "vl13-on-off-label",
+   "type": "label",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "slides",
+   "ref": "VL13 · Folie 14",
+   "stem": "Beschriften Sie das Schema zu Stäbchen, Zapfen und ON-/OFF-Bipolarzellen.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 14,
+    "crop": [
+     110,
+     118,
+     870,
+     500
+    ],
+    "hide": [
+     [
+      119,
+      287,
+      197,
+      345
+     ],
+     [
+      776,
+      398,
+      810,
+      413
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      182,
+      207,
+      211,
+      223
+     ],
+     "answer": "Stäbchen",
+     "accept": [
+      "rod",
+      "Stäbchen",
+      "Staebchen"
+     ],
+     "x": 9.14,
+     "y": 22.64,
+     "w": 4.47,
+     "h": 5.5
+    },
+    {
+     "box": [
+      650,
+      207,
+      700,
+      224
+     ],
+     "answer": "Zapfen",
+     "accept": [
+      "cones",
+      "cone",
+      "Zapfen"
+     ],
+     "x": 70.72,
+     "y": 22.64,
+     "w": 7.24,
+     "h": 5.76
+    },
+    {
+     "box": [
+      233,
+      355.5,
+      285,
+      410.5
+     ],
+     "answer": "Stäbchen-Bipolarzelle (ON)",
+     "accept": [
+      "ON-Bipolarzelle",
+      "ON bipolar cell",
+      "rod bipolar",
+      "Stäbchenbipolarzelle",
+      "Stäbchen-Bipolarzelle",
+      "rb"
+     ],
+     "x": 15.86,
+     "y": 61.52,
+     "w": 7.5,
+     "h": 15.71
+    },
+    {
+     "box": [
+      423,
+      296,
+      502,
+      354
+     ],
+     "answer": "Inhibitorischer Glutamatrezeptor",
+     "accept": [
+      "inhibitory glutamate receptor",
+      "inhibitorischer Glutamatrezeptor",
+      "hemmender Glutamatrezeptor",
+      "mGluR6",
+      "sign-invertierender Glutamatrezeptor"
+     ],
+     "x": 40.86,
+     "y": 45.94,
+     "w": 11.05,
+     "h": 16.49
+    },
+    {
+     "box": [
+      534,
+      356,
+      587,
+      410.5
+     ],
+     "answer": "ON-Zapfen-Bipolarzelle",
+     "accept": [
+      "ON-Bipolarzelle",
+      "ON bipolar cell",
+      "ON cone bipolar",
+      "ON-Zapfenbipolarzelle",
+      "cb"
+     ],
+     "x": 55.46,
+     "y": 61.65,
+     "w": 7.63,
+     "h": 15.58
+    },
+    {
+     "box": [
+      662,
+      296,
+      740,
+      354
+     ],
+     "answer": "Exzitatorischer Glutamatrezeptor",
+     "accept": [
+      "excitatory glutamate receptor",
+      "exzitatorischer Glutamatrezeptor",
+      "erregender Glutamatrezeptor",
+      "ionotroper Glutamatrezeptor",
+      "AMPA-/Kainat-Rezeptor"
+     ],
+     "x": 72.3,
+     "y": 45.94,
+     "w": 10.92,
+     "h": 16.49
+    },
+    {
+     "box": [
+      764,
+      356,
+      823,
+      400
+     ],
+     "answer": "OFF-Bipolarzelle",
+     "accept": [
+      "OFF bipolar cell",
+      "OFF-Bipolarzelle",
+      "OFF-Zapfen-Bipolarzelle",
+      "OFF cone bipolar"
+     ],
+     "x": 85.72,
+     "y": 61.65,
+     "w": 8.42,
+     "h": 12.83
+    }
+   ],
+   "bank": [
+    "Horizontalzelle",
+    "AII-Amakrinzelle"
+   ],
+   "explanation": "Photorezeptoren setzen im Dunkeln Glutamat frei, bei Licht weniger. ON-Bipolarzellen (Stäbchen-Bipolare und ON-Zapfen-Bipolare) tragen einen inhibitorischen (sign-invertierenden) Glutamatrezeptor → bei Licht enthemmt, sie depolarisieren. OFF-Bipolarzellen tragen exzitatorische Glutamatrezeptoren → bei Licht hyperpolarisieren sie. Die eigenen Bipolarzellen der Stäbchen sind ON-Zellen; ihre OFF-Signale laufen über andere Wege (Folie 15).",
+   "image": "assets/figures/vl13-on-off-label.webp",
+   "iw": 1400,
+   "ih": 704
+  },
+  {
+   "id": "vl13-on-bipolar",
+   "type": "single",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "slides",
+   "ref": "VL13 · Folien 11, 14",
+   "stem": "Warum depolarisiert eine ON-Bipolarzelle, wenn Licht auf „ihren“ Photorezeptor fällt?",
+   "options": [
+    {
+     "t": "Licht senkt die Glutamatfreisetzung des Photorezeptors; ihr inhibitorischer Glutamatrezeptor wird weniger aktiviert.",
+     "correct": true
+    },
+    {
+     "t": "Licht steigert die Glutamatfreisetzung des Photorezeptors; ihr exzitatorischer Glutamatrezeptor wird stärker aktiviert.",
+     "correct": false
+    },
+    {
+     "t": "Der Photorezeptor depolarisiert bei Licht und überträgt die Erregung über Gap Junctions auf die Bipolarzelle.",
+     "correct": false
+    },
+    {
+     "t": "Die ON-Bipolarzelle exprimiert selbst Melanopsin und ist dadurch intrinsisch lichtempfindlich.",
+     "correct": false
+    }
+   ],
+   "explanation": "Licht hyperpolarisiert den Photorezeptor → weniger Glutamat (Folie 11). Bei ON-Bipolarzellen hemmt Glutamat (inhibitorischer Glutamatrezeptor, Folie 14) – weniger Glutamat bedeutet Enthemmung, also Depolarisation (Vorzeichenumkehr). OFF-Bipolarzellen mit exzitatorischem Rezeptor hyperpolarisieren dagegen bei Licht."
+  },
+  {
+   "id": "vl13-staebchenwege",
+   "type": "multi",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "slides",
+   "ref": "VL13 · Folie 15",
+   "stem": "Was trifft auf die Signalwege der Stäbchen (ON- und OFF-Pathways) zu?",
+   "options": [
+    {
+     "t": "Im primären Stäbchenweg gibt die Stäbchen-Bipolarzelle das Signal an die AII-Amakrinzelle weiter.",
+     "correct": true
+    },
+    {
+     "t": "Die AII-Amakrinzelle ist über Gap Junctions aus Connexin 36 (Cx36) mit ON-Zapfen-Bipolarzellen gekoppelt.",
+     "correct": true
+    },
+    {
+     "t": "Stäbchen können über Cx36-Gap-Junctions direkt mit Zapfen gekoppelt sein.",
+     "correct": true
+    },
+    {
+     "t": "Stäbchen-Bipolarzellen bilden ihre Ausgangssynapsen direkt auf Ganglienzellen.",
+     "correct": false
+    },
+    {
+     "t": "Stäbchensignale erreichen die Ganglienzellen nur über einen einzigen Weg.",
+     "correct": false
+    },
+    {
+     "t": "Die AII-Amakrinzelle erregt OFF-Zapfen-Bipolarzellen über Gap Junctions.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 15 (Demb & Pugh 2002): ON1 = Stäbchen → Stäbchen-Bipolare (rb) → AII → Cx36 → ON-Zapfen-Bipolare (cb) → Ganglienzelle. ON2/OFF2 = Stäbchen → Cx36 → Zapfen → Zapfen-Bipolare. OFF1 = die AII hemmt (−, laut Lehrbuch glycinerg) OFF-Zapfen-Bipolare und OFF-Ganglienzelle; OFF3 = Stäbchen direkt → OFF-Zapfen-Bipolare. Stäbchensignale laufen also „huckepack“ über die Zapfenbahnen."
+  },
+  {
+   "id": "vl13-staebchen-on1-order",
+   "type": "order",
+   "topic": "Retinale Zelltypen & ON/OFF-Wege",
+   "source": "slides",
+   "ref": "VL13 · Folie 15",
+   "stem": "Bringen Sie die Stationen des primären Stäbchen-ON-Wegs (ON1) in die richtige Reihenfolge.",
+   "items": [
+    "Stäbchen",
+    "Stäbchen-Bipolarzelle (rb)",
+    "AII-Amakrinzelle",
+    "Gap Junction (Cx36)",
+    "ON-Zapfen-Bipolarzelle (cb)",
+    "Ganglienzelle"
+   ],
+   "explanation": "Folie 15 (Demb & Pugh 2002): Im ON1-Weg hat die Stäbchen-Bipolarzelle keinen eigenen Ausgang auf Ganglienzellen; sie erregt die AII-Amakrinzelle, die über Cx36-Gap-Junctions ON-Zapfen-Bipolarzellen ansteuert – das Stäbchensignal läuft „huckepack“ über die Zapfenbahn. Im OFF1-Weg hemmt die AII dagegen über eine chemische Synapse die OFF-Zapfen-Bipolarzelle."
+  },
+  {
+   "id": "vl13-center-surround",
+   "type": "single",
+   "topic": "Ganglienzellen & P/M-Pathways",
+   "source": "slides",
+   "ref": "VL13 · Folie 16",
+   "stem": "Eine Ganglienzelle mit ON-Zentrum und hemmendem Umfeld wird mit Lichtflecken verschiedener Größe gereizt. Welche Antwort erwartet man bei einem großen Lichtfleck, der Zentrum <b>und</b> Umfeld bedeckt?",
+   "options": [
+    {
+     "t": "Eine schwächere Antwort als bei einem kleinen, nur das Zentrum treffenden Lichtfleck",
+     "correct": true
+    },
+    {
+     "t": "Die stärkste Antwort aller Reize, weil die meisten Photorezeptoren erregt werden",
+     "correct": false
+    },
+    {
+     "t": "Eine vollständige Unterdrückung der Aktivität, solange das Licht an ist",
+     "correct": false
+    },
+    {
+     "t": "Dieselbe Antwort wie bei einem Lichtring, der nur das Umfeld trifft",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 16 (Wiesel 1959, „Size Selectivity“): kleiner Fleck im Zentrum (A) → starke Aktivierung; Ring im Umfeld (B) → Hemmung während des Reizes, Entladung danach; großer Fleck (C) → Zentrum und Umfeld heben sich teilweise auf → schwächere Antwort. Grundlage ist die laterale Hemmung."
+  },
+  {
+   "id": "vl13-richtungsselektivitaet",
+   "type": "single",
+   "topic": "Ganglienzellen & P/M-Pathways",
+   "source": "slides",
+   "ref": "VL13 · Folien 16, 32",
+   "stem": "Ein Lichtpunkt wird auf acht verschiedenen Bahnen (Pfeile) durch das rezeptive Feld einer Ganglienzelle bewegt; die Zahlen geben die Spikes pro Durchgang an. Welche Eigenschaft der Ganglienzelle zeigt das Experiment von Barlow, Hill & Levick (1964)?",
+   "options": [
+    {
+     "t": "Richtungsselektivität (direction selectivity)",
+     "correct": true
+    },
+    {
+     "t": "Orientierungsselektivität (orientation selectivity)",
+     "correct": false
+    },
+    {
+     "t": "Größenselektivität durch Zentrum-Umfeld-Antagonismus",
+     "correct": false
+    },
+    {
+     "t": "Farbopponenz zwischen S- und L-Zapfen",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 16 (Barlow, Hill & Levick 1964): Bewegung in der Vorzugsrichtung löst 79 Spikes aus, die entgegengesetzte Bewegung auf derselben Achse nur 2. Eine orientierungsselektive Zelle würde auf beide Bewegungsrichtungen entlang einer Achse gleich stark antworten – die Zelle ist also richtungs-, nicht nur orientierungsselektiv. Bewegungsrichtung wird schon in der Netzhaut extrahiert (Folie 32: Ganglienzellen verarbeiten „Richtung, Orientierung“).",
+   "stemSrc": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 16,
+    "crop": [
+     495,
+     145,
+     930,
+     415
+    ]
+   },
+   "stemImage": "assets/figures/vl13-richtungsselektivitaet-stem.webp"
+  },
+  {
+   "id": "vl13-melanopsin",
+   "type": "multi",
+   "topic": "Ganglienzellen & P/M-Pathways",
+   "source": "slides",
+   "ref": "VL13 · Folien 13, 17",
+   "stem": "Was trifft auf Melanopsin-Ganglienzellen (MelGC) zu?",
+   "options": [
+    {
+     "t": "Sie sind selbst lichtempfindlich, weil sie das Photopigment Melanopsin besitzen.",
+     "correct": true
+    },
+    {
+     "t": "Sie projizieren u. a. zum Nucleus suprachiasmaticus (SCN).",
+     "correct": true
+    },
+    {
+     "t": "Auf Licht antworten sie mit Depolarisation und einer lang anhaltenden Salve von Aktionspotentialen.",
+     "correct": true
+    },
+    {
+     "t": "Sie hyperpolarisieren bei Licht – genau wie die Zapfen.",
+     "correct": false
+    },
+    {
+     "t": "Ihr Empfindlichkeitsmaximum liegt im UV-Bereich unter 400 nm.",
+     "correct": false
+    },
+    {
+     "t": "Sie antworten auf Licht nur kurz (transient), innerhalb weniger Millisekunden.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 17 (Provencio 2002, Berson 2002): MelGC sind intrinsisch photosensitiv; ihr Aktionsspektrum liegt im Blau-Grün (Maximum um 480 nm, knapp unter 500 nm), sie depolarisieren langsam und feuern über Minuten, während der Zapfen hyperpolarisiert. Sie projizieren u. a. zum SCN (Folie 17: Schnitt durch den SCN über dem Chiasma, ox; Lehrbuch: retinohypothalamischer Trakt → Synchronisation der circadianen Uhr). Ein weiteres Ziel ist laut Lehrbuch (nicht auf den Folien) die Area pretectalis (Nucleus olivaris praetectalis); über sie und den Edinger-Westphal-Kern läuft der Pupillenreflex – nicht über den SCN. In der Tabelle (Folie 13) entspricht das der Ganglienzell-Funktion „Lichtwahrnehmung“."
+  },
+  {
+   "id": "vl13-ganglienzell-diversitaet",
+   "type": "combo",
+   "topic": "Ganglienzellen & P/M-Pathways",
+   "source": "slides",
+   "ref": "VL13 · Folien 13, 18",
+   "stem": "Welche Aussagen zur funktionellen Vielfalt retinaler Ganglienzellen (Baden et al. 2016) treffen zu?",
+   "statements": [
+    {
+     "t": "Anhand ihrer Lichtantworten lassen sich über 30 funktionelle Ganglienzelltypen unterscheiden.",
+     "correct": true
+    },
+    {
+     "t": "Neben ON- und OFF-Ganglienzellen gibt es auch ON-OFF-Ganglienzellen.",
+     "correct": true
+    },
+    {
+     "t": "Einige Typen sind richtungsselektiv (DS), andere orientierungsselektiv (OS).",
+     "correct": true
+    },
+    {
+     "t": "Richtungsselektive Typen kommen ausschließlich unter den ON-OFF-Ganglienzellen vor.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "ABC",
+    "AB",
+    "ABCD",
+    "BC",
+    "AC"
+   ],
+   "explanation": "Folie 18: Die funktionelle Klassifikation ergibt 32 Gruppen, gegliedert in OFF-, ON-OFF-, schnelle („fast“) ON- und langsame („slow“) ON-Typen; charakterisiert u. a. über Richtungs- (DSi) und Orientierungsselektivität (OSi). Richtungsselektive Typen gibt es in allen Klassen (z. B. „OFF DS“, „ON-OFF DS 1/2“, „ON DS sust.“). Passend dazu nennt Folie 13 über 40 Ganglienzell-Subtypen."
+  },
+  {
+   "id": "vl13-p-m-pathway",
+   "type": "single",
+   "topic": "Ganglienzellen & P/M-Pathways",
+   "source": "slides",
+   "ref": "VL13 · Folie 19",
+   "stem": "Welche Zuordnung zu den Ganglienzell-Pathways ist laut Vorlesung richtig?",
+   "options": [
+    {
+     "t": "P-Pathway – Farbwahrnehmung und Sehschärfe – Beta-Ganglienzellen",
+     "correct": true
+    },
+    {
+     "t": "P-Pathway – Bewegungswahrnehmung – Alpha-Ganglienzellen",
+     "correct": false
+    },
+    {
+     "t": "M-Pathway – Farbwahrnehmung und Sehschärfe – Beta-Ganglienzellen",
+     "correct": false
+    },
+    {
+     "t": "M-Pathway – Bewegungswahrnehmung – Melanopsin-Ganglienzellen",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 19: P(arvo)-Pathway = Farbe und Sehschärfe (Acuity) über Beta-Ganglienzellen; M(agno)-Pathway = Bewegung über Alpha-Ganglienzellen (beim Primaten: Midget- bzw. Parasol-Zellen, Lehrbuch). Das Beispielbild zeigt: Der M-Kanal liefert ein unscharfes, farbloses Bild, der P-Kanal Farbe und Details."
+  },
+  {
+   "id": "vl13-parvozellulaer",
+   "type": "multi",
+   "topic": "Ganglienzellen & P/M-Pathways",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL13 · Folien 19, 22 (80 %, tonisch: Lehrbuch)",
+   "stem": "Was trifft auf das parvozelluläre System zu?",
+   "options": [
+    {
+     "t": "Es dient vor allem dem Erkennen von Objekten (Form, Detail, Farbe).",
+     "correct": true
+    },
+    {
+     "t": "Etwa 80 % der retinalen Ganglienzellen gehören dazu.",
+     "correct": true
+    },
+    {
+     "t": "Die Zellen antworten tonisch (anhaltend).",
+     "correct": true
+    },
+    {
+     "t": "Die Zellen haben große rezeptive Felder und sind auf schnelle Bewegung spezialisiert.",
+     "correct": false
+    },
+    {
+     "t": "Es projiziert in die Schichten 1 und 2 des CGL.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 19: P-Pathway = Farbwahrnehmung und Sehschärfe (Beta-GC) → „Was“-Information für die Objekterkennung; Bewegung ist Sache des M-Pathways (Alpha-GC). Folie 22: magnozelluläre Schichten 1–2, parvozelluläre 3–6. Lehrbuch: P-Zellen (Midget-Zellen) sind ca. 80 % der Ganglienzellen, haben kleine rezeptive Felder und antworten tonisch; M-Zellen phasisch mit großen Feldern.",
+   "note": "Protokoll nannte nur die drei richtigen Aussagen – zwei Ablenker ergänzt. Funktion und CGL-Schichten durch VL13 Folien 19 und 22 bestätigt; 80 % und tonische Antwort stehen nicht auf den Folien (Lehrbuch)."
+  },
+  {
+   "id": "vl13-sehbahn-label",
+   "type": "label",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folie 19",
+   "stem": "Beschriften Sie die Sehbahn (Ansicht von unten/oben auf beide Augen und Hemisphären).",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 19,
+    "crop": [
+     140,
+     78,
+     478,
+     523
+    ],
+    "hide": [
+     [
+      402,
+      153,
+      466,
+      176
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      166,
+      153,
+      231,
+      176
+     ],
+     "answer": "Temporale Netzhauthälfte",
+     "accept": [
+      "temporal half",
+      "temporale Retina",
+      "temporale Hälfte",
+      "temporal retina",
+      "temporale Netzhaut",
+      "temporale Retinahälfte"
+     ],
+     "x": 6.95,
+     "y": 16.29,
+     "w": 20.71,
+     "h": 6.29
+    },
+    {
+     "box": [
+      300,
+      141,
+      333,
+      186
+     ],
+     "answer": "Nasale Netzhauthälften",
+     "accept": [
+      "nasal halves",
+      "nasale Retina",
+      "nasale Hälfte",
+      "nasale Netzhaut",
+      "nasal retina",
+      "nasale Netzhauthälfte"
+     ],
+     "x": 46.6,
+     "y": 13.6,
+     "w": 11.24,
+     "h": 11.24
+    },
+    {
+     "box": [
+      172,
+      187,
+      228,
+      200
+     ],
+     "answer": "Sehnerv (N. opticus)",
+     "accept": [
+      "optic nerve",
+      "Sehnerv",
+      "Nervus opticus",
+      "N. opticus"
+     ],
+     "x": 8.73,
+     "y": 23.93,
+     "w": 18.05,
+     "h": 4.04
+    },
+    {
+     "box": [
+      380,
+      200,
+      448,
+      212
+     ],
+     "answer": "Chiasma opticum",
+     "accept": [
+      "optic chiasma",
+      "optic chiasm",
+      "Chiasma",
+      "Sehnervenkreuzung",
+      "Chiasma opticum"
+     ],
+     "x": 70.27,
+     "y": 26.85,
+     "w": 21.6,
+     "h": 3.82
+    },
+    {
+     "box": [
+      172,
+      209,
+      221,
+      222
+     ],
+     "answer": "Tractus opticus",
+     "accept": [
+      "optic tract",
+      "Tractus opticus",
+      "Sehtrakt"
+     ],
+     "x": 8.73,
+     "y": 28.88,
+     "w": 15.98,
+     "h": 4.04
+    },
+    {
+     "box": [
+      416,
+      302,
+      466,
+      337
+     ],
+     "answer": "Corpus geniculatum laterale (CGL)",
+     "accept": [
+      "lateral geniculate body",
+      "CGL",
+      "LGN",
+      "Corpus geniculatum laterale",
+      "seitlicher Kniehöcker",
+      "lateral geniculate nucleus",
+      "lateraler Kniehöcker",
+      "äußerer Kniehöcker"
+     ],
+     "x": 80.92,
+     "y": 49.78,
+     "w": 16.27,
+     "h": 8.99
+    },
+    {
+     "box": [
+      146,
+      301,
+      211,
+      324
+     ],
+     "answer": "Sehstrahlung (Radiatio optica)",
+     "accept": [
+      "geniculo-calcarine tract",
+      "Sehstrahlung",
+      "Radiatio optica",
+      "optic radiation",
+      "Tractus geniculocalcarinus"
+     ],
+     "x": 1.04,
+     "y": 49.55,
+     "w": 20.71,
+     "h": 6.29
+    },
+    {
+     "box": [
+      282,
+      486,
+      348,
+      519
+     ],
+     "answer": "Primäre Sehrinde (V1, Area striata)",
+     "accept": [
+      "primary visual area",
+      "V1",
+      "primäre Sehrinde",
+      "Sehrinde",
+      "striate cortex",
+      "Area striata",
+      "primärer visueller Cortex",
+      "Area 17"
+     ],
+     "x": 41.27,
+     "y": 91.12,
+     "w": 21.01,
+     "h": 8.54
+    }
+   ],
+   "bank": [
+    "Colliculus superior",
+    "Meyer-Schleife"
+   ],
+   "explanation": "Die Fasern der nasalen Netzhauthälften kreuzen im Chiasma opticum, die der temporalen bleiben ungekreuzt. Jeder Tractus opticus führt daher die Information des kontralateralen Gesichtsfelds beider Augen („rechts/links wird aufgeteilt“, Folie 32). Umschaltung im CGL (Thalamus), dann über die Sehstrahlung (Tractus geniculocalcarinus) zur primären Sehrinde (Area striata, V1) im Okzipitallappen.",
+   "image": "assets/figures/vl13-sehbahn-label.webp",
+   "iw": 676,
+   "ih": 890
+  },
+  {
+   "id": "vl13-sehbahn-subkortikal-label",
+   "type": "label",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folie 3",
+   "stem": "Beschriften Sie das Schema der Sehbahn mit ihren kortikalen und subkortikalen Zielen.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 3,
+    "crop": [
+     488,
+     95,
+     835,
+     507
+    ],
+    "hide": [
+     [
+      737,
+      203,
+      771,
+      218
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      655,
+      235,
+      677,
+      249
+     ],
+     "answer": "Nasal (nasale Netzhauthälfte)",
+     "accept": [
+      "nasal",
+      "nasale Netzhaut",
+      "nasale Retina",
+      "nasale Netzhauthälfte"
+     ],
+     "x": 47.41,
+     "y": 33.37,
+     "w": 7.78,
+     "h": 4.61
+    },
+    {
+     "box": [
+      551,
+      240,
+      583,
+      254
+     ],
+     "answer": "Temporal (temporale Netzhauthälfte)",
+     "accept": [
+      "temporal",
+      "temporale Netzhaut",
+      "temporale Retina",
+      "temporale Netzhauthälfte"
+     ],
+     "x": 17.44,
+     "y": 34.59,
+     "w": 10.66,
+     "h": 4.61
+    },
+    {
+     "box": [
+      670,
+      277,
+      697,
+      295
+     ],
+     "answer": "Chiasma opticum",
+     "accept": [
+      "optic chiasm",
+      "Chiasma",
+      "Sehnervenkreuzung"
+     ],
+     "x": 51.73,
+     "y": 43.57,
+     "w": 9.22,
+     "h": 5.58
+    },
+    {
+     "box": [
+      550,
+      319,
+      583,
+      333
+     ],
+     "answer": "Amygdala",
+     "accept": [
+      "Corpus amygdaloideum",
+      "Mandelkern",
+      "Amygdala"
+     ],
+     "x": 17.15,
+     "y": 53.76,
+     "w": 10.95,
+     "h": 4.61
+    },
+    {
+     "box": [
+      531,
+      343,
+      583,
+      357
+     ],
+     "answer": "Pulvinar",
+     "accept": [
+      "pulvinar nucleus",
+      "Nucleus pulvinaris",
+      "Pulvinar thalami",
+      "Pulvinar"
+     ],
+     "x": 11.67,
+     "y": 59.59,
+     "w": 16.43,
+     "h": 4.61
+    },
+    {
+     "box": [
+      527,
+      366,
+      583,
+      387
+     ],
+     "answer": "Corpus geniculatum laterale (CGL/LGN)",
+     "accept": [
+      "lateral geniculate nucleus",
+      "LGN",
+      "CGL",
+      "Corpus geniculatum laterale",
+      "seitlicher Kniehöcker",
+      "lateraler Kniehöcker",
+      "äußerer Kniehöcker"
+     ],
+     "x": 10.52,
+     "y": 65.17,
+     "w": 17.58,
+     "h": 6.31
+    },
+    {
+     "box": [
+      525,
+      387,
+      583,
+      401
+     ],
+     "answer": "Colliculus superior",
+     "accept": [
+      "superior colliculus",
+      "Colliculi superiores",
+      "oberer Hügel",
+      "SC"
+     ],
+     "x": 9.94,
+     "y": 70.27,
+     "w": 18.16,
+     "h": 4.61
+    },
+    {
+     "box": [
+      536,
+      440,
+      583,
+      454
+     ],
+     "answer": "Sehstrahlung (Radiatio optica)",
+     "accept": [
+      "optic radiation",
+      "Radiatio optica",
+      "Sehstrahlung",
+      "Tractus geniculocalcarinus"
+     ],
+     "x": 13.11,
+     "y": 83.13,
+     "w": 14.99,
+     "h": 4.61
+    },
+    {
+     "box": [
+      760,
+      484,
+      808,
+      506
+     ],
+     "answer": "Primäre Sehrinde (V1)",
+     "accept": [
+      "primary visual cortex",
+      "V1",
+      "Sehrinde",
+      "primäre Sehrinde",
+      "Area 17",
+      "Area striata",
+      "primärer visueller Cortex",
+      "striate cortex"
+     ],
+     "x": 77.67,
+     "y": 93.81,
+     "w": 15.27,
+     "h": 6.55
+    }
+   ],
+   "bank": [
+    "Tractus opticus",
+    "Nucleus suprachiasmaticus (SCN)"
+   ],
+   "explanation": "Folie 3 (Hannula et al. 2005): Die Fasern der nasalen Netzhauthälften kreuzen im Chiasma opticum, sodass jede Hemisphäre das kontralaterale Gesichtsfeld erhält. Hauptziel ist das CGL (Thalamus), von dort zieht die Sehstrahlung zur primären Sehrinde (V1). Daneben projiziert die Retina zum Colliculus superior; gestrichelt ist eine subkortikale Route über Colliculus superior und Pulvinar zur Amygdala eingezeichnet, die V1 umgeht.",
+   "image": "assets/figures/vl13-sehbahn-subkortikal-label.webp",
+   "iw": 694,
+   "ih": 824
+  },
+  {
+   "id": "vl13-projektionen-label",
+   "type": "label",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folie 20",
+   "stem": "Beschriften Sie die retinalen Projektionen in der Lateralansicht und den Ausschnitt der Sehrinde (medial).",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 20,
+    "crop": [
+     38,
+     122,
+     925,
+     445
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      96,
+      131,
+      188,
+      146
+     ],
+     "answer": "Seitenventrikel",
+     "accept": [
+      "lateral ventricle",
+      "Seitenventrikel",
+      "Ventriculus lateralis",
+      "lateraler Ventrikel"
+     ],
+     "x": 6.26,
+     "y": 2.01,
+     "w": 10.94,
+     "h": 6.19
+    },
+    {
+     "box": [
+      118,
+      397,
+      164,
+      411
+     ],
+     "answer": "Chiasma opticum",
+     "accept": [
+      "chiasm",
+      "Chiasma",
+      "Sehnervenkreuzung",
+      "optic chiasm"
+     ],
+     "x": 8.74,
+     "y": 84.37,
+     "w": 5.75,
+     "h": 5.88
+    },
+    {
+     "box": [
+      160,
+      424,
+      238,
+      437
+     ],
+     "answer": "Meyer-Schleife",
+     "accept": [
+      "Meyer's loop",
+      "Meyersche Schleife",
+      "Meyer loop",
+      "Meyer-Schlinge"
+     ],
+     "x": 13.47,
+     "y": 92.72,
+     "w": 9.36,
+     "h": 5.57
+    },
+    {
+     "box": [
+      239,
+      382,
+      299,
+      423
+     ],
+     "answer": "Corpus geniculatum laterale (CGL/LGN)",
+     "accept": [
+      "lateral geniculate nucleus",
+      "LGN",
+      "CGL",
+      "Corpus geniculatum laterale",
+      "seitlicher Kniehöcker",
+      "lateral geniculate body",
+      "lateraler Kniehöcker",
+      "äußerer Kniehöcker",
+      "Nucleus geniculatus lateralis"
+     ],
+     "x": 22.38,
+     "y": 79.72,
+     "w": 7.33,
+     "h": 14.24
+    },
+    {
+     "box": [
+      319,
+      359,
+      370,
+      387
+     ],
+     "answer": "Sehstrahlung (Radiatio optica)",
+     "accept": [
+      "optic radiation",
+      "Sehstrahlung",
+      "Radiatio optica",
+      "Tractus geniculocalcarinus",
+      "geniculo-calcarine tract"
+     ],
+     "x": 31.4,
+     "y": 72.6,
+     "w": 6.31,
+     "h": 10.22
+    },
+    {
+     "box": [
+      381,
+      215,
+      430,
+      257
+     ],
+     "answer": "Primäre Sehrinde (V1)",
+     "accept": [
+      "primary visual cortex",
+      "V1",
+      "Sehrinde",
+      "primäre Sehrinde",
+      "Area striata",
+      "primärer visueller Cortex",
+      "Area 17",
+      "striate cortex",
+      "primary visual area",
+      "striärer Cortex"
+     ],
+     "x": 38.39,
+     "y": 28.02,
+     "w": 6.09,
+     "h": 14.55
+    },
+    {
+     "box": [
+      776,
+      251,
+      895,
+      267
+     ],
+     "answer": "Input der oberen Netzhauthälfte",
+     "accept": [
+      "superior retina input",
+      "obere Retina",
+      "obere Netzhaut",
+      "superiore Retina",
+      "obere Netzhauthälfte",
+      "Input der oberen Retina",
+      "Input der oberen Netzhaut",
+      "oberer Retina-Input",
+      "obere Retinahälfte",
+      "unteres Gesichtsfeld"
+     ],
+     "x": 82.92,
+     "y": 39.16,
+     "w": 13.98,
+     "h": 6.5
+    },
+    {
+     "box": [
+      776,
+      282,
+      872,
+      296
+     ],
+     "answer": "Fissura calcarina",
+     "accept": [
+      "calcarine fissure",
+      "Sulcus calcarinus",
+      "Kalkarinafurche",
+      "Fissura calcarina",
+      "Calcarina",
+      "calcarine sulcus"
+     ],
+     "x": 82.92,
+     "y": 48.76,
+     "w": 11.39,
+     "h": 5.88
+    },
+    {
+     "box": [
+      776,
+      307,
+      887,
+      324
+     ],
+     "answer": "Input der unteren Netzhauthälfte",
+     "accept": [
+      "inferior retina input",
+      "untere Retina",
+      "untere Netzhaut",
+      "inferiore Retina",
+      "untere Netzhauthälfte",
+      "Input der unteren Retina",
+      "Input der unteren Netzhaut",
+      "unterer Retina-Input",
+      "untere Retinahälfte",
+      "oberes Gesichtsfeld"
+     ],
+     "x": 82.92,
+     "y": 56.5,
+     "w": 13.08,
+     "h": 6.81
+    }
+   ],
+   "bank": [
+    "Colliculus superior",
+    "Tractus opticus"
+   ],
+   "explanation": "Lateralansicht: Chiasma → Tractus opticus → CGL (Thalamus) → Sehstrahlung zur primären Sehrinde am Okzipitalpol. Fasern aus der unteren Netzhauthälfte ziehen als Meyer-Schleife bogenförmig durch den Temporallappen (Lehrbuch). In der Sehrinde (Medialansicht) endet der Input der oberen Netzhauthälfte oberhalb, der der unteren Netzhauthälfte unterhalb der Fissura calcarina. Lehrbuch: Die obere Netzhauthälfte sieht das untere Gesichtsfeld (Projektion in den Cuneus oberhalb der Fissura calcarina), die untere Netzhauthälfte das obere Gesichtsfeld (Gyrus lingualis unterhalb).",
+   "image": "assets/figures/vl13-projektionen-label.webp",
+   "iw": 1400,
+   "ih": 510
+  },
+  {
+   "id": "vl13-sehbahn",
+   "type": "multi",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL13 · Folien 13, 19–22",
+   "stem": "Was ist Teil der Sehbahn? (4 richtig)",
+   "options": [
+    {
+     "t": "Sehstrahlung (Radiatio optica)",
+     "correct": true
+    },
+    {
+     "t": "Müller-Gliazellen",
+     "correct": false
+    },
+    {
+     "t": "Photorezeptoren",
+     "correct": true
+    },
+    {
+     "t": "Corpus geniculatum laterale (LGN)",
+     "correct": true
+    },
+    {
+     "t": "Sehnerv (N. opticus)",
+     "correct": true
+    }
+   ],
+   "explanation": "Sehbahn (Folien 19–22): Photorezeptoren → Bipolarzellen → Ganglienzellen → N. opticus → Chiasma → Tractus opticus → CGL/LGN → Sehstrahlung → V1. Müller-Gliazellen dienen laut Folie 13 der Ernährung, als Lichtleiter und der Blut-Netzhaut-Schranke – sie leiten Licht, aber keine neuronalen Signale und gehören daher nicht zur Sehbahn.",
+   "note": "Lösung durch VL13 Folien 13 und 19–22 bestätigt."
+  },
+  {
+   "id": "vl13-sehbahn-reihenfolge",
+   "type": "order",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folien 13, 19–20",
+   "stem": "Bringen Sie die Stationen der Sehbahn in die richtige Reihenfolge.",
+   "items": [
+    "Photorezeptoren",
+    "Bipolarzellen",
+    "Retinale Ganglienzellen",
+    "N. opticus / Chiasma opticum",
+    "Corpus geniculatum laterale",
+    "Sehstrahlung",
+    "Primärer visueller Cortex (V1)"
+   ],
+   "explanation": "Netzhaut (3-Neuronen-Kette: Photorezeptor → Bipolarzelle = 1. Processing → Ganglienzelle = 2. Processing, Folie 13) → Sehnerv und Chiasma (nasale Fasern kreuzen) → Tractus opticus → CGL im Thalamus → Sehstrahlung → V1 im Okzipitallappen (Folien 19–20)."
+  },
+  {
+   "id": "vl13-chiasma",
+   "type": "single",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folien 19, 32",
+   "stem": "Welche Fasern kreuzen im Chiasma opticum auf die Gegenseite?",
+   "options": [
+    {
+     "t": "Die Axone aus den nasalen Netzhauthälften beider Augen",
+     "correct": true
+    },
+    {
+     "t": "Die Axone aus den temporalen Netzhauthälften beider Augen",
+     "correct": false
+    },
+    {
+     "t": "Sämtliche Axone beider Sehnerven",
+     "correct": false
+    },
+    {
+     "t": "Nur die Axone der Ganglienzellen aus der Fovea",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 19: Nasale Fasern kreuzen, temporale bleiben ungekreuzt. Dadurch verarbeiten rechter Tractus opticus, rechtes CGL und rechte Sehrinde das linke Gesichtsfeld beider Augen – „rechts/links wird aufgeteilt“ (Folie 32)."
+  },
+  {
+   "id": "vl13-lgn-label",
+   "type": "label",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folie 22",
+   "stem": "Beschriften Sie das Schema der retinalen Projektionen beider Augen.",
+   "src": {
+    "pdf": "VL13 Visuelles System.pdf",
+    "page": 22,
+    "crop": [
+     175,
+     89,
+     448,
+     518
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      215,
+      89,
+      279,
+      107
+     ],
+     "answer": "Binokulare Zone",
+     "accept": [
+      "binocular zone",
+      "binokulares Gesichtsfeld",
+      "binokularer Bereich",
+      "Binokularzone",
+      "binokulare Zone"
+     ],
+     "x": 13.74,
+     "y": -0.58,
+     "w": 25.27,
+     "h": 5.36
+    },
+    {
+     "box": [
+      177,
+      182,
+      218,
+      201
+     ],
+     "answer": "Monokulare Zone",
+     "accept": [
+      "monocular zone",
+      "monokulares Gesichtsfeld",
+      "monokularer Bereich",
+      "Monokularzone",
+      "monokulare Zone"
+     ],
+     "x": -0.18,
+     "y": 21.1,
+     "w": 16.85,
+     "h": 5.59
+    },
+    {
+     "box": [
+      308,
+      273,
+      333,
+      287
+     ],
+     "answer": "Chiasma opticum",
+     "accept": [
+      "optic chiasm",
+      "Chiasma",
+      "Sehnervenkreuzung"
+     ],
+     "x": 47.8,
+     "y": 42.31,
+     "w": 10.99,
+     "h": 4.43
+    },
+    {
+     "box": [
+      308.5,
+      313,
+      330,
+      328.5
+     ],
+     "answer": "Tractus opticus",
+     "accept": [
+      "optic tracts",
+      "optic tract",
+      "Tractus opticus",
+      "Sehtrakt"
+     ],
+     "x": 47.99,
+     "y": 51.63,
+     "w": 9.71,
+     "h": 4.78
+    },
+    {
+     "box": [
+      368,
+      304,
+      433,
+      323
+     ],
+     "answer": "Corpus geniculatum laterale (CGL/LGN)",
+     "accept": [
+      "lateral geniculate nucleus",
+      "LGN",
+      "CGL",
+      "Corpus geniculatum laterale",
+      "seitlicher Kniehöcker",
+      "lateraler Kniehöcker",
+      "äußerer Kniehöcker"
+     ],
+     "x": 69.78,
+     "y": 49.53,
+     "w": 25.64,
+     "h": 5.59
+    },
+    {
+     "box": [
+      278,
+      441,
+      330,
+      468
+     ],
+     "answer": "Magnozellulärer Weg (M-Kanal)",
+     "accept": [
+      "magnocellular pathway",
+      "M channel",
+      "M-Kanal",
+      "magnozellulär",
+      "M-Pathway",
+      "magnozelluläres System"
+     ],
+     "x": 36.81,
+     "y": 81.47,
+     "w": 20.88,
+     "h": 7.46
+    },
+    {
+     "box": [
+      398,
+      440,
+      446,
+      467
+     ],
+     "answer": "Parvozellulärer Weg (P-Kanal)",
+     "accept": [
+      "parvocellular pathway",
+      "P channel",
+      "P-Kanal",
+      "parvozellulär",
+      "P-Pathway",
+      "parvozelluläres System"
+     ],
+     "x": 80.77,
+     "y": 81.24,
+     "w": 19.41,
+     "h": 7.46
+    },
+    {
+     "box": [
+      331,
+      499,
+      406,
+      517.5
+     ],
+     "answer": "Primäre Sehrinde (V1, Area 17)",
+     "accept": [
+      "primary visual cortex",
+      "V1",
+      "Area 17",
+      "Sehrinde",
+      "primäre Sehrinde",
+      "Area striata"
+     ],
+     "x": 56.23,
+     "y": 94.99,
+     "w": 29.3,
+     "h": 5.48
+    }
+   ],
+   "bank": [
+    "Koniozellulärer Weg (K-Kanal)",
+    "Colliculus superior"
+   ],
+   "explanation": "Im CGL enden die Fasern beider Augen in getrennten, monokularen Schichten: 1–2 (ventral) magnozellulär, 3–6 (dorsal) parvozellulär; C = kontralaterales Auge (Schichten 1, 4, 6), I = ipsilaterales Auge (2, 3, 5). M- und P-Kanal ziehen getrennt zur primären Sehrinde (Area 17). Die binokulare Zone des Gesichtsfelds wird von beiden Augen gesehen, die monokulare (temporaler Halbmond) nur von einem.",
+   "image": "assets/figures/vl13-lgn-label.webp",
+   "iw": 546,
+   "ih": 858
+  },
+  {
+   "id": "vl13-lgn-schichten",
+   "type": "combo",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folie 22",
+   "stem": "Welche Aussagen zum Corpus geniculatum laterale (CGL/LGN) treffen zu?",
+   "statements": [
+    {
+     "t": "Das CGL hat 6 Schichten; die Schichten 1–2 sind magnozellulär, 3–6 parvozellulär.",
+     "correct": true
+    },
+    {
+     "t": "Jede CGL-Schicht erhält Input von beiden Augen.",
+     "correct": false
+    },
+    {
+     "t": "Die Schichten 1, 4 und 6 erhalten Input vom kontralateralen Auge.",
+     "correct": true
+    },
+    {
+     "t": "Die magnozellulären Schichten liegen dorsal.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AC",
+    "A",
+    "ABC",
+    "ACD",
+    "CD"
+   ],
+   "explanation": "Folie 22: Jede Schicht ist monokular – C (kontralateral) in 1, 4, 6, I (ipsilateral) in 2, 3, 5. Die magnozellulären Schichten (große Zellen, M-Kanal) liegen ventral, die parvozellulären (P-Kanal) dorsal. Binokulare Verschaltung entsteht erst in der Sehrinde."
+  },
+  {
+   "id": "vl13-cgl-zelltypen",
+   "type": "open",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL13 · Folien 19, 22 (koniozellulär: Lehrbuch)",
+   "stem": "Nennen Sie die 3 Zelltypen im Corpus geniculatum laterale (CGL).",
+   "points": [
+    "Parvozelluläre Zellen (P)",
+    "Magnozelluläre Zellen (M)",
+    "Koniozelluläre Zellen (K)"
+   ],
+   "need": 3,
+   "answer": "Magnozellulär: Schichten 1–2 (ventral), M-Pathway, Bewegung (Alpha-Ganglienzellen). Parvozellulär: Schichten 3–6 (dorsal), P-Pathway, Farbe und Sehschärfe (Beta-Ganglienzellen). Koniozellulär (Lehrbuch): kleine Zellen zwischen den Hauptschichten, Blau-Gelb-Information.",
+   "explanation": "Lösung laut Klausureinsicht: parvo-, magno- und koniozellulär. Die VL13-Folien zeigen die parvo- und magnozellulären Schichten (Folie 22) und die zugehörigen Pathways (Folie 19); die koniozellulären Zellen liegen laut Lehrbuch in den Zwischenschichten.",
+   "note": "Parvo- und magnozellulär durch VL13 Folie 22 bestätigt; koniozellulär steht nicht auf den Folien (Lehrbuch)."
+  },
+  {
+   "id": "vl13-retinotopie",
+   "type": "combo",
+   "topic": "Sehbahn, LGN & Retinotopie",
+   "source": "slides",
+   "ref": "VL13 · Folien 7, 20, 21, 23",
+   "stem": "Welche Aussagen zu retinotopen Karten treffen zu?",
+   "statements": [
+    {
+     "t": "Benachbarte Punkte der Retina werden auf benachbarte Punkte im LGN und im visuellen Cortex abgebildet.",
+     "correct": true
+    },
+    {
+     "t": "Die Fovea nimmt in der Karte der primären Sehrinde eine überproportional große Fläche ein (kortikale Vergrößerung).",
+     "correct": true
+    },
+    {
+     "t": "Der Input der oberen Netzhauthälfte endet in V1 unterhalb der Fissura calcarina.",
+     "correct": false
+    },
+    {
+     "t": "In der Fovea liegt das Maximum der Stäbchendichte (rod peak density).",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "AB",
+    "ABC",
+    "ABD",
+    "B",
+    "ABCD"
+   ],
+   "explanation": "Folie 21: Ein Punkt auf der Retina entspricht einem Punkt im LGN und einem Punkt im visuellen Cortex. Folie 23: Die zentralen Grade um die Fovea belegen einen großen Teil der V1-Karte (kortikale Vergrößerung) – die Fovea ist das Zapfenmaximum („fovea cone peak“), Stäbchen fehlen dort (Folie 7). Folie 20: Der Input der oberen Netzhauthälfte endet oberhalb, der der unteren unterhalb der Fissura calcarina."
+  },
+  {
+   "id": "vl13-rezeptive-felder",
+   "type": "multi",
+   "topic": "Visueller Cortex & rezeptive Felder",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL13 · Folien 7, 16, 23 (teilweise) + Lehrbuch",
+   "stem": "Was trifft auf rezeptive Felder im visuellen System zu?",
+   "options": [
+    {
+     "t": "Sie sind umso größer, je weiter sie von der Fovea entfernt sind.",
+     "correct": true
+    },
+    {
+     "t": "Sie werden mit zunehmender Verarbeitungsebene (Netzhaut → CGL → V1 → …) größer.",
+     "correct": true
+    },
+    {
+     "t": "In V3–V5 gibt es keine rezeptiven Felder mehr.",
+     "correct": false
+    },
+    {
+     "t": "Sie sind immer rund.",
+     "correct": false
+    }
+   ],
+   "explanation": "In der Fovea liegen die Zapfen am dichtesten (Folie 7) und wenige Photorezeptoren konvergieren auf eine Ganglienzelle → kleine Felder, hohe Auflösung, große kortikale Repräsentation (Folie 23); in der Peripherie konvergieren viele → große Felder. Ganglienzellen haben Zentrum-Umfeld-Felder (Folie 16). Lehrbuch: Höhere Areale integrieren viele Eingänge → größere, komplexere Felder; in V1 sind sie z. B. länglich (orientierungsselektiv), also nicht immer rund, und auch V3–V5 haben rezeptive Felder.",
+   "note": "Nur teilweise auf den VL13-Folien (Exzentrizität indirekt über Folien 7 und 23); Größenzunahme mit der Verarbeitungsebene, V1-Feldformen und V3–V5 aus dem Lehrbuch."
+  },
+  {
+   "id": "vl13-visuelle-verarbeitung",
+   "type": "combo",
+   "topic": "Visueller Cortex & rezeptive Felder",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "Lehrbuch (nicht auf den VL13-Folien)",
+   "stem": "Was trifft auf die visuelle Verarbeitung zu?",
+   "statements": [
+    {
+     "t": "Es sind nur etwa 10 Cortexareale beteiligt.",
+     "correct": false
+    },
+    {
+     "t": "Die Verarbeitung geht nur bis V3.",
+     "correct": false
+    },
+    {
+     "t": "Etwa 60 % des Cortex sind an der visuellen Verarbeitung beteiligt.",
+     "correct": true
+    },
+    {
+     "t": "Die Verarbeitung der verschiedenen Eigenschaften (Form, Farbe, Bewegung …) dauert gleich lang.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "C",
+    "AB",
+    "CD",
+    "ABD"
+   ],
+   "explanation": "Lösung laut Klausureinsicht: nur C. Es sind weit mehr als 10 Areale (über 30) beteiligt, die Verarbeitung reicht weit über V3 hinaus (z. B. V4 Farbe, V5/MT Bewegung, inferotemporaler Cortex Objekte), und die Attribute werden unterschiedlich schnell verarbeitet. Die 60 % stammen aus der Klausurlösung (ohne Gewähr); in der Literatur werden beim Makaken gut 50 %, beim Menschen meist weniger (ca. 20–30 %) des Cortex genannt.",
+   "note": "Die 60 % stammen aus der Klausureinsicht („ohne Gewähr“). Die VL13-Folien behandeln die kortikale Verarbeitung nicht – Lösung nach Klausureinsicht und Lehrbuch."
+  },
+  {
+   "id": "vl13-complex-cells",
+   "type": "multi",
+   "topic": "Visueller Cortex & rezeptive Felder",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Lehrbuch (nicht auf den VL13-Folien)",
+   "stem": "Was trifft auf komplexe Zellen (complex cells) im primären visuellen Cortex zu?",
+   "options": [
+    {
+     "t": "Sie integrieren die Information mehrerer einfacher Zellen (simple cells).",
+     "correct": true
+    },
+    {
+     "t": "Sie reagieren hauptsächlich auf statische Reize an einer genau definierten Position im rezeptiven Feld.",
+     "correct": false
+    },
+    {
+     "t": "Sie reagieren vor allem auf bewegte, orientierte Reize, weitgehend ortsunabhängig.",
+     "correct": true
+    },
+    {
+     "t": "Ihr rezeptives Feld hat – wie bei simple cells – klar getrennte ON- und OFF-Subregionen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Simple cells: orientierungsselektiv mit getrennten ON-/OFF-Zonen, positionsabhängig. Complex cells: erhalten Eingang von mehreren simple cells → orientierungsselektiv, aber ortsinvariant, oft bewegungs(richtungs)selektiv (Hubel & Wiesel, Lehrbuch). Die VL13-Folien zeigen Richtungsselektivität nur auf Ebene der Ganglienzellen (Folie 16).",
+   "note": "Nicht auf den VL13-Folien – Lösung aus dem Lehrbuch."
+  },
+  {
+   "id": "vl13-hyperkolumne",
+   "type": "open",
+   "topic": "Visueller Cortex & rezeptive Felder",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "Lehrbuch (nicht auf den VL13-Folien)",
+   "stem": "Nennen Sie 3 Bestandteile einer Hyperkolumne im primären visuellen Cortex.",
+   "points": [
+    "Orientierungssäulen (alle Orientierungen über 180°)",
+    "Okuläre Dominanzsäulen (je eine für linkes und rechtes Auge)",
+    "Blobs (Cytochromoxidase-reich; Farbverarbeitung)"
+   ],
+   "need": 3,
+   "explanation": "Eine Hyperkolumne (~1 mm²) enthält alle Verarbeitungsmodule für einen Ort im Gesichtsfeld: Orientierungssäulen, Augendominanzsäulen beider Augen und Blobs (Farbe). Die VL13-Folien behandeln den visuellen Cortex nicht – Lehrbuchwissen.",
+   "note": "Nicht auf den VL13-Folien – Lösung aus dem Lehrbuch."
+  },
+  {
+   "id": "vl13-farbensehen",
+   "type": "multi",
+   "topic": "Farbsehen & binokulares Sehen",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL13 · Folien 8, 25–27, 32",
+   "stem": "Was trifft auf das Farbensehen zu? (4 richtig)",
+   "options": [
+    {
+     "t": "Primaten (Menschen) haben 3 verschiedene Zapfentypen.",
+     "correct": true
+    },
+    {
+     "t": "Die meisten Säugetiere haben 2 verschiedene Zapfentypen.",
+     "correct": true
+    },
+    {
+     "t": "Stäbchen dienen dem Farbensehen.",
+     "correct": false
+    },
+    {
+     "t": "Blau ist besonders gut geeignet, um kleine Strukturen (z. B. Schrift) zu erkennen.",
+     "correct": false
+    },
+    {
+     "t": "Mit dichromatischem (divariantem) Sehen unterscheidet man mehr Farben als mit trichromatischem.",
+     "correct": false
+    },
+    {
+     "t": "Rotes, langwelliges Licht aktiviert die Stäbchen (praktisch) nicht.",
+     "correct": true
+    },
+    {
+     "t": "Zapfen dienen dem Farbensehen.",
+     "correct": true
+    },
+    {
+     "t": "Das Verhältnis der Zapfentypen in der Fovea ist bei allen Menschen gleich.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 8: Mensch = S- (437 nm), M- (533 nm) und L-Zapfen (564 nm); das Stäbchenspektrum (498 nm) reicht kaum ins Rot. Folie 26: Die meisten Säuger sehen divariant (S + L) – nur Blau/Gelb, also weniger Farben. Folien 25/32: Ein Photorezeptortyp allein ist „farbenblind“, Farbsehen braucht ≥ 2 Zapfentypen – Stäbchen (nur ein Typ) können keine Farbe liefern. Folie 27: S-Zapfen sind selten (Blau ungeeignet für feine Details), und das L:M-Verhältnis schwankt zwischen Menschen von 1:2,7 bis 16,5:1.",
+   "note": "WS25/26-Variante enthielt „Stäbchen können rotes Licht wahrnehmen“ (= Umkehrung der richtigen Aussage, falsch). Lösung durch VL13 Folien 8 und 25–27 bestätigt."
+  },
+  {
+   "id": "vl13-univarianz",
+   "type": "single",
+   "topic": "Farbsehen & binokulares Sehen",
+   "source": "slides",
+   "ref": "VL13 · Folien 25, 32",
+   "stem": "Warum gelten Zapfen als „farbenblind“?",
+   "options": [
+    {
+     "t": "Ein einzelner Zapfentyp kann eine Änderung der Wellenlänge nicht von einer Änderung der Intensität unterscheiden.",
+     "correct": true
+    },
+    {
+     "t": "Zapfen absorbieren alle Wellenlängen gleich gut, sodass ihre Antwort immer nur die Helligkeit des Lichts widerspiegelt.",
+     "correct": false
+    },
+    {
+     "t": "Zapfen arbeiten nur im Dämmerlicht (skotopisch), in dem grundsätzlich keine Farben unterscheidbar sind.",
+     "correct": false
+    },
+    {
+     "t": "Zapfen geben ihr Signal ausschließlich über Stäbchen weiter, die selbst keine Farbinformation tragen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 25 (Univarianz): Die Antwort eines Photorezeptors hängt nur von der Zahl absorbierter Photonen ab – „Moderate White Light = Strong Blue Light“. Farbe entsteht erst durch den Vergleich von mindestens zwei Zapfentypen mit unterschiedlichen Spektren (Folie 32)."
+  },
+  {
+   "id": "vl13-divariant",
+   "type": "single",
+   "topic": "Farbsehen & binokulares Sehen",
+   "source": "slides",
+   "ref": "VL13 · Folie 26",
+   "stem": "Was trifft auf das divariante (dichromatische) Farbsehen zu?",
+   "options": [
+    {
+     "t": "S- und L-Opsin teilen das Spektrum in einen „blauen“ und einen „gelben“ Bereich mit neutralem Punkt dazwischen.",
+     "correct": true
+    },
+    {
+     "t": "Es beruht auf M- und L-Zapfen und erlaubt deshalb eine besonders feine Rot-Grün-Unterscheidung bei geringer Helligkeit.",
+     "correct": false
+    },
+    {
+     "t": "Es beruht auf einem einzigen Zapfentyp, wobei die Stäbchen als zweiter Farbkanal für den Vergleich dienen.",
+     "correct": false
+    },
+    {
+     "t": "Es erlaubt mehr Farbunterscheidungen als das trivariante Sehen des Menschen, weil die Spektren weniger überlappen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 26: Divariantes Sehen mit S-Opsin (kurzwellig) und L-Opsin: Kurze Wellenlängen erscheinen blau, lange gelb, am Übergang weiß/grau/schwarz. Rot und Grün sind nicht unterscheidbar. Der Mensch ist mit S-, M- und L-Zapfen trivariant (Folie 8)."
+  },
+  {
+   "id": "vl13-binokular-open",
+   "type": "open",
+   "topic": "Farbsehen & binokulares Sehen",
+   "source": "slides",
+   "ref": "VL13 · Folien 28, 32",
+   "stem": "Nennen Sie die vier Vorteile des binokularen Sehens (laut Vorlesung).",
+   "points": [
+    "Redundanz",
+    "Größeres Gesichtsfeld",
+    "Summation (höhere Empfindlichkeit durch zwei Augen)",
+    "Räumliches Sehen (Stereoskopie)"
+   ],
+   "explanation": "Folie 28: Seitlich stehende Augen (Kaninchen) ergeben ein fast vollständiges Rundum-Gesichtsfeld mit nur 27° (vorne) bzw. 9° (hinten) binokularer Überlappung; frontal stehende Augen (Affe) bieten ein binokulares Feld von ca. 98° für Stereoskopie, dafür eine blinde Zone hinter dem Kopf. Folie 32: „Binokuläres Sehen erlaubt Summation, Stereoskopie“."
+  },
+  {
+   "id": "vl13-binokular-kaninchen-affe",
+   "type": "single",
+   "topic": "Farbsehen & binokulares Sehen",
+   "source": "slides",
+   "ref": "VL13 · Folie 28",
+   "stem": "Was ist der Preis frontal stehender Augen (Affe) im Vergleich zu seitlich stehenden Augen (Kaninchen)?",
+   "options": [
+    {
+     "t": "Eine blinde Zone hinter dem Kopf – im Gegenzug ein binokulares Feld von ca. 98°.",
+     "correct": true
+    },
+    {
+     "t": "Ein kleineres binokulares Feld (ca. 27°) – im Gegenzug fast vollständige Rundumsicht.",
+     "correct": false
+    },
+    {
+     "t": "Weniger Summation, weil sich die Gesichtsfelder beider Augen kaum noch überlappen.",
+     "correct": false
+    },
+    {
+     "t": "Schlechteres räumliches Sehen, weil beide Augen nahezu dasselbe Bild sehen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 28: Das Kaninchen überblickt fast den ganzen Umkreis, binokular überlappen die Gesichtsfelder aber nur vorne (27°) und hinten (9°). Beim Affen überlappen sie vorne auf ca. 98° – das ermöglicht Summation und räumliches Sehen (Stereoskopie), kostet aber eine blinde Zone hinter dem Kopf. Gerade die leicht unterschiedlichen Bilder beider Augen sind die Grundlage des räumlichen Sehens."
+  },
+  {
+   "id": "vl13-netzhautdegeneration",
+   "type": "combo",
+   "topic": "Erbkrankheiten & Gentherapie",
+   "source": "slides",
+   "ref": "VL13 · Folie 29",
+   "stem": "Welche Aussagen zu erblichen Netzhautdegenerationen treffen laut Vorlesung zu?",
+   "statements": [
+    {
+     "t": "Die Inzidenz liegt bei etwa 1:2.500.",
+     "correct": true
+    },
+    {
+     "t": "Es sind mehr als 300 Gene und über 10.000 Mutationen bekannt.",
+     "correct": true
+    },
+    {
+     "t": "Die Mutationen betreffen überwiegend die Ganglienzellen.",
+     "correct": false
+    },
+    {
+     "t": "Häufig betroffen sind Gene der Phototransduktion.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ABD",
+    "AB",
+    "ABCD",
+    "BCD",
+    "AD"
+   ],
+   "explanation": "Folie 29: Netzhautdegeneration – Inzidenz 1:2.500, > 300 Gene, > 10.000 Mutationen, meist in Photorezeptoren (seltener RPE oder Bipolarzellen), häufig in Genen der Phototransduktion. Die große genetische Vielfalt ist eine Herausforderung für die Gentherapie."
+  },
+  {
+   "id": "vl13-gentherapie-open",
+   "type": "open",
+   "topic": "Erbkrankheiten & Gentherapie",
+   "source": "slides",
+   "ref": "VL13 · Folie 30",
+   "stem": "Nennen Sie 3 therapeutische Ansätze der Gentherapie bei erblichen Netzhauterkrankungen.",
+   "points": [
+    "Gene supplementation/augmentation (gesunde Genkopie einbringen)",
+    "Gene silencing (mutiertes Allel stilllegen)",
+    "Neuroprotektive Gentherapie",
+    "Gene editing (CRISPR/Cas9)",
+    "mRNA editing"
+   ],
+   "need": 3,
+   "explanation": "Folie 30. Gensupplementation passt v. a. zu rezessiven Funktionsverlust-Mutationen (Beispiel Luxturna/RPE65, Folie 31); bei dominanten Allelen kommen eher Silencing oder Editing infrage (Lehrbuch)."
+  },
+  {
+   "id": "vl13-gentherapie-vektoren",
+   "type": "open",
+   "topic": "Erbkrankheiten & Gentherapie",
+   "source": "slides",
+   "ref": "VL13 · Folien 30–31",
+   "stem": "Nennen Sie 2 Vektoren, die für die retinale Gentherapie eingesetzt werden.",
+   "points": [
+    "Lentivirus",
+    "Adeno-assoziiertes Virus (AAV), z. B. AAV2 bei Luxturna",
+    "Nicht-virale Systeme (Liposomen, Exosomen)"
+   ],
+   "need": 2,
+   "explanation": "Folie 30 nennt als Vektoren Lentivirus, Adeno-assoziiertes Virus (AAV) und nicht-virale Systeme (Liposomen, Exosomen u. a.). Luxturna bringt humane RPE65-cDNA mit einem AAV2-Vektor ins RPE (Folie 31)."
+  },
+  {
+   "id": "vl13-luxturna",
+   "type": "multi",
+   "topic": "Erbkrankheiten & Gentherapie",
+   "source": "slides",
+   "ref": "VL13 · Folien 30–31",
+   "stem": "Was trifft auf Luxturna und RPE65 zu? (4 richtig)",
+   "options": [
+    {
+     "t": "RPE65 wird im retinalen Pigmentepithel exprimiert.",
+     "correct": true
+    },
+    {
+     "t": "RPE65 katalysiert den entscheidenden Schritt des Sehzyklus: all-trans-Retinol → 11-cis-Retinol.",
+     "correct": true
+    },
+    {
+     "t": "RPE65-Mutationen verursachen Nachtblindheit und Lebersche kongenitale Amaurose (LCA).",
+     "correct": true
+    },
+    {
+     "t": "Luxturna bringt humane RPE65-cDNA mit einem AAV2-Vektor in die Netzhaut (Gensupplementation).",
+     "correct": true
+    },
+    {
+     "t": "Luxturna korrigiert die RPE65-Mutation direkt im Genom per CRISPR/Cas9 (Gene editing).",
+     "correct": false
+    },
+    {
+     "t": "RPE65 wird in den Stäbchen exprimiert und reduziert dort all-trans-Retinal zu all-trans-Retinol.",
+     "correct": false
+    },
+    {
+     "t": "Die Therapie gilt als kostengünstig und auch langfristig frei von Sehverschlechterungen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 31: RPE65 (im RPE) setzt all-trans-Retinol zu 11-cis-Retinol um; Mutationen → Nachtblindheit und LCA. Luxturna = humane RPE65-cDNA (CMV-Promotor, Kozak-Sequenz) in AAV2; Zulassung FDA 12/2017, EMA 11/2018. Kontroverse: wenige Patienten, sehr hohe Kosten (> 750.000 USD pro Auge), unklarer Versicherungsschutz, ab 2022 Berichte über geographische Atrophie, 2024 > 25 % mit schnellem Sehverlust. Die Reduktion all-trans-Retinal → all-trans-Retinol im Photorezeptor macht RDH8 (Folie 12).",
+   "note": "Folie 31 schreibt „FPA Zulassung“ – gemeint ist die FDA."
+  },
+  {
+   "id": "vl13-visuelle-mechanismen",
+   "type": "open",
+   "topic": "Zusammenfassung",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL13 · Folie 32 (Zusammenfassung); Folien 14–16, 19, 22, 23, 28",
+   "stem": "Nennen Sie 3 der verschiedenen visuellen Verarbeitungsmechanismen.",
+   "points": [
+    "Verstärkung (Phototransduktionskaskade, innere Retina)",
+    "Reduktion in der inneren Retina (Konvergenz vieler Photorezeptoren auf wenige Ganglienzellen)",
+    "Kontrastverstärkung durch laterale Inhibition / Zentrum-Umfeld-Organisation",
+    "ON- und OFF-Bahnen (Bipolarzellen mit inhibitorischen bzw. exzitatorischen Glutamatrezeptoren)",
+    "Richtungs- und Orientierungsselektivität der Ganglienzellen",
+    "Parallele Verarbeitung in P- und M-Pathway (Farbe/Sehschärfe bzw. Bewegung)",
+    "Aufteilung rechts/links: partielle Kreuzung (nur nasale Fasern) im Chiasma → jede Hemisphäre verarbeitet das kontralaterale Gesichtsfeld; linkes/rechtes Auge in getrennten CGL-Schichten",
+    "Retinotope Organisation mit kortikaler Vergrößerung",
+    "Farbsehen durch Vergleich ≥ 2 Zapfentypen (Farbopponenz)",
+    "Binokulares Sehen: Summation und Stereoskopie",
+    "Hierarchische Verarbeitung im Cortex (simple → complex cells, Hyperkolumnen)"
+   ],
+   "need": 3,
+   "explanation": "Die Frage ist offen formuliert – jeder klar benannte Mechanismus zählt. Die Zusammenfassungsfolie 32 der VL13 nennt: Verstärkung, Reduktion und Kontrast in der inneren Retina; Richtung und Orientierung in Ganglienzellen; P/M-Pathways und rechts/links-Aufteilung; retinotope Organisation mit kortikaler Vergrößerung; Farbsehen mit ≥ 2 Zapfentypen; binokulare Summation und Stereoskopie. Am sichersten sind die auf Folie 32 ausdrücklich als Signalverarbeitung genannten Beispiele: Verstärkung, Reduktion, Kontrast (innere Retina) sowie Richtung, Orientierung (Ganglienzellen); die rechts/links-Aufteilung ist eher anatomische Organisation der Sehbahn.",
+   "note": "Musterlösung bisher aus Lehrbuchwissen; jetzt an die Zusammenfassungsfolie 32 der VL13 angepasst (kortikale Hierarchie als Lehrbuchpunkt behalten)."
+  },
+  {
+   "id": "vl13-zusammenfassung",
+   "type": "combo",
+   "topic": "Zusammenfassung",
+   "source": "slides",
+   "ref": "VL13 · Folie 32",
+   "stem": "Welche Aussagen aus der Zusammenfassung der Vorlesung zum visuellen System treffen zu?",
+   "statements": [
+    {
+     "t": "Photorezeptoren verwandeln Licht in biochemische Ausgangssignale.",
+     "correct": true
+    },
+    {
+     "t": "Ganglienzellen projizieren direkt in die primäre Sehrinde (V1).",
+     "correct": false
+    },
+    {
+     "t": "Farbsehen benötigt mindestens zwei verschiedene Zapfentypen.",
+     "correct": true
+    },
+    {
+     "t": "Binokulares Sehen erlaubt Summation und Stereoskopie.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "ACD",
+    "AC",
+    "ABCD",
+    "CD",
+    "ABD"
+   ],
+   "explanation": "Folie 32: Ganglienzellen projizieren in den CGL (LGN), erst der CGL projiziert in die primäre Sehrinde (V1). Weitere Kernaussagen: Die innere Retina verarbeitet Signale (Verstärkung, Reduktion, Kontrast), Ganglienzellen verarbeiten Richtung und Orientierung, P/M-Pathways und rechts/links werden aufgeteilt, retinotope Organisation mit kortikaler Vergrößerung."
+  }
+ ]
+}

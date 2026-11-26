@@ -1,0 +1,2718 @@
+{
+ "id": "vl12",
+ "title": "VL12 · Kanalopathien",
+ "short": "Kanäle",
+ "color": "#c86b4c",
+ "topics": [
+  "Ionenkanäle: Funktion, Struktur & Gating",
+  "Klinische Genetik & Methoden",
+  "Brugada-Syndrom & Mutationseffekte",
+  "Muskel-Kanalopathien: HyperPP",
+  "Migräne & FHM",
+  "Epilepsie: Definition & Klassifikation",
+  "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+  "Dravet-Syndrom & GEFS+ (SCN1A)",
+  "Kompensation & genetischer Hintergrund"
+ ],
+ "questions": [
+  {
+   "id": "vl12-kanalopathie",
+   "type": "single",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL12 · Folien 2, 19",
+   "stem": "Was ist eine Kanalopathie?",
+   "options": [
+    {
+     "t": "Eine Erkrankung durch eine Mutation in einem Ionenkanal(gen)",
+     "correct": true
+    },
+    {
+     "t": "Eine Erkrankung durch Mutationen in einem G-Protein-gekoppelten Rezeptor",
+     "correct": false
+    },
+    {
+     "t": "Eine Erkrankung durch Verstopfung von Liquorkanälen",
+     "correct": false
+    },
+    {
+     "t": "Eine Erkrankung durch Autoantikörper gegen Transporter",
+     "correct": false
+    }
+   ],
+   "explanation": "Laut Folie ist eine Kanalopathie (channelopathy) eine Erkrankung, die durch Dysfunktionen von Ionenkanälen ausgelöst wird – vererbt oder erworben (de novo) und in verschiedenen Organen (ZNS, Niere, Herz, Muskel). Beispiele aus der VL: <i>SCN5A</i> → Brugada-Syndrom, <i>SCN1A</i> → Dravet/GEFS+/FHM3. GPCR-Mutationen sind keine Kanalopathien.",
+   "note": "Zwei Ablenker ergänzt. Lösung durch VL12 Folien 2/19 bestätigt."
+  },
+  {
+   "id": "vl12-kanalopathie-combo",
+   "type": "combo",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 2, 5, 10",
+   "stem": "Welche Aussagen zu Ionenkanälen und Kanalopathien treffen zu?",
+   "statements": [
+    {
+     "t": "Ionenkanäle werden ausschließlich nach ihrer Ionenselektivität klassifiziert.",
+     "correct": false
+    },
+    {
+     "t": "Kanalopathien können vererbt oder erworben (de novo) sein.",
+     "correct": true
+    },
+    {
+     "t": "Kanalopathien betreffen ausschließlich das zentrale Nervensystem.",
+     "correct": false
+    },
+    {
+     "t": "Aktionspotentiale beruhen auf spannungsabhängigen Ionenkanälen, die postsynaptische Antwort bei der synaptischen Transmission auf ligandenabhängigen Ionenkanälen.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "B",
+    "ABD",
+    "BCD",
+    "BD",
+    "CD"
+   ],
+   "explanation": "Kanalopathien betreffen verschiedene Systeme und Organe (ZNS, Niere, Herz, Muskel). Klassifiziert wird nach Selektivität, Öffnungsmechanismus und Ort der Expression. Folie 10: Aktionspotentiale – spannungsabhängig; synaptische Transmission – ligandenabhängig (die postsynaptischen Rezeptorkanäle; präsynaptisch öffnen zusätzlich spannungsabhängige Ca²⁺-Kanäle). Take-home: „Ionenkanäle sind sehr unterschiedlich in ihrer Funktion und damit auch in der Klassifikation.“ Hinweis: Die Folie setzt „erworben“ mit „de novo“ gleich. Im Lehrbuch ist eine De-novo-Mutation genetisch (nur nicht von den Eltern geerbt); „erworbene“ Kanalopathien im engeren Sinn entstehen z. B. durch Autoantikörper oder Toxine. Für Aussage B spielt das keine Rolle – richtig ist sie in beiden Lesarten."
+  },
+  {
+   "id": "vl12-klassifizierung",
+   "type": "open",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 5, 11",
+   "stem": "Nach welchen drei Kriterien lassen sich Ionenkanäle klassifizieren? Nennen Sie jeweils Beispiele.",
+   "points": [
+    "Selektivität: Na⁺, K⁺, Ca²⁺, Cl⁻",
+    "Öffnungsmechanismus: spannungsabhängig, ligandenabhängig …",
+    "Ort der Expression: Gehirn, Muskel, Niere …"
+   ],
+   "explanation": "Folie 5 nennt genau diese drei Kriterien. Take-home-Message (Folie 11): „Ionenkanäle sind sehr unterschiedlich in ihrer Funktion und damit auch in der Klassifikation.“"
+  },
+  {
+   "id": "vl12-struktur-label",
+   "type": "label",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folie 6",
+   "stem": "Beschriften Sie das Strukturschema spannungsabhängiger Ionenkanäle (A und B). Beim markierten Transmembransegment ist seine Funktion gefragt.",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 6,
+    "crop": [
+     218,
+     69,
+     742,
+     478
+    ],
+    "hide": [
+     [
+      652,
+      114,
+      667,
+      128
+     ],
+     [
+      604,
+      153,
+      619,
+      166
+     ],
+     [
+      652,
+      153,
+      667,
+      166
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      399,
+      110,
+      408,
+      143
+     ],
+     "answer": "Spannungssensor – Segment S4",
+     "accept": [
+      "Spannungssensor",
+      "voltage sensor",
+      "Spannungssensor S4",
+      "S4-Spannungssensor",
+      "Spannungssensor-Segment",
+      "Spannungsfühler"
+     ],
+     "x": 34.06,
+     "y": 9.41,
+     "w": 2.67,
+     "h": 9.29
+    },
+    {
+     "box": [
+      604,
+      114,
+      619,
+      128
+     ],
+     "answer": "Kv-Untereinheit",
+     "accept": [
+      "Kv",
+      "Kᵥ",
+      "Kv-Untereinheit",
+      "K+-Kanal-Untereinheit",
+      "Kv-alpha-Untereinheit",
+      "α-Untereinheit",
+      "alpha-Untereinheit",
+      "Kaliumkanal-Untereinheit",
+      "Kalium-Kanal-Untereinheit",
+      "porenbildende Untereinheit"
+     ],
+     "x": 73.19,
+     "y": 10.39,
+     "w": 3.82,
+     "h": 4.65
+    },
+    {
+     "box": [
+      625,
+      130,
+      645,
+      149
+     ],
+     "answer": "Pore",
+     "accept": [
+      "Kanalpore",
+      "Ionenpore",
+      "pore",
+      "zentrale Pore"
+     ],
+     "x": 77.19,
+     "y": 14.3,
+     "w": 4.77,
+     "h": 5.87
+    },
+    {
+     "box": [
+      468,
+      255,
+      480,
+      266
+     ],
+     "answer": "α-Untereinheit",
+     "accept": [
+      "alpha",
+      "α",
+      "alpha-Untereinheit",
+      "alpha subunit",
+      "α subunit"
+     ],
+     "x": 47.23,
+     "y": 44.87,
+     "w": 3.24,
+     "h": 3.91
+    },
+    {
+     "box": [
+      697,
+      253,
+      718,
+      266
+     ],
+     "answer": "β-Untereinheit (β1–4)",
+     "accept": [
+      "beta",
+      "β",
+      "ß",
+      "beta-Untereinheit",
+      "β-Untereinheit",
+      "β1-4",
+      "beta1-4",
+      "beta subunit",
+      "ß1-4",
+      "ß-Untereinheit",
+      "ß1-4-Untereinheit",
+      "β1-4-Untereinheit",
+      "ß-Untereinheit (ß1-4)"
+     ],
+     "x": 90.94,
+     "y": 44.38,
+     "w": 4.96,
+     "h": 4.4
+    }
+   ],
+   "bank": [
+    "S6",
+    "γ-Untereinheit",
+    "Domäne I",
+    "IFM-Motiv"
+   ],
+   "explanation": "A: Kv-Kanäle bestehen aus vier separaten porenbildenden Untereinheiten (Kv-α-Untereinheiten) mit je 6 Transmembransegmenten (S1–S6), die sich um eine zentrale Pore lagern (Tetramer). B (Schema des Nav-Kanals): Die vier homologen Domänen I–IV (je S1–S6) sind in einer einzigen α-Untereinheit verbunden (beim Cav-Kanal ebenso, dort α1 genannt); beim Nav-Kanal kommen akzessorische β-Untereinheiten (β1–4) mit je einem TM-Segment hinzu (vgl. Folie 55). Die Hilfsuntereinheiten des Cav-Kanals sind dagegen ein intrazelluläres β ohne TM-Segment sowie α2δ (Folie 3). Das positiv geladene S4 (+) ist der Spannungssensor.",
+   "image": "assets/figures/vl12-struktur-label.webp",
+   "iw": 1048,
+   "ih": 818
+  },
+  {
+   "id": "vl12-kv-nav-aufbau",
+   "type": "single",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 3, 6",
+   "stem": "Worin unterscheidet sich der Aufbau spannungsabhängiger K⁺-Kanäle (K<sub>V</sub>) von dem spannungsabhängiger Na⁺-Kanäle (Na<sub>V</sub>)?",
+   "options": [
+    {
+     "t": "K<sub>V</sub>: eine α-Untereinheit mit vier Domänen (I–IV) à 6 Segmenten; Na<sub>V</sub>: Tetramer aus vier Untereinheiten mit je 6 Segmenten",
+     "correct": false
+    },
+    {
+     "t": "K<sub>V</sub>: Tetramer aus vier Untereinheiten mit je 6 Segmenten; Na<sub>V</sub>: eine α-Untereinheit mit vier Domänen (I–IV) à 6 Segmenten",
+     "correct": true
+    },
+    {
+     "t": "K<sub>V</sub>: Tetramer aus vier Untereinheiten mit je 4 Segmenten; Na<sub>V</sub>: Dimer aus zwei Untereinheiten mit je 12 Segmenten",
+     "correct": false
+    },
+    {
+     "t": "Beide: vier identische Untereinheiten mit je 2 Segmenten; die Pore wird von der β-Untereinheit gebildet",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 6: Kv-Untereinheiten (S1–S6) lagern sich zu viert um die Pore. Beim Nav- (und Cav-)Kanal sind die Domänen I–IV in einer einzigen α-Untereinheit verbunden; β-Untereinheiten (bzw. α2/δ, β beim Ca²⁺-Kanal, Folie 3) sind akzessorisch und bilden nicht die Pore."
+  },
+  {
+   "id": "vl12-spannungssensor",
+   "type": "single",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 6, 9, 63",
+   "stem": "Welches Transmembransegment bildet den Spannungssensor spannungsabhängiger Ionenkanäle?",
+   "options": [
+    {
+     "t": "S6 – trägt mehrere negativ geladene Aminosäuren",
+     "correct": false
+    },
+    {
+     "t": "S1 – liegt am N-terminalen Beginn jeder Domäne",
+     "correct": false
+    },
+    {
+     "t": "S4 – trägt mehrere positiv geladene Aminosäuren",
+     "correct": true
+    },
+    {
+     "t": "Die Porenschleife zwischen S5 und S6 (P-Loop)",
+     "correct": false
+    }
+   ],
+   "explanation": "S4 enthält in regelmäßigem Abstand positive Ladungen (+ im Schema). Bei Depolarisation bewegt es sich nach außen (gating current) und öffnet das Tor. S5–S6 mit der P-Schleife bilden die Pore. Die GEFS+-Mutation R1648H (Folie 63) ersetzt z. B. ein Arginin im S4 der Domäne IV."
+  },
+  {
+   "id": "vl12-k-pore-label",
+   "type": "label",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 7–8",
+   "stem": "Beschriften Sie die Strukturabbildung eines Ionenkanals (Kristallstruktur, Doyle et al. 1998). Bei Feld 4 ist das dort rot markierte Aminosäure-Motiv gefragt (nicht der Name der Struktur, die es bildet).",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 7,
+    "crop": [
+     160,
+     105,
+     803,
+     484
+    ]
+   },
+   "labels": [
+    {
+     "find": "Kristallstruktur des K + Kanalpore",
+     "answer": "Kristallstruktur der K⁺-Kanalpore",
+     "accept": [
+      "K+-Kanalpore",
+      "K+ Kanalpore",
+      "Kaliumkanalpore",
+      "Kaliumkanal",
+      "K+-Kanal",
+      "Kanalpore",
+      "Kaliumkanal-Pore"
+     ],
+     "x": 1.03,
+     "y": 1.48,
+     "w": 41.36,
+     "h": 7.07
+    },
+    {
+     "find": "K + ions",
+     "answer": "K⁺-Ionen",
+     "accept": [
+      "K+ ions",
+      "K+",
+      "K+-Ionen",
+      "Kaliumionen",
+      "Kalium-Ionen",
+      "Kalium"
+     ],
+     "x": 4.77,
+     "y": 38.91,
+     "w": 11.5,
+     "h": 6.54
+    },
+    {
+     "find": "Selektivitätsfilter",
+     "answer": "Selektivitätsfilter",
+     "accept": [
+      "selectivity filter",
+      "Selektivitaetsfilter",
+      "Filter",
+      "Selektivitätsfilter GYG",
+      "GYG-Selektivitätsfilter"
+     ],
+     "x": 67.75,
+     "y": 2.05,
+     "w": 21.93,
+     "h": 6.58
+    },
+    {
+     "box": [
+      636,
+      208,
+      649,
+      247
+     ],
+     "answer": "GYG-Motiv (Signatursequenz)",
+     "accept": [
+      "GYG",
+      "Gly-Tyr-Gly",
+      "GYG-Motiv",
+      "TVGYG",
+      "Signatursequenz",
+      "Glycin-Tyrosin-Glycin",
+      "GYG-Sequenz",
+      "TVGYG-Sequenz",
+      "GYG-Aminosäuren",
+      "Aminosäuren GYG",
+      "Selektivitätsfilter GYG",
+      "GYG-Selektivitätsfilter"
+     ],
+     "x": 73.64,
+     "y": 26.52,
+     "w": 2.8,
+     "h": 11.61
+    }
+   ],
+   "bank": [
+    "activation gate",
+    "Spannungssensor (S4)",
+    "Na⁺-Ionen"
+   ],
+   "explanation": "Die Kristallstruktur der K⁺-Kanalpore (MacKinnon-Labor) zeigt mehrere K⁺-Ionen hintereinander in der Pore. Der Selektivitätsfilter liegt an der extrazellulären Seite und wird von der Signatursequenz gebildet (TVGYG, auf der Folie rot markiert: GYG; genauer von den Carbonyl-Sauerstoffen ihres Proteinrückgrats). Das activation gate („Tür“, Folie 8) liegt dagegen an der intrazellulären Kreuzung der inneren Helices.",
+   "image": "assets/figures/vl12-k-pore-label.webp",
+   "iw": 1286,
+   "ih": 758
+  },
+  {
+   "id": "vl12-gating-label",
+   "type": "label",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folie 9",
+   "stem": "Beschriften Sie die Abbildung zur Funktionsweise spannungsabhängiger Ionenkanäle (A: Spannungsabhängigkeit von Q und G, B: Modell).",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 9,
+    "crop": [
+     300,
+     72,
+     802,
+     500
+    ],
+    "hide": [
+     [
+      464,
+      470,
+      532,
+      482
+     ],
+     [
+      602,
+      488,
+      802,
+      503
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "find": "Gating current",
+     "answer": "Gating current (Ladungsverschiebung, Q)",
+     "accept": [
+      "Gating current",
+      "Gating-Strom",
+      "Torstrom",
+      "gating charge",
+      "Ladungsverschiebung",
+      "Gating-Ladung"
+     ],
+     "x": 9.91,
+     "y": 8.62,
+     "w": 29.08,
+     "h": 6.78
+    },
+    {
+     "find": "Ion channel conductance",
+     "answer": "Leitfähigkeit des Kanals (G)",
+     "accept": [
+      "Ion channel conductance",
+      "conductance",
+      "Leitfähigkeit",
+      "Kanalleitfähigkeit",
+      "Ionenkanal-Leitfähigkeit"
+     ],
+     "x": 50.08,
+     "y": 15.92,
+     "w": 49.59,
+     "h": 6.78
+    },
+    {
+     "box": [
+      309,
+      339,
+      379,
+      349
+     ],
+     "answer": "Spannungssensor (voltage sensor)",
+     "accept": [
+      "voltage sensor",
+      "Spannungssensor",
+      "S4"
+     ],
+     "x": 1.29,
+     "y": 61.8,
+     "w": 14.94,
+     "h": 3.5
+    },
+    {
+     "box": [
+      415,
+      339,
+      436,
+      349
+     ],
+     "answer": "Pore",
+     "accept": [
+      "pore",
+      "Kanalpore",
+      "Ionenpore"
+     ],
+     "x": 22.41,
+     "y": 61.8,
+     "w": 5.18,
+     "h": 3.5
+    },
+    {
+     "box": [
+      326,
+      470,
+      349,
+      480
+     ],
+     "answer": "Tor (gate)",
+     "accept": [
+      "gate",
+      "Tor",
+      "activation gate",
+      "Aktivierungstor",
+      "Tür"
+     ],
+     "x": 4.68,
+     "y": 92.41,
+     "w": 5.58,
+     "h": 3.5
+    },
+    {
+     "box": [
+      589,
+      324,
+      649,
+      335
+     ],
+     "answer": "Ionenstrom (ionic current)",
+     "accept": [
+      "ionic current",
+      "Ionenstrom",
+      "ion current",
+      "Strom"
+     ],
+     "x": 57.07,
+     "y": 58.29,
+     "w": 12.95,
+     "h": 3.74
+    }
+   ],
+   "bank": [
+    "Selektivitätsfilter",
+    "Inaktivierungstor (IFM)",
+    "Leckstrom"
+   ],
+   "explanation": "Bei Depolarisation bewegt sich der positiv geladene Spannungssensor (S4) nach außen – messbar als gating current (Q). Erst danach öffnet das Tor (gate), und Ionen fließen durch die Pore (ionic current). Deshalb liegt die Q-Kurve bei negativeren Potentialen als die Leitfähigkeitskurve G.",
+   "image": "assets/figures/vl12-gating-label.webp",
+   "iw": 1004,
+   "ih": 856
+  },
+  {
+   "id": "vl12-gating-current",
+   "type": "single",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folie 9",
+   "stem": "Ladungsverschiebung (gating current, Q) und Leitfähigkeit (G) eines spannungsabhängigen Ionenkanals wurden in Abhängigkeit von der Membranspannung gemessen. Welche Aussage trifft zu?",
+   "options": [
+    {
+     "t": "Die G-Kurve liegt bei negativeren Potentialen: Der Kanal öffnet, bevor sich der Spannungssensor bewegt.",
+     "correct": false
+    },
+    {
+     "t": "Beide Kurven sind deckungsgleich, weil gating current und Ionenstrom identisch sind.",
+     "correct": false
+    },
+    {
+     "t": "Der gating current entsteht durch den Fluss von Na⁺-Ionen durch die geöffnete Pore.",
+     "correct": false
+    },
+    {
+     "t": "Die Q-Kurve liegt bei negativeren Potentialen: Der Spannungssensor bewegt sich, bevor der Kanal öffnet.",
+     "correct": true
+    }
+   ],
+   "explanation": "Gating current = Verschiebung der Ladungen des Spannungssensors (S4) im elektrischen Feld der Membran. Sie geht der Porenöffnung voraus (Q-Kurve links von G). Ionenstrom fließt erst, wenn das Tor offen ist."
+  },
+  {
+   "id": "vl12-pore-gate",
+   "type": "multi",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 3, 7–8",
+   "stem": "Welche Aussagen zur Struktur der K⁺-Kanalpore treffen zu?",
+   "options": [
+    {
+     "t": "Der Selektivitätsfilter liegt an der extrazellulären Seite der Pore.",
+     "correct": true
+    },
+    {
+     "t": "Selektivitätsfilter und activation gate sind dieselbe Struktur.",
+     "correct": false
+    },
+    {
+     "t": "In der Pore liegen mehrere K⁺-Ionen hintereinander.",
+     "correct": true
+    },
+    {
+     "t": "Ionenkanäle sind unselektive Poren, die alle Kationen gleich gut passieren lassen.",
+     "correct": false
+    },
+    {
+     "t": "Das activation gate („Tür“) liegt an der intrazellulären Seite, wo sich die inneren Helices kreuzen.",
+     "correct": true
+    },
+    {
+     "t": "Beim Öffnen des Kanals verändern die porenbildenden Helices ihre Lage.",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 7: K⁺-Ionen in der Pore, oben (extrazellulär) der Selektivitätsfilter mit GYG. Folie 8: Die „Tür“ (activation gate) sitzt unten an der Helixkreuzung; beim Öffnen weichen die Helices auseinander (rot geschlossen, schwarz offen). Ionenkanäle sind sehr selektive Poren (Folie 3)."
+  },
+  {
+   "id": "vl12-bedeutung-label",
+   "type": "label",
+   "topic": "Ionenkanäle: Funktion, Struktur & Gating",
+   "source": "slides",
+   "ref": "VL12 · Folien 4, 10",
+   "stem": "Beschriften Sie das Schaubild zur Bedeutung der Ionenkanäle: links Aktionspotential (Membranpotential und Leitfähigkeiten), rechts synaptische Transmission – und welche Kanalart jeweils dominiert.",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 10,
+    "crop": [
+     128,
+     140,
+     856,
+     458
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      277,
+      209,
+      359,
+      224
+     ],
+     "answer": "Aktionspotential",
+     "accept": [
+      "Action potential",
+      "AP",
+      "Aktionspotenzial"
+     ],
+     "x": 20.12,
+     "y": 20.91,
+     "w": 11.95,
+     "h": 6.29
+    },
+    {
+     "box": [
+      283,
+      264,
+      450,
+      280
+     ],
+     "answer": "Na⁺-Leitfähigkeit (Na⁺-Kanäle)",
+     "accept": [
+      "Na+ conductance",
+      "Natriumleitfähigkeit",
+      "Na-Leitfähigkeit",
+      "Natriumkanäle",
+      "Na+ channels",
+      "gNa"
+     ],
+     "x": 20.95,
+     "y": 38.21,
+     "w": 23.63,
+     "h": 6.6
+    },
+    {
+     "box": [
+      303,
+      298,
+      453,
+      312
+     ],
+     "answer": "K⁺-Leitfähigkeit (K⁺-Kanäle)",
+     "accept": [
+      "K+ conductance",
+      "Kaliumleitfähigkeit",
+      "K-Leitfähigkeit",
+      "Kaliumkanäle",
+      "K+ channels",
+      "gK"
+     ],
+     "x": 23.7,
+     "y": 48.9,
+     "w": 21.29,
+     "h": 5.97
+    },
+    {
+     "box": [
+      779,
+      244,
+      836,
+      261
+     ],
+     "answer": "spannungsabhängiger Ca²⁺-Kanal",
+     "accept": [
+      "Voltage-gated Ca2+ channel",
+      "spannungsabhängiger Calciumkanal",
+      "spannungsabhängiger Kalziumkanal",
+      "spannungsgesteuerter Ca2+-Kanal",
+      "spannungsgesteuerter Calciumkanal",
+      "CaV-Kanal",
+      "VGCC"
+     ],
+     "x": 89.08,
+     "y": 31.92,
+     "w": 8.52,
+     "h": 6.92
+    },
+    {
+     "box": [
+      787,
+      356,
+      828,
+      372
+     ],
+     "answer": "ligandengesteuerter Kanal, offen",
+     "accept": [
+      "Ligand-gated channel open",
+      "ligandengesteuerter Kanal offen",
+      "offener ligandengesteuerter Kanal",
+      "ligandenabhängiger Kanal offen",
+      "offener ligandenabhängiger Kanal",
+      "offener Rezeptorkanal"
+     ],
+     "x": 90.18,
+     "y": 67.14,
+     "w": 6.32,
+     "h": 6.6
+    },
+    {
+     "box": [
+      571,
+      367,
+      615,
+      383
+     ],
+     "answer": "ligandengesteuerter Kanal, geschlossen",
+     "accept": [
+      "Ligand-gated channel closed",
+      "ligandengesteuerter Kanal geschlossen",
+      "geschlossener ligandengesteuerter Kanal",
+      "ligandenabhängiger Kanal geschlossen",
+      "geschlossener ligandenabhängiger Kanal",
+      "geschlossener Rezeptorkanal"
+     ],
+     "x": 60.51,
+     "y": 70.6,
+     "w": 6.73,
+     "h": 6.6
+    },
+    {
+     "find": "spannungsabhängig",
+     "answer": "spannungsabhängig",
+     "accept": [
+      "spannungsgesteuert",
+      "voltage-gated"
+     ],
+     "x": 15.65,
+     "y": 89.6,
+     "w": 27.33,
+     "h": 9.12
+    },
+    {
+     "find": "ligandenabhängig",
+     "answer": "ligandenabhängig",
+     "accept": [
+      "ligandengesteuert",
+      "ligand-gated"
+     ],
+     "x": 68.17,
+     "y": 89.6,
+     "w": 24.41,
+     "h": 9.12
+    }
+   ],
+   "bank": [
+    "Cl⁻-Leitfähigkeit (Cl⁻-Kanäle)",
+    "Na⁺/K⁺-ATPase",
+    "mechanosensitiv"
+   ],
+   "explanation": "Aktionspotential: zuerst öffnen schnell die spannungsabhängigen Na⁺-Kanäle (Na⁺-Einstrom → Depolarisation), verzögert die K⁺-Kanäle (K⁺-Ausstrom → Repolarisation, Nachhyperpolarisation Richtung E<sub>K</sub>). Synapse: das AP öffnet präsynaptisch spannungsabhängige Ca²⁺-Kanäle → Transmitterfreisetzung; postsynaptisch öffnet der Transmitter ligandengesteuerte Kanäle → postsynaptisches Potential.",
+   "image": "assets/figures/vl12-bedeutung-label.webp",
+   "iw": 1400,
+   "ih": 612
+  },
+  {
+   "id": "vl12-techniken",
+   "type": "open",
+   "topic": "Klinische Genetik & Methoden",
+   "source": "slides",
+   "ref": "VL12 · Folien 12–14",
+   "stem": "Nennen Sie 3 Techniken, mit denen in der klinischen Genetik krankheitsverursachende Mutationen (z. B. in Ionenkanalgenen) identifiziert werden.",
+   "points": [
+    "Linkage-Analyse (Kopplungsanalyse in Stammbäumen)",
+    "Kandidatengen-Sequenzierung",
+    "GWAS (genome-wide association studies)",
+    "Whole-exome-/Whole-genome-Sequenzierung",
+    "Mutationsanalyse (Detektion z. B. per Sequenzierung)"
+   ],
+   "need": 3,
+   "explanation": "Ausgangspunkt ist die Phänotypisierung und Analyse von Stammbäumen und sporadischen Fällen (Folie 12); Folie 13 listet die Techniken, Folie 14 zeigt die Detektion einer Mutation im Sequenz-Chromatogramm."
+  },
+  {
+   "id": "vl12-de-novo",
+   "type": "single",
+   "topic": "Klinische Genetik & Methoden",
+   "source": "slides",
+   "ref": "VL12 · Folien 2, 12, 62",
+   "stem": "Im abgebildeten Stammbaum ist ein Kind betroffen (+/m); beide Eltern und das Geschwisterkind tragen die Variante nicht (+/+). Wie ist die Mutation am wahrscheinlichsten entstanden?",
+   "stemSrc": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 12,
+    "crop": [
+     660,
+     212,
+     780,
+     356
+    ]
+   },
+   "options": [
+    {
+     "t": "Autosomal-rezessiv von beiden Eltern vererbt",
+     "correct": false
+    },
+    {
+     "t": "De novo beim betroffenen Kind entstanden (sporadischer Fall)",
+     "correct": true
+    },
+    {
+     "t": "Autosomal-dominant vom Vater vererbt",
+     "correct": false
+    },
+    {
+     "t": "Mitochondrial über die Mutter vererbt",
+     "correct": false
+    }
+   ],
+   "explanation": "Die Eltern sind Wildtyp (+/+), das Kind heterozygot (+/m): Die Variante ist neu (de novo) entstanden. Kanalopathien können vererbt oder „erworben (→ de novo)“ sein (Folie 2); z. B. sind Dravet-Varianten in <i>SCN1A</i> meist de novo (Folie 62).",
+   "stemImage": "assets/figures/vl12-de-novo-stem.webp"
+  },
+  {
+   "id": "vl12-sequenz-a29p",
+   "type": "single",
+   "topic": "Klinische Genetik & Methoden",
+   "source": "slides",
+   "ref": "VL12 · Folie 14",
+   "stem": "Die Sequenzierung eines Patienten zeigt den abgebildeten Befund. Welche Interpretation ist richtig?",
+   "stemSrc": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 14,
+    "crop": [
+     325,
+     70,
+     640,
+     484
+    ]
+   },
+   "options": [
+    {
+     "t": "Heterozygote Missense-Mutation: Codon CCA → GCA, Prolin an Position 29 wird durch Alanin ersetzt",
+     "correct": false
+    },
+    {
+     "t": "Heterozygote Nonsense-Mutation: Codon GCA → CCA erzeugt an Position 29 ein Stoppcodon",
+     "correct": false
+    },
+    {
+     "t": "Heterozygote Missense-Mutation: Codon GCA → CCA, Alanin an Position 29 wird durch Prolin ersetzt",
+     "correct": true
+    },
+    {
+     "t": "Homozygote Missense-Mutation: Codon GCA → CCA, Alanin an Position 29 wird durch Prolin ersetzt",
+     "correct": false
+    }
+   ],
+   "explanation": "p.A29P = Proteinebene: Ala29 → Pro (GCA = Alanin, CCA = Prolin; obere Zeile = mutant). Entscheidend für die Zygotie ist das Chromatogramm: An der Mutationsstelle liegen zwei Peaks übereinander (C blau, G schwarz) – ein Allel mutiert, eines Wildtyp → heterozygot. Homozygot wäre nur ein einzelner C-Peak.",
+   "stemImage": "assets/figures/vl12-sequenz-a29p-stem.webp"
+  },
+  {
+   "id": "vl12-oozyten-ablauf",
+   "type": "order",
+   "topic": "Klinische Genetik & Methoden",
+   "source": "slides",
+   "ref": "VL12 · Folien 15–16, 53",
+   "stem": "Bringen Sie die Schritte zur funktionellen Untersuchung einer Kanalmutation im Xenopus-Oozyten-Expressionssystem in die richtige Reihenfolge.",
+   "items": [
+    "cDNA des Wildtyp- bzw. des defekten Kanals",
+    "in vitro Transkription zu cRNA",
+    "Injektion der cRNA in Xenopus-Oozyten",
+    "Translation und Expression des Kanalproteins in der Oozytenmembran",
+    "Strommessung (Voltage-Clamp) und Vergleich Wildtyp vs. Mutante"
+   ],
+   "explanation": "Folie 15: cDNA → in vitro Transkription → cRNA → Expression des Proteins in Oozyten des Krallenfrosches → Strommessung (z. B. K<sub>V</sub>7.2-Wildtyp vs. Mutante N258S, Folie 53). Take-home (Folie 18): Funktionelle Veränderungen lassen sich auch in einfachen, nicht-neuronalen Systemen messen."
+  },
+  {
+   "id": "vl12-messsysteme",
+   "type": "multi",
+   "topic": "Klinische Genetik & Methoden",
+   "source": "slides",
+   "ref": "VL12 · Folien 15–18",
+   "stem": "Welche Aussagen zu funktionellen Untersuchungen von Kanalmutationen treffen zu?",
+   "options": [
+    {
+     "t": "Die funktionellen Veränderungen einer Mutation können auch in einfachen, nicht-neuronalen Systemen (z. B. Xenopus-Oozyten) gemessen werden.",
+     "correct": true
+    },
+    {
+     "t": "Im Voltage-Clamp-Modus werden Aktionspotentiale als Antwort auf Strominjektion gemessen.",
+     "correct": false
+    },
+    {
+     "t": "Im Current-Clamp-Modus wird die Spannung gemessen, z. B. das Feuern von Aktionspotentialen.",
+     "correct": true
+    },
+    {
+     "t": "Funktionelle Effekte einer Kanalmutation lassen sich nur in Neuronen von Patienten bestimmen.",
+     "correct": false
+    },
+    {
+     "t": "Im Voltage-Clamp-Modus wird bei vorgegebener (geklemmter) Spannung der Strom gemessen.",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 17: whole-cell patch-clamp – Current Clamp: Spannung (Feuerverhalten bei Strominjektion), Voltage Clamp: Strom (z. B. spannungsaktivierte Na⁺-Ströme). Take-home (Folie 18): Mutationseffekte lassen sich auch in einfachen, nicht-neuronalen Systemen messen."
+  },
+  {
+   "id": "vl12-patchclamp-label",
+   "type": "label",
+   "topic": "Klinische Genetik & Methoden",
+   "source": "slides",
+   "ref": "VL12 · Folie 17",
+   "stem": "Beschriften Sie das Schaubild zu funktionellen Untersuchungen: Messmethode (Schema) sowie die beiden Messmodi und die jeweils gemessene Größe (rechts).",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 17,
+    "crop": [
+     150,
+     72,
+     830,
+     492
+    ],
+    "hide": [
+     [
+      609,
+      305,
+      823,
+      319
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "find": "Current Clamp",
+     "answer": "Current Clamp (Stromklemme)",
+     "accept": [
+      "Current-Clamp",
+      "Stromklemme"
+     ],
+     "x": 63.73,
+     "y": 5.21,
+     "w": 18.82,
+     "h": 5.93
+    },
+    {
+     "find": "Spannung",
+     "answer": "Spannung (Membranpotential)",
+     "accept": [
+      "Membranspannung",
+      "Membranpotential",
+      "voltage",
+      "Aktionspotentiale",
+      "Feuerverhalten"
+     ],
+     "x": 82.51,
+     "y": 5.21,
+     "w": 12.62,
+     "h": 5.93
+    },
+    {
+     "find": "Voltage Clamp",
+     "answer": "Voltage Clamp (Spannungsklemme)",
+     "accept": [
+      "Voltage-Clamp",
+      "Spannungsklemme"
+     ],
+     "x": 68.34,
+     "y": 48.61,
+     "w": 18.66,
+     "h": 5.94
+    },
+    {
+     "find": "Strom",
+     "answer": "Strom (Ionenstrom)",
+     "accept": [
+      "current",
+      "Ionenstrom",
+      "Natriumstrom",
+      "Na+-Strom"
+     ],
+     "x": 86.97,
+     "y": 48.61,
+     "w": 7.94,
+     "h": 5.94
+    },
+    {
+     "find": "whole cell patch-clamp",
+     "answer": "Whole-cell-Patch-Clamp",
+     "accept": [
+      "whole cell patch clamp",
+      "whole-cell",
+      "Patch-Clamp",
+      "Ganzzell-Patch-Clamp",
+      "Ganzzellableitung"
+     ],
+     "x": 21.04,
+     "y": 47.05,
+     "w": 28.22,
+     "h": 5.93
+    }
+   ],
+   "bank": [
+    "Leitfähigkeit",
+    "Two-electrode voltage clamp (Oozyte)"
+   ],
+   "explanation": "Current Clamp: Strom wird vorgegeben/injiziert (+50 pA), gemessen wird die Spannung – z. B. das Feuern von Aktionspotentialen. Voltage Clamp: die Spannung wird geklemmt (Spannungsprotokoll in mV), gemessen wird der Strom – z. B. spannungsaktivierte Na⁺-Ströme (pA). Beides in der whole-cell-Konfiguration der Patch-Clamp-Technik.",
+   "image": "assets/figures/vl12-patchclamp-label.webp",
+   "iw": 1360,
+   "ih": 840
+  },
+  {
+   "id": "vl12-brugada",
+   "type": "single",
+   "topic": "Brugada-Syndrom & Mutationseffekte",
+   "source": "exam",
+   "exam": "WS23/24, WS25/26",
+   "ref": "VL12 · Folien 20–22",
+   "stem": "Welcher Kanal ist beim Brugada-Syndrom betroffen?",
+   "options": [
+    {
+     "t": "Kalium-Kanal",
+     "correct": false
+    },
+    {
+     "t": "Natrium-Kanal",
+     "correct": true
+    },
+    {
+     "t": "Chlorid-Kanal",
+     "correct": false
+    },
+    {
+     "t": "Calcium-Kanal",
+     "correct": false
+    }
+   ],
+   "explanation": "Brugada-Syndrom: <i>SCN5A</i> kodiert den kardialen Na⁺-Kanal Na<sub>V</sub>1.5; ca. 20 % der Patienten haben eine <i>SCN5A</i>-Mutation. Folgen: Arrhythmien, Kammerflimmern, plötzlicher Herztod. Die gezeigten Mutationen (z. B. R104W) bewirken einen Funktionsverlust, teils dominant-negativ.",
+   "note": "Lösung durch VL12 Folien 20–21 bestätigt."
+  },
+  {
+   "id": "vl12-brugada-merkmale",
+   "type": "multi",
+   "topic": "Brugada-Syndrom & Mutationseffekte",
+   "source": "slides",
+   "ref": "VL12 · Folien 20–21",
+   "stem": "Welche Aussagen zum Brugada-Syndrom treffen laut Vorlesung zu?",
+   "options": [
+    {
+     "t": "Verlängerung und Wölbung des ST-Segments in den rechtspräkordialen Ableitungen V1–V3",
+     "correct": true
+    },
+    {
+     "t": "Etwa 80 % der Patienten haben eine Mutation in <i>SCN5A</i>.",
+     "correct": false
+    },
+    {
+     "t": "Kammerflimmern und plötzlicher Herztod",
+     "correct": true
+    },
+    {
+     "t": "Typisch sind ST-Veränderungen in den linkspräkordialen Ableitungen V4–V6.",
+     "correct": false
+    },
+    {
+     "t": "Etwa 20 % der Patienten haben eine Mutation in <i>SCN5A</i>.",
+     "correct": true
+    },
+    {
+     "t": "<i>SCN5A</i> kodiert den neuronalen Na⁺-Kanal Na<sub>V</sub>1.1.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 20: Inzidenz 5–66 pro 10.000, ca. 20 % mit <i>SCN5A</i>-Mutation, Arrhythmien und plötzlicher Tod; EKG-Veränderungen in V1–V3. <i>SCN5A</i> kodiert Na<sub>V</sub>1.5 (Herz), <i>SCN1A</i> dagegen Na<sub>V</sub>1.1. Lehrbuch: Das typische Brugada-EKG zeigt eine gewölbte ST-<b>Hebung</b> („coved type“) in V1–V3; die Folie spricht von „Verlängerung und Wölbung“ – gemeint ist dasselbe Bild."
+  },
+  {
+   "id": "vl12-dominant-negativ",
+   "type": "single",
+   "topic": "Brugada-Syndrom & Mutationseffekte",
+   "source": "exam",
+   "exam": "WS23/24",
+   "ref": "VL12 · Folien 22–24, 74",
+   "stem": "Was bedeutet eine dominant-negative Mutation?",
+   "options": [
+    {
+     "t": "Sie zeigt nur bei rezessiven Erkrankungen einen Phänotyp.",
+     "correct": false
+    },
+    {
+     "t": "Sie ist nur bei homozygoten Erbanlagen relevant.",
+     "correct": false
+    },
+    {
+     "t": "Das mutierte Allel hemmt die Funktion des gesunden Allels.",
+     "correct": true
+    },
+    {
+     "t": "Das mutierte Allel führt nur zu halbierter Proteinmenge (Haploinsuffizienz).",
+     "correct": false
+    }
+   ],
+   "explanation": "Take-home (Folie 24): „Dominant negativer Effekt: Das mutierte Protein inhibiert auch das gesunde Protein.“ Beispiel <i>SCN5A</i> (Folie 22): Koexpression von Wildtyp und R104W senkt den Na⁺-Strom weit unter die Hälfte – mehr als der reine Ausfall eines Allels (Haploinsuffizienz) erklären würde.",
+   "note": "Vierte Option ergänzt. Lösung C laut Klausureinsicht WS23/24, durch VL12 Folien 22–24 bestätigt."
+  },
+  {
+   "id": "vl12-dn-experiment",
+   "type": "single",
+   "topic": "Brugada-Syndrom & Mutationseffekte",
+   "source": "slides",
+   "ref": "VL12 · Folien 21–22",
+   "stem": "Na<sub>V</sub>1.5-Kanäle wurden exprimiert: Wildtyp (WT) allein, die Brugada-Mutante R104W allein und WT + R104W zusammen. Welcher Befund belegt einen dominant-negativen Effekt?",
+   "options": [
+    {
+     "t": "R104W allein leitet mehr Strom als WT allein, weil die Inaktivierung gestört ist.",
+     "correct": false
+    },
+    {
+     "t": "WT + R104W leitet etwa gleich viel Strom wie WT allein, R104W wird nicht eingebaut.",
+     "correct": false
+    },
+    {
+     "t": "WT + R104W leitet genau die Hälfte des WT-Stroms (reiner Gendosis-Effekt).",
+     "correct": false
+    },
+    {
+     "t": "WT + R104W leitet deutlich weniger als die Hälfte des WT-Stroms, obwohl WT-Kanäle vorhanden sind.",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 22: R104W allein leitet keinen Strom; in Koexpression mit WT sinkt die Spitzenstromdichte von ca. –170 auf ca. –30 pA/pF (ähnlich WT + R121W). Das defekte Protein hemmt also zusätzlich das intakte. WT + R878C liegt dazwischen."
+  },
+  {
+   "id": "vl12-gof-lof-definitionen",
+   "type": "open",
+   "topic": "Brugada-Syndrom & Mutationseffekte",
+   "source": "slides",
+   "ref": "VL12 · Folien 23–24, 60, 74",
+   "stem": "Definieren Sie gain-of-function, loss-of-function und dominant-negativen Effekt.",
+   "points": [
+    "Gain-of-function: Mutation führt zu erhöhter Funktion des Proteins (z. B. SCN2A/NaV1.2)",
+    "Loss-of-function: Mutation führt zu erniedrigter (oder keiner) Funktion des Proteins (z. B. KCNQ2/Kv7.2)",
+    "Dominant-negativer Effekt: Das mutierte Protein inhibiert auch das gesunde Protein (z. B. SCN5A-R104W)"
+   ],
+   "explanation": "Diese drei Begriffe sind Kernlernziele (Folien 23 und 74). Beim dominant-negativen Effekt ist der Funktionsverlust größer, als der Ausfall eines Allels allein erklären würde."
+  },
+  {
+   "id": "vl12-hyperpp-gen",
+   "type": "single",
+   "topic": "Muskel-Kanalopathien: HyperPP",
+   "source": "slides",
+   "ref": "VL12 · Folien 25–27",
+   "stem": "Welches Gen bzw. welcher Kanal ist bei der hyperkaliämischen periodischen Paralyse (HyperPP) mutiert?",
+   "options": [
+    {
+     "t": "<i>SCN5A</i> – Na<sub>V</sub>1.5 (kardialer Na⁺-Kanal)",
+     "correct": false
+    },
+    {
+     "t": "<i>CLCN1</i> – ClC-1 (Cl⁻-Kanal des Skelettmuskels)",
+     "correct": false
+    },
+    {
+     "t": "<i>CACNA1A</i> – Ca<sub>V</sub>2.1 (P/Q-Typ-Ca²⁺-Kanal)",
+     "correct": false
+    },
+    {
+     "t": "<i>SCN4A</i> – Na<sub>V</sub>1.4 (Na⁺-Kanal des Skelettmuskels)",
+     "correct": true
+    }
+   ],
+   "explanation": "HyperPP: Mutationen im Na<sub>V</sub>1.4-Natriumkanal (<i>SCN4A</i>). <i>SCN5A</i> → Brugada; <i>CLCN1</i> → Myotonie (zusammen mit <i>SCN4A</i> in der Übersicht, Folie 25); <i>CACNA1A</i> → FHM1, Ataxie, tottering-Maus."
+  },
+  {
+   "id": "vl12-hyperpp-combo",
+   "type": "combo",
+   "topic": "Muskel-Kanalopathien: HyperPP",
+   "source": "slides",
+   "ref": "VL12 · Folien 25–28",
+   "stem": "Welche Aussagen zur hyperkaliämischen periodischen Paralyse (HyperPP) treffen zu?",
+   "statements": [
+    {
+     "t": "Typisch sind Attacken von Muskelschwäche bei erniedrigtem K⁺-Serumspiegel.",
+     "correct": false
+    },
+    {
+     "t": "Die Mutation stört die Inaktivierung des Na⁺-Kanals; das Ruhemembranpotential ist dadurch viel depolarisierter.",
+     "correct": true
+    },
+    {
+     "t": "Ursache sind Mutationen im Cl⁻-Kanal ClC-1 (<i>CLCN1</i>) des Skelettmuskels.",
+     "correct": false
+    },
+    {
+     "t": "Auslöser sind Ruhe nach körperlicher Aktivität, kaliumreiche Kost und Stress.",
+     "correct": true
+    },
+    {
+     "t": "Kanalopathien mit sehr ähnlichen Phänotypen können bei unterschiedlichen Organismen auftreten (z. B. Mensch und Pferd).",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "BDE",
+    "BD",
+    "ABDE",
+    "BCDE",
+    "DE"
+   ],
+   "explanation": "HyperPP: episodische Muskelschwäche der Gliedmaßen bei <b>erhöhtem</b> K⁺-Serumspiegel. Ursache sind Mutationen im Na<sub>V</sub>1.4-Kanal (<i>SCN4A</i>), nicht im ClC-1 (<i>CLCN1</i> → Myotonie). Gestörte Inaktivierung → persistierender Na⁺-Strom → Dauerdepolarisation; nach einer kurzen Salve bleibt die Muskelfaser depolarisiert und unerregbar (Paralyse). Take-home (Folie 28): ähnliche Phänotypen bei verschiedenen Organismen."
+  },
+  {
+   "id": "vl12-hyperpp-paralyse",
+   "type": "open",
+   "topic": "Muskel-Kanalopathien: HyperPP",
+   "source": "slides",
+   "ref": "VL12 · Folie 27",
+   "stem": "Die Abbildung zeigt oben Na⁺-Ströme (Voltage-Clamp), unten das Membranpotential einer Muskelfaser auf Strompulse (Current-Clamp), jeweils für Wildtyp und HyperPP. Erklären Sie anhand der Abbildung, warum die gestörte Inaktivierung von Na<sub>V</sub>1.4 zur Lähmung führt.",
+   "stemSrc": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 27,
+    "crop": [
+     255,
+     198,
+     665,
+     488
+    ]
+   },
+   "points": [
+    "HyperPP: nach dem Na⁺-Spitzenstrom bleibt ein persistierender Na⁺-Strom (gestörte Inaktivierung)",
+    "Wildtyp: ein Aktionspotential, danach Rückkehr zum Ruhepotential (ca. –85 mV)",
+    "HyperPP: nach einer kurzen AP-Salve bleibt die Faser dauerhaft depolarisiert (ca. –30 mV)",
+    "In der Dauerdepolarisation bleiben die Na⁺-Kanäle inaktiviert → keine weiteren APs, auch nicht auf den 2. Reiz",
+    "Unerregbare Muskelfaser = Lähmung (periodische Paralyse)"
+   ],
+   "explanation": "Folie 27: Mutationen in Na<sub>V</sub>1.4 (<i>SCN4A</i>) stören die Inaktivierung → Ruhemembranpotential viel depolarisierter. Auslöser sind Ruhe nach körperlicher Aktivität, kaliumreiche Kost und Stress – erhöhtes K⁺ depolarisiert zusätzlich.",
+   "stemImage": "assets/figures/vl12-hyperpp-paralyse-stem.webp"
+  },
+  {
+   "id": "vl12-kullmann",
+   "type": "multi",
+   "topic": "Muskel-Kanalopathien: HyperPP",
+   "source": "slides",
+   "ref": "VL12 · Folien 25, 29, 37",
+   "stem": "Welche Zuordnungen von Erkrankung und Gen entsprechen der Übersicht neurologischer Kanalopathien (Kullmann 2010)?",
+   "options": [
+    {
+     "t": "Myotonie – <i>SCN4A</i> und <i>CLCN1</i>",
+     "correct": true
+    },
+    {
+     "t": "Myasthenie – <i>SCN5A</i> und <i>KCNQ2</i>",
+     "correct": false
+    },
+    {
+     "t": "Periodische Paralyse – <i>SCN4A</i>, <i>KCNJ2</i>, <i>CACNA1S</i>",
+     "correct": true
+    },
+    {
+     "t": "Hyperekplexie (excessive startle) – <i>GLRA1</i> und <i>GLRB</i> (Glycinrezeptor)",
+     "correct": true
+    },
+    {
+     "t": "Zerebelläre Ataxie – <i>SCN9A</i>",
+     "correct": false
+    },
+    {
+     "t": "Migräne – <i>SCN1A</i> und <i>CACNA1A</i>",
+     "correct": true
+    }
+   ],
+   "explanation": "Übersicht (Kullmann, Annu Rev Neurosci 2010): Ataxie – <i>KCNA1</i>, <i>KCNC3</i>, <i>CACNA1A</i>; Schmerz/Erythromelalgie – <i>SCN9A</i>; Myasthenie – nikotinische AChR-Gene (<i>CHRNA1</i> …); Epilepsie u. a. <i>SCN1A/1B/2A</i>, <i>KCNQ2/3</i>, <i>CACNA1H</i>, <i>GABRA1/B3/G2</i>, <i>CHRNA2/A4/B2</i>."
+  },
+  {
+   "id": "vl12-migraene",
+   "type": "multi",
+   "topic": "Migräne & FHM",
+   "source": "slides",
+   "ref": "VL12 · Folien 30–32, 36",
+   "stem": "Welche Aussagen zur Migräne und zur familiären hemiplegischen Migräne (FHM) treffen zu?",
+   "options": [
+    {
+     "t": "Migräne: wiederkehrende Kopfschmerzen, oft mit vegetativen Begleiterscheinungen, zum Teil mit Aura",
+     "correct": true
+    },
+    {
+     "t": "Die FHM ist eine Migräneform ohne Aura, aber mit dauerhafter Hemiparese.",
+     "correct": false
+    },
+    {
+     "t": "Die Aura entsteht durch eine kortikale Streudepolarisation (ca. 3–5 mm/min).",
+     "correct": true
+    },
+    {
+     "t": "Die FHM ist mit einer Prävalenz von ca. 1:100 eine häufige Migräneform.",
+     "correct": false
+    },
+    {
+     "t": "Der Kopfschmerz entsteht durch Aktivierung des trigeminovaskulären Systems.",
+     "correct": true
+    },
+    {
+     "t": "Die FHM ist eine seltene Migräne mit Aura und zusätzlich reversibler Hemiparese.",
+     "correct": true
+    }
+   ],
+   "explanation": "FHM: selten (Prävalenz 1:10.000), Migräne mit Aura (visuelle, sensorische und sprachliche Störungen) plus reversible Hemiparese; kann durch Ionenkanaldefekte verursacht werden (Take-home, Folie 36). Aura = kortikale Streudepolarisation (3–5 mm/min), Kopfschmerz = trigeminovaskuläres System. Migräne betrifft oft junge Frauen."
+  },
+  {
+   "id": "vl12-fhm-gene",
+   "type": "open",
+   "topic": "Migräne & FHM",
+   "source": "slides",
+   "ref": "VL12 · Folien 32–33",
+   "stem": "Nennen Sie für FHM1, FHM2 und FHM3 jeweils das betroffene Gen und das kodierte Protein.",
+   "points": [
+    "FHM1: CACNA1A → porenbildende α1-Untereinheit von CaV2.1 (P/Q-Typ-Ca²⁺-Kanal)",
+    "FHM2: ATP1A2 → α2-Untereinheit der Na⁺/K⁺-ATPase (in Astrozyten)",
+    "FHM3: SCN1A → α1-Untereinheit von NaV1.1"
+   ],
+   "explanation": "Merkhilfe: FHM1 = präsynaptischer Ca²⁺-Kanal (Glutamatfreisetzung), FHM2 = Na⁺/K⁺-Pumpe der Astrozyten (K⁺- und Glutamat-Clearance), FHM3 = Na⁺-Kanal der inhibitorischen Interneurone. FHM2 ist streng genommen ein Pumpen-, kein Kanaldefekt."
+  },
+  {
+   "id": "vl12-fhm2",
+   "type": "single",
+   "topic": "Migräne & FHM",
+   "source": "slides",
+   "ref": "VL12 · Folien 32–33",
+   "stem": "Welche FHM-Form beruht auf einem Pumpen- statt auf einem Ionenkanaldefekt, und wo ist das betroffene Protein exprimiert?",
+   "options": [
+    {
+     "t": "FHM1 – α1-Untereinheit der Na⁺/K⁺-ATPase (<i>CACNA1A</i>) in Purkinje-Zellen",
+     "correct": false
+    },
+    {
+     "t": "FHM2 – α2-Untereinheit der Na⁺/K⁺-ATPase (<i>ATP1A2</i>) in Astrozyten",
+     "correct": true
+    },
+    {
+     "t": "FHM3 – Glutamattransporter EAAT1 (<i>SCN1A</i>) in Astrozyten",
+     "correct": false
+    },
+    {
+     "t": "FHM2 – α1-Untereinheit von Ca<sub>V</sub>2.1 (<i>ATP1A2</i>) in der Präsynapse",
+     "correct": false
+    }
+   ],
+   "explanation": "<i>ATP1A2</i> kodiert die α2-Untereinheit der Na⁺/K⁺-ATPase in Astrozyten (FHM2). <i>CACNA1A</i> kodiert Ca<sub>V</sub>2.1 (FHM1), <i>SCN1A</i> Na<sub>V</sub>1.1 (FHM3); EAAT1 ist im Schema der astrozytäre Glutamattransporter."
+  },
+  {
+   "id": "vl12-fhm-label",
+   "type": "label",
+   "topic": "Migräne & FHM",
+   "source": "slides",
+   "ref": "VL12 · Folien 32–34",
+   "stem": "Beschriften Sie das Schema zum Pathomechanismus der familiären hemiplegischen Migräne (Zellen und betroffene Proteine).",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 33,
+    "crop": [
+     215,
+     92,
+     780,
+     458
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      301,
+      97,
+      360,
+      122
+     ],
+     "answer": "Inhibitorisches Interneuron",
+     "accept": [
+      "inhibitory interneuron",
+      "Interneuron",
+      "inhibitorisches Neuron",
+      "GABAerges Interneuron",
+      "hemmendes Interneuron"
+     ],
+     "x": 14.78,
+     "y": 0.68,
+     "w": 11.33,
+     "h": 8.2
+    },
+    {
+     "box": [
+      421,
+      126,
+      508,
+      137
+     ],
+     "answer": "Exzitatorisches Neuron",
+     "accept": [
+      "excitatory neuron",
+      "erregendes Neuron",
+      "glutamaterges Neuron",
+      "Pyramidenzelle"
+     ],
+     "x": 36.02,
+     "y": 8.61,
+     "w": 16.28,
+     "h": 4.37
+    },
+    {
+     "box": [
+      226,
+      210,
+      266,
+      224
+     ],
+     "answer": "NaV1.1 (SCN1A)",
+     "accept": [
+      "Nav1.1",
+      "Nav 1.1",
+      "SCN1A",
+      "Natriumkanal Nav1.1",
+      "Na-Kanal Nav1.1"
+     ],
+     "x": 1.5,
+     "y": 31.56,
+     "w": 7.96,
+     "h": 5.19
+    },
+    {
+     "box": [
+      304,
+      325,
+      336,
+      338
+     ],
+     "answer": "CaV2.1 (CACNA1A)",
+     "accept": [
+      "Cav2.1",
+      "Cav 2.1",
+      "CACNA1A",
+      "P/Q-Typ",
+      "P/Q-Typ-Calciumkanal"
+     ],
+     "x": 15.31,
+     "y": 62.98,
+     "w": 6.55,
+     "h": 4.92
+    },
+    {
+     "box": [
+      580,
+      238,
+      652,
+      250
+     ],
+     "answer": "Na⁺/K⁺-ATPase (ATP1A2)",
+     "accept": [
+      "Na/K-ATPase",
+      "Na+/K+-ATPase",
+      "Na-K-ATPase",
+      "Na+-K+ ATPase",
+      "Natrium-Kalium-Pumpe",
+      "Natrium-Kalium-ATPase",
+      "ATP1A2"
+     ],
+     "x": 64.16,
+     "y": 39.21,
+     "w": 13.63,
+     "h": 4.64
+    },
+    {
+     "box": [
+      645,
+      375,
+      703,
+      386
+     ],
+     "answer": "Astrozyt",
+     "accept": [
+      "Astrocyte",
+      "Astrocyt",
+      "Astrozyte"
+     ],
+     "x": 75.66,
+     "y": 76.64,
+     "w": 11.15,
+     "h": 4.37
+    },
+    {
+     "box": [
+      565,
+      407,
+      609,
+      430
+     ],
+     "answer": "EAAT1 (Glutamattransporter)",
+     "accept": [
+      "EAAT1",
+      "GLAST",
+      "Glutamattransporter",
+      "Glutamat-Transporter"
+     ],
+     "x": 61.5,
+     "y": 85.38,
+     "w": 8.67,
+     "h": 7.65
+    }
+   ],
+   "bank": [
+    "KCNQ2 (Kv7.2)",
+    "NaV1.2 (SCN2A)",
+    "Mikroglia"
+   ],
+   "explanation": "FHM3: Na<sub>V</sub>1.1 in inhibitorischen Interneuronen; FHM1: Ca<sub>V</sub>2.1 in der Präsynapse (Glutamatfreisetzung); FHM2: Na⁺/K⁺-ATPase der Astrozyten, die K⁺ aufnimmt und den Na⁺-Gradienten für die Glutamataufnahme über EAAT1 liefert. Folge der Defekte: mehr extrazelluläres K⁺/Glutamat → kortikale Streudepolarisation (Aura).",
+   "image": "assets/figures/vl12-fhm-label.webp",
+   "iw": 1130,
+   "ih": 732
+  },
+  {
+   "id": "vl12-fhm3-modell",
+   "type": "multi",
+   "topic": "Migräne & FHM",
+   "source": "slides",
+   "ref": "VL12 · Folien 34–35",
+   "stem": "Welche Befunde zeigt das FHM3-Mausmodell (<i>Scn1a</i>-L1649Q-knock-in, mut/wt)?",
+   "options": [
+    {
+     "t": "Erhöhte Aktivität (mehr Aktionspotentiale) inhibitorischer Neurone",
+     "correct": true
+    },
+    {
+     "t": "Verminderte Aktivität inhibitorischer Neurone durch Funktionsverlust von Na<sub>V</sub>1.1",
+     "correct": false
+    },
+    {
+     "t": "Erhöhter persistierender Na⁺-Strom",
+     "correct": true
+    },
+    {
+     "t": "Niedrigere extrazelluläre K⁺-Spitzenkonzentration während der Streudepolarisation",
+     "correct": false
+    },
+    {
+     "t": "Häufigere kortikale Streudepolarisationen (CSD) mit schnellerer Ausbreitung",
+     "correct": true
+    },
+    {
+     "t": "Die Mutation liegt im <i>Cacna1a</i>-Gen und betrifft Ca<sub>V</sub>2.1.",
+     "correct": false
+    }
+   ],
+   "explanation": "L1649Q ist eine gain-of-function-Mutation in Na<sub>V</sub>1.1: mehr persistierender Na⁺-Strom → hyperaktive Interneurone; in mut/wt-Mäusen sind CSD-Frequenz, CSD-Ausbreitungsgeschwindigkeit und [K⁺]ₑ-Peak erhöht. Gegenstück: Funktionsverlust von Na<sub>V</sub>1.1 verursacht Epilepsie (Dravet/GEFS+)."
+  },
+  {
+   "id": "vl12-anfall-epilepsie",
+   "type": "single",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folien 38, 47",
+   "stem": "Wie unterscheidet die Vorlesung einen epileptischen Anfall von einer Epilepsie?",
+   "options": [
+    {
+     "t": "Anfall: tritt nur bei genetischer Veranlagung auf; Epilepsie: jeder einzelne provozierte Anfall",
+     "correct": false
+    },
+    {
+     "t": "Anfall: immer generalisiert mit Bewusstseinsverlust; Epilepsie: ausschließlich fokale Anfälle",
+     "correct": false
+    },
+    {
+     "t": "Anfall: Verhaltensänderung durch abnormale (hyperaktive) Hirnaktivität; Epilepsie: wiederholt unprovozierte Anfälle",
+     "correct": true
+    },
+    {
+     "t": "Anfall: Erkrankung mit wiederholten Anfällen; Epilepsie: einmaliger, durch Fieber provozierter Krampf",
+     "correct": false
+    }
+   ],
+   "explanation": "„Jeder kann einen Anfall haben!“ – Epilepsie liegt erst bei einer Erkrankung mit wiederholt unprovoziert auftretenden Anfällen vor. Take-home (Folie 47): Epilepsie ist komplex, hat viele Ursachen (Gendefekte, Trauma, Infektion) und führt zu verschiedenen Anfallstypen."
+  },
+  {
+   "id": "vl12-anfallsklassifikation",
+   "type": "multi",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folien 40–46",
+   "stem": "Welche Aussagen zur Anfallsklassifikation treffen zu?",
+   "options": [
+    {
+     "t": "Bei einfach-fokalen Anfällen ist das Bewusstsein nicht gestört.",
+     "correct": true
+    },
+    {
+     "t": "Absencen gehören zu den fokalen Anfällen.",
+     "correct": false
+    },
+    {
+     "t": "Komplex-fokale Anfälle gehen mit einer Störung des Bewusstseins einher (dyskognitiv).",
+     "correct": true
+    },
+    {
+     "t": "Astatische Anfälle sind tonische Anfälle mit erhöhtem Muskeltonus.",
+     "correct": false
+    },
+    {
+     "t": "Fokale Anfälle können sich zu sekundär generalisierten Anfällen (bilaterale Konvulsion) entwickeln.",
+     "correct": true
+    },
+    {
+     "t": "Bei generalisierten Anfällen zeigt im EEG nur eine einzelne Ableitung Anfallsaktivität.",
+     "correct": false
+    }
+   ],
+   "explanation": "Generalisiert: Absencen, myoklonische, astatische (= atonische) und tonisch-klonische Anfälle; im EEG sind alle Ableitungen gleichzeitig betroffen (Folie 45). Beim fokalen, sekundär generalisierten Anfall beginnt die Aktivität in einzelnen Ableitungen und breitet sich dann aus (Folie 46)."
+  },
+  {
+   "id": "vl12-eeg-generalisiert",
+   "type": "single",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folien 45–46",
+   "stem": "Welcher Anfallstyp ist in diesem EEG dargestellt?",
+   "stemSrc": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 45,
+    "crop": [
+     168,
+     71,
+     795,
+     498
+    ],
+    "hide": [
+     [
+      398,
+      73,
+      435,
+      84
+     ],
+     [
+      605,
+      73,
+      679,
+      84
+     ]
+    ]
+   },
+   "options": [
+    {
+     "t": "Generalisierter Anfall – die Anfallsaktivität beginnt gleichzeitig in allen Ableitungen",
+     "correct": true
+    },
+    {
+     "t": "Fokaler Anfall, sekundär generalisiert – Beginn in einzelnen Ableitungen, dann Ausbreitung",
+     "correct": false
+    },
+    {
+     "t": "Fokaler Anfall ohne Ausbreitung – die Anfallsaktivität bleibt auf wenige Ableitungen begrenzt",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 45 (generalisierter Anfall): Alle Ableitungen beider Hemisphären zeigen ab demselben Zeitpunkt Anfallsaktivität. Beim fokalen, sekundär generalisierten Anfall (Folie 46) beginnt sie dagegen in einzelnen Ableitungen und breitet sich zeitversetzt aus.",
+   "stemImage": "assets/figures/vl12-eeg-generalisiert-stem.webp"
+  },
+  {
+   "id": "vl12-eeg-fokal",
+   "type": "single",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folien 45–46",
+   "stem": "Welcher Anfallstyp ist in diesem EEG dargestellt? (Ableitungen farbig nach Elektrodengruppen)",
+   "stemSrc": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 46,
+    "crop": [
+     146,
+     74,
+     818,
+     500
+    ],
+    "hide": [
+     [
+      272,
+      75,
+      352,
+      84
+     ],
+     [
+      742,
+      75,
+      813,
+      84
+     ]
+    ]
+   },
+   "options": [
+    {
+     "t": "Generalisierter Anfall – die Anfallsaktivität beginnt gleichzeitig in allen Ableitungen",
+     "correct": false
+    },
+    {
+     "t": "Fokaler Anfall, sekundär generalisiert – Beginn in einzelnen Ableitungen, dann Ausbreitung",
+     "correct": true
+    },
+    {
+     "t": "Fokaler Anfall ohne Ausbreitung – die Anfallsaktivität bleibt auf wenige Ableitungen begrenzt",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 46: Die Anfallsaktivität beginnt in einzelnen Ableitungen (A2/A3, dann B3/B4) und erfasst zeitversetzt immer mehr Ableitungen (C, D) – fokaler Anfall mit Entwicklung zum sekundär generalisierten Anfall (Ausbreitung in bilaterale Konvulsion). Beim primär generalisierten Anfall (Folie 45) setzen alle Ableitungen gleichzeitig ein.",
+   "stemImage": "assets/figures/vl12-eeg-fokal-stem.webp"
+  },
+  {
+   "id": "vl12-aetiologie",
+   "type": "combo",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folien 42, 44, 48",
+   "stem": "Welche Aussagen zur Einteilung der Epilepsien nach ihrer Ursache treffen zu?",
+   "statements": [
+    {
+     "t": "Idiopathisch bedeutet genetisch bedingt.",
+     "correct": true
+    },
+    {
+     "t": "Kryptogen bedeutet durch eine Infektion bedingt.",
+     "correct": false
+    },
+    {
+     "t": "Symptomatisch bedeutet strukturell oder metabolisch bedingt.",
+     "correct": true
+    },
+    {
+     "t": "Idiopathische (genetische) Epilepsien machen ca. 40 % aller Epilepsien aus; typisch sind generalisierte Spike-wave-Komplexe im EEG bei normalem MRT.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "AC",
+    "ABD",
+    "ACD",
+    "CD",
+    "ABCD"
+   ],
+   "explanation": "Kryptogen = Ursache unbekannt. Idiopathisch (= genetisch): ca. 40 % aller Epilepsien, EEG mit generalisierten Spike-wave-Komplexen, MRT unauffällig – im Gegensatz zu symptomatischen Epilepsien mit struktureller oder metabolischer Ursache."
+  },
+  {
+   "id": "vl12-generalisierte-anfaelle",
+   "type": "open",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folien 43–44",
+   "stem": "Nennen Sie 3 Typen generalisierter Anfälle.",
+   "points": [
+    "Absencen",
+    "Myoklonische Anfälle",
+    "Astatische (= atonische) Anfälle",
+    "Tonisch-klonische Anfälle (Grand mal)",
+    "Tonische Anfälle (ILAE/Lehrbuch, nicht auf der Folie)",
+    "Klonische Anfälle (ILAE/Lehrbuch, nicht auf der Folie)"
+   ],
+   "need": 3,
+   "explanation": "Folie 44 nennt vier generalisierte Anfallstypen: Absencen, myoklonische, astatische (= atonische) und tonisch-klonische Anfälle (Grand mal); nach der ILAE-Klassifikation (1981/2017) sind auch rein tonische und rein klonische Anfälle generalisiert (2017 zusätzlich z. B. epileptische Spasmen) – fachlich richtig, aber nicht auf der Folie. Sekundär generalisierte Anfälle zählen nicht dazu, denn sie beginnen fokal. Fokale Anfälle werden nach Bewusstsein (einfach-fokal = erhalten, komplex-fokal = gestört/dyskognitiv) und Ausbreitung (Entwicklung zu sekundär generalisierten Anfällen) eingeteilt."
+  },
+  {
+   "id": "vl12-epilepsie-ursachen",
+   "type": "open",
+   "topic": "Epilepsie: Definition & Klassifikation",
+   "source": "slides",
+   "ref": "VL12 · Folie 47",
+   "stem": "Epilepsie ist laut Take-home-Message eine komplexe Erkrankung. Nennen Sie die drei dort genannten Ursachen und die Konsequenz für das Krankheitsbild.",
+   "points": [
+    "Gendefekte (genetisch/idiopathisch)",
+    "Trauma",
+    "Infektion",
+    "Folge: verschiedene Anfallstypen möglich"
+   ],
+   "explanation": "Take-home (Folie 47): „Epilepsie ist eine komplexe Erkrankung, die durch viele Ursachen entstehen kann (Gendefekte, Trauma, Infektion) und daher auch zu verschiedenen Anfallstypen führen kann.“ Einteilung nach Ursache (Folie 42): idiopathisch (= genetisch), symptomatisch (= strukturell/metabolisch), kryptogen (= unbekannt)."
+  },
+  {
+   "id": "vl12-syndrom-tabelle",
+   "type": "multi",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folie 49",
+   "stem": "Welche Zuordnungen Gen (Protein) → genetisches Epilepsie-Syndrom treffen zu?",
+   "options": [
+    {
+     "t": "<i>CHRNA4</i> (nAChR) → autosomal-dominante nächtliche Frontallappenepilepsie (ADNFLE)",
+     "correct": true
+    },
+    {
+     "t": "<i>PRRT2</i> (präsynaptisches Protein) → juvenile myoklonische Epilepsie (JME)",
+     "correct": false
+    },
+    {
+     "t": "<i>KCNQ2/KCNQ3</i> (K<sub>V</sub>7.2/7.3) → selbstlimitierte familiäre neonatale Epilepsie (SelFNE)",
+     "correct": true
+    },
+    {
+     "t": "<i>SCN2A</i> (Na<sub>V</sub>1.2) → autosomal-dominante laterale Temporallappenepilepsie (ADLTLE)",
+     "correct": false
+    },
+    {
+     "t": "<i>GABRG2</i> (GABA<sub>A</sub>-Rezeptor) → GEFS+",
+     "correct": true
+    },
+    {
+     "t": "<i>LGI1</i> (kein Ionenkanal) → selbstlimitierte familiäre infantile Epilepsie (SelFIE)",
+     "correct": false
+    },
+    {
+     "t": "<i>CACNA1H</i> (Ca²⁺-Kanal) → kindliche Absence-Epilepsie (CAE)",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 49: <i>PRRT2</i> → SelFIE; <i>SCN2A</i> → SelFNIE; <i>LGI1</i> (kein Ionenkanal!) → ADLTLE; <i>EFHC1</i> und <i>GABRA1</i> → JME (<i>GABRA1</i> auch CAE); <i>SCN1B/SCN1A</i>, <i>GABRG2</i> und <i>STX1B</i> → GEFS+.",
+   "note": "Auf der Folie als „CHRN4A“ geschrieben; gemeint ist CHRNA4 (α4-Untereinheit des nAChR)."
+  },
+  {
+   "id": "vl12-nicht-kanal-gene",
+   "type": "multi",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folie 49",
+   "stem": "Welche dieser Epilepsie-Gene kodieren laut Vorlesung <b>kein</b> Ionenkanal- bzw. Rezeptorkanal-Protein? (4 richtig)",
+   "options": [
+    {
+     "t": "<i>LGI1</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>CHRNA4</i>",
+     "correct": false
+    },
+    {
+     "t": "<i>PRRT2</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>GABRG2</i>",
+     "correct": false
+    },
+    {
+     "t": "<i>STX1B</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>CACNA1H</i>",
+     "correct": false
+    },
+    {
+     "t": "<i>EFHC1</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>KCNQ2</i>",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 49: <i>LGI1</i> („non ion channel“, ADLTLE), <i>PRRT2</i> und <i>STX1B</i> (präsynaptische Proteine; SelFIE bzw. GEFS+) und <i>EFHC1</i> (Myoclonin1, JME) sind keine Kanäle. Kanäle sind dagegen <i>CHRNA4</i> (nAChR, ligandengesteuert), <i>GABRG2</i> (GABA<sub>A</sub>-Rezeptor), <i>CACNA1H</i> (Ca²⁺-Kanal) und <i>KCNQ2</i> (K<sub>V</sub>7.2). Nicht jede genetische Epilepsie ist also eine Kanalopathie.",
+   "note": "Auf der Folie als „CHRN4A“ geschrieben; gemeint ist CHRNA4. Dass Myoclonin1 (EFHC1) kein Ionenkanal ist, steht nicht ausdrücklich auf der Folie (Lehrbuchwissen)."
+  },
+  {
+   "id": "vl12-benigne-label",
+   "type": "label",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 50, 54, 57–58",
+   "stem": "Beschriften Sie das Schema der benignen (selbstlimitierenden) familiären Epilepsie-Syndrome des Kindesalters: betroffene Gene und Syndrome.",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 58,
+    "crop": [
+     135,
+     205,
+     760,
+     503
+    ]
+   },
+   "labels": [
+    {
+     "find": "KCNQ2/3",
+     "answer": "KCNQ2/3",
+     "accept": [
+      "KCNQ2",
+      "KCNQ3",
+      "KCNQ2/KCNQ3",
+      "Kv7.2/7.3",
+      "Kv7.2/Kv7.3",
+      "Kv7.2"
+     ],
+     "x": 10.56,
+     "y": 4.28,
+     "w": 11.47,
+     "h": 7.72
+    },
+    {
+     "find": "SCN2A",
+     "answer": "SCN2A",
+     "accept": [
+      "Nav1.2",
+      "NaV1.2",
+      "SCN2A (Nav1.2)"
+     ],
+     "x": 31.99,
+     "y": 4.28,
+     "w": 8.57,
+     "h": 7.72
+    },
+    {
+     "find": "PRRT2",
+     "answer": "PRRT2",
+     "accept": [
+      "PRRT-2"
+     ],
+     "x": 52.99,
+     "y": 4.4,
+     "w": 8.25,
+     "h": 7.73
+    },
+    {
+     "find": "SelFNE",
+     "answer": "SelFNE (selbstlimitierte familiäre neonatale Epilepsie)",
+     "accept": [
+      "SelFNE",
+      "BFNE",
+      "BFNS",
+      "self-limited familial neonatal epilepsy",
+      "familiäre neonatale Epilepsie"
+     ],
+     "x": 13.29,
+     "y": 19.64,
+     "w": 8.75,
+     "h": 7.72
+    },
+    {
+     "find": "SelFNIE",
+     "answer": "SelFNIE (selbstlimitierte familiäre neonatale/infantile Epilepsie)",
+     "accept": [
+      "SelFNIE",
+      "BFNIE",
+      "BFNIS",
+      "self-limited familial neonatal-infantile epilepsy",
+      "familiäre neonatale/infantile Epilepsie"
+     ],
+     "x": 31.97,
+     "y": 19.64,
+     "w": 9.46,
+     "h": 7.72
+    },
+    {
+     "find": "SelFIE",
+     "answer": "SelFIE (selbstlimitierte familiäre infantile Epilepsie)",
+     "accept": [
+      "SelFIE",
+      "BFIE",
+      "BFIS",
+      "self-limited familial infantile epilepsy",
+      "familiäre infantile Epilepsie"
+     ],
+     "x": 51.91,
+     "y": 19.64,
+     "w": 7.61,
+     "h": 7.72
+    }
+   ],
+   "bank": [
+    "SCN1A",
+    "GEFS+",
+    "CACNA1H"
+   ],
+   "explanation": "Erkrankungsbeginn: SelFNE (<i>KCNQ2/3</i>) in der 1.–3. Lebenswoche, SelFNIE (<i>SCN2A</i>) im 1.–3. Monat, SelFIE (<i>PRRT2</i>) vom 3. Monat bis zum 1. Lebensjahr. Alle drei: nur kurz Medikamente, selten Anfälle im Erwachsenenalter, normale Entwicklung.",
+   "image": "assets/figures/vl12-benigne-label.webp",
+   "iw": 1250,
+   "ih": 596
+  },
+  {
+   "id": "vl12-benigne-reihenfolge",
+   "type": "order",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 50, 54",
+   "stem": "Ordnen Sie die Gene nach dem typischen Erkrankungsbeginn der benignen (selbstlimitierten) familiären Epilepsien, die sie verursachen (früheste zuerst).",
+   "items": [
+    "<i>KCNQ2/3</i> (K<sub>V</sub>7.2/7.3)",
+    "<i>SCN2A</i> (Na<sub>V</sub>1.2)",
+    "<i>PRRT2</i>"
+   ],
+   "explanation": "<i>KCNQ2/3</i> → SelFNE (selbstlimitierte familiäre <b>neonatale</b> Epilepsie, 1.–3. Lebenswoche); <i>SCN2A</i> → SelFNIE (neonatal/infantil, 1.–3. Monat); <i>PRRT2</i> → SelFIE (infantil, 3. Monat bis 1. Jahr). Merkhilfe: N = neonatal, NI = neonatal/infantil, I = infantil."
+  },
+  {
+   "id": "vl12-benigne-nicht",
+   "type": "single",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 50, 54, 62",
+   "stem": "Was trifft auf die benignen (selbstlimitierenden) Epilepsie-Syndrome des Kindesalters <b>nicht</b> zu?",
+   "options": [
+    {
+     "t": "Medikamente sind nur für kurze Zeit notwendig.",
+     "correct": false
+    },
+    {
+     "t": "Anfälle im Erwachsenenalter treten nur selten auf.",
+     "correct": false
+    },
+    {
+     "t": "Die Anfälle sind meist therapieresistent und bleiben lebenslang bestehen.",
+     "correct": true
+    },
+    {
+     "t": "Die Kinder entwickeln sich normal.",
+     "correct": false
+    }
+   ],
+   "explanation": "Benigne Syndrome: nur kurz Medikamente, selten Anfälle im Erwachsenenalter, normale Entwicklung. Therapieresistenz ist dagegen typisch für das Dravet-Syndrom (<i>SCN1A</i>, Folie 62)."
+  },
+  {
+   "id": "vl12-m-strom",
+   "type": "combo",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 51–53",
+   "stem": "Welche Aussagen zu K<sub>V</sub>7.2/K<sub>V</sub>7.3-Kanälen und dem M-Strom treffen zu?",
+   "statements": [
+    {
+     "t": "Der M-Strom aktiviert schnell und inaktiviert rasch.",
+     "correct": false
+    },
+    {
+     "t": "K<sub>V</sub>7.2/7.3 (kodiert durch <i>KCNQ2</i>/<i>KCNQ3</i>) erzeugen den M-Strom, einen spannungsabhängigen K⁺-Strom im Subschwellenbereich.",
+     "correct": true
+    },
+    {
+     "t": "Muskarinische Agonisten wie Acetylcholin blockieren den M-Strom; das Neuron feuert dann repetitiv.",
+     "correct": true
+    },
+    {
+     "t": "K<sub>V</sub>7.2/7.3 werden ausschließlich im Gehirn exprimiert.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "B",
+    "AB",
+    "BCD",
+    "ABC",
+    "BC"
+   ],
+   "explanation": "M-Strom: langsam aktivierend, nicht-inaktivierend, im Subschwellenbereich aktiv → Bremse der Erregbarkeit. Nach Blockade durch Acetylcholin feuert die Zelle bei gleicher Strominjektion viele APs statt nur eines (Folie 52). Expression in Cortex, Hippocampus, Zerebellum und im peripheren Nervensystem. Eine loss-of-function-Mutante (N258S, Folie 53) leitet praktisch keinen Strom → Übererregbarkeit."
+  },
+  {
+   "id": "vl12-kcnq2-entwicklung",
+   "type": "single",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folie 57",
+   "stem": "Wie lässt sich erklären, dass Anfälle bei <i>KCNQ2</i>-Mutationen typischerweise in den ersten Lebenswochen auftreten?",
+   "options": [
+    {
+     "t": "<i>KCNQ2</i> wird erst im Schulalter exprimiert; vorher übernimmt Na<sub>V</sub>1.6 seine Funktion.",
+     "correct": false
+    },
+    {
+     "t": "<i>KCNQ2</i> wird nur in der Fetalzeit exprimiert und ist nach der Geburt verschwunden.",
+     "correct": false
+    },
+    {
+     "t": "<i>KCNQ3</i> ist um die Geburt besonders stark exprimiert und hemmt den mutierten Kanal.",
+     "correct": false
+    },
+    {
+     "t": "<i>KCNQ2</i> ist um die Geburt besonders stark exprimiert; später nimmt es ab, <i>KCNQ3</i> zu.",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 57 (Kanaumi et al. 2008, Pyramidenzellen im Hippocampus): <i>KCNQ2</i> ist von der 29. Gestationswoche bis zum 3. Lebensmonat stark exprimiert (2+), im Schulalter kaum noch; <i>KCNQ3</i> steigt im Lauf der Entwicklung an. Die zeitliche Expression erklärt den frühen Beginn (1.–3. Woche) – ein Beispiel für Modifier durch Expression zu bestimmten Entwicklungszeitpunkten."
+  },
+  {
+   "id": "vl12-nav12-ais",
+   "type": "single",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 58–59",
+   "stem": "Warum sind die Anfälle bei <i>SCN2A</i>-Mutationen (SelFNIE) altersabhängig und selbstlimitierend?",
+   "options": [
+    {
+     "t": "Na<sub>V</sub>1.2 wird nur transient am Axoninitialsegment exprimiert und ab ca. P30 durch Na<sub>V</sub>1.6 ersetzt.",
+     "correct": true
+    },
+    {
+     "t": "Na<sub>V</sub>1.6 wird nur transient am Axoninitialsegment exprimiert und ab ca. P30 durch Na<sub>V</sub>1.2 ersetzt.",
+     "correct": false
+    },
+    {
+     "t": "Ankyrin G verschwindet nach der Neugeborenenzeit vom Axoninitialsegment, Na⁺-Kanäle werden diffus verteilt.",
+     "correct": false
+    },
+    {
+     "t": "Na<sub>V</sub>1.2 wird erst im Erwachsenenalter exprimiert und dort durch K<sub>V</sub>7.2 gehemmt.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 59 (Liao et al. 2010, Maus): Am AIS (Marker Ankyrin G) dominiert früh postnatal (P1–P15) Na<sub>V</sub>1.2; ab P30 übernimmt Na<sub>V</sub>1.6. Die gain-of-function-Mutation in Na<sub>V</sub>1.2 wirkt daher nur in einem Entwicklungsfenster (beim Menschen Beginn im 1.–3. Monat)."
+  },
+  {
+   "id": "vl12-ais-label",
+   "type": "label",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 58–59",
+   "stem": "Immunfärbungen am Axoninitialsegment (AIS) der Maus im Alter P1–P90 (Spalten). Beschriften Sie die Zeilen: AIS-Marker und die beiden Na⁺-Kanal-Isoformen.",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 59,
+    "crop": [
+     125,
+     60,
+     840,
+     522
+    ],
+    "hide": [
+     [
+      133,
+      393,
+      170,
+      411
+     ]
+    ]
+   },
+   "labels": [
+    {
+     "find": "AnkG",
+     "answer": "Ankyrin G (AIS-Marker)",
+     "accept": [
+      "AnkG",
+      "Ankyrin G",
+      "Ankyrin-G",
+      "Ankyrin"
+     ],
+     "x": 1.15,
+     "y": 19.01,
+     "w": 5.09,
+     "h": 4.1
+    },
+    {
+     "find": "Na V 1.2",
+     "answer": "NaV1.2",
+     "accept": [
+      "Nav1.2",
+      "Na V 1.2",
+      "SCN2A"
+     ],
+     "x": 0.75,
+     "y": 25.45,
+     "w": 6.18,
+     "h": 4.58
+    },
+    {
+     "find": "Na V 1.6",
+     "answer": "NaV1.6",
+     "accept": [
+      "Nav1.6",
+      "Na V 1.6",
+      "SCN8A"
+     ],
+     "x": 0.75,
+     "y": 48.68,
+     "w": 6.18,
+     "h": 4.58
+    }
+   ],
+   "bank": [
+    "NaV1.1",
+    "Kv7.2",
+    "MAP-2"
+   ],
+   "explanation": "Ankyrin G markiert das AIS (grün, in allen Altersstufen). Na<sub>V</sub>1.2 ist früh postnatal (P1–P15) am AIS angereichert und verschwindet dann von dort; Na<sub>V</sub>1.6 erscheint am AIS erst ab P30. Deshalb sind <i>SCN2A</i>-bedingte Anfälle (SelFNIE) altersabhängig und selbstlimitierend.",
+   "image": "assets/figures/vl12-ais-label.webp",
+   "iw": 1400,
+   "ih": 905
+  },
+  {
+   "id": "vl12-scn2a-label",
+   "type": "label",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folie 55",
+   "stem": "Beschriften Sie das Topologie-Schema des spannungsabhängigen Na⁺-Kanals Na<sub>V</sub>1.2 (<i>SCN2A</i>). Beim markierten Transmembransegment ist seine Funktion gefragt.",
+   "src": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 55,
+    "crop": [
+     130,
+     100,
+     820,
+     425
+    ]
+   },
+   "labels": [
+    {
+     "box": [
+      475,
+      110,
+      484,
+      128
+     ],
+     "answer": "α-Untereinheit",
+     "accept": [
+      "alpha",
+      "α",
+      "alpha-Untereinheit",
+      "alpha subunit",
+      "α subunit"
+     ],
+     "x": 49.64,
+     "y": 2.31,
+     "w": 2.03,
+     "h": 7.08
+    },
+    {
+     "box": [
+      190,
+      136,
+      205,
+      158
+     ],
+     "answer": "β2-Untereinheit",
+     "accept": [
+      "β2",
+      "beta2",
+      "beta 2",
+      "ß2",
+      "β2 subunit"
+     ],
+     "x": 8.33,
+     "y": 10.31,
+     "w": 2.9,
+     "h": 8.31
+    },
+    {
+     "box": [
+      760,
+      136,
+      776,
+      158
+     ],
+     "answer": "β1-Untereinheit",
+     "accept": [
+      "β1",
+      "beta1",
+      "beta 1",
+      "ß1",
+      "β1 subunit"
+     ],
+     "x": 90.94,
+     "y": 10.31,
+     "w": 3.04,
+     "h": 8.31
+    },
+    {
+     "find": "4",
+     "nth": 3,
+     "answer": "Spannungssensor – Segment S4",
+     "accept": [
+      "Spannungssensor",
+      "voltage sensor",
+      "Spannungssensor S4",
+      "S4-Spannungssensor",
+      "Spannungssensor-Segment",
+      "Spannungsfühler"
+     ],
+     "x": 76.42,
+     "y": 43.9,
+     "w": 1.61,
+     "h": 5.23
+    },
+    {
+     "find": "IFM",
+     "answer": "IFM-Motiv (Inaktivierung)",
+     "accept": [
+      "IFM",
+      "IFM-Motiv",
+      "Inaktivierungspartikel",
+      "Inaktivierungstor",
+      "inactivation gate",
+      "Ile-Phe-Met"
+     ],
+     "x": 66.81,
+     "y": 61.57,
+     "w": 3.91,
+     "h": 5.82
+    }
+   ],
+   "bank": [
+    "β3-Untereinheit",
+    "Selektivitätsfilter (GYG)",
+    "Kv-Untereinheit"
+   ],
+   "explanation": "Na<sub>V</sub>1.2 = eine α-Untereinheit (Domänen I–IV, je S1–S6) plus akzessorische β1- und β2-Untereinheiten mit je einem TM-Segment. Das IFM-Motiv (Ile-Phe-Met) in der intrazellulären Schleife zwischen Domäne III und IV vermittelt die schnelle Inaktivierung. Punkte: milde (grün) und schwere (rot) <i>SCN2A</i>-Mutationen.",
+   "image": "assets/figures/vl12-scn2a-label.webp",
+   "iw": 1380,
+   "ih": 650
+  },
+  {
+   "id": "vl12-scn2a-stammbaum",
+   "type": "single",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 56, 60",
+   "stem": "Stammbaum einer Familie mit <i>SCN2A</i>-Varianten (Pfeil: erkranktes Kind) sowie Na⁺-Ströme der Na<sub>V</sub>1.2-Varianten (Stromspuren und Strom-Spannungs-Kurve). Welche Interpretation trifft zu?",
+   "stemSrc": {
+    "pdf": "VL12Channelopathies.pdf",
+    "page": 56,
+    "crop": [
+     155,
+     78,
+     812,
+     486
+    ],
+    "hide": [
+     [
+      695,
+      98,
+      781,
+      221
+     ]
+    ]
+   },
+   "options": [
+    {
+     "t": "p.Gly1522Ala allein erhöht die Na⁺-Stromdichte deutlich (gain-of-function) und erklärt die Erkrankung.",
+     "correct": false
+    },
+    {
+     "t": "Das Kind hat beide Varianten geerbt: p.Gly1522Ala vom Vater, p.Arg1882Gly von der Mutter.",
+     "correct": false
+    },
+    {
+     "t": "Erst die Kombination beider Varianten erhöht die Na⁺-Stromdichte deutlich (gain-of-function).",
+     "correct": true
+    },
+    {
+     "t": "Die Kombination beider Varianten verringert die Na⁺-Stromdichte deutlich (loss-of-function).",
+     "correct": false
+    }
+   ],
+   "explanation": "Vater (nicht betroffen): p.Gly1522Ala/+, Mutter: Wildtyp → p.Arg1882Gly ist beim Kind de novo entstanden. Strom-Spannungs-Kurve: Wildtyp und p.Gly1522Ala ca. –450 pA/pF, p.Arg1882Gly etwas weniger, die Kombination p.Gly1522Ala/p.Arg1882Gly ca. –750 pA/pF → gain-of-function. Deshalb ist der Vater mit p.Gly1522Ala allein gesund. Take-home (Folie 60): <i>SCN2A</i> als Beispiel für gain-of-function.",
+   "stemImage": "assets/figures/vl12-scn2a-stammbaum-stem.webp"
+  },
+  {
+   "id": "vl12-gof-lof-beispiele",
+   "type": "single",
+   "topic": "Genetische Epilepsien: KCNQ2/3 & SCN2A",
+   "source": "slides",
+   "ref": "VL12 · Folien 53, 56, 60",
+   "stem": "Welche Zuordnung entspricht der Take-home-Message zu gain- und loss-of-function?",
+   "options": [
+    {
+     "t": "<i>KCNQ2</i>: gain-of-function (größerer K<sub>V</sub>7.2-Strom); <i>SCN2A</i>: loss-of-function (kleinere Na<sub>V</sub>1.2-Stromdichte)",
+     "correct": false
+    },
+    {
+     "t": "<i>KCNQ2</i> und <i>SCN2A</i>: beide loss-of-function mit dominant-negativem Effekt auf den Wildtyp",
+     "correct": false
+    },
+    {
+     "t": "<i>KCNQ2</i>: loss-of-function (kleinerer K<sub>V</sub>7.2-Strom); <i>SCN2A</i>: gain-of-function (größere Na<sub>V</sub>1.2-Stromdichte)",
+     "correct": true
+    },
+    {
+     "t": "<i>KCNQ2</i> und <i>SCN2A</i>: beide gain-of-function mit gestörter Inaktivierung des Kanals",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 60: Die K<sub>V</sub>7.2-Mutante leitet deutlich weniger Strom (LoF); Na<sub>V</sub>1.2 mit p.Gly1522Ala/p.Arg1882Gly erreicht eine deutlich höhere Stromdichte als der Wildtyp (ca. –750 statt –450 pA/pF, GoF). Beide machen Neurone übererregbar – einmal fehlt die K⁺-Bremse, einmal strömt zu viel Na⁺ ein."
+  },
+  {
+   "id": "vl12-dravet-gefs",
+   "type": "combo",
+   "topic": "Dravet-Syndrom & GEFS+ (SCN1A)",
+   "source": "slides",
+   "ref": "VL12 · Folien 62–63",
+   "stem": "Welche Aussagen zum Dravet-Syndrom und zu GEFS+ treffen zu?",
+   "statements": [
+    {
+     "t": "Das Dravet-Syndrom ist eine schwere frühkindliche myoklonische Epilepsie und meist therapieresistent.",
+     "correct": true
+    },
+    {
+     "t": "<i>SCN1A</i> kodiert den Natriumkanal Na<sub>V</sub>1.2.",
+     "correct": false
+    },
+    {
+     "t": "70–80 % der Dravet-Fälle gehen auf <i>SCN1A</i>-Defekte zurück, meist de-novo-Varianten mit Funktionsverlust.",
+     "correct": true
+    },
+    {
+     "t": "GEFS+ ist die schwerere Form und entsteht meist de novo.",
+     "correct": false
+    }
+   ],
+   "combos": [
+    "A",
+    "ACD",
+    "BC",
+    "AC",
+    "ABC"
+   ],
+   "explanation": "GEFS+ (generalisierte Epilepsie mit Fieberkrämpfen plus) ist die mildere, meist vererbte Form. <i>SCN1A</i> kodiert Na<sub>V</sub>1.1 (<i>SCN2A</i> → Na<sub>V</sub>1.2). Bei der GEFS+-Mutation R1648H zeigen heterozygote Patienten einen sehr variablen Phänotyp."
+  },
+  {
+   "id": "vl12-gefs-gene",
+   "type": "multi",
+   "topic": "Dravet-Syndrom & GEFS+ (SCN1A)",
+   "source": "slides",
+   "ref": "VL12 · Folie 49",
+   "stem": "Welche Gene sind laut Vorlesung mit GEFS+ (generalisierte Epilepsie mit Fieberkrämpfen plus) assoziiert? (3 richtig)",
+   "options": [
+    {
+     "t": "<i>GABRA1</i>",
+     "correct": false
+    },
+    {
+     "t": "<i>SCN1B</i>/<i>SCN1A</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>EFHC1</i>",
+     "correct": false
+    },
+    {
+     "t": "<i>GABRG2</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>PRRT2</i>",
+     "correct": false
+    },
+    {
+     "t": "<i>STX1B</i>",
+     "correct": true
+    },
+    {
+     "t": "<i>CHRNA4</i>",
+     "correct": false
+    }
+   ],
+   "explanation": "GEFS+: <i>SCN1B</i>/<i>SCN1A</i> (Na<sub>V</sub>β1, Na<sub>V</sub>1.1), <i>GABRG2</i> (GABA<sub>A</sub>-Rezeptor) und <i>STX1B</i> (präsynaptisches Protein). Juvenile myoklonische Epilepsie (JME): <i>EFHC1</i> (Myoclonin1) und <i>GABRA1</i> (GABA<sub>A</sub>-Rezeptor, auch CAE). <i>PRRT2</i> → SelFIE, <i>CHRNA4</i> → ADNFLE.",
+   "note": "Auf der Folie als „CHRN4A“ geschrieben; gemeint ist CHRNA4."
+  },
+  {
+   "id": "vl12-scn1a-maus",
+   "type": "multi",
+   "topic": "Dravet-Syndrom & GEFS+ (SCN1A)",
+   "source": "slides",
+   "ref": "VL12 · Folien 63–66",
+   "stem": "Welche Aussagen zur GEFS+-Mutation R1648H und zum entsprechenden <i>Scn1a</i>-knock-in-Mausmodell (RH) treffen zu?",
+   "options": [
+    {
+     "t": "R1648H ist eine Aminosäuresubstitution im Spannungssensor (S4) der Domäne IV von Na<sub>V</sub>1.1.",
+     "correct": true
+    },
+    {
+     "t": "Hippocampale Pyramidenzellen heterozygoter Tiere feuern deutlich mehr Aktionspotentiale.",
+     "correct": false
+    },
+    {
+     "t": "Homozygote Tiere (RH/RH) sterben früher als heterozygote und Wildtyp-Tiere.",
+     "correct": true
+    },
+    {
+     "t": "Heterozygote und homozygote Tiere haben spontane Anfälle.",
+     "correct": true
+    },
+    {
+     "t": "Heterozygote Tiere sterben ebenso früh wie homozygote.",
+     "correct": false
+    },
+    {
+     "t": "Hippocampale Interneurone heterozygoter Tiere feuern deutlich weniger Aktionspotentiale.",
+     "correct": true
+    }
+   ],
+   "explanation": "Folie 64: RH/RH sterben etwa zwischen dem 15. und 26. Lebenstag, RH/+ überleben wie Wildtyp. Folien 65–66: In RH/+ ist das Feuerverhalten der Pyramidenzellen unverändert, das der Interneurone stark reduziert – Funktionsverlust in hemmenden Zellen."
+  },
+  {
+   "id": "vl12-interneuron-paradox",
+   "type": "open",
+   "topic": "Dravet-Syndrom & GEFS+ (SCN1A)",
+   "source": "slides",
+   "ref": "VL12 · Folien 61, 65–67",
+   "stem": "Erklären Sie, warum ein Funktionsverlust des Na⁺-Kanals Na<sub>V</sub>1.1 (<i>SCN1A</i>) – entgegen der Intuition – zu epileptischen Anfällen führt.",
+   "points": [
+    "NaV1.1 ist v. a. in inhibitorischen (GABAergen) Interneuronen funktionell wichtig (zellspezifische Expression)",
+    "Funktionsverlust → Interneurone feuern weniger Aktionspotentiale (Scn1a-RH/+-Maus)",
+    "Feuerverhalten der Pyramidenzellen bleibt unverändert",
+    "Weniger Hemmung (Disinhibition) → Übererregbarkeit des Netzwerks → Anfälle",
+    "Take-home: Wegen spezifischer Expression kann eine Mutation einen Effekt gegen die Intuition zeigen"
+   ],
+   "explanation": "Take-home (Folie 67): Eine loss- oder gain-of-function-Mutation kann aufgrund einer spezifischen Expression einen Effekt zeigen, der gegen die (eigene) Intuition ist. Spiegelbildlich macht die gain-of-function-Mutation L1649Q in Na<sub>V</sub>1.1 die Interneurone hyperaktiv (FHM3)."
+  },
+  {
+   "id": "vl12-scn1a-gof-lof",
+   "type": "single",
+   "topic": "Dravet-Syndrom & GEFS+ (SCN1A)",
+   "source": "slides",
+   "ref": "VL12 · Folien 32, 34, 62, 65–67",
+   "stem": "Welche Aussage zu Mutationen im <i>SCN1A</i>-Gen (Na<sub>V</sub>1.1) trifft zu?",
+   "options": [
+    {
+     "t": "Gain-of-function führt zum Dravet-Syndrom, Funktionsverlust zur familiären hemiplegischen Migräne (FHM3).",
+     "correct": false
+    },
+    {
+     "t": "Funktionsverlust führt zu Epilepsie (Dravet/GEFS+), gain-of-function (L1649Q) zur familiären hemiplegischen Migräne (FHM3).",
+     "correct": true
+    },
+    {
+     "t": "Mutationen in <i>SCN1A</i> verursachen ausschließlich Migräne, aber keine Epilepsie.",
+     "correct": false
+    },
+    {
+     "t": "Funktionsverlust führt zur hyperkaliämischen periodischen Paralyse, gain-of-function zum Brugada-Syndrom.",
+     "correct": false
+    }
+   ],
+   "explanation": "Dasselbe Gen, entgegengesetzte Effekte: Loss-of-function schwächt die Interneurone (Disinhibition → Epilepsie), gain-of-function (L1649Q, mehr persistierender Na⁺-Strom) macht sie hyperaktiv (→ Streudepolarisation, FHM3). HyperPP: <i>SCN4A</i>; Brugada: <i>SCN5A</i>."
+  },
+  {
+   "id": "vl12-kompensation",
+   "type": "single",
+   "topic": "Kompensation & genetischer Hintergrund",
+   "source": "exam",
+   "exam": "WS24/25",
+   "ref": "VL12 · Folien 69–70, 73–74",
+   "stem": "Welcher kompensatorische Mechanismus des Organismus auf eine Mutation in einem Ionenkanal ist am plausibelsten?",
+   "options": [
+    {
+     "t": "Überexpression des mutierten Gens, um mehr Kanalprotein bereitzustellen",
+     "correct": false
+    },
+    {
+     "t": "Überexpression anderer Ionenkanäle, die die Funktion teilweise übernehmen",
+     "correct": true
+    },
+    {
+     "t": "Reduktion aller Ionenkanäle, um das Gleichgewicht der Ströme zu wahren",
+     "correct": false
+    },
+    {
+     "t": "Verringerte Expression aller Kanaluntereinheiten im betroffenen Neuron",
+     "correct": false
+    }
+   ],
+   "explanation": "Beispiel tottering-Maus (Folien 69–70): Bei defektem Ca<sub>V</sub>2.1 (P/Q-Typ) übernimmt in Neuronen des basalen Vorderhirns der L-Typ-Ca²⁺-Kanal (Ca<sub>V</sub>1) einen größeren Anteil – der Ca²⁺-Strom bleibt normal. Take-home (Folie 73): Der Organismus kann auf vielen Ebenen eine Mutation in einem Kanal kompensieren. Mehr mutiertes Protein oder weniger Kanäle insgesamt kompensieren nicht.",
+   "note": "Protokoll unvollständig – vierte Option sinngemäß ergänzt, Lösung nicht überliefert. Lösung durch VL12 Folien 69–70 bestätigt (L-Typ-Kanal kompensiert den CaV2.1-Defekt)."
+  },
+  {
+   "id": "vl12-tottering",
+   "type": "multi",
+   "topic": "Kompensation & genetischer Hintergrund",
+   "source": "slides",
+   "ref": "VL12 · Folien 69–70",
+   "stem": "Welche Aussagen zum <i>tottering</i>-Mausmodell treffen zu?",
+   "options": [
+    {
+     "t": "Die Mutation liegt im <i>CACNA1A</i>-Gen, das Ca<sub>V</sub>2.1 (P/Q-Typ) kodiert.",
+     "correct": true
+    },
+    {
+     "t": "Nifedipin ist ein Antagonist des P/Q-Typ-Kanals Ca<sub>V</sub>2.1.",
+     "correct": false
+    },
+    {
+     "t": "Die Tiere zeigen Absencen und motorische Defizite.",
+     "correct": true
+    },
+    {
+     "t": "In Purkinje-Zellen, die hauptsächlich Ca<sub>V</sub>2.1 exprimieren, ist der Ca²⁺-Strom reduziert.",
+     "correct": true
+    },
+    {
+     "t": "In Neuronen des basalen Vorderhirns macht Ca<sub>V</sub>2.1 nahezu den gesamten Ca²⁺-Strom aus.",
+     "correct": false
+    },
+    {
+     "t": "In Neuronen des basalen Vorderhirns ist der Ca²⁺-Strom kaum verändert, weil L-Typ-Kanäle den Defekt kompensieren.",
+     "correct": true
+    }
+   ],
+   "explanation": "Nifedipin ist ein Ca<sub>V</sub>1-(L-Typ-)Antagonist: In tottering-Neuronen hemmt es einen größeren Anteil des HVA-Ca²⁺-Stroms (ca. 47 % statt 28 %) – der L-Typ-Kanal kompensiert. Neurone des basalen Vorderhirns exprimieren alle Ca²⁺-Kanäle (Ca<sub>V</sub>2.1 nur ca. 30 %); Purkinje-Zellen hängen hauptsächlich von Ca<sub>V</sub>2.1 ab."
+  },
+  {
+   "id": "vl12-scn1a-mauslinien",
+   "type": "single",
+   "topic": "Kompensation & genetischer Hintergrund",
+   "source": "exam",
+   "exam": "WS25/26",
+   "ref": "VL12 · Folien 71–72",
+   "stem": "Was ist laut Vorlesung die Ursache dafür, dass dieselbe <i>Scn1a</i>-Mutation in verschiedenen Mauslinien unterschiedliche Phänotypen zeigt?",
+   "options": [
+    {
+     "t": "Eine Linie hat eine GABA-Rezeptor-Mutation und ist deswegen anfälliger.",
+     "correct": true
+    },
+    {
+     "t": "Die Unterschiede sind Artefakte der Experimente.",
+     "correct": false
+    },
+    {
+     "t": "Ein Rezeptor wird von einer Linie nicht exprimiert.",
+     "correct": false
+    },
+    {
+     "t": "Eine Linie hat weniger Aktivität von Interneuronen.",
+     "correct": false
+    }
+   ],
+   "explanation": "Folie 72: Auf 129Sv-Hintergrund führt eine <i>Scn1a</i>-Mutation bzw. ein Knock-out zu keinen Anfällen und keinem Interneuron-Defizit, auf C57BL/6 zu schweren Anfällen und einem Defizit der Interneuron-Erregbarkeit. Ursache: <b>erniedrigte</b> (nicht fehlende) Expression eines GABA-Rezeptors durch eine genetische Variante in C57BL/6 (in der Literatur <i>Gabra2</i>) – diese Linie ist deshalb anfälliger. Die geringere Interneuron-Aktivität ist Teil des Phänotyps (Folge), nicht die Ursache des Unterschieds.",
+   "note": "Optionen wortnah am Protokoll. Lösung nicht im Protokoll – nach VL12 Folie 72 gewählt. „Rezeptor wird nicht exprimiert“ ist falsch, weil die Folie nur eine erniedrigte Expression nennt; „weniger Aktivität von Interneuronen“ beschreibt den Phänotyp der C57BL/6-Linie, nicht die Ursache."
+  },
+  {
+   "id": "vl12-hintergrund",
+   "type": "combo",
+   "topic": "Kompensation & genetischer Hintergrund",
+   "source": "slides",
+   "ref": "VL12 · Folien 71–72",
+   "stem": "Welche Aussagen zum Einfluss des genetischen Hintergrunds auf <i>Scn1a</i>-Mausmodelle (Dravet-Syndrom) treffen zu?",
+   "statements": [
+    {
+     "t": "Auf 129Sv-Hintergrund zeigen die Interneurone ein deutliches Erregbarkeitsdefizit.",
+     "correct": false
+    },
+    {
+     "t": "Auf C57BL/6-Hintergrund führt eine <i>Scn1a</i>-Mutation oder ein Knock-out zu schweren Anfällen.",
+     "correct": true
+    },
+    {
+     "t": "In C57BL/6 ist ein GABA-Rezeptor durch eine genetische Variante erniedrigt exprimiert.",
+     "correct": true
+    },
+    {
+     "t": "Ein Inzuchtstamm bildet jeweils nur einen Ausschnitt der Phänotyp-Variabilität ab, die in der menschlichen Population vorkommt.",
+     "correct": true
+    }
+   ],
+   "combos": [
+    "BC",
+    "BCD",
+    "ABCD",
+    "CD",
+    "AB"
+   ],
+   "explanation": "129Sv: keine Anfälle, kein Interneuron-Defizit. Folie 71: Inzuchtstämme (A, B, C) sind genetisch einheitlich und liegen jeweils an einer Stelle der Schweregrad-Verteilung, die beim Menschen kontinuierlich ist – der genetische Hintergrund spielt eine wichtige Rolle."
+  },
+  {
+   "id": "vl12-modifier",
+   "type": "open",
+   "topic": "Kompensation & genetischer Hintergrund",
+   "source": "slides",
+   "ref": "VL12 · Folien 67, 73–74",
+   "stem": "„It is never so easy“: Nennen Sie die zwei Arten von Modifiern von Ionenkanaldefekten aus der Vorlesung mit je einem Beispiel.",
+   "points": [
+    {
+     "t": "Expression in bestimmten Zellen – z. B. NaV1.1 v. a. in Interneuronen (SCN1A)",
+     "g": "Expression (Zelltyp/Entwicklung)"
+    },
+    {
+     "t": "Expression zu bestimmten Entwicklungszeitpunkten – z. B. NaV1.2 → NaV1.6 am AIS, KCNQ2 perinatal",
+     "g": "Expression (Zelltyp/Entwicklung)"
+    },
+    {
+     "t": "Kompensation durch andere Gene – z. B. L-Typ-Ca²⁺-Kanal bei der tottering-Maus (CaV2.1-Defekt)",
+     "g": "Kompensation (andere Gene/System)"
+    },
+    {
+     "t": "Genetischer Hintergrund/System – z. B. Scn1a-Mutation: 129Sv ohne, C57BL/6 mit Anfällen",
+     "g": "Kompensation (andere Gene/System)"
+    }
+   ],
+   "explanation": "Folie 74 fasst zusammen: gain-/loss-of-function, dominant-negativer Effekt – plus Modifier: Expression des Proteins in bestimmten Zellen oder zu bestimmten Entwicklungszeitpunkten sowie Kompensation durch andere Gene oder im System. Take-home (Folie 73): Der Organismus kann auf vielen Ebenen eine Mutation in einem Kanal kompensieren."
+  }
+ ]
+}
