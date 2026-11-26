@@ -101,6 +101,11 @@
 .shop-line{font-size:12px;line-height:1.4;color:var(--txt)}
 .shop-line.mut{color:var(--mut)}
 .shop-chance{color:#f2cb4c}
+.shop-new{color:#8fd6a8}
+.shop-new.is-done{color:var(--mut)}
+/* undiscovered species: no buy button, a hint pointing to the eggs instead */
+.shop-lock{margin-top:auto;color:var(--mut)}
+.shop-tile.is-locked{background:color-mix(in srgb,var(--panel2) 70%,var(--panel))}
 .shop-desc{font-size:12px;line-height:1.4;color:var(--mut)}
 
 .shop-buy{
@@ -184,30 +189,33 @@
   .shop-egg .shop-buy{align-self:flex-start}
 }
 
-/* collection of rare colour variants */
-.shop-coll{margin-top:26px}
-.shop-coll-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-bottom:10px}
-.shop-coll-head .shop-sec{flex:1;margin:0;min-width:min(100%,260px)}
-.shop-coll-count{font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
-.shop-coll-count b{color:#f2cb4c}
-.shop-coll-bar{height:6px;border-radius:4px;background:#10161d;border:1px solid var(--line);overflow:hidden;margin-bottom:12px}
-.shop-coll-bar i{display:block;height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,#c8921c,#f2cb4c);transition:width .6s ease}
-.shop-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:12px;font-size:11.5px;color:var(--mut)}
-.shop-legend span{display:inline-flex;align-items:center;gap:6px}
-.shop-legend i{width:9px;height:9px;border-radius:2px;background:var(--vc);box-shadow:0 0 6px color-mix(in srgb,var(--vc) 45%,transparent)}
-.shop-coll-empty{margin:0 0 12px;font-size:12px;color:var(--mut);font-style:italic}
-.shop-crows{display:flex;flex-direction:column;gap:6px}
-.shop-crow{
-  display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;
-  background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:7px 10px 7px 12px;
+/* Vogelbuch: „Neu anfangen“ (reset the garden, with a confirm step) */
+.shop-reset{margin-top:28px}
+.shop-reset .shop-note{margin-bottom:10px}
+.shop-danger,.shop-plain{
+  border-radius:8px;padding:7px 13px;font-size:13px;font-weight:600;cursor:pointer;
+  background:none;border:1px solid var(--line);color:var(--txt);
 }
-.shop-crow-name{
-  flex:1 1 120px;min-width:0;
-  font-family:'PressStart2P',monospace;font-size:8px;line-height:1.7;color:var(--rar);word-break:break-word;
+.shop-danger{border-color:color-mix(in srgb,var(--bad) 55%,transparent);color:var(--bad)}
+.shop-danger:hover{background:color-mix(in srgb,var(--bad) 10%,transparent)}
+.shop-danger.is-solid{background:var(--bad);border-color:var(--bad);color:#1d0a0a}
+.shop-danger.is-solid:hover{filter:brightness(1.08)}
+.shop-plain:hover{border-color:var(--mut)}
+.shop-confirm{
+  display:flex;flex-direction:column;gap:10px;padding:11px 12px;border-radius:10px;
+  background:color-mix(in srgb,var(--bad) 7%,var(--panel2));border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);
 }
-.shop-crow-star{margin-left:7px;color:#f2cb4c;font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;vertical-align:-1px}
-.shop-crow-star[hidden]{display:none}
-.shop-swatches{flex:none;display:flex;gap:6px}
+.shop-confirm-q{margin:0;font-size:12.5px;line-height:1.5;color:var(--txt)}
+.shop-confirm-actions{display:flex;flex-wrap:wrap;gap:8px}
+.shop-danger:focus-visible,.shop-plain:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Vogelbuch: a species' three colour variants (swatch + name) */
+.shop-bird .shop-sprite-wrap{align-self:flex-start}
+.shop-star{margin-left:7px;color:#f2cb4c;font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;vertical-align:-1px}
+.shop-vnames{font-size:11px;line-height:1.45;color:var(--mut)}
+/* only 30 % accent, so dark accents (melanistic …) still read brighter than undiscovered names */
+.shop-vname.is-seen{color:color-mix(in srgb,var(--vc) 30%,var(--txt));font-weight:600}
+.shop-swatches{flex:none;display:flex;gap:6px;margin-top:2px}
 .shop-swatch{
   position:relative;flex:none;width:36px;height:32px;display:grid;place-items:center;
   background:#0d1218;border:1px solid var(--line);border-radius:7px;
@@ -219,12 +227,14 @@
   font-family:'PressStart2P',monospace;font-size:7px;line-height:1;color:var(--mut);opacity:.75;
 }
 .shop-swatch.is-seen{
-  border-color:color-mix(in srgb,var(--vc) 55%,transparent);
+  /* mixed toward the text colour so dark accents keep a visible frame and glow */
+  border-color:color-mix(in srgb,var(--vc) 45%,var(--txt));
   background:radial-gradient(circle at 50% 62%,color-mix(in srgb,var(--vc) 24%,transparent),transparent 72%),#0d1218;
-  box-shadow:0 0 9px -3px color-mix(in srgb,var(--vc) 60%,transparent);
+  box-shadow:0 0 9px -3px color-mix(in srgb,color-mix(in srgb,var(--vc) 60%,var(--txt)) 60%,transparent);
 }
 
 @media (max-width:360px){.shop-buy{white-space:normal}}
+@media (max-width:380px){.shop-tab-ico{display:none}}   /* "Vogelbuch" must fit the tab pill */
 @media (max-width:520px){
   .shop-head{padding:12px 14px}
   .shop-tabbar{padding:10px 14px}
@@ -234,6 +244,6 @@
 @media (prefers-reduced-motion:reduce){
   .shop-tile.just-bought,.shop-reveal{animation:none}
   .shop-buy.shake{animation:shopNudge .5s ease}
-  .shop-coll-bar i,.shop-tabs button,.shop-toggle{transition:none}
+  .shop-tabs button,.shop-toggle{transition:none}
 }
 @keyframes shopNudge{0%,100%{box-shadow:inset 0 0 0 1px var(--line)}35%{box-shadow:inset 0 0 0 1px var(--warn)}}

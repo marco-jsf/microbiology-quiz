@@ -27,7 +27,8 @@ export const BIRDS = [
     tags: { idle: 'Idle', walk: 'walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
   { id: 'peacock', name: 'Peacock', size: 1.5, rarity: 'epic', cost: 600, sheet: 'assets/birds/peacock/Peacock.json',
     tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
-  // Not from a pack: drawn on top of the Collared Dove's animation by tools/make_cockatiel.py.
+  // Not from a pack: drawn on top of the Collared Dove's animation by tools/make_cockatiel.py
+  // (which also draws its Lutino variant sheet, see garden-variants.js).
   { id: 'cockatiel', name: 'Cockatiel', size: 0.79, rarity: 'rare', cost: 120, sheet: 'assets/birds/cockatiel/Cockatiel.json',
     tags: { idle: 'Idle', walk: 'Walk', jump: 'Jump', eat: 'Eat', fly: 'Fly' } },
 
@@ -76,7 +77,7 @@ export const SPECIES_INFO = {
   macaw: { de: 'Blauer Ara', latin: 'Anodorhynchus',
     fact: 'Knackt mit seinem kräftigen Schnabel sogar steinharte Palmnüsse. Große Aras können über 50 Jahre alt werden.' },
   cockatiel: { de: 'Nymphensittich', latin: 'Nymphicus hollandicus',
-    fact: 'Der kleinste Kakadu stammt aus Australien. An seiner Federhaube sieht man die Stimmung: steil aufgestellt heißt neugierig oder aufgeregt, flach angelegt eher ängstlich oder gereizt.' },
+    fact: 'Der kleinste Kakadu stammt aus Australien. Seine Federhaube zeigt die Stimmung: aufgestellt heißt neugierig, angelegt eher ängstlich.' },
 };
 export function speciesInfo(id) { return SPECIES_INFO[id] || { de: birdById(id)?.name || id, latin: '', fact: '' }; }
 
@@ -84,12 +85,16 @@ export function speciesInfo(id) { return SPECIES_INFO[id] || { de: birdById(id)?
  * Bought in the shop, then sit in the garden nest. Every graded quiz answer
  * adds its score (0..1) as "warmth" to every egg in the nest; at `need` the
  * egg is ready and hatches when tapped in the garden. The species is drawn
- * uniformly from BIRDS of the same rarity; `variantChance` is the chance of a
- * rare colour variant (variants can ONLY come from eggs, never the shop). */
+ * from BIRDS of the same rarity, a species the player hasn't discovered yet
+ * NEW_SPECIES_WEIGHT times as likely as one they have; eggs are the ONLY way
+ * to discover a species (the shop sells only discovered ones). `variantChance`
+ * is the chance of a rare colour variant (one of the species' three in
+ * garden-variants.js; variants can ONLY come from eggs). */
+export const NEW_SPECIES_WEIGHT = 3;
 export const EGG_TIERS = [
-  { id: 'normal', name: 'Einfaches Ei', cost: 30, need: 10, variantChance: 0.12 },
-  { id: 'rare', name: 'Seltenes Ei', cost: 150, need: 20, variantChance: 0.15 },
-  { id: 'epic', name: 'Episches Ei', cost: 450, need: 35, variantChance: 0.20 },
+  { id: 'normal', name: 'Einfaches Ei', cost: 60, need: 10, variantChance: 0.12 },
+  { id: 'rare', name: 'Seltenes Ei', cost: 300, need: 20, variantChance: 0.15 },
+  { id: 'epic', name: 'Episches Ei', cost: 900, need: 35, variantChance: 0.20 },
 ];
 export const NEST_CAPACITY = 3;
 // Bad-luck protection: at most this many hatches in a row without a variant —
@@ -97,19 +102,6 @@ export const NEST_CAPACITY = 3;
 export const VARIANT_PITY = 8;
 export function eggTierById(id) { return EGG_TIERS.find(t => t.id === id); }
 export function speciesForTier(tier) { return BIRDS.filter(b => b.rarity === tier); }
-
-/* ---------- Rare colour variants ----------
- * Applied to ANY species by gradient-mapping each sprite pixel's luminance
- * onto `stops` (dark → light), so outlines/eyes stay dark and shading reads.
- * `weight` is the relative draw weight once a variant is rolled. */
-export const VARIANTS = [
-  { id: 'gold', name: 'Gold', weight: 1, stops: ['#2e1a04', '#7a4f0e', '#c8921c', '#f2cb4c', '#fff3bf'] },
-  { id: 'white', name: 'Weiß', weight: 3, stops: ['#3b4048', '#8d949c', '#cfd5db', '#f2f4f6', '#ffffff'] },
-  { id: 'night', name: 'Mitternacht', weight: 3, stops: ['#0b0920', '#231f5c', '#4b44a6', '#8f86e6', '#d6d0ff'] },
-  { id: 'rose', name: 'Rosé', weight: 3, stops: ['#2e0b18', '#7d2a4a', '#c75c84', '#f19bb8', '#ffe3ec'] },
-  { id: 'mint', name: 'Mint', weight: 3, stops: ['#06231b', '#1b6b52', '#3fae88', '#8fe3c4', '#e6fff5'] },
-];
-export function variantById(id) { return VARIANTS.find(v => v.id === id); }
 
 /* ---------- Decor ----------
  * kind 'object' — drawn in the scene, standing on the ground at fraction `x`

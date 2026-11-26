@@ -25,6 +25,8 @@ Reads (read-only):  <repo>/assets/birds/collared_dove/Collared Dove.{ase,json,pn
                     <repo>/assets/birds/... (other birds, preview only)
                     <repo>/assets/garden-background.png (preview only)
 Writes:             <repo>/assets/birds/cockatiel/Cockatiel.{png,json}
+                    <repo>/assets/birds/cockatiel/Cockatiel-Lutino.{png,json}
+                    (the yellow Lutino morph: same frames, LUTINO palette)
                     with --preview DIR also DIR/preview_sheet.png,
                     DIR/preview_context.png and DIR/manifest.json
 
@@ -65,9 +67,32 @@ PAL = {
     'Y': '#f2d03b', 'y': '#d4a92a',      # face / crest
     'O': '#e7782d',                      # cheek
     'F': '#b5978f', 'f': '#8e746d',      # feet
+    'E': '#000000',                      # eye (black like the outline)
+    'B': '#aeacb0', 'b': '#5a585d',      # beak: upper mandible / hook tip, in the body greys
 }
-# The beak uses the body greys: upper mandible '1' (#aeacb0), hook '4' (#5a585d).
-RGBA = {k: tuple(int(v[i:i + 2], 16) for i in (1, 3, 5)) + (255,) for k, v in PAL.items()}
+# Lutino: the yellow colour morph. Same drawing, own palette; one of the
+# cockatiel's rare variants (js/garden-variants.js) - drawn as a sheet because
+# its red eye and pale beak need colours the normal sheet shares with others.
+# Yellow body, deeper golden face and crest, orange cheek, cream wing
+# streak, pale horn beak, pink feet, red eye, warm dark-brown outline.
+LUTINO = {
+    'K': '#3d2a0c',
+    '1': '#fff2a6', '2': '#fde27c', '3': '#f4ca58', '4': '#e0ab3e', '5': '#c4892a',
+    'W': '#fffbe6', 'w': '#f5e3a6',
+    'Y': '#ffd21f', 'y': '#eaa914',
+    'O': '#f2701f',
+    'F': '#ebbcae', 'f': '#c48f80',
+    'E': '#8c1c1c',
+    'B': '#f6dcc0', 'b': '#cfa080',
+}
+assert LUTINO.keys() == PAL.keys()
+
+
+def rgba_of(pal):
+    return {k: tuple(int(v[i:i + 2], 16) for i in (1, 3, 5)) + (255,) for k, v in pal.items()}
+
+
+RGBA = rgba_of(PAL)
 
 # Dove colours -> letters (used to read the source cels).
 DOVE = {(0, 0, 0): 'K', (0xe9, 0xd5, 0xc6): 'L', (0xd5, 0xc0, 0xa9): 'M', (0xbe, 0xaa, 0x90): 'S',
@@ -161,9 +186,9 @@ HEAD_UP = ([
     "...KYYK...",   # r0   crest base (2 px) on the forehead
     "..KYYYKKK.",   # r1   crown
     "..KYYYYY3K",   # r2   yellow crown, grey nape
-    ".KKYKYOY3K",   # r3   eye, cheek, yellow behind the cheek
-    "K11YYOOY3K",   # r4   hooked beak (upper mandible), cheek
-    "K4KYyOO3K.",   # r5   hook tip, cheek
+    ".KKYEYOY3K",   # r3   eye, cheek, yellow behind the cheek
+    "KBBYYOOY3K",   # r4   hooked beak (upper mandible), cheek
+    "KbKYyOO3K.",   # r5   hook tip, cheek
     ".KKYYy3K..",   # r6   yellow throat
 ], -1, -4)
 # The dove's "head forward" walk cel (9 px wide) has the neck slanting back; the
@@ -235,13 +260,13 @@ LEAN = ([
     "........KYK...........................",   # y28
     "........KYYKKKK.......................",   # y29  crest base on the crown
     ".........KYYYY3K......................",   # y30
-    "........KYYKYOY3K.....................",   # y31  eye, cheek, yellow behind it
+    "........KYYEYOY3K.....................",   # y31  eye, cheek, yellow behind it
     ".......KYYYYOOY3K.....................",   # y32
     ".......KYYYyOO32K.....................",   # y33
     ".......KYyy22123K.....................",   # y34
-    "......K1yy332213K.....................",   # y35  beak
-    "......K1KK3221223K....................",   # y36
-    "......K4K.K222123K....................",   # y37  hook tip
+    "......KByy332213K.....................",   # y35  beak
+    "......KBKK3221223K....................",   # y36
+    "......KbK.K222123K....................",   # y37  hook tip
     ".......K..K3222123K...................",   # y38
     "..........K33222123KKK................",   # y39
     "...........K3322212234KK..............",   # y40
@@ -278,10 +303,10 @@ HEAD_GROUND = ([
     "...KYK...",   # r-1
     "..KYYKKKK",   # r0   crest base, crown
     ".KYYYYY23",   # r1
-    "KYYKYOY22",   # r2   eye, cheek, yellow behind it
+    "KYYEYOY22",   # r2   eye, cheek, yellow behind it
     "KYYYOOY32",   # r3
-    "K1YyOO344",   # r4   beak
-    "K4KKKKKKK",   # r5   hook tip
+    "KBYyOO344",   # r4   beak
+    "KbKKKKKKK",   # r5   hook tip
     ".K.......",   # r6
 ], -1, -4)
 
@@ -293,9 +318,9 @@ HEAD_FLY = ([
     "...KYYK....",   # r-1  crest base (2 px yellow); gap under the tip
     "..KYYYKKK..",   # r0   crown
     "..KYYYYY3K.",   # r1
-    ".KKYKYOY3K.",   # r2   eye, cheek, yellow behind it
-    "K11YYOOY3K.",   # r3   beak
-    "K4KYyOO33..",   # r4   hook tip
+    ".KKYEYOY3K.",   # r2   eye, cheek, yellow behind it
+    "KBBYYOOY3K.",   # r3   beak
+    "KbKYyOO33..",   # r4   hook tip
     ".KKYy3212..",   # r5
     "...K432....",   # r6
 ], -1, -4)
@@ -428,7 +453,7 @@ FIXES = {
 }
 
 
-def build_frame(fi):
+def build_frame(fi, rgba=RGBA):
     img = Image.new('RGBA', (CELL, CELL), (0, 0, 0, 0))
     px = img.load()
     body = cel(fi, 2)
@@ -440,9 +465,9 @@ def build_frame(fi):
         for (x, y), ch in art_for(li, c, body_top).items():
             X, Y = c['x'] + x, c['y'] + y
             if 0 <= X < CELL and 0 <= Y < CELL:
-                px[X, Y] = RGBA[ch]
+                px[X, Y] = rgba[ch]
     for (X, Y), ch in FIXES.get(fi, {}).items():
-        px[X, Y] = RGBA[ch]
+        px[X, Y] = rgba[ch]
     if fi in GROUNDED:      # nothing may hang below the feet (birds stand on the union bottom)
         below = img.crop((0, GROUND_Y + 1, CELL, CELL)).getbbox()
         assert below is None, ('pixels below the feet row in dove frame', fi, below)
@@ -645,6 +670,16 @@ def manifest(path):
 
 
 # ------------------------------------------------------------------ main ---
+def write_sheet(name, sheet, frames, tags):
+    sheet.save(os.path.join(OUT, name + '.png'), optimize=False)
+    meta = {'app': 'https://www.aseprite.org/', 'version': '1.x-dev', 'image': name + '.png',
+            'format': 'RGBA8888', 'size': {'w': sheet.width, 'h': sheet.height}, 'scale': '1',
+            'frameTags': tags}
+    with open(os.path.join(OUT, name + '.json'), 'w') as f:
+        json.dump({'frames': frames, 'meta': meta}, f, indent=1)
+        f.write('\n')
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     dove_json = json.load(open(DOVE_JSON))
@@ -662,13 +697,14 @@ def main():
                 'sourceSize': {'w': CELL, 'h': CELL}, 'duration': durations[fi]}
             k += 1
     validate(sheet, tags)
-    sheet.save(os.path.join(OUT, 'Cockatiel.png'), optimize=False)
-    meta = {'app': 'https://www.aseprite.org/', 'version': '1.x-dev', 'image': 'Cockatiel.png',
-            'format': 'RGBA8888', 'size': {'w': sheet.width, 'h': sheet.height}, 'scale': '1',
-            'frameTags': tags}
-    with open(os.path.join(OUT, 'Cockatiel.json'), 'w') as f:
-        json.dump({'frames': frames, 'meta': meta}, f, indent=1)
-        f.write('\n')
+    write_sheet('Cockatiel', sheet, frames, tags)
+    # Lutino: the same frames in the LUTINO palette (a per-key swap, so its
+    # outline/feet/ground checks are exactly those of the normal sheet).
+    lut = Image.new('RGBA', sheet.size, (0, 0, 0, 0))
+    for k, fi in enumerate(order):
+        lut.paste(build_frame(fi, rgba_of(LUTINO)), (k * CELL, 0))
+    assert lut.getchannel('A').tobytes() == sheet.getchannel('A').tobytes()
+    write_sheet('Cockatiel-Lutino', lut, {n.replace('Cockatiel ', 'Cockatiel-Lutino '): v for n, v in frames.items()}, tags)
     if '--preview' in sys.argv:
         pdir = sys.argv[sys.argv.index('--preview') + 1]
         os.makedirs(pdir, exist_ok=True)

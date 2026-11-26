@@ -9,15 +9,23 @@
 //     (kept equal to the per-species count of `birds`), so an older build of
 //     the app would still show the same flock;
 //   • a save without `birds` (or with fewer birds than `owned` says, e.g. after
-//     an older build bought one) is reconciled on load by adding individuals.
+//     an older build bought one) is reconciled on load by adding individuals;
+//   • birds in one of the old fantasy colours (gold/white/night/rose/mint) are
+//     converted on load to one of their species' real variants; the old value
+//     is kept in `variantWas` (see migrateVariants).
 
 import {
-  birdById, STARTER, eggTierById, speciesForTier, VARIANTS, VARIANT_PITY,
-  NEST_CAPACITY, decorById,
+  birdById, STARTER, eggTierById, speciesForTier, VARIANT_PITY,
+  NEST_CAPACITY, decorById, NEW_SPECIES_WEIGHT,
 } from './garden-data.js';
+import { variantsOf, variantFor, resolveVariantId } from './garden-variants.js';
 import { spendCoins } from './engine.js';
 
 const KEY = 'microbioBirdsV1';
+// The garden as it was right before the last resetGarden() (the raw saved
+// string). Nothing reads it; it is there so an accidental reset can be undone
+// by hand: localStorage.setItem('microbioBirdsV1', localStorage.getItem('microbioBirdsV1-backup')).
+const BACKUP_KEY = 'microbioBirdsV1-backup';
 const NAME_MAX = 18;
 
 let state = load();
@@ -56,8 +64,36 @@ function load() {
     }
   }
   syncOwned(st);
-  if (firstRun || added) persist(st);
+  const migrated = migrateVariants(st);
+  if (firstRun || added || migrated) persist(st);
   return st;
+}
+
+// Convert variant ids the species no longer has (the old fantasy colours) in
+// birds and in the collection. Idempotent; returns true if anything changed.
+function migrateVariants(st) {
+  let changed = false;
+  for (const b of st.birds) {
+    if (!b || !b.variant) continue;
+    const id = resolveVariantId(b.species, b.variant);
+    if (id === b.variant) continue;
+    if (!b.variantWas) b.variantWas = b.variant;
+    b.variant = id;
+    changed = true;
+  }
+  for (const key of Object.keys(st.variantsSeen)) {
+    const i = key.indexOf(':');
+    if (i < 0) continue;
+    const species = key.slice(0, i), old = key.slice(i + 1);
+    const id = resolveVariantId(species, old);
+    if (id === old) continue;
+    const at = st.variantsSeen[key], nk = `${species}:${id}`;
+    delete st.variantsSeen[key];
+    const prev = st.variantsSeen[nk];
+    st.variantsSeen[nk] = Number.isFinite(prev) && Number.isFinite(at) ? Math.min(prev, at) : (prev || at || Date.now());
+    changed = true;
+  }
+  return changed;
 }
 
 function syncOwned(st) {
@@ -75,6 +111,7 @@ function refresh() { state = load(); }
 /* ---------- change notifications ----------
  * Events: 'bird-added' {bird} (bought in the shop) · 'bird-renamed' {bird}
  *         'eggs' {eggs} (bought / warmed / hatched) · 'decor' {}
+ *         'reset' {} (garden wiped; followed by 'decor' and 'eggs')
  * Hatching does NOT emit 'bird-added' — the garden scene spawns the hatchling
  * itself from hatchEgg()'s return value so it can animate the reveal. */
 const listeners = new Set();
@@ -100,6 +137,11 @@ function newBird(species, variant, from) {
 /* ---------- birds ---------- */
 export function ownedCount(id) { return state.owned[id] || 0; }
 export function isOwned(id) { return ownedCount(id) > 0; }
+// A species is discovered once the player has had one (hatched, bought before
+// eggs existed, or the starter). Birds are never removed, so that is the same
+// as owning one — old saves need no new field. Only discovered species can be
+// bought; new ones come from eggs.
+export function isDiscovered(id) { return isOwned(id); }
 // {id: count} of everything the player owns (all variants count toward their species).
 export function ownedFlock() { return { ...state.owned }; }
 // Every individual bird, oldest first: [{uid, species, variant, name, from, at}].
@@ -107,11 +149,12 @@ export function ownedFlock() { return { ...state.owned }; }
 export function listBirds() { return state.birds.map(copy); }
 export function getBird(uid) { return copy(state.birds.find(b => b.uid === uid)); }
 
-// Buy one normal-coloured `id`. Returns the new bird, or null if unaffordable.
+// Buy one more normal-coloured `id` of a DISCOVERED species. Returns the new
+// bird, or null if the species is still undiscovered or unaffordable.
 export function buy(id) {
   refresh();
   const def = birdById(id);
-  if (!def || !spendCoins(def.cost)) return null;
+  if (!def || !isDiscovered(id) || !spendCoins(def.cost)) return null;
   const bird = newBird(id, null, 'shop');
   state.birds.push(bird);
   save();
@@ -176,10 +219,11 @@ function pickWeighted(list, w) {
   return list[list.length - 1];
 }
 
-// Hatch a READY egg. Rolls species (same rarity as the egg) and maybe a rare
-// variant, adds the bird, removes the egg, saves — all immediately, so closing
-// the tab mid-animation loses nothing. Returns
-//   { bird, egg, isVariant, isNewVariant }   or null if the egg isn't ready.
+// Hatch a READY egg. Rolls species (same rarity as the egg, undiscovered ones
+// NEW_SPECIES_WEIGHT× as likely) and maybe a rare variant, adds the bird,
+// removes the egg, saves — all immediately, so closing the tab mid-animation
+// loses nothing. Returns
+//   { bird, egg, isVariant, isNewVariant, isNewSpecies }   or null if the egg isn't ready.
 export function hatchEgg(uid) {
   refresh();
   const i = state.eggs.findIndex(e => e.uid === uid);
@@ -188,13 +232,15 @@ export function hatchEgg(uid) {
   const t = eggTierById(egg.tier);
   const pool = speciesForTier(egg.tier);
   if (!t || !pool.length) return null;
-  const def = pool[(Math.random() * pool.length) | 0];
+  const def = pickWeighted(pool, d => (isDiscovered(d.id) ? 1 : NEW_SPECIES_WEIGHT));
+  const isNewSpecies = !isDiscovered(def.id);
 
   let variant = null;
-  if (state.sinceVariant >= VARIANT_PITY - 1 || Math.random() < t.variantChance) {
-    variant = pickWeighted(VARIANTS, v => v.weight).id;
+  const vs = variantsOf(def.id);
+  if (vs.length && (state.sinceVariant >= VARIANT_PITY - 1 || Math.random() < t.variantChance)) {
+    variant = pickWeighted(vs, v => v.weight || 1).id;
     // Re-roll once if this one is already in the collection for this species.
-    if (state.variantsSeen[`${def.id}:${variant}`]) variant = pickWeighted(VARIANTS, v => v.weight).id;
+    if (state.variantsSeen[`${def.id}:${variant}`]) variant = pickWeighted(vs, v => v.weight || 1).id;
   }
   const key = `${def.id}:${variant}`;
   const isNewVariant = !!variant && !state.variantsSeen[key];
@@ -207,12 +253,17 @@ export function hatchEgg(uid) {
   state.hatched++;
   save();
   emit('eggs', { eggs: listEggs() });
-  return { bird: copy(bird), egg: copy(egg), isVariant: !!variant, isNewVariant };
+  return { bird: copy(bird), egg: copy(egg), isVariant: !!variant, isNewVariant, isNewSpecies };
 }
 
 /* ---------- rare variants (collection) ---------- */
 export function hasSeenVariant(species, variant) { return !!state.variantsSeen[`${species}:${variant}`]; }
-export function variantsSeenCount() { return Object.keys(state.variantsSeen).length; }
+export function variantsSeenCount() {
+  return Object.keys(state.variantsSeen).filter(k => {
+    const i = k.indexOf(':');
+    return i > 0 && !!variantFor(k.slice(0, i), k.slice(i + 1));
+  }).length;
+}
 export function hatchedCount() { return state.hatched; }
 
 /* ---------- decor ---------- */
@@ -238,10 +289,18 @@ export function setDecorOn(id, on) {
   emit('decor');
 }
 
-// Wipe the garden back to the starter bird (not wired to any UI button).
+// Start the garden over: every bird, egg and decor item and the Vogelbuch
+// (discovered species and variants) are wiped; the player keeps one starter
+// bird. Coins (engine.js) and quiz progress are separate saves and stay. The
+// garden as it was is kept under BACKUP_KEY. Uids keep counting up, so no new
+// bird can reuse the uid of one the scene still shows.
 export function resetGarden() {
+  refresh();
+  try { const prev = localStorage.getItem(KEY); if (prev) localStorage.setItem(BACKUP_KEY, prev); } catch (e) { }
+  const nextUid = state.nextUid;
   state = fresh();
+  state.nextUid = nextUid;
   state.birds.push(newBird(STARTER, null, 'starter'));
   save();
-  emit('decor'); emit('eggs', { eggs: [] });
+  emit('reset'); emit('decor'); emit('eggs', { eggs: [] });
 }

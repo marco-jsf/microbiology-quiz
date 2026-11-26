@@ -17,8 +17,9 @@
 //     goes away.
 
 import {
-  RARITY_LABEL, birdById, speciesInfo, variantById, eggTierById, speciesForTier,
+  RARITY_LABEL, birdById, speciesInfo, eggTierById, speciesForTier,
 } from './garden-data.js';
+import { variantFor } from './garden-variants.js';
 import { BIRD_NAME_MAX } from './garden-store.js';
 import { drawEggIcon } from './garden-art.js';
 
@@ -284,7 +285,7 @@ function fillBird(c) {
   const def = birdById(b.species);
   const info = speciesInfo(b.species);
   const rarity = def?.rarity || 'normal';
-  const variant = b.variant ? variantById(b.variant) : null;
+  const variant = b.variant ? variantFor(b.species, b.variant) : null;
 
   setRarity(c.el, rarity);
   c.el.classList.toggle('is-variant', !!b.variant);
@@ -294,14 +295,15 @@ function fillBird(c) {
   c.rar.textContent = RARITY_LABEL[rarity] || rarity;
   c.vchip.hidden = !b.variant;
   c.vtext.textContent = b.variant ? `✨ Seltene Variante: ${variant?.name || b.variant}` : '';
-  if (variant?.stops?.length) {
-    const s = variant.stops;
-    c.swatch.style.background = `linear-gradient(135deg, ${s[Math.min(3, s.length - 1)]}, ${s[Math.min(1, s.length - 1)]})`;
+  if (variant?.accent) {
+    c.swatch.style.background = variant.accent;
     c.swatch.hidden = false;
   } else c.swatch.hidden = true;
   c.origin.textContent = originText(b);
-  c.fact.textContent = info.fact || '';
-  c.fact.hidden = !info.fact;
+  // A bird in a rare variant explains its colour form instead of the species.
+  const fact = variant?.fact || info.fact || '';
+  c.fact.textContent = fact;
+  c.fact.hidden = !fact;
 
   const editable = typeof c.onRename === 'function';
   c.input.readOnly = !editable;

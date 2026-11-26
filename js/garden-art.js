@@ -10,7 +10,6 @@
 // shadow side (never pure black). `ground` = how many of the bottom rows sit
 // BELOW the ground line (contact shadows, the front half of the pond).
 
-import { variantById } from './garden-data.js';
 
 export const DECOR_PX = 3;   // scene scale of garden objects
 export const EGG_PX = 3;     // scene scale of nest + eggs
@@ -965,63 +964,38 @@ export function drawEggIcon(ctx, tier, w, h) {
 /* ------------------------------------------------------------------ rare colour variants */
 
 /**
- * Pure pixel gradient map (exported for tests). `data` = RGBA bytes (mutated in
- * place), `stops` = [[r,g,b], …] dark → light. Luminance of every non-transparent
- * pixel is contrast-stretched (2nd..98th percentile → 0..1) and mapped onto the
- * evenly spaced stops by linear interpolation; alpha is preserved.
+ * Pure exact-colour palette swap (exported for tests). `data` = RGBA bytes
+ * (mutated in place), `map` = { '#rrggbb': '#rrggbb' }. Opaque-or-not, every
+ * pixel whose RGB is a key gets the value's RGB; alpha and every other colour
+ * stay as they are.
  */
-export function gradientMapPixels(data, stops) {
-  const n = stops.length;
-  if (!n) return data;
-  const hist = new Uint32Array(256);
-  let count = 0;
+export function paletteSwapPixels(data, map) {
+  const lut = new Map();
+  for (const [from, to] of Object.entries(map || {})) {
+    const a = parseHex(from), b = parseHex(to);
+    lut.set((a[0] << 16) | (a[1] << 8) | a[2], b);
+  }
+  if (!lut.size) return data;
   for (let i = 0; i < data.length; i += 4) {
     if (data[i + 3] === 0) continue;
-    hist[luma(data[i], data[i + 1], data[i + 2])]++;
-    count++;
-  }
-  if (!count) return data;
-  const lo = percentile(hist, count, 0.02), hi = percentile(hist, count, 0.98);
-  const span = hi - lo;
-  // 256-entry lookup: luminance → mapped colour
-  const lut = new Uint8ClampedArray(256 * 3);
-  for (let L = 0; L < 256; L++) {
-    const t = span > 0 ? clamp((L - lo) / span, 0, 1) : 0.5;
-    const p = t * (n - 1), i = Math.min(n - 2, Math.floor(p)), f = n > 1 ? p - i : 0;
-    const a = stops[Math.max(0, i)], b = stops[Math.min(n - 1, i + 1)];
-    lut[L * 3] = a[0] + (b[0] - a[0]) * f;
-    lut[L * 3 + 1] = a[1] + (b[1] - a[1]) * f;
-    lut[L * 3 + 2] = a[2] + (b[2] - a[2]) * f;
-  }
-  for (let i = 0; i < data.length; i += 4) {
-    if (data[i + 3] === 0) continue;
-    const L = luma(data[i], data[i + 1], data[i + 2]) * 3;
-    data[i] = lut[L]; data[i + 1] = lut[L + 1]; data[i + 2] = lut[L + 2];
+    const to = lut.get((data[i] << 16) | (data[i + 1] << 8) | data[i + 2]);
+    if (to) { data[i] = to[0]; data[i + 1] = to[1]; data[i + 2] = to[2]; }
   }
   return data;
-}
-function luma(r, g, b) { return Math.round(0.299 * r + 0.587 * g + 0.114 * b); }
-// q-quantile of the luminance histogram, interpolated between neighbouring ranks.
-function percentile(hist, count, q) {
-  const rank = q * (count - 1), k = Math.floor(rank), f = rank - k;
-  const at = r => { let acc = 0; for (let L = 0; L < 256; L++) { acc += hist[L]; if (acc > r) return L; } return 255; };
-  const v0 = at(k);
-  return f > 0 && k + 1 < count ? v0 + (at(k + 1) - v0) * f : v0;
 }
 
 const recolorCache = new WeakMap();
 
 /**
- * Canvas the size of `img` with every opaque pixel gradient-mapped onto the
- * variant's colour stops. Cached per (img, variant). Returns `img` unchanged
- * for an unknown variant, an unloaded image or a tainted canvas.
+ * Canvas the size of `img` with the `variant`'s palette swap applied (see
+ * garden-variants.js). Cached per (img, variant). Returns `img` unchanged for no
+ * variant / no map, an unloaded image or a tainted canvas.
  */
-export function recolor(img, variantId) {
-  const v = variantId && variantById(variantId);
-  if (!img || !v) return img;
+export function recolor(img, variant) {
+  if (!img || !variant || !variant.map) return img;
   let m = recolorCache.get(img);
   if (!m) { m = new Map(); recolorCache.set(img, m); }
-  if (m.has(variantId)) return m.get(variantId);
+  if (m.has(variant)) return m.get(variant);
   const w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
   if (!w || !h) return img;                       // not loaded yet — don't cache
   const c = makeCanvas(w, h);
@@ -1031,11 +1005,11 @@ export function recolor(img, variantId) {
     const g = c.getContext('2d', { willReadFrequently: true });
     g.drawImage(img, 0, 0);
     const id = g.getImageData(0, 0, w, h);
-    gradientMapPixels(id.data, v.stops.map(parseHex));
+    paletteSwapPixels(id.data, variant.map);
     g.putImageData(id, 0, 0);
     out = c;
   } catch (e) { out = img; }                        // tainted / unsupported
-  m.set(variantId, out);
+  m.set(variant, out);
   return out;
 }
 

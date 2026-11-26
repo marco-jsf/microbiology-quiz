@@ -12,7 +12,8 @@
 // (`b.rec`), the eggs in the nest, and the active decor. It listens to store
 // events instead of being called by the shop.
 
-import { birdById, speciesInfo, variantById, DECOR, NEST_X, NEST_CAPACITY } from './garden-data.js';
+import { birdById, speciesInfo, DECOR, NEST_X, NEST_CAPACITY } from './garden-data.js';
+import { variantFor } from './garden-variants.js';
 import {
   listBirds, getBird, listEggs, isEggReady, hatchEgg, renameBird, activeDecor, onGardenChange,
 } from './garden-store.js';
@@ -92,14 +93,23 @@ function loadImage(url) {
 }
 const pngFor = jsonUrl => jsonUrl.replace(/\.json$/i, '.png');
 
-// Resolve a bird def into { action: {json, tag} } specs for both layouts.
-function clipSpecs(def) {
+// Resolve a bird def into { action: {json, tag} } specs for both layouts —
+// from the variant's own sheet when it has one (see garden-variants.js).
+function clipSpecs(def, variant = null) {
   const out = {};
-  if (def.tags) for (const [act, tag] of Object.entries(def.tags)) out[act] = { json: def.sheet, tag };
+  const sheet = ownVariantSheet(def, variant) || def.sheet;
+  if (def.tags) for (const [act, tag] of Object.entries(def.tags)) out[act] = { json: sheet, tag };
   else for (const [act, name] of Object.entries(def.files)) out[act] = { json: `${def.dir}/${def.prefix}-${name}.json`, tag: null };
   return out;
 }
 const clipKey = spec => `${spec.json}#${spec.tag || ''}`;
+const ownVariantSheet = (def, variant) => (def.tags && variantFor(def.id, variant)?.sheet) || null;
+// The variant (object) still to palette-swap onto clipSpecs(def, variant): none
+// for no / an unknown variant or one with its own sheet.
+const mappedVariant = (def, variant) => {
+  const v = variantFor(def.id, variant);
+  return v && v.map && !ownVariantSheet(def, variant) ? v : null;
+};
 
 // Load one clip → { img, frames:[{x,y,w,h,d}], u }. Shared and cached — never mutate.
 function loadClip(spec) {
@@ -125,12 +135,14 @@ function loadClip(spec) {
   });
 }
 
-// The same clip with its sheet gradient-mapped onto a rare colour variant. A NEW
-// clip object (frames/u shared read-only); recolor() caches per (image, variant),
-// so every clip cut from one sheet shares a single recoloured canvas.
+// The same clip with its sheet palette-swapped to a rare colour variant (the
+// variant object, see garden-variants.js). A NEW clip object (frames/u shared
+// read-only); recolor() caches per (image, variant), so every clip cut from one
+// sheet shares a single recoloured canvas. Sheet paths are per species, so the
+// variant id is enough to key the cache.
 function loadClipVariant(spec, variant) {
   if (!variant) return loadClip(spec);
-  return cached(variantClipCache, clipKey(spec) + '|' + variant, () => loadClip(spec).then(c => {
+  return cached(variantClipCache, clipKey(spec) + '|' + variant.id, () => loadClip(spec).then(c => {
     let img = c.img;
     try { img = recolor(c.img, variant) || c.img; } catch (e) { /* keep normal colours */ }
     return { img, frames: c.frames, u: c.u };
@@ -187,8 +199,8 @@ async function makeBird(rec) {
   const def = rec && birdById(rec.species);
   if (!def) return null;
   const clips = {};
-  await Promise.all(Object.entries(clipSpecs(def)).map(async ([act, spec]) => {
-    try { clips[act] = await loadClipVariant(spec, rec.variant); } catch (e) { /* drop missing action */ }
+  await Promise.all(Object.entries(clipSpecs(def, rec.variant)).map(async ([act, spec]) => {
+    try { clips[act] = await loadClipVariant(spec, mappedVariant(def, rec.variant)); } catch (e) { /* drop missing action */ }
   }));
   if (!clips.idle) clips.idle = Object.values(clips)[0];
   if (!clips.idle) return null;                       // nothing loaded — skip bird
@@ -763,11 +775,18 @@ function revealHatch(h) {
   }
   const info = speciesInfo(h.res.bird.species);
   safe('banner', () => {
-    if (rare) {
-      const vName = variantById(h.res.bird.variant)?.name || '';
+    const vName = rare ? variantFor(h.res.bird.species, h.res.bird.variant)?.name || '' : '';
+    if (h.res.isNewSpecies) {
+      // First of its species: the shop sells it from now on.
+      showBanner({
+        title: '🎉 Neue Art entdeckt!',
+        sub: rare ? `${info.de} · seltene Variante ${vName}` : `${info.de} · ab jetzt auch im Shop`,
+        rare,
+      });
+    } else if (rare) {
       showBanner({
         title: '✨ Seltene Variante!',
-        sub: `${info.de} · ${vName}` + (h.res.isNewVariant ? ' – neu in deiner Sammlung' : ''),
+        sub: `${info.de} · ${vName}` + (h.res.isNewVariant ? ' – neu in deinem Vogelbuch' : ''),
         rare: true,
       });
     } else {
@@ -995,6 +1014,11 @@ function onStoreChange(type, data) {
     }
     case 'eggs': refreshEggs(); break;
     case 'decor': rebuildDecor(); reconcileBirds(); break;
+    case 'reset':                                          // the 'decor'/'eggs' that follow rebuild the scene
+      hatch = null; bursts = [];
+      deselectAll();
+      safe('banner', () => showBanner({ title: '🌱 Neuer Garten', sub: 'Neue Vögel schlüpfen aus Eiern – viel Glück!' }));
+      break;
   }
 }
 
@@ -1107,7 +1131,7 @@ export async function mountGarden(container) {
   wrap.appendChild(shopBtn);
   const cap = document.createElement('div');
   cap.className = 'garden-cap';
-  cap.textContent = '🐦 Dein Garten – tippe einen Vogel an, um ihn anzusehen und zu benennen. Im Shop gibt es Vögel, Eier und Deko.';
+  cap.textContent = '🐦 Dein Garten – tippe einen Vogel an, um ihn anzusehen und zu benennen. Neue Arten schlüpfen aus Eiern – die gibt es im Shop.';
   container.innerHTML = '';
   container.appendChild(wrap);
   container.appendChild(cap);
@@ -1155,10 +1179,10 @@ export async function mountGarden(container) {
 // { img, frames, u } (don't mutate it; it's shared with the scene).
 export function getIdleClip(def, variant = null) {
   if (!def) return Promise.reject(new Error('unknown bird'));
-  const specs = clipSpecs(def);
+  const specs = clipSpecs(def, variant);
   const spec = specs.idle || Object.values(specs)[0];
   if (!spec) return Promise.reject(new Error('no clips for ' + def.id));
-  return loadClipVariant(spec, variant);
+  return loadClipVariant(spec, mappedVariant(def, variant));
 }
 
 export function unmountGarden() {

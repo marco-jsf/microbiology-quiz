@@ -1,8 +1,10 @@
 // Garden shop — a modal dialog with three tabs:
-//   Vögel — buy birds (black silhouette until you own one), grouped by rarity.
-//   Eier  — buy eggs for the nest, plus the collection of rare colour variants
-//           (variants only ever hatch from eggs; they can't be bought).
-//   Deko  — buy garden objects / ambient effects once, then switch them on/off.
+//   Eier      — buy eggs for the nest: the only way to discover a species or
+//               one of its rare colour variants.
+//   Deko      — buy garden objects / ambient effects once, then switch them on/off.
+//   Vogelbuch — every species, grouped by rarity: a black silhouette until it
+//               first hatches, after that you can buy more of it; each with its
+//               three colour variants (silhouette until one has hatched).
 //
 // Built to stay snappy: a tab's DOM is created the first time it is shown,
 // tile canvases are only painted for the visible tab, and each canvas is
@@ -13,34 +15,36 @@
 // scene (like this dialog) listens via onGardenChange.
 
 import {
-  BIRDS, birdById, RARITY_LABEL, speciesInfo, EGG_TIERS, speciesForTier, VARIANTS, DECOR,
+  BIRDS, birdById, RARITY_LABEL, speciesInfo, EGG_TIERS, speciesForTier, DECOR, NEW_SPECIES_WEIGHT,
 } from './garden-data.js';
+import { variantsOf, variantCount } from './garden-variants.js';
 import {
-  ownedCount, buy, listEggs, nestCapacity, nestFull, isEggReady, readyEggCount, buyEgg,
-  hasSeenVariant, ownsDecor, isDecorOn, buyDecor, setDecorOn, onGardenChange,
+  ownedCount, isDiscovered, buy, listEggs, nestCapacity, nestFull, isEggReady, readyEggCount, buyEgg,
+  hasSeenVariant, ownsDecor, isDecorOn, buyDecor, setDecorOn, onGardenChange, resetGarden,
 } from './garden-store.js';
 import { getCoins } from './engine.js';
 import { getIdleClip } from './garden.js';
 import { drawEggIcon, drawDecorIcon } from './garden-art.js';
 
 const RARITY_ORDER = { normal: 0, rare: 1, epic: 2 };
+// "Schlüpft aus seltenen Eiern" — an egg tier's adjective, declined for that hint.
+const EGG_ADJ = { normal: 'einfachen', rare: 'seltenen', epic: 'epischen' };
 // Birds grouped by rarity (Normal → Selten → Episch), cheapest first within a tier.
 const SORTED = [...BIRDS].sort((a, b) => RARITY_ORDER[a.rarity] - RARITY_ORDER[b.rarity] || a.cost - b.cost);
 
 const TABS = [
-  { id: 'birds', icon: '🐦', label: 'Vögel' },
   { id: 'eggs', icon: '🥚', label: 'Eier' },
   { id: 'decor', icon: '🌷', label: 'Deko' },
+  { id: 'birds', icon: '📖', label: 'Vogelbuch' },
 ];
 
 const TILE_W = 76, TILE_H = 62;        // CSS px of a tile's picture
 const SWATCH_W = 34, SWATCH_H = 30;    // CSS px of a variant swatch's picture
 const SILHOUETTE = '#000';             // locked bird in the Vögel tab
 const SWATCH_SILHOUETTE = '#06090d';   // undiscovered variant
-const accentOf = v => v.stops[3];      // a variant's signature colour (gold → #f2cb4c)
 
 let dialog, body, coinEl, io;
-let activeTab = 'birds';               // remembered while the page lives
+let activeTab = 'eggs';               // remembered while the page lives
 const tabBtns = {}, panelEls = {}, panels = {};
 
 /* ---------- tiny DOM helpers ---------- */
@@ -232,39 +236,137 @@ function linkToTab(id, text) {
   return b;
 }
 
-/* ---------- tab: Vögel ---------- */
+/* ---------- tab: Vogelbuch ---------- */
+// Undiscovered species show as a silhouette with a link to the eggs they hatch
+// from; once one has hatched, its tile turns into a normal "buy more" tile.
+// Every tile lists the species' three colour variants: a swatch per variant
+// (silhouette until one has hatched) and their names below.
 function buildBirdPanel(el) {
   const note = h('p', 'shop-note');
-  note.append('✨ Seltene Farbvarianten gibt es nur aus ', linkToTab('eggs', 'Eiern'), '.');
+  const found = h('b'), foundV = h('b');
+  note.append('Entdeckt: ', found, ' Arten und ', foundV, ' Farbvarianten. 🥚 Neue Arten und seltene Farben schlüpfen nur aus ',
+    linkToTab('eggs', 'Eiern'), ' – entdeckte Arten kannst du hier nachkaufen.');
   const grid = h('div', 'shop-grid');
   const tiles = SORTED.map(def => {
-    const { tile, info, p } = tileShell(`rarity-${def.rarity}`);
+    const de = speciesInfo(def.id).de;
+    const { tile, info, p } = tileShell(`shop-bird rarity-${def.rarity}`);
+    const name = h('div', 'shop-name', de);
+    const star = h('span', 'shop-star', '★');
+    star.title = 'Alle Farbvarianten entdeckt';
+    name.append(star);
     const sub = h('div', 'shop-sub');
     const owned = h('span', 'shop-owned');
     sub.append(h('span', 'shop-rarity', RARITY_LABEL[def.rarity] || def.rarity), owned);
+    const sw = h('div', 'shop-swatches');
+    const names = h('div', 'shop-vnames');
+    const vars = variantsOf(def.id).map((v, i) => {
+      const box = h('span', 'shop-swatch is-unseen');
+      box.style.setProperty('--vc', v.accent);
+      box.setAttribute('role', 'img');
+      const vp = pic(SWATCH_W, SWATCH_H, 'shop-swatch-cv');
+      box.append(vp.el);
+      sw.append(box);
+      const label = h('span', 'shop-vname', v.name);
+      label.style.setProperty('--vc', v.accent);
+      if (i) names.append(' · ');
+      names.append(label);
+      return { v, box, p: vp, label, prev: undefined };
+    });
     const btn = buyButton();
     btn.onclick = () => purchase(btn, tile, () => buy(def.id));
-    info.append(h('div', 'shop-name', speciesInfo(def.id).de), sub, btn);
+    const egg = EGG_TIERS.some(t => t.id === def.rarity) && EGG_ADJ[def.rarity];
+    const lock = h('div', 'shop-line shop-lock');
+    if (egg) lock.append('🥚 Schlüpft aus ', linkToTab('eggs', `${egg} Eiern`));
+    else lock.append('🥚 Schlüpft aus Eiern');
+    info.append(name, sub);
+    if (vars.length) info.append(sw, names);
+    info.append(btn, lock);
     grid.append(tile);
-    return { def, tile, p, owned, btn, prev: undefined };
+    return { def, de, tile, p, star, owned, btn, lock, vars, prev: undefined };
   });
-  el.append(note, grid);
+  el.append(note, grid, buildReset());
 
   return {
-    pics: tiles.map(t => t.p),
+    pics: tiles.flatMap(t => [t.p, ...t.vars.map(c => c.p)]),
     refresh(coins) {
+      let n = 0, nv = 0;
       for (const t of tiles) {
-        const n = ownedCount(t.def.id), has = n > 0;
+        const has = isDiscovered(t.def.id);
+        if (has) n++;
         if (t.prev === false && has) t.p.flash = true;
         t.prev = has;
         t.tile.classList.toggle('is-owned', has);
-        t.owned.textContent = has ? `Im Garten: ${n}` : '';
-        setBuy(t.btn, has ? 'Noch einen kaufen' : 'Kaufen', t.def.cost, coins);
+        t.tile.classList.toggle('is-locked', !has);
+        t.owned.textContent = has ? `Im Garten: ${ownedCount(t.def.id)}` : 'Noch nicht entdeckt';
+        t.btn.hidden = !has;
+        t.lock.hidden = has;
+        if (has) setBuy(t.btn, 'Noch einen kaufen', t.def.cost, coins);
         want(t.p, has ? 'bird' : 'silhouette', () => idleClip(t.def.id),
           (c, clip, dpr) => drawClip(c, clip, dpr, { pad: 6, fill: has ? null : SILHOUETTE }));
+        for (const c of t.vars) {
+          const seen = hasSeenVariant(t.def.id, c.v.id);
+          if (seen) nv++;
+          if (c.prev === seen) continue;               // nothing changed for this swatch
+          if (c.prev === false && seen) c.p.flash = true;
+          c.prev = seen;
+          c.box.classList.toggle('is-seen', seen);
+          c.box.classList.toggle('is-unseen', !seen);
+          c.label.classList.toggle('is-seen', seen);
+          c.box.title = seen ? `${t.de} · ${c.v.name}` : `${c.v.name} – noch nicht entdeckt`;
+          c.box.setAttribute('aria-label', c.box.title);
+          if (seen) {
+            want(c.p, 'seen', () => idleClip(t.def.id, c.v.id), (cx, clip, dpr) => drawClip(cx, clip, dpr, { pad: 2 }));
+          } else {
+            want(c.p, 'unseen', () => idleClip(t.def.id),
+              (cx, clip, dpr) => drawClip(cx, clip, dpr, { pad: 2, fill: SWATCH_SILHOUETTE }));
+          }
+        }
+        t.star.hidden = !t.vars.length || !t.vars.every(c => c.prev);
       }
+      found.textContent = `${n} von ${tiles.length}`;
+      foundV.textContent = `${nv} von ${variantCount()}`;
     },
   };
+}
+
+// „Neu anfangen“ at the end of the Vogelbuch: wipes the garden (store
+// resetGarden) after an explicit second click, then closes the shop so the
+// player sees the fresh garden. Coins and quiz progress are not touched.
+function buildReset() {
+  const sec = h('section', 'shop-reset');
+  const text = h('p', 'shop-note',
+    'Setzt deinen Garten zurück: alle Vögel, Eier, Deko und das Vogelbuch. Du startest wieder mit einer Stadttaube. '
+    + 'Deine Münzen und dein Lernfortschritt bleiben erhalten.');
+  const ask = button('shop-danger', 'Garten zurücksetzen …');
+  const confirm = h('div', 'shop-confirm');
+  confirm.hidden = true;
+  confirm.setAttribute('role', 'group');
+  confirm.setAttribute('aria-label', 'Garten zurücksetzen bestätigen');
+  const q = h('p', 'shop-confirm-q');
+  q.append(h('b', null, 'Wirklich neu anfangen?'), ' Alle Vögel, Eier, Deko und das Vogelbuch sind danach weg.');
+  const yes = button('shop-danger is-solid', 'Ja, alles zurücksetzen');
+  const no = button('shop-plain', 'Abbrechen');
+  const actions = h('div', 'shop-confirm-actions');
+  actions.append(yes, no);
+  confirm.append(q, actions);
+  const collapse = (focus = false) => {
+    confirm.hidden = true; ask.hidden = false;
+    if (focus) ask.focus({ preventScroll: true });
+  };
+  ask.onclick = () => {
+    ask.hidden = true; confirm.hidden = false;
+    no.focus({ preventScroll: true });          // the safe choice has focus
+    confirm.scrollIntoView({ block: 'nearest' });
+  };
+  no.onclick = () => collapse(true);
+  yes.onclick = () => {
+    collapse();
+    resetGarden();
+    dialog.close();
+  };
+  dialog.addEventListener('close', () => collapse());
+  sec.append(h('h3', 'shop-sec', 'Neu anfangen'), text, ask, confirm);
+  return sec;
 }
 
 /* ---------- tab: Eier ---------- */
@@ -285,20 +387,20 @@ function buildEggPanel(el) {
     hatch.append('Schlüpft nach ', h('b', null, String(tier.need)), ' richtigen Antworten');
     const inside = h('div', 'shop-line mut',
       'Darin: ' + speciesForTier(tier.id).map(d => speciesInfo(d.id).de).join(', '));
+    const fresh = h('div', 'shop-line shop-new');
     const chance = h('div', 'shop-line shop-chance',
       `✨ Chance auf seltene Variante: ${Math.round(tier.variantChance * 100)}\u00a0%`);
     const btn = buyButton();
     btn.onclick = () => purchase(btn, tile, () => buyEgg(tier.id));
-    info.append(h('div', 'shop-name', tier.name), hatch, inside, chance, btn);
+    info.append(h('div', 'shop-name', tier.name), hatch, inside, fresh, chance, btn);
     grid.append(tile);
-    return { tier, p, btn };
+    return { tier, p, btn, fresh };
   });
 
-  const coll = buildCollection();
-  el.append(status, ready, grid, coll.el);
+  el.append(status, ready, grid);
 
   return {
-    pics: [...tiles.map(t => t.p), ...coll.pics],
+    pics: tiles.map(t => t.p),
     refresh(coins) {
       const eggs = listEggs(), cap = nestCapacity(), full = nestFull();
       nestCount.textContent = `${eggs.length}/${cap}`;
@@ -318,6 +420,11 @@ function buildEggPanel(el) {
       ready.textContent = r === 1 ? '🐣 Ein Ei ist bereit – tippe es im Garten an, damit es schlüpft.'
         : `🐣 ${r} Eier sind bereit – tippe sie im Garten an, damit sie schlüpfen.`;
       for (const t of tiles) {
+        // Same weighting as hatchEgg: each undiscovered species NEW_SPECIES_WEIGHT, each discovered one 1.
+        const pool = speciesForTier(t.tier.id), k = pool.filter(d => !isDiscovered(d.id)).length;
+        const pct = Math.round((100 * k * NEW_SPECIES_WEIGHT) / (k * NEW_SPECIES_WEIGHT + pool.length - k));
+        t.fresh.textContent = k ? `✦ Chance auf neue Art: ${pct}\u00a0%` : '✓ Alle Arten entdeckt';
+        t.fresh.classList.toggle('is-done', !k);
         if (full) {
           setPlainLabel(t.btn, 'Nest voll');
           t.btn.disabled = true;
@@ -328,88 +435,6 @@ function buildEggPanel(el) {
           setBuy(t.btn, 'Kaufen', t.tier.cost, coins);
         }
       }
-      coll.refresh();
-    },
-  };
-}
-
-// „Sammlung: seltene Varianten“ — one row per species, one swatch per variant.
-function buildCollection() {
-  const el = h('section', 'shop-coll');
-  const head = h('div', 'shop-coll-head');
-  const count = h('span', 'shop-coll-count');
-  head.append(h('h3', 'shop-sec', 'Sammlung: seltene Varianten'), count);
-  const total = SORTED.length * VARIANTS.length;
-  const bar = h('div', 'shop-coll-bar');
-  const fill = h('i');
-  bar.append(fill);
-  bar.setAttribute('role', 'progressbar');
-  bar.setAttribute('aria-label', 'Entdeckte Varianten');
-  bar.setAttribute('aria-valuemin', '0');
-  bar.setAttribute('aria-valuemax', String(total));
-  const legend = h('div', 'shop-legend');
-  for (const v of VARIANTS) {
-    const s = h('span');
-    s.style.setProperty('--vc', accentOf(v));
-    s.append(h('i'), v.name);
-    legend.append(s);
-  }
-  const empty = h('p', 'shop-coll-empty',
-    'Noch keine entdeckt – mit etwas Glück schlüpft aus einem Ei eine seltene Farbe.');
-  const rowsEl = h('div', 'shop-crows');
-
-  const cells = [];
-  const rows = SORTED.map(def => {
-    const de = speciesInfo(def.id).de;
-    const row = h('div', `shop-crow rarity-${def.rarity}`);
-    const name = h('div', 'shop-crow-name', de);
-    const star = h('span', 'shop-crow-star', '★');
-    star.title = 'Alle Varianten entdeckt';
-    name.append(star);
-    const sw = h('div', 'shop-swatches');
-    const mine = VARIANTS.map(v => {
-      const box = h('span', 'shop-swatch is-unseen');
-      box.style.setProperty('--vc', accentOf(v));
-      box.setAttribute('role', 'img');
-      const p = pic(SWATCH_W, SWATCH_H, 'shop-swatch-cv');
-      box.append(p.el);
-      sw.append(box);
-      return { def, de, v, box, p, prev: undefined };
-    });
-    cells.push(...mine);
-    row.append(name, sw);
-    rowsEl.append(row);
-    return { star, mine };
-  });
-  el.append(head, bar, legend, empty, rowsEl);
-
-  return {
-    el,
-    pics: cells.map(c => c.p),
-    refresh() {
-      let seenN = 0;
-      for (const c of cells) {
-        const seen = hasSeenVariant(c.def.id, c.v.id);
-        if (seen) seenN++;
-        if (c.prev === seen) continue;               // nothing changed for this swatch
-        if (c.prev === false && seen) c.p.flash = true;
-        c.prev = seen;
-        c.box.classList.toggle('is-seen', seen);
-        c.box.classList.toggle('is-unseen', !seen);
-        c.box.title = seen ? `${c.de} · ${c.v.name}` : 'Noch nicht entdeckt';
-        c.box.setAttribute('aria-label', seen ? `${c.de} · ${c.v.name}` : `${c.de}: noch nicht entdeckt`);
-        if (seen) {
-          want(c.p, 'seen', () => idleClip(c.def.id, c.v.id), (cx, clip, dpr) => drawClip(cx, clip, dpr, { pad: 2 }));
-        } else {
-          want(c.p, 'unseen', () => idleClip(c.def.id),
-            (cx, clip, dpr) => drawClip(cx, clip, dpr, { pad: 2, fill: SWATCH_SILHOUETTE }));
-        }
-      }
-      for (const r of rows) r.star.hidden = !r.mine.every(c => c.prev);
-      count.replaceChildren(h('b', null, String(seenN)), ` / ${total} entdeckt`);
-      fill.style.width = `${(seenN / total) * 100}%`;
-      bar.setAttribute('aria-valuenow', String(seenN));
-      empty.hidden = seenN > 0;
     },
   };
 }

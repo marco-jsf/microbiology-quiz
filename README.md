@@ -35,12 +35,13 @@ js/
   qtypes.js            die sechs Fragetypen: Darstellung, Interaktion, Wertung, Auflösung
   render.js            Fragekarte, Feedback, Lernstand-Dashboard
   app.js               Steuerung, Tastatur, Ereignisse
-  garden-data.js       Garten-Katalog: Vögel, Steckbriefe, Eier, Farbvarianten, Deko
+  garden-data.js       Garten-Katalog: Vögel, Steckbriefe, Eier, Deko
+  garden-variants.js   je Vogelart drei echte Farbvarianten (Palettentausch)
   garden-store.js      Garten-Spielstand (Vögel mit Namen, Nest, Deko) in localStorage
   garden.js            Garten-Szene (Canvas): Verhalten, Auswahl, Nest & Schlüpfen, Deko
   garden-art.js        selbst gezeichnete Pixel-Grafik (Deko, Eier, Effekte) + Umfärben
   garden-ui.js         Vogel-/Ei-Karte und Banner über dem Garten
-  shop.js              Shop: Vögel · Eier · Deko + Sammlung seltener Varianten
+  shop.js              Shop: Eier · Deko · Vogelbuch (Arten + Farbvarianten)
 data/
   schema.md            Datenformat – vor dem Bearbeiten lesen
   vlXX-*.json          ein Kapitel pro Vorlesung
@@ -55,12 +56,22 @@ tools/
 
 Münzen gibt es für (teilweise) richtige Antworten; im Garten-Tab werden sie ausgegeben.
 
-- **Vögel** direkt im Shop kaufen. Vögel antippen → Steckbrief, Name vergeben.
 - **Eier** (einfach / selten / episch) kommen ins Nest (max. 3). Jede Antwort im Quiz wärmt alle Eier
   um die erreichte Punktzahl; ist ein Ei warm genug, schlüpft es per Antippen im Garten.
-- **Seltene Farbvarianten** (Gold, Weiß, Mitternacht, Rosé, Mint) gibt es nur aus Eiern – nie im Shop.
-  Spätestens jedes 8. Ei bringt eine Variante. Gefundene Varianten sammelt der Shop unter „Eier“.
+- **Neue Vogelarten** gibt es nur aus Eiern; Arten, die man noch nicht hat, zählen beim Schlüpfen 3×
+  so viel wie schon entdeckte (die Ei-Kachel im Shop zeigt die Chance auf eine neue Art).
+  Im Shop-Tab „Vogelbuch“ sind unentdeckte Arten schwarze Silhouetten; entdeckte kann man dort nachkaufen.
+  Vögel antippen → Steckbrief, Name vergeben.
+- **Seltene Farbvarianten** gibt es nur aus Eiern: je Art drei echte Farbformen (Mutationen wie Lutino
+  oder Leuzismus, Jugendkleider, bei Gattungen auch nahe Verwandte), definiert in `js/garden-variants.js`
+  als Farbtausch der Sprite-Palette. Spätestens jedes 8. Ei bringt eine Variante. Der Shop zeigt
+  im **Vogelbuch** (3. Tab) jede Art mit ihren drei Varianten. Alte Fantasiefarben (Gold, Weiß,
+  Mitternacht, Rosé, Mint) aus früheren Spielständen werden beim Laden in eine echte Variante umgewandelt.
 - **Deko**: Gartenobjekte (manche besuchen die Vögel) und Effekte; im Shop ein-/ausblendbar.
+- **Neu anfangen** (ganz unten im Vogelbuch, mit Rückfrage): löscht Vögel, Eier, Deko und das Vogelbuch,
+  zurück bleibt eine Stadttaube. Münzen und Lernfortschritt bleiben. Der alte Garten wird einmalig unter
+  `microbioBirdsV1-backup` gesichert (Wiederherstellen per Konsole:
+  `localStorage.setItem('microbioBirdsV1', localStorage.getItem('microbioBirdsV1-backup'))`).
 
 Spielstand im Browser (`localStorage`): `microbioCoinsV1` (Münzen), `microbioBirdsV1` (Garten).
 Beide Schlüssel stammen noch aus der Mikrobio-Version und dürfen nicht umbenannt werden. Im
